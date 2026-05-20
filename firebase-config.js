@@ -6,12 +6,13 @@
 // Your real protection comes from Firestore Security Rules in firestore.rules.
 
 export const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY_HERE",
-  authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+  apiKey: "AIzaSyCG1rGWrHYOvvX3IPnqn0d-ZSIF8EbCSJA",
+  authDomain: "raindrops-bc893.firebaseapp.com",
+  projectId: "raindrops-bc893",
+  storageBucket: "raindrops-bc893.firebasestorage.app",
+  messagingSenderId: "1020974291641",
+  appId: "1:1020974291641:web:7c35d8170969421bac9968",
+  measurementId: "G-SVGD3WH54Y"
 };
 
 export const OWNER_EMAIL = "yakuppala10@gmail.com";

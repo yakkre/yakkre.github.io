@@ -36,18 +36,30 @@ const db = getFirestore(app);
 const $ = (selector, root = document) => root.querySelector(selector);
 
 const els = {
+  homeView: $("#homeView"),
+  postView: $("#postView"),
+  loginView: $("#loginView"),
+  registerView: $("#registerView"),
+  singlePostContainer: $("#singlePostContainer"),
+
   authButton: $("#authButton"),
+  registerNavButton: $("#registerNavButton"),
   logoutButton: $("#logoutButton"),
-  authDialog: $("#authDialog"),
-  authEmail: $("#authEmail"),
-  authPassword: $("#authPassword"),
-  loginEmailButton: $("#loginEmailButton"),
-  registerEmailButton: $("#registerEmailButton"),
-  googleButton: $("#googleButton"),
   verifyEmailButton: $("#verifyEmailButton"),
-  authMessage: $("#authMessage"),
   userBadge: $("#userBadge"),
   notice: $("#notice"),
+
+  loginForm: $("#loginForm"),
+  loginEmail: $("#loginEmail"),
+  loginPassword: $("#loginPassword"),
+  loginGoogleButton: $("#loginGoogleButton"),
+  loginMessage: $("#loginMessage"),
+
+  registerForm: $("#registerForm"),
+  registerEmail: $("#registerEmail"),
+  registerPassword: $("#registerPassword"),
+  registerGoogleButton: $("#registerGoogleButton"),
+  registerMessage: $("#registerMessage"),
 
   newPostButton: $("#newPostButton"),
   manageContributorsButton: $("#manageContributorsButton"),
@@ -65,6 +77,10 @@ const els = {
   contributorRole: $("#contributorRole"),
   contributorResult: $("#contributorResult"),
 
+  statsEntries: $("#statsEntries"),
+  statsLikes: $("#statsLikes"),
+  statsComments: $("#statsComments"),
+
   searchInput: $("#searchInput"),
   postsList: $("#postsList"),
   postTemplate: $("#postTemplate")
@@ -73,14 +89,18 @@ const els = {
 let currentUser = null;
 let currentProfile = null;
 let allPosts = [];
+let hasLoadedPosts = false;
 let editingPostId = null;
 let unsubscribePosts = null;
 let unsubscribeChildListeners = [];
 
+const likeCountsByPost = new Map();
+const commentCountsByPost = new Map();
+
 function showNotice(message, isError = false) {
   els.notice.textContent = message;
   els.notice.classList.remove("hidden");
-  els.notice.style.color = isError ? "var(--danger)" : "var(--accent-strong)";
+  els.notice.style.color = isError ? "var(--danger)" : "var(--accent-deep)";
   window.clearTimeout(showNotice.timer);
   showNotice.timer = window.setTimeout(() => {
     els.notice.classList.add("hidden");
@@ -107,6 +127,30 @@ function makeSlug(title) {
     .slice(0, 80) || "post";
 }
 
+function makeExcerpt(markdown, maxLength = 220) {
+  const text = String(markdown || "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/\$\$[\s\S]*?\$\$/g, " equation ")
+    .replace(/\\\[[\s\S]*?\\\]/g, " equation ")
+    .replace(/\\\([\s\S]*?\\\)/g, " equation ")
+    .replace(/[#>*_`~\[\]()-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!text) return "";
+  return text.length > maxLength ? `${text.slice(0, maxLength).trim()}…` : text;
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  }[char]));
+}
+
 function isOwner(user = currentUser) {
   return Boolean(
     user &&
@@ -128,6 +172,10 @@ function canWritePosts() {
 
 function canManageContributors() {
   return isOwner() || userRole() === "admin";
+}
+
+function readablePosts() {
+  return allPosts.filter(post => post.published || canWritePosts());
 }
 
 function renderMarkdownWithLatex(markdown, target) {
@@ -152,6 +200,41 @@ function renderMarkdownWithLatex(markdown, target) {
   }
 }
 
+function clearChildListeners() {
+  for (const unsubscribe of unsubscribeChildListeners) unsubscribe();
+  unsubscribeChildListeners = [];
+}
+
+function getRoute() {
+  const hash = window.location.hash || "#/";
+  if (hash.startsWith("#/post/")) {
+    return { view: "post", postId: decodeURIComponent(hash.replace("#/post/", "")) };
+  }
+  if (hash === "#/login") return { view: "login" };
+  if (hash === "#/register") return { view: "register" };
+  return { view: "home" };
+}
+
+function showView(view) {
+  els.homeView.classList.toggle("hidden", view !== "home");
+  els.postView.classList.toggle("hidden", view !== "post");
+  els.loginView.classList.toggle("hidden", view !== "login");
+  els.registerView.classList.toggle("hidden", view !== "register");
+}
+
+function renderCurrentRoute() {
+  const route = getRoute();
+  showView(route.view);
+
+  if (route.view === "home") {
+    renderPosts();
+  } else if (route.view === "post") {
+    renderSinglePost(route.postId);
+  } else {
+    clearChildListeners();
+  }
+}
+
 async function ensureUserDocument(user) {
   if (!user) return null;
 
@@ -167,6 +250,7 @@ async function ensureUserDocument(user) {
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp()
     });
+
     return {
       email: user.email,
       displayName: user.displayName || user.email?.split("@")[0] || "Reader",
@@ -181,69 +265,73 @@ async function ensureUserDocument(user) {
 function updateAuthUi() {
   if (!currentUser) {
     els.authButton.classList.remove("hidden");
+    els.registerNavButton.classList.remove("hidden");
     els.logoutButton.classList.add("hidden");
+    els.verifyEmailButton.classList.add("hidden");
     els.userBadge.textContent = "";
     els.newPostButton.classList.add("hidden");
     els.manageContributorsButton.classList.add("hidden");
     els.editorPanel.classList.add("hidden");
     els.adminPanel.classList.add("hidden");
-    els.verifyEmailButton.classList.add("hidden");
     return;
   }
 
   const role = userRole();
   const verifiedLabel = currentUser.emailVerified ? "" : " · verify email";
   els.userBadge.textContent = `${currentUser.email} · ${role}${verifiedLabel}`;
-  els.authButton.classList.add("hidden");
-  els.logoutButton.classList.remove("hidden");
 
+  els.authButton.classList.add("hidden");
+  els.registerNavButton.classList.add("hidden");
+  els.logoutButton.classList.remove("hidden");
   els.verifyEmailButton.classList.toggle("hidden", currentUser.emailVerified);
+
   els.newPostButton.classList.toggle("hidden", !canWritePosts());
   els.manageContributorsButton.classList.toggle("hidden", !canManageContributors());
 
-  if (!canWritePosts()) {
-    els.editorPanel.classList.add("hidden");
-  }
-
-  if (!canManageContributors()) {
-    els.adminPanel.classList.add("hidden");
-  }
+  if (!canWritePosts()) els.editorPanel.classList.add("hidden");
+  if (!canManageContributors()) els.adminPanel.classList.add("hidden");
 }
 
-async function registerWithEmail() {
-  const email = els.authEmail.value.trim();
-  const password = els.authPassword.value;
+async function registerWithEmail(event) {
+  event.preventDefault();
+  const email = els.registerEmail.value.trim();
+  const password = els.registerPassword.value;
+  els.registerMessage.textContent = "";
 
   try {
     const credential = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(credential.user, { displayName: email.split("@")[0] });
     await sendEmailVerification(credential.user);
-    els.authMessage.textContent = "Account created. Check your email to verify it before posting/commenting.";
+    els.registerMessage.textContent = "Account created. Check your email to verify it before liking or commenting.";
   } catch (error) {
-    els.authMessage.textContent = error.message;
+    els.registerMessage.textContent = error.message;
   }
 }
 
-async function loginWithEmail() {
-  const email = els.authEmail.value.trim();
-  const password = els.authPassword.value;
+async function loginWithEmail(event) {
+  event.preventDefault();
+  const email = els.loginEmail.value.trim();
+  const password = els.loginPassword.value;
+  els.loginMessage.textContent = "";
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    els.authDialog.close();
+    window.location.hash = "#/";
     showNotice("Logged in.");
   } catch (error) {
-    els.authMessage.textContent = error.message;
+    els.loginMessage.textContent = error.message;
   }
 }
 
-async function loginWithGoogle() {
+async function loginWithGoogle(targetMessage = els.loginMessage) {
+  targetMessage.textContent = "";
+
   try {
     await signInWithPopup(auth, new GoogleAuthProvider());
-    els.authDialog.close();
+    window.location.hash = "#/";
     showNotice("Logged in with Google.");
   } catch (error) {
-    els.authMessage.textContent = error.message;
+    targetMessage.textContent = error.message;
   }
 }
 
@@ -262,6 +350,8 @@ function openEditor(post = null) {
     showNotice("Only the owner and approved contributors can write posts.", true);
     return;
   }
+
+  if (window.location.hash !== "#/") window.location.hash = "#/";
 
   editingPostId = post?.id || null;
   els.postTitle.value = post?.title || "";
@@ -297,7 +387,6 @@ async function savePost(event) {
 
   const title = els.postTitle.value.trim();
   const body = els.postBody.value.trim();
-
   if (!title || !body) return;
 
   const payload = {
@@ -311,7 +400,7 @@ async function savePost(event) {
   try {
     if (editingPostId) {
       await updateDoc(doc(db, "posts", editingPostId), payload);
-      showNotice("Post updated.");
+      showNotice("Entry updated.");
     } else {
       await addDoc(collection(db, "posts"), {
         ...payload,
@@ -320,7 +409,7 @@ async function savePost(event) {
         authorName: currentUser.displayName || currentUser.email.split("@")[0],
         createdAt: serverTimestamp()
       });
-      showNotice("Post published.");
+      showNotice("Entry published.");
     }
     closeEditor();
   } catch (error) {
@@ -329,12 +418,12 @@ async function savePost(event) {
 }
 
 async function deletePost(postId) {
-  const ok = window.confirm("Delete this post? Comments and likes under it will remain in Firestore unless you delete them separately.");
+  const ok = window.confirm("Delete this entry? Comments and likes under it will remain in Firestore unless you delete them separately.");
   if (!ok) return;
 
   try {
     await deleteDoc(doc(db, "posts", postId));
-    showNotice("Post deleted.");
+    showNotice("Entry deleted.");
   } catch (error) {
     showNotice(error.message, true);
   }
@@ -343,49 +432,113 @@ async function deletePost(postId) {
 function passesSearch(post) {
   const term = els.searchInput.value.trim().toLowerCase();
   if (!term) return true;
+
   return [post.title, post.body, post.authorName, post.authorEmail]
     .filter(Boolean)
     .some(value => value.toLowerCase().includes(term));
 }
 
-function renderPosts() {
-  for (const unsubscribe of unsubscribeChildListeners) unsubscribe();
-  unsubscribeChildListeners = [];
+function updateStats() {
+  const posts = readablePosts();
+  const ids = new Set(posts.map(post => post.id));
 
-  const visiblePosts = allPosts.filter(post => {
-    if (!post.published && !canWritePosts()) return false;
-    return passesSearch(post);
+  const totalLikes = [...likeCountsByPost.entries()]
+    .filter(([postId]) => ids.has(postId))
+    .reduce((sum, [, count]) => sum + count, 0);
+
+  const totalComments = [...commentCountsByPost.entries()]
+    .filter(([postId]) => ids.has(postId))
+    .reduce((sum, [, count]) => sum + count, 0);
+
+  els.statsEntries.textContent = String(posts.length);
+  els.statsLikes.textContent = String(totalLikes);
+  els.statsComments.textContent = String(totalComments);
+}
+
+function isInteractiveClick(target) {
+  return Boolean(target.closest("a, button, input, textarea, select, summary, details, form"));
+}
+
+function activateCard(node) {
+  document.querySelectorAll(".post-card.active").forEach(card => card.classList.remove("active"));
+  node.classList.add("active");
+}
+
+function fillPostNode(node, post, { full = false } = {}) {
+  const title = $(".post-title", node);
+  const meta = $(".post-meta", node);
+  const content = $(".post-content", node);
+  const readLink = $(".read-post-link", node);
+
+  title.textContent = post.title;
+  meta.textContent = `${post.authorName || post.authorEmail || "Unknown"} · ${formatDate(post.createdAt)}${post.published ? "" : " · draft"}`;
+
+  const postUrl = `${window.location.origin}${window.location.pathname}#/post/${encodeURIComponent(post.id)}`;
+  readLink.href = postUrl;
+
+  if (full) {
+    node.classList.add("active", "single-post-card");
+    renderMarkdownWithLatex(post.body, content);
+  } else {
+    content.classList.add("excerpt");
+    const excerpt = makeExcerpt(post.body);
+    content.innerHTML = excerpt ? `<p>${escapeHtml(excerpt)}</p>` : "";
+  }
+
+  title.addEventListener("click", () => {
+    if (full) return;
+    activateCard(node);
+    window.open(postUrl, "_blank", "noopener");
   });
+
+  const postActions = $(".post-actions", node);
+  const canEditThis = canManageContributors() || (canWritePosts() && post.authorUid === currentUser?.uid);
+
+  postActions.classList.toggle("hidden", !canEditThis);
+  $(".edit-post", node).addEventListener("click", () => openEditor(post));
+  $(".delete-post", node).addEventListener("click", () => deletePost(post.id));
+
+  node.addEventListener("click", event => {
+    if (!isInteractiveClick(event.target)) activateCard(node);
+  });
+
+  attachLikes(post.id, node);
+  attachComments(post.id, node);
+}
+
+function renderPosts() {
+  clearChildListeners();
+  const visiblePosts = readablePosts().filter(passesSearch);
+  updateStats();
 
   els.postsList.innerHTML = "";
 
   if (visiblePosts.length === 0) {
-    els.postsList.innerHTML = `<div class="empty-state">No posts yet.</div>`;
+    els.postsList.innerHTML = `<div class="empty-state">No entries yet.</div>`;
     return;
   }
 
   for (const post of visiblePosts) {
     const node = els.postTemplate.content.firstElementChild.cloneNode(true);
-
-    $(".post-title", node).textContent = post.title;
-    $(".post-meta", node).textContent = `${post.authorName || post.authorEmail || "Unknown"} · ${formatDate(post.createdAt)}${post.published ? "" : " · draft"}`;
-
-    renderMarkdownWithLatex(post.body, $(".post-content", node));
-
-    const postActions = $(".post-actions", node);
-    const canEditThis =
-      canManageContributors() ||
-      (canWritePosts() && post.authorUid === currentUser?.uid);
-
-    postActions.classList.toggle("hidden", !canEditThis);
-    $(".edit-post", node).addEventListener("click", () => openEditor(post));
-    $(".delete-post", node).addEventListener("click", () => deletePost(post.id));
-
-    attachLikes(post.id, node);
-    attachComments(post.id, node);
-
+    fillPostNode(node, post, { full: false });
     els.postsList.appendChild(node);
   }
+}
+
+function renderSinglePost(postId) {
+  clearChildListeners();
+  els.singlePostContainer.innerHTML = "";
+
+  const post = readablePosts().find(item => item.id === postId);
+
+  if (!post) {
+    els.singlePostContainer.innerHTML = `<div class="empty-state">${hasLoadedPosts ? "Entry not found, private, or unpublished." : "Loading entry..."}</div>`;
+    return;
+  }
+
+  const node = els.postTemplate.content.firstElementChild.cloneNode(true);
+  fillPostNode(node, post, { full: true });
+  els.singlePostContainer.appendChild(node);
 }
 
 function attachLikes(postId, postNode) {
@@ -394,27 +547,32 @@ function attachLikes(postId, postNode) {
   const likesRef = collection(db, "posts", postId, "likes");
 
   const unsubscribeLikes = onSnapshot(likesRef, snapshot => {
+    likeCountsByPost.set(postId, snapshot.size);
     likeCount.textContent = `${snapshot.size} ${snapshot.size === 1 ? "like" : "likes"}`;
 
     if (currentUser) {
       const liked = snapshot.docs.some(docSnap => docSnap.id === currentUser.uid);
       likeButton.classList.toggle("liked", liked);
+      likeButton.classList.remove("requires-login");
       likeButton.textContent = liked ? "♥ Liked" : "♡ Like";
     } else {
       likeButton.classList.remove("liked");
-      likeButton.textContent = "♡ Like";
+      likeButton.classList.add("requires-login");
+      likeButton.textContent = "♡ Log in to like";
     }
+
+    updateStats();
   });
   unsubscribeChildListeners.push(unsubscribeLikes);
 
   likeButton.addEventListener("click", async () => {
     if (!currentUser) {
-      els.authDialog.showModal();
+      window.location.hash = "#/login";
       return;
     }
 
     if (!currentUser.emailVerified) {
-      showNotice("Verify your email before liking posts.", true);
+      showNotice("Verify your email before liking entries.", true);
       return;
     }
 
@@ -437,6 +595,29 @@ function attachLikes(postId, postNode) {
   });
 }
 
+function updateCommentFormState(postNode) {
+  const commentForm = $(".comment-form", postNode);
+  const note = $(".comment-login-note", postNode);
+
+  if (!currentUser) {
+    commentForm.classList.add("hidden");
+    note.classList.remove("hidden");
+    note.innerHTML = `<a href="#/login">Log in</a> to leave a comment.`;
+    return;
+  }
+
+  if (!currentUser.emailVerified) {
+    commentForm.classList.add("hidden");
+    note.classList.remove("hidden");
+    note.textContent = "Verify your email before leaving a comment.";
+    return;
+  }
+
+  commentForm.classList.remove("hidden");
+  note.classList.add("hidden");
+  note.textContent = "";
+}
+
 function attachComments(postId, postNode) {
   const commentsList = $(".comments-list", postNode);
   const commentCount = $(".comment-count", postNode);
@@ -444,14 +625,18 @@ function attachComments(postId, postNode) {
   const commentInput = $(".comment-input", postNode);
   const commentsRef = collection(db, "posts", postId, "comments");
 
+  updateCommentFormState(postNode);
+
   const q = query(commentsRef, orderBy("createdAt", "asc"));
 
   const unsubscribeComments = onSnapshot(q, snapshot => {
+    commentCountsByPost.set(postId, snapshot.size);
     commentCount.textContent = `${snapshot.size} ${snapshot.size === 1 ? "comment" : "comments"}`;
     commentsList.innerHTML = "";
 
     if (snapshot.empty) {
       commentsList.innerHTML = `<p class="muted">No comments yet.</p>`;
+      updateStats();
       return;
     }
 
@@ -472,9 +657,7 @@ function attachComments(postId, postNode) {
 
       div.append(header, p);
 
-      const canDelete =
-        canManageContributors() ||
-        (currentUser && comment.authorUid === currentUser.uid);
+      const canDelete = canManageContributors() || (currentUser && comment.authorUid === currentUser.uid);
 
       if (canDelete) {
         const del = document.createElement("button");
@@ -489,6 +672,8 @@ function attachComments(postId, postNode) {
 
       commentsList.appendChild(div);
     }
+
+    updateStats();
   });
   unsubscribeChildListeners.push(unsubscribeComments);
 
@@ -496,7 +681,7 @@ function attachComments(postId, postNode) {
     event.preventDefault();
 
     if (!currentUser) {
-      els.authDialog.showModal();
+      window.location.hash = "#/login";
       return;
     }
 
@@ -524,36 +709,27 @@ function attachComments(postId, postNode) {
   });
 }
 
-function escapeHtml(value) {
-  return String(value).replace(/[&<>"']/g, char => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;"
-  }[char]));
-}
-
 function listenToPosts() {
   if (unsubscribePosts) {
     unsubscribePosts();
     unsubscribePosts = null;
   }
 
-  // Firestore rules reject queries that might return documents the user cannot read.
-  // Readers get only published posts; writers/admins can also see drafts.
   const postsQuery = canWritePosts()
     ? query(collection(db, "posts"), orderBy("createdAt", "desc"))
     : query(collection(db, "posts"), where("published", "==", true), orderBy("createdAt", "desc"));
 
   unsubscribePosts = onSnapshot(postsQuery, snapshot => {
-    allPosts = snapshot.docs.map(docSnap => ({
-      id: docSnap.id,
-      ...docSnap.data()
-    }));
-    renderPosts();
+    hasLoadedPosts = true;
+    allPosts = snapshot.docs.map(docSnap => ({ id: docSnap.id, ...docSnap.data() }));
+    renderCurrentRoute();
   }, error => {
-    els.postsList.innerHTML = `<div class="empty-state">${escapeHtml(error.message)}</div>`;
+    hasLoadedPosts = true;
+    if (getRoute().view === "post") {
+      els.singlePostContainer.innerHTML = `<div class="empty-state">${escapeHtml(error.message)}</div>`;
+    } else {
+      els.postsList.innerHTML = `<div class="empty-state">${escapeHtml(error.message)}</div>`;
+    }
   });
 }
 
@@ -590,29 +766,36 @@ async function updateContributorRole(event) {
   }
 }
 
-els.authButton.addEventListener("click", () => els.authDialog.showModal());
+els.authButton.addEventListener("click", () => { window.location.hash = "#/login"; });
+els.registerNavButton.addEventListener("click", () => { window.location.hash = "#/register"; });
+
 els.logoutButton.addEventListener("click", async () => {
   await signOut(auth);
+  window.location.hash = "#/";
   showNotice("Logged out.");
 });
 
-els.loginEmailButton.addEventListener("click", loginWithEmail);
-els.registerEmailButton.addEventListener("click", registerWithEmail);
-els.googleButton.addEventListener("click", loginWithGoogle);
 els.verifyEmailButton.addEventListener("click", sendVerification);
+els.loginForm.addEventListener("submit", loginWithEmail);
+els.loginGoogleButton.addEventListener("click", () => loginWithGoogle(els.loginMessage));
+els.registerForm.addEventListener("submit", registerWithEmail);
+els.registerGoogleButton.addEventListener("click", () => loginWithGoogle(els.registerMessage));
 
 els.newPostButton.addEventListener("click", () => openEditor());
 els.cancelEditButton.addEventListener("click", closeEditor);
 els.postForm.addEventListener("submit", savePost);
 els.postBody.addEventListener("input", () => renderMarkdownWithLatex(els.postBody.value, els.postPreview));
+
 els.manageContributorsButton.addEventListener("click", () => {
   els.adminPanel.classList.toggle("hidden");
   if (!els.adminPanel.classList.contains("hidden")) {
     els.adminPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 });
+
 els.contributorForm.addEventListener("submit", updateContributorRole);
 els.searchInput.addEventListener("input", renderPosts);
+window.addEventListener("hashchange", renderCurrentRoute);
 
 onAuthStateChanged(auth, async user => {
   currentUser = user;
@@ -630,4 +813,5 @@ onAuthStateChanged(auth, async user => {
 
   updateAuthUi();
   listenToPosts();
+  renderCurrentRoute();
 });

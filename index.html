@@ -38,194 +38,197 @@
         <button id="newPostButton" class="button subtle hidden">New entry</button>
         <button id="manageContributorsButton" class="button subtle hidden">Contributors</button>
         <span id="userBadge" class="user-badge"></span>
-        <button id="authButton" class="button text-button">Log in</button>
-        <button id="logoutButton" class="button subtle hidden">Log out</button>
+        <button id="verifyEmailButton" class="button subtle hidden" type="button">Verify email</button>
+        <button id="authButton" class="button text-button" type="button">Log in</button>
+        <button id="registerNavButton" class="button text-button" type="button">Register</button>
+        <button id="logoutButton" class="button subtle hidden" type="button">Log out</button>
       </nav>
     </div>
   </header>
 
   <main class="page-shell">
-    <section class="hero-grid">
-      <div class="hero-copy">
-        <p class="hero-kicker">A personal notebook</p>
-        <h1>raindrops</h1>
-
-        <p class="hero-lead">
-          A place for ideas, math, reflections, and whatever else happens to
-          gather on the page.
-        </p>
-
-        <p class="hero-text">
-          I write about problems I find beautiful, things I’m learning,
-          occasional essays, and notes that don’t quite belong anywhere else.
-        </p>
-
-        <p class="hero-text">
-          Posts support Markdown and built-in LaTeX, so writing something like
-          <code>$$e^{i\pi}+1=0$$</code> will render it properly.
-        </p>
-      </div>
-
-      <aside class="hero-card">
-        <h2>Notebook Notes</h2>
-        <ul class="stat-list">
-          <li>
-            <span class="stat-label">
-              <span class="stat-icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
-              </span>
-              Writing
-            </span>
-            <span class="stat-value">Owner + contributors</span>
-          </li>
-          <li>
-            <span class="stat-label">
-              <span class="stat-icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </span>
-              Reader interaction
-            </span>
-            <span class="stat-value">Likes &amp; comments</span>
-          </li>
-          <li>
-            <span class="stat-label">
-              <span class="stat-icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7V5a1 1 0 0 0-1-1H6.5a.5.5 0 0 0-.4.8L12 12 6.1 19.2a.5.5 0 0 0 .4.8H17a1 1 0 0 0 1-1v-2"/></svg>
-              </span>
-              Math support
-            </span>
-            <span class="stat-value">Markdown + LaTeX</span>
-          </li>
-        </ul>
-      </aside>
-    </section>
-
     <section id="notice" class="notice hidden" role="status"></section>
 
-    <section id="editorPanel" class="panel hidden" aria-labelledby="editorHeading">
-      <div class="panel-header">
-        <div>
-          <p class="section-kicker">Writer tools</p>
-          <h2 id="editorHeading">Create or edit an entry</h2>
-        </div>
-        <button id="cancelEditButton" class="button subtle hidden">Cancel</button>
-      </div>
+    <section id="homeView" class="view">
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">A personal notebook</p>
+          <h1>raindrops</h1>
 
-      <form id="postForm" class="stack">
-        <input
-          id="postTitle"
-          class="input title-input"
-          type="text"
-          placeholder="Entry title"
-          required
-          maxlength="140"
-        />
-        <textarea
-          id="postBody"
-          class="textarea"
-          rows="12"
-          placeholder="Write in Markdown. Use $$...$$ or \(...\) for LaTeX."
-          required
-        ></textarea>
-        <div class="form-row">
-          <label class="checkbox-label">
-            <input id="postPublished" type="checkbox" checked />
-            Published
-          </label>
-          <button class="button primary" type="submit">Save entry</button>
-        </div>
-      </form>
+          <p class="hero-lead">
+            A place for ideas, math, reflections, and whatever else happens to
+            gather on the page.
+          </p>
 
-      <details class="preview-details">
-        <summary>Preview</summary>
-        <article id="postPreview" class="post-content preview"></article>
-      </details>
+          <p class="hero-text">
+            I write about problems I find beautiful, things I’m learning,
+            occasional essays, and notes that don’t quite belong anywhere else.
+          </p>
+
+          <p class="hero-text">
+            Posts support Markdown and built-in LaTeX, so writing something like
+            <code>$$e^{i\pi}+1=0$$</code> will render it properly.
+          </p>
+        </div>
+
+        <aside class="hero-card" aria-labelledby="statsHeading">
+          <h2 id="statsHeading">Notebook Stats</h2>
+          <ul class="stat-list">
+            <li>
+              <span class="stat-label">
+                <span class="stat-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg>
+                </span>
+                Entries
+              </span>
+              <span id="statsEntries" class="stat-value">0</span>
+            </li>
+            <li>
+              <span class="stat-label">
+                <span class="stat-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </span>
+                Likes
+              </span>
+              <span id="statsLikes" class="stat-value">0</span>
+            </li>
+            <li>
+              <span class="stat-label">
+                <span class="stat-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                Comments
+              </span>
+              <span id="statsComments" class="stat-value">0</span>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="editorPanel" class="panel hidden" aria-labelledby="editorHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Writer tools</p>
+            <h2 id="editorHeading">Create or edit an entry</h2>
+          </div>
+          <button id="cancelEditButton" class="button subtle hidden">Cancel</button>
+        </div>
+
+        <form id="postForm" class="stack">
+          <input id="postTitle" class="input title-input" type="text" placeholder="Entry title" required maxlength="140" />
+          <textarea id="postBody" class="textarea" rows="12" placeholder="Write in Markdown. Use $$...$$ or \(...\) for LaTeX." required></textarea>
+          <div class="form-row">
+            <label class="checkbox-label">
+              <input id="postPublished" type="checkbox" checked />
+              Published
+            </label>
+            <button class="button primary" type="submit">Save entry</button>
+          </div>
+        </form>
+
+        <details class="preview-details">
+          <summary>Preview</summary>
+          <article id="postPreview" class="post-content preview"></article>
+        </details>
+      </section>
+
+      <section id="adminPanel" class="panel hidden" aria-labelledby="contributorsHeading">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Admin tools</p>
+            <h2 id="contributorsHeading">Manage contributors</h2>
+          </div>
+        </div>
+
+        <p class="muted">
+          Contributors need to register or log in once before you can give them writing access.
+        </p>
+
+        <form id="contributorForm" class="contributor-form">
+          <input id="contributorEmail" class="input" type="email" placeholder="contributor@example.com" required />
+          <select id="contributorRole" class="input">
+            <option value="writer">writer</option>
+            <option value="reader">reader</option>
+            <option value="admin">admin</option>
+          </select>
+          <button class="button primary" type="submit">Update role</button>
+        </form>
+
+        <div id="contributorResult" class="muted"></div>
+      </section>
+
+      <section class="posts-section" aria-labelledby="postsHeading">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Latest writing</p>
+            <h2 id="postsHeading">Recent Entries</h2>
+          </div>
+          <input id="searchInput" class="input search-input" type="search" placeholder="Search entries..." />
+        </div>
+
+        <div id="postsList" class="posts-list" aria-live="polite">
+          <div class="empty-state">Loading entries...</div>
+        </div>
+      </section>
     </section>
 
-    <section id="adminPanel" class="panel hidden" aria-labelledby="contributorsHeading">
-      <div class="panel-header">
-        <div>
-          <p class="section-kicker">Admin tools</p>
-          <h2 id="contributorsHeading">Manage contributors</h2>
-        </div>
+    <section id="postView" class="view hidden">
+      <a class="back-link" href="#/">← Back to entries</a>
+      <div id="singlePostContainer" class="single-post-container">
+        <div class="empty-state">Loading entry...</div>
       </div>
-
-      <p class="muted">
-        Contributors need to register or log in once before you can give them writing access.
-      </p>
-
-      <form id="contributorForm" class="contributor-form">
-        <input
-          id="contributorEmail"
-          class="input"
-          type="email"
-          placeholder="contributor@example.com"
-          required
-        />
-        <select id="contributorRole" class="input">
-          <option value="writer">writer</option>
-          <option value="reader">reader</option>
-          <option value="admin">admin</option>
-        </select>
-        <button class="button primary" type="submit">Update role</button>
-      </form>
-
-      <div id="contributorResult" class="muted"></div>
     </section>
 
-    <section class="posts-section" aria-labelledby="postsHeading">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">Latest writing</p>
-          <h2 id="postsHeading">Recent Entries</h2>
-        </div>
-        <input
-          id="searchInput"
-          class="input search-input"
-          type="search"
-          placeholder="Search entries..."
-        />
-      </div>
+    <section id="loginView" class="view auth-page hidden" aria-labelledby="loginHeading">
+      <div class="auth-card">
+        <h1 id="loginHeading">Log In</h1>
+        <p class="auth-subtitle">Return to the notebook.</p>
 
-      <div id="postsList" class="posts-list" aria-live="polite">
-        <div class="empty-state">Loading entries...</div>
+        <form id="loginForm" class="auth-form">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" class="input" type="email" placeholder="you@example.com" autocomplete="email" required />
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" class="input" type="password" autocomplete="current-password" required />
+
+          <button class="button primary full" type="submit">Log In</button>
+        </form>
+
+        <div class="separator"><span>or</span></div>
+        <button id="loginGoogleButton" class="button full" type="button">Continue with Google</button>
+
+        <p class="auth-switch">Don’t have an account? <a href="#/register">Register here</a></p>
+        <p id="loginMessage" class="auth-message muted"></p>
+      </div>
+    </section>
+
+    <section id="registerView" class="view auth-page hidden" aria-labelledby="registerHeading">
+      <div class="auth-card">
+        <h1 id="registerHeading">Register</h1>
+        <p class="auth-subtitle">Join the conversation.</p>
+
+        <form id="registerForm" class="auth-form">
+          <label for="registerEmail">Email</label>
+          <input id="registerEmail" class="input" type="email" placeholder="you@example.com" autocomplete="email" required />
+
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" class="input" type="password" autocomplete="new-password" minlength="6" required />
+
+          <button class="button primary full" type="submit">Create Account</button>
+        </form>
+
+        <div class="separator"><span>or</span></div>
+        <button id="registerGoogleButton" class="button full" type="button">Continue with Google</button>
+
+        <p class="auth-switch">Already have an account? <a href="#/login">Log in here</a></p>
+        <p id="registerMessage" class="auth-message muted"></p>
       </div>
     </section>
   </main>
 
-  <dialog id="authDialog" class="dialog">
-    <form method="dialog" class="dialog-close-form">
-      <button class="icon-button" aria-label="Close">×</button>
-    </form>
-
-    <div class="dialog-body">
-      <p class="section-kicker">Account</p>
-      <h2>Register or log in</h2>
-      <p class="muted">
-        You need an account to comment or like posts. Only approved writers can publish posts.
-      </p>
-
-      <form id="authForm" class="stack">
-        <input id="authEmail" class="input" type="email" placeholder="Email" autocomplete="email" required />
-        <input id="authPassword" class="input" type="password" placeholder="Password" autocomplete="current-password" minlength="6" required />
-        <div class="auth-grid">
-          <button id="loginEmailButton" class="button primary" type="button">Log in</button>
-          <button id="registerEmailButton" class="button subtle" type="button">Register</button>
-        </div>
-      </form>
-
-      <div class="separator"><span>or</span></div>
-
-      <button id="googleButton" class="button full" type="button">Continue with Google</button>
-      <button id="verifyEmailButton" class="button subtle full hidden" type="button">Send verification email</button>
-
-      <p id="authMessage" class="muted"></p>
-    </div>
-  </dialog>
-
   <template id="postTemplate">
     <article class="post-card">
-      <div class="entry-stripe"></div>
+      <div class="entry-stripe" aria-hidden="true"></div>
 
       <div class="post-main">
         <div class="post-topline">
@@ -243,6 +246,8 @@
 
         <div class="post-content"></div>
 
+        <a class="read-post-link" href="#" target="_blank" rel="noopener">Read entry →</a>
+
         <div class="engagement-row">
           <button class="like-button" type="button">♡ Like</button>
           <span class="like-count">0 likes</span>
@@ -252,6 +257,7 @@
         <details class="comments-box">
           <summary>Comments</summary>
           <div class="comments-list"></div>
+          <p class="comment-login-note muted hidden"></p>
           <form class="comment-form">
             <textarea class="textarea comment-input" rows="3" placeholder="Write a comment..." required></textarea>
             <button class="button subtle" type="submit">Comment</button>

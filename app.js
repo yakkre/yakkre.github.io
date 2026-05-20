@@ -403,11 +403,13 @@ async function savePost(event) {
 
   const title = els.postTitle.value.trim();
   const body = els.postBody.value.trim();
+  const tags = parseTags(els.postTags.value);
   if (!title || !body) return;
 
   const payload = {
     title,
     slug: makeSlug(title),
+    tags,
     body,
     published: els.postPublished.checked,
     updatedAt: serverTimestamp()

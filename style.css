@@ -1099,3 +1099,37 @@ pre,
     padding: 2rem 1.4rem;
   }
 }
+
+
+/* ============================================================
+   V3: tags, hover state, and no-index logged-out layout polish
+   ============================================================ */
+
+.tags-input {
+  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.post-card:hover {
+  border-color: var(--accent-soft);
+  box-shadow: 0 8px 20px rgba(29, 43, 64, 0.06);
+}
+
+.post-card:hover .entry-stripe,
+.post-card.active .entry-stripe,
+.single-post-card .entry-stripe {
+  background: var(--accent);
+}
+
+.post-card:hover .post-title {
+  color: var(--accent-deep);
+}
+
+.post-meta {
+  margin-bottom: 1.1rem;
+}
+
+/* Keep logged-out readers in read-only mode without hiding the post. */
+.like-button.requires-login {
+  color: var(--ink-mute);
+}

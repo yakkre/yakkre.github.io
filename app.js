@@ -66,6 +66,7 @@ const els = {
   editorPanel: $("#editorPanel"),
   postForm: $("#postForm"),
   postTitle: $("#postTitle"),
+  postTags: $("#postTags"),
   postBody: $("#postBody"),
   postPublished: $("#postPublished"),
   postPreview: $("#postPreview"),
@@ -125,6 +126,19 @@ function makeSlug(title) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "")
     .slice(0, 80) || "post";
+}
+
+function parseTags(value) {
+  return String(value || "")
+    .split(",")
+    .map(tag => tag.trim().replace(/^#+/, ""))
+    .filter(Boolean)
+    .slice(0, 12);
+}
+
+function formatTags(tags) {
+  if (!Array.isArray(tags) || tags.length === 0) return "";
+  return tags.map(tag => `#${tag}`).join(" ");
 }
 
 function makeExcerpt(markdown, maxLength = 220) {
@@ -355,6 +369,7 @@ function openEditor(post = null) {
 
   editingPostId = post?.id || null;
   els.postTitle.value = post?.title || "";
+  els.postTags.value = Array.isArray(post?.tags) ? post.tags.join(", ") : "";
   els.postBody.value = post?.body || "";
   els.postPublished.checked = post?.published ?? true;
   els.cancelEditButton.classList.toggle("hidden", !editingPostId);
@@ -433,9 +448,9 @@ function passesSearch(post) {
   const term = els.searchInput.value.trim().toLowerCase();
   if (!term) return true;
 
-  return [post.title, post.body, post.authorName, post.authorEmail]
+  return [post.title, post.body, ...(Array.isArray(post.tags) ? post.tags : [])]
     .filter(Boolean)
-    .some(value => value.toLowerCase().includes(term));
+    .some(value => String(value).toLowerCase().includes(term));
 }
 
 function updateStats() {
@@ -471,7 +486,8 @@ function fillPostNode(node, post, { full = false } = {}) {
   const readLink = $(".read-post-link", node);
 
   title.textContent = post.title;
-  meta.textContent = `${post.authorName || post.authorEmail || "Unknown"} · ${formatDate(post.createdAt)}${post.published ? "" : " · draft"}`;
+  const tagText = formatTags(post.tags);
+  meta.textContent = `${formatDate(post.createdAt)}${tagText ? " — " + tagText : ""}${post.published ? "" : " · draft"}`;
 
   const postUrl = `${window.location.origin}${window.location.pathname}#/post/${encodeURIComponent(post.id)}`;
   readLink.href = postUrl;
@@ -715,13 +731,21 @@ function listenToPosts() {
     unsubscribePosts = null;
   }
 
+  // Logged-out readers use a single-field query so Firestore does not require a composite index.
+  // We sort client-side after loading.
   const postsQuery = canWritePosts()
     ? query(collection(db, "posts"), orderBy("createdAt", "desc"))
-    : query(collection(db, "posts"), where("published", "==", true), orderBy("createdAt", "desc"));
+    : query(collection(db, "posts"), where("published", "==", true));
 
   unsubscribePosts = onSnapshot(postsQuery, snapshot => {
     hasLoadedPosts = true;
-    allPosts = snapshot.docs.map(docSnap => ({ id: docSnap.id, ...docSnap.data() }));
+    allPosts = snapshot.docs
+      .map(docSnap => ({ id: docSnap.id, ...docSnap.data() }))
+      .sort((a, b) => {
+        const aTime = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+        const bTime = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+        return bTime - aTime;
+      });
     renderCurrentRoute();
   }, error => {
     hasLoadedPosts = true;

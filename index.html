@@ -6,6 +6,11 @@
   <meta name="description" content="raindrops — a personal blog" />
   <title>raindrops</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- KaTeX for LaTeX rendering -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
 
@@ -24,27 +29,60 @@
 
 <body>
   <header class="site-header">
-    <a class="brand" href="#/" aria-label="raindrops home">
-      <span class="brand-mark">◌</span>
-      <span>raindrops</span>
-    </a>
+    <div class="header-inner">
+      <a class="brand" href="#/" aria-label="raindrops home">
+        <span class="brand-word">raindrops</span>
+      </a>
 
-    <nav class="nav-actions" aria-label="Main navigation">
-      <button id="newPostButton" class="button hidden">New post</button>
-      <button id="manageContributorsButton" class="button ghost hidden">Contributors</button>
-      <span id="userBadge" class="user-badge"></span>
-      <button id="authButton" class="button">Register / Login</button>
-      <button id="logoutButton" class="button ghost hidden">Log out</button>
-    </nav>
+      <nav class="nav-actions" aria-label="Main navigation">
+        <button id="newPostButton" class="button subtle hidden">New entry</button>
+        <button id="manageContributorsButton" class="button subtle hidden">Contributors</button>
+        <span id="userBadge" class="user-badge"></span>
+        <button id="authButton" class="button text-button">Log in</button>
+        <button id="logoutButton" class="button subtle hidden">Log out</button>
+      </nav>
+    </div>
   </header>
 
-  <main class="layout">
-    <section class="hero">
-      <p class="eyebrow">personal notes, math, ideas</p>
-      <h1>raindrops</h1>
-      <p class="subtitle">
-        some ideas
-      </p>
+  <main class="page-shell">
+    <section class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">A personal notebook</p>
+        <h1>raindrops</h1>
+
+        <p class="hero-lead">
+          A place for ideas, math, reflections, and whatever else happens to
+          gather on the page.
+        </p>
+
+        <p class="hero-text">
+          I write about problems I find beautiful, things I’m learning,
+          occasional essays, and notes that don’t quite belong anywhere else.
+        </p>
+
+        <p class="hero-text">
+          Posts support Markdown and built-in LaTeX, so writing something like
+          <code>$$e^{i\pi}+1=0$$</code> will render it properly.
+        </p>
+      </div>
+
+      <aside class="hero-card">
+        <h2>Notebook Notes</h2>
+        <ul class="stat-list">
+          <li>
+            <span class="stat-label">Writing</span>
+            <span class="stat-value">Owner + contributors</span>
+          </li>
+          <li>
+            <span class="stat-label">Reader interaction</span>
+            <span class="stat-value">Likes & comments</span>
+          </li>
+          <li>
+            <span class="stat-label">Math support</span>
+            <span class="stat-value">Markdown + LaTeX</span>
+          </li>
+        </ul>
+      </aside>
     </section>
 
     <section id="notice" class="notice hidden" role="status"></section>
@@ -52,21 +90,34 @@
     <section id="editorPanel" class="panel hidden" aria-labelledby="editorHeading">
       <div class="panel-header">
         <div>
-          <p class="eyebrow">writer tools</p>
-          <h2 id="editorHeading">Create or edit a post</h2>
+          <p class="section-kicker">Writer tools</p>
+          <h2 id="editorHeading">Create or edit an entry</h2>
         </div>
-        <button id="cancelEditButton" class="button ghost hidden">Cancel edit</button>
+        <button id="cancelEditButton" class="button subtle hidden">Cancel</button>
       </div>
 
       <form id="postForm" class="stack">
-        <input id="postTitle" class="input title-input" type="text" placeholder="Post title" required maxlength="140" />
-        <textarea id="postBody" class="textarea" rows="12" placeholder="Write in Markdown. Use $$...$$ or \(...\) for LaTeX." required></textarea>
+        <input
+          id="postTitle"
+          class="input title-input"
+          type="text"
+          placeholder="Entry title"
+          required
+          maxlength="140"
+        />
+        <textarea
+          id="postBody"
+          class="textarea"
+          rows="12"
+          placeholder="Write in Markdown. Use $$...$$ or \(...\) for LaTeX."
+          required
+        ></textarea>
         <div class="form-row">
           <label class="checkbox-label">
             <input id="postPublished" type="checkbox" checked />
             Published
           </label>
-          <button class="button primary" type="submit">Save post</button>
+          <button class="button primary" type="submit">Save entry</button>
         </div>
       </form>
 
@@ -79,15 +130,23 @@
     <section id="adminPanel" class="panel hidden" aria-labelledby="contributorsHeading">
       <div class="panel-header">
         <div>
-          <p class="eyebrow">admin tools</p>
+          <p class="section-kicker">Admin tools</p>
           <h2 id="contributorsHeading">Manage contributors</h2>
         </div>
       </div>
+
       <p class="muted">
-        Contributors must register or log in once before you can grant writing access.
+        Contributors need to register or log in once before you can give them writing access.
       </p>
+
       <form id="contributorForm" class="contributor-form">
-        <input id="contributorEmail" class="input" type="email" placeholder="contributor@example.com" required />
+        <input
+          id="contributorEmail"
+          class="input"
+          type="email"
+          placeholder="contributor@example.com"
+          required
+        />
         <select id="contributorRole" class="input">
           <option value="writer">writer</option>
           <option value="reader">reader</option>
@@ -95,20 +154,26 @@
         </select>
         <button class="button primary" type="submit">Update role</button>
       </form>
+
       <div id="contributorResult" class="muted"></div>
     </section>
 
     <section class="posts-section" aria-labelledby="postsHeading">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">latest</p>
-          <h2 id="postsHeading">Posts</h2>
+          <p class="section-kicker">Latest writing</p>
+          <h2 id="postsHeading">Recent Entries</h2>
         </div>
-        <input id="searchInput" class="input search-input" type="search" placeholder="Search posts..." />
+        <input
+          id="searchInput"
+          class="input search-input"
+          type="search"
+          placeholder="Search entries..."
+        />
       </div>
 
       <div id="postsList" class="posts-list" aria-live="polite">
-        <div class="empty-state">Loading posts...</div>
+        <div class="empty-state">Loading entries...</div>
       </div>
     </section>
   </main>
@@ -119,7 +184,7 @@
     </form>
 
     <div class="dialog-body">
-      <p class="eyebrow">account</p>
+      <p class="section-kicker">Account</p>
       <h2>Register or log in</h2>
       <p class="muted">
         You need an account to comment or like posts. Only approved writers can publish posts.
@@ -130,46 +195,54 @@
         <input id="authPassword" class="input" type="password" placeholder="Password" autocomplete="current-password" minlength="6" required />
         <div class="auth-grid">
           <button id="loginEmailButton" class="button primary" type="button">Log in</button>
-          <button id="registerEmailButton" class="button" type="button">Register</button>
+          <button id="registerEmailButton" class="button subtle" type="button">Register</button>
         </div>
       </form>
 
       <div class="separator"><span>or</span></div>
+
       <button id="googleButton" class="button full" type="button">Continue with Google</button>
-      <button id="verifyEmailButton" class="button ghost full hidden" type="button">Send verification email</button>
+      <button id="verifyEmailButton" class="button subtle full hidden" type="button">Send verification email</button>
+
       <p id="authMessage" class="muted"></p>
     </div>
   </dialog>
 
   <template id="postTemplate">
     <article class="post-card">
-      <div class="post-topline">
-        <div>
-          <h3 class="post-title"></h3>
-          <p class="post-meta"></p>
+      <div class="entry-stripe"></div>
+
+      <div class="post-main">
+        <div class="post-topline">
+          <div>
+            <p class="entry-label">Entry</p>
+            <h3 class="post-title"></h3>
+            <p class="post-meta"></p>
+          </div>
+
+          <div class="post-actions hidden">
+            <button class="button subtle small edit-post">Edit</button>
+            <button class="button subtle small danger delete-post">Delete</button>
+          </div>
         </div>
-        <div class="post-actions hidden">
-          <button class="button small edit-post">Edit</button>
-          <button class="button small danger delete-post">Delete</button>
+
+        <div class="post-content"></div>
+
+        <div class="engagement-row">
+          <button class="like-button" type="button">♡ Like</button>
+          <span class="like-count">0 likes</span>
+          <span class="comment-count">0 comments</span>
         </div>
+
+        <details class="comments-box">
+          <summary>Comments</summary>
+          <div class="comments-list"></div>
+          <form class="comment-form">
+            <textarea class="textarea comment-input" rows="3" placeholder="Write a comment..." required></textarea>
+            <button class="button subtle" type="submit">Comment</button>
+          </form>
+        </details>
       </div>
-
-      <div class="post-content"></div>
-
-      <div class="engagement-row">
-        <button class="like-button" type="button">♡ Like</button>
-        <span class="like-count">0 likes</span>
-        <span class="comment-count">0 comments</span>
-      </div>
-
-      <details class="comments-box">
-        <summary>Comments</summary>
-        <div class="comments-list"></div>
-        <form class="comment-form">
-          <textarea class="textarea comment-input" rows="3" placeholder="Write a comment..." required></textarea>
-          <button class="button" type="submit">Comment</button>
-        </form>
-      </details>
     </article>
   </template>
 </body>

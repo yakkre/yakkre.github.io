@@ -1,0 +1,184 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function verified() {
+      return signedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isOwner() {
+      return verified() && request.auth.token.email == "yakuppala10@gmail.com";
+    }
+
+    function userDoc(uid) {
+      return get(/databases/$(database)/documents/users/$(uid));
+    }
+
+    function hasRole(roles) {
+      return verified()
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && userDoc(request.auth.uid).data.role in roles;
+    }
+
+    function canWritePosts() {
+      return isOwner() || hasRole(["writer", "admin"]);
+    }
+
+    function canManageUsers() {
+      return isOwner() || hasRole(["admin"]);
+    }
+
+    match /users/{userId} {
+      allow get: if signedIn() && (request.auth.uid == userId || canManageUsers());
+      allow list: if canManageUsers();
+
+      allow create: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly([
+          "email",
+          "displayName",
+          "photoURL",
+          "role",
+          "createdAt",
+          "updatedAt"
+        ])
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.role == "reader"
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.updatedAt == request.time;
+
+      allow update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          "displayName",
+          "photoURL",
+          "updatedAt"
+        ])
+        && request.resource.data.email == resource.data.email
+        && request.resource.data.role == resource.data.role
+        && request.resource.data.updatedAt == request.time;
+
+      allow update: if canManageUsers()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          "role",
+          "updatedAt"
+        ])
+        && request.resource.data.role in ["reader", "writer", "admin"]
+        && request.resource.data.updatedAt == request.time;
+
+      allow delete: if canManageUsers();
+    }
+
+    match /posts/{postId} {
+      allow read: if resource.data.published == true || canWritePosts();
+
+      allow create: if canWritePosts()
+        && request.resource.data.keys().hasOnly([
+          "title",
+          "slug",
+          "body",
+          "published",
+          "authorUid",
+          "authorEmail",
+          "authorName",
+          "createdAt",
+          "updatedAt"
+        ])
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 140
+        && request.resource.data.slug is string
+        && request.resource.data.body is string
+        && request.resource.data.body.size() > 0
+        && request.resource.data.body.size() <= 100000
+        && request.resource.data.published is bool
+        && request.resource.data.authorUid == request.auth.uid
+        && request.resource.data.authorEmail == request.auth.token.email
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.updatedAt == request.time;
+
+      allow update: if canWritePosts()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          "title",
+          "slug",
+          "body",
+          "published",
+          "updatedAt"
+        ])
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 140
+        && request.resource.data.slug is string
+        && request.resource.data.body is string
+        && request.resource.data.body.size() > 0
+        && request.resource.data.body.size() <= 100000
+        && request.resource.data.published is bool
+        && request.resource.data.authorUid == resource.data.authorUid
+        && request.resource.data.authorEmail == resource.data.authorEmail
+        && request.resource.data.authorName == resource.data.authorName
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.updatedAt == request.time;
+
+      allow delete: if isOwner()
+        || hasRole(["admin"])
+        || (hasRole(["writer"]) && resource.data.authorUid == request.auth.uid);
+
+      match /comments/{commentId} {
+        allow read: if get(/databases/$(database)/documents/posts/$(postId)).data.published == true || canWritePosts();
+
+        allow create: if verified()
+          && request.resource.data.keys().hasOnly([
+            "text",
+            "authorUid",
+            "authorEmail",
+            "authorName",
+            "createdAt",
+            "updatedAt"
+          ])
+          && request.resource.data.text is string
+          && request.resource.data.text.size() > 0
+          && request.resource.data.text.size() <= 5000
+          && request.resource.data.authorUid == request.auth.uid
+          && request.resource.data.authorEmail == request.auth.token.email
+          && request.resource.data.createdAt == request.time
+          && request.resource.data.updatedAt == request.time;
+
+        allow update: if verified()
+          && request.auth.uid == resource.data.authorUid
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+            "text",
+            "updatedAt"
+          ])
+          && request.resource.data.text is string
+          && request.resource.data.text.size() > 0
+          && request.resource.data.text.size() <= 5000
+          && request.resource.data.updatedAt == request.time;
+
+        allow delete: if verified()
+          && (request.auth.uid == resource.data.authorUid || canWritePosts());
+      }
+
+      match /likes/{userId} {
+        allow read: if get(/databases/$(database)/documents/posts/$(postId)).data.published == true || canWritePosts();
+
+        allow create: if verified()
+          && request.auth.uid == userId
+          && request.resource.data.keys().hasOnly([
+            "uid",
+            "email",
+            "createdAt"
+          ])
+          && request.resource.data.uid == request.auth.uid
+          && request.resource.data.email == request.auth.token.email
+          && request.resource.data.createdAt == request.time;
+
+        allow delete: if verified() && request.auth.uid == userId;
+        allow update: if false;
+      }
+    }
+  }
+}

@@ -1307,3 +1307,34 @@ pre,
     width: 100%;
   }
 }
+
+
+/* ============================================================
+   V7 CLEAN SLUG ROUTES AND EDITOR PAGE
+   ============================================================ */
+
+.editor-page {
+  padding-top: 2rem;
+}
+
+.editor-page .editor-panel {
+  margin-top: 1.5rem;
+}
+
+.slug-input,
+.tags-input {
+  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.desk-title {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.desk-title:hover {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

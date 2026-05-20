@@ -38,6 +38,7 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const els = {
   homeView: $("#homeView"),
   deskView: $("#deskView"),
+  editorView: $("#editorView"),
   postView: $("#postView"),
   loginView: $("#loginView"),
   registerView: $("#registerView"),
@@ -69,6 +70,7 @@ const els = {
   editorPanel: $("#editorPanel"),
   postForm: $("#postForm"),
   postTitle: $("#postTitle"),
+  postSlug: $("#postSlug"),
   postTags: $("#postTags"),
   postBody: $("#postBody"),
   postPublished: $("#postPublished"),
@@ -97,6 +99,7 @@ let currentProfile = null;
 let allPosts = [];
 let hasLoadedPosts = false;
 let editingPostId = null;
+let editorLoadedFor = null;
 let unsubscribePosts = null;
 let unsubscribeChildListeners = [];
 
@@ -141,6 +144,50 @@ function makeSlug(title) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "")
     .slice(0, 80) || "post";
+}
+
+function cleanSlug(value) {
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/['"]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "")
+    .slice(0, 90);
+}
+
+function uniqueSlug(baseSlug, currentPostId = null) {
+  const base = cleanSlug(baseSlug) || "post";
+  let candidate = base;
+  let counter = 2;
+  const existing = new Set(
+    allPosts
+      .filter(post => post.id !== currentPostId)
+      .map(post => post.slug)
+      .filter(Boolean)
+  );
+
+  while (existing.has(candidate)) {
+    candidate = `${base}-${counter}`;
+    counter += 1;
+  }
+
+  return candidate;
+}
+
+function postPath(post) {
+  const slug = post?.slug || makeSlug(post?.title || "post");
+  return `/post/${encodeURIComponent(slug)}`;
+}
+
+function editPath(post) {
+  const slug = post?.slug || makeSlug(post?.title || "post");
+  return `/edit/${encodeURIComponent(slug)}`;
+}
+
+function navigate(path) {
+  window.history.pushState({}, "", path);
+  renderCurrentRoute();
 }
 
 function parseTags(value) {
@@ -236,19 +283,36 @@ function clearChildListeners() {
 }
 
 function getRoute() {
-  const hash = window.location.hash || "#/";
-  if (hash.startsWith("#/post/")) {
-    return { view: "post", postId: decodeURIComponent(hash.replace("#/post/", "")) };
+  const hash = window.location.hash || "";
+  let path = window.location.pathname || "/";
+
+  if (hash.startsWith("#/")) {
+    path = hash.slice(1);
   }
-  if (hash === "#/desk") return { view: "desk" };
-  if (hash === "#/login") return { view: "login" };
-  if (hash === "#/register") return { view: "register" };
+
+  path = path.replace(/\/+$/, "") || "/";
+  const parts = path.split("/").filter(Boolean);
+
+  if (parts[0] === "post" && parts[1]) {
+    return { view: "post", slug: decodeURIComponent(parts.slice(1).join("/")) };
+  }
+
+  if (parts[0] === "edit" && parts[1]) {
+    return { view: "edit", slug: decodeURIComponent(parts.slice(1).join("/")) };
+  }
+
+  if (path === "/new") return { view: "new" };
+  if (path === "/desk") return { view: "desk" };
+  if (path === "/login") return { view: "login" };
+  if (path === "/register") return { view: "register" };
+
   return { view: "home" };
 }
 
 function showView(view) {
   els.homeView.classList.toggle("hidden", view !== "home");
   els.deskView.classList.toggle("hidden", view !== "desk");
+  els.editorView.classList.toggle("hidden", view !== "new" && view !== "edit");
   els.postView.classList.toggle("hidden", view !== "post");
   els.loginView.classList.toggle("hidden", view !== "login");
   els.registerView.classList.toggle("hidden", view !== "register");
@@ -262,8 +326,12 @@ function renderCurrentRoute() {
     renderPosts();
   } else if (route.view === "desk") {
     renderDesk();
+  } else if (route.view === "new") {
+    renderEditorNew();
+  } else if (route.view === "edit") {
+    renderEditorEdit(route.slug);
   } else if (route.view === "post") {
-    renderSinglePost(route.postId);
+    renderSinglePost(route.slug);
   } else {
     clearChildListeners();
   }
@@ -306,7 +374,7 @@ function updateAuthUi() {
     els.deskButton.classList.add("hidden");
     els.newPostButton.classList.add("hidden");
     els.manageContributorsButton.classList.add("hidden");
-    els.editorPanel.classList.add("hidden");
+    navigate("/desk");
     els.adminPanel.classList.add("hidden");
     return;
   }
@@ -325,8 +393,8 @@ function updateAuthUi() {
   els.manageContributorsButton.classList.toggle("hidden", !canManageContributors());
 
   if (!canWritePosts()) {
-    els.editorPanel.classList.add("hidden");
-    if (getRoute().view === "desk") window.location.hash = "#/login";
+    navigate("/desk");
+    if (["desk", "new", "edit"].includes(getRoute().view)) navigate("/login");
   }
   if (!canManageContributors()) els.adminPanel.classList.add("hidden");
 }
@@ -355,7 +423,7 @@ async function loginWithEmail(event) {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    window.location.hash = "#/";
+    navigate("/");
     showNotice("Logged in.");
   } catch (error) {
     els.loginMessage.textContent = error.message;
@@ -367,7 +435,7 @@ async function loginWithGoogle(targetMessage = els.loginMessage) {
 
   try {
     await signInWithPopup(auth, new GoogleAuthProvider());
-    window.location.hash = "#/";
+    navigate("/");
     showNotice("Logged in with Google.");
   } catch (error) {
     targetMessage.textContent = error.message;
@@ -390,26 +458,80 @@ function openEditor(post = null) {
     return;
   }
 
-  if (window.location.hash !== "#/") window.location.hash = "#/";
+  if (post) {
+    navigate(editPath(post));
+  } else {
+    navigate("/new");
+  }
+}
 
+function fillEditor(post = null) {
   editingPostId = post?.id || null;
   els.postTitle.value = post?.title || "";
+  els.postSlug.value = post?.slug || (post?.title ? makeSlug(post.title) : "");
+  if (post) {
+    els.postSlug.dataset.touched = "true";
+  } else {
+    delete els.postSlug.dataset.touched;
+  }
   els.postTags.value = Array.isArray(post?.tags) ? post.tags.join(", ") : "";
   els.postBody.value = post?.body || "";
   els.postPublished.checked = post?.published ?? true;
   els.cancelEditButton.classList.toggle("hidden", !editingPostId);
   renderMarkdownWithLatex(els.postBody.value, els.postPreview);
-  els.editorPanel.classList.remove("hidden");
-  els.editorPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderEditorNew() {
+  clearChildListeners();
+
+  if (!canWritePosts()) {
+    navigate("/login");
+    return;
+  }
+
+  if (editorLoadedFor !== "new") {
+    fillEditor(null);
+    editorLoadedFor = "new";
+  }
+
+  document.title = "New Entry — raindrops";
+}
+
+function renderEditorEdit(slug) {
+  clearChildListeners();
+
+  if (!canWritePosts()) {
+    navigate("/login");
+    return;
+  }
+
+  const post = findPostBySlugOrId(slug);
+
+  if (!post) {
+    if (hasLoadedPosts) {
+      showNotice("Entry not found.", true);
+      navigate("/desk");
+    }
+    return;
+  }
+
+  if (editorLoadedFor !== `edit:${post.id}`) {
+    fillEditor(post);
+    editorLoadedFor = `edit:${post.id}`;
+  }
+
+  document.title = `Edit ${post.title} — raindrops`;
 }
 
 function closeEditor() {
   editingPostId = null;
+  editorLoadedFor = null;
   els.postForm.reset();
+  delete els.postSlug.dataset.touched;
   els.postPublished.checked = true;
   els.postPreview.innerHTML = "";
   els.cancelEditButton.classList.add("hidden");
-  els.editorPanel.classList.add("hidden");
+  navigate("/desk");
 }
 
 async function savePost(event) {
@@ -428,11 +550,13 @@ async function savePost(event) {
   const title = els.postTitle.value.trim();
   const body = els.postBody.value.trim();
   const tags = parseTags(els.postTags.value);
+  const slug = uniqueSlug(els.postSlug.value || title, editingPostId);
+
   if (!title || !body) return;
 
   const payload = {
     title,
-    slug: makeSlug(title),
+    slug,
     tags,
     body,
     published: els.postPublished.checked,
@@ -453,6 +577,7 @@ async function savePost(event) {
       });
       showNotice("Entry published.");
     }
+    editorLoadedFor = null;
     closeEditor();
   } catch (error) {
     showNotice(error.message, true);
@@ -516,7 +641,7 @@ function fillPostNode(node, post, { full = false } = {}) {
   const tagText = formatTags(post.tags);
   meta.textContent = `${formatDate(post.createdAt)}${tagText ? " — " + tagText : ""}${post.published ? "" : " · draft"}`;
 
-  const postUrl = `${window.location.origin}${window.location.pathname}#/post/${encodeURIComponent(post.id)}`;
+  const postUrl = postPath(post);
   readLink.href = postUrl;
 
   if (full) {
@@ -596,7 +721,7 @@ function renderDesk() {
 
     row.innerHTML = `
       <td>
-        <div class="desk-title">${escapeHtml(post.title)}</div>
+        <a class="desk-title" href="${postPath(post)}" target="_blank" rel="noopener">${escapeHtml(post.title)}</a>
         <div class="desk-slug">/${escapeHtml(slug)}</div>
         ${tags ? `<div class="desk-tags">${escapeHtml(tags)}</div>` : ""}
       </td>
@@ -619,7 +744,7 @@ function renderDesk() {
       </td>
     `;
 
-    $(".desk-edit", row).addEventListener("click", () => openEditor(post));
+    $(".desk-edit", row).addEventListener("click", () => navigate(editPath(post)));
     $(".desk-delete", row).addEventListener("click", () => deletePost(post.id));
 
     const likeSpan = $("[data-like-count]", row);
@@ -643,11 +768,15 @@ function renderDesk() {
   }
 }
 
-function renderSinglePost(postId) {
+function findPostBySlugOrId(slugOrId) {
+  return readablePosts().find(item => item.slug === slugOrId || item.id === slugOrId);
+}
+
+function renderSinglePost(slugOrId) {
   clearChildListeners();
   els.singlePostContainer.innerHTML = "";
 
-  const post = readablePosts().find(item => item.id === postId);
+  const post = findPostBySlugOrId(slugOrId);
 
   if (!post) {
     els.singlePostContainer.innerHTML = `<div class="empty-state">${hasLoadedPosts ? "Entry not found, private, or unpublished." : "Loading entry..."}</div>`;
@@ -685,7 +814,7 @@ function attachLikes(postId, postNode) {
 
   likeButton.addEventListener("click", async () => {
     if (!currentUser) {
-      window.location.hash = "#/login";
+      navigate("/login");
       return;
     }
 
@@ -799,7 +928,7 @@ function attachComments(postId, postNode) {
     event.preventDefault();
 
     if (!currentUser) {
-      window.location.hash = "#/login";
+      navigate("/login");
       return;
     }
 
@@ -892,14 +1021,14 @@ async function updateContributorRole(event) {
   }
 }
 
-els.authButton.addEventListener("click", () => { window.location.hash = "#/login"; });
-els.registerNavButton.addEventListener("click", () => { window.location.hash = "#/register"; });
-els.deskButton.addEventListener("click", () => { window.location.hash = "#/desk"; });
-els.deskNewPostButton.addEventListener("click", () => openEditor());
+els.authButton.addEventListener("click", () => navigate("/login"));
+els.registerNavButton.addEventListener("click", () => navigate("/register"));
+els.deskButton.addEventListener("click", () => navigate("/desk"));
+els.deskNewPostButton.addEventListener("click", () => navigate("/new"));
 
 els.logoutButton.addEventListener("click", async () => {
   await signOut(auth);
-  window.location.hash = "#/";
+  navigate("/");
   showNotice("Logged out.");
 });
 
@@ -914,6 +1043,19 @@ els.cancelEditButton.addEventListener("click", closeEditor);
 els.postForm.addEventListener("submit", savePost);
 els.postBody.addEventListener("input", () => renderMarkdownWithLatex(els.postBody.value, els.postPreview));
 
+els.postTitle.addEventListener("input", () => {
+  const route = getRoute();
+  if (route.view === "new" && !els.postSlug.dataset.touched) {
+    els.postSlug.value = makeSlug(els.postTitle.value);
+  }
+});
+
+els.postSlug.addEventListener("input", () => {
+  els.postSlug.dataset.touched = "true";
+  const cleaned = cleanSlug(els.postSlug.value);
+  if (els.postSlug.value !== cleaned) els.postSlug.value = cleaned;
+});
+
 els.manageContributorsButton.addEventListener("click", () => {
   els.adminPanel.classList.toggle("hidden");
   if (!els.adminPanel.classList.contains("hidden")) {
@@ -923,7 +1065,14 @@ els.manageContributorsButton.addEventListener("click", () => {
 
 els.contributorForm.addEventListener("submit", updateContributorRole);
 els.searchInput.addEventListener("input", renderPosts);
-window.addEventListener("hashchange", renderCurrentRoute);
+window.addEventListener("popstate", renderCurrentRoute);
+
+document.addEventListener("click", event => {
+  const link = event.target.closest("a[href^='/']");
+  if (!link || link.target === "_blank" || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  navigate(link.getAttribute("href"));
+});
 
 onAuthStateChanged(auth, async user => {
   currentUser = user;

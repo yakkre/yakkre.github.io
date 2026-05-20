@@ -1133,3 +1133,177 @@ pre,
 .like-button.requires-login {
   color: var(--ink-mute);
 }
+
+
+/* ============================================================
+   V6 AUTHOR DESK
+   ============================================================ */
+
+.author-desk {
+  padding-top: 3rem;
+}
+
+.desk-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.desk-hero h1 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 7vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.desk-subtitle {
+  margin: 0.75rem 0 0;
+  color: var(--accent-deep);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.75rem;
+  font-style: italic;
+}
+
+.desk-new-button {
+  min-width: 170px;
+  padding: 0.85rem 1.25rem;
+}
+
+.desk-table-wrap {
+  margin-top: 3rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(29, 43, 64, 0.06);
+}
+
+.desk-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+}
+
+.desk-table th,
+.desk-table td {
+  padding: 1.35rem 1.55rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--line);
+}
+
+.desk-table th {
+  color: var(--accent-deep);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.desk-table tr:last-child td {
+  border-bottom: none;
+}
+
+.desk-table tbody tr {
+  transition: background 160ms ease;
+}
+
+.desk-table tbody tr:hover {
+  background: rgba(90, 128, 116, 0.055);
+}
+
+.desk-title {
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.desk-slug,
+.desk-tags,
+.desk-date,
+.desk-stats {
+  color: var(--ink-soft);
+  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.desk-slug {
+  margin-top: 0.2rem;
+  color: var(--accent-deep);
+}
+
+.desk-tags {
+  margin-top: 0.35rem;
+  color: var(--ink-mute);
+}
+
+.desk-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  color: var(--ink-soft);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.desk-status.published {
+  color: var(--accent-deep);
+  background: rgba(90, 128, 116, 0.08);
+}
+
+.desk-status.draft {
+  color: var(--danger);
+  background: rgba(155, 76, 76, 0.08);
+}
+
+.desk-stats {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.05rem;
+  color: var(--accent-deep);
+}
+
+.desk-date span {
+  color: var(--ink-mute);
+}
+
+.desk-actions {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.desk-actions .button {
+  margin-left: 0.5rem;
+  min-width: 44px;
+  font-size: 1rem;
+}
+
+.actions-col {
+  text-align: right !important;
+}
+
+.desk-empty {
+  text-align: center;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  .desk-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .desk-new-button {
+    width: 100%;
+  }
+}

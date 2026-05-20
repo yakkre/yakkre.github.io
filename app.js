@@ -37,6 +37,7 @@ const $ = (selector, root = document) => root.querySelector(selector);
 
 const els = {
   homeView: $("#homeView"),
+  deskView: $("#deskView"),
   postView: $("#postView"),
   loginView: $("#loginView"),
   registerView: $("#registerView"),
@@ -44,6 +45,8 @@ const els = {
 
   authButton: $("#authButton"),
   registerNavButton: $("#registerNavButton"),
+  deskButton: $("#deskButton"),
+  deskNewPostButton: $("#deskNewPostButton"),
   logoutButton: $("#logoutButton"),
   verifyEmailButton: $("#verifyEmailButton"),
   userBadge: $("#userBadge"),
@@ -82,6 +85,8 @@ const els = {
   statsLikes: $("#statsLikes"),
   statsComments: $("#statsComments"),
 
+  deskEntriesBody: $("#deskEntriesBody"),
+
   searchInput: $("#searchInput"),
   postsList: $("#postsList"),
   postTemplate: $("#postTemplate")
@@ -111,6 +116,16 @@ function showNotice(message, isError = false) {
 function formatDate(timestamp) {
   const date = timestamp?.toDate ? timestamp.toDate() : null;
   if (!date) return "just now";
+  return new Intl.DateTimeFormat(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  }).format(date);
+}
+
+function formatDateTime(timestamp) {
+  const date = timestamp?.toDate ? timestamp.toDate() : null;
+  if (!date) return "—";
   return new Intl.DateTimeFormat(undefined, {
     year: "numeric",
     month: "short",
@@ -225,6 +240,7 @@ function getRoute() {
   if (hash.startsWith("#/post/")) {
     return { view: "post", postId: decodeURIComponent(hash.replace("#/post/", "")) };
   }
+  if (hash === "#/desk") return { view: "desk" };
   if (hash === "#/login") return { view: "login" };
   if (hash === "#/register") return { view: "register" };
   return { view: "home" };
@@ -232,6 +248,7 @@ function getRoute() {
 
 function showView(view) {
   els.homeView.classList.toggle("hidden", view !== "home");
+  els.deskView.classList.toggle("hidden", view !== "desk");
   els.postView.classList.toggle("hidden", view !== "post");
   els.loginView.classList.toggle("hidden", view !== "login");
   els.registerView.classList.toggle("hidden", view !== "register");
@@ -243,6 +260,8 @@ function renderCurrentRoute() {
 
   if (route.view === "home") {
     renderPosts();
+  } else if (route.view === "desk") {
+    renderDesk();
   } else if (route.view === "post") {
     renderSinglePost(route.postId);
   } else {
@@ -284,6 +303,7 @@ function updateAuthUi() {
     els.logoutButton.classList.add("hidden");
     els.verifyEmailButton.classList.add("hidden");
     els.userBadge.textContent = "";
+    els.deskButton.classList.add("hidden");
     els.newPostButton.classList.add("hidden");
     els.manageContributorsButton.classList.add("hidden");
     els.editorPanel.classList.add("hidden");
@@ -300,10 +320,14 @@ function updateAuthUi() {
   els.logoutButton.classList.remove("hidden");
   els.verifyEmailButton.classList.toggle("hidden", currentUser.emailVerified);
 
+  els.deskButton.classList.toggle("hidden", !canWritePosts());
   els.newPostButton.classList.toggle("hidden", !canWritePosts());
   els.manageContributorsButton.classList.toggle("hidden", !canManageContributors());
 
-  if (!canWritePosts()) els.editorPanel.classList.add("hidden");
+  if (!canWritePosts()) {
+    els.editorPanel.classList.add("hidden");
+    if (getRoute().view === "desk") window.location.hash = "#/login";
+  }
   if (!canManageContributors()) els.adminPanel.classList.add("hidden");
 }
 
@@ -541,6 +565,81 @@ function renderPosts() {
     const node = els.postTemplate.content.firstElementChild.cloneNode(true);
     fillPostNode(node, post, { full: false });
     els.postsList.appendChild(node);
+  }
+}
+
+
+function renderDesk() {
+  clearChildListeners();
+
+  if (!canWritePosts()) {
+    els.deskEntriesBody.innerHTML = `<tr><td colspan="5" class="desk-empty">You need writer access to view the desk.</td></tr>`;
+    return;
+  }
+
+  const posts = readablePosts();
+  updateStats();
+
+  if (posts.length === 0) {
+    els.deskEntriesBody.innerHTML = `<tr><td colspan="5" class="desk-empty">No entries yet.</td></tr>`;
+    return;
+  }
+
+  els.deskEntriesBody.innerHTML = "";
+
+  for (const post of posts) {
+    const row = document.createElement("tr");
+
+    const tags = formatTags(post.tags);
+    const slug = post.slug || makeSlug(post.title);
+    const statusLabel = post.published ? "Published" : "Draft";
+
+    row.innerHTML = `
+      <td>
+        <div class="desk-title">${escapeHtml(post.title)}</div>
+        <div class="desk-slug">/${escapeHtml(slug)}</div>
+        ${tags ? `<div class="desk-tags">${escapeHtml(tags)}</div>` : ""}
+      </td>
+      <td>
+        <span class="desk-status ${post.published ? "published" : "draft"}">${statusLabel}</span>
+      </td>
+      <td>
+        <div class="desk-stats">
+          <span class="desk-like-stat">♡ <span data-like-count>0</span></span>
+          <span class="desk-comment-stat">▱ <span data-comment-count>0</span></span>
+        </div>
+      </td>
+      <td>
+        <div class="desk-date"><span>Created:</span> ${formatDateTime(post.createdAt)}</div>
+        <div class="desk-date"><span>Updated:</span> ${formatDateTime(post.updatedAt || post.createdAt)}</div>
+      </td>
+      <td class="desk-actions">
+        <button class="button small desk-edit" type="button" aria-label="Edit ${escapeHtml(post.title)}">✎</button>
+        <button class="button small danger desk-delete" type="button" aria-label="Delete ${escapeHtml(post.title)}">🗑</button>
+      </td>
+    `;
+
+    $(".desk-edit", row).addEventListener("click", () => openEditor(post));
+    $(".desk-delete", row).addEventListener("click", () => deletePost(post.id));
+
+    const likeSpan = $("[data-like-count]", row);
+    const commentSpan = $("[data-comment-count]", row);
+
+    const unsubscribeLikes = onSnapshot(collection(db, "posts", post.id, "likes"), snapshot => {
+      likeCountsByPost.set(post.id, snapshot.size);
+      likeSpan.textContent = String(snapshot.size);
+      updateStats();
+    });
+    unsubscribeChildListeners.push(unsubscribeLikes);
+
+    const unsubscribeComments = onSnapshot(collection(db, "posts", post.id, "comments"), snapshot => {
+      commentCountsByPost.set(post.id, snapshot.size);
+      commentSpan.textContent = String(snapshot.size);
+      updateStats();
+    });
+    unsubscribeChildListeners.push(unsubscribeComments);
+
+    els.deskEntriesBody.appendChild(row);
   }
 }
 
@@ -795,6 +894,8 @@ async function updateContributorRole(event) {
 
 els.authButton.addEventListener("click", () => { window.location.hash = "#/login"; });
 els.registerNavButton.addEventListener("click", () => { window.location.hash = "#/register"; });
+els.deskButton.addEventListener("click", () => { window.location.hash = "#/desk"; });
+els.deskNewPostButton.addEventListener("click", () => openEditor());
 
 els.logoutButton.addEventListener("click", async () => {
   await signOut(auth);

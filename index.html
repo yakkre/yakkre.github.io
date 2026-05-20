@@ -35,6 +35,7 @@
       </a>
 
       <nav class="nav-actions" aria-label="Main navigation">
+        <button id="deskButton" class="button text-button hidden" type="button">Desk</button>
         <button id="newPostButton" class="button subtle hidden">New entry</button>
         <button id="manageContributorsButton" class="button subtle hidden">Contributors</button>
         <span id="userBadge" class="user-badge"></span>
@@ -52,15 +53,22 @@
     <section id="homeView" class="view">
       <section class="hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker">a blog</p>
+          <p class="hero-kicker">A personal notebook</p>
           <h1>raindrops</h1>
 
           <p class="hero-lead">
-            some ideas to ponder upon
+            A place for ideas, math, reflections, and whatever else happens to
+            gather on the page.
           </p>
 
           <p class="hero-text">
-            I write about things... ideas, happenings, problems, and stuff about me
+            I write about problems I find beautiful, things I’m learning,
+            occasional essays, and notes that don’t quite belong anywhere else.
+          </p>
+
+          <p class="hero-text">
+            Posts support Markdown and built-in LaTeX, so writing something like
+            <code>$$e^{i\pi}+1=0$$</code> will render it properly.
           </p>
         </div>
 
@@ -164,6 +172,37 @@
           <div class="empty-state">Loading entries...</div>
         </div>
       </section>
+    </section>
+
+
+    <section id="deskView" class="view author-desk hidden" aria-labelledby="deskHeading">
+      <div class="desk-hero">
+        <div>
+          <p class="section-kicker">Author tools</p>
+          <h1 id="deskHeading">Author’s Desk</h1>
+          <p class="desk-subtitle">Manage your notebook entries.</p>
+        </div>
+        <button id="deskNewPostButton" class="button primary desk-new-button" type="button">+ New Entry</button>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table">
+          <thead>
+            <tr>
+              <th>Title &amp; Slug</th>
+              <th>Status</th>
+              <th>Stats</th>
+              <th>Dates</th>
+              <th class="actions-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="deskEntriesBody">
+            <tr>
+              <td colspan="5" class="desk-empty">Loading entries...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section id="postView" class="view hidden">

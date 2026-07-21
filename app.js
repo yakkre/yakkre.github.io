@@ -365,6 +365,9 @@ async function ensureUserDocument(user) {
 }
 
 function updateAuthUi() {
+  const route = getRoute();
+  const protectedViews = ["desk", "new", "edit"];
+
   if (!currentUser) {
     els.authButton.classList.remove("hidden");
     els.registerNavButton.classList.remove("hidden");
@@ -374,8 +377,13 @@ function updateAuthUi() {
     els.deskButton.classList.add("hidden");
     els.newPostButton.classList.add("hidden");
     els.manageContributorsButton.classList.add("hidden");
-    navigate("/desk");
+    els.editorPanel.classList.add("hidden");
     els.adminPanel.classList.add("hidden");
+
+    // Logged-out visitors should land on the public homepage and can read posts.
+    if (protectedViews.includes(route.view)) {
+      navigate("/");
+    }
     return;
   }
 
@@ -392,10 +400,12 @@ function updateAuthUi() {
   els.newPostButton.classList.toggle("hidden", !canWritePosts());
   els.manageContributorsButton.classList.toggle("hidden", !canManageContributors());
 
-  if (!canWritePosts()) {
-    navigate("/desk");
-    if (["desk", "new", "edit"].includes(getRoute().view)) navigate("/login");
+  // Signed-in readers without writer access also stay on public pages.
+  if (!canWritePosts() && protectedViews.includes(route.view)) {
+    navigate("/");
   }
+
+  if (!canWritePosts()) els.editorPanel.classList.add("hidden");
   if (!canManageContributors()) els.adminPanel.classList.add("hidden");
 }
 

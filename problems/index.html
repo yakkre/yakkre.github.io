@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An olympiad problem catalogue: IMO Shortlist and Romanian Masters of Mathematics, classified by the ideas in their solutions.">
+  <title>Problem catalogue · raindrops</title>
+  <link rel="stylesheet" href="./catalogue.css">
+  <script type="module" src="./catalogue.js"></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to problems</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="/">raindrops<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="/">Notebook <span aria-hidden="true">↗</span></a><a class="active" href="./" aria-current="page">Problem catalogue</a></nav>
+  </div></header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">THE OLYMPIAD NOTEBOOK</p><h1>Find the next<br><em>beautiful problem.</em></h1>
+        <p class="lead">Explore problems by the ideas that solve them. A growing collection of classifications, proof notes, and links to the original discussions.</p>
+      </div>
+      <div class="intro-note"><span class="note-symbol" aria-hidden="true">∴</span><p>Different problems.<br>Shared ideas.</p><div class="stats"><span><strong id="total-stat">—</strong> problems</span><span><strong>60</strong> method tags</span></div></div>
+    </section>
+    <section class="catalogue" aria-label="Problem browser">
+      <aside class="filter-panel">
+        <div class="filter-title"><h2>Make a selection</h2><button id="reset" class="text-button" type="button">Reset</button></div>
+        <label class="field-label" for="search">Search the catalogue</label>
+        <div class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="e.g. 2019 C6, invariants…" autocomplete="off"></div>
+        <div class="filter-pair"><div><label class="field-label" for="contest">Collection</label><select id="contest"><option value="">All collections</option value="isl">IMO Shortlist</option><option value="rmm">RMM</option></select></div><div><label class="field-label" for="subject">Subject</label><select id="subject"><option value="">All subjects</option><option value="A">Algebra</option><option value="C">Combinatorics</option><option value="N">Number theory</option></select></div></div>
+        <div class="filter-pair"><div><label class="field-label" for="from-year">From year</label><select id="from-year"><option value="">Any year</option></select></div><div><label class="field-label" for="to-year">To year</label><select id="to-year"><option value="">Any year</option></select></div></div>
+        <label class="field-label" for="evidence">Forum evidence</label><select id="evidence"><option value="">All evidence</option><option value="live">Live forum checked</option><option value="archive">Archived forum checked</option><option value="pending">Forum check pending</option></select>
+        <div class="tag-heading"><h3>Method tags</h3><span id="selection-count">0 selected</span></div>
+        <div class="mode-switch" role="group" aria-label="Tag matching mode"><button type="button" data-mode="AND" aria-pressed="true">Match all <span>AND</span></button><button type="button" data-mode="OR" aria-pressed="false">Match any <span>OR</span></button></div>
+        <div id="selected-tags" class="selected-tags" aria-label="Selected method tags"></div>
+        <label class="sr-only" for="tag-search">Find a method tag</label><input type="search" id="tag-search" placeholder="Find a tag or type its ID…" autocomplete="off">
+        <div id="tag-options" class="tag-options" aria-label="Available method tags"></div>
+        <p class="filter-help">Tags match primary and additional methods. Primary matches appear first.</p>
+      </aside>
+      <div class="results-panel" id="results" tabindex="-1">
+        <div class="results-top"><div><p class="eyebrow">THE COLLECTION</p><h2 id="result-count" aria-live="polite">Loading problems…</h2></div><button id="copy-link" type="button" class="outline-button">Copy search link <span aria-hidden="true">↗</span></button></div>
+        <p id="filter-warning" class="warning" role="status" hidden></p>
+        <div class="collection-note"><span class="green-dot" aria-hidden="true"></span><p>Classifications and source links are available here. Open AoPS for the full problem statement and discussion.</p><button type="button" id="coverage-open">Coverage &amp; caveats</button></div>
+        <div id="problem-list" class="problem-list" aria-busy="true"><p class="loading">Opening the notebook…</p></div>
+        <nav id="pagination" class="pagination" aria-label="Problem pages"></nav>
+      </div>
+    </section>
+    <footer><p>Collected with care. Still growing.</p><span id="updated"></span></footer>
+  </main>
+  <dialog id="coverage-dialog" aria-labelledby="coverage-title"><div class="dialog-top"><p class="eyebrow">A NOTE ON THE SOURCES</p><button type="button" id="coverage-close" aria-label="Close coverage notes">×</button></div><h2 id="coverage-title">Coverage &amp; caveats</h2><div id="coverage-content"></div></dialog>
+</body>
+</html>

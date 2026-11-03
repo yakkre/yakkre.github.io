@@ -1,0 +1,43 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {selectProblems,validTagIds} from '../problems/catalogue-core.mjs';
+const data=JSON.parse(fs.readFileSync(new URL('../problems/data/catalogue.json',import.meta.url)));
+const {problems,taxonomy}=data;
+test('export preserves complete reviewed keys, exact taxonomy and source caveats',()=>{
+  assert.equal(new Set(problems.map(p=>p.key)).size,problems.length);
+  for(const snapshot of data.snapshots)assert.equal(problems.filter(p=>p.contest===snapshot.contest).length,snapshot.count);
+  assert.deepEqual(taxonomy.map(t=>t.id),Array.from({length:60},(_,i)=>i+1));
+  for(const p of problems.filter(p=>p.forumStatus==='pending'))assert.doesNotMatch(p.evidence,/aops/i);
+  const caveat=problems.find(p=>p.key==='isl:2016:N8');assert.match(caveat.notes,/distinct|literal/i);
+  assert.match(problems.find(p=>p.key==='rmm:2026:6').notes,/incomplete|sketchy/);
+  for(const p of problems){assert.equal(new Set(p.tags).size,p.tags.length);assert.ok(p.tags.includes(p.primaryTag));for(const id of p.tags)assert.ok(id>=1&&id<=60);for(const u of [p.aopsUrl,p.officialUrl,...p.sourceUrls].filter(Boolean))assert.equal(new URL(u).protocol,'https:');}
+});
+test('all 60 tag selections return exact matches with primary-first ranking',()=>{
+  for(const tag of taxonomy){
+    const actual=selectProblems(problems,taxonomy,{tags:[tag.id]});
+    const expected=problems.filter(p=>p.tags.includes(tag.id));
+    assert.deepEqual(new Set(actual.map(x=>x.problem.key)),new Set(expected.map(p=>p.key)));
+    let passedPrimary=false;for(const r of actual){if(!r.primary)passedPrimary=true;else assert.equal(passedPrimary,false);}
+  }
+});
+test('AND, OR and duplicate selections preserve exact independent matches',()=>{
+  for(const mode of ['AND','OR'])for(const ids of [[44,46],[44,44,46],[1,5,19,22,38,44,49,54]]){
+    const distinct=[...new Set(ids)];const actual=selectProblems(problems,taxonomy,{tags:ids,mode});
+    const expected=problems.filter(p=>mode==='AND'?distinct.every(t=>p.tags.includes(t)):distinct.some(t=>p.tags.includes(t)));
+    assert.deepEqual(new Set(actual.map(x=>x.problem.key)),new Set(expected.map(p=>p.key)));
+    for(let i=1;i<actual.length;i++){const a=actual[i-1],b=actual[i];assert.ok(Number(a.primary)>Number(b.primary)||(a.primary===b.primary&&a.hits>=b.hits));}
+  }
+  assert.deepEqual(selectProblems(problems,taxonomy,{tags:[44,46]}),selectProblems(problems,taxonomy,{tags:[44,44,46]}));
+});
+test('collection, subject, years, evidence, text and permalink compose correctly',()=>{
+  assert.equal(selectProblems(problems,taxonomy,{contest:'rmm',from:2025,to:2025}).length,problems.filter(p=>p.contest==='rmm'&&p.year===2025).length);
+  assert.equal(selectProblems(problems,taxonomy,{contest:'rmm',subject:'N'}).length,problems.filter(p=>p.contest==='rmm'&&p.subject==='N').length);
+  assert.equal(selectProblems(problems,taxonomy,{evidence:'pending'}).length,problems.filter(p=>p.forumStatus==='pending').length);
+  assert.equal(selectProblems(problems,taxonomy,{from:2025,to:2010}).length,0);
+  const one=selectProblems(problems,taxonomy,{problem:'isl:2016:N8'});assert.equal(one.length,1);assert.equal(one[0].problem.id,'N8');
+  assert.ok(selectProblems(problems,taxonomy,{query:'2019 C6'}).some(x=>x.problem.key==='isl:2019:C6'));
+  assert.equal(selectProblems(problems,taxonomy,{query:'zz-unmatchable-1234567'}).length,0);
+  assert.deepEqual(validTagIds(['0','61','3','3','1.5','wrong'],taxonomy),[3]);
+  assert.equal(selectProblems(problems,taxonomy).length,problems.length);
+});

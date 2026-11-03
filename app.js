@@ -1079,7 +1079,7 @@ window.addEventListener("popstate", renderCurrentRoute);
 
 document.addEventListener("click", event => {
   const link = event.target.closest("a[href^='/']");
-  if (!link || link.target === "_blank" || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  if (!link || link.hasAttribute("data-full-navigation") || link.target === "_blank" || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
   navigate(link.getAttribute("href"));
 });

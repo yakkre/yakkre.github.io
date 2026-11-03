@@ -1,5 +1,9 @@
 # raindrops
 
+## Olympiad problem catalogue
+
+The searchable classification catalogue lives at [`/problems/`](https://yakkre.github.io/problems/), with IMO Shortlist and RMM entries, the exact60 method tags, AND/OR filtering, original classification summaries, proof/source caveats and official/AoPS links. See [`problems/README.md`](problems/README.md) for refresh and verification instructions.
+
 A GitHub Pages-friendly personal blog with:
 
 - Register / login
@@ -88,3 +92,4 @@ $$
 ## Important security note
 
 Do not rely on hiding buttons in the website code. The real protection is in `firestore.rules`. Publish those rules before sharing the site.
+

@@ -1,9 +1,9 @@
-import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261103-names';
+import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
 import {renderStatement} from './statement-view.mjs?v=20261103-proposers';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 50;
-const SUBJECTS = {A:'Algebra', C:'Combinatorics', N:'Number theory'};
+const SUBJECTS = {A:'Algebra', C:'Combinatorics', N:'Number theory', G:'Geometry'};
 const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pending:'Forum check pending'};
 const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
 const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['from-year','from'],['to-year','to']];
@@ -28,13 +28,13 @@ function sourceLink(label, url) {
   a.href = parsed.href; a.target = '_blank'; a.rel = 'noopener noreferrer';
   return a;
 }
-const shorten = label => label.replace(/^[ACN]: /, '');
+const shorten = label => label.replace(/^[ACNG]: /, '');
 const emptyFilters = () => ({query:'', contest:'', subject:'', from:'', to:'', evidence:'', tags:[], mode:'AND', problem:''});
 
 function readFilters() {
   const q = new URLSearchParams(location.search);
   return {query:q.get('q')||'', contest:['isl','rmm'].includes(q.get('contest'))?q.get('contest'):'',
-    subject:['A','C','N'].includes(q.get('subject'))?q.get('subject'):'',
+    subject:Object.hasOwn(SUBJECTS,q.get('subject'))?q.get('subject'):'',
     evidence:['live','archive','pending'].includes(q.get('evidence'))?q.get('evidence'):'',
     from:q.get('from')||'', to:q.get('to')||'', mode:q.get('mode')==='OR'?'OR':'AND',
     tags:validTagIds((q.get('tags')||'').split(','), data.taxonomy),
@@ -68,7 +68,11 @@ function renderTags() {
     const found = data.taxonomy.filter(t => t.subject === subject && match(t));
     if (!found.length) continue;
     options.push(node('p', 'tag-group', title));
+    let lastKind;
     for (const t of found) {
+      if (subject === 'G' && t.kind !== lastKind) {
+        options.push(node('p', 'help', t.kind === 'Configuration' ? 'Configurations (secondary tags)' : `${t.kind}s`)); lastKind = t.kind;
+      }
       const on = filters.tags.includes(t.id);
       const b = button('tag-option', null, () => toggleTag(t.id), `${t.label}: ${t.definition}`);
       b.setAttribute('aria-pressed', String(on));
@@ -76,7 +80,7 @@ function renderTags() {
       options.push(b);
     }
   }
-  if (!options.length) options.push(node('p', 'tag-empty', 'No matching method. Use a name or an ID from 1 to 60.'));
+  if (!options.length) options.push(node('p', 'tag-empty', `No matching method. Use a name or an ID from 1 to ${data.taxonomy.length}.`));
   $('tag-options').replaceChildren(...options);
 }
 
@@ -111,11 +115,23 @@ function problemRow(result) {
   link.href = entryUrl(p); link.title = 'View problem statement';
   head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
-  cell('c-method').append(tagButton(p.primaryTag));
-  const others = p.tags.filter(id => id !== p.primaryTag), other = cell('c-other');
+  const primary = cell('c-method');
+  if (p.geometry) {
+    for (const [label, route] of [['Synthetic',p.geometry.synthetic],['Analytic',p.geometry.analytic]]) {
+      const block = node('div','geometry-route'); block.append(node('span','sub',label));
+      block.append(route.primaryTag ? tagButton(route.primaryTag) : node('span','sub','Not yet reviewed')); primary.append(block);
+    }
+  } else primary.append(tagButton(p.primaryTag));
+  const others = p.tags.filter(id => !(p.primaryTags || [p.primaryTag]).includes(id)), other = cell('c-other');
   if (others.length) { const box = node('span', 'others'); box.append(...others.map(tagButton)); other.append(box); }
   const notes = cell('c-notes'), classification = node('details', 'classification');
-  classification.append(node('summary', null, 'Classification'), node('p', null, p.explanation));
+  classification.append(node('summary', null, 'Classification'));
+  if (p.geometry) {
+    for (const [label, route] of [['Synthetic',p.geometry.synthetic],['Analytic',p.geometry.analytic]]) {
+      classification.append(node('h3','route-heading',label),node('p',null,route.explanation));
+      if (route.status && route.status !== 'Reviewed') classification.append(node('p','sub',route.status));
+    }
+  } else classification.append(node('p', null, p.explanation));
   const detail = node('details'), research = node('div', 'research');
   detail.append(node('summary', null, 'Research notes & caveats'));
   research.append(node('p', null, `${p.evidence}${p.confidence ? ` · Confidence: ${p.confidence}` : ''}`), node('p', null, p.notes));
@@ -183,6 +199,7 @@ async function start() {
     const response = await fetch('./data/catalogue.json'); if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
     tags = new Map(data.taxonomy.map(t => [t.id, t])); filters = readFilters();
+    $('tag-total').textContent = data.taxonomy.length;
     $('total-stat').textContent = `${data.problems.length.toLocaleString()} (${Object.entries(data.counts || {}).map(([k,v]) => `${CONTESTS[k] || k} ${v}`).join(', ')})`;
     $('updated').textContent = 'snapshot ' + new Intl.DateTimeFormat('en', {dateStyle:'medium', timeZone:'UTC'}).format(new Date(data.updated));
     const years = [...new Set(data.problems.map(p => p.year))].sort((a,b) => b - a);
@@ -216,3 +233,4 @@ async function start() {
   }
 }
 start();
+

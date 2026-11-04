@@ -121,3 +121,6 @@ dialog h3{font-size:14px;margin:14px 0 2px}dialog p,dialog li{margin:4px 0}
   .others{display:inline;}.others .tag{margin-right:.4em}.others .tag::after{content:";"}.others .tag:last-child::after{content:""}
   .tag{padding:2px 0}
 }
+
+.geometry-route + .geometry-route { margin-top: .8rem; }
+.route-heading { font-size: 1em; margin: .9rem 0 .3rem; }

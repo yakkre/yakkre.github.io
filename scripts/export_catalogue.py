@@ -13,15 +13,15 @@ def export(imo, rmm, output):
     for contest, name, path in sources:
         raw = path.read_bytes()
         book = openpyxl.load_workbook(path, read_only=True, data_only=True)
-        tags = [dict(id=r[3], subject=r[0], label=r[1], definition=r[2])
-                for r in list(book['Taxonomy'].values)[5:65]]
+        tags = [dict(id=r[3], subject=r[0], label=r[1], definition=r[2], **({'kind':r[4]} if len(r)>4 and r[4] else {}))
+                for r in list(book['Taxonomy'].values)[5:] if r[0] and isinstance(r[3],int)]
         if taxonomy is None: taxonomy = tags
         else: assert tags == taxonomy, 'Taxonomies differ'
         tag_ids = {t['label']: t['id'] for t in taxonomy}
         count = 0
         for row in list(book['Problems'].values)[5:]:
             if not row[0] or row[10] != 'Reviewed': continue
-            year, ident, subject, primary, extra, explanation, aops, evidence, notes, confidence, status = row
+            year, ident, subject, primary, extra, explanation, aops, evidence, notes, confidence, status = row[:11]
             assigned = [primary] + [x.strip() for x in (extra or '').split(';') if x.strip()]
             assert len(assigned) == len(set(assigned))
             assigned_ids = [tag_ids[t] for t in assigned]
@@ -41,18 +41,26 @@ def export(imo, rmm, output):
                 explanation=explanation, aopsUrl=aops, officialUrl=official,
                 sourceUrls=refs, evidence=evidence, notes=notes, confidence=confidence,
                 forumStatus=forum, section='Shortlist' if contest=='isl' or str(ident).startswith('SL ') else 'Contest'))
+            if subject == 'G':
+                assert len(row)>=21, 'Geometry requires reviewed route fields'
+                def route(primary,extra,explanation,refs,status):
+                    return dict(primaryTag=tag_ids.get(primary),additionalTags=[tag_ids[x.strip()] for x in (extra or '').split(';') if x.strip()],explanation=explanation or '',references=refs or '',status=status)
+                syn=route(row[11],row[12],row[13],row[14],'Reviewed')
+                analytic=route(row[15],row[16],row[17],row[18],row[19])
+                problems[-1]['geometry']=dict(synthetic=syn,analytic=analytic,configurations=[tag_ids[x.strip()] for x in (row[20] or '').split(';') if x.strip()])
+                problems[-1]['primaryTags']=[v for v in [syn['primaryTag'],analytic['primaryTag']] if v]
             count += 1
         snapshots.append(dict(contest=contest, name=name, count=count, sha256=hashlib.sha256(raw).hexdigest()))
         book.close()
         assert hashlib.sha256(path.read_bytes()).hexdigest()==snapshots[-1]['sha256'], 'Workbook changed during export'
-    assert len(taxonomy)==60 and [t['id'] for t in taxonomy]==list(range(1,61))
+    assert len(taxonomy)==88 and [t['id'] for t in taxonomy]==list(range(1,89))
     assert len({p['key'] for p in problems})==len(problems)
     counts = collections.Counter(p['contest'] for p in problems)
     recent_pending = sum(p['contest']=='isl' and p['year']>=2010 and p['forumStatus']=='pending' for p in problems)
     rmm_ids = ', '.join(f"{p['year']} {p['id']}" for p in problems if p['contest']=='rmm')
     data = dict(updated=datetime.datetime.now(datetime.timezone.utc).isoformat(), taxonomy=taxonomy,
         problems=problems, snapshots=snapshots, counts=dict(counts),
-        scope='Algebra, combinatorics and number theory; geometric combinatorics included. Pure geometry excluded.',
+        scope='IMO A/C/N 1990–2025 plus all seven 2025 geometry problems. Geometry in earlier years and RMM has not yet been added. Geometry records separate reviewed synthetic and analytic primaries; unreviewed routes remain pending.',
         coverage=[dict(contest='isl', title='IMO Shortlist · 1990–2025', text=f"{counts['isl']} classifications. The later forum audit is ongoing: {recent_pending} recent entries currently have official-only evidence. Earlier archived and live checks are preserved. Pending source checks are distinguished from completed classifications."),
                   dict(contest='rmm', title='RMM · work in progress', text=f"{counts['rmm']} reviewed entries: {rmm_ids}. Both main papers and shortlists are in scope. This is partial collection coverage; entries with unresolved official-solution support or unpublished inventories are not included as reviewed. Individual research notes identify reproduced official booklets and any incomplete forum proofs.")],
         caveats=['A forum check can find an incomplete proof; it does not certify every reply. Expand research notes for the exact outcome.',
@@ -69,3 +77,4 @@ if __name__=='__main__':
     p.add_argument('--imo',required=True);p.add_argument('--rmm',required=True)
     p.add_argument('--output',default='problems/data/catalogue.json')
     args=p.parse_args();export(args.imo,args.rmm,args.output)
+

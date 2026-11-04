@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="IMO Shortlist and Romanian Masters of Mathematics problems (algebra, combinatorics, number theory) classified by solution method, with source links.">
+  <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261103-names">
-  <script type="module" src="./catalogue.js?v=20261103-proposers"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261104-geometry">
+  <script type="module" src="./catalogue.js?v=20261104-geometry"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -18,7 +18,7 @@
   <main>
     <div class="page-head">
       <h1>Olympiad problems by method</h1>
-      <p class="summary"><span id="total-stat">—</span> problems · 60 method tags · <span id="updated">snapshot</span> · <button type="button" id="coverage-open" class="link-button">Coverage &amp; caveats</button></p>
+      <p class="summary"><span id="total-stat">—</span> problems · <span id="tag-total">—</span> tags · <span id="updated">snapshot</span> · <button type="button" id="coverage-open" class="link-button">Coverage &amp; caveats</button></p>
     </div>
     <div class="layout">
       <details class="filters" id="filters" open>
@@ -26,7 +26,7 @@
         <div class="filters-body">
           <div class="row2">
             <label>Collection<select id="contest"><option value="">All</option><option value="isl">IMO Shortlist</option><option value="rmm">RMM</option></select></label>
-            <label>Subject<select id="subject"><option value="">All</option><option value="A">Algebra</option><option value="C">Combinatorics</option><option value="N">Number theory</option></select></label>
+            <label>Subject<select id="subject"><option value="">All</option><option value="A">Algebra</option><option value="C">Combinatorics</option><option value="N">Number theory</option><option value="G">Geometry</option></select></label>
           </div>
           <div class="row2">
             <label>From<select id="from-year"><option value="">Any</option></select></label>
@@ -42,7 +42,7 @@
             <label class="sr-only" for="tag-search">Find methods by name or ID</label>
             <input type="search" id="tag-search" placeholder="Name or ID; Enter adds (e.g. 44, 46)" autocomplete="off" aria-describedby="tag-help">
             <div id="tag-options" class="tag-options" aria-label="Method tags"></div>
-            <p id="tag-help" class="help">Tags match primary or additional methods. Primary matches rank first, then more selected tags.</p>
+            <p id="tag-help" class="help">Tags match primary or additional assignments. Either verified geometry primary ranks first. Configuration tags are secondary.</p>
           </fieldset>
         </div>
       </details>
@@ -67,3 +67,4 @@
   <dialog id="coverage-dialog" aria-labelledby="coverage-title"><div class="dialog-top"><h2 id="coverage-title">Coverage &amp; caveats</h2><button type="button" id="coverage-close" aria-label="Close">Close</button></div><div id="coverage-content"></div></dialog>
 </body>
 </html>
+

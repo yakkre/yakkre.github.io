@@ -1,5 +1,5 @@
-import {normalize, parseTagInput, selectProblems, validTagIds} from './catalogue-core.mjs';
-import {renderStatement} from './statement-view.mjs';
+import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261103-names';
+import {renderStatement} from './statement-view.mjs?v=20261103-names';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 50;
@@ -83,7 +83,7 @@ function renderTags() {
 function renderActive() {
   const chips = [];
   const chip = (text, clear) => chips.push(button('chip', `${text} ×`, clear, `Remove: ${text}`));
-  if (filters.problem) { const p = data.problems.find(p => p.key === filters.problem); chip(`Entry: ${CONTESTS[p.contest]} ${p.year} ${p.id}`, () => update({problem:''})); }
+  if (filters.problem) { const p = data.problems.find(p => p.key === filters.problem); chip(`Entry: ${problemName(p)}`, () => update({problem:''})); }
   if (filters.query) chip(`“${filters.query}”`, () => update({query:''}));
   if (filters.contest) chip(CONTESTS[filters.contest], () => update({contest:''}));
   if (filters.subject) chip(SUBJECTS[filters.subject], () => update({subject:''}));
@@ -107,7 +107,7 @@ function tagButton(id) {
 function problemRow(result) {
   const p = result.problem, tr = node('tr');
   const cell = className => { const td = node('td', className); tr.append(td); return td; };
-  const head = cell('c-problem'), link = node('a', null, `${p.year} ${p.id}`);
+  const head = cell('c-problem'), link = node('a', null, problemName(p));
   link.href = entryUrl(p); link.title = 'View problem statement';
   head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));

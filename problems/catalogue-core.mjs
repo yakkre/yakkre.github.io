@@ -1,6 +1,12 @@
 export function normalize(text) {
   return String(text ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
+export function problemName(problem) {
+  const collection = problem.contest === 'isl' ? 'ISL'
+    : problem.contest === 'rmm' ? `RMM${problem.section === 'Shortlist' ? ' SL' : ''}`
+    : problem.contestName || problem.contest;
+  return `${problem.year} ${collection} ${problem.id}`;
+}
 export function validTagIds(ids, taxonomy) {
   const valid = new Set(taxonomy.map(t => t.id));
   return [...new Set(ids.map(Number).filter(id => valid.has(id)))];
@@ -23,7 +29,7 @@ export function selectProblems(problems, taxonomy, filters = {}) {
     if (filters.to && p.year > Number(filters.to)) return false;
     if (ids.length && (mode === 'AND' ? hits !== ids.length : hits === 0)) return false;
     if (!words.length) return true;
-    const haystack = normalize(`${p.contestName} ${p.year} ${p.id} ${p.subject} ${p.explanation} ${p.tags.map(t => labels.get(t)).join(' ')}`);
+    const haystack = normalize(`${problemName(p)} ${p.contestName} ${p.year} ${p.id} ${p.subject} ${p.explanation} ${p.tags.map(t => labels.get(t)).join(' ')}`);
     return words.every(word => haystack.includes(word));
   }).sort((a,b) => Number(b.primary)-Number(a.primary) || b.hits-a.hits || b.problem.year-a.problem.year || a.index-b.index);
 }

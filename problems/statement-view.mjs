@@ -1,3 +1,5 @@
+import {problemName} from './catalogue-core.mjs?v=20261103-names';
+
 let statementsPromise, mathPromise, currentKey;
 const element = (tag, text, className) => {
   const node = document.createElement(tag);
@@ -57,7 +59,7 @@ export async function renderStatement(panel, problem) {
   if (window.MathJax?.typesetClear) window.MathJax.typesetClear([panel]);
   panel.replaceChildren(); panel.hidden = !problem;
   if (!problem) return;
-  const title = element('h2', `${problem.contestName || problem.contest.toUpperCase()} ${problem.year} ${problem.id} — Problem statement`);
+  const title = element('h2', `${problemName(problem)} — Problem statement`);
   panel.append(title, element('p', 'Loading statement…', 'statement-source'));
   try {
     if (!statementsPromise) statementsPromise = fetch('./data/statements.json').then(r => {
@@ -74,10 +76,8 @@ export async function renderStatement(panel, problem) {
       if (source) panel.append(source);
       return;
     }
-    const body = statementBody(statement), source = element('p', null, 'statement-source');
-    const link = externalLink(statement.kind === 'forum' ? `AoPS · post #${statement.post}${statement.author ? ` · ${statement.author}` : ''}` : 'AoPS via AI-MO/aops archive', statement.sourceUrl);
-    if (link) source.append(link);
-    panel.append(body, source);
+    const body = statementBody(statement);
+    panel.append(body);
     try {
       await loadMath();
       if (currentKey === key && body.isConnected) await window.MathJax.typesetPromise([body]);

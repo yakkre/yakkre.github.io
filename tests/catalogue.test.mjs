@@ -66,7 +66,9 @@ test('geometry keeps independent proof routes and both verified primary tags',()
   assert.equal(selectProblems(problems,taxonomy,{problem:g2.key,tags:[82]})[0].primary,false);
   const g1=geometry.find(p=>p.id==='G1');assert.equal(g1.geometry.analytic.primaryTag,null);assert.match(g1.geometry.analytic.status,/Pending/);
   for(const p of geometry)for(const tag of p.geometry.configurations)assert.ok(!p.primaryTags.includes(tag));
-  assert.equal(selectProblems(problems,taxonomy,{subject:'G'}).length,7);
+  const allG=problems.filter(p=>p.subject==='G');
+  assert.equal(selectProblems(problems,taxonomy,{subject:'G'}).length,allG.length);
+  for(const p of allG){assert.ok(p.geometry.synthetic.primaryTag);assert.ok(p.primaryTags.includes(p.geometry.synthetic.primaryTag));if(!p.geometry.analytic.primaryTag)assert.match(p.geometry.analytic.status,/Pending/);}
 });
 
 

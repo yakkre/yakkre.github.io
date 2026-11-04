@@ -1,3 +1,4 @@
+// BLOG DISABLED (Nov 2026): not loaded by any page. Kept for restoring the blog; see the note in index.html.
 // 1) Create a Firebase project.
 // 2) In Firebase Console, add a Web app.
 // 3) Replace this object with the firebaseConfig that Firebase gives you.

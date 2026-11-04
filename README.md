@@ -1,5 +1,7 @@
 # raindrops
 
+> **Blog disabled (Nov 2026).** The site root now redirects to `/problems/`. The blog page is kept as an HTML comment inside `index.html` and `404.html` (restore steps are at the top of that comment); `app.js`, `style.css`, `firebase-config.js` and `firestore.rules` are unchanged but not loaded. The blog documentation below describes the disabled blog.
+
 ## Olympiad problem catalogue
 
 The searchable classification catalogue lives at [`/problems/`](https://yakkre.github.io/problems/), with IMO Shortlist and RMM entries, the exact60 method tags, AND/OR filtering, original classification summaries, proof/source caveats and official/AoPS links. See [`problems/README.md`](problems/README.md) for refresh and verification instructions.

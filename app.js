@@ -1,3 +1,4 @@
+// BLOG DISABLED (Nov 2026): not loaded by any page. Kept for restoring the blog; see the note in index.html.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import {
   getAuth,

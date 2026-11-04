@@ -6,7 +6,7 @@ const PAGE_SIZE = 50;
 const SUBJECTS = {A:'Algebra', C:'Combinatorics', N:'Number theory', G:'Geometry'};
 const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pending:'Forum check pending'};
 const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
-const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['from-year','from'],['to-year','to']];
+const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['from-year','from'],['to-year','to']];
 let data, tags, filters, page = 1;
 
 const node = (tag, className, text) => {
@@ -29,20 +29,21 @@ function sourceLink(label, url) {
   return a;
 }
 const shorten = label => label.replace(/^[ACNG]: /, '');
-const emptyFilters = () => ({query:'', contest:'', subject:'', from:'', to:'', evidence:'', tags:[], mode:'AND', problem:''});
+const emptyFilters = () => ({query:'', contest:'', subject:'', from:'', to:'', evidence:'', difficulty:'', tags:[], mode:'AND', problem:''});
 
 function readFilters() {
   const q = new URLSearchParams(location.search);
   return {query:q.get('q')||'', contest:['isl','rmm'].includes(q.get('contest'))?q.get('contest'):'',
     subject:Object.hasOwn(SUBJECTS,q.get('subject'))?q.get('subject'):'',
     evidence:['live','archive','pending'].includes(q.get('evidence'))?q.get('evidence'):'',
+    difficulty:['1','2','3','4','5','none'].includes(q.get('difficulty'))?q.get('difficulty'):'',
     from:q.get('from')||'', to:q.get('to')||'', mode:q.get('mode')==='OR'?'OR':'AND',
     tags:validTagIds((q.get('tags')||'').split(','), data.taxonomy),
     problem:data.problems.some(p=>p.key===q.get('problem'))?q.get('problem'):''};
 }
 function searchUrl(override={}) {
   const f = {...filters, ...override}, q = new URLSearchParams();
-  for (const [key,val] of Object.entries({q:f.query, contest:f.contest, subject:f.subject, evidence:f.evidence, from:f.from, to:f.to, problem:f.problem})) if (val) q.set(key, val);
+  for (const [key,val] of Object.entries({q:f.query, contest:f.contest, subject:f.subject, evidence:f.evidence, difficulty:f.difficulty, from:f.from, to:f.to, problem:f.problem})) if (val) q.set(key, val);
   if (f.tags.length) q.set('tags', f.tags.join(','));
   if (f.mode === 'OR') q.set('mode', 'OR');
   return location.pathname + (q.size ? '?' + q : '');
@@ -93,6 +94,7 @@ function renderActive() {
   if (filters.subject) chip(SUBJECTS[filters.subject], () => update({subject:''}));
   if (filters.from || filters.to) chip(`Years ${filters.from || '…'}–${filters.to || '…'}`, () => update({from:'', to:''}));
   if (filters.evidence) chip(STATUS[filters.evidence], () => update({evidence:''}));
+  if (filters.difficulty) chip(filters.difficulty === 'none' ? 'Difficulty not estimated' : `Difficulty ${filters.difficulty}/5`, () => update({difficulty:''}));
   filters.tags.forEach((id, i) => {
     if (i) chips.push(node('span', 'match', filters.mode));
     chip(`${id} ${shorten(tags.get(id).label)}`, () => toggleTag(id));
@@ -114,6 +116,7 @@ function problemRow(result) {
   const head = cell('c-problem'), link = node('a', null, problemName(p));
   link.href = entryUrl(p); link.title = 'View problem statement';
   head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
+  if (p.difficulty) { const d = node('span', 'sub difficulty', `Difficulty ${p.difficulty}/5 (estimate)`); d.title = p.difficultyBasis || ''; head.append(d); }
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
   const primary = cell('c-method');
   if (p.geometry) {

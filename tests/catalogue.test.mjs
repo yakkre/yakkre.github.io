@@ -69,3 +69,8 @@ test('geometry keeps independent proof routes and both verified primary tags',()
   assert.equal(selectProblems(problems,taxonomy,{subject:'G'}).length,7);
 });
 
+
+test('difficulty filter returns only matching ISL estimates',()=>{
+  for(const d of ['1','2','3','4','5']){const r=selectProblems(problems,taxonomy,{difficulty:d});assert.ok(r.length>0);for(const x of r)assert.equal(String(x.problem.difficulty),d);}
+  const none=selectProblems(problems,taxonomy,{difficulty:'none'});assert.ok(none.every(x=>x.problem.difficulty==null));
+});

@@ -41,6 +41,7 @@ def export(imo, rmm, output):
                 explanation=explanation, aopsUrl=aops, officialUrl=official,
                 sourceUrls=refs, evidence=evidence, notes=notes, confidence=confidence,
                 forumStatus=forum, section='Shortlist' if contest=='isl' or str(ident).startswith('SL ') else 'Contest'))
+            if contest=='isl' and len(row)>=23: problems[-1].update(difficulty=(int(row[21]) if row[21] is not None else None), difficultyBasis=row[22])
             if subject == 'G':
                 assert len(row)>=21, 'Geometry requires reviewed route fields'
                 def route(primary,extra,explanation,refs,status):

@@ -25,6 +25,7 @@ export function selectProblems(problems, taxonomy, filters = {}) {
     if (filters.contest && p.contest !== filters.contest) return false;
     if (filters.subject && p.subject !== filters.subject) return false;
     if (filters.evidence && p.forumStatus !== filters.evidence) return false;
+    if (filters.difficulty && (filters.difficulty === 'none' ? p.difficulty != null : String(p.difficulty) !== filters.difficulty)) return false;
     if (filters.from && p.year < Number(filters.from)) return false;
     if (filters.to && p.year > Number(filters.to)) return false;
     if (ids.length && (mode === 'AND' ? hits !== ids.length : hits === 0)) return false;

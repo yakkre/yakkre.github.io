@@ -1,4 +1,5 @@
 import {normalize, parseTagInput, selectProblems, validTagIds} from './catalogue-core.mjs';
+import {renderStatement} from './statement-view.mjs';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 50;
@@ -107,20 +108,21 @@ function problemRow(result) {
   const p = result.problem, tr = node('tr');
   const cell = className => { const td = node('td', className); tr.append(td); return td; };
   const head = cell('c-problem'), link = node('a', null, `${p.year} ${p.id}`);
-  link.href = entryUrl(p); link.title = 'Link to this entry';
+  link.href = entryUrl(p); link.title = 'View problem statement';
   head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
   cell('c-method').append(tagButton(p.primaryTag));
   const others = p.tags.filter(id => id !== p.primaryTag), other = cell('c-other');
   if (others.length) { const box = node('span', 'others'); box.append(...others.map(tagButton)); other.append(box); }
-  const notes = cell('c-notes'); notes.append(node('p', null, p.explanation));
+  const notes = cell('c-notes'), classification = node('details', 'classification');
+  classification.append(node('summary', null, 'Classification'), node('p', null, p.explanation));
   const detail = node('details'), research = node('div', 'research');
   detail.append(node('summary', null, 'Research notes & caveats'));
   research.append(node('p', null, `${p.evidence}${p.confidence ? ` · Confidence: ${p.confidence}` : ''}`), node('p', null, p.notes));
   const refs = node('ul');
   for (const url of new Set(p.sourceUrls)) { const a = sourceLink(url, url); if (a) { const li = node('li'); li.append(a); refs.append(li); } }
   if (refs.children.length) research.append(refs);
-  detail.append(research); notes.append(detail);
+  detail.append(research); classification.append(detail); notes.append(classification);
   const src = cell('c-src');
   for (const [label, url] of [['AoPS', p.aopsUrl], ['Official', p.officialUrl]]) { const a = url && sourceLink(label, url); if (a) src.append(a); }
   src.append(node('span', `status ${p.forumStatus}`, STATUS[p.forumStatus]));
@@ -158,6 +160,7 @@ function render() {
     const next = button(null, 'Next →', () => changePage(page + 1)); next.disabled = page === pages;
     pagination.append(prev, node('span', null, `Page ${page} of ${pages}`), next);
   }
+  renderStatement($('problem-statement'), filters.problem && results.find(r => r.problem.key === filters.problem)?.problem);
 }
 function changePage(value) { page = value; render(); $('results').scrollIntoView({block:'start'}); }
 function reset() { filters = emptyFilters(); page = 1; $('tag-search').value = ''; syncControls(); render(); }

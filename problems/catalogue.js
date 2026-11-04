@@ -1,150 +1,215 @@
-import {normalize, selectProblems, validTagIds} from './catalogue-core.mjs';
+import {normalize, parseTagInput, selectProblems, validTagIds} from './catalogue-core.mjs';
 
 const $ = id => document.getElementById(id);
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 50;
+const SUBJECTS = {A:'Algebra', C:'Combinatorics', N:'Number theory'};
+const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pending:'Forum check pending'};
+const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
+const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['from-year','from'],['to-year','to']];
 let data, tags, filters, page = 1;
+
 const node = (tag, className, text) => {
   const e = document.createElement(tag);
   if (className) e.className = className;
   if (text != null) e.textContent = text;
   return e;
 };
-function sourceLink(label, url, className='source-link') {
+const button = (className, text, onClick, title) => {
+  const b = node('button', className, text); b.type = 'button';
+  if (title) b.title = title;
+  b.addEventListener('click', onClick); return b;
+};
+function sourceLink(label, url) {
   let parsed;
   try { parsed = new URL(url); } catch { return null; }
   if (parsed.protocol !== 'https:') return null;
-  const a = node('a', className, label);
-  a.href=parsed.href; a.target='_blank'; a.rel='noopener noreferrer';
+  const a = node('a', null, label);
+  a.href = parsed.href; a.target = '_blank'; a.rel = 'noopener noreferrer';
   return a;
 }
-function shorten(label) { return label.replace(/^[ACN]: /, ''); }
+const shorten = label => label.replace(/^[ACN]: /, '');
+const emptyFilters = () => ({query:'', contest:'', subject:'', from:'', to:'', evidence:'', tags:[], mode:'AND', problem:''});
+
 function readFilters() {
   const q = new URLSearchParams(location.search);
   return {query:q.get('q')||'', contest:['isl','rmm'].includes(q.get('contest'))?q.get('contest'):'',
     subject:['A','C','N'].includes(q.get('subject'))?q.get('subject'):'',
     evidence:['live','archive','pending'].includes(q.get('evidence'))?q.get('evidence'):'',
     from:q.get('from')||'', to:q.get('to')||'', mode:q.get('mode')==='OR'?'OR':'AND',
-    tags:validTagIds((q.get('tags')||'').split(','),data.taxonomy),
+    tags:validTagIds((q.get('tags')||'').split(','), data.taxonomy),
     problem:data.problems.some(p=>p.key===q.get('problem'))?q.get('problem'):''};
 }
 function searchUrl(override={}) {
-  const f={...filters,...override}, q=new URLSearchParams();
-  for(const [key,val] of Object.entries({q:f.query,contest:f.contest,subject:f.subject,evidence:f.evidence,from:f.from,to:f.to,problem:f.problem})) if(val)q.set(key,val);
-  if(f.tags.length)q.set('tags',f.tags.join(','));
-  if(f.mode==='OR')q.set('mode','OR');
-  return location.pathname+(q.size?'?'+q:'');
+  const f = {...filters, ...override}, q = new URLSearchParams();
+  for (const [key,val] of Object.entries({q:f.query, contest:f.contest, subject:f.subject, evidence:f.evidence, from:f.from, to:f.to, problem:f.problem})) if (val) q.set(key, val);
+  if (f.tags.length) q.set('tags', f.tags.join(','));
+  if (f.mode === 'OR') q.set('mode', 'OR');
+  return location.pathname + (q.size ? '?' + q : '');
 }
+const entryUrl = p => searchUrl({...emptyFilters(), problem:p.key});
+
 function syncControls() {
-  for(const [id,key] of [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['from-year','from'],['to-year','to']]) $(id).value=filters[key];
-  document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===filters.mode)));
+  for (const [id,key] of FIELDS) $(id).value = filters[key];
+  document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === filters.mode)));
 }
+function update(changes) { Object.assign(filters, changes); page = 1; syncControls(); render(); }
 function toggleTag(id) {
-  filters.tags=filters.tags.includes(id)?filters.tags.filter(t=>t!==id):[...filters.tags,id];
-  filters.problem=''; page=1; render();
+  update({tags: filters.tags.includes(id) ? filters.tags.filter(t => t !== id) : [...filters.tags, id], problem:''});
 }
+
 function renderTags() {
-  $('selection-count').textContent=`${filters.tags.length} selected`;
-  $('selected-tags').replaceChildren(...filters.tags.map(id=>{
-    const b=node('button', 'selected-chip',`${id} · ${shorten(tags.get(id).label)} ×`);
-    b.type='button';b.title=`Remove ${tags.get(id).label}`;b.addEventListener('click',()=>toggleTag(id));return b;
-  }));
-  const query=normalize($('tag-search').value).trim();
-  const options=[];
-  for(const [subject,title] of [['A','Algebra'],['C','Combinatorics'],['N','Number theory']]) {
-    const found=data.taxonomy.filter(t=>t.subject===subject && (!query || normalize(`${t.id} ${t.label} ${t.definition}`).includes(query)));
-    if(!found.length)continue;
-    options.push(node('h4','tag-group-title',title));
-    for(const t of found){
-      const b=node('button','tag-option');b.type='button';b.setAttribute('aria-pressed',String(filters.tags.includes(t.id)));b.title=t.definition;
-      b.append(node('span','tag-number',t.id),node('span','tag-name',shorten(t.label)),node('span','tag-check',filters.tags.includes(t.id)?'✓':'+'));
-      b.addEventListener('click',()=>toggleTag(t.id));options.push(b);
+  $('selection-count').textContent = filters.tags.length ? `· ${filters.tags.length} selected` : '';
+  const raw = $('tag-search').value, query = normalize(raw).trim();
+  const ids = parseTagInput(raw, data.taxonomy);
+  const match = t => !query || (ids ? ids.includes(t.id) : normalize(`${t.id} ${t.label} ${t.definition}`).includes(query));
+  const options = [];
+  for (const [subject,title] of Object.entries(SUBJECTS)) {
+    const found = data.taxonomy.filter(t => t.subject === subject && match(t));
+    if (!found.length) continue;
+    options.push(node('p', 'tag-group', title));
+    for (const t of found) {
+      const on = filters.tags.includes(t.id);
+      const b = button('tag-option', null, () => toggleTag(t.id), `${t.label}: ${t.definition}`);
+      b.setAttribute('aria-pressed', String(on));
+      b.append(node('span', 'box', on ? '✓' : ''), node('span', 'id', t.id), node('span', null, shorten(t.label)));
+      options.push(b);
     }
   }
-  if(!options.length)options.push(node('p','tag-empty','No matching tags. Try a method name or an ID from 1 to 60.'));
+  if (!options.length) options.push(node('p', 'tag-empty', 'No matching method. Use a name or an ID from 1 to 60.'));
   $('tag-options').replaceChildren(...options);
 }
-function problemCard(result) {
-  const p=result.problem, card=node('article',`problem-card subject-${p.subject.toLowerCase()}`);
-  const top=node('div','card-top'), titlebox=node('div'), meta=node('p','problem-meta',`${p.contestName}  /  ${p.section}  /  ${p.year}`);
-  const title=node('h3',null,`${p.year} ${p.id}`); titlebox.append(meta,title);
-  const label={A:'Algebra',C:'Combinatorics',N:'Number theory'}[p.subject]||p.subject;
-  top.append(titlebox,node('span','subject-label',label));card.append(top);
-  const pills=node('div','problem-tags');
-  for(const id of p.tags){
-    const b=node('button',`method-pill${id===p.primaryTag?' primary':''}${filters.tags.includes(id)?' matched':''}`,`${id===p.primaryTag?'◈ ':''}${shorten(tags.get(id).label)}`);
-    b.type='button';b.title=`${id===p.primaryTag?'Primary':'Additional'} method · tag ${id}. Click to filter.`;
-    b.setAttribute('aria-pressed',String(filters.tags.includes(id)));b.addEventListener('click',()=>toggleTag(id));pills.append(b);
-  }
-  card.append(pills,node('p','classification',p.explanation));
-  const row=node('div','card-bottom'), links=node('div','source-links');
-  if(p.aopsUrl) links.append(sourceLink('AoPS statement & discussion ↗',p.aopsUrl));
-  if(p.officialUrl) links.append(sourceLink('Official / source document ↗',p.officialUrl));
-  const badge=node('span',`evidence-badge ${p.forumStatus}`,{live:'Live forum checked',archive:'Archived forum checked',pending:'Forum check pending'}[p.forumStatus]);
-  row.append(links,badge);card.append(row);
-  if(filters.tags.length)card.append(node('p','match-note',`${result.primary?'Primary method match':'Additional method match'} · ${result.hits} selected ${result.hits===1?'tag':'tags'}`));
-  const detail=node('details','research-notes');detail.append(node('summary',null,'Research notes & source caveats'));
-  const content=node('div','research-content');content.append(node('p','source-type',p.evidence),node('p','source-note',p.notes));
-  const refs=node('ul','reference-list');
-  for(const url of [...new Set(p.sourceUrls)]){ const a=sourceLink(url,url);if(a){const li=node('li');li.append(a);refs.append(li);} }
-  content.append(refs);detail.append(content);card.append(detail);
-  const permalink=node('button','text-button permalink','Copy entry link');permalink.type='button';
-  permalink.addEventListener('click',()=>copyUrl(new URL(searchUrl({query:'',contest:'',subject:'',evidence:'',from:'',to:'',tags:[],problem:p.key}),location.origin).href,permalink));card.append(permalink);
-  return card;
+
+function renderActive() {
+  const chips = [];
+  const chip = (text, clear) => chips.push(button('chip', `${text} ×`, clear, `Remove: ${text}`));
+  if (filters.problem) { const p = data.problems.find(p => p.key === filters.problem); chip(`Entry: ${CONTESTS[p.contest]} ${p.year} ${p.id}`, () => update({problem:''})); }
+  if (filters.query) chip(`“${filters.query}”`, () => update({query:''}));
+  if (filters.contest) chip(CONTESTS[filters.contest], () => update({contest:''}));
+  if (filters.subject) chip(SUBJECTS[filters.subject], () => update({subject:''}));
+  if (filters.from || filters.to) chip(`Years ${filters.from || '…'}–${filters.to || '…'}`, () => update({from:'', to:''}));
+  if (filters.evidence) chip(STATUS[filters.evidence], () => update({evidence:''}));
+  filters.tags.forEach((id, i) => {
+    if (i) chips.push(node('span', 'match', filters.mode));
+    chip(`${id} ${shorten(tags.get(id).label)}`, () => toggleTag(id));
+  });
+  $('active').replaceChildren(...chips);
+  const n = chips.filter(c => c.tagName === 'BUTTON').length - (filters.query ? 1 : 0);
+  $('filter-count').textContent = n > 0 ? `(${n} active)` : '';
 }
+
+function tagButton(id) {
+  const t = tags.get(id), b = button(`tag${filters.tags.includes(id) ? ' hit' : ''}`, null, () => toggleTag(id), `${t.label}: ${t.definition} (click to filter)`);
+  b.setAttribute('aria-pressed', String(filters.tags.includes(id)));
+  b.append(node('span', 'id', `${id} `), shorten(t.label));
+  return b;
+}
+function problemRow(result) {
+  const p = result.problem, tr = node('tr');
+  const cell = className => { const td = node('td', className); tr.append(td); return td; };
+  const head = cell('c-problem'), link = node('a', null, `${p.year} ${p.id}`);
+  link.href = entryUrl(p); link.title = 'Link to this entry';
+  head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
+  if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
+  cell('c-method').append(tagButton(p.primaryTag));
+  const others = p.tags.filter(id => id !== p.primaryTag), other = cell('c-other');
+  if (others.length) { const box = node('span', 'others'); box.append(...others.map(tagButton)); other.append(box); }
+  const notes = cell('c-notes'); notes.append(node('p', null, p.explanation));
+  const detail = node('details'), research = node('div', 'research');
+  detail.append(node('summary', null, 'Research notes & caveats'));
+  research.append(node('p', null, `${p.evidence}${p.confidence ? ` · Confidence: ${p.confidence}` : ''}`), node('p', null, p.notes));
+  const refs = node('ul');
+  for (const url of new Set(p.sourceUrls)) { const a = sourceLink(url, url); if (a) { const li = node('li'); li.append(a); refs.append(li); } }
+  if (refs.children.length) research.append(refs);
+  detail.append(research); notes.append(detail);
+  const src = cell('c-src');
+  for (const [label, url] of [['AoPS', p.aopsUrl], ['Official', p.officialUrl]]) { const a = url && sourceLink(label, url); if (a) src.append(a); }
+  src.append(node('span', `status ${p.forumStatus}`, STATUS[p.forumStatus]));
+  return tr;
+}
+function resultsTable(rows) {
+  const table = node('table'), thead = node('thead'), hr = node('tr');
+  for (const h of ['Problem', 'Primary method', 'Other methods', 'Classification', 'Sources']) { const th = node('th', null, h); th.scope = 'col'; hr.append(th); }
+  thead.append(hr);
+  const tbody = node('tbody'); tbody.append(...rows);
+  table.append(thead, tbody); return table;
+}
+
 function render() {
-  history.replaceState(null,'',searchUrl());renderTags();
-  const warning=filters.from&&filters.to&&Number(filters.from)>Number(filters.to);
-  $('filter-warning').hidden=!warning;
-  $('filter-warning').textContent=warning?'Choose a starting year no later than the ending year.':'';
-  const results=selectProblems(data.problems,data.taxonomy,filters), total=results.length;
-  const pages=Math.max(1,Math.ceil(total/PAGE_SIZE));page=Math.min(page,pages);
-  $('result-count').textContent=`${total.toLocaleString()} ${total===1?'problem':'problems'}${total<data.problems.length?' found':''}`;
-  const list=$('problem-list');list.setAttribute('aria-busy','false');
-  const shown=results.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);
-  if(total)list.replaceChildren(...shown.map(problemCard));
-  else{const e=node('div','empty-state');e.append(node('span','empty-symbol','∅'),node('h3',null,'No problems in this selection.'),node('p',null,'Try fewer method tags, Match any, or a wider year range.'));const b=node('button','outline-button','Clear all filters');b.type='button';b.addEventListener('click',reset);e.append(b);list.replaceChildren(e);}
-  const pagination=$('pagination');pagination.replaceChildren();
-  if(pages>1){
-    const previous=node('button','outline-button','← Previous');previous.type='button';previous.disabled=page===1;
-    const next=node('button','outline-button','Next →');next.type='button';next.disabled=page===pages;
-    previous.addEventListener('click',()=>changePage(page-1));next.addEventListener('click',()=>changePage(page+1));
-    pagination.append(previous,node('span',null,`Page ${page} of ${pages}`),next);
+  history.replaceState(null, '', searchUrl()); renderTags(); renderActive();
+  const warning = filters.from && filters.to && Number(filters.from) > Number(filters.to);
+  $('filter-warning').hidden = !warning;
+  $('filter-warning').textContent = warning ? '“From” year is later than “To” year.' : '';
+  const results = selectProblems(data.problems, data.taxonomy, filters), total = results.length;
+  const pages = Math.max(1, Math.ceil(total / PAGE_SIZE)); page = Math.min(page, pages);
+  const first = (page - 1) * PAGE_SIZE;
+  $('result-count').textContent = total
+    ? `${total.toLocaleString()} of ${data.problems.length.toLocaleString()} problems${pages > 1 ? ` · showing ${first + 1}–${Math.min(total, first + PAGE_SIZE)}` : ''}`
+    : `0 of ${data.problems.length.toLocaleString()} problems`;
+  const list = $('problem-list'); list.setAttribute('aria-busy', 'false');
+  if (total) list.replaceChildren(resultsTable(results.slice(first, first + PAGE_SIZE).map(problemRow)));
+  else {
+    const e = node('div', 'empty');
+    e.append(node('p', null, filters.tags.length > 1 && filters.mode === 'AND' ? 'No problem has all selected methods. Try “Any selected (OR)” or remove a method.' : 'No problems match these filters.'));
+    e.append(button(null, 'Reset filters', reset)); list.replaceChildren(e);
+  }
+  const pagination = $('pagination'); pagination.replaceChildren();
+  if (pages > 1) {
+    const prev = button(null, '← Previous', () => changePage(page - 1)); prev.disabled = page === 1;
+    const next = button(null, 'Next →', () => changePage(page + 1)); next.disabled = page === pages;
+    pagination.append(prev, node('span', null, `Page ${page} of ${pages}`), next);
   }
 }
-function changePage(value){page=value;render();$('results').scrollIntoView({behavior:'smooth',block:'start'});}
-function reset(){filters={query:'',contest:'',subject:'',from:'',to:'',evidence:'',tags:[],mode:'AND',problem:''};page=1;$('tag-search').value='';syncControls();render();}
-async function copyUrl(url,button){
-  try{await navigator.clipboard.writeText(url);const text=button.textContent;button.textContent='Link copied ✓';setTimeout(()=>button.textContent=text,2000);}
-  catch{button.textContent='Copy the URL from your address bar';history.replaceState(null,'',url);}
+function changePage(value) { page = value; render(); $('results').scrollIntoView({block:'start'}); }
+function reset() { filters = emptyFilters(); page = 1; $('tag-search').value = ''; syncControls(); render(); }
+async function copyUrl(url, b) {
+  const text = b.textContent;
+  try { await navigator.clipboard.writeText(url); b.textContent = 'Copied'; }
+  catch { b.textContent = 'Copy from address bar'; }
+  setTimeout(() => b.textContent = text, 2000);
 }
-function renderCoverage(){
-  const contents=$('coverage-content');contents.append(node('p',null,data.scope));
-  for(const c of data.coverage){contents.append(node('h3',null,c.title),node('p',null,c.text));}
-  const ul=node('ul');for(const c of data.caveats)ul.append(node('li',null,c));contents.append(ul);
-  contents.append(node('p','muted','Classification notes are original summaries. Full statements and solutions stay with their linked sources. “Forum checked” records a review outcome; it does not certify every forum proof.'));
+function renderCoverage() {
+  const c = $('coverage-content'); c.append(node('p', null, data.scope));
+  for (const s of data.snapshots || []) if (s.count != null) c.append(node('p', null, `${CONTESTS[s.contest] || s.contest}: ${s.count} entries`));
+  for (const x of data.coverage) c.append(node('h3', null, x.title), node('p', null, x.text));
+  c.append(node('h3', null, 'Caveats'));
+  const ul = node('ul'); for (const x of data.caveats) ul.append(node('li', null, x)); c.append(ul);
 }
-async function start(){
-  try{
-    const response=await fetch('./data/catalogue.json');if(!response.ok)throw new Error(`HTTP ${response.status}`);data=await response.json();
-    tags=new Map(data.taxonomy.map(t=>[t.id,t]));filters=readFilters();
-    $('total-stat').textContent=data.problems.length.toLocaleString();
-    $('updated').textContent='Snapshot · '+new Intl.DateTimeFormat('en',{dateStyle:'medium',timeZone:'UTC'}).format(new Date(data.updated));
-    const years=[...new Set(data.problems.map(p=>p.year))].sort((a,b)=>b-a);
-    for(const id of ['from-year','to-year'])for(const year of years){const option=node('option',null,year);option.value=year;$(id).append(option);}
-    // Preserve a valid boundary year even when the current snapshot has no entries in that year.
-    for(const [id,key]of[['from-year','from'],['to-year','to']])if(filters[key]&&!years.includes(Number(filters[key]))){if(/^\d{4}$/.test(filters[key])){const o=node('option',null,filters[key]);o.value=filters[key];$(id).append(o);}else filters[key]='';}
-    syncControls();renderCoverage();
-    for(const [id,key]of[['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['from-year','from'],['to-year','to']]) $(id).addEventListener(id==='search'?'input':'change',()=>{filters[key]=$(id).value;filters.problem='';page=1;render();});
-    $('tag-search').addEventListener('input',renderTags);
-    document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{filters.mode=b.dataset.mode;page=1;syncControls();render();}));
-    $('reset').addEventListener('click',reset);$('copy-link').addEventListener('click',()=>copyUrl(location.href,$('copy-link')));
-    $('coverage-open').addEventListener('click',()=>$('coverage-dialog').showModal());$('coverage-close').addEventListener('click',()=>$('coverage-dialog').close());
-    window.addEventListener('popstate',()=>{filters=readFilters();page=1;syncControls();render();});
+
+async function start() {
+  try {
+    const response = await fetch('./data/catalogue.json'); if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    data = await response.json();
+    tags = new Map(data.taxonomy.map(t => [t.id, t])); filters = readFilters();
+    $('total-stat').textContent = `${data.problems.length.toLocaleString()} (${Object.entries(data.counts || {}).map(([k,v]) => `${CONTESTS[k] || k} ${v}`).join(', ')})`;
+    $('updated').textContent = 'snapshot ' + new Intl.DateTimeFormat('en', {dateStyle:'medium', timeZone:'UTC'}).format(new Date(data.updated));
+    const years = [...new Set(data.problems.map(p => p.year))].sort((a,b) => b - a);
+    for (const id of ['from-year','to-year']) for (const year of years) { const o = node('option', null, year); o.value = year; $(id).append(o); }
+    // Keep a valid boundary year from the URL even if the snapshot has no entries in that year.
+    for (const [id,key] of [['from-year','from'],['to-year','to']]) if (filters[key] && !years.includes(Number(filters[key]))) {
+      if (/^\d{4}$/.test(filters[key])) { const o = node('option', null, filters[key]); o.value = filters[key]; $(id).append(o); } else filters[key] = '';
+    }
+    if (matchMedia('(max-width: 860px)').matches) $('filters').open = false;
+    syncControls(); renderCoverage();
+    for (const [id,key] of FIELDS) $(id).addEventListener(id === 'search' ? 'input' : 'change', () => { filters[key] = $(id).value; filters.problem = ''; page = 1; render(); });
+    $('tag-search').addEventListener('input', renderTags);
+    $('tag-search').addEventListener('keydown', e => {
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      const ids = parseTagInput(e.target.value, data.taxonomy);
+      const found = ids || [...$('tag-options').querySelectorAll('.tag-option')].length === 1 && [Number($('tag-options').querySelector('.tag-option .id').textContent)];
+      if (found && found.length) { e.target.value = ''; update({tags:[...new Set([...filters.tags, ...found])], problem:''}); }
+    });
+    document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => update({mode:b.dataset.mode})));
+    $('reset').addEventListener('click', reset);
+    $('copy-link').addEventListener('click', e => copyUrl(location.href, e.currentTarget));
+    $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
+    $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
+    window.addEventListener('popstate', () => { filters = readFilters(); page = 1; syncControls(); render(); });
     render();
-  }catch(error){
-    $('result-count').textContent='Catalogue unavailable';$('problem-list').setAttribute('aria-busy','false');
-    const box=node('div','empty-state');box.append(node('h3',null,'The catalogue could not load.'),node('p',null,'Check your connection and try again.'));
-    const b=node('button','outline-button','Retry');b.type='button';b.addEventListener('click',()=>location.reload());box.append(b);$('problem-list').replaceChildren(box);console.error('Catalogue load failed:',error);
+  } catch (error) {
+    $('result-count').textContent = 'Catalogue unavailable'; $('problem-list').setAttribute('aria-busy', 'false');
+    const box = node('div', 'empty'); box.append(node('p', null, 'The catalogue data could not be loaded.'), button(null, 'Retry', () => location.reload()));
+    $('problem-list').replaceChildren(box); console.error('Catalogue load failed:', error);
   }
 }
 start();

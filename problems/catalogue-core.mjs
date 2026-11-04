@@ -27,3 +27,10 @@ export function selectProblems(problems, taxonomy, filters = {}) {
     return words.every(word => haystack.includes(word));
   }).sort((a,b) => Number(b.primary)-Number(a.primary) || b.hits-a.hits || b.problem.year-a.problem.year || a.index-b.index);
 }
+// Parses typed method input such as "44, 46" or "44 46". Returns valid distinct IDs,
+// or null when the text is not purely a list of numbers.
+export function parseTagInput(text, taxonomy) {
+  const parts = String(text ?? '').trim().split(/[\s,;]+/).filter(Boolean);
+  if (!parts.length || !parts.every(p => /^\d+$/.test(p))) return null;
+  return validTagIds(parts, taxonomy);
+}

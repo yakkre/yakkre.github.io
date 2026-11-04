@@ -41,3 +41,10 @@ test('collection, subject, years, evidence, text and permalink compose correctly
   assert.deepEqual(validTagIds(['0','61','3','3','1.5','wrong'],taxonomy),[3]);
   assert.equal(selectProblems(problems,taxonomy).length,problems.length);
 });
+test('typed method ID input accepts numeric lists only',async()=>{
+  const {parseTagInput}=await import('../problems/catalogue-core.mjs');
+  assert.deepEqual(parseTagInput('44, 46',taxonomy),[44,46]);
+  assert.deepEqual(parseTagInput('44 44;61 0',taxonomy),[44]);
+  assert.equal(parseTagInput('invariant',taxonomy),null);
+  assert.equal(parseTagInput('',taxonomy),null);
+});

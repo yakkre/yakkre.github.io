@@ -1,9 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {selectProblems,validTagIds} from '../problems/catalogue-core.mjs';
+import {selectProblems,validTagIds,problemName} from '../problems/catalogue-core.mjs';
 const data=JSON.parse(fs.readFileSync(new URL('../problems/data/catalogue.json',import.meta.url)));
 const {problems,taxonomy}=data;
+test('problem names distinguish collections and original contest versus shortlist IDs',()=>{
+  assert.equal(problemName({year:2025,contest:'isl',id:'A6',section:'Shortlist'}),'2025 ISL A6');
+  assert.equal(problemName({year:2026,contest:'rmm',id:'4',section:'Contest'}),'2026 RMM 4');
+  assert.equal(problemName({year:2026,contest:'rmm',id:'A6',section:'Shortlist'}),'2026 RMM SL A6');
+  assert.ok(selectProblems(problems,taxonomy,{query:'2025 ISL A6'}).some(x=>x.problem.key==='isl:2025:A6'));
+});
 test('export preserves complete reviewed keys, exact taxonomy and source caveats',()=>{
   assert.equal(new Set(problems.map(p=>p.key)).size,problems.length);
   for(const snapshot of data.snapshots)assert.equal(problems.filter(p=>p.contest===snapshot.contest).length,snapshot.count);

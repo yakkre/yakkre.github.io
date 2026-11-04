@@ -69,6 +69,14 @@ tbody tr:hover{background:var(--soft)}
 .c-notes p{margin:0}
 .c-notes details{margin-top:3px}
 .c-notes summary{color:var(--muted);font-size:12px;cursor:pointer;width:fit-content}
+.c-notes .classification{margin-top:0}
+.classification>p{padding-top:4px}
+.problem-statement{margin-top:20px;min-width:0}
+.problem-statement h2{font-size:16px;font-weight:600;margin:0 0 12px}
+.statement-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}
+.statement-text img{display:block;max-width:100%;height:auto;margin:12px 0}
+.statement-text mjx-container[display=true]{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:4px 0}
+.statement-source{font-size:12px;color:var(--muted);margin:10px 0}
 .research{font-size:12px;color:var(--muted);padding:4px 0}
 .research p{margin:0 0 4px;white-space:pre-wrap;overflow-wrap:anywhere}
 .research ul{margin:0;padding-left:16px;overflow-wrap:anywhere}

@@ -1,5 +1,5 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261103-names';
-import {renderStatement} from './statement-view.mjs?v=20261103-names';
+import {renderStatement} from './statement-view.mjs?v=20261103-proposers';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 50;

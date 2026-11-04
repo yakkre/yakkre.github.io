@@ -20,6 +20,18 @@ function image(src, alt) {
   const img = element('img'); img.src = url.href; img.alt = alt || 'Problem diagram'; img.loading = 'lazy';
   return img;
 }
+function appendStatementText(parent, text) {
+  // Render proposer credits as emphasis, including credits already wrapped in Markdown.
+  const credits = /^[ \t]*[*_]{0,2}[Pp]roposed\b[^\n]*|(?<=[\s$\]}])[*_]{0,2}Proposed\b[^\n]*/gm;
+  let position = 0;
+  for (const match of text.matchAll(credits)) {
+    parent.append(document.createTextNode(text.slice(position, match.index)));
+    const credit = match[0].trim().replace(/^[*_]+|[*_]+$/g, '').trim();
+    parent.append(element('em', credit.endsWith('.') ? credit : `${credit}.`));
+    position = match.index + match[0].length;
+  }
+  parent.append(document.createTextNode(text.slice(position)));
+}
 function statementBody(statement) {
   const body = element('div', null, 'statement-text');
   const text = statement.text.replace(/\n[ \t]*\n(?:[ \t]*\n)+/g, '\n\n');
@@ -27,12 +39,12 @@ function statementBody(statement) {
   const pattern = /!\[([^\]]*)\]\((https:\/\/[^\s)]+)\)/g;
   let position = 0;
   for (const match of text.matchAll(pattern)) {
-    body.append(document.createTextNode(text.slice(position, match.index)));
+    appendStatementText(body, text.slice(position, match.index));
     const img = image(match[2], match[1]);
     body.append(img || document.createTextNode(match[0]));
     position = match.index + match[0].length;
   }
-  body.append(document.createTextNode(text.slice(position)));
+  appendStatementText(body, text.slice(position));
   for (const item of statement.images || []) { const img = image(item.src, item.alt); if (img) body.append(img); }
   return body;
 }

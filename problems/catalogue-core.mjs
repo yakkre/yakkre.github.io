@@ -19,7 +19,7 @@ export function selectProblems(problems, taxonomy, filters = {}) {
   if (filters.from && filters.to && Number(filters.from) > Number(filters.to)) return [];
   return problems.map((p, index) => {
     const hits = ids.filter(id => p.tags.includes(id)).length;
-    return {problem:p, index, hits, primary:ids.includes(p.primaryTag)};
+    return {problem:p, index, hits, primary:(p.primaryTags || [p.primaryTag]).some(id => ids.includes(id))};
   }).filter(({problem:p, hits}) => {
     if (filters.problem && p.key !== filters.problem) return false;
     if (filters.contest && p.contest !== filters.contest) return false;
@@ -40,3 +40,4 @@ export function parseTagInput(text, taxonomy) {
   if (!parts.length || !parts.every(p => /^\d+$/.test(p))) return null;
   return validTagIds(parts, taxonomy);
 }
+

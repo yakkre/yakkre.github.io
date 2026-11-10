@@ -64,6 +64,12 @@ function loadMath() {
   });
   return mathPromise;
 }
+// Typeset LaTeX inside an element (used for reader notes). Rejects if MathJax can't load.
+export async function typesetMath(el) {
+  await loadMath();
+  window.MathJax.typesetClear?.([el]);
+  await window.MathJax.typesetPromise([el]);
+}
 export async function renderStatement(panel, problem) {
   const key = problem?.key || '';
   if (key === currentKey) return;

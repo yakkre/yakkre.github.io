@@ -235,4 +235,7 @@ tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
 .grid-cell.has-note::after{content:'';position:absolute;top:2px;right:2px;width:5px;height:5px;border-radius:50%;background:var(--sel)}
 .grid-legend .grid-cell.has-note::after{top:1px;right:1px;width:4px;height:4px}
 .menu-note{margin:-4px 0 10px;padding:6px 8px;border-left:3px solid var(--sel);background:var(--soft);font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--muted)}
+.notes-preview{margin-top:10px;padding:8px 12px;border:1px solid var(--line);border-radius:4px;background:var(--soft)}
+.notes-preview .collect-sub{margin:0 0 4px}
+.notes-preview #notes-preview-note:empty{display:none}
 

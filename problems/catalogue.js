@@ -1,5 +1,5 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
-import {renderStatement} from './statement-view.mjs?v=20261103-proposers';
+import {renderStatement, typesetMath} from './statement-view.mjs?v=20261110-notesmath';
 
 const START_HREF = location.href; // before render() rewrites the URL: a sign-in link's code is in it
 const $ = id => document.getElementById(id);
@@ -490,10 +490,21 @@ function renderNotes(p) {
   const box = $('problem-notes'), ta = $('notes-text');
   if (!progress || !p) { flushNotes(); box.hidden = true; notesKey = null; return; }
   box.hidden = false;
-  if (notesKey !== p.key) { flushNotes(); notesKey = p.key; ta.value = progress.note(p.key); $('notes-status').textContent = ''; }
-  else if (!notesDirty && document.activeElement !== ta && ta.value !== progress.note(p.key)) ta.value = progress.note(p.key); // changed on another device
+  if (notesKey !== p.key) { flushNotes(); notesKey = p.key; ta.value = progress.note(p.key); $('notes-status').textContent = ''; renderNotesPreview(); }
+  else if (!notesDirty && document.activeElement !== ta && ta.value !== progress.note(p.key)) { ta.value = progress.note(p.key); renderNotesPreview(); } // changed on another device
   $('notes-where').textContent = progress.user ? 'Private: only you can see these. Saved to your account.'
     : 'Private, saved in this browser. Sign in (top right) to keep notes on every device.';
+}
+// Rendered preview of the note when it contains LaTeX ($…$, $$…$$, \(…\), \[…\]).
+let previewTimer = null, previewRun = 0;
+async function renderNotesPreview() {
+  clearTimeout(previewTimer); previewTimer = null;
+  const box = $('notes-preview'), body = $('notes-preview-body'), text = $('notes-text').value;
+  const run = ++previewRun;
+  if (!/\$|\\\(|\\\[/.test(text)) { box.hidden = true; body.textContent = ''; return; }
+  box.hidden = false; body.textContent = text;
+  try { await typesetMath(body); } catch { if (run === previewRun) $('notes-preview-note').textContent = 'Math preview is unavailable right now.'; return; }
+  if (run === previewRun) $('notes-preview-note').textContent = '';
 }
 async function flushNotes() {
   clearTimeout(notesTimer); notesTimer = null;
@@ -506,7 +517,7 @@ async function flushNotes() {
 }
 function setupNotes() {
   const ta = $('notes-text');
-  ta.addEventListener('input', () => { notesDirty = true; $('notes-status').textContent = 'Saving…'; clearTimeout(notesTimer); notesTimer = setTimeout(flushNotes, 700); });
+  ta.addEventListener('input', () => { clearTimeout(previewTimer); previewTimer = setTimeout(renderNotesPreview, 400); notesDirty = true; $('notes-status').textContent = 'Saving…'; clearTimeout(notesTimer); notesTimer = setTimeout(flushNotes, 700); });
   ta.addEventListener('blur', flushNotes);
   addEventListener('pagehide', flushNotes);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushNotes(); });

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261110-account">
-  <script type="module" src="./catalogue.js?v=20261110-account"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261110-tabs">
+  <script type="module" src="./catalogue.js?v=20261110-tabs"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -38,6 +38,10 @@
       <h1>Olympiad problems by method</h1>
       <p class="summary"><span id="total-stat">—</span> problems · <span id="tag-total">—</span> tags · <span id="updated">snapshot</span> · <button type="button" id="coverage-open" class="link-button">Coverage &amp; caveats</button></p>
     </div>
+    <div class="view-tabs" role="tablist" aria-label="View">
+      <button type="button" role="tab" data-view="list" aria-selected="true" aria-controls="results">Problem lookup</button>
+      <button type="button" role="tab" data-view="grid" aria-selected="false" aria-controls="results">Progress grid</button>
+    </div>
     <div class="layout">
       <details class="filters" id="filters" open>
         <summary>Filters <span id="filter-count"></span></summary>
@@ -67,17 +71,6 @@
         </div>
       </details>
       <section class="results" id="results" tabindex="-1" aria-label="Results">
-        <details id="grid-view" class="grid-view" hidden>
-          <summary>Progress grid <span id="grid-count" class="sub-inline"></span></summary>
-          <div class="grid-top">
-            <div class="mode grid-switch" role="group" aria-label="Collection">
-              <button type="button" data-grid="isl" aria-pressed="true">IMO Shortlist</button>
-              <button type="button" data-grid="rmm" aria-pressed="false">RMM</button>
-            </div>
-            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done · click a square to toggle</p>
-          </div>
-          <div id="grid-body" class="grid-body"></div>
-        </details>
         <div class="search-bar">
           <label class="sr-only" for="search">Search problems</label>
           <input type="search" id="search" placeholder="Search: 2019 C6, invariant, Vieta…" autocomplete="off">
@@ -88,6 +81,17 @@
         </div>
         <div id="active" class="active" aria-label="Active filters"></div>
         <p id="filter-warning" class="warning" role="status" hidden></p>
+        <div id="grid-view" class="grid-view" hidden>
+          <div class="grid-top">
+            <div class="mode grid-switch" role="group" aria-label="Collection">
+              <button type="button" data-grid="isl" aria-pressed="true">IMO Shortlist</button>
+              <button type="button" data-grid="rmm" aria-pressed="false">RMM</button>
+            </div>
+            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done <span id="grid-legend-match" hidden><span class="grid-cell todo match" aria-hidden="true"></span> matches your filters</span> · click a square to toggle done</p>
+            <p id="grid-count" class="grid-count"></p>
+          </div>
+          <div id="grid-body" class="grid-body"></div>
+        </div>
         <div id="problem-list" aria-busy="true"><p class="loading">Loading problems…</p></div>
         <nav id="pagination" class="pagination" aria-label="Result pages"></nav>
         <section id="problem-statement" class="problem-statement" aria-label="Problem statement" hidden></section>

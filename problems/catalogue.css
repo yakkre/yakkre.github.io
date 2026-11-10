@@ -136,9 +136,7 @@ dialog h3{font-size:14px;margin:14px 0 2px}dialog p,dialog li{margin:4px 0}
 .signin-form button,#signout{border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:4px 10px;height:32px;white-space:nowrap}
 .signin-form button:hover,#signout:hover{background:var(--soft)}
 .done-box{display:inline-block;width:14px;height:14px;margin:0 6px 0 0;padding:0;vertical-align:-2px;accent-color:var(--done);cursor:pointer}
-.grid-view{margin-bottom:10px;border:1px solid var(--line);border-radius:4px}
-.grid-view>summary{padding:6px 10px;font-weight:600;cursor:pointer}
-.sub-inline{font-weight:400;color:var(--muted);font-size:12px;margin-left:6px}
+.grid-view{margin-top:6px;border:1px solid var(--line);border-radius:4px;padding-top:10px}
 .grid-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:0 10px}
 .grid-switch{width:240px;margin:0}
 .grid-legend{margin:0;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px}
@@ -153,4 +151,12 @@ dialog h3{font-size:14px;margin:14px 0 2px}dialog p,dialog li{margin:4px 0}
 .grid-cell:hover{outline:1px solid var(--fg)}
 .page-label{color:var(--muted);font-size:13px;margin:0;display:flex;align-items:center;gap:4px}
 .page-input{display:inline-block;width:60px;height:28px;padding:2px 4px;text-align:center}
+.view-tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 12px}
+.view-tabs button{border:0;border-bottom:2px solid transparent;background:none;padding:6px 12px;margin-bottom:-1px;font-size:14px;color:var(--muted)}
+.view-tabs button:hover{color:var(--fg)}
+.view-tabs button[aria-selected=true]{color:var(--fg);font-weight:600;border-bottom-color:var(--accent)}
+.grid-count{margin:0;font-size:12px;color:var(--muted)}
+.grid-body.filtering .grid-cell:not(.match){opacity:.22}
+.grid-cell.match{box-shadow:0 0 0 2px var(--fg);font-weight:700}
+.grid-legend .grid-cell.match{box-shadow:0 0 0 1.5px var(--fg)}
 

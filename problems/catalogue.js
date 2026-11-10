@@ -9,7 +9,7 @@ const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pen
 const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
 const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['done','done'],['from-year','from'],['to-year','to']];
 const DONE = {yes:'Marked done', no:'Not done yet'};
-let data, tags, filters, page = 1, progress = null;
+let data, tags, filters, page = 1, progress = null, view = 'list';
 
 const node = (tag, className, text) => {
   const e = document.createElement(tag);
@@ -48,10 +48,12 @@ function searchUrl(override={}) {
   const f = {...filters, ...override}, q = new URLSearchParams();
   for (const [key,val] of Object.entries({q:f.query, contest:f.contest, subject:f.subject, evidence:f.evidence, difficulty:f.difficulty, done:f.done, from:f.from, to:f.to, problem:f.problem})) if (val) q.set(key, val);
   if (f.tags.length) q.set('tags', f.tags.join(','));
+  if ((override.view ?? view) === 'grid') q.set('view', 'grid');
   if (f.mode === 'OR') q.set('mode', 'OR');
   return location.pathname + (q.size ? '?' + q : '');
 }
-const entryUrl = p => searchUrl({...emptyFilters(), problem:p.key});
+const entryUrl = p => searchUrl({...emptyFilters(), problem:p.key, view:'list'});
+const filtersActive = f => !!(f.query || f.contest || f.subject || f.from || f.to || f.evidence || f.difficulty || f.done || f.tags.length);
 
 function syncControls() {
   for (const [id,key] of FIELDS) $(id).value = filters[key];
@@ -174,6 +176,16 @@ function render() {
   $('filter-warning').textContent = warning ? '“From” year is later than “To” year.' : '';
   const results = selectProblems(data.problems, data.taxonomy, filters)
     .filter(r => !filters.done || !progress || progress.isDone(r.problem.key) === (filters.done === 'yes')), total = results.length;
+  document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === view)));
+  const grid = view === 'grid';
+  $('grid-view').hidden = !grid; $('problem-list').hidden = grid; $('pagination').hidden = grid;
+  if (grid) {
+    const active = filtersActive(filters);
+    $('result-count').textContent = active ? `${total.toLocaleString()} problems match your filters` : 'Pick methods or filters to highlight problems';
+    $('problem-statement').hidden = true;
+    renderGrid(active ? new Set(results.map(r => r.problem.key)) : null);
+    return;
+  }
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE)); page = Math.min(page, pages);
   const first = (page - 1) * PAGE_SIZE;
   $('result-count').textContent = total
@@ -234,15 +246,17 @@ function setMenu(open) {
 // Grid of every available problem in one collection: a row per year, green when done, blue when not.
 let gridContest = 'isl';
 const idOrder = id => { const m = String(id).match(/^(\D*)(\d+)/); return m ? [m[1], Number(m[2])] : [String(id), 0]; };
-function renderGrid() {
-  const view = $('grid-view');
-  if (!progress) { view.hidden = true; return; }
-  view.hidden = false;
+// matches: keys selected by the current filters (highlighted), or null when no filter is active.
+function renderGrid(matches) {
+  if (filters.contest) gridContest = filters.contest;
+  const isDone = key => !!progress?.isDone(key);
   document.querySelectorAll('[data-grid]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.grid === gridContest)));
   const probs = data.problems.filter(p => p.contest === gridContest);
-  const doneCount = probs.filter(p => progress.isDone(p.key)).length;
-  $('grid-count').textContent = `${doneCount} of ${probs.length} done`;
-  if (!view.open) return;
+  const doneCount = probs.filter(p => isDone(p.key)).length;
+  const hits = matches ? probs.filter(p => matches.has(p.key)).length : 0;
+  $('grid-count').textContent = `${doneCount} of ${probs.length} done` + (matches ? ` · ${hits} highlighted` : '');
+  $('grid-legend-match').hidden = !matches;
+  $('grid-body').classList.toggle('filtering', !!matches);
   const years = new Map();
   for (const p of probs) { if (!years.has(p.year)) years.set(p.year, []); years.get(p.year).push(p); }
   const subjectRank = s => ({A:0, C:1, G:2, N:3})[s] ?? 4;
@@ -256,9 +270,9 @@ function renderGrid() {
     for (const p of list) {
       if (gridContest === 'isl' && last && last !== p.subject) cells.append(node('span', 'grid-gap'));
       last = p.subject;
-      const on = progress.isDone(p.key);
-      const b = button(`grid-cell ${on ? 'done' : 'todo'}`, p.id, () => progress.toggle(p.key),
-        `${problemName(p)}: ${on ? 'done' : 'not done'} (click to toggle)`);
+      const on = isDone(p.key), hit = matches?.has(p.key);
+      const b = button(`grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}`, p.id, () => progress?.toggle(p.key),
+        `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''} (click to toggle done)`);
       b.setAttribute('aria-pressed', String(on));
       cells.append(b);
     }
@@ -269,7 +283,7 @@ function renderGrid() {
 async function setupProgress() {
   try {
     const {createProgress} = await import('./progress.mjs?v=20261110-account');
-    progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); renderGrid(); render(); }});
+    progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); render(); }});
     $('signin-form').addEventListener('submit', async e => {
       e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
       if (await progress.sendLink($('signin-email').value)) $('signin-email').value = '';
@@ -279,10 +293,8 @@ async function setupProgress() {
     $('account-button').addEventListener('click', () => setMenu($('account-menu').hidden));
     document.addEventListener('click', e => { if (!$('account').contains(e.target)) setMenu(false); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('account-menu').hidden) { setMenu(false); $('account-button').focus(); } });
-    $('grid-view').addEventListener('toggle', renderGrid);
-    document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => { gridContest = b.dataset.grid; renderGrid(); }));
-    renderProgress(); renderGrid(); progress.init();
-  } catch (error) { progress = null; renderProgress(); renderGrid(); console.error('Progress tracking unavailable:', error); }
+    renderProgress(); progress.init();
+  } catch (error) { progress = null; renderProgress(); console.error('Progress tracking unavailable:', error); }
 }
 
 async function start() {
@@ -315,8 +327,14 @@ async function start() {
     $('copy-link').addEventListener('click', e => copyUrl(location.href, e.currentTarget));
     $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
     $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
+    view = new URLSearchParams(location.search).get('view') === 'grid' ? 'grid' : 'list';
+    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; render(); }));
+    document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => {
+      gridContest = b.dataset.grid;
+      if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();
+    }));
     await setupProgress();
-    window.addEventListener('popstate', () => { filters = readFilters(); page = 1; syncControls(); render(); });
+    window.addEventListener('popstate', () => { filters = readFilters(); view = new URLSearchParams(location.search).get('view') === 'grid' ? 'grid' : 'list'; page = 1; syncControls(); render(); });
     render();
   } catch (error) {
     $('result-count').textContent = 'Catalogue unavailable'; $('problem-list').setAttribute('aria-busy', 'false');

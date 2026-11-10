@@ -93,7 +93,7 @@ service cloud.firestore {
         && d.ownerUid == request.auth.uid
         && d.name is string && d.name.size() > 0 && d.name.size() <= 80
         && d.description is string && d.description.size() <= 1000
-        && d.keys is list && d.keys.size() <= 500
+        && d['keys'] is list && d['keys'].size() <= 500
         && d.updatedAt == request.time;
     }
 

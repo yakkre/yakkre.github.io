@@ -10,6 +10,8 @@ const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
 const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['done','done'],['from-year','from'],['to-year','to']];
 const DONE = {yes:'Marked done', no:'Not done yet'};
 let data, tags, filters, page = 1, progress = null, view = 'list', currentColl = '', sharedId = '', sharedCache = null;
+let selecting = false, selectNote = '', lastResults = [];
+const selected = new Set();
 const VIEWS = ['list', 'grid', 'collections'];
 function readView() {
   const q = new URLSearchParams(location.search);
@@ -131,22 +133,20 @@ function problemRow(result) {
   const cell = className => { const td = node('td', className); tr.append(td); return td; };
   const head = cell('c-problem'), link = node('a', null, problemName(p));
   link.href = entryUrl(p); link.title = 'View problem statement';
-  if (progress) {
-    const cb = node('input', 'done-box'), on = progress.isDone(p.key);
-    cb.type = 'checkbox'; cb.checked = on; cb.title = on ? 'Done' : 'Mark as done';
-    cb.setAttribute('aria-label', `Done: ${problemName(p)}`);
-    cb.addEventListener('change', () => progress.toggle(p.key));
-    head.append(cb);
-    if (on) tr.classList.add('is-done');
+  const on = !!progress?.isDone(p.key);
+  if (on) tr.classList.add('is-done');
+  if (selecting) {
+    const sel = selected.has(p.key), cb = node('input', 'select-box');
+    cb.type = 'checkbox'; cb.checked = sel; cb.setAttribute('aria-label', `Select ${problemName(p)}`);
+    cb.addEventListener('change', () => toggleSelect(p.key));
+    head.append(cb); tr.classList.add('selectable'); if (sel) tr.classList.add('is-selected');
+    tr.addEventListener('click', e => { if (!e.target.closest('a, button, input, summary, details, label')) toggleSelect(p.key); });
   }
-  head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
+  head.append(link);
+  if (on) head.append(node('span', 'done-tag', '✓ Done'));
+  head.append(node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
   if (p.difficulty) { const d = node('span', 'sub difficulty', `Difficulty ${p.difficulty}/5 (estimate)`); d.title = p.difficultyBasis || ''; head.append(d); }
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
-  if (progress) {
-    const n = progress.collections().filter(c => c.keys.includes(p.key)).length;
-    const b = button('collect-btn', n ? `In ${n} collection${n > 1 ? 's' : ''}` : '+ Collection', e => { e.stopPropagation(); openCollectMenu(p, e.currentTarget); }, 'Add to a collection');
-    head.append(b);
-  }
   const primary = cell('c-method');
   if (p.geometry) {
     for (const [label, route] of [['Synthetic',p.geometry.synthetic],['Analytic',p.geometry.analytic]]) {
@@ -203,10 +203,11 @@ function render() {
   if (grid) {
     const active = filtersActive(filters);
     $('result-count').textContent = active ? `${total.toLocaleString()} problems match your filters` : 'Pick methods or filters to highlight problems';
-    $('problem-statement').hidden = true;
+    $('problem-statement').hidden = true; $('select-bar').hidden = true; $('select-toggle').hidden = true;
     renderGrid(active ? new Set(results.map(r => r.problem.key)) : null);
     return;
   }
+  lastResults = results; renderSelectBar();
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE)); page = Math.min(page, pages);
   const first = (page - 1) * PAGE_SIZE;
   $('result-count').textContent = total
@@ -336,9 +337,63 @@ function openCollectMenu(p, anchor, actions = false) {
   renderCollectMenu();
   (m.querySelector('.menu-actions button') || m.querySelector('input'))?.focus();
 }
-function closeCollectMenu() { menuProblem = null; $('collect-menu').hidden = true; }
+function closeCollectMenu() { menuProblem = null; menuBulk = false; $('collect-menu').hidden = true; }
+
+// ---- Select mode (Problem lookup): pick problems, then mark them done or add them to a collection
+let menuBulk = false;
+function toggleSelect(key) { if (selected.has(key)) selected.delete(key); else selected.add(key); selectNote = ''; render(); }
+function setSelecting(on) { selecting = on; selected.clear(); selectNote = ''; if (!on && menuBulk) closeCollectMenu(); render(); }
+function renderSelectBar() {
+  const bar = $('select-bar'), t = $('select-toggle');
+  t.hidden = !progress || view !== 'list'; t.textContent = selecting ? 'Done selecting' : 'Select';
+  t.setAttribute('aria-pressed', String(selecting));
+  bar.hidden = !selecting || view !== 'list';
+  if (bar.hidden) return;
+  const n = selected.size, keys = () => [...selected];
+  const all = lastResults.map(r => r.problem.key), allIn = all.length && all.every(k => selected.has(k));
+  const actions = node('div', 'select-actions');
+  const act = (label, fn, title) => { const b = button(null, label, fn, title); b.disabled = !n; return b; };
+  actions.append(
+    act('Mark done', async () => { await progress.setDoneMany(keys(), true); selectNote = `Marked ${n} as done.`; render(); }),
+    act('Mark not done', async () => { await progress.setDoneMany(keys(), false); selectNote = `Marked ${n} as not done.`; render(); }),
+    act('Add to collection…', e => { e.stopPropagation(); openBulkMenu(e.currentTarget); }));
+  const pick = node('div', 'select-pick');
+  pick.append(node('strong', null, `${n} selected`),
+    button('link-button', allIn ? 'Unselect all results' : `Select all ${all.length.toLocaleString()} results`, () => { for (const k of all) allIn ? selected.delete(k) : selected.add(k); selectNote = ''; render(); }));
+  if (n) pick.append(button('link-button', 'Clear', () => { selected.clear(); selectNote = ''; render(); }));
+  bar.replaceChildren(pick, actions);
+  if (selectNote || progress.status) bar.append(node('p', 'select-note', selectNote || progress.status));
+}
+function openBulkMenu(anchor) {
+  if (menuBulk) { closeCollectMenu(); return; }
+  menuBulk = true; menuProblem = null; menuDraft = '';
+  const r = anchor.getBoundingClientRect(), m = $('collect-menu');
+  m.style.top = `${r.bottom + scrollY + 4}px`;
+  m.style.left = `${Math.max(8, Math.min(r.left + scrollX, scrollX + document.documentElement.clientWidth - 288))}px`;
+  renderCollectMenu();
+}
+function renderBulkMenu(m) {
+  const keys = [...selected], items = [node('p', 'collect-title', `Add ${keys.length} problem${keys.length === 1 ? '' : 's'} to:`)];
+  const done = (n, c) => { selectNote = n == null ? '' : `Added ${n} to “${c}”${n < keys.length ? ` (${keys.length - n} already there)` : ''}.`; closeCollectMenu(); render(); };
+  const list = progress.collections();
+  if (!list.length) items.push(node('p', 'help', 'No collections yet. Make one below.'));
+  for (const c of list) items.push(button('collect-pick', c.name, async () => done(await progress.addManyToCollection(c.id, keys), c.name)));
+  const form = node('form', 'collect-new'), input = node('input');
+  input.placeholder = 'New collection name'; input.maxLength = 80; input.value = menuDraft; input.setAttribute('aria-label', 'New collection name');
+  input.addEventListener('input', () => { menuDraft = input.value; });
+  const add = node('button', null, 'Add'); add.type = 'submit';
+  form.append(input, add);
+  form.addEventListener('submit', async e => {
+    e.preventDefault(); const name = input.value.trim(); if (!name) return;
+    menuDraft = ''; const id = await progress.createCollection(name);
+    if (id) done(await progress.addManyToCollection(id, keys), name);
+  });
+  items.push(form);
+  m.replaceChildren(...items);
+}
 function renderCollectMenu() {
   const m = $('collect-menu');
+  if (menuBulk) { if (!progress || view !== 'list' || !selecting || !selected.size) { closeCollectMenu(); return; } m.hidden = false; renderBulkMenu(m); return; }
   const p = menuProblem && data.problems.find(x => x.key === menuProblem);
   if (!p || !progress || view === 'collections') { m.hidden = true; if (view === 'collections') menuProblem = null; return; }
   m.hidden = false;
@@ -384,14 +439,11 @@ function collectionProblems(keys, byKey, remove) {
   for (const k of keys) {
     const p = byKey.get(k), li = node('li'), on = !!progress?.isDone(k);
     if (on) li.classList.add('is-done');
-    if (progress) {
-      const cb = node('input', 'done-box'); cb.type = 'checkbox'; cb.checked = on; cb.setAttribute('aria-label', `Done: ${problemName(p)}`);
-      cb.addEventListener('change', () => progress.toggle(k)); li.append(cb);
-    }
     const primary = p.geometry ? p.geometry.synthetic?.primaryTag : p.primaryTag;
     const info = node('span', 'sub', `${SUBJECTS[p.subject] || p.subject}${primary && tags.get(primary) ? ` · ${shorten(tags.get(primary).label)}` : ''}${p.difficulty ? ` · difficulty ${p.difficulty}/5` : ''}`);
     const name = node('div', 'coll-pname'); name.append(problemLink(p, null, problemName(p)), info);
     li.append(name);
+    if (progress) li.append(button(`coll-done${on ? ' is-on' : ''}`, on ? '✓ Done' : 'Mark done', () => progress.toggle(k), on ? 'Click to mark as not done' : null));
     if (remove) li.append(button('coll-remove', 'Remove', () => remove(k), `Remove ${problemName(p)} from this collection`));
     ol.append(li);
   }
@@ -521,7 +573,7 @@ function renderCollections() {
 
 async function setupProgress() {
   try {
-    const {createProgress} = await import('./progress.mjs?v=20261110-share');
+    const {createProgress} = await import('./progress.mjs?v=20261110-select');
     progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); render(); }});
     $('signin-form').addEventListener('submit', async e => {
       e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
@@ -567,10 +619,11 @@ async function start() {
     $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
     $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
     readView();
-    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; currentColl = ''; sharedId = ''; render(); }));
+    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; currentColl = ''; sharedId = ''; if (view !== 'list') { selecting = false; selected.clear(); } render(); }));
     // (the menu re-renders on each change, so a click inside it can land on a node that is already detached)
-    document.addEventListener('click', e => { if (menuProblem && e.target.isConnected && !$('collect-menu').contains(e.target)) closeCollectMenu(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuProblem) closeCollectMenu(); });
+    document.addEventListener('click', e => { if ((menuProblem || menuBulk) && e.target.isConnected && !$('collect-menu').contains(e.target)) closeCollectMenu(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && (menuProblem || menuBulk)) closeCollectMenu(); });
+    $('select-toggle').addEventListener('click', () => setSelecting(!selecting));
     document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => {
       gridContest = b.dataset.grid;
       if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();

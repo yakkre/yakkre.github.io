@@ -124,6 +124,7 @@ export function createProgress({startHref, validKeys, onChange}) {
     isDone: key => done.has(key),
     count: () => [...done].filter(keep).length,
     toggle: key => change(() => { if (done.has(key)) done.delete(key); else if (done.size < MAX_MARKS) done.add(key); }),
+    setDoneMany: (keys, on) => change(() => { for (const k of keys) { if (!on) done.delete(k); else if (done.size < MAX_MARKS) done.add(k); } }),
 
     // Collections: [{id, name, description, keys, created}], newest first.
     collections: () => [...collections].sort((a, b) => b.created - a.created),
@@ -157,6 +158,17 @@ export function createProgress({startHref, validKeys, onChange}) {
         if (!on) c.keys = c.keys.filter(k => k !== key);
       });
       await syncShared(id);
+    },
+    // Adds keys to a collection; returns how many were new (or undefined if saving failed).
+    async addManyToCollection(id, keys) {
+      const added = await change(() => {
+        const c = find(id); if (!c) return 0;
+        let n = 0;
+        for (const k of keys) if (!c.keys.includes(k) && c.keys.length < MAX_PER_COLLECTION) { c.keys.push(k); n++; }
+        return n;
+      });
+      await syncShared(id);
+      return added;
     },
     // Public: anyone with the link can view a read-only copy. Needs a signed-in owner.
     async setPublic(id, on) {

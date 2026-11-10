@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261110-share">
-  <script type="module" src="./catalogue.js?v=20261110-share"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261110-select">
+  <script type="module" src="./catalogue.js?v=20261110-select"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -78,8 +78,9 @@
         </div>
         <div class="results-bar">
           <p id="result-count" aria-live="polite">Loading…</p>
-          <div class="bar-actions"><button id="copy-link" type="button">Copy search link</button><button id="reset" type="button">Reset</button></div>
+          <div class="bar-actions"><button id="select-toggle" type="button" aria-pressed="false" hidden>Select</button><button id="copy-link" type="button">Copy search link</button><button id="reset" type="button">Reset</button></div>
         </div>
+        <div id="select-bar" class="select-bar" role="region" aria-label="Selected problems" hidden></div>
         <div id="active" class="active" aria-label="Active filters"></div>
         <p id="filter-warning" class="warning" role="status" hidden></p>
         <div id="grid-view" class="grid-view" hidden>

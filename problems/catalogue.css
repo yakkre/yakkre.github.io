@@ -205,3 +205,20 @@ a.grid-cell{text-decoration:none}
 .coll-main.shared>.link-button{margin-bottom:8px;display:inline-block}
 .collections-view.single{grid-template-columns:minmax(0,1fr)}
 .coll-main.shared{max-width:900px}
+.done-tag{margin-left:6px;font-size:11px;font-weight:600;color:var(--done)}
+#select-toggle[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.select-bar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin:0 0 6px;padding:6px 10px;border:1px solid var(--accent);border-radius:4px;background:var(--bg)}
+.select-pick{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}
+.select-actions{display:flex;flex-wrap:wrap;gap:6px}
+.select-actions button{border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:4px 10px;font-size:13px}
+.select-actions button:hover:not(:disabled){background:var(--soft)}
+.select-note{flex-basis:100%;margin:0;font-size:12px;color:var(--muted)}
+.select-box{display:inline-block;width:15px;height:15px;margin:0 8px 0 0;padding:0;vertical-align:-3px;accent-color:var(--accent);cursor:pointer}
+tr.selectable{cursor:pointer}
+tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
+.collect-pick{display:block;width:100%;text-align:left;border:0;border-radius:3px;background:none;padding:5px 6px;font-size:13px;overflow-wrap:anywhere}
+.collect-pick:hover{background:var(--soft)}
+.coll-done{flex:none;border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:2px 8px;font-size:12px}
+.coll-done:hover{background:var(--soft)}
+.coll-done.is-on{background:var(--done);border-color:var(--done);color:#fff}
+

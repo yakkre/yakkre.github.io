@@ -2342,6 +2342,94 @@
       "archiveRow": 25486,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/2004 IMO Shortlist/41118.json"
     },
+    "isl:2004:G1": {
+      "text": "Let $ABC$ be an acute triangle with $AB\\ne AC$. The circle with diameter $BC$ meets $AB,AC$ at $M,N$, respectively. Let $O$ be the midpoint of $BC$, and let $R$ be the intersection of the bisectors of $\\angle BAC$ and $\\angle MON$. Prove that the circumcircles of $BMR,CNR$ have a common point on segment $BC$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G1",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G2": {
+      "text": "A circle $\\Gamma$ is disjoint from a line $\\ell$. Its diameter $AB$ is perpendicular to $\\ell$, with $B$ nearer the line. Choose $C\\in\\Gamma\\setminus\\{A,B\\}$, and put $D=AC\\cap\\ell$. Draw the tangent $DE$ to $\\Gamma$ so that $B,E$ lie on the same side of $AC$. Set $F=BE\\cap\\ell$, and let $AF$ meet $\\Gamma$ again at $G\\ne A$. Prove that the reflection of $G$ in $AB$ lies on $CF$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G2",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G3": {
+      "text": "An acute triangle $ABC$ has circumcenter $O$ and $\\angle B<\\angle C$. Put $D=AO\\cap BC$, and let $E,F$ be the circumcenters of $ABD,ACD$. On rays $BA,CA$ beyond $A$, choose $G,H$ with $AG=AC$ and $AH=AB$. Prove that $EFGH$ is a rectangle if and only if $\\angle ACB-\\angle ABC=60^\\circ$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G3",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G4": {
+      "text": "In a convex quadrilateral $ABCD$, diagonal $BD$ bisects neither $\\angle ABC$ nor $\\angle CDA$. An interior point $P$ satisfies $\\angle PBC=\\angle DBA$ and $\\angle PDC=\\angle BDA$. Prove that $ABCD$ is cyclic if and only if $AP=CP$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G4",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G5": {
+      "text": "Let $A_1A_2\\dots A_n$ be a regular $n$-gon. Define points $B_i$ on $A_iA_{i+1}$ for $1\\leq i\\leq n-1$. Set $B_1,B_{n-1}$ to be the midpoints of their respective sides. For $2\\leq i\\leq n-2$, put $S=A_1A_{i+1}\\cap A_nA_i$ and let $B_i$ be where the bisector of $\\angle A_iSA_{i+1}$ meets $A_iA_{i+1}$. Prove that\n$$\\sum_{i=1}^{n-1}\\angle A_1B_iA_n=180^\\circ.$$",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G5",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G6": {
+      "text": "Prove that every convex polygon contains a convex hexagon whose area is at least three quarters of the polygon's area.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G6",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G7": {
+      "text": "For a fixed triangle $ABC$, a point $X$ varies on line $BC$ beyond $C$, with $C$ between $B,X$. Suppose the incircles of $ABX,ACX$ meet at two distinct points $P,Q$. Prove that line $PQ$ always passes through a fixed point independent of $X$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G7",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G8": {
+      "text": "In a cyclic quadrilateral $ABCD$, let $E=AD\\cap BC$, with $C$ between $B,E$, and let $F=AC\\cap BD$. Let $M$ be the midpoint of $CD$. Choose $N\\ne M$ on the circumcircle of $ABM$ with $AN/BN=AM/BM$. Prove that $E,F,N$ are collinear.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G8",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
     "isl:2004:N1": {
       "text": "Let  $\\tau(n)$  denote the number of positive divisors of the positive integer  $n$ . Prove that there exist infinitely many positive integers  $a$  such that the equation  $ \\tau(an)=n $  does not have a positive integer solution  $n$ .",
       "kind": "archive",
@@ -2487,6 +2575,83 @@
       "sourceUrl": "https://datasets-server.huggingface.co/rows?dataset=AI-MO%2Faops&config=default&split=train&offset=25507&length=1",
       "archiveRow": 25507,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/2005 IMO Shortlist/91100.json"
+    },
+    "isl:2005:G1": {
+      "text": "Triangle $ABC$ satisfies $AB+BC=3AC$. Its incircle, centered at $I$, touches $AB,BC$ at $D,E$. Reflect $D,E$ in $I$ to obtain $K,L$, respectively. Prove that $A,C,K,L$ are concyclic.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G1",
+      "sourcePage": 5,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G2": {
+      "text": "Points $A_1,A_2$ on $BC$, $B_1,B_2$ on $CA$, and $C_1,C_2$ on $AB$ of an equilateral triangle $ABC$ form a convex hexagon $A_1A_2B_1B_2C_1C_2$ with all six sides equal. Prove that $A_1B_2,B_1C_2,C_1A_2$ meet at one point.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G2",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G3": {
+      "text": "In a parallelogram $ABCD$, a variable line $\\ell$ through $A$ meets rays $BC,DC$ at $X,Y$, respectively. Let $K,L$ be the excenters of $ABX,ADY$ corresponding to sides $BX,DY$. Prove that $\\angle KCL$ is independent of $\\ell$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G3",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G4": {
+      "text": "Fix a convex quadrilateral $ABCD$ with $BC=AD$ and $BC$ not parallel to $AD$. Choose interior points $E\\in BC,F\\in AD$ with $BE=DF$. Put $P=AC\\cap BD$, $Q=BD\\cap EF$, and $R=EF\\cap AC$. Prove that, as $E,F$ vary, all circumcircles of the resulting triangles $PQR$ share a fixed point other than $P$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G4",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G5": {
+      "text": "Let $ABC$ be acute with $AB\\ne AC$, let $H$ be its orthocenter, and let $M$ be the midpoint of $BC$. Points $D\\in AB,E\\in AC$ satisfy $AD=AE$, and $D,H,E$ are collinear. Prove that $HM$ is perpendicular to the common chord of the circumcircles of $ABC$ and $ADE$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G5",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G6": {
+      "text": "The median $AM$ of triangle $ABC$ meets its incircle $\\omega$ at $K,L$. The parallels to $BC$ through $K,L$ meet $\\omega$ again at $X,Y$, respectively. If $P=AX\\cap BC$ and $Q=AY\\cap BC$, prove that $BP=CQ$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G6",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G7": {
+      "text": "In an acute triangle $ABC$, take $D,E,F$ as the perpendicular projections of $A,B,C$ onto $BC,CA,AB$. Take $P,Q,R$ as the perpendicular projections of $A,B,C$ onto $EF,FD,DE$, respectively. Writing $p(T)$ for the perimeter of a triangle $T$, prove that\n$$p(ABC)\\,p(PQR)\\geq p(DEF)^2.$$",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G7",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
     },
     "isl:2005:N1": {
       "text": "Determine all positive integers relatively prime to all the terms of the infinite sequence \\[ a_n=2^n+3^n+6^n -1,\\ n\\geq 1. \\]",
@@ -8540,21 +8705,5 @@
       "retrieved": "2026-11-03T19:19:44.254Z"
     }
   },
-  "pendingKeys": [
-    "isl:2005:G1",
-    "isl:2005:G2",
-    "isl:2005:G3",
-    "isl:2005:G4",
-    "isl:2005:G5",
-    "isl:2005:G6",
-    "isl:2005:G7",
-    "isl:2004:G1",
-    "isl:2004:G2",
-    "isl:2004:G3",
-    "isl:2004:G4",
-    "isl:2004:G5",
-    "isl:2004:G6",
-    "isl:2004:G7",
-    "isl:2004:G8"
-  ]
+  "pendingKeys": []
 }

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261110-progress">
-  <script type="module" src="./catalogue.js?v=20261110-progress"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261110-account">
+  <script type="module" src="./catalogue.js?v=20261110-account"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -14,21 +14,29 @@
     <a class="brand" href="/">raindrops</a>
     <!-- Blog disabled Nov 2026; to restore, add a Blog link to this nav. -->
     <nav aria-label="Main navigation"><a href="/">About</a><a href="./" aria-current="page">Problems</a></nav>
+    <div id="account" class="account" hidden>
+      <button id="account-button" class="account-button" type="button" aria-expanded="false" aria-controls="account-menu">Sign in</button>
+      <div id="account-menu" class="account-menu" hidden>
+        <div id="signed-out">
+          <p>Want to save the problems you mark as done? Sign in with your email.</p>
+          <form id="signin-form" class="signin-form">
+            <label class="sr-only" for="signin-email">Email address</label>
+            <input id="signin-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <button type="submit">Send link</button>
+          </form>
+        </div>
+        <div id="signed-in" hidden>
+          <p>Signed in as <strong id="signed-in-email"></strong></p>
+          <button id="signout" type="button">Sign out</button>
+        </div>
+        <p id="progress-status" class="help" role="status" aria-live="polite"></p>
+      </div>
+    </div>
   </header>
   <main>
     <div class="page-head">
       <h1>Olympiad problems by method</h1>
       <p class="summary"><span id="total-stat">—</span> problems · <span id="tag-total">—</span> tags · <span id="updated">snapshot</span> · <button type="button" id="coverage-open" class="link-button">Coverage &amp; caveats</button></p>
-      <section id="progress-panel" class="progress-panel" aria-label="Your progress" hidden>
-        <p id="progress-summary"></p>
-        <form id="signin-form" class="signin-form">
-          <label class="sr-only" for="signin-email">Email address</label>
-          <input id="signin-email" type="email" autocomplete="email" placeholder="you@example.com" required>
-          <button type="submit">Email me a sign-in link</button>
-        </form>
-        <button id="signout" type="button" class="link-button" hidden>Sign out</button>
-        <p id="progress-status" class="help" role="status" aria-live="polite"></p>
-      </section>
     </div>
     <div class="layout">
       <details class="filters" id="filters" open>

@@ -46,6 +46,7 @@ export function createProgress({startHref, validKeys, onChange}) {
   async function attach(u) {
     unsubscribe?.(); unsubscribe = null; user = u;
     if (!u) { done = readLocal(); emit(); return; }
+    status = '';
     const snap = await fb.getDoc(docRef());
     const remote = new Set(snap.exists() ? snap.data().done || [] : []);
     const local = readLocal(), merged = new Set([...remote, ...local]);
@@ -53,7 +54,7 @@ export function createProgress({startHref, validKeys, onChange}) {
     if (merged.size !== remote.size) await save();
     store.remove(LOCAL_KEY);
     unsubscribe = fb.onSnapshot(docRef(), s => { if (!s.metadata.hasPendingWrites) { done = new Set(s.exists() ? s.data().done || [] : []); emit(); } },
-      e => { console.error('Progress sync failed:', e); setStatus('Could not sync marks. They will be saved when the connection returns.'); });
+      e => { console.error('Progress sync failed:', e); setStatus('Couldn’t sync your marks. Check your connection.'); });
     emit();
   }
 
@@ -62,17 +63,17 @@ export function createProgress({startHref, validKeys, onChange}) {
       await loadFirebase();
       if (fb.isSignInWithEmailLink(fb.auth, startHref)) {
         let email = store.get(EMAIL_KEY);
-        if (!email) email = prompt('To finish signing in, enter the email address the link was sent to:');
+        if (!email) email = prompt('Enter your email to finish signing in:');
         if (email) {
-          try { await fb.signInWithEmailLink(fb.auth, email.trim(), startHref); store.remove(EMAIL_KEY); status = 'Signed in.'; }
+          try { await fb.signInWithEmailLink(fb.auth, email.trim(), startHref); store.remove(EMAIL_KEY); }
           catch (e) { console.error(e); status = e.code === 'auth/invalid-action-code' || e.code === 'auth/expired-action-code'
-            ? 'That sign-in link has expired or was already used. Request a new one.' : 'Sign-in failed. Request a new link.'; }
+            ? 'That link has expired or was already used. Send yourself a new one.' : 'Sign-in didn’t work. Send yourself a new link.'; }
         }
       }
-      fb.onAuthStateChanged(fb.auth, u => attach(u).catch(e => { console.error(e); setStatus('Could not load your marks.'); }));
+      fb.onAuthStateChanged(fb.auth, u => attach(u).catch(e => { console.error(e); setStatus('Couldn’t load your marks.'); }));
     } catch (e) {
       console.error('Progress sign-in unavailable:', e); fb = null;
-      setStatus('Sign-in is unavailable right now; marks are saved in this browser only.');
+      setStatus('Sign-in isn’t working right now. Your marks are saved in this browser.');
     }
   }
 
@@ -88,7 +89,7 @@ export function createProgress({startHref, validKeys, onChange}) {
       if (was) done.delete(key); else if (done.size < MAX_MARKS) done.add(key);
       emit();
       try { await save(); }
-      catch (e) { console.error(e); if (was) done.add(key); else done.delete(key); setStatus('Could not save that mark. Try again.'); }
+      catch (e) { console.error(e); if (was) done.add(key); else done.delete(key); setStatus('Couldn’t save that. Try again.'); }
     },
     async sendLink(email) {
       email = String(email || '').trim();
@@ -98,20 +99,19 @@ export function createProgress({startHref, validKeys, onChange}) {
         const url = location.origin + location.pathname;
         await fb.sendSignInLinkToEmail(fb.auth, email, {url, handleCodeInApp: true});
         store.set(EMAIL_KEY, email);
-        setStatus(`Sign-in link sent to ${email}. Open it on this device (or any device) to sync your marks.`);
+        setStatus('Check your inbox (and spam folder) for the sign-in link.');
         return true;
       } catch (e) {
         console.error(e);
-        setStatus(e.code === 'auth/quota-exceeded' ? 'Too many sign-in emails were sent today. Try again tomorrow.'
-          : e.code === 'auth/operation-not-allowed' ? 'Email sign-in is not enabled yet.'
-          : 'Could not send the sign-in link. Try again later.');
+        setStatus(e.code === 'auth/quota-exceeded' ? 'Too many sign-in emails today. Try again tomorrow.'
+          : 'Couldn’t send the link. Try again later.');
         return false;
       }
     },
     async signOut() {
       if (!fb || !user) return;
       unsubscribe?.(); unsubscribe = null;
-      await fb.signOut(fb.auth); status = 'Signed out. Your marks stay in your account.'; emit();
+      await fb.signOut(fb.auth); status = ''; emit();
     },
     init,
   };

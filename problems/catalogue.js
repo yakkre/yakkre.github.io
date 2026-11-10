@@ -190,7 +190,13 @@ function render() {
   if (pages > 1) {
     const prev = button(null, '← Previous', () => changePage(page - 1)); prev.disabled = page === 1;
     const next = button(null, 'Next →', () => changePage(page + 1)); next.disabled = page === pages;
-    pagination.append(prev, node('span', null, `Page ${page} of ${pages}`), next);
+    const input = node('input', 'page-input'); input.type = 'number'; input.min = 1; input.max = pages; input.value = page;
+    input.setAttribute('aria-label', 'Page number');
+    const go = () => { const v = Math.min(pages, Math.max(1, Math.round(Number(input.value)) || 1)); if (v !== page) changePage(v); else input.value = page; };
+    input.addEventListener('change', go);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); go(); } });
+    const label = node('label', 'page-label'); label.append('Page ', input, ` of ${pages}`);
+    pagination.append(prev, label, next);
   }
   renderStatement($('problem-statement'), filters.problem && results.find(r => r.problem.key === filters.problem)?.problem);
 }
@@ -211,16 +217,19 @@ function renderCoverage() {
 }
 
 function renderProgress() {
-  const panel = $('progress-panel');
-  if (!progress) { panel.hidden = true; return; }
-  panel.hidden = false;
-  const n = progress.count(), u = progress.user;
-  $('progress-summary').textContent = u
-    ? `Signed in as ${u.email} · ${n} marked done (saved to your account).`
-    : `${n} marked done in this browser. To keep your marks on every device, sign in with your email — no password, we email you a one-time link.`;
-  $('signin-form').hidden = !!u || !progress.available && !!progress.status;
-  $('signout').hidden = !u;
+  const box = $('account');
+  if (!progress) { box.hidden = true; return; }
+  box.hidden = false;
+  const u = progress.user;
+  $('account-button').textContent = u ? u.email : 'Sign in';
+  $('account-button').title = u ? `Signed in as ${u.email}` : 'Sign in to save your marks';
+  $('signed-out').hidden = !!u; $('signed-in').hidden = !u;
+  $('signed-in-email').textContent = u ? u.email : '';
   $('progress-status').textContent = progress.status;
+}
+function setMenu(open) {
+  $('account-menu').hidden = !open; $('account-button').setAttribute('aria-expanded', String(open));
+  if (open && !progress?.user) $('signin-email').focus();
 }
 // Grid of every available problem in one collection: a row per year, green when done, blue when not.
 let gridContest = 'isl';
@@ -259,7 +268,7 @@ function renderGrid() {
 }
 async function setupProgress() {
   try {
-    const {createProgress} = await import('./progress.mjs?v=20261110-progress');
+    const {createProgress} = await import('./progress.mjs?v=20261110-account');
     progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); renderGrid(); render(); }});
     $('signin-form').addEventListener('submit', async e => {
       e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
@@ -267,6 +276,9 @@ async function setupProgress() {
       b.disabled = false;
     });
     $('signout').addEventListener('click', () => progress.signOut());
+    $('account-button').addEventListener('click', () => setMenu($('account-menu').hidden));
+    document.addEventListener('click', e => { if (!$('account').contains(e.target)) setMenu(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('account-menu').hidden) { setMenu(false); $('account-button').focus(); } });
     $('grid-view').addEventListener('toggle', renderGrid);
     document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => { gridContest = b.dataset.grid; renderGrid(); }));
     renderProgress(); renderGrid(); progress.init();

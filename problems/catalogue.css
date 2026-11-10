@@ -222,4 +222,6 @@ tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
 .coll-done:hover{background:var(--soft)}
 .coll-done.is-on{background:var(--done);border-color:var(--done);color:#fff}
 .grid-cell.selected{outline:3px solid var(--sel);outline-offset:1px;opacity:1!important;font-weight:700}
+.grid-body.selecting{user-select:none;-webkit-user-select:none}
+.grid-body.selecting .grid-cell{cursor:cell}
 

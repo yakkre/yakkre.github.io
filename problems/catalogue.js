@@ -297,11 +297,14 @@ function renderGrid(matches) {
       const on = isDone(p.key), hit = matches?.has(p.key), sel = selecting && selected.has(p.key);
       const a = node('a', `grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}${sel ? ' selected' : ''}`, p.id); a.href = entryUrl(p);
       a.title = `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''}${selecting ? (sel ? ' (selected)' : ' (click to select)') : ''}`;
-      if (selecting) a.setAttribute('aria-pressed', String(sel)); else a.setAttribute('aria-haspopup', 'dialog');
+      a.dataset.key = p.key;
+      if (selecting) { a.setAttribute('aria-pressed', String(sel)); a.draggable = false; } else a.setAttribute('aria-haspopup', 'dialog');
       a.addEventListener('click', e => {
         if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // let modified clicks open a new tab
         e.preventDefault(); e.stopPropagation();
-        if (selecting) toggleSelect(p.key); else openCollectMenu(p, e.currentTarget, true);
+        if (!selecting) openCollectMenu(p, e.currentTarget, true);
+        else if (dragHandled) dragHandled = false; // a mouse press already selected it (see setupGridDrag)
+        else toggleSelect(p.key);
       });
       cells.append(a);
     }
@@ -309,7 +312,47 @@ function renderGrid(matches) {
     row.append(cells); return row;
   });
   $('grid-body').style.setProperty('--units', units);
+  $('grid-body').classList.toggle('selecting', selecting);
   $('grid-body').replaceChildren(...rows);
+}
+// Drag-select on the grid (mouse/pen, Select mode): every square inside the rectangle spanned by the
+// square where the press started and the square under the pointer is selected, like a spreadsheet.
+// Starting on an already-selected square unselects instead. Touch keeps tap-to-select, so scrolling works.
+let drag = null, dragHandled = false;
+function setupGridDrag() {
+  const body = $('grid-body');
+  const pageBox = el => { const r = el.getBoundingClientRect(); return {l: r.left + scrollX, t: r.top + scrollY, r: r.right + scrollX, b: r.bottom + scrollY}; };
+  const cellAt = e => document.elementFromPoint(e.clientX, e.clientY)?.closest('#grid-body .grid-cell');
+  const apply = cell => {
+    const a = drag.start, z = pageBox(cell);
+    const box = {l: Math.min(a.l, z.l), t: Math.min(a.t, z.t), r: Math.max(a.r, z.r), b: Math.max(a.b, z.b)};
+    const now = new Set(drag.base);
+    for (const c of body.querySelectorAll('.grid-cell')) {
+      const q = pageBox(c);
+      const inside = q.l < box.r && q.r > box.l && q.t < box.b && q.b > box.t;
+      if (inside) { if (drag.adding) now.add(c.dataset.key); else now.delete(c.dataset.key); }
+    }
+    selected.clear(); for (const k of now) selected.add(k);
+    for (const c of body.querySelectorAll('.grid-cell')) c.classList.toggle('selected', selected.has(c.dataset.key));
+    selectNote = ''; renderSelectBar();
+  };
+  body.addEventListener('pointerdown', e => {
+    if (!selecting || e.pointerType === 'touch' || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const cell = e.target.closest('.grid-cell'); if (!cell) return;
+    e.preventDefault();
+    drag = {start: pageBox(cell), last: cell, adding: !selected.has(cell.dataset.key), base: new Set(selected)};
+    body.setPointerCapture(e.pointerId);
+    apply(cell);
+  });
+  body.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const cell = cellAt(e);
+    if (cell && cell !== drag.last) { drag.last = cell; apply(cell); }
+  });
+  const end = () => { if (!drag) return; drag = null; dragHandled = true; render(); setTimeout(() => { dragHandled = false; }, 0); };
+  body.addEventListener('pointerup', end);
+  body.addEventListener('pointercancel', end);
+  body.addEventListener('dragstart', e => { if (selecting) e.preventDefault(); });
 }
 // A link to one problem's entry that opens it in place (keeping Back working); modified clicks open normally.
 function problemLink(p, className, text) {
@@ -629,6 +672,7 @@ async function start() {
     document.addEventListener('click', e => { if ((menuProblem || menuBulk) && e.target.isConnected && !$('collect-menu').contains(e.target)) closeCollectMenu(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && (menuProblem || menuBulk)) closeCollectMenu(); });
     $('select-toggle').addEventListener('click', () => setSelecting(!selecting));
+    setupGridDrag();
     document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => {
       gridContest = b.dataset.grid;
       if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();

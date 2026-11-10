@@ -203,8 +203,9 @@ function render() {
   if (grid) {
     const active = filtersActive(filters);
     $('result-count').textContent = active ? `${total.toLocaleString()} problems match your filters` : 'Pick methods or filters to highlight problems';
-    $('problem-statement').hidden = true; $('select-bar').hidden = true; $('select-toggle').hidden = true;
+    $('problem-statement').hidden = true;
     renderGrid(active ? new Set(results.map(r => r.problem.key)) : null);
+    lastResults = results; renderSelectBar();
     return;
   }
   lastResults = results; renderSelectBar();
@@ -293,13 +294,14 @@ function renderGrid(matches) {
     for (const p of list) {
       if (gridContest === 'isl' && last && last !== p.subject) cells.append(node('span', 'grid-gap'));
       last = p.subject;
-      const on = isDone(p.key), hit = matches?.has(p.key);
-      const a = node('a', `grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}`, p.id); a.href = entryUrl(p);
-      a.title = `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''}`;
-      a.setAttribute('aria-haspopup', 'dialog');
+      const on = isDone(p.key), hit = matches?.has(p.key), sel = selecting && selected.has(p.key);
+      const a = node('a', `grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}${sel ? ' selected' : ''}`, p.id); a.href = entryUrl(p);
+      a.title = `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''}${selecting ? (sel ? ' (selected)' : ' (click to select)') : ''}`;
+      if (selecting) a.setAttribute('aria-pressed', String(sel)); else a.setAttribute('aria-haspopup', 'dialog');
       a.addEventListener('click', e => {
         if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // let modified clicks open a new tab
-        e.preventDefault(); e.stopPropagation(); openCollectMenu(p, e.currentTarget, true);
+        e.preventDefault(); e.stopPropagation();
+        if (selecting) toggleSelect(p.key); else openCollectMenu(p, e.currentTarget, true);
       });
       cells.append(a);
     }
@@ -339,18 +341,21 @@ function openCollectMenu(p, anchor, actions = false) {
 }
 function closeCollectMenu() { menuProblem = null; menuBulk = false; $('collect-menu').hidden = true; }
 
-// ---- Select mode (Problem lookup): pick problems, then mark them done or add them to a collection
+// ---- Select mode (Problem lookup and Progress grid): pick problems, then mark them done or add them to a collection
 let menuBulk = false;
 function toggleSelect(key) { if (selected.has(key)) selected.delete(key); else selected.add(key); selectNote = ''; render(); }
 function setSelecting(on) { selecting = on; selected.clear(); selectNote = ''; if (!on && menuBulk) closeCollectMenu(); render(); }
 function renderSelectBar() {
   const bar = $('select-bar'), t = $('select-toggle');
-  t.hidden = !progress || view !== 'list'; t.textContent = selecting ? 'Done selecting' : 'Select';
+  const usable = view === 'list' || view === 'grid';
+  t.hidden = !progress || !usable; t.textContent = selecting ? 'Done selecting' : 'Select';
   t.setAttribute('aria-pressed', String(selecting));
-  bar.hidden = !selecting || view !== 'list';
+  bar.hidden = !selecting || !usable;
   if (bar.hidden) return;
   const n = selected.size, keys = () => [...selected];
-  const all = lastResults.map(r => r.problem.key), allIn = all.length && all.every(k => selected.has(k));
+  // "All": every result in the list, or on the grid every square in the shown collection that matches the filters.
+  const all = lastResults.filter(r => view !== 'grid' || r.problem.contest === gridContest).map(r => r.problem.key);
+  const allIn = all.length && all.every(k => selected.has(k)), noun = view === 'grid' ? (filtersActive(filters) ? 'highlighted' : 'shown') : 'results';
   const actions = node('div', 'select-actions');
   const act = (label, fn, title) => { const b = button(null, label, fn, title); b.disabled = !n; return b; };
   actions.append(
@@ -359,7 +364,7 @@ function renderSelectBar() {
     act('Add to collection…', e => { e.stopPropagation(); openBulkMenu(e.currentTarget); }));
   const pick = node('div', 'select-pick');
   pick.append(node('strong', null, `${n} selected`),
-    button('link-button', allIn ? 'Unselect all results' : `Select all ${all.length.toLocaleString()} results`, () => { for (const k of all) allIn ? selected.delete(k) : selected.add(k); selectNote = ''; render(); }));
+    button('link-button', allIn ? `Unselect all ${noun}` : `Select all ${all.length.toLocaleString()} ${noun}`, () => { for (const k of all) allIn ? selected.delete(k) : selected.add(k); selectNote = ''; render(); }));
   if (n) pick.append(button('link-button', 'Clear', () => { selected.clear(); selectNote = ''; render(); }));
   bar.replaceChildren(pick, actions);
   if (selectNote || progress.status) bar.append(node('p', 'select-note', selectNote || progress.status));
@@ -393,7 +398,7 @@ function renderBulkMenu(m) {
 }
 function renderCollectMenu() {
   const m = $('collect-menu');
-  if (menuBulk) { if (!progress || view !== 'list' || !selecting || !selected.size) { closeCollectMenu(); return; } m.hidden = false; renderBulkMenu(m); return; }
+  if (menuBulk) { if (!progress || view === 'collections' || !selecting || !selected.size) { closeCollectMenu(); return; } m.hidden = false; renderBulkMenu(m); return; }
   const p = menuProblem && data.problems.find(x => x.key === menuProblem);
   if (!p || !progress || view === 'collections') { m.hidden = true; if (view === 'collections') menuProblem = null; return; }
   m.hidden = false;
@@ -619,7 +624,7 @@ async function start() {
     $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
     $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
     readView();
-    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; currentColl = ''; sharedId = ''; if (view !== 'list') { selecting = false; selected.clear(); } render(); }));
+    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; currentColl = ''; sharedId = ''; if (view === 'collections') { selecting = false; selected.clear(); } closeCollectMenu(); render(); }));
     // (the menu re-renders on each change, so a click inside it can land on a node that is already detached)
     document.addEventListener('click', e => { if ((menuProblem || menuBulk) && e.target.isConnected && !$('collect-menu').contains(e.target)) closeCollectMenu(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && (menuProblem || menuBulk)) closeCollectMenu(); });

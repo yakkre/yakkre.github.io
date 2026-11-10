@@ -29,7 +29,7 @@ def archive_row(url):
             pass
 
 
-def collect(catalogue, paths):
+def collect(catalogue, paths, existing=None, supplements=None):
     topics, rows = collections.defaultdict(set), collections.defaultdict(set)
     archive_urls = {}
     for problem in catalogue['problems']:
@@ -82,6 +82,15 @@ def collect(catalogue, paths):
         previous = statements.get(key)
         if not previous or previous['kind'] != 'forum' or str(statement['retrieved']) > str(previous.get('retrieved', '')):
             statements[key] = statement
+    # A catalogue refresh must retain statements published by another writer.
+    # Supplements may run ahead of classification; attach only exact current keys.
+    keys = {p['key'] for p in catalogue['problems']}
+    for key, statement in (existing or {}).get('statements', {}).items():
+        if key in keys:
+            statements[key] = statement
+    for key, statement in (supplements or {}).get('statements', {}).items():
+        if key in keys:
+            statements.setdefault(key, statement)
     return {'version': 1, 'statements': dict(sorted(statements.items())),
         'pendingKeys': [p['key'] for p in catalogue['problems'] if p['key'] not in statements]}
 
@@ -93,7 +102,10 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, default=Path('problems/data/statements.json'))
     args = parser.parse_args()
     paths = {p for root in args.cache_root for p in root.rglob('*.json') if p.stat().st_size < 30_000_000}
-    output = collect(json.loads(args.catalogue.read_text()), paths)
+    supplement_path = args.catalogue.with_name('statement-supplements.json')
+    existing = json.loads(args.output.read_text()) if args.output.exists() else None
+    supplements = json.loads(supplement_path.read_text()) if supplement_path.exists() else None
+    output = collect(json.loads(args.catalogue.read_text()), paths, existing, supplements)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'available': len(output['statements']), 'pending': len(output['pendingKeys']),

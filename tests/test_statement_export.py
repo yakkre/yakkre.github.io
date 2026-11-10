@@ -31,5 +31,29 @@ class ExportTests(unittest.TestCase):
             self.assertEqual(result['pendingKeys'], ['b'])
 
 
+    def test_preserves_published_statements_and_attaches_waiting_supplements(self):
+        current = {'text': 'User/model revised statement', 'kind': 'forum', 'post': 1,
+                   'sourceUrl': 'https://artofproblemsolving.com/community/c6h123'}
+        curated = {'text': 'Verified mathematical statement', 'kind': 'official',
+                   'sourceUrl': 'https://www.imo-official.org/booklet.pdf'}
+        existing = {'statements': {'a': current}}
+        supplements = {'statements': {'a': curated, 'b': curated, 'future': curated}}
+        catalogue = {'problems': [{'key': 'a'}, {'key': 'b'}]}
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'cache.json'
+            path.write_text(json.dumps({'url': current['sourceUrl'],
+                'posts': [{'number': '#1', 'text': 'A different cache transcription ' * 3}]}))
+            catalogue['problems'][0]['aopsUrl'] = current['sourceUrl']
+            result = module.collect(catalogue, [path], existing, supplements)
+            self.assertEqual(result['statements']['a'], current)
+            self.assertEqual(result['statements']['b'], curated)
+            self.assertNotIn('future', result['statements'])
+            self.assertEqual(result['pendingKeys'], [])
+            catalogue['problems'].append({'key': 'future'})
+            later = module.collect(catalogue, [], result, supplements)
+            self.assertEqual(later['statements']['future'], curated)
+            self.assertEqual(later['statements']['a'], current)
+
+
 if __name__ == '__main__':
     unittest.main()

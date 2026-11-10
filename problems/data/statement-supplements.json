@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "description": "Verified statement-only additions. Attach by exact key when the catalogue entry exists; never replace an existing statement.",
+  "statements": {
+    "isl:2004:G1": {
+      "text": "Let $ABC$ be an acute triangle with $AB\\ne AC$. The circle with diameter $BC$ meets $AB,AC$ at $M,N$, respectively. Let $O$ be the midpoint of $BC$, and let $R$ be the intersection of the bisectors of $\\angle BAC$ and $\\angle MON$. Prove that the circumcircles of $BMR,CNR$ have a common point on segment $BC$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G1",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G2": {
+      "text": "A circle $\\Gamma$ is disjoint from a line $\\ell$. Its diameter $AB$ is perpendicular to $\\ell$, with $B$ nearer the line. Choose $C\\in\\Gamma\\setminus\\{A,B\\}$, and put $D=AC\\cap\\ell$. Draw the tangent $DE$ to $\\Gamma$ so that $B,E$ lie on the same side of $AC$. Set $F=BE\\cap\\ell$, and let $AF$ meet $\\Gamma$ again at $G\\ne A$. Prove that the reflection of $G$ in $AB$ lies on $CF$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G2",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G3": {
+      "text": "An acute triangle $ABC$ has circumcenter $O$ and $\\angle B<\\angle C$. Put $D=AO\\cap BC$, and let $E,F$ be the circumcenters of $ABD,ACD$. On rays $BA,CA$ beyond $A$, choose $G,H$ with $AG=AC$ and $AH=AB$. Prove that $EFGH$ is a rectangle if and only if $\\angle ACB-\\angle ABC=60^\\circ$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G3",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G4": {
+      "text": "In a convex quadrilateral $ABCD$, diagonal $BD$ bisects neither $\\angle ABC$ nor $\\angle CDA$. An interior point $P$ satisfies $\\angle PBC=\\angle DBA$ and $\\angle PDC=\\angle BDA$. Prove that $ABCD$ is cyclic if and only if $AP=CP$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G4",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G5": {
+      "text": "Let $A_1A_2\\dots A_n$ be a regular $n$-gon. Define points $B_i$ on $A_iA_{i+1}$ for $1\\leq i\\leq n-1$. Set $B_1,B_{n-1}$ to be the midpoints of their respective sides. For $2\\leq i\\leq n-2$, put $S=A_1A_{i+1}\\cap A_nA_i$ and let $B_i$ be where the bisector of $\\angle A_iSA_{i+1}$ meets $A_iA_{i+1}$. Prove that\n$$\\sum_{i=1}^{n-1}\\angle A_1B_iA_n=180^\\circ.$$",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G5",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G6": {
+      "text": "Prove that every convex polygon contains a convex hexagon whose area is at least three quarters of the polygon's area.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G6",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G7": {
+      "text": "For a fixed triangle $ABC$, a point $X$ varies on line $BC$ beyond $C$, with $C$ between $B,X$. Suppose the incircles of $ABX,ACX$ meet at two distinct points $P,Q$. Prove that line $PQ$ always passes through a fixed point independent of $X$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G7",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2004:G8": {
+      "text": "In a cyclic quadrilateral $ABCD$, let $E=AD\\cap BC$, with $C$ between $B,E$, and let $F=AC\\cap BD$. Let $M$ be the midpoint of $CD$. Choose $N\\ne M$ on the circumcircle of $ABM$ with $AN/BN=AM/BM$. Prove that $E,F,N$ are collinear.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl04.pdf",
+      "sourceYear": 2004,
+      "sourceProblem": "G8",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2004 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G1": {
+      "text": "Triangle $ABC$ satisfies $AB+BC=3AC$. Its incircle, centered at $I$, touches $AB,BC$ at $D,E$. Reflect $D,E$ in $I$ to obtain $K,L$, respectively. Prove that $A,C,K,L$ are concyclic.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G1",
+      "sourcePage": 5,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G2": {
+      "text": "Points $A_1,A_2$ on $BC$, $B_1,B_2$ on $CA$, and $C_1,C_2$ on $AB$ of an equilateral triangle $ABC$ form a convex hexagon $A_1A_2B_1B_2C_1C_2$ with all six sides equal. Prove that $A_1B_2,B_1C_2,C_1A_2$ meet at one point.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G2",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G3": {
+      "text": "In a parallelogram $ABCD$, a variable line $\\ell$ through $A$ meets rays $BC,DC$ at $X,Y$, respectively. Let $K,L$ be the excenters of $ABX,ADY$ corresponding to sides $BX,DY$. Prove that $\\angle KCL$ is independent of $\\ell$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G3",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G4": {
+      "text": "Fix a convex quadrilateral $ABCD$ with $BC=AD$ and $BC$ not parallel to $AD$. Choose interior points $E\\in BC,F\\in AD$ with $BE=DF$. Put $P=AC\\cap BD$, $Q=BD\\cap EF$, and $R=EF\\cap AC$. Prove that, as $E,F$ vary, all circumcircles of the resulting triangles $PQR$ share a fixed point other than $P$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G4",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G5": {
+      "text": "Let $ABC$ be acute with $AB\\ne AC$, let $H$ be its orthocenter, and let $M$ be the midpoint of $BC$. Points $D\\in AB,E\\in AC$ satisfy $AD=AE$, and $D,H,E$ are collinear. Prove that $HM$ is perpendicular to the common chord of the circumcircles of $ABC$ and $ADE$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G5",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G6": {
+      "text": "The median $AM$ of triangle $ABC$ meets its incircle $\\omega$ at $K,L$. The parallels to $BC$ through $K,L$ meet $\\omega$ again at $X,Y$, respectively. If $P=AX\\cap BC$ and $Q=AY\\cap BC$, prove that $BP=CQ$.",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G6",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2005:G7": {
+      "text": "In an acute triangle $ABC$, take $D,E,F$ as the perpendicular projections of $A,B,C$ onto $BC,CA,AB$. Take $P,Q,R$ as the perpendicular projections of $A,B,C$ onto $EF,FD,DE$, respectively. Writing $p(T)$ for the perimeter of a triangle $T$, prove that\n$$p(ABC)\\,p(PQR)\\geq p(DEF)^2.$$",
+      "kind": "reference",
+      "sourceUrl": "https://www.imomath.com/imocomp/sl05_0707.pdf",
+      "sourceYear": 2005,
+      "sourceProblem": "G7",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement.",
+      "sourceLabel": "The IMO Compendium: 2005 shortlist reproduction; not a direct organizer booklet"
+    },
+    "isl:2006:G1": {
+      "text": "Let $I$ be the incenter of triangle $ABC$. An interior point $P$ satisfies\n$$\\angle PBA+\\angle PCA=\\angle PBC+\\angle PCB.$$\nProve that $AP\\geq AI$, with equality exactly when $P=I$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G1",
+      "sourcePage": 36,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G10": {
+      "text": "For every side $a$ of a convex polygon, let $s_a$ be the greatest area of a triangle contained in the polygon and having $a$ as a side. Prove that $\\sum_a s_a$ is at least twice the area of the polygon.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G10",
+      "sourcePage": 52,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G2": {
+      "text": "A trapezoid $ABCD$ has parallel sides $AB>CD$. Choose $K\\in AB$ and $L\\in CD$ with $AK/KB=DL/LC$. Suppose $P,Q$ on segment $KL$ satisfy $\\angle APB=\\angle BCD$ and $\\angle CQD=\\angle ABC$. Prove that $P,Q,B,C$ lie on a circle.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G2",
+      "sourcePage": 37,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G3": {
+      "text": "In a convex pentagon $ABCDE$, suppose\n$$\\angle BAC=\\angle CAD=\\angle DAE,\\qquad \\angle ABC=\\angle ACD=\\angle ADE.$$\nIf $P=BD\\cap CE$, prove that line $AP$ passes through the midpoint of $CD$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G3",
+      "sourcePage": 39,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G4": {
+      "text": "Triangle $ABC$ satisfies $\\angle C<\\angle A<90^\\circ$. Choose $D$ on side $AC$ with $BD=BA$. The incircle of $ABC$ touches $AB,AC$ at $K,L$, respectively, and $J$ is the incenter of $BCD$. Prove that $KL$ meets segment $AJ$ at its midpoint.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G4",
+      "sourcePage": 40,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G5": {
+      "text": "The excircle of triangle $ABC$ opposite $A$, with center $J$, touches $BC$ at $A_1$ and the extensions of $AC,AB$ at $B_1,C_1$, respectively. Suppose $A_1B_1$ is perpendicular to $AB$, and put $D=A_1B_1\\cap AB$. Let $E$ be the perpendicular projection of $C_1$ onto $DJ$. Determine $\\angle BEA_1$ and $\\angle AEB_1$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G5",
+      "sourcePage": 41,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G6": {
+      "text": "Circles $\\omega_1,\\omega_2$, centered at $O_1,O_2$, touch externally at $D$ and touch a circle $\\omega$ internally at $E,F$, respectively. Let $t$ be their common tangent at $D$. Choose the diameter $AB$ of $\\omega$ perpendicular to $t$, labeled so that $A,E,O_1$ lie on the same side of $t$. Prove that $AO_1,BO_2,EF,t$ are concurrent.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G6",
+      "sourcePage": 43,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G7": {
+      "text": "In triangle $ABC$, let $M_a,M_b,M_c$ be the midpoints of $BC,CA,AB$. Let $T_a,T_b,T_c$ be the midpoints of the circumcircle arcs $BC,CA,AB$ not containing the opposite vertices. For $i\\in\\{a,b,c\\}$, let $\\omega_i$ have diameter $M_iT_i$. For $\\{i,j,k\\}=\\{a,b,c\\}$, choose the common external tangent $p_i$ of $\\omega_j,\\omega_k$ which separates $\\omega_i$ from those two circles. Prove that $p_a,p_b,p_c$ form a triangle similar to $ABC$, and determine the similarity ratio.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G7",
+      "sourcePage": 46,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G8": {
+      "text": "Inside a convex quadrilateral $ABCD$, two circles touch externally at $P$; one passes through $A,D$ and the other through $B,C$. Suppose\n$$\\angle PAB+\\angle PDC\\leq90^\\circ,\\qquad\\angle PBA+\\angle PCD\\leq90^\\circ.$$\nProve that $AB+CD\\geq BC+AD$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G8",
+      "sourcePage": 47,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G9": {
+      "text": "Choose $A_1,B_1,C_1$ on sides $BC,CA,AB$ of triangle $ABC$. The circumcircles of $AB_1C_1,BC_1A_1,CA_1B_1$ meet the circumcircle of $ABC$ again at $A_2\\ne A,B_2\\ne B,C_2\\ne C$, respectively. Reflect $A_1,B_1,C_1$ in the midpoints of $BC,CA,AB$ to obtain $A_3,B_3,C_3$. Prove that triangles $A_2B_2C_2$ and $A_3B_3C_3$ are similar.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G9",
+      "sourcePage": 49,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G1": {
+      "text": "In triangle $ABC$, the bisector of $\\angle C$ meets the circumcircle again at $R$, and meets the perpendicular bisectors of $BC,CA$ at $P,Q$, respectively. If $S,T$ are the midpoints of $BC,CA$, prove that triangles $RQT$ and $RPS$ have equal areas.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G1",
+      "sourcePage": 40,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G2": {
+      "text": "Let $AB=AC$ in triangle $ABC$, and let $M$ be the midpoint of $BC$. A point $X$ varies on the shorter arc $MA$ of the circumcircle of $ABM$. Choose $T$ inside the angle region $BMA$ so that $\\angle TMX=90^\\circ$ and $TX=BX$. Prove that $\\angle MTB-\\angle CTM$ is independent of $X$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G2",
+      "sourcePage": 42,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G3": {
+      "text": "A trapezoid $ABCD$ has $BC\\parallel AD$, and its diagonals meet at $P$. A point $Q$ lies between the parallel lines $BC,AD$, satisfies $\\angle AQD=\\angle CQB$, and is separated from $P$ by line $CD$. Prove that $\\angle BQP=\\angle DAQ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G3",
+      "sourcePage": 43,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G4": {
+      "text": "Suppose $ABCD$ is a parallelogram and $BCED$ is a cyclic quadrilateral. A line $\\ell$ through $A$ meets segment $DC$ at $F$ and line $BC$ at $G$. If $EF=EG=EC$, prove that $\\ell$ bisects $\\angle DAB$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G4",
+      "sourcePage": 44,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G5": {
+      "text": "For a fixed triangle $ABC$, let $A_1,B_1,C_1$ be the midpoints of $BC,CA,AB$. A point $P$ varies on the circumcircle. Lines $PA_1,PB_1,PC_1$ meet this circle again at $A',B',C'$, respectively. Assume the six points $A,B,C,A',B',C'$ are distinct and that $AA',BB',CC'$ form a triangle. Prove that its area does not depend on $P$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G5",
+      "sourcePage": 45,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G6": {
+      "text": "Find the least positive real number $k$ such that the following holds for every convex quadrilateral $ABCD$ and every choice of $A_1\\in AB$, $B_1\\in BC$, $C_1\\in CD$, $D_1\\in DA$. Let $S$ be the sum of the two smallest areas among triangles $AA_1D_1,BB_1A_1,CC_1B_1,DD_1C_1$, and let $S_1$ be the area of $A_1B_1C_1D_1$. Then $kS_1\\geq S$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G6",
+      "sourcePage": 47,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G7": {
+      "text": "An acute triangle $ABC$ has angles $\\alpha,\\beta,\\gamma$ at $A,B,C$, with $\\beta>\\gamma$. Let $I$ be its incenter, $R$ its circumradius, and $D$ the foot of the altitude from $A$. Choose $K$ on line $AD$ so that $AK=2R$ and $D$ lies between $A,K$. Lines $DI,KI$ meet sides $AC,BC$ at $E,F$, respectively. Prove that $IE=IF$ implies $\\beta\\leq3\\gamma$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G7",
+      "sourcePage": 50,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G8": {
+      "text": "Let $P$ lie on side $AB$ of a convex quadrilateral $ABCD$. The incircle $\\omega$ of $CPD$, with center $I$, is tangent to the incircles of $APD,BPC$ at $K,L$, respectively. Put $E=AC\\cap BD$ and $F=AK\\cap BL$. Prove that $E,I,F$ are collinear.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G8",
+      "sourcePage": 53,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G1": {
+      "text": "Let $H$ be the orthocenter of an acute triangle $ABC$, and let $A_0,B_0,C_0$ be the midpoints of $BC,CA,AB$. The circles centered at $A_0,B_0,C_0$ and passing through $H$ meet the respective lines $BC,CA,AB$ at $A_1,A_2$; $B_1,B_2$; and $C_1,C_2$. Prove that these six intersection points lie on one circle.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G1",
+      "sourcePage": 30,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G2": {
+      "text": "In a trapezoid $ABCD$ with $AB\\parallel CD$, choose $E$ on line $BC$ outside segment $BC$ and $F$ inside segment $AD$ so that $\\angle DAE=\\angle CBF$. Put $I=CD\\cap EF$ and $J=AB\\cap EF$. Let $K$ be the midpoint of $EF$, and assume $K$ is not on line $AB$. Prove that $I$ lies on the circumcircle of $ABK$ if and only if $K$ lies on the circumcircle of $CDJ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G2",
+      "sourcePage": 32,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G3": {
+      "text": "Points $P,Q$ lie inside a convex quadrilateral $ABCD$ so that $PQDA$ and $QPBC$ are cyclic quadrilaterals. Suppose some $E$ on segment $PQ$ satisfies $\\angle PAE=\\angle QDE$ and $\\angle PBE=\\angle QCE$. Prove that $ABCD$ is cyclic.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G3",
+      "sourcePage": 33,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G4": {
+      "text": "In an acute triangle $ABC$, let $BE$ and $CF$ be altitudes. Two circles through $A,F$ touch line $BC$ at $P,Q$, respectively; label them so that $B$ lies between $C$ and $Q$. Prove that $PE$ and $QF$ meet on the circumcircle of $AEF$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G4",
+      "sourcePage": 35,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G5": {
+      "text": "Let $0\\leq k\\leq n-2$ be integers. A set $L$ consists of $n$ lines in the plane, with no parallel pair and no three concurrent. Let $I$ be their set of intersection points, and take $O$ on none of the lines. Color $X\\in I$ red when the open segment $OX$ meets at most $k$ lines of $L$. Prove that at least $\\tfrac12(k+1)(k+2)$ points of $I$ are red.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G5",
+      "sourcePage": 37,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G6": {
+      "text": "Prove that a convex quadrilateral $ABCD$ has an interior point $P$ satisfying\n$$\\angle PAB+\\angle PDC=\\angle PBC+\\angle PAD=\\angle PCD+\\angle PBA=\\angle PDA+\\angle PCB=90^\\circ$$\nif and only if $AC\\perp BD$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G6",
+      "sourcePage": 38,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G7": {
+      "text": "Let $ABCD$ be a convex quadrilateral with $AB\\ne BC$, and let $\\omega_1,\\omega_2$ be the incircles of $ABC,ADC$. Suppose a circle $\\omega$ is inscribed in $\\angle ABC$ and is tangent to the extensions of $AD$ and $CD$. Prove that the common external tangents of $\\omega_1$ and $\\omega_2$ meet on $\\omega$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G7",
+      "sourcePage": 41,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2009:G1": {
+      "text": "In a triangle $ABC$ with $AB=AC$, the bisectors of angles $A$ and $B$ meet $BC$ and $AC$ at $D$ and $E$, respectively. Let $K$ be the incenter of triangle $ADC$. If $\\angle BEK=45^\\circ$, find all possible values of $\\angle BAC$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G1",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G2": {
+      "text": "Let $O$ be the circumcenter of triangle $ABC$. Choose $P$ and $Q$ in the interiors of sides $CA$ and $AB$, respectively. Let $k$ be the circle through the midpoints of $BP,CQ,PQ$. Prove that if $PQ$ is tangent to $k$, then $OP=OQ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G2",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G3": {
+      "text": "The incircle of triangle $ABC$ touches $AB$ at $Z$ and $AC$ at $Y$. Put $G=BY\\cap CZ$. Choose $R$ and $S$ so that $BCYR$ and $BCSZ$ are parallelograms. Prove that $GR=GS$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G3",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G4": {
+      "text": "In a cyclic quadrilateral $ABCD$, let $E=AC\\cap BD$ and $F=AD\\cap BC$. Let $G$ and $H$ be the midpoints of $AB$ and $CD$, respectively. Prove that $EF$ is tangent at $E$ to the circle through $E,G,H$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G4",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G5": {
+      "text": "Let $P$ be a convex polygon centrally symmetric about a point $O$. Prove that there is a parallelogram $R$ containing $P$ such that\n$$\\frac{|R|}{|P|}\\leq\\sqrt2,$$\nwhere $|R|$ and $|P|$ denote their areas.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G5",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G6": {
+      "text": "In a quadrilateral $ABCD$ with $AB$ not parallel to $CD$, the lines $AD$ and $BC$ meet at $P$. Let $O_1,O_2$ and $H_1,H_2$ be the circumcenters and orthocenters of triangles $ABP$ and $DCP$, respectively. Let $E_1,E_2$ be the midpoints of $O_1H_1$ and $O_2H_2$. Prove that the perpendicular from $E_1$ to $CD$, the perpendicular from $E_2$ to $AB$, and the line $H_1H_2$ are concurrent.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G6",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G7": {
+      "text": "Let $I$ be the incenter of triangle $ABC$, and let $X,Y,Z$ be the incenters of triangles $BIC,CIA,AIB$, respectively. Prove that if $XYZ$ is equilateral, then $ABC$ is equilateral.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G7",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G8": {
+      "text": "Let $ABCD$ be a circumscribed quadrilateral. A line $g$ through $A$ meets segment $BC$ at $M$ and line $CD$ at $N$. Let $I_1,I_2,I_3$ be the incenters of triangles $ABM,MNC,NDA$, respectively. Prove that the orthocenter of triangle $I_1I_2I_3$ lies on $g$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G8",
+      "sourcePage": 11,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G1": {
+      "text": "In an acute triangle $ABC$, let $D,E,F$ be the feet of the altitudes on $BC,CA,AB$, respectively. Choose either intersection $P$ of line $EF$ with the circumcircle of $ABC$, and let $Q=BP\\cap DF$. Prove that $AP=AQ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G1",
+      "sourcePage": 45,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G2": {
+      "text": "Let $P$ be an interior point of triangle $ABC$. The lines $AP,BP,CP$ meet its circumcircle again at $K,L,M$, respectively. The tangent to the circumcircle at $C$ meets line $AB$ at $S$. Prove that $SC=SP$ if and only if $MK=ML$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G2",
+      "sourcePage": 47,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G3": {
+      "text": "Let $A_1A_2\\dots A_n$ be a convex polygon. An interior point $P$ has perpendicular projections $P_1,\\dots,P_n$ on the lines $A_1A_2,\\dots,A_nA_1$, respectively, and each projection lies on the corresponding side. For arbitrary points $X_1,\\dots,X_n$ on those respective sides, prove that\n$$\\max\\left\\{\\frac{X_1X_2}{P_1P_2},\\dots,\\frac{X_nX_1}{P_nP_1}\\right\\}\\geq1.$$",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G3",
+      "sourcePage": 51,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G4": {
+      "text": "Let $I$ be the incenter and $\\Gamma$ the circumcircle of triangle $ABC$. Line $AI$ meets $\\Gamma$ again at $D\\ne A$. Choose $F$ on side $BC$ and $E$ on arc $BDC$ so that\n$$\\angle BAF=\\angle CAE<\\tfrac12\\angle BAC.$$\nLet $G$ be the midpoint of $IF$. Prove that lines $DG$ and $EI$ intersect on $\\Gamma$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G4",
+      "sourcePage": 53,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G5": {
+      "text": "Let $ABCDE$ be a convex pentagon satisfying $BC\\parallel AE$, $AB=BC+AE$ and $\\angle ABC=\\angle CDE$. Let $M$ be the midpoint of $CE$, and let $O$ be the circumcenter of triangle $BCD$. If $\\angle DMO=90^\\circ$, prove that $2\\angle BDA=\\angle CDE$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G5",
+      "sourcePage": 55,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G6": {
+      "text": "An equilateral triangle $XYZ$ has its vertices $X,Y,Z$ on the sides $BC,CA,AB$, respectively, of an acute-angled triangle $ABC$. Prove that the incenter of $ABC$ lies inside triangle $XYZ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G6",
+      "sourcePage": 57,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G7": {
+      "text": "Three circular arcs $\\gamma_1,\\gamma_2,\\gamma_3$ join points $A$ and $C$ in the same half-plane bounded by $AC$, with $\\gamma_2$ between $\\gamma_1$ and $\\gamma_3$. Let $B$ lie on segment $AC$. Three rays $h_1,h_2,h_3$ start at $B$ in that half-plane, with $h_2$ between $h_1$ and $h_3$. Put $V_{ij}=h_i\\cap\\gamma_j$ for $i,j\\in\\{1,2,3\\}$.\n\nFor $i,j\\in\\{1,2\\}$, let $Q_{ij}$ be the curved quadrilateral with successive vertices $V_{ij},V_{i+1,j},V_{i+1,j+1},V_{i,j+1}$, whose sides are the two corresponding ray segments and two corresponding circular arcs. Call it circumscribed if a circle touches all four of these sides.\n\nProve that if $Q_{11},Q_{12},Q_{21}$ are circumscribed, then $Q_{22}$ is also circumscribed.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G7",
+      "sourcePage": 61,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2011:G6": {
+      "text": "Let $ABC$ be a triangle with $AB=AC$, and let $D$ be the midpoint of $AC$. The bisector of $\\angle BAC$ meets the circle through $D,B,C$ at a point $E$ inside $ABC$. Line $BD$ meets the circle through $A,E,B$ at $B$ and $F$. Let $I=AF\\cap BE$ and $K=CI\\cap BD$. Prove that $I$ is the incenter of triangle $KAB$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2011/IMO2011SL.pdf",
+      "sourceYear": 2011,
+      "sourceProblem": "G6",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2011:G8": {
+      "text": "Let $ABC$ be an acute triangle with circumcircle $\\omega$, and let $t$ be a tangent to $\\omega$. Reflect $t$ in $BC$, $CA$ and $AB$ to obtain the lines $t_a$, $t_b$ and $t_c$, respectively. Prove that the circumcircle of the triangle formed by $t_a,t_b,t_c$ is tangent to $\\omega$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2011/IMO2011SL.pdf",
+      "sourceYear": 2011,
+      "sourceProblem": "G8",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2013:G5": {
+      "text": "Let $ABCDEF$ be a convex hexagon with $AB=DE$, $BC=EF$ and $CD=FA$, such that\n$$\\angle A-\\angle D=\\angle C-\\angle F=\\angle E-\\angle B.$$\nProve that the diagonals $AD$, $BE$ and $CF$ are concurrent.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2013/IMO2013SL.pdf",
+      "sourceYear": 2013,
+      "sourceProblem": "G5",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2015:G8": {
+      "text": "A triangulation of a convex polygon $\\Pi$ partitions it into triangles using diagonals that have no common points except vertices of the polygon. Call it a Thaiangulation if all its triangles have equal area.\n\nProve that any two distinct Thaiangulations of $\\Pi$ differ by exactly two triangles: replacing one pair of triangles in the first with a different pair produces the second.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2015/IMO2015SL.pdf",
+      "sourceYear": 2015,
+      "sourceProblem": "G8",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2017:G6": {
+      "text": "Let $n\\geq3$ be an integer, and let $A$ and $B$ be two regular $n$-gons in the plane. Prove that the vertices of $A$ lying inside $B$ or on its boundary are consecutive. Equivalently, prove that a line separates these vertices from the other vertices of $A$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2017/IMO2017SL.pdf",
+      "sourceYear": 2017,
+      "sourceProblem": "G6",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2017:G8": {
+      "text": "There are $2017$ mutually external circles on a blackboard. No two circles are tangent, and no three have a common tangent. A tangent segment joins two points of tangency on a common tangent to two circles.\n\nLuciano draws tangent segments one at a time. Each new segment must avoid every other circle and every previously drawn tangent segment. He continues until no further tangent segment can be drawn. Find all possible numbers of tangent segments at that moment.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2017/IMO2017SL.pdf",
+      "sourceYear": 2017,
+      "sourceProblem": "G8",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    }
+  }
+}

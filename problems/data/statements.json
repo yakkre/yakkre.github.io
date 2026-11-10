@@ -2636,6 +2636,106 @@
       "archiveRow": 25524,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/2006 IMO Shortlist/155703.json"
     },
+    "isl:2006:G1": {
+      "text": "Let $I$ be the incenter of triangle $ABC$. An interior point $P$ satisfies\n$$\\angle PBA+\\angle PCA=\\angle PBC+\\angle PCB.$$\nProve that $AP\\geq AI$, with equality exactly when $P=I$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G1",
+      "sourcePage": 36,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G10": {
+      "text": "For every side $a$ of a convex polygon, let $s_a$ be the greatest area of a triangle contained in the polygon and having $a$ as a side. Prove that $\\sum_a s_a$ is at least twice the area of the polygon.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G10",
+      "sourcePage": 52,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G2": {
+      "text": "A trapezoid $ABCD$ has parallel sides $AB>CD$. Choose $K\\in AB$ and $L\\in CD$ with $AK/KB=DL/LC$. Suppose $P,Q$ on segment $KL$ satisfy $\\angle APB=\\angle BCD$ and $\\angle CQD=\\angle ABC$. Prove that $P,Q,B,C$ lie on a circle.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G2",
+      "sourcePage": 37,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G3": {
+      "text": "In a convex pentagon $ABCDE$, suppose\n$$\\angle BAC=\\angle CAD=\\angle DAE,\\qquad \\angle ABC=\\angle ACD=\\angle ADE.$$\nIf $P=BD\\cap CE$, prove that line $AP$ passes through the midpoint of $CD$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G3",
+      "sourcePage": 39,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G4": {
+      "text": "Triangle $ABC$ satisfies $\\angle C<\\angle A<90^\\circ$. Choose $D$ on side $AC$ with $BD=BA$. The incircle of $ABC$ touches $AB,AC$ at $K,L$, respectively, and $J$ is the incenter of $BCD$. Prove that $KL$ meets segment $AJ$ at its midpoint.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G4",
+      "sourcePage": 40,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G5": {
+      "text": "The excircle of triangle $ABC$ opposite $A$, with center $J$, touches $BC$ at $A_1$ and the extensions of $AC,AB$ at $B_1,C_1$, respectively. Suppose $A_1B_1$ is perpendicular to $AB$, and put $D=A_1B_1\\cap AB$. Let $E$ be the perpendicular projection of $C_1$ onto $DJ$. Determine $\\angle BEA_1$ and $\\angle AEB_1$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G5",
+      "sourcePage": 41,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G6": {
+      "text": "Circles $\\omega_1,\\omega_2$, centered at $O_1,O_2$, touch externally at $D$ and touch a circle $\\omega$ internally at $E,F$, respectively. Let $t$ be their common tangent at $D$. Choose the diameter $AB$ of $\\omega$ perpendicular to $t$, labeled so that $A,E,O_1$ lie on the same side of $t$. Prove that $AO_1,BO_2,EF,t$ are concurrent.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G6",
+      "sourcePage": 43,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G7": {
+      "text": "In triangle $ABC$, let $M_a,M_b,M_c$ be the midpoints of $BC,CA,AB$. Let $T_a,T_b,T_c$ be the midpoints of the circumcircle arcs $BC,CA,AB$ not containing the opposite vertices. For $i\\in\\{a,b,c\\}$, let $\\omega_i$ have diameter $M_iT_i$. For $\\{i,j,k\\}=\\{a,b,c\\}$, choose the common external tangent $p_i$ of $\\omega_j,\\omega_k$ which separates $\\omega_i$ from those two circles. Prove that $p_a,p_b,p_c$ form a triangle similar to $ABC$, and determine the similarity ratio.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G7",
+      "sourcePage": 46,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G8": {
+      "text": "Inside a convex quadrilateral $ABCD$, two circles touch externally at $P$; one passes through $A,D$ and the other through $B,C$. Suppose\n$$\\angle PAB+\\angle PDC\\leq90^\\circ,\\qquad\\angle PBA+\\angle PCD\\leq90^\\circ.$$\nProve that $AB+CD\\geq BC+AD$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G8",
+      "sourcePage": 47,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2006:G9": {
+      "text": "Choose $A_1,B_1,C_1$ on sides $BC,CA,AB$ of triangle $ABC$. The circumcircles of $AB_1C_1,BC_1A_1,CA_1B_1$ meet the circumcircle of $ABC$ again at $A_2\\ne A,B_2\\ne B,C_2\\ne C$, respectively. Reflect $A_1,B_1,C_1$ in the midpoints of $BC,CA,AB$ to obtain $A_3,B_3,C_3$. Prove that triangles $A_2B_2C_2$ and $A_3B_3C_3$ are similar.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2006/IMO2006SL.pdf",
+      "sourceYear": 2006,
+      "sourceProblem": "G9",
+      "sourcePage": 49,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
     "isl:2006:N1": {
       "text": "Determine all pairs $(x, y)$ of integers such that \\[1+2^{x}+2^{2x+1}= y^{2}.\\]",
       "kind": "forum",
@@ -2802,6 +2902,86 @@
       "archiveRow": 25536,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/2007 IMO Shortlist/207871.json"
     },
+    "isl:2007:G1": {
+      "text": "In triangle $ABC$, the bisector of $\\angle C$ meets the circumcircle again at $R$, and meets the perpendicular bisectors of $BC,CA$ at $P,Q$, respectively. If $S,T$ are the midpoints of $BC,CA$, prove that triangles $RQT$ and $RPS$ have equal areas.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G1",
+      "sourcePage": 40,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G2": {
+      "text": "Let $AB=AC$ in triangle $ABC$, and let $M$ be the midpoint of $BC$. A point $X$ varies on the shorter arc $MA$ of the circumcircle of $ABM$. Choose $T$ inside the angle region $BMA$ so that $\\angle TMX=90^\\circ$ and $TX=BX$. Prove that $\\angle MTB-\\angle CTM$ is independent of $X$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G2",
+      "sourcePage": 42,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G3": {
+      "text": "A trapezoid $ABCD$ has $BC\\parallel AD$, and its diagonals meet at $P$. A point $Q$ lies between the parallel lines $BC,AD$, satisfies $\\angle AQD=\\angle CQB$, and is separated from $P$ by line $CD$. Prove that $\\angle BQP=\\angle DAQ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G3",
+      "sourcePage": 43,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G4": {
+      "text": "Suppose $ABCD$ is a parallelogram and $BCED$ is a cyclic quadrilateral. A line $\\ell$ through $A$ meets segment $DC$ at $F$ and line $BC$ at $G$. If $EF=EG=EC$, prove that $\\ell$ bisects $\\angle DAB$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G4",
+      "sourcePage": 44,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G5": {
+      "text": "For a fixed triangle $ABC$, let $A_1,B_1,C_1$ be the midpoints of $BC,CA,AB$. A point $P$ varies on the circumcircle. Lines $PA_1,PB_1,PC_1$ meet this circle again at $A',B',C'$, respectively. Assume the six points $A,B,C,A',B',C'$ are distinct and that $AA',BB',CC'$ form a triangle. Prove that its area does not depend on $P$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G5",
+      "sourcePage": 45,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G6": {
+      "text": "Find the least positive real number $k$ such that the following holds for every convex quadrilateral $ABCD$ and every choice of $A_1\\in AB$, $B_1\\in BC$, $C_1\\in CD$, $D_1\\in DA$. Let $S$ be the sum of the two smallest areas among triangles $AA_1D_1,BB_1A_1,CC_1B_1,DD_1C_1$, and let $S_1$ be the area of $A_1B_1C_1D_1$. Then $kS_1\\geq S$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G6",
+      "sourcePage": 47,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G7": {
+      "text": "An acute triangle $ABC$ has angles $\\alpha,\\beta,\\gamma$ at $A,B,C$, with $\\beta>\\gamma$. Let $I$ be its incenter, $R$ its circumradius, and $D$ the foot of the altitude from $A$. Choose $K$ on line $AD$ so that $AK=2R$ and $D$ lies between $A,K$. Lines $DI,KI$ meet sides $AC,BC$ at $E,F$, respectively. Prove that $IE=IF$ implies $\\beta\\leq3\\gamma$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G7",
+      "sourcePage": 50,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2007:G8": {
+      "text": "Let $P$ lie on side $AB$ of a convex quadrilateral $ABCD$. The incircle $\\omega$ of $CPD$, with center $I$, is tangent to the incircles of $APD,BPC$ at $K,L$, respectively. Put $E=AC\\cap BD$ and $F=AK\\cap BL$. Prove that $E,I,F$ are collinear.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2007/IMO2007SL.pdf",
+      "sourceYear": 2007,
+      "sourceProblem": "G8",
+      "sourcePage": 53,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
     "isl:2007:N1": {
       "text": "Find all pairs of natural numbers  $ (a, b)$  such that  $ 7^a \\minus{} 3^b$  divides  $ a^4 \\plus{} b^2$ .\n\n*Author: Stephan Wagner, Austria*",
       "kind": "archive",
@@ -2961,6 +3141,76 @@
       "sourceUrl": "https://datasets-server.huggingface.co/rows?dataset=AI-MO%2Faops&config=default&split=train&offset=25559&length=1",
       "archiveRow": 25559,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/2008 IMO Shortlist/287863.json"
+    },
+    "isl:2008:G1": {
+      "text": "Let $H$ be the orthocenter of an acute triangle $ABC$, and let $A_0,B_0,C_0$ be the midpoints of $BC,CA,AB$. The circles centered at $A_0,B_0,C_0$ and passing through $H$ meet the respective lines $BC,CA,AB$ at $A_1,A_2$; $B_1,B_2$; and $C_1,C_2$. Prove that these six intersection points lie on one circle.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G1",
+      "sourcePage": 30,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G2": {
+      "text": "In a trapezoid $ABCD$ with $AB\\parallel CD$, choose $E$ on line $BC$ outside segment $BC$ and $F$ inside segment $AD$ so that $\\angle DAE=\\angle CBF$. Put $I=CD\\cap EF$ and $J=AB\\cap EF$. Let $K$ be the midpoint of $EF$, and assume $K$ is not on line $AB$. Prove that $I$ lies on the circumcircle of $ABK$ if and only if $K$ lies on the circumcircle of $CDJ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G2",
+      "sourcePage": 32,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G3": {
+      "text": "Points $P,Q$ lie inside a convex quadrilateral $ABCD$ so that $PQDA$ and $QPBC$ are cyclic quadrilaterals. Suppose some $E$ on segment $PQ$ satisfies $\\angle PAE=\\angle QDE$ and $\\angle PBE=\\angle QCE$. Prove that $ABCD$ is cyclic.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G3",
+      "sourcePage": 33,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G4": {
+      "text": "In an acute triangle $ABC$, let $BE$ and $CF$ be altitudes. Two circles through $A,F$ touch line $BC$ at $P,Q$, respectively; label them so that $B$ lies between $C$ and $Q$. Prove that $PE$ and $QF$ meet on the circumcircle of $AEF$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G4",
+      "sourcePage": 35,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G5": {
+      "text": "Let $0\\leq k\\leq n-2$ be integers. A set $L$ consists of $n$ lines in the plane, with no parallel pair and no three concurrent. Let $I$ be their set of intersection points, and take $O$ on none of the lines. Color $X\\in I$ red when the open segment $OX$ meets at most $k$ lines of $L$. Prove that at least $\\tfrac12(k+1)(k+2)$ points of $I$ are red.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G5",
+      "sourcePage": 37,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G6": {
+      "text": "Prove that a convex quadrilateral $ABCD$ has an interior point $P$ satisfying\n$$\\angle PAB+\\angle PDC=\\angle PBC+\\angle PAD=\\angle PCD+\\angle PBA=\\angle PDA+\\angle PCB=90^\\circ$$\nif and only if $AC\\perp BD$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G6",
+      "sourcePage": 38,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
+    },
+    "isl:2008:G7": {
+      "text": "Let $ABCD$ be a convex quadrilateral with $AB\\ne BC$, and let $\\omega_1,\\omega_2$ be the incircles of $ABC,ADC$. Suppose a circle $\\omega$ is inscribed in $\\angle ABC$ and is tangent to the extensions of $AD$ and $CD$. Prove that the common external tangents of $\\omega_1$ and $\\omega_2$ meet on $\\omega$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2008/IMO2008SL.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "G7",
+      "sourcePage": 41,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the complete printed statement."
     },
     "isl:2008:N1": {
       "text": "Let $n$ be a positive integer and let $p$ be a prime number. Prove that if $a$, $b$, $c$ are integers (not necessarily positive) satisfying the equations \\[ a^n + pb = b^n + pc = c^n + pa\\] then $a = b = c$.\n\n\n\nProposed by Angelo Di Pasquale, Australia",
@@ -8290,31 +8540,5 @@
       "retrieved": "2026-11-03T19:19:44.254Z"
     }
   },
-  "pendingKeys": [
-    "isl:2008:G1",
-    "isl:2008:G2",
-    "isl:2008:G3",
-    "isl:2008:G4",
-    "isl:2008:G5",
-    "isl:2008:G6",
-    "isl:2008:G7",
-    "isl:2007:G1",
-    "isl:2007:G2",
-    "isl:2007:G3",
-    "isl:2007:G4",
-    "isl:2007:G5",
-    "isl:2007:G6",
-    "isl:2007:G7",
-    "isl:2007:G8",
-    "isl:2006:G1",
-    "isl:2006:G2",
-    "isl:2006:G3",
-    "isl:2006:G4",
-    "isl:2006:G5",
-    "isl:2006:G6",
-    "isl:2006:G7",
-    "isl:2006:G8",
-    "isl:2006:G9",
-    "isl:2006:G10"
-  ]
+  "pendingKeys": []
 }

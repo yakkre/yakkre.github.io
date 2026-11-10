@@ -9,12 +9,13 @@ const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pen
 const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
 const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['done','done'],['from-year','from'],['to-year','to']];
 const DONE = {yes:'Marked done', no:'Not done yet'};
-let data, tags, filters, page = 1, progress = null, view = 'list', currentColl = '';
+let data, tags, filters, page = 1, progress = null, view = 'list', currentColl = '', sharedId = '', sharedCache = null;
 const VIEWS = ['list', 'grid', 'collections'];
 function readView() {
   const q = new URLSearchParams(location.search);
   view = VIEWS.includes(q.get('view')) ? q.get('view') : 'list';
   currentColl = view === 'collections' ? q.get('c') || '' : '';
+  sharedId = view === 'collections' && /^[A-Za-z0-9_-]{4,40}$/.test(q.get('shared') || '') ? q.get('shared') : '';
 }
 
 const node = (tag, className, text) => {
@@ -57,6 +58,7 @@ function searchUrl(override={}) {
   const v = override.view ?? view;
   if (v !== 'list') q.set('view', v);
   if (v === 'collections' && (override.c ?? currentColl)) q.set('c', override.c ?? currentColl);
+  if (v === 'collections' && (override.shared ?? sharedId)) q.set('shared', override.shared ?? sharedId);
   if (f.mode === 'OR') q.set('mode', 'OR');
   return location.pathname + (q.size ? '?' + q : '');
 }
@@ -316,7 +318,7 @@ function problemLink(p, className, text) {
   return a;
 }
 function openProblem(p) {
-  filters = {...emptyFilters(), problem: p.key}; view = 'list'; currentColl = ''; page = 1;
+  filters = {...emptyFilters(), problem: p.key}; view = 'list'; currentColl = ''; sharedId = ''; page = 1;
   $('tag-search').value = ''; syncControls();
   history.pushState(null, '', searchUrl()); render();
   $('results').scrollIntoView({block: 'start'});
@@ -375,12 +377,68 @@ function renderCollectMenu() {
 
 // ---- Collections tab
 let collDraft = {name: '', description: ''}, editing = null;
+const shareUrl = id => `${location.origin}${location.pathname}?view=collections&shared=${encodeURIComponent(id)}`;
+// remove(key) adds a Remove button (own collections only).
+function collectionProblems(keys, byKey, remove) {
+  const ol = node('ol', 'coll-problems');
+  for (const k of keys) {
+    const p = byKey.get(k), li = node('li'), on = !!progress?.isDone(k);
+    if (on) li.classList.add('is-done');
+    if (progress) {
+      const cb = node('input', 'done-box'); cb.type = 'checkbox'; cb.checked = on; cb.setAttribute('aria-label', `Done: ${problemName(p)}`);
+      cb.addEventListener('change', () => progress.toggle(k)); li.append(cb);
+    }
+    const primary = p.geometry ? p.geometry.synthetic?.primaryTag : p.primaryTag;
+    const info = node('span', 'sub', `${SUBJECTS[p.subject] || p.subject}${primary && tags.get(primary) ? ` · ${shorten(tags.get(primary).label)}` : ''}${p.difficulty ? ` · difficulty ${p.difficulty}/5` : ''}`);
+    const name = node('div', 'coll-pname'); name.append(problemLink(p, null, problemName(p)), info);
+    li.append(name);
+    if (remove) li.append(button('coll-remove', 'Remove', () => remove(k), `Remove ${problemName(p)} from this collection`));
+    ol.append(li);
+  }
+  return ol;
+}
+function renderShared(box, byKey) {
+  const back = button('link-button', '← Your collections', () => { sharedId = ''; render(); });
+  if (!sharedCache || sharedCache.id !== sharedId) {
+    box.replaceChildren(node('div', 'coll-main'));
+    box.firstChild.append(back, node('p', 'empty', 'Loading collection…'));
+    const id = sharedId;
+    (progress ? progress.getShared(id) : Promise.reject(new Error('unavailable')))
+      .then(d => { sharedCache = {id, data: d}; }, e => { console.error(e); sharedCache = {id, data: null, error: true}; })
+      .then(() => { if (sharedId === id) render(); });
+    return;
+  }
+  const main = node('div', 'coll-main shared'), d = sharedCache.data;
+  main.append(back);
+  if (!d) {
+    main.append(node('p', 'empty', sharedCache.error ? 'This collection couldn’t be loaded. Check your connection and try again.' : 'This collection is private or no longer exists.'));
+    box.replaceChildren(main); return;
+  }
+  const keys = d.keys.filter(k => byKey.has(k)), done = keys.filter(k => progress?.isDone(k)).length;
+  const head = node('div', 'coll-head'), titles = node('div');
+  titles.append(node('p', 'collect-sub', 'Shared collection'), node('h2', null, d.name));
+  if (d.description) titles.append(node('p', 'coll-desc', d.description));
+  const actions = node('div', 'coll-actions');
+  const mine = progress?.user && progress.user.uid === d.ownerUid;
+  if (mine) actions.append(button(null, 'Manage', () => { sharedId = ''; currentColl = d.id; render(); }));
+  else if (progress) actions.append(button(null, 'Save a copy', async e => {
+    e.currentTarget.disabled = true;
+    const id = await progress.copyShared({...d, keys});
+    if (id) { sharedId = ''; currentColl = id; render(); }
+  }, 'Copy this list into your own collections'));
+  head.append(titles, actions); main.append(head);
+  main.append(node('p', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'}${progress ? ` · ${done} done by you` : ''}`));
+  if (keys.length) main.append(collectionProblems(keys, byKey, null));
+  box.replaceChildren(main);
+}
 function renderCollections() {
   const box = $('collections-view');
-  if (!progress) { box.replaceChildren(node('p', 'empty', 'Collections couldn’t load. Try reloading the page.')); return; }
+  if (!progress) { box.classList.add('single'); box.replaceChildren(node('p', 'empty', 'Collections couldn’t load. Try reloading the page.')); return; }
+  const byKey = new Map(data.problems.map(p => [p.key, p]));
+  box.classList.toggle('single', !!sharedId);
+  if (sharedId) { renderShared(box, byKey); return; }
   const list = progress.collections();
   if (currentColl && !progress.collection(currentColl)) currentColl = '';
-  const byKey = new Map(data.problems.map(p => [p.key, p]));
 
   const side = node('div', 'coll-side');
   side.append(node('h2', null, 'Your collections'));
@@ -407,7 +465,7 @@ function renderCollections() {
     const keys = c.keys.filter(k => byKey.has(k)), d = keys.filter(k => progress.isDone(k)).length;
     const li = node('li'), b = button(`coll-pick${c.id === currentColl ? ' on' : ''}`, null, () => { currentColl = c.id; editing = null; render(); });
     b.setAttribute('aria-current', String(c.id === currentColl));
-    b.append(node('span', 'coll-name', c.name), node('span', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'} · ${d} done`));
+    b.append(node('span', 'coll-name', c.name), node('span', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'} · ${d} done${c.public ? ' · public' : ''}`));
     li.append(b); ul.append(li);
   }
   if (list.length) side.append(ul);
@@ -433,26 +491,29 @@ function renderCollections() {
     if (c.description) titles.append(node('p', 'coll-desc', c.description));
     const actions = node('div', 'coll-actions');
     actions.append(button(null, 'Edit', () => { editing = c.id; render(); }),
-      button(null, 'Delete', async () => { if (confirm(`Delete the collection “${c.name}”? The problems themselves are not affected.`)) { await progress.deleteCollection(c.id); currentColl = ''; render(); } }));
+      button(null, 'Delete', async () => { if (confirm(`Delete the collection “${c.name}”?${c.public ? ' Its public link will stop working.' : ''} The problems themselves are not affected.`)) { await progress.deleteCollection(c.id); currentColl = ''; render(); } }));
     head.append(titles, actions); main.append(head);
+    // Private / Public
+    const share = node('div', 'coll-share');
+    const seg = node('div', 'mode share-mode'); seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Who can see this collection');
+    for (const [on, label] of [[false, 'Private'], [true, 'Public']]) {
+      const b = button(null, label, async () => { b.disabled = true; await progress.setPublic(c.id, on); render(); });
+      b.setAttribute('aria-pressed', String(c.public === on)); b.disabled = !progress.user && on; seg.append(b);
+    }
+    share.append(seg);
+    if (c.public) {
+      const link = node('input', 'share-link'); link.readOnly = true; link.value = shareUrl(c.id); link.setAttribute('aria-label', 'Share link');
+      link.addEventListener('focus', () => link.select());
+      share.append(node('span', 'help', 'Anyone with the link can view this list (not your done marks).'), link,
+        button(null, 'Copy link', e => copyUrl(shareUrl(c.id), e.currentTarget)));
+    } else share.append(node('span', 'help', progress.user ? 'Only you can see this collection.' : 'Only you can see this. Sign in to make it public.'));
+    main.append(share);
     const keys = c.keys.filter(k => byKey.has(k));
     if (!keys.length) main.append(node('p', 'empty', 'No problems yet. In Problem lookup, use “+ Collection” under a problem’s name to add it here.'));
     else {
       const d = keys.filter(k => progress.isDone(k)).length;
       main.append(node('p', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'} · ${d} done`));
-      const ol = node('ol', 'coll-problems');
-      for (const k of keys) {
-        const p = byKey.get(k), li = node('li'), on = progress.isDone(k);
-        if (on) li.classList.add('is-done');
-        const cb = node('input', 'done-box'); cb.type = 'checkbox'; cb.checked = on; cb.setAttribute('aria-label', `Done: ${problemName(p)}`);
-        cb.addEventListener('change', () => progress.toggle(k));
-        const primary = p.geometry ? p.geometry.synthetic?.primaryTag : p.primaryTag;
-        const info = node('span', 'sub', `${SUBJECTS[p.subject] || p.subject}${primary && tags.get(primary) ? ` · ${shorten(tags.get(primary).label)}` : ''}${p.difficulty ? ` · difficulty ${p.difficulty}/5` : ''}`);
-        const name = node('div', 'coll-pname'); name.append(problemLink(p, null, problemName(p)), info);
-        li.append(cb, name, button('coll-remove', 'Remove', () => progress.setInCollection(c.id, k, false), `Remove ${problemName(p)} from this collection`));
-        ol.append(li);
-      }
-      main.append(ol);
+      main.append(collectionProblems(keys, byKey, k => progress.setInCollection(c.id, k, false)));
     }
   }
   box.replaceChildren(side, main);
@@ -460,7 +521,7 @@ function renderCollections() {
 
 async function setupProgress() {
   try {
-    const {createProgress} = await import('./progress.mjs?v=20261110-account');
+    const {createProgress} = await import('./progress.mjs?v=20261110-share');
     progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); render(); }});
     $('signin-form').addEventListener('submit', async e => {
       e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
@@ -506,7 +567,7 @@ async function start() {
     $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
     $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
     readView();
-    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; if (view !== 'collections') currentColl = ''; render(); }));
+    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; currentColl = ''; sharedId = ''; render(); }));
     // (the menu re-renders on each change, so a click inside it can land on a node that is already detached)
     document.addEventListener('click', e => { if (menuProblem && e.target.isConnected && !$('collect-menu').contains(e.target)) closeCollectMenu(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuProblem) closeCollectMenu(); });

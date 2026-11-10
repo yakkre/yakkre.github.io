@@ -1,4 +1,6 @@
 // Reader data for the problem catalogue: "done" marks and named collections of problems.
+// A collection can be made public (signed-in owners only): a read-only copy is kept at
+// sharedCollections/{id} that anyone with the link can view; private collections exist only here.
 // Signed out: kept in this browser (localStorage).
 // Signed in by emailed link (Firebase passwordless auth): kept in Firestore at progress/{uid},
 // so it follows the reader to any device. Local data is merged into the account on sign-in.
@@ -23,7 +25,7 @@ function cleanCollections(v) {
   if (!Array.isArray(v)) return [];
   return v.filter(c => c && typeof c.id === 'string' && typeof c.name === 'string').slice(0, MAX_COLLECTIONS).map(c => ({
     id: c.id, name: c.name.slice(0, MAX_NAME), description: typeof c.description === 'string' ? c.description.slice(0, MAX_DESC) : '',
-    keys: cleanKeys(c.keys).slice(0, MAX_PER_COLLECTION), created: Number(c.created) || Date.now()}));
+    keys: cleanKeys(c.keys).slice(0, MAX_PER_COLLECTION), created: Number(c.created) || Date.now(), public: c.public === true}));
 }
 const readLocal = () => new Set(cleanKeys(parse(store.get(LOCAL_KEY), [])));
 const readLocalCollections = () => cleanCollections(parse(store.get(COLL_KEY), []));
@@ -47,6 +49,13 @@ export function createProgress({startHref, validKeys, onChange}) {
     return fb;
   }
   const docRef = () => fb.doc(fb.db, 'progress', user.uid);
+  const sharedRef = id => fb.doc(fb.db, 'sharedCollections', id);
+  // Push a public collection's current contents to its shared copy.
+  const publish = c => fb.setDoc(sharedRef(c.id), {ownerUid: user.uid, name: c.name, description: c.description, keys: c.keys, updatedAt: fb.serverTimestamp()});
+  async function syncShared(id) {
+    const c = find(id);
+    if (user && c?.public) { try { await publish(c); } catch (e) { console.error(e); setStatus('Saved, but the public copy didn’t update. Try again.'); } }
+  }
 
   async function save() {
     if (!user) { store.set(LOCAL_KEY, JSON.stringify([...done])); store.set(COLL_KEY, JSON.stringify(collections)); return; }
@@ -127,20 +136,52 @@ export function createProgress({startHref, validKeys, onChange}) {
       const c = {id: newId(), name, description: String(description || '').trim().slice(0, MAX_DESC), keys: [], created: Date.now()};
       return change(() => { collections.push(c); return c.id; });
     },
-    updateCollection(id, {name, description}) {
-      return change(() => {
+    async updateCollection(id, {name, description}) {
+      await change(() => {
         const c = find(id); if (!c) return;
         if (name != null && String(name).trim()) c.name = String(name).trim().slice(0, MAX_NAME);
         if (description != null) c.description = String(description).trim().slice(0, MAX_DESC);
       });
+      await syncShared(id);
     },
-    deleteCollection: id => change(() => { collections = collections.filter(c => c.id !== id); }),
-    setInCollection(id, key, on) {
-      return change(() => {
+    async deleteCollection(id) {
+      if (find(id)?.public && user) {
+        try { await fb.deleteDoc(sharedRef(id)); } catch (e) { console.error(e); setStatus('Couldn’t remove the public copy, so the collection was kept. Try again.'); return; }
+      }
+      await change(() => { collections = collections.filter(c => c.id !== id); });
+    },
+    async setInCollection(id, key, on) {
+      await change(() => {
         const c = find(id); if (!c) return;
         if (on && !c.keys.includes(key) && c.keys.length < MAX_PER_COLLECTION) c.keys.push(key);
         if (!on) c.keys = c.keys.filter(k => k !== key);
       });
+      await syncShared(id);
+    },
+    // Public: anyone with the link can view a read-only copy. Needs a signed-in owner.
+    async setPublic(id, on) {
+      const c = find(id); if (!c || c.public === on) return false;
+      if (!user) { setStatus('Sign in to make a collection public.'); return false; }
+      try { if (on) await publish(c); else await fb.deleteDoc(sharedRef(id)); }
+      catch (e) { console.error(e); setStatus(on ? 'Couldn’t make it public. Try again.' : 'Couldn’t make it private. Try again.'); return false; }
+      await change(() => { c.public = on; });
+      return true;
+    },
+    // Read a public collection by id (no sign-in needed). Returns null if missing or private.
+    async getShared(id) {
+      await loadFirebase();
+      let s;
+      try { s = await fb.getDoc(sharedRef(id)); }
+      catch (e) { if (e.code === 'permission-denied') return null; throw e; }
+      if (!s.exists()) return null;
+      const d = s.data();
+      return {id, name: String(d.name || ''), description: String(d.description || ''), keys: cleanKeys(d.keys), ownerUid: d.ownerUid};
+    },
+    async copyShared(shared) {
+      const id = await this.createCollection(shared.name, shared.description);
+      if (!id) return undefined;
+      await change(() => { const c = find(id); if (c) c.keys = shared.keys.slice(0, MAX_PER_COLLECTION); });
+      return id;
     },
 
     async sendLink(email) {

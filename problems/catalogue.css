@@ -197,4 +197,11 @@ a.grid-cell{text-decoration:none}
 .menu-actions button:hover{background:var(--soft)}
 .menu-actions button.is-on{background:var(--done);border-color:var(--done);color:#fff}
 .collect-sub{margin:0 0 6px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-
+.coll-share{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:6px 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--soft)}
+.share-mode{width:180px;margin:0}
+.share-mode button:disabled{opacity:.45}
+.share-link{flex:1 1 260px;width:auto;height:30px;font-size:12px}
+.coll-share>button{border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:4px 10px;font-size:13px}
+.coll-main.shared>.link-button{margin-bottom:8px;display:inline-block}
+.collections-view.single{grid-template-columns:minmax(0,1fr)}
+.coll-main.shared{max-width:900px}

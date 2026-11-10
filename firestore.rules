@@ -86,6 +86,25 @@ service cloud.firestore {
         && request.resource.data.updatedAt == request.time;
     }
 
+    // Public problem collections: a read-only copy of a reader's collection that anyone with the link can view.
+    // Not listable; only the signed-in owner can create, change or delete it.
+    function validShared(d) {
+      return d.keys().hasOnly(["ownerUid", "name", "description", "keys", "updatedAt"])
+        && d.ownerUid == request.auth.uid
+        && d.name is string && d.name.size() > 0 && d.name.size() <= 80
+        && d.description is string && d.description.size() <= 1000
+        && d.keys is list && d.keys.size() <= 500
+        && d.updatedAt == request.time;
+    }
+
+    match /sharedCollections/{collectionId} {
+      allow get: if true;
+      allow list: if false;
+      allow create: if signedIn() && validShared(request.resource.data);
+      allow update: if signedIn() && resource.data.ownerUid == request.auth.uid && validShared(request.resource.data);
+      allow delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
+    }
+
     match /posts/{postId} {
       allow read: if resource.data.published == true || canWritePosts();
 

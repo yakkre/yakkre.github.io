@@ -8540,5 +8540,13 @@
       "retrieved": "2026-11-03T19:19:44.254Z"
     }
   },
-  "pendingKeys": []
+  "pendingKeys": [
+    "isl:2005:G1",
+    "isl:2005:G2",
+    "isl:2005:G3",
+    "isl:2005:G4",
+    "isl:2005:G5",
+    "isl:2005:G6",
+    "isl:2005:G7"
+  ]
 }

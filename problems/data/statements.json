@@ -1293,6 +1293,17 @@
       "postDate": "Oct 13, 2003, 3:11 AM",
       "retrieved": "2026-10-26"
     },
+    "isl:1997:P18": {
+      "text": "The altitudes from $A,B,C$ of an acute triangle $ABC$ have feet $D,E,F$ on the opposite sides. The parallel to $EF$ through $D$ meets lines $AC,AB$ at $Q,R$. Put $P=EF\\cap BC$. Prove that the circumcircle of $PQR$ passes through the midpoint of $BC$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1997,
+      "sourceProblem": "P18",
+      "sourcePage": 304,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
     "isl:1997:P19": {
       "text": "Let  $ a_1\\geq \\cdots \\geq a_n \\geq a_{n \\plus{} 1} \\equal{} 0$  be real numbers. Show that\r\n\\[ \\sqrt {\\sum_{k \\equal{} 1}^n a_k} \\leq \\sum_{k \\equal{} 1}^n \\sqrt k (\\sqrt {a_k} \\minus{} \\sqrt {a_{k \\plus{} 1}}).\r\n\\]\r\n*Proposed by Romania*",
       "kind": "archive",
@@ -1306,6 +1317,17 @@
       "sourceUrl": "https://datasets-server.huggingface.co/rows?dataset=AI-MO%2Faops&config=default&split=train&offset=25321&length=1",
       "archiveRow": 25321,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/1997 IMO Shortlist/219802.json"
+    },
+    "isl:1997:P20": {
+      "text": "Choose $D$ inside side $BC$ of triangle $ABC$, and let $AD$ meet its circumcircle again at $X$. Let $P,Q$ be the perpendicular projections of $X$ onto $AB,AC$, and let $\\gamma$ have diameter $XD$. Prove that $PQ$ is tangent to $\\gamma$ if and only if $AB=AC$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1997,
+      "sourceProblem": "P20",
+      "sourcePage": 304,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
     },
     "isl:1997:P21": {
       "text": "Let $ x_1$, $ x_2$, $ \\ldots$, $ x_n$  be real numbers satisfying the conditions:\n\n\\[ \\left\\{\\begin{array}{cccc} |x_1 + x_2 + \\cdots + x_n | & = & 1 & \\ \\\\\n|x_i| & \\leq & \\displaystyle \\frac {n + 1}{2} & \\ \\textrm{ for }i = 1, 2, \\ldots , n. \\end{array} \\right.\n\\]\n\nShow that there exists a permutation   $ y_1$, $ y_2$, $ \\ldots$, $ y_n$  of $ x_1$,  $ x_2$, $ \\ldots$, $ x_n$  such that\n\n\\[ | y_1 + 2 y_2 + \\cdots + n y_n | \\leq \\frac {n + 1}{2}.\n\\]",
@@ -1323,6 +1345,18 @@
       "archiveRow": 25334,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/1997 IMO Shortlist/665.json"
     },
+    "isl:1997:P23": {
+      "text": "In a convex quadrilateral $ABCD$, let $O=AC\\cap BD$. Suppose\n$$OA\\sin\\angle A+OC\\sin\\angle C=OB\\sin\\angle B+OD\\sin\\angle D.$$\nProve that $ABCD$ is cyclic.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1997,
+      "sourceProblem": "P23",
+      "sourcePage": 305,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceCaveat": "This is the original printed converse with O the diagonal intersection; the saved forum archive also states the equivalent if-and-only-if formulation using K for that same intersection."
+    },
     "isl:1997:P24": {
       "text": "For each positive integer $ n$, let $ f(n)$ denote the number of ways of representing $ n$ as a sum of powers of 2 with nonnegative integer exponents. Representations which differ only in the ordering of their summands are considered to be the same. For instance, $ f(4) = 4$, because the number 4 can be represented in the following four ways: 4; 2+2; 2+1+1; 1+1+1+1.\n\n\n\nProve that, for any integer $ n \\geq 3$ we have $ 2^{\\frac {n^2}{4}} < f(2^n) < 2^{\\frac {n^2}2}$.",
       "kind": "forum",
@@ -1331,6 +1365,17 @@
       "author": "Valentin Vornicu",
       "postDate": "Oct 27, 2005, 2:46 PM",
       "retrieved": "2026-10-26"
+    },
+    "isl:1997:P25": {
+      "text": "The internal bisectors of $\\angle A,\\angle B,\\angle C$ of triangle $ABC$ meet the circumcircle again at $K,L,M$, respectively. Choose $R$ inside side $AB$. Define $P$ by $RP\\parallel AK$ and $BP\\perp BL$, and define $Q$ by $RQ\\parallel BL$ and $AQ\\perp AK$. Prove that $KP,LQ,MR$ are concurrent.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1997,
+      "sourceProblem": "P25",
+      "sourcePage": 305,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
     },
     "isl:1997:P26": {
       "text": "For every integer  $ n \\geq 2$  determine the minimum value that the sum  $ \\sum^n_{i\\equal{}0} a_i$  can take for nonnegative numbers  $ a_0, a_1, \\ldots, a_n$  satisfying the condition  $ a_0 \\equal{} 1,$   $ a_i \\leq a_{i\\plus{}1} \\plus{} a_{i\\plus{}2}$  for  $ i \\equal{} 0, \\ldots, n \\minus{} 2.$",
@@ -1361,6 +1406,40 @@
       "sourceUrl": "https://datasets-server.huggingface.co/rows?dataset=AI-MO%2Faops&config=default&split=train&offset=25324&length=1",
       "archiveRow": 25324,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/1997 IMO Shortlist/219806.json"
+    },
+    "isl:1997:P7": {
+      "text": "A convex hexagon $ABCDEF$ satisfies $AB=BC$, $CD=DE$, and $EF=FA$. Prove that\n$$\\frac{BC}{BE}+\\frac{DE}{DA}+\\frac{FA}{FC}\\geq\\frac32,$$\nand determine when equality holds.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1997,
+      "sourceProblem": "P7",
+      "sourcePage": 303,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1997:P8": {
+      "text": "Four distinct points $A,B,C,D$ lie on a circle $\\Gamma$, and triangle $BCD$ is not right-angled. Prove that:\n(a) The perpendicular bisectors of $AB,AC$ meet line $AD$ at points $W,V$, respectively, and lines $CV,BW$ meet at a point $T$.\n(b) One of $AD,BT,CT$ equals the sum of the other two.\n\nOriginal shortlist formulation supplied in the same source: in triangle $ABC$, $\\angle A$ is the smallest. A line through $A$ meets the circumcircle again at $U$ on the arc $BC$ opposite $A$. The perpendicular bisectors of $CA,AB$ meet $AU$ at $V,W$, respectively, and $T=CV\\cap BW$. Prove that $AU=TB+TC$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1997,
+      "sourceProblem": "P8",
+      "sourcePage": 303,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceCaveat": "Both the contest formulation and the explicitly identified original shortlist formulation are retained from the source."
+    },
+    "isl:1997:P9": {
+      "text": "Let $A_1A_2A_3$ be a nonisosceles triangle with incenter $I$. For each $i\\in\\{1,2,3\\}$, let $C_i$ be the smaller circle through $I$ tangent to the two sidelines through $A_i$. Let $B_i$ be the intersection other than $I$ of the two circles among $C_1,C_2,C_3$ whose indices differ from $i$. Prove that the circumcenters of $A_1B_1I,A_2B_2I,A_3B_3I$ are collinear.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1997,
+      "sourceProblem": "P9",
+      "sourcePage": 303,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
     },
     "isl:1998:A1": {
       "text": "Let  $a_{1},a_{2},\\ldots ,a_{n}$  be positive real numbers such that  $a_{1}+a_{2}+\\cdots +a_{n}<1$ . Prove that \r\n\r\n\\[ \\frac{a_{1} a_{2} \\cdots a_{n} \\left[ 1 - (a_{1} + a_{2} + \\cdots + a_{n}) \\right] }{(a_{1} + a_{2} + \\cdots + a_{n})( 1 - a_{1})(1 - a_{2}) \\cdots (1 - a_{n})} \\leq \\frac{1}{ n^{n+1}}. \\]\n\n**Attachments:**\n\n![IMO98.gif](https://cdn.artofproblemsolving.com/attachments/3/8/f93a9e9314710d1ea5248dab255c8cce64a759.gif)",
@@ -9191,13 +9270,5 @@
       "retrieved": "2026-11-03T19:19:44.254Z"
     }
   },
-  "pendingKeys": [
-    "isl:1997:P7",
-    "isl:1997:P8",
-    "isl:1997:P9",
-    "isl:1997:P18",
-    "isl:1997:P20",
-    "isl:1997:P23",
-    "isl:1997:P25"
-  ]
+  "pendingKeys": []
 }

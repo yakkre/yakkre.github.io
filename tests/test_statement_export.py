@@ -55,5 +55,13 @@ class ExportTests(unittest.TestCase):
             self.assertEqual(later['statements']['a'], current)
 
 
+    def test_source_hold_is_not_published_when_a_catalogue_row_arrives(self):
+        catalogue = {'problems': [{'key': 'held'}]}
+        statement = {'text': 'Literal version awaiting reconciliation', 'publicationStatus': 'hold'}
+        result = module.collect(catalogue, [], None, {'statements': {'held': statement}})
+        self.assertEqual(result['statements'], {})
+        self.assertEqual(result['pendingKeys'], ['held'])
+
+
 if __name__ == '__main__':
     unittest.main()

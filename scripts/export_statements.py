@@ -89,7 +89,7 @@ def collect(catalogue, paths, existing=None, supplements=None):
         if key in keys:
             statements[key] = statement
     for key, statement in (supplements or {}).get('statements', {}).items():
-        if key in keys:
+        if key in keys and statement.get('publicationStatus') != 'hold':
             statements.setdefault(key, statement)
     return {'version': 1, 'statements': dict(sorted(statements.items())),
         'pendingKeys': [p['key'] for p in catalogue['problems'] if p['key'] not in statements]}

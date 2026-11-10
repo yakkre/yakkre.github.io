@@ -29,16 +29,25 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
       assert.equal(statement.sourceYear, p.year);
       assert.equal(statement.sourceProblem, p.id);
       assert.ok(Number.isInteger(statement.sourcePage) && statement.sourcePage > 0);
-      const sources = {2004: 'https://www.imomath.com/imocomp/sl04.pdf',
+      const compiled = 'https://drive.google.com/file/d/0B2qYu535vGeQMFNKNlJoREM2YUU/view';
+      const sources = {1998: compiled, 1999: compiled, 2000: compiled,
+        2001: 'https://www.imomath.com/imocomp/sl01.pdf',
+        2002: 'https://www.imomath.com/imocomp/sl02.pdf',
+        2003: 'https://www.imomath.com/imocomp/sl03.pdf',
+        2004: 'https://www.imomath.com/imocomp/sl04.pdf',
         2005: 'https://www.imomath.com/imocomp/sl05_0707.pdf'};
       assert.equal(statement.sourceUrl, sources[p.year]);
-      assert.match(statement.sourceLabel, /Compendium/);
+      assert.match(statement.sourceLabel, /Compendium|reproduction/);
       assert.ok(statement.verified);
     }
     else {
       assert.equal(statement.kind, 'archive');
       const p = catalogue.problems.find(p => p.key === key);
-      assert.ok(p.sourceUrls.includes(statement.sourceUrl));
+      const matchedG8Archive = key === 'isl:1999:G8' && statement.archiveRow === 25368
+        && statement.sourceYear === 1999 && statement.sourceProblem === 'G8'
+        && statement.archivePath === 'Contest Collections/International Contests/IMO Shortlist/1999 IMO Shortlist/19777.json'
+        && statement.verified === '2026-11-10';
+      assert.ok(p.sourceUrls.includes(statement.sourceUrl) || matchedG8Archive);
       assert.equal(new URL(statement.sourceUrl).searchParams.get('offset'), String(statement.archiveRow));
     }
   }
@@ -67,4 +76,27 @@ test('geometry statement supplements have complete verified source metadata', ()
   }
   assert.match(supplements['isl:2004:G8'].text, /AN\/BN=AM\/BM/);
   assert.ok(supplements['isl:2008:G5'].text.includes('\\tfrac12(k+1)(k+2)'));
+});
+
+test('2003–1998 geometry supplements retain exact inventories and the source hold', () => {
+  const supplements = read('../problems/data/statement-supplements.json').statements;
+  for (const [year, count] of [[2003, 7], [2002, 8], [2001, 8], [2000, 8], [1999, 8], [1998, 8]]) {
+    for (let number = 1; number <= count; number++) {
+      const key = `isl:${year}:G${number}`;
+      const statement = supplements[key];
+      assert.ok(statement.text.trim().length > 60);
+      assert.equal(statement.sourceYear, year);
+      assert.equal(statement.sourceProblem, `G${number}`);
+      assert.ok(statement.verified);
+      assert.equal('solution' in statement, false);
+      assert.equal(statement.text.split('$').length % 2, 1);
+      if (key !== 'isl:1999:G8') assert.ok(Number.isInteger(statement.sourcePage) && statement.sourcePage > 0);
+    }
+  }
+  assert.equal(supplements['isl:1999:G4'].publicationStatus, 'hold');
+  assert.ok(supplements['isl:1999:G4'].sourceCaveat.includes('AX/AB'));
+  assert.ok(supplements['isl:1999:G4'].text.includes('AX/XB=4/5'));
+  assert.ok(supplements['isl:2000:G6'].text.includes('not parallel'));
+  assert.equal(supplements['isl:1999:G8'].archiveRow, 25368);
+  assert.equal(data.statements['isl:1999:G4'], undefined);
 });

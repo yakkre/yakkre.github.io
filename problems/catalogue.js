@@ -9,7 +9,13 @@ const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pen
 const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
 const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['done','done'],['from-year','from'],['to-year','to']];
 const DONE = {yes:'Marked done', no:'Not done yet'};
-let data, tags, filters, page = 1, progress = null, view = 'list';
+let data, tags, filters, page = 1, progress = null, view = 'list', currentColl = '';
+const VIEWS = ['list', 'grid', 'collections'];
+function readView() {
+  const q = new URLSearchParams(location.search);
+  view = VIEWS.includes(q.get('view')) ? q.get('view') : 'list';
+  currentColl = view === 'collections' ? q.get('c') || '' : '';
+}
 
 const node = (tag, className, text) => {
   const e = document.createElement(tag);
@@ -48,7 +54,9 @@ function searchUrl(override={}) {
   const f = {...filters, ...override}, q = new URLSearchParams();
   for (const [key,val] of Object.entries({q:f.query, contest:f.contest, subject:f.subject, evidence:f.evidence, difficulty:f.difficulty, done:f.done, from:f.from, to:f.to, problem:f.problem})) if (val) q.set(key, val);
   if (f.tags.length) q.set('tags', f.tags.join(','));
-  if ((override.view ?? view) === 'grid') q.set('view', 'grid');
+  const v = override.view ?? view;
+  if (v !== 'list') q.set('view', v);
+  if (v === 'collections' && (override.c ?? currentColl)) q.set('c', override.c ?? currentColl);
   if (f.mode === 'OR') q.set('mode', 'OR');
   return location.pathname + (q.size ? '?' + q : '');
 }
@@ -132,6 +140,11 @@ function problemRow(result) {
   head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
   if (p.difficulty) { const d = node('span', 'sub difficulty', `Difficulty ${p.difficulty}/5 (estimate)`); d.title = p.difficultyBasis || ''; head.append(d); }
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
+  if (progress) {
+    const n = progress.collections().filter(c => c.keys.includes(p.key)).length;
+    const b = button('collect-btn', n ? `In ${n} collection${n > 1 ? 's' : ''}` : '+ Collection', e => { e.stopPropagation(); openCollectMenu(p, e.currentTarget); }, 'Add to a collection');
+    head.append(b);
+  }
   const primary = cell('c-method');
   if (p.geometry) {
     for (const [label, route] of [['Synthetic',p.geometry.synthetic],['Analytic',p.geometry.analytic]]) {
@@ -170,16 +183,21 @@ function resultsTable(rows) {
 }
 
 function render() {
-  history.replaceState(null, '', searchUrl()); renderTags(); renderActive();
+  history.replaceState(null, '', searchUrl());
+  document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === view)));
+  const coll = view === 'collections';
+  document.querySelector('.layout').hidden = coll; $('collections-view').hidden = !coll;
+  document.body.classList.toggle('grid-mode', view === 'grid');
+  renderCollectMenu();
+  if (coll) { renderCollections(); return; }
+  renderTags(); renderActive();
   const warning = filters.from && filters.to && Number(filters.from) > Number(filters.to);
   $('filter-warning').hidden = !warning;
   $('filter-warning').textContent = warning ? '“From” year is later than “To” year.' : '';
   const results = selectProblems(data.problems, data.taxonomy, filters)
     .filter(r => !filters.done || !progress || progress.isDone(r.problem.key) === (filters.done === 'yes')), total = results.length;
-  document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === view)));
   const grid = view === 'grid';
   $('grid-view').hidden = !grid; $('problem-list').hidden = grid; $('pagination').hidden = grid;
-  document.body.classList.toggle('grid-mode', grid);
   if (grid) {
     const active = filtersActive(filters);
     $('result-count').textContent = active ? `${total.toLocaleString()} problems match your filters` : 'Pick methods or filters to highlight problems';
@@ -273,10 +291,14 @@ function renderGrid(matches) {
       if (gridContest === 'isl' && last && last !== p.subject) cells.append(node('span', 'grid-gap'));
       last = p.subject;
       const on = isDone(p.key), hit = matches?.has(p.key);
-      const b = button(`grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}`, p.id, () => progress?.toggle(p.key),
-        `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''} (click to toggle done)`);
-      b.setAttribute('aria-pressed', String(on));
-      cells.append(b);
+      const a = node('a', `grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}`, p.id); a.href = entryUrl(p);
+      a.title = `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''}`;
+      a.setAttribute('aria-haspopup', 'dialog');
+      a.addEventListener('click', e => {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // let modified clicks open a new tab
+        e.preventDefault(); e.stopPropagation(); openCollectMenu(p, e.currentTarget, true);
+      });
+      cells.append(a);
     }
     units = Math.max(units, list.length + 0.25 * cells.querySelectorAll('.grid-gap').length);
     row.append(cells); return row;
@@ -284,6 +306,158 @@ function renderGrid(matches) {
   $('grid-body').style.setProperty('--units', units);
   $('grid-body').replaceChildren(...rows);
 }
+// A link to one problem's entry that opens it in place (keeping Back working); modified clicks open normally.
+function problemLink(p, className, text) {
+  const a = node('a', className, text); a.href = entryUrl(p);
+  a.addEventListener('click', e => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault(); openProblem(p);
+  });
+  return a;
+}
+function openProblem(p) {
+  filters = {...emptyFilters(), problem: p.key}; view = 'list'; currentColl = ''; page = 1;
+  $('tag-search').value = ''; syncControls();
+  history.pushState(null, '', searchUrl()); render();
+  $('results').scrollIntoView({block: 'start'});
+}
+
+// ---- "+ Collection" menu on a problem
+let menuProblem = null, menuDraft = '', menuActions = false;
+// actions: also offer "mark done" and "open problem" (used by the progress grid).
+function openCollectMenu(p, anchor, actions = false) {
+  if (menuProblem === p.key) { closeCollectMenu(); return; }
+  menuProblem = p.key; menuDraft = ''; menuActions = actions;
+  const r = anchor.getBoundingClientRect(), m = $('collect-menu');
+  m.style.top = `${r.bottom + scrollY + 4}px`;
+  m.style.left = `${Math.max(8, Math.min(r.left + scrollX, scrollX + document.documentElement.clientWidth - 288))}px`;
+  renderCollectMenu();
+  (m.querySelector('.menu-actions button') || m.querySelector('input'))?.focus();
+}
+function closeCollectMenu() { menuProblem = null; $('collect-menu').hidden = true; }
+function renderCollectMenu() {
+  const m = $('collect-menu');
+  const p = menuProblem && data.problems.find(x => x.key === menuProblem);
+  if (!p || !progress || view === 'collections') { m.hidden = true; if (view === 'collections') menuProblem = null; return; }
+  m.hidden = false;
+  const items = [];
+  if (menuActions) {
+    const on = progress.isDone(p.key), row = node('div', 'menu-actions');
+    items.push(node('p', 'collect-title', problemName(p)));
+    const mark = button(on ? 'is-on' : null, on ? '✓ Done' : 'Mark done', () => progress.toggle(p.key), on ? 'Click to mark as not done' : null);
+    const open = button(null, 'Open problem', () => { closeCollectMenu(); openProblem(p); });
+    row.append(mark, open); items.push(row, node('p', 'collect-sub', 'Add to collection'));
+  } else items.push(node('p', 'collect-title', `Add ${problemName(p)} to:`));
+  const list = progress.collections();
+  if (!list.length) items.push(node('p', 'help', 'No collections yet. Make one below.'));
+  for (const c of list) {
+    const label = node('label', 'collect-item'), cb = node('input');
+    cb.type = 'checkbox'; cb.checked = c.keys.includes(p.key);
+    cb.addEventListener('change', () => progress.setInCollection(c.id, p.key, cb.checked));
+    label.append(cb, node('span', null, c.name)); items.push(label);
+  }
+  const form = node('form', 'collect-new'), input = node('input');
+  input.placeholder = 'New collection name'; input.maxLength = 80; input.value = menuDraft;
+  input.setAttribute('aria-label', 'New collection name');
+  input.addEventListener('input', () => { menuDraft = input.value; });
+  const add = node('button', null, 'Add'); add.type = 'submit';
+  form.append(input, add);
+  form.addEventListener('submit', async e => {
+    e.preventDefault(); const name = input.value.trim(); if (!name) return;
+    menuDraft = '';
+    const id = await progress.createCollection(name);
+    if (id) await progress.setInCollection(id, p.key, true);
+  });
+  items.push(form);
+  if (progress.status) items.push(node('p', 'help', progress.status));
+  m.replaceChildren(...items);
+}
+
+// ---- Collections tab
+let collDraft = {name: '', description: ''}, editing = null;
+function renderCollections() {
+  const box = $('collections-view');
+  if (!progress) { box.replaceChildren(node('p', 'empty', 'Collections couldn’t load. Try reloading the page.')); return; }
+  const list = progress.collections();
+  if (currentColl && !progress.collection(currentColl)) currentColl = '';
+  const byKey = new Map(data.problems.map(p => [p.key, p]));
+
+  const side = node('div', 'coll-side');
+  side.append(node('h2', null, 'Your collections'));
+  const form = node('form', 'coll-form');
+  const name = node('input'); name.placeholder = 'Name, e.g. “Geometry to review”'; name.maxLength = 80; name.value = collDraft.name;
+  name.setAttribute('aria-label', 'Collection name');
+  const desc = node('textarea'); desc.placeholder = 'Description (optional)'; desc.maxLength = 1000; desc.rows = 2; desc.value = collDraft.description;
+  desc.setAttribute('aria-label', 'Collection description');
+  name.addEventListener('input', () => { collDraft.name = name.value; });
+  desc.addEventListener('input', () => { collDraft.description = desc.value; });
+  const create = node('button', null, 'New collection'); create.type = 'submit';
+  form.append(name, desc, create);
+  form.addEventListener('submit', async e => {
+    e.preventDefault(); if (!name.value.trim()) { name.focus(); return; }
+    const draft = collDraft; collDraft = {name: '', description: ''};
+    const id = await progress.createCollection(draft.name, draft.description);
+    if (id) { currentColl = id; render(); } else { collDraft = draft; render(); }
+  });
+  side.append(form);
+  if (!progress.user) side.append(node('p', 'help', 'Saved in this browser. Sign in (top right) to keep your collections on every device.'));
+  if (progress.status) side.append(node('p', 'help', progress.status));
+  const ul = node('ul', 'coll-list');
+  for (const c of list) {
+    const keys = c.keys.filter(k => byKey.has(k)), d = keys.filter(k => progress.isDone(k)).length;
+    const li = node('li'), b = button(`coll-pick${c.id === currentColl ? ' on' : ''}`, null, () => { currentColl = c.id; editing = null; render(); });
+    b.setAttribute('aria-current', String(c.id === currentColl));
+    b.append(node('span', 'coll-name', c.name), node('span', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'} · ${d} done`));
+    li.append(b); ul.append(li);
+  }
+  if (list.length) side.append(ul);
+
+  const main = node('div', 'coll-main');
+  const c = currentColl && progress.collection(currentColl);
+  if (!c) {
+    main.append(node('p', 'empty', list.length ? 'Pick a collection to see its problems.'
+      : 'Collections are your own named lists of problems, such as a training set or problems to revisit. Make one on the left, then add problems from Problem lookup with “+ Collection”.'));
+  } else if (editing === c.id) {
+    const f = node('form', 'coll-form coll-edit');
+    const n = node('input'); n.value = c.name; n.maxLength = 80; n.setAttribute('aria-label', 'Collection name');
+    const t = node('textarea'); t.value = c.description; t.maxLength = 1000; t.rows = 3; t.setAttribute('aria-label', 'Collection description');
+    const save = node('button', null, 'Save'); save.type = 'submit';
+    const cancel = button(null, 'Cancel', () => { editing = null; render(); });
+    const actions = node('div', 'coll-actions'); actions.append(save, cancel);
+    f.append(n, t, actions);
+    f.addEventListener('submit', async e => { e.preventDefault(); editing = null; await progress.updateCollection(c.id, {name: n.value, description: t.value}); render(); });
+    main.append(f);
+  } else {
+    const head = node('div', 'coll-head');
+    const titles = node('div'); titles.append(node('h2', null, c.name));
+    if (c.description) titles.append(node('p', 'coll-desc', c.description));
+    const actions = node('div', 'coll-actions');
+    actions.append(button(null, 'Edit', () => { editing = c.id; render(); }),
+      button(null, 'Delete', async () => { if (confirm(`Delete the collection “${c.name}”? The problems themselves are not affected.`)) { await progress.deleteCollection(c.id); currentColl = ''; render(); } }));
+    head.append(titles, actions); main.append(head);
+    const keys = c.keys.filter(k => byKey.has(k));
+    if (!keys.length) main.append(node('p', 'empty', 'No problems yet. In Problem lookup, use “+ Collection” under a problem’s name to add it here.'));
+    else {
+      const d = keys.filter(k => progress.isDone(k)).length;
+      main.append(node('p', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'} · ${d} done`));
+      const ol = node('ol', 'coll-problems');
+      for (const k of keys) {
+        const p = byKey.get(k), li = node('li'), on = progress.isDone(k);
+        if (on) li.classList.add('is-done');
+        const cb = node('input', 'done-box'); cb.type = 'checkbox'; cb.checked = on; cb.setAttribute('aria-label', `Done: ${problemName(p)}`);
+        cb.addEventListener('change', () => progress.toggle(k));
+        const primary = p.geometry ? p.geometry.synthetic?.primaryTag : p.primaryTag;
+        const info = node('span', 'sub', `${SUBJECTS[p.subject] || p.subject}${primary && tags.get(primary) ? ` · ${shorten(tags.get(primary).label)}` : ''}${p.difficulty ? ` · difficulty ${p.difficulty}/5` : ''}`);
+        const name = node('div', 'coll-pname'); name.append(problemLink(p, null, problemName(p)), info);
+        li.append(cb, name, button('coll-remove', 'Remove', () => progress.setInCollection(c.id, k, false), `Remove ${problemName(p)} from this collection`));
+        ol.append(li);
+      }
+      main.append(ol);
+    }
+  }
+  box.replaceChildren(side, main);
+}
+
 async function setupProgress() {
   try {
     const {createProgress} = await import('./progress.mjs?v=20261110-account');
@@ -331,14 +505,17 @@ async function start() {
     $('copy-link').addEventListener('click', e => copyUrl(location.href, e.currentTarget));
     $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
     $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
-    view = new URLSearchParams(location.search).get('view') === 'grid' ? 'grid' : 'list';
-    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; render(); }));
+    readView();
+    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; if (view !== 'collections') currentColl = ''; render(); }));
+    // (the menu re-renders on each change, so a click inside it can land on a node that is already detached)
+    document.addEventListener('click', e => { if (menuProblem && e.target.isConnected && !$('collect-menu').contains(e.target)) closeCollectMenu(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuProblem) closeCollectMenu(); });
     document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => {
       gridContest = b.dataset.grid;
       if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();
     }));
     await setupProgress();
-    window.addEventListener('popstate', () => { filters = readFilters(); view = new URLSearchParams(location.search).get('view') === 'grid' ? 'grid' : 'list'; page = 1; syncControls(); render(); });
+    window.addEventListener('popstate', () => { filters = readFilters(); readView(); page = 1; syncControls(); render(); });
     render();
   } catch (error) {
     $('result-count').textContent = 'Catalogue unavailable'; $('problem-list').setAttribute('aria-busy', 'false');

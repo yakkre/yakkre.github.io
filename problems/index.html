@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261110-fit">
-  <script type="module" src="./catalogue.js?v=20261110-fit"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261110-collections">
+  <script type="module" src="./catalogue.js?v=20261110-collections"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -41,6 +41,7 @@
     <div class="view-tabs" role="tablist" aria-label="View">
       <button type="button" role="tab" data-view="list" aria-selected="true" aria-controls="results">Problem lookup</button>
       <button type="button" role="tab" data-view="grid" aria-selected="false" aria-controls="results">Progress grid</button>
+      <button type="button" role="tab" data-view="collections" aria-selected="false" aria-controls="collections-view">Collections</button>
     </div>
     <div class="layout">
       <details class="filters" id="filters" open>
@@ -87,7 +88,7 @@
               <button type="button" data-grid="isl" aria-pressed="true">IMO Shortlist</button>
               <button type="button" data-grid="rmm" aria-pressed="false">RMM</button>
             </div>
-            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done <span id="grid-legend-match" hidden><span class="grid-cell todo match" aria-hidden="true"></span> matches your filters</span> · click a square to toggle done</p>
+            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done <span id="grid-legend-match" hidden><span class="grid-cell todo match" aria-hidden="true"></span> matches your filters</span> · click a square for options</p>
             <p id="grid-count" class="grid-count"></p>
           </div>
           <div id="grid-body" class="grid-body"></div>
@@ -98,7 +99,9 @@
         <p class="footnote">Classifications are original summaries. Full statements and solutions are at the linked sources. A forum-check label records that a review was done, not that every forum proof is correct.</p>
       </section>
     </div>
+    <section id="collections-view" class="collections-view" aria-label="Collections" hidden></section>
   </main>
+  <div id="collect-menu" class="collect-menu" role="dialog" aria-label="Add to collection" hidden></div>
   <dialog id="coverage-dialog" aria-labelledby="coverage-title"><div class="dialog-top"><h2 id="coverage-title">Coverage &amp; caveats</h2><button type="button" id="coverage-close" aria-label="Close">Close</button></div><div id="coverage-content"></div></dialog>
 </body>
 </html>

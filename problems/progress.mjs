@@ -1,29 +1,39 @@
-// "Done" marks for the problem catalogue.
-// Signed out: marks live in this browser (localStorage).
-// Signed in by emailed link (Firebase passwordless auth): marks live in Firestore at progress/{uid},
-// so they follow the reader to any device. Local marks are merged into the account on sign-in.
-// Firebase loads lazily; if it is unavailable the catalogue still works with local marks only.
+// Reader data for the problem catalogue: "done" marks and named collections of problems.
+// Signed out: kept in this browser (localStorage).
+// Signed in by emailed link (Firebase passwordless auth): kept in Firestore at progress/{uid},
+// so it follows the reader to any device. Local data is merged into the account on sign-in.
+// Firebase loads lazily; if it is unavailable the catalogue still works with local data only.
 import {firebaseConfig} from '../firebase-config.js';
 
 const SDK = 'https://www.gstatic.com/firebasejs/10.12.5/';
 const LOCAL_KEY = 'raindrops-done-v1';
+const COLL_KEY = 'raindrops-collections-v1';
 const EMAIL_KEY = 'raindrops-signin-email';
-const MAX_MARKS = 5000; // must match firestore.rules
+// Limits; MAX_MARKS and MAX_COLLECTIONS must match firestore.rules.
+const MAX_MARKS = 5000, MAX_COLLECTIONS = 100, MAX_PER_COLLECTION = 500, MAX_NAME = 80, MAX_DESC = 1000;
 
 const store = {
   get(key) { try { return localStorage.getItem(key); } catch { return null; } },
   set(key, value) { try { localStorage.setItem(key, value); } catch { /* private mode: in-memory only */ } },
   remove(key) { try { localStorage.removeItem(key); } catch { /* ignore */ } },
 };
-function readLocal() {
-  try { const v = JSON.parse(store.get(LOCAL_KEY) || '[]'); return new Set(Array.isArray(v) ? v.filter(k => typeof k === 'string') : []); }
-  catch { return new Set(); }
+const parse = (text, fallback) => { try { return JSON.parse(text) ?? fallback; } catch { return fallback; } };
+const cleanKeys = v => Array.isArray(v) ? [...new Set(v.filter(k => typeof k === 'string'))] : [];
+function cleanCollections(v) {
+  if (!Array.isArray(v)) return [];
+  return v.filter(c => c && typeof c.id === 'string' && typeof c.name === 'string').slice(0, MAX_COLLECTIONS).map(c => ({
+    id: c.id, name: c.name.slice(0, MAX_NAME), description: typeof c.description === 'string' ? c.description.slice(0, MAX_DESC) : '',
+    keys: cleanKeys(c.keys).slice(0, MAX_PER_COLLECTION), created: Number(c.created) || Date.now()}));
 }
+const readLocal = () => new Set(cleanKeys(parse(store.get(LOCAL_KEY), [])));
+const readLocalCollections = () => cleanCollections(parse(store.get(COLL_KEY), []));
+const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
 // startHref: the page URL captured before the catalogue rewrites the address bar (the sign-in
-// link's one-time code is in it). onChange() is called whenever marks or sign-in state change.
+// link's one-time code is in it). onChange() is called whenever data or sign-in state change.
 export function createProgress({startHref, validKeys, onChange}) {
-  let done = readLocal(), user = null, status = '', fb = null, unsubscribe = null;
+  let done = readLocal(), collections = readLocalCollections(), user = null, status = '', fb = null, unsubscribe = null;
+  let remoteHasCollections = false;
   const keep = k => !validKeys || validKeys.has(k);
   const emit = () => onChange?.();
   const setStatus = text => { status = text; emit(); };
@@ -39,21 +49,41 @@ export function createProgress({startHref, validKeys, onChange}) {
   const docRef = () => fb.doc(fb.db, 'progress', user.uid);
 
   async function save() {
-    if (!user) { store.set(LOCAL_KEY, JSON.stringify([...done])); return; }
-    await fb.setDoc(docRef(), {done: [...done].slice(0, MAX_MARKS), updatedAt: fb.serverTimestamp()});
+    if (!user) { store.set(LOCAL_KEY, JSON.stringify([...done])); store.set(COLL_KEY, JSON.stringify(collections)); return; }
+    const data = {done: [...done].slice(0, MAX_MARKS), updatedAt: fb.serverTimestamp()};
+    // Only write the collections field once there is something in it, so done marks keep saving
+    // under the older rules that allowed just done + updatedAt.
+    if (collections.length || remoteHasCollections) { data.collections = collections; remoteHasCollections = true; }
+    await fb.setDoc(docRef(), data);
+  }
+  // Apply a change, save it, and roll back if saving fails.
+  async function change(apply, failText = 'Couldn’t save that. Try again.') {
+    const before = {done: new Set(done), collections: structuredClone(collections)};
+    const result = apply();
+    emit();
+    try { await save(); return result; }
+    catch (e) { console.error(e); done = before.done; collections = before.collections; setStatus(failText); return undefined; }
   }
 
+  function takeRemote(data) {
+    done = new Set(cleanKeys(data?.done));
+    collections = cleanCollections(data?.collections);
+    remoteHasCollections = Array.isArray(data?.collections);
+  }
   async function attach(u) {
     unsubscribe?.(); unsubscribe = null; user = u;
-    if (!u) { done = readLocal(); emit(); return; }
+    if (!u) { done = readLocal(); collections = readLocalCollections(); emit(); return; }
     status = '';
     const snap = await fb.getDoc(docRef());
-    const remote = new Set(snap.exists() ? snap.data().done || [] : []);
-    const local = readLocal(), merged = new Set([...remote, ...local]);
-    done = merged;
-    if (merged.size !== remote.size) await save();
-    store.remove(LOCAL_KEY);
-    unsubscribe = fb.onSnapshot(docRef(), s => { if (!s.metadata.hasPendingWrites) { done = new Set(s.exists() ? s.data().done || [] : []); emit(); } },
+    takeRemote(snap.exists() ? snap.data() : {});
+    const localDone = readLocal(), localColls = readLocalCollections();
+    const before = done.size, ids = new Set(collections.map(c => c.id));
+    for (const k of localDone) done.add(k);
+    const extra = localColls.filter(c => !ids.has(c.id));
+    collections = [...collections, ...extra].slice(0, MAX_COLLECTIONS);
+    if (done.size !== before || extra.length) await save();
+    store.remove(LOCAL_KEY); store.remove(COLL_KEY);
+    unsubscribe = fb.onSnapshot(docRef(), s => { if (!s.metadata.hasPendingWrites) { takeRemote(s.exists() ? s.data() : {}); emit(); } },
       e => { console.error('Progress sync failed:', e); setStatus('Couldn’t sync your marks. Check your connection.'); });
     emit();
   }
@@ -76,6 +106,7 @@ export function createProgress({startHref, validKeys, onChange}) {
       setStatus('Sign-in isn’t working right now. Your marks are saved in this browser.');
     }
   }
+  const find = id => collections.find(c => c.id === id);
 
   return {
     get user() { return user; },
@@ -83,14 +114,35 @@ export function createProgress({startHref, validKeys, onChange}) {
     get available() { return fb !== null; },
     isDone: key => done.has(key),
     count: () => [...done].filter(keep).length,
-    has: () => done.size > 0,
-    async toggle(key) {
-      const was = done.has(key);
-      if (was) done.delete(key); else if (done.size < MAX_MARKS) done.add(key);
-      emit();
-      try { await save(); }
-      catch (e) { console.error(e); if (was) done.add(key); else done.delete(key); setStatus('Couldn’t save that. Try again.'); }
+    toggle: key => change(() => { if (done.has(key)) done.delete(key); else if (done.size < MAX_MARKS) done.add(key); }),
+
+    // Collections: [{id, name, description, keys, created}], newest first.
+    collections: () => [...collections].sort((a, b) => b.created - a.created),
+    collection: id => find(id) || null,
+    inCollection: (id, key) => !!find(id)?.keys.includes(key),
+    createCollection(name, description = '') {
+      name = String(name || '').trim().slice(0, MAX_NAME);
+      if (!name) { setStatus('Give the collection a name.'); return Promise.resolve(undefined); }
+      if (collections.length >= MAX_COLLECTIONS) { setStatus(`You can have up to ${MAX_COLLECTIONS} collections.`); return Promise.resolve(undefined); }
+      const c = {id: newId(), name, description: String(description || '').trim().slice(0, MAX_DESC), keys: [], created: Date.now()};
+      return change(() => { collections.push(c); return c.id; });
     },
+    updateCollection(id, {name, description}) {
+      return change(() => {
+        const c = find(id); if (!c) return;
+        if (name != null && String(name).trim()) c.name = String(name).trim().slice(0, MAX_NAME);
+        if (description != null) c.description = String(description).trim().slice(0, MAX_DESC);
+      });
+    },
+    deleteCollection: id => change(() => { collections = collections.filter(c => c.id !== id); }),
+    setInCollection(id, key, on) {
+      return change(() => {
+        const c = find(id); if (!c) return;
+        if (on && !c.keys.includes(key) && c.keys.length < MAX_PER_COLLECTION) c.keys.push(key);
+        if (!on) c.keys = c.keys.filter(k => k !== key);
+      });
+    },
+
     async sendLink(email) {
       email = String(email || '').trim();
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setStatus('Enter a valid email address.'); return false; }

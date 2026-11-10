@@ -20,8 +20,14 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
       assert.equal(statement.sourceProblem, p.id);
       assert.ok(Number.isInteger(statement.sourcePage) && statement.sourcePage > 0);
       const source = new URL(statement.sourceUrl);
-      assert.equal(source.hostname, 'www.imo-official.org');
-      assert.equal(source.pathname, `/assets/documents/problems/${p.year}/IMO${p.year}SL.pdf`);
+      if (key.startsWith('rmm:')) {
+        assert.equal(source.hostname, 'rmms.lbi.ro');
+        assert.ok(source.pathname.startsWith(`/rmm${p.year}/`));
+        assert.match(source.pathname, /(?:RMM\d{4}-Day[12]-English|Probs201[12](?:-D[12]-Eng|D[12]))\.pdf$/);
+      } else {
+        assert.equal(source.hostname, 'www.imo-official.org');
+        assert.equal(source.pathname, `/assets/documents/problems/${p.year}/IMO${p.year}SL.pdf`);
+      }
       assert.ok(statement.verified);
     }
     else if (statement.kind === 'reference') {
@@ -36,7 +42,9 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
         2003: 'https://www.imomath.com/imocomp/sl03.pdf',
         2004: 'https://www.imomath.com/imocomp/sl04.pdf',
         2005: 'https://www.imomath.com/imocomp/sl05_0707.pdf'};
-      if (p.year >= 1990 && p.year <= 1997) {
+      if (key.startsWith('rmm:')) {
+        assert.match(statement.sourceUrl, /^https:\/\/bmos\.ukmt\.org\.uk\/home\/rmm-(?:2008-original|2009|2010-day[12]|2020-day1)\.pdf$/);
+      } else if (p.year >= 1990 && p.year <= 1997) {
         assert.ok([compiled, 'https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf'].includes(statement.sourceUrl));
       } else assert.equal(statement.sourceUrl, sources[p.year]);
       assert.match(statement.sourceLabel, /Compendium|reproduction/);
@@ -128,4 +136,28 @@ test('1997–1990 supplements preserve original labels and printed-error holds',
   assert.ok(supplements['isl:1994:G2'].sourceCaveat.includes('false'));
   assert.equal(data.statements['isl:1994:G2'], undefined);
   assert.ok(supplements['isl:1992:FRA1'].sourceAlias.includes('supplementary'));
+});
+
+
+test('RMM supplements complete the verified 17-edition main-paper inventory', () => {
+  const supplements = read('../problems/data/statement-supplements.json').statements;
+  const years = [2026,2025,2024,2023,2021,2020,2019,2018,2017,2016,2015,2013,2012,2011,2010,2009,2008];
+  let count = 0;
+  for (const year of years) for (let n = 1; n <= (year <= 2009 ? 4 : 6); n++) {
+    const key = `rmm:${year}:${n}`;
+    const statement = data.statements[key] ?? supplements[key];
+    assert.ok(statement?.text.trim(), key);
+    if (supplements[key]) {
+      assert.equal(statement.sourceYear, year);
+      assert.equal(statement.sourceProblem, String(n));
+      assert.ok(statement.sourcePage > 0 && statement.verified);
+      assert.equal(statement.text.split('$').length % 2, 1);
+      assert.equal('solution' in statement, false);
+    }
+    count++;
+  }
+  assert.equal(count, 98);
+  assert.equal(Object.keys(supplements).filter(k => k.startsWith('rmm:')).length, 25);
+  assert.ok(supplements['rmm:2020:1'].sourceCaveat.includes('2019'));
+  assert.ok(supplements['rmm:2018:5'].sourceCaveat.includes('pending proof'));
 });

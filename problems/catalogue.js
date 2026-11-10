@@ -144,6 +144,7 @@ function problemRow(result) {
   }
   head.append(link);
   if (on) head.append(node('span', 'done-tag', '✓ Done'));
+  if (progress?.hasNote(p.key)) { const t = node('span', 'note-tag', 'Notes'); t.title = 'You have notes on this problem'; head.append(t); }
   head.append(node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
   if (p.difficulty) { const d = node('span', 'sub difficulty', `Difficulty ${p.difficulty}/5 (estimate)`); d.title = p.difficultyBasis || ''; head.append(d); }
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
@@ -203,7 +204,7 @@ function render() {
   if (grid) {
     const active = filtersActive(filters);
     $('result-count').textContent = active ? `${total.toLocaleString()} problems match your filters` : 'Pick methods or filters to highlight problems';
-    $('problem-statement').hidden = true;
+    renderStatement($('problem-statement'), null); renderNotes(null);
     renderGrid(active ? new Set(results.map(r => r.problem.key)) : null);
     lastResults = results; renderSelectBar();
     return;
@@ -233,7 +234,9 @@ function render() {
     const label = node('label', 'page-label'); label.append('Page ', input, ` of ${pages}`);
     pagination.append(prev, label, next);
   }
-  renderStatement($('problem-statement'), filters.problem && results.find(r => r.problem.key === filters.problem)?.problem);
+  const shown = filters.problem && results.find(r => r.problem.key === filters.problem)?.problem;
+  renderStatement($('problem-statement'), shown);
+  renderNotes(shown);
 }
 function changePage(value) { page = value; render(); $('results').scrollIntoView({block:'start'}); }
 function reset() { filters = emptyFilters(); page = 1; $('tag-search').value = ''; syncControls(); render(); }
@@ -295,7 +298,7 @@ function renderGrid(matches) {
       if (gridContest === 'isl' && last && last !== p.subject) cells.append(node('span', 'grid-gap'));
       last = p.subject;
       const on = isDone(p.key), hit = matches?.has(p.key), sel = selecting && selected.has(p.key);
-      const a = node('a', `grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}${sel ? ' selected' : ''}`, p.id); a.href = entryUrl(p);
+      const a = node('a', `grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}${sel ? ' selected' : ''}${progress?.hasNote(p.key) ? ' has-note' : ''}`, p.id); a.href = entryUrl(p);
       a.title = `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''}${selecting ? (sel ? ' (selected)' : ' (click to select)') : ''}`;
       a.dataset.key = p.key;
       if (selecting) { a.setAttribute('aria-pressed', String(sel)); a.draggable = false; } else a.setAttribute('aria-haspopup', 'dialog');
@@ -451,7 +454,10 @@ function renderCollectMenu() {
     items.push(node('p', 'collect-title', problemName(p)));
     const mark = button(on ? 'is-on' : null, on ? '✓ Done' : 'Mark done', () => progress.toggle(p.key), on ? 'Click to mark as not done' : null);
     const open = button(null, 'Open problem', () => { closeCollectMenu(); openProblem(p); });
-    row.append(mark, open); items.push(row, node('p', 'collect-sub', 'Add to collection'));
+    row.append(mark, open); items.push(row);
+    const text = progress.note(p.key);
+    if (text) { const q = node('p', 'menu-note', text.length > 160 ? text.slice(0, 160).trimEnd() + '…' : text); q.title = 'Your notes (open the problem to edit)'; items.push(q); }
+    items.push(node('p', 'collect-sub', 'Add to collection'));
   } else items.push(node('p', 'collect-title', `Add ${problemName(p)} to:`));
   const list = progress.collections();
   if (!list.length) items.push(node('p', 'help', 'No collections yet. Make one below.'));
@@ -478,6 +484,34 @@ function renderCollectMenu() {
   m.replaceChildren(...items);
 }
 
+// ---- Notes on the problem being viewed (autosaves while typing)
+let notesKey = null, notesTimer = null, notesDirty = false;
+function renderNotes(p) {
+  const box = $('problem-notes'), ta = $('notes-text');
+  if (!progress || !p) { flushNotes(); box.hidden = true; notesKey = null; return; }
+  box.hidden = false;
+  if (notesKey !== p.key) { flushNotes(); notesKey = p.key; ta.value = progress.note(p.key); $('notes-status').textContent = ''; }
+  else if (!notesDirty && document.activeElement !== ta && ta.value !== progress.note(p.key)) ta.value = progress.note(p.key); // changed on another device
+  $('notes-where').textContent = progress.user ? 'Private: only you can see these. Saved to your account.'
+    : 'Private, saved in this browser. Sign in (top right) to keep notes on every device.';
+}
+async function flushNotes() {
+  clearTimeout(notesTimer); notesTimer = null;
+  if (!notesDirty || !notesKey || !progress) return;
+  const key = notesKey, text = $('notes-text').value, had = progress.hasNote(key); notesDirty = false;
+  const ok = await progress.setNote(key, text);
+  if (ok && had !== progress.hasNote(key)) render(); // show or hide the "Notes" markers
+  if (key === notesKey) $('notes-status').textContent = ok ? (text.trim() ? 'Saved' : 'Cleared') : 'Couldn’t save. Check your connection; your text is still here.';
+  if (!ok && key === notesKey) notesDirty = true;
+}
+function setupNotes() {
+  const ta = $('notes-text');
+  ta.addEventListener('input', () => { notesDirty = true; $('notes-status').textContent = 'Saving…'; clearTimeout(notesTimer); notesTimer = setTimeout(flushNotes, 700); });
+  ta.addEventListener('blur', flushNotes);
+  addEventListener('pagehide', flushNotes);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushNotes(); });
+}
+
 // ---- Collections tab
 let collDraft = {name: '', description: ''}, editing = null;
 const shareUrl = id => `${location.origin}${location.pathname}?view=collections&shared=${encodeURIComponent(id)}`;
@@ -488,7 +522,7 @@ function collectionProblems(keys, byKey, remove) {
     const p = byKey.get(k), li = node('li'), on = !!progress?.isDone(k);
     if (on) li.classList.add('is-done');
     const primary = p.geometry ? p.geometry.synthetic?.primaryTag : p.primaryTag;
-    const info = node('span', 'sub', `${SUBJECTS[p.subject] || p.subject}${primary && tags.get(primary) ? ` · ${shorten(tags.get(primary).label)}` : ''}${p.difficulty ? ` · difficulty ${p.difficulty}/5` : ''}`);
+    const info = node('span', 'sub', `${SUBJECTS[p.subject] || p.subject}${primary && tags.get(primary) ? ` · ${shorten(tags.get(primary).label)}` : ''}${p.difficulty ? ` · difficulty ${p.difficulty}/5` : ''}${progress?.hasNote(k) ? ' · has notes' : ''}`);
     const name = node('div', 'coll-pname'); name.append(problemLink(p, null, problemName(p)), info);
     li.append(name);
     if (progress) li.append(button(`coll-done${on ? ' is-on' : ''}`, on ? '✓ Done' : 'Mark done', () => progress.toggle(k), on ? 'Click to mark as not done' : null));
@@ -621,7 +655,7 @@ function renderCollections() {
 
 async function setupProgress() {
   try {
-    const {createProgress} = await import('./progress.mjs?v=20261110-select');
+    const {createProgress} = await import('./progress.mjs?v=20261110-notes');
     progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); render(); }});
     $('signin-form').addEventListener('submit', async e => {
       e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
@@ -673,6 +707,7 @@ async function start() {
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && (menuProblem || menuBulk)) closeCollectMenu(); });
     $('select-toggle').addEventListener('click', () => setSelecting(!selecting));
     setupGridDrag();
+    setupNotes();
     document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => {
       gridContest = b.dataset.grid;
       if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();

@@ -86,6 +86,17 @@ service cloud.firestore {
         && request.resource.data.updatedAt == request.time;
     }
 
+    // Private notes on problems: one document per problem, readable and writable only by its owner.
+    match /progress/{userId}/notes/{noteId} {
+      allow get, list, delete: if signedIn() && request.auth.uid == userId;
+      allow create, update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly(["text", "updatedAt"])
+        && request.resource.data.text is string
+        && request.resource.data.text.size() <= 10000
+        && request.resource.data.updatedAt == request.time;
+    }
+
     // Public problem collections: a read-only copy of a reader's collection that anyone with the link can view.
     // Not listable; only the signed-in owner can create, change or delete it.
     function validShared(d) {

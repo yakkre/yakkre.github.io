@@ -1,6 +1,7 @@
 // Reader data for the problem catalogue: "done" marks and named collections of problems.
 // A collection can be made public (signed-in owners only): a read-only copy is kept at
 // sharedCollections/{id} that anyone with the link can view; private collections exist only here.
+// Private notes per problem live in their own documents at progress/{uid}/notes/{problemKey}.
 // Signed out: kept in this browser (localStorage).
 // Signed in by emailed link (Firebase passwordless auth): kept in Firestore at progress/{uid},
 // so it follows the reader to any device. Local data is merged into the account on sign-in.
@@ -10,6 +11,8 @@ import {firebaseConfig} from '../firebase-config.js';
 const SDK = 'https://www.gstatic.com/firebasejs/10.12.5/';
 const LOCAL_KEY = 'raindrops-done-v1';
 const COLL_KEY = 'raindrops-collections-v1';
+const NOTES_KEY = 'raindrops-notes-v1';
+export const MAX_NOTE = 10000; // must match firestore.rules
 const EMAIL_KEY = 'raindrops-signin-email';
 // Limits; MAX_MARKS and MAX_COLLECTIONS must match firestore.rules.
 const MAX_MARKS = 5000, MAX_COLLECTIONS = 100, MAX_PER_COLLECTION = 500, MAX_NAME = 80, MAX_DESC = 1000;
@@ -29,13 +32,18 @@ function cleanCollections(v) {
 }
 const readLocal = () => new Set(cleanKeys(parse(store.get(LOCAL_KEY), [])));
 const readLocalCollections = () => cleanCollections(parse(store.get(COLL_KEY), []));
+function readLocalNotes() {
+  const v = parse(store.get(NOTES_KEY), {}), m = new Map();
+  if (v && typeof v === 'object') for (const [k, t] of Object.entries(v)) if (typeof t === 'string' && t.trim()) m.set(k, t.slice(0, MAX_NOTE));
+  return m;
+}
 const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
 // startHref: the page URL captured before the catalogue rewrites the address bar (the sign-in
 // link's one-time code is in it). onChange() is called whenever data or sign-in state change.
 export function createProgress({startHref, validKeys, onChange}) {
   let done = readLocal(), collections = readLocalCollections(), user = null, status = '', fb = null, unsubscribe = null;
-  let remoteHasCollections = false;
+  let remoteHasCollections = false, notes = readLocalNotes(), unsubNotes = null;
   const keep = k => !validKeys || validKeys.has(k);
   const emit = () => onChange?.();
   const setStatus = text => { status = text; emit(); };
@@ -50,6 +58,8 @@ export function createProgress({startHref, validKeys, onChange}) {
   }
   const docRef = () => fb.doc(fb.db, 'progress', user.uid);
   const sharedRef = id => fb.doc(fb.db, 'sharedCollections', id);
+  const notesCol = () => fb.collection(fb.db, 'progress', user.uid, 'notes');
+  const noteRef = key => fb.doc(fb.db, 'progress', user.uid, 'notes', key);
   // Push a public collection's current contents to its shared copy.
   const publish = c => fb.setDoc(sharedRef(c.id), {ownerUid: user.uid, name: c.name, description: c.description, keys: c.keys, updatedAt: fb.serverTimestamp()});
   async function syncShared(id) {
@@ -79,9 +89,20 @@ export function createProgress({startHref, validKeys, onChange}) {
     collections = cleanCollections(data?.collections);
     remoteHasCollections = Array.isArray(data?.collections);
   }
+  async function attachNotes() {
+    const snap = await fb.getDocs(notesCol());
+    const remote = new Map(snap.docs.map(d => [d.id, String(d.data().text || '')]));
+    for (const [k, t] of readLocalNotes()) if (!remote.has(k)) { await fb.setDoc(noteRef(k), {text: t, updatedAt: fb.serverTimestamp()}); remote.set(k, t); }
+    store.remove(NOTES_KEY);
+    notes = remote;
+    unsubNotes = fb.onSnapshot(notesCol(), s => {
+      if (s.metadata.hasPendingWrites) return;
+      notes = new Map(s.docs.map(d => [d.id, String(d.data().text || '')])); emit();
+    }, e => { console.error('Notes sync failed:', e); setStatus('Couldn’t sync your notes.'); });
+  }
   async function attach(u) {
-    unsubscribe?.(); unsubscribe = null; user = u;
-    if (!u) { done = readLocal(); collections = readLocalCollections(); emit(); return; }
+    unsubscribe?.(); unsubscribe = null; unsubNotes?.(); unsubNotes = null; user = u;
+    if (!u) { done = readLocal(); collections = readLocalCollections(); notes = readLocalNotes(); emit(); return; }
     status = '';
     const snap = await fb.getDoc(docRef());
     takeRemote(snap.exists() ? snap.data() : {});
@@ -94,6 +115,8 @@ export function createProgress({startHref, validKeys, onChange}) {
     store.remove(LOCAL_KEY); store.remove(COLL_KEY);
     unsubscribe = fb.onSnapshot(docRef(), s => { if (!s.metadata.hasPendingWrites) { takeRemote(s.exists() ? s.data() : {}); emit(); } },
       e => { console.error('Progress sync failed:', e); setStatus('Couldn’t sync your marks. Check your connection.'); });
+    emit();
+    try { await attachNotes(); } catch (e) { console.error('Notes load failed:', e); setStatus('Couldn’t load your notes.'); }
     emit();
   }
 
@@ -123,6 +146,22 @@ export function createProgress({startHref, validKeys, onChange}) {
     get available() { return fb !== null; },
     isDone: key => done.has(key),
     count: () => [...done].filter(keep).length,
+    // Notes: private text per problem. Empty text deletes the note. Returns true when saved.
+    note: key => notes.get(key) || '',
+    hasNote: key => notes.has(key),
+    async setNote(key, text) {
+      text = String(text ?? '').slice(0, MAX_NOTE);
+      const empty = !text.trim(), before = notes.get(key);
+      if (empty) notes.delete(key); else notes.set(key, text);
+      try {
+        if (!user) { store.set(NOTES_KEY, JSON.stringify(Object.fromEntries(notes))); return true; }
+        if (empty) await fb.deleteDoc(noteRef(key)); else await fb.setDoc(noteRef(key), {text, updatedAt: fb.serverTimestamp()});
+        return true;
+      } catch (e) {
+        console.error(e); if (before == null) notes.delete(key); else notes.set(key, before);
+        return false;
+      }
+    },
     toggle: key => change(() => { if (done.has(key)) done.delete(key); else if (done.size < MAX_MARKS) done.add(key); }),
     setDoneMany: (keys, on) => change(() => { for (const k of keys) { if (!on) done.delete(k); else if (done.size < MAX_MARKS) done.add(k); } }),
 
@@ -215,7 +254,7 @@ export function createProgress({startHref, validKeys, onChange}) {
     },
     async signOut() {
       if (!fb || !user) return;
-      unsubscribe?.(); unsubscribe = null;
+      unsubscribe?.(); unsubscribe = null; unsubNotes?.(); unsubNotes = null;
       await fb.signOut(fb.auth); status = ''; emit();
     },
     init,

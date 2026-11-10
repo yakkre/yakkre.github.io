@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261110-drag">
-  <script type="module" src="./catalogue.js?v=20261110-drag"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261110-notes">
+  <script type="module" src="./catalogue.js?v=20261110-notes"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -89,7 +89,7 @@
               <button type="button" data-grid="isl" aria-pressed="true">IMO Shortlist</button>
               <button type="button" data-grid="rmm" aria-pressed="false">RMM</button>
             </div>
-            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done <span id="grid-legend-match" hidden><span class="grid-cell todo match" aria-hidden="true"></span> matches your filters</span> · click a square for options, or use Select for several (drag to select a block)</p>
+            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done <span id="grid-legend-match" hidden><span class="grid-cell todo match" aria-hidden="true"></span> matches your filters</span> <span class="grid-cell todo has-note" aria-hidden="true"></span> has notes · click a square for options, or use Select for several (drag to select a block)</p>
             <p id="grid-count" class="grid-count"></p>
           </div>
           <div id="grid-body" class="grid-body"></div>
@@ -97,6 +97,11 @@
         <div id="problem-list" aria-busy="true"><p class="loading">Loading problems…</p></div>
         <nav id="pagination" class="pagination" aria-label="Result pages"></nav>
         <section id="problem-statement" class="problem-statement" aria-label="Problem statement" hidden></section>
+        <section id="problem-notes" class="problem-notes" aria-labelledby="notes-heading" hidden>
+          <div class="notes-head"><h2 id="notes-heading">Your notes</h2><span id="notes-status" class="help" aria-live="polite"></span></div>
+          <textarea id="notes-text" rows="7" maxlength="10000" placeholder="Ideas, where you got stuck, the key step, a sketch of your solution…" aria-labelledby="notes-heading"></textarea>
+          <p id="notes-where" class="help"></p>
+        </section>
         <p class="footnote">Classifications are original summaries. Full statements and solutions are at the linked sources. A forum-check label records that a review was done, not that every forum proof is correct.</p>
       </section>
     </div>

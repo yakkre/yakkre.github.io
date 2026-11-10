@@ -224,4 +224,15 @@ tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
 .grid-cell.selected{outline:3px solid var(--sel);outline-offset:1px;opacity:1!important;font-weight:700}
 .grid-body.selecting{user-select:none;-webkit-user-select:none}
 .grid-body.selecting .grid-cell{cursor:cell}
+.problem-notes{margin-top:16px;max-width:900px}
+.notes-head{display:flex;align-items:baseline;gap:10px}
+.notes-head h2{font-size:16px;font-weight:600;margin:0 0 6px}
+.notes-head .help{margin:0}
+#notes-text{display:block;width:100%;min-height:120px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:inherit;font:inherit;line-height:1.5;resize:vertical}
+.problem-notes #notes-where{margin-top:4px}
+.note-tag{margin-left:6px;font-size:11px;font-weight:600;color:var(--sel)}
+.grid-cell{position:relative}
+.grid-cell.has-note::after{content:'';position:absolute;top:2px;right:2px;width:5px;height:5px;border-radius:50%;background:var(--sel)}
+.grid-legend .grid-cell.has-note::after{top:1px;right:1px;width:4px;height:4px}
+.menu-note{margin:-4px 0 10px;padding:6px 8px;border-left:3px solid var(--sel);background:var(--soft);font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--muted)}
 

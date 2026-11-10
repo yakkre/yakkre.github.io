@@ -179,6 +179,7 @@ function render() {
   document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === view)));
   const grid = view === 'grid';
   $('grid-view').hidden = !grid; $('problem-list').hidden = grid; $('pagination').hidden = grid;
+  document.body.classList.toggle('grid-mode', grid);
   if (grid) {
     const active = filtersActive(filters);
     $('result-count').textContent = active ? `${total.toLocaleString()} problems match your filters` : 'Pick methods or filters to highlight problems';
@@ -260,6 +261,7 @@ function renderGrid(matches) {
   const years = new Map();
   for (const p of probs) { if (!years.has(p.year)) years.set(p.year, []); years.get(p.year).push(p); }
   const subjectRank = s => ({A:0, C:1, G:2, N:3})[s] ?? 4;
+  let units = 1; // widest year in square widths (a subject gap counts as a quarter square); CSS sizes squares to fit it
   const rows = [...years.entries()].sort((a, b) => b[0] - a[0]).map(([year, list]) => {
     const row = node('div', 'grid-row');
     row.append(node('span', 'grid-year', year));
@@ -276,8 +278,10 @@ function renderGrid(matches) {
       b.setAttribute('aria-pressed', String(on));
       cells.append(b);
     }
+    units = Math.max(units, list.length + 0.25 * cells.querySelectorAll('.grid-gap').length);
     row.append(cells); return row;
   });
+  $('grid-body').style.setProperty('--units', units);
   $('grid-body').replaceChildren(...rows);
 }
 async function setupProgress() {

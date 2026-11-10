@@ -1,13 +1,15 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
 import {renderStatement} from './statement-view.mjs?v=20261103-proposers';
 
+const START_HREF = location.href; // before render() rewrites the URL: a sign-in link's code is in it
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 50;
 const SUBJECTS = {A:'Algebra', C:'Combinatorics', N:'Number theory', G:'Geometry'};
 const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pending:'Forum check pending'};
 const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
-const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['from-year','from'],['to-year','to']];
-let data, tags, filters, page = 1;
+const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['done','done'],['from-year','from'],['to-year','to']];
+const DONE = {yes:'Marked done', no:'Not done yet'};
+let data, tags, filters, page = 1, progress = null;
 
 const node = (tag, className, text) => {
   const e = document.createElement(tag);
@@ -29,7 +31,7 @@ function sourceLink(label, url) {
   return a;
 }
 const shorten = label => label.replace(/^[ACNG]: /, '');
-const emptyFilters = () => ({query:'', contest:'', subject:'', from:'', to:'', evidence:'', difficulty:'', tags:[], mode:'AND', problem:''});
+const emptyFilters = () => ({query:'', contest:'', subject:'', from:'', to:'', evidence:'', difficulty:'', done:'', tags:[], mode:'AND', problem:''});
 
 function readFilters() {
   const q = new URLSearchParams(location.search);
@@ -37,13 +39,14 @@ function readFilters() {
     subject:Object.hasOwn(SUBJECTS,q.get('subject'))?q.get('subject'):'',
     evidence:['live','archive','pending'].includes(q.get('evidence'))?q.get('evidence'):'',
     difficulty:['1','2','3','4','5','none'].includes(q.get('difficulty'))?q.get('difficulty'):'',
+    done:Object.hasOwn(DONE,q.get('done'))?q.get('done'):'',
     from:q.get('from')||'', to:q.get('to')||'', mode:q.get('mode')==='OR'?'OR':'AND',
     tags:validTagIds((q.get('tags')||'').split(','), data.taxonomy),
     problem:data.problems.some(p=>p.key===q.get('problem'))?q.get('problem'):''};
 }
 function searchUrl(override={}) {
   const f = {...filters, ...override}, q = new URLSearchParams();
-  for (const [key,val] of Object.entries({q:f.query, contest:f.contest, subject:f.subject, evidence:f.evidence, difficulty:f.difficulty, from:f.from, to:f.to, problem:f.problem})) if (val) q.set(key, val);
+  for (const [key,val] of Object.entries({q:f.query, contest:f.contest, subject:f.subject, evidence:f.evidence, difficulty:f.difficulty, done:f.done, from:f.from, to:f.to, problem:f.problem})) if (val) q.set(key, val);
   if (f.tags.length) q.set('tags', f.tags.join(','));
   if (f.mode === 'OR') q.set('mode', 'OR');
   return location.pathname + (q.size ? '?' + q : '');
@@ -94,6 +97,7 @@ function renderActive() {
   if (filters.subject) chip(SUBJECTS[filters.subject], () => update({subject:''}));
   if (filters.from || filters.to) chip(`Years ${filters.from || '…'}–${filters.to || '…'}`, () => update({from:'', to:''}));
   if (filters.evidence) chip(STATUS[filters.evidence], () => update({evidence:''}));
+  if (filters.done) chip(DONE[filters.done], () => update({done:''}));
   if (filters.difficulty) chip(filters.difficulty === 'none' ? 'Difficulty not estimated' : `Difficulty ${filters.difficulty}/5`, () => update({difficulty:''}));
   filters.tags.forEach((id, i) => {
     if (i) chips.push(node('span', 'match', filters.mode));
@@ -115,6 +119,14 @@ function problemRow(result) {
   const cell = className => { const td = node('td', className); tr.append(td); return td; };
   const head = cell('c-problem'), link = node('a', null, problemName(p));
   link.href = entryUrl(p); link.title = 'View problem statement';
+  if (progress) {
+    const cb = node('input', 'done-box'), on = progress.isDone(p.key);
+    cb.type = 'checkbox'; cb.checked = on; cb.title = on ? 'Done' : 'Mark as done';
+    cb.setAttribute('aria-label', `Done: ${problemName(p)}`);
+    cb.addEventListener('change', () => progress.toggle(p.key));
+    head.append(cb);
+    if (on) tr.classList.add('is-done');
+  }
   head.append(link, node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
   if (p.difficulty) { const d = node('span', 'sub difficulty', `Difficulty ${p.difficulty}/5 (estimate)`); d.title = p.difficultyBasis || ''; head.append(d); }
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
@@ -160,7 +172,8 @@ function render() {
   const warning = filters.from && filters.to && Number(filters.from) > Number(filters.to);
   $('filter-warning').hidden = !warning;
   $('filter-warning').textContent = warning ? '“From” year is later than “To” year.' : '';
-  const results = selectProblems(data.problems, data.taxonomy, filters), total = results.length;
+  const results = selectProblems(data.problems, data.taxonomy, filters)
+    .filter(r => !filters.done || !progress || progress.isDone(r.problem.key) === (filters.done === 'yes')), total = results.length;
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE)); page = Math.min(page, pages);
   const first = (page - 1) * PAGE_SIZE;
   $('result-count').textContent = total
@@ -197,6 +210,69 @@ function renderCoverage() {
   const ul = node('ul'); for (const x of data.caveats) ul.append(node('li', null, x)); c.append(ul);
 }
 
+function renderProgress() {
+  const panel = $('progress-panel');
+  if (!progress) { panel.hidden = true; return; }
+  panel.hidden = false;
+  const n = progress.count(), u = progress.user;
+  $('progress-summary').textContent = u
+    ? `Signed in as ${u.email} · ${n} marked done (saved to your account).`
+    : `${n} marked done in this browser. To keep your marks on every device, sign in with your email — no password, we email you a one-time link.`;
+  $('signin-form').hidden = !!u || !progress.available && !!progress.status;
+  $('signout').hidden = !u;
+  $('progress-status').textContent = progress.status;
+}
+// Grid of every available problem in one collection: a row per year, green when done, blue when not.
+let gridContest = 'isl';
+const idOrder = id => { const m = String(id).match(/^(\D*)(\d+)/); return m ? [m[1], Number(m[2])] : [String(id), 0]; };
+function renderGrid() {
+  const view = $('grid-view');
+  if (!progress) { view.hidden = true; return; }
+  view.hidden = false;
+  document.querySelectorAll('[data-grid]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.grid === gridContest)));
+  const probs = data.problems.filter(p => p.contest === gridContest);
+  const doneCount = probs.filter(p => progress.isDone(p.key)).length;
+  $('grid-count').textContent = `${doneCount} of ${probs.length} done`;
+  if (!view.open) return;
+  const years = new Map();
+  for (const p of probs) { if (!years.has(p.year)) years.set(p.year, []); years.get(p.year).push(p); }
+  const subjectRank = s => ({A:0, C:1, G:2, N:3})[s] ?? 4;
+  const rows = [...years.entries()].sort((a, b) => b[0] - a[0]).map(([year, list]) => {
+    const row = node('div', 'grid-row');
+    row.append(node('span', 'grid-year', year));
+    const cells = node('div', 'grid-cells');
+    list.sort((a, b) => (gridContest === 'isl' ? subjectRank(a.subject) - subjectRank(b.subject) : 0)
+      || idOrder(a.id)[0].localeCompare(idOrder(b.id)[0]) || idOrder(a.id)[1] - idOrder(b.id)[1]);
+    let last;
+    for (const p of list) {
+      if (gridContest === 'isl' && last && last !== p.subject) cells.append(node('span', 'grid-gap'));
+      last = p.subject;
+      const on = progress.isDone(p.key);
+      const b = button(`grid-cell ${on ? 'done' : 'todo'}`, p.id, () => progress.toggle(p.key),
+        `${problemName(p)}: ${on ? 'done' : 'not done'} (click to toggle)`);
+      b.setAttribute('aria-pressed', String(on));
+      cells.append(b);
+    }
+    row.append(cells); return row;
+  });
+  $('grid-body').replaceChildren(...rows);
+}
+async function setupProgress() {
+  try {
+    const {createProgress} = await import('./progress.mjs?v=20261110-progress');
+    progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); renderGrid(); render(); }});
+    $('signin-form').addEventListener('submit', async e => {
+      e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
+      if (await progress.sendLink($('signin-email').value)) $('signin-email').value = '';
+      b.disabled = false;
+    });
+    $('signout').addEventListener('click', () => progress.signOut());
+    $('grid-view').addEventListener('toggle', renderGrid);
+    document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => { gridContest = b.dataset.grid; renderGrid(); }));
+    renderProgress(); renderGrid(); progress.init();
+  } catch (error) { progress = null; renderProgress(); renderGrid(); console.error('Progress tracking unavailable:', error); }
+}
+
 async function start() {
   try {
     const response = await fetch('./data/catalogue.json'); if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -227,6 +303,7 @@ async function start() {
     $('copy-link').addEventListener('click', e => copyUrl(location.href, e.currentTarget));
     $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
     $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
+    await setupProgress();
     window.addEventListener('popstate', () => { filters = readFilters(); page = 1; syncControls(); render(); });
     render();
   } catch (error) {

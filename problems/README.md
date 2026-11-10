@@ -16,7 +16,7 @@ node --test tests/catalogue.test.mjs
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Requires Python `openpyxl` for read-only export. The website itself needs no build step, backend, account, or runtime dependency. Search state and entry permalinks live in URL query parameters. Filters include collection, descriptive subject, years, source-review type and all60 primary/additional method tags; multiple tags support AND/OR and primary-first ranking.
+Requires Python `openpyxl` for read-only export. The website itself needs no build step or backend. Readers can tick problems as done (saved in the browser); signing in by an emailed one-time link (Firebase passwordless auth, project in `../firebase-config.js`) syncs those marks to Firestore at `progress/{uid}` (see `../firestore.rules`). The progress grid shows every available ISL or RMM problem, green when done. Search state and entry permalinks live in URL query parameters. Filters include collection, descriptive subject, years, source-review type and all60 primary/additional method tags; multiple tags support AND/OR and primary-first ranking.
 
 Keep workbook review/source caveats intact during refresh. Snapshot provenance includes input hashes without local machine paths. Do not publish arbitrary research caches, credentials, Firebase data, or project administration notes.
 

@@ -73,6 +73,17 @@ service cloud.firestore {
       allow delete: if canManageUsers();
     }
 
+    // Problem catalogue "done" marks: one private document per signed-in reader.
+    match /progress/{userId} {
+      allow get, delete: if signedIn() && request.auth.uid == userId;
+      allow create, update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly(["done", "updatedAt"])
+        && request.resource.data.done is list
+        && request.resource.data.done.size() <= 5000
+        && request.resource.data.updatedAt == request.time;
+    }
+
     match /posts/{postId} {
       allow read: if resource.data.published == true || canWritePosts();
 

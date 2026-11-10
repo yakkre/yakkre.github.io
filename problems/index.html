@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261104-geometry">
-  <script type="module" src="./catalogue.js?v=20261104-geometry"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261110-progress">
+  <script type="module" src="./catalogue.js?v=20261110-progress"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -19,6 +19,16 @@
     <div class="page-head">
       <h1>Olympiad problems by method</h1>
       <p class="summary"><span id="total-stat">—</span> problems · <span id="tag-total">—</span> tags · <span id="updated">snapshot</span> · <button type="button" id="coverage-open" class="link-button">Coverage &amp; caveats</button></p>
+      <section id="progress-panel" class="progress-panel" aria-label="Your progress" hidden>
+        <p id="progress-summary"></p>
+        <form id="signin-form" class="signin-form">
+          <label class="sr-only" for="signin-email">Email address</label>
+          <input id="signin-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <button type="submit">Email me a sign-in link</button>
+        </form>
+        <button id="signout" type="button" class="link-button" hidden>Sign out</button>
+        <p id="progress-status" class="help" role="status" aria-live="polite"></p>
+      </section>
     </div>
     <div class="layout">
       <details class="filters" id="filters" open>
@@ -34,6 +44,7 @@
           </div>
           <label>Forum check<select id="evidence"><option value="">All</option><option value="live">Live forum checked</option><option value="archive">Archived forum checked</option><option value="pending">Forum check pending</option></select></label>
           <label>Difficulty (ISL estimate)<select id="difficulty"><option value="">Any</option><option value="1">1 – easiest</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 – hardest</option><option value="none">Not estimated</option></select></label>
+          <label>Your progress<select id="done"><option value="">All</option><option value="no">Not done yet</option><option value="yes">Marked done</option></select></label>
           <fieldset class="methods">
             <legend>Methods <span id="selection-count"></span></legend>
             <div class="mode" role="group" aria-label="Method matching">
@@ -48,6 +59,17 @@
         </div>
       </details>
       <section class="results" id="results" tabindex="-1" aria-label="Results">
+        <details id="grid-view" class="grid-view" hidden>
+          <summary>Progress grid <span id="grid-count" class="sub-inline"></span></summary>
+          <div class="grid-top">
+            <div class="mode grid-switch" role="group" aria-label="Collection">
+              <button type="button" data-grid="isl" aria-pressed="true">IMO Shortlist</button>
+              <button type="button" data-grid="rmm" aria-pressed="false">RMM</button>
+            </div>
+            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done · click a square to toggle</p>
+          </div>
+          <div id="grid-body" class="grid-body"></div>
+        </details>
         <div class="search-bar">
           <label class="sr-only" for="search">Search problems</label>
           <input type="search" id="search" placeholder="Search: 2019 C6, invariant, Vieta…" autocomplete="off">

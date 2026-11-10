@@ -171,7 +171,7 @@ a.grid-cell{text-decoration:none}
 .collect-new input{flex:1;width:auto}
 .collect-new button,.coll-form button,.coll-actions button,.coll-remove{border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:4px 10px;font-size:13px}
 .collect-new button:hover,.coll-form button:hover,.coll-actions button:hover,.coll-remove:hover{background:var(--soft)}
-.collections-view{display:grid;grid-template-columns:270px minmax(0,1fr);gap:20px;align-items:start}
+.collections-view{display:grid;grid-template-columns:230px minmax(0,1fr);gap:18px;align-items:start;margin-top:4px}
 .coll-side h2,.coll-head h2{font-size:16px;margin:0 0 8px}
 .coll-form{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
 .coll-form textarea{display:block;width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:4px;background:var(--bg);font:inherit;color:inherit;resize:vertical}
@@ -191,7 +191,7 @@ a.grid-cell{text-decoration:none}
 .coll-pname a{font-weight:600;text-decoration:none}.coll-pname a:hover{text-decoration:underline}
 .coll-problems li.is-done .coll-pname a{color:var(--muted)}
 .coll-remove{flex:none;font-size:12px;padding:2px 8px}
-@media(max-width:860px){.collections-view{grid-template-columns:1fr}}
+@container (max-width: 720px){.collections-view{grid-template-columns:1fr}}
 .menu-actions{display:flex;gap:6px;margin-bottom:10px}
 .menu-actions button{flex:1;border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:5px 8px;font-size:13px}
 .menu-actions button:hover{background:var(--soft)}
@@ -239,4 +239,6 @@ tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
 .notes-preview .collect-sub{margin:0 0 4px}
 .notes-preview #notes-preview-note:empty{display:none}
 .done-tag.overall{color:var(--muted);font-weight:500}
+.coll-filtered{margin:4px 0 0;font-size:13px;color:var(--warn)}
+.coll-filtered .link-button{font-size:13px}
 

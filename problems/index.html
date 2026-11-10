@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261110-colldone">
-  <script type="module" src="./catalogue.js?v=20261110-colldone"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261110-collfilter">
+  <script type="module" src="./catalogue.js?v=20261110-collfilter"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -83,6 +83,7 @@
         <div id="select-bar" class="select-bar" role="region" aria-label="Selected problems" hidden></div>
         <div id="active" class="active" aria-label="Active filters"></div>
         <p id="filter-warning" class="warning" role="status" hidden></p>
+        <section id="collections-view" class="collections-view" aria-label="Collections" hidden></section>
         <div id="grid-view" class="grid-view" hidden>
           <div class="grid-top">
             <div class="mode grid-switch" role="group" aria-label="Collection">
@@ -110,7 +111,6 @@
         <p class="footnote">Classifications are original summaries. Full statements and solutions are at the linked sources. A forum-check label records that a review was done, not that every forum proof is correct.</p>
       </section>
     </div>
-    <section id="collections-view" class="collections-view" aria-label="Collections" hidden></section>
   </main>
   <div id="collect-menu" class="collect-menu" role="dialog" aria-label="Add to collection" hidden></div>
   <dialog id="coverage-dialog" aria-labelledby="coverage-title"><div class="dialog-top"><h2 id="coverage-title">Coverage &amp; caveats</h2><button type="button" id="coverage-close" aria-label="Close">Close</button></div><div id="coverage-content"></div></dialog>

@@ -189,14 +189,23 @@ function render() {
   history.replaceState(null, '', searchUrl());
   document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === view)));
   const coll = view === 'collections';
-  document.querySelector('.layout').hidden = coll; $('collections-view').hidden = !coll;
+  $('collections-view').hidden = !coll;
   document.body.classList.toggle('grid-mode', view === 'grid');
   renderCollectMenu();
-  if (coll) { renderCollections(); return; }
   renderTags(); renderActive();
   const warning = filters.from && filters.to && Number(filters.from) > Number(filters.to);
   $('filter-warning').hidden = !warning;
   $('filter-warning').textContent = warning ? '“From” year is later than “To” year.' : '';
+  if (coll) {
+    // Filters and search narrow the open collection's problems ("Your progress" uses its own Done here marks).
+    $('grid-view').hidden = true; $('problem-list').hidden = true; $('pagination').hidden = true;
+    $('select-bar').hidden = true; $('select-toggle').hidden = true;
+    renderStatement($('problem-statement'), null); renderNotes(null);
+    const f = {...filters, problem: '', done: ''};
+    collMatch = filtersActive(f) ? new Set(selectProblems(data.problems, data.taxonomy, f).map(r => r.problem.key)) : null;
+    $('result-count').textContent = 'Filters and search apply to the collection you open';
+    renderCollections(); return;
+  }
   const results = selectProblems(data.problems, data.taxonomy, filters)
     .filter(r => !filters.done || !progress || progress.isDone(r.problem.key) === (filters.done === 'yes')), total = results.length;
   const grid = view === 'grid';
@@ -524,7 +533,16 @@ function setupNotes() {
 }
 
 // ---- Collections tab
-let collDraft = {name: '', description: ''}, editing = null;
+let collDraft = {name: '', description: ''}, editing = null, collMatch = null;
+// Keys of a collection that pass the sidebar filters; doneIn(key) decides the "Your progress" filter.
+function filterCollection(keys, doneIn) {
+  return keys.filter(k => (!collMatch || collMatch.has(k)) && (!filters.done || doneIn(k) === (filters.done === 'yes')));
+}
+function filteredNote(main, shown, total) {
+  if (!collMatch && !filters.done) return;
+  const p = node('p', 'coll-filtered', shown ? `Showing ${shown} of ${total} (filters on) ` : 'No problems in this collection match your filters. ');
+  p.append(button('link-button', 'Clear filters', reset)); main.append(p);
+}
 const shareUrl = id => `${location.origin}${location.pathname}?view=collections&shared=${encodeURIComponent(id)}`;
 // own: the reader's collection (adds its own "Done here" marks and Remove buttons); omit for shared views.
 function collectionProblems(keys, byKey, own) {
@@ -578,7 +596,9 @@ function renderShared(box, byKey) {
   }, 'Copy this list into your own collections'));
   head.append(titles, actions); main.append(head);
   main.append(node('p', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'}${progress ? ` · ${done} done by you` : ''}`));
-  if (keys.length) main.append(collectionProblems(keys, byKey, null));
+  const shown = filterCollection(keys, k => !!progress?.isDone(k));
+  filteredNote(main, shown.length, keys.length);
+  if (shown.length) main.append(collectionProblems(shown, byKey, null));
   box.replaceChildren(main);
 }
 function renderCollections() {
@@ -624,7 +644,7 @@ function renderCollections() {
   const c = currentColl && progress.collection(currentColl);
   if (!c) {
     main.append(node('p', 'empty', list.length ? 'Pick a collection to see its problems.'
-      : 'Collections are your own named lists of problems, such as a training set or problems to revisit. Make one on the left, then add problems from Problem lookup with “+ Collection”.'));
+      : 'Collections are your own named lists of problems, such as a training set or problems to revisit. Make one on the left, then add problems with Select (in Problem lookup or on the Progress grid) or from a grid square’s menu.'));
   } else if (editing === c.id) {
     const f = node('form', 'coll-form coll-edit');
     const n = node('input'); n.value = c.name; n.maxLength = 80; n.setAttribute('aria-label', 'Collection name');
@@ -659,12 +679,14 @@ function renderCollections() {
     } else share.append(node('span', 'help', progress.user ? 'Only you can see this collection.' : 'Only you can see this. Sign in to make it public.'));
     main.append(share);
     const keys = c.keys.filter(k => byKey.has(k));
-    if (!keys.length) main.append(node('p', 'empty', 'No problems yet. In Problem lookup, use “+ Collection” under a problem’s name to add it here.'));
+    if (!keys.length) main.append(node('p', 'empty', 'No problems yet. Use Select in Problem lookup or on the Progress grid (or a grid square’s menu) to add problems here.'));
     else {
       const d = keys.filter(k => progress.isDone(k)).length;
       const here = keys.filter(k => progress.isDoneIn(c.id, k)).length;
       main.append(node('p', 'sub', `${keys.length} problem${keys.length === 1 ? '' : 's'} · ${here} done here · ${d} done overall`));
-      main.append(collectionProblems(keys, byKey, c));
+      const shown = filterCollection(keys, k => progress.isDoneIn(c.id, k));
+      filteredNote(main, shown.length, keys.length);
+      if (shown.length) main.append(collectionProblems(shown, byKey, c));
     }
   }
   box.replaceChildren(side, main);
@@ -718,7 +740,7 @@ async function start() {
     $('coverage-open').addEventListener('click', () => $('coverage-dialog').showModal());
     $('coverage-close').addEventListener('click', () => $('coverage-dialog').close());
     readView();
-    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; currentColl = ''; sharedId = ''; if (view === 'collections') { selecting = false; selected.clear(); } closeCollectMenu(); render(); }));
+    document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; currentColl = ''; sharedId = ''; if (view === 'collections') { selecting = false; selected.clear(); filters.problem = ''; } closeCollectMenu(); render(); }));
     // (the menu re-renders on each change, so a click inside it can land on a node that is already detached)
     document.addEventListener('click', e => { if ((menuProblem || menuBulk) && e.target.isConnected && !$('collect-menu').contains(e.target)) closeCollectMenu(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && (menuProblem || menuBulk)) closeCollectMenu(); });

@@ -14,6 +14,16 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
     assert.ok(statement.text.trim());
     assert.equal('solution' in statement, false);
     if (statement.kind === 'forum') assert.equal(statement.post, 1);
+    else if (statement.kind === 'official') {
+      const p = catalogue.problems.find(p => p.key === key);
+      assert.equal(statement.sourceYear, p.year);
+      assert.equal(statement.sourceProblem, p.id);
+      assert.ok(Number.isInteger(statement.sourcePage) && statement.sourcePage > 0);
+      const source = new URL(statement.sourceUrl);
+      assert.equal(source.hostname, 'www.imo-official.org');
+      assert.equal(source.pathname, `/assets/documents/problems/${p.year}/IMO${p.year}SL.pdf`);
+      assert.ok(statement.verified);
+    }
     else {
       assert.equal(statement.kind, 'archive');
       const p = catalogue.problems.find(p => p.key === key);

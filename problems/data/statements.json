@@ -3125,6 +3125,76 @@
       "archiveRow": 3579,
       "archivePath": "Contest Collections/AoPS Yearly Contest Collections/2009 Contests/2009 IMO Shortlist/355789.json"
     },
+    "isl:2009:G1": {
+      "text": "In a triangle $ABC$ with $AB=AC$, the bisectors of angles $A$ and $B$ meet $BC$ and $AC$ at $D$ and $E$, respectively. Let $K$ be the incenter of triangle $ADC$. If $\\angle BEK=45^\\circ$, find all possible values of $\\angle BAC$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G1",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G2": {
+      "text": "Let $O$ be the circumcenter of triangle $ABC$. Choose $P$ and $Q$ in the interiors of sides $CA$ and $AB$, respectively. Let $k$ be the circle through the midpoints of $BP,CQ,PQ$. Prove that if $PQ$ is tangent to $k$, then $OP=OQ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G2",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G3": {
+      "text": "The incircle of triangle $ABC$ touches $AB$ at $Z$ and $AC$ at $Y$. Put $G=BY\\cap CZ$. Choose $R$ and $S$ so that $BCYR$ and $BCSZ$ are parallelograms. Prove that $GR=GS$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G3",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G4": {
+      "text": "In a cyclic quadrilateral $ABCD$, let $E=AC\\cap BD$ and $F=AD\\cap BC$. Let $G$ and $H$ be the midpoints of $AB$ and $CD$, respectively. Prove that $EF$ is tangent at $E$ to the circle through $E,G,H$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G4",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G5": {
+      "text": "Let $P$ be a convex polygon centrally symmetric about a point $O$. Prove that there is a parallelogram $R$ containing $P$ such that\n$$\\frac{|R|}{|P|}\\leq\\sqrt2,$$\nwhere $|R|$ and $|P|$ denote their areas.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G5",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G6": {
+      "text": "In a quadrilateral $ABCD$ with $AB$ not parallel to $CD$, the lines $AD$ and $BC$ meet at $P$. Let $O_1,O_2$ and $H_1,H_2$ be the circumcenters and orthocenters of triangles $ABP$ and $DCP$, respectively. Let $E_1,E_2$ be the midpoints of $O_1H_1$ and $O_2H_2$. Prove that the perpendicular from $E_1$ to $CD$, the perpendicular from $E_2$ to $AB$, and the line $H_1H_2$ are concurrent.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G6",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2009:G8": {
+      "text": "Let $ABCD$ be a circumscribed quadrilateral. A line $g$ through $A$ meets segment $BC$ at $M$ and line $CD$ at $N$. Let $I_1,I_2,I_3$ be the incenters of triangles $ABM,MNC,NDA$, respectively. Prove that the orthocenter of triangle $I_1I_2I_3$ lies on $g$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2009/IMO2009SL.pdf",
+      "sourceYear": 2009,
+      "sourceProblem": "G8",
+      "sourcePage": 11,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
     "isl:2009:N1": {
       "text": "Let $ n$ be a positive integer and let $ a_1,a_2,a_3,\\ldots,a_k$ $ ( k\\ge 2)$ be distinct integers in the set $ { 1,2,\\ldots,n}$ such that $ n$ divides $ a_i(a_{i + 1} - 1)$ for $ i = 1,2,\\ldots,k - 1$. Prove that $ n$ does not divide $ a_k(a_1 - 1).$\n\n\n\nProposed by Ross Atkins, Australia",
       "kind": "forum",
@@ -3310,6 +3380,76 @@
       "author": "orl",
       "postDate": "Jul 17, 2011, 7:02 AM",
       "retrieved": "2026-10-15T22:05:48.711Z"
+    },
+    "isl:2010:G1": {
+      "text": "In an acute triangle $ABC$, let $D,E,F$ be the feet of the altitudes on $BC,CA,AB$, respectively. Choose either intersection $P$ of line $EF$ with the circumcircle of $ABC$, and let $Q=BP\\cap DF$. Prove that $AP=AQ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G1",
+      "sourcePage": 45,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G2": {
+      "text": "Let $P$ be an interior point of triangle $ABC$. The lines $AP,BP,CP$ meet its circumcircle again at $K,L,M$, respectively. The tangent to the circumcircle at $C$ meets line $AB$ at $S$. Prove that $SC=SP$ if and only if $MK=ML$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G2",
+      "sourcePage": 47,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G3": {
+      "text": "Let $A_1A_2\\dots A_n$ be a convex polygon. An interior point $P$ has perpendicular projections $P_1,\\dots,P_n$ on the lines $A_1A_2,\\dots,A_nA_1$, respectively, and each projection lies on the corresponding side. For arbitrary points $X_1,\\dots,X_n$ on those respective sides, prove that\n$$\\max\\left\\{\\frac{X_1X_2}{P_1P_2},\\dots,\\frac{X_nX_1}{P_nP_1}\\right\\}\\geq1.$$",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G3",
+      "sourcePage": 51,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G4": {
+      "text": "Let $I$ be the incenter and $\\Gamma$ the circumcircle of triangle $ABC$. Line $AI$ meets $\\Gamma$ again at $D\\ne A$. Choose $F$ on side $BC$ and $E$ on arc $BDC$ so that\n$$\\angle BAF=\\angle CAE<\\tfrac12\\angle BAC.$$\nLet $G$ be the midpoint of $IF$. Prove that lines $DG$ and $EI$ intersect on $\\Gamma$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G4",
+      "sourcePage": 53,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G5": {
+      "text": "Let $ABCDE$ be a convex pentagon satisfying $BC\\parallel AE$, $AB=BC+AE$ and $\\angle ABC=\\angle CDE$. Let $M$ be the midpoint of $CE$, and let $O$ be the circumcenter of triangle $BCD$. If $\\angle DMO=90^\\circ$, prove that $2\\angle BDA=\\angle CDE$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G5",
+      "sourcePage": 55,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G6": {
+      "text": "An equilateral triangle $XYZ$ has its vertices $X,Y,Z$ on the sides $BC,CA,AB$, respectively, of an acute-angled triangle $ABC$. Prove that the incenter of $ABC$ lies inside triangle $XYZ$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G6",
+      "sourcePage": 57,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
+    "isl:2010:G7": {
+      "text": "Three circular arcs $\\gamma_1,\\gamma_2,\\gamma_3$ join points $A$ and $C$ in the same half-plane bounded by $AC$, with $\\gamma_2$ between $\\gamma_1$ and $\\gamma_3$. Let $B$ lie on segment $AC$. Three rays $h_1,h_2,h_3$ start at $B$ in that half-plane, with $h_2$ between $h_1$ and $h_3$. Put $V_{ij}=h_i\\cap\\gamma_j$ for $i,j\\in\\{1,2,3\\}$.\n\nFor $i,j\\in\\{1,2\\}$, let $Q_{ij}$ be the curved quadrilateral with successive vertices $V_{ij},V_{i+1,j},V_{i+1,j+1},V_{i,j+1}$, whose sides are the two corresponding ray segments and two corresponding circular arcs. Call it circumscribed if a circle touches all four of these sides.\n\nProve that if $Q_{11},Q_{12},Q_{21}$ are circumscribed, then $Q_{22}$ is also circumscribed.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2010/IMO2010SL.pdf",
+      "sourceYear": 2010,
+      "sourceProblem": "G7",
+      "sourcePage": 61,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
     },
     "isl:2010:N1": {
       "text": "Find the least positive integer $n$ for which there exists a set $\\{s_1, s_2, \\ldots , s_n\\}$ consisting of $n$ distinct positive integers such that\n\n\\[ \\left( 1 - \\frac{1}{s_1} \\right) \\left( 1 - \\frac{1}{s_2} \\right) \\cdots \\left( 1 - \\frac{1}{s_n} \\right) = \\frac{51}{2010}.\\]\n\n\n\nProposed by Daniel Brown, Canada",
@@ -3536,6 +3676,16 @@
       "postDate": "Jul 13, 2012, 4:44 AM",
       "retrieved": "2026-11-04T21:13:15.683Z"
     },
+    "isl:2011:G6": {
+      "text": "Let $ABC$ be a triangle with $AB=AC$, and let $D$ be the midpoint of $AC$. The bisector of $\\angle BAC$ meets the circle through $D,B,C$ at a point $E$ inside $ABC$. Line $BD$ meets the circle through $A,E,B$ at $B$ and $F$. Let $I=AF\\cap BE$ and $K=CI\\cap BD$. Prove that $I$ is the incenter of triangle $KAB$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2011/IMO2011SL.pdf",
+      "sourceYear": 2011,
+      "sourceProblem": "G6",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
     "isl:2011:G7": {
       "text": "Let $ABCDEF$ be a convex hexagon all of whose sides are tangent to a circle $\\omega$ with centre $O$. Suppose that the circumcircle of triangle $ACE$ is concentric with $\\omega$. Let $J$ be the foot of the perpendicular from $B$ to $CD$. Suppose that the perpendicular from $B$ to $DF$ intersects the line $EO$ at a point $K$. Let $L$ be the foot of the perpendicular from $K$ to $DE$. Prove that $DJ=DL$.\n\nProposed by Japan",
       "kind": "forum",
@@ -3544,6 +3694,16 @@
       "author": "WakeUp",
       "postDate": "Jul 13, 2012, 4:52 AM",
       "retrieved": "2026-11-04T21:13:16.937Z"
+    },
+    "isl:2011:G8": {
+      "text": "Let $ABC$ be an acute triangle with circumcircle $\\omega$, and let $t$ be a tangent to $\\omega$. Reflect $t$ in $BC$, $CA$ and $AB$ to obtain the lines $t_a$, $t_b$ and $t_c$, respectively. Prove that the circumcircle of the triangle formed by $t_a,t_b,t_c$ is tangent to $\\omega$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2011/IMO2011SL.pdf",
+      "sourceYear": 2011,
+      "sourceProblem": "G8",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
     },
     "isl:2011:N1": {
       "text": "For any integer $d > 0,$ let $f(d)$ be the smallest possible integer that has exactly $d$ positive divisors (so for example we have $f(1)=1, f(5)=16,$ and $f(6)=12$). Prove that for every integer $k \\geq 0$ the number $f\\left(2^k\\right)$ divides $f\\left(2^{k+1}\\right).$\n\nProposed by Suhaimi Ramly, Malaysia",
@@ -4048,6 +4208,16 @@
       "author": "lyukhson",
       "postDate": "Jul 9, 2014, 10:57 PM",
       "retrieved": "2026-11-04T21:12:54.937Z"
+    },
+    "isl:2013:G5": {
+      "text": "Let $ABCDEF$ be a convex hexagon with $AB=DE$, $BC=EF$ and $CD=FA$, such that\n$$\\angle A-\\angle D=\\angle C-\\angle F=\\angle E-\\angle B.$$\nProve that the diagonals $AD$, $BE$ and $CF$ are concurrent.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2013/IMO2013SL.pdf",
+      "sourceYear": 2013,
+      "sourceProblem": "G5",
+      "sourcePage": 6,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
     },
     "isl:2013:G6": {
       "text": "Let the excircle of triangle $ABC$ opposite the vertex $A$ be tangent to the side $BC$ at the point $A_1$. Define the points $B_1$ on $CA$ and $C_1$ on $AB$ analogously, using the excircles opposite $B$ and $C$, respectively. Suppose that the circumcentre of triangle $A_1B_1C_1$ lies on the circumcircle of triangle $ABC$. Prove that triangle $ABC$ is right-angled.\n\nProposed by Alexander A. Polyansky, Russia",
@@ -4570,6 +4740,16 @@
       "author": "ABCDE",
       "postDate": "Jul 7, 2016, 1:43 PM",
       "retrieved": "2026-11-04T21:12:36.942Z"
+    },
+    "isl:2015:G8": {
+      "text": "A triangulation of a convex polygon $\\Pi$ partitions it into triangles using diagonals that have no common points except vertices of the polygon. Call it a Thaiangulation if all its triangles have equal area.\n\nProve that any two distinct Thaiangulations of $\\Pi$ differ by exactly two triangles: replacing one pair of triangles in the first with a different pair produces the second.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2015/IMO2015SL.pdf",
+      "sourceYear": 2015,
+      "sourceProblem": "G8",
+      "sourcePage": 7,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
     },
     "isl:2015:N1": {
       "text": "Determine all positive integers $M$ such that the sequence $a_0, a_1, a_2, \\cdots$ defined by \\[ a_0 = M + \\frac{1}{2}   \\qquad  \\textrm{and} \\qquad    a_{k+1} = a_k\\lfloor a_k \\rfloor   \\quad \\textrm{for} \\, k = 0, 1, 2, \\cdots \\]contains at least one integer term.",
@@ -5120,6 +5300,16 @@
       "postDate": "Jul 10, 2018, 4:08 AM",
       "retrieved": "2026-11-04T21:11:24.852Z"
     },
+    "isl:2017:G6": {
+      "text": "Let $n\\geq3$ be an integer, and let $A$ and $B$ be two regular $n$-gons in the plane. Prove that the vertices of $A$ lying inside $B$ or on its boundary are consecutive. Equivalently, prove that a line separates these vertices from the other vertices of $A$.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2017/IMO2017SL.pdf",
+      "sourceYear": 2017,
+      "sourceProblem": "G6",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
+    },
     "isl:2017:G7": {
       "text": "A convex  quadrilateral $ABCD$ has an inscribed circle with center $I$. Let $I_a, I_b, I_c$ and $I_d$ be the incenters of the triangles $DAB, ABC, BCD$ and $CDA$, respectively. Suppose that the common external tangents of the circles $AI_bI_d$ and $CI_bI_d$ meet at $X$, and the common external tangents of the circles $BI_aI_c$ and $DI_aI_c$ meet at $Y$. Prove that $\\angle{XIY}=90^{\\circ}$.",
       "kind": "forum",
@@ -5128,6 +5318,16 @@
       "author": "fastlikearabbit",
       "postDate": "Jul 10, 2018, 3:50 AM",
       "retrieved": "2026-11-04T21:11:26.106Z"
+    },
+    "isl:2017:G8": {
+      "text": "There are $2017$ mutually external circles on a blackboard. No two circles are tangent, and no three have a common tangent. A tangent segment joins two points of tangency on a common tangent to two circles.\n\nLuciano draws tangent segments one at a time. Each new segment must avoid every other circle and every previously drawn tangent segment. He continues until no further tangent segment can be drawn. Find all possible numbers of tangent segments at that moment.",
+      "kind": "official",
+      "sourceUrl": "https://www.imo-official.org/assets/documents/problems/2017/IMO2017SL.pdf",
+      "sourceYear": 2017,
+      "sourceProblem": "G8",
+      "sourcePage": 10,
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; checked against the supplied official statement."
     },
     "isl:2017:N1": {
       "text": "For each integer $a_0 > 1$, define the sequence $a_0, a_1, a_2, \\ldots$ for $n \\geq 0$ as\n\n$$a_{n+1} = \n\\begin{cases}\n\\sqrt{a_n} & \\text{if } \\sqrt{a_n} \\text{ is an integer,} \\\\\na_n + 3 & \\text{otherwise.}\n\\end{cases}\n$$Determine all values of $a_0$ such that there exists a number $A$ such that $a_n = A$ for infinitely many values of $n$.\n\nProposed by Stephan Wagner, South Africa",
@@ -8091,26 +8291,6 @@
     }
   },
   "pendingKeys": [
-    "isl:2017:G6",
-    "isl:2017:G8",
-    "isl:2015:G8",
-    "isl:2013:G5",
-    "isl:2011:G6",
-    "isl:2011:G8",
-    "isl:2010:G1",
-    "isl:2010:G2",
-    "isl:2010:G3",
-    "isl:2010:G4",
-    "isl:2010:G5",
-    "isl:2010:G6",
-    "isl:2010:G7",
-    "isl:2009:G1",
-    "isl:2009:G2",
-    "isl:2009:G3",
-    "isl:2009:G4",
-    "isl:2009:G5",
-    "isl:2009:G6",
-    "isl:2009:G8",
     "isl:2008:G1",
     "isl:2008:G2",
     "isl:2008:G3",

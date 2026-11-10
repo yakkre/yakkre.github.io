@@ -26,9 +26,12 @@ const parse = (text, fallback) => { try { return JSON.parse(text) ?? fallback; }
 const cleanKeys = v => Array.isArray(v) ? [...new Set(v.filter(k => typeof k === 'string'))] : [];
 function cleanCollections(v) {
   if (!Array.isArray(v)) return [];
-  return v.filter(c => c && typeof c.id === 'string' && typeof c.name === 'string').slice(0, MAX_COLLECTIONS).map(c => ({
-    id: c.id, name: c.name.slice(0, MAX_NAME), description: typeof c.description === 'string' ? c.description.slice(0, MAX_DESC) : '',
-    keys: cleanKeys(c.keys).slice(0, MAX_PER_COLLECTION), created: Number(c.created) || Date.now(), public: c.public === true}));
+  return v.filter(c => c && typeof c.id === 'string' && typeof c.name === 'string').slice(0, MAX_COLLECTIONS).map(c => {
+    const keys = cleanKeys(c.keys).slice(0, MAX_PER_COLLECTION), inList = new Set(keys);
+    // done: marks local to this collection, independent of the overall done marks and other collections.
+    return {id: c.id, name: c.name.slice(0, MAX_NAME), description: typeof c.description === 'string' ? c.description.slice(0, MAX_DESC) : '',
+      keys, done: cleanKeys(c.done).filter(k => inList.has(k)), created: Number(c.created) || Date.now(), public: c.public === true};
+  });
 }
 const readLocal = () => new Set(cleanKeys(parse(store.get(LOCAL_KEY), [])));
 const readLocalCollections = () => cleanCollections(parse(store.get(COLL_KEY), []));
@@ -173,7 +176,7 @@ export function createProgress({startHref, validKeys, onChange}) {
       name = String(name || '').trim().slice(0, MAX_NAME);
       if (!name) { setStatus('Give the collection a name.'); return Promise.resolve(undefined); }
       if (collections.length >= MAX_COLLECTIONS) { setStatus(`You can have up to ${MAX_COLLECTIONS} collections.`); return Promise.resolve(undefined); }
-      const c = {id: newId(), name, description: String(description || '').trim().slice(0, MAX_DESC), keys: [], created: Date.now()};
+      const c = {id: newId(), name, description: String(description || '').trim().slice(0, MAX_DESC), keys: [], done: [], created: Date.now(), public: false};
       return change(() => { collections.push(c); return c.id; });
     },
     async updateCollection(id, {name, description}) {
@@ -194,10 +197,16 @@ export function createProgress({startHref, validKeys, onChange}) {
       await change(() => {
         const c = find(id); if (!c) return;
         if (on && !c.keys.includes(key) && c.keys.length < MAX_PER_COLLECTION) c.keys.push(key);
-        if (!on) c.keys = c.keys.filter(k => k !== key);
+        if (!on) { c.keys = c.keys.filter(k => k !== key); c.done = c.done.filter(k => k !== key); }
       });
       await syncShared(id);
     },
+    // Done marks that belong to one collection only (never shared, never touch the overall marks).
+    isDoneIn: (id, key) => !!find(id)?.done.includes(key),
+    toggleDoneIn: (id, key) => change(() => {
+      const c = find(id); if (!c || !c.keys.includes(key)) return;
+      c.done = c.done.includes(key) ? c.done.filter(k => k !== key) : [...c.done, key];
+    }),
     // Adds keys to a collection; returns how many were new (or undefined if saving failed).
     async addManyToCollection(id, keys) {
       const added = await change(() => {

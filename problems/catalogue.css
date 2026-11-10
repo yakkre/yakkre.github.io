@@ -238,4 +238,5 @@ tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
 .notes-preview{margin-top:10px;padding:8px 12px;border:1px solid var(--line);border-radius:4px;background:var(--soft)}
 .notes-preview .collect-sub{margin:0 0 4px}
 .notes-preview #notes-preview-note:empty{display:none}
+.done-tag.overall{color:var(--muted);font-weight:500}
 

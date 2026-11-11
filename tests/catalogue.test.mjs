@@ -58,13 +58,13 @@ test('typed method ID input accepts numeric lists only',async()=>{
 test('geometry keeps independent proof routes and both verified primary tags',()=>{
   const geometry=problems.filter(p=>p.contest==='isl'&&p.year===2025&&p.subject==='G');
   assert.deepEqual(geometry.map(p=>p.id),['G1','G2','G3','G4','G5','G6','G7']);
-  assert.equal(geometry.filter(p=>p.geometry.analytic.primaryTag).length,6);
+  assert.equal(geometry.filter(p=>p.geometry.analytic.primaryTag).length,7);
   const g2=geometry.find(p=>p.id==='G2');
   assert.deepEqual(g2.primaryTags,[62,78]);
   assert.equal(selectProblems(problems,taxonomy,{problem:g2.key,tags:[78]})[0].primary,true);
   assert.equal(selectProblems(problems,taxonomy,{problem:g2.key,tags:[62,78]})[0].hits,2);
   assert.equal(selectProblems(problems,taxonomy,{problem:g2.key,tags:[82]})[0].primary,false);
-  const g1=geometry.find(p=>p.id==='G1');assert.equal(g1.geometry.analytic.primaryTag,null);assert.match(g1.geometry.analytic.status,/Pending/);
+  const g1=geometry.find(p=>p.id==='G1');assert.equal(g1.geometry.analytic.primaryTag,81);assert.match(g1.geometry.analytic.status,/^Reviewed/);
   for(const p of geometry)for(const tag of p.geometry.configurations)assert.ok(!p.primaryTags.includes(tag));
   const allG=problems.filter(p=>p.subject==='G');
   assert.equal(selectProblems(problems,taxonomy,{subject:'G'}).length,allG.length);

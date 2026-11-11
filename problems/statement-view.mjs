@@ -52,7 +52,10 @@ function loadMath() {
   if (!mathPromise) mathPromise = new Promise((resolve, reject) => {
     window.MathJax = {
       loader: {load:['ui/safe']},
-      tex: {inlineMath:[['$','$'],['\\(','\\)']], displayMath:[['$$','$$'],['\\[','\\]']], processEscapes:true},
+      tex: {inlineMath:[['$','$'],['\\(','\\)']], displayMath:[['$$','$$'],['\\[','\\]']], processEscapes:true,
+        // Older AoPS posts use forum-only shorthands such as a_{i \plus{} 1} \equal{} b.
+        // A few statements also use text-mode commands inside math.
+        macros: {plus:'+', minus:'-', equal:'=', hdots:'\\ldots', emph:['\\textit{#1}',1], vspace:['',1]}},
       svg: {fontCache:'local'}, startup: {typeset:false},
       options: {safeOptions:{safeProtocols:{https:true, http:false, file:false, javascript:false, data:false}}}
     };

@@ -1,5 +1,5 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
-import {renderStatement, typesetMath} from './statement-view.mjs?v=20261110-notesmath';
+import {renderStatement, typesetMath} from './statement-view.mjs?v=20261110-aopsmacros';
 
 const START_HREF = location.href; // before render() rewrites the URL: a sign-in link's code is in it
 const $ = id => document.getElementById(id);

@@ -9270,5 +9270,14 @@
       "retrieved": "2026-11-03T19:19:44.254Z"
     }
   },
-  "pendingKeys": []
+  "pendingKeys": [
+    "isl:1996:G1",
+    "isl:1996:G2",
+    "isl:1996:G3",
+    "isl:1996:G4",
+    "isl:1996:G5",
+    "isl:1996:G7",
+    "isl:1996:G8",
+    "isl:1996:G9"
+  ]
 }

@@ -829,6 +829,50 @@
       "postDate": "Oct 22, 2005, 12:15 PM",
       "retrieved": "2026-10-28"
     },
+    "isl:1994:G1": {
+      "text": "A semicircle $\\Gamma$ lies on one side of line $\\ell$. At points $C,D$ of its arc, the tangents meet $\\ell$ at $B,A$, respectively, with the semicircle's center between $A,B$. Put $E=AC\\cap BD$, and let $F$ be the perpendicular projection of $E$ onto $\\ell$. Prove that $EF$ bisects $\\angle CFD$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1994,
+      "sourceProblem": "G1",
+      "sourcePage": 288,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1994:G3": {
+      "text": "A circle $\\omega$ touches parallel lines $\\ell_1,\\ell_2$. Circle $\\omega_1$ touches $\\ell_1$ at $A$ and $\\omega$ externally at $C$. Circle $\\omega_2$ touches $\\ell_2$ at $B$, $\\omega$ externally at $D$, and $\\omega_1$ externally at $E$. If $Q=AD\\cap BC$, prove that $Q$ is the circumcenter of $CDE$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1994,
+      "sourceProblem": "G3",
+      "sourcePage": 288,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1994:G4": {
+      "text": "Let $N$ be any point on the internal bisector of $\\angle BAC$. Choose $P$ on line $AB$ and $O$ on line $AN$ so that $\\angle ANP=\\angle APO=90^\\circ$. A line through a point $Q$ on $NP$ meets lines $AB,AC$ at $E,F$. Prove that $\\angle OQE=90^\\circ$ if and only if $QE=QF$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1994,
+      "sourceProblem": "G4",
+      "sourcePage": 289,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1994:G5": {
+      "text": "A line $\\ell$ does not meet a circle $\\omega$ centered at $O$. Let $E$ be the perpendicular projection of $O$ onto $\\ell$, and take $M\\in\\ell$, $M\\ne E$. The tangents from $M$ touch $\\omega$ at $A,B$. Drop perpendiculars from $E$ to $MA,MB$, with feet $C,D$. Prove that $F=CD\\cap OE$ is independent of $M$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1994,
+      "sourceProblem": "G5",
+      "sourcePage": 289,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
     "isl:1994:N1": {
       "text": "$ M$ is a subset of $ \\{1, 2, 3, \\ldots, 15\\}$ such that the product of any three distinct elements of $ M$ is not a square. Determine the maximum number of elements in $ M.$",
       "kind": "forum",
@@ -945,6 +989,95 @@
       "author": "orl",
       "postDate": "Aug 10, 2008, 9:35 AM",
       "retrieved": "2026-10-27"
+    },
+    "isl:1995:G1": {
+      "text": "Distinct collinear points $A,B,C,D$ occur in that order. The circles with diameters $AC,BD$ meet at $X,Y$. Choose $O$ on line $XY$ but off line $AD$. Lines $CO,BO$ meet the respective circles again at $M,N$. Prove that $AM,DN,XY$ are concurrent.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G1",
+      "sourcePage": 291,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1995:G2": {
+      "text": "For noncollinear points $A,B,C$, prove that exactly one point $X$ in their plane satisfies\n$$XA^2+XB^2+AB^2=XB^2+XC^2+BC^2=XC^2+XA^2+CA^2.$$",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G2",
+      "sourcePage": 291,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1995:G3": {
+      "text": "The incircle of $ABC$ touches $BC,CA,AB$ at $D,E,F$. A point $X$ inside $ABC$ has the property that the incircle of $XBC$ also touches $BC$ at $D$; it touches $CX,XB$ at $Y,Z$. Prove that $E,F,Z,Y$ are concyclic.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G3",
+      "sourcePage": 292,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1995:G4": {
+      "text": "In an acute triangle $ABC$, choose $A_1,A_2$ on $BC$ with $A_2$ between $A_1,C$; $B_1,B_2$ on $CA$ with $B_2$ between $B_1,A$; and $C_1,C_2$ on $AB$ with $C_2$ between $C_1,B$. Suppose\n$$\\angle AA_1A_2=\\angle AA_2A_1=\\angle BB_1B_2=\\angle BB_2B_1=\\angle CC_1C_2=\\angle CC_2C_1.$$\nLines $AA_1,BB_1,CC_1$ form one triangle, and $AA_2,BB_2,CC_2$ form another. Prove that their six vertices lie on a circle.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G4",
+      "sourcePage": 292,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1995:G5": {
+      "text": "A convex hexagon $ABCDEF$ satisfies $AB=BC=CD$, $DE=EF=FA$, and $\\angle BCD=\\angle EFA=60^\\circ$. Interior points $G,H$ satisfy $\\angle AGB=\\angle DHE=120^\\circ$. Prove that\n$$AG+GB+GH+DH+HE\\geq CF.$$",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G5",
+      "sourcePage": 292,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1995:G6": {
+      "text": "Let $G$ be the centroid of tetrahedron $A_1A_2A_3A_4$. For each $i$, let $A_i'$ be the intersection other than $A_i$ of line $GA_i$ with the circumsphere. Prove that\n$$GA_1\\,GA_2\\,GA_3\\,GA_4\\leq GA_1'\\,GA_2'\\,GA_3'\\,GA_4'$$\nand\n$$\\frac1{GA_1'}+\\frac1{GA_2'}+\\frac1{GA_3'}+\\frac1{GA_4'}\\leq\\frac1{GA_1}+\\frac1{GA_2}+\\frac1{GA_3}+\\frac1{GA_4}.$$",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G6",
+      "sourcePage": 292,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceCaveat": "The second sphere intersections distinct from the original vertices are made explicit; no replacement of lines by outward rays is intended."
+    },
+    "isl:1995:G7": {
+      "text": "Let $O$ be inside a convex quadrilateral $ABCD$ of area $S$. Points $K,L,M,N$ lie inside sides $AB,BC,CD,DA$, respectively. If $OKBL$ and $OMDN$ are parallelograms, prove that\n$$\\sqrt S\\geq\\sqrt{S_1}+\\sqrt{S_2},$$\nwhere $S_1,S_2$ are the areas of $ONAK,OLCM$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G7",
+      "sourcePage": 292,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1995:G8": {
+      "text": "A circle through $B,C$ meets sides $AB,AC$ of triangle $ABC$ again at $C',B'$. If $H,H'$ are the orthocenters of $ABC,AB'C'$, respectively, prove that $BB',CC',HH'$ are concurrent.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1995,
+      "sourceProblem": "G8",
+      "sourcePage": 292,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
     },
     "isl:1995:N1": {
       "text": "Let $ k$ be a positive integer. Show that there are infinitely many perfect squares of the form $ n \\cdot 2^k - 7$ where $ n$ is a positive integer.",
@@ -1191,6 +1324,95 @@
       "sourceUrl": "https://datasets-server.huggingface.co/rows?dataset=AI-MO%2Faops&config=default&split=train&offset=25315&length=1",
       "archiveRow": 25315,
       "archivePath": "Contest Collections/International Contests/IMO Shortlist/1996 IMO Shortlist/40064.json"
+    },
+    "isl:1996:G1": {
+      "text": "Let $H$ be the orthocenter of triangle $ABC$, and let $P$ lie on its circumcircle, distinct from $A,B,C$. Let $E$ be the foot of altitude $BH$. Construct parallelograms $PAQB$ and $PARC$, and put $X=AQ\\cap HR$. Prove that $EX\\parallel AP$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G1",
+      "sourcePage": 297,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1996:G2": {
+      "text": "An interior point $P$ of triangle $ABC$ satisfies\n$$\\angle APB-\\angle C=\\angle APC-\\angle B.$$\nLet $D,E$ be the incenters of $APB,APC$, respectively. Prove that $AP,BD,CE$ are concurrent.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G2",
+      "sourcePage": 297,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1996:G3": {
+      "text": "In an acute triangle $ABC$, suppose $BC>CA$. Let $O,H$ be its circumcenter and orthocenter, and let $F$ be the foot of altitude $CH$. The perpendicular to $OF$ through $F$ meets side $CA$ at $P$. Prove that $\\angle FHP=\\angle BAC$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G3",
+      "sourcePage": 298,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceCaveat": "The source separately suggests an optional extension asking what happens for BC<=CA; it is not treated as another original problem."
+    },
+    "isl:1996:G4": {
+      "text": "Let $P$ be inside an equilateral triangle $ABC$. Lines $AP,BP,CP$ meet $BC,CA,AB$ at $A_1,B_1,C_1$. Prove that\n$$A_1B_1\\cdot B_1C_1\\cdot C_1A_1\\geq A_1B\\cdot B_1C\\cdot C_1A.$$",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G4",
+      "sourcePage": 298,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1996:G5": {
+      "text": "A convex hexagon $ABCDEF$ has $AB\\parallel DE$, $BC\\parallel EF$, $CD\\parallel AF$. Let $R_A,R_C,R_E$ be the circumradii of $FAB,BCD,DEF$, respectively, and let $P$ be the hexagon's perimeter. Prove that $R_A+R_C+R_E\\geq P/2$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G5",
+      "sourcePage": 298,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1996:G7": {
+      "text": "An acute triangle $ABC$ has circumcenter $O$ and circumradius $R$. Lines $AO,BO,CO$ meet the circles $BOC,COA,AOB$ again at $A',B',C'$, respectively. Prove that\n$$OA'\\cdot OB'\\cdot OC'\\geq8R^3,$$\nand determine when equality holds.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G7",
+      "sourcePage": 298,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1996:G8": {
+      "text": "In a convex quadrilateral $ABCD$, denote the circumradii of $DAB,ABC,BCD,CDA$ by $R_A,R_B,R_C,R_D$, respectively. Prove that\n$$R_A+R_C>R_B+R_D\\quad\\Longleftrightarrow\\quad\\angle A+\\angle C>\\angle B+\\angle D.$$",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G8",
+      "sourcePage": 298,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
+    },
+    "isl:1996:G9": {
+      "text": "Let $F$ be a polygon in the plane, not necessarily convex, and $O$ a point. Let $P$ be the perimeter of $F$, $D$ the sum of the distances from $O$ to its vertices, and $H$ the sum of the distances from $O$ to the lines containing its sides. Prove that $D^2-H^2\\geq P^2/4$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1996,
+      "sourceProblem": "G9",
+      "sourcePage": 298,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement."
     },
     "isl:1996:N1": {
       "text": "Four integers are marked on a circle. On each step we simultaneously replace each number by the difference between this number and next number on the circle, moving in a clockwise direction; that is, the numbers  $ a,b,c,d$  are replaced by  $ a\\minus{}b,b\\minus{}c,c\\minus{}d,d\\minus{}a.$  Is it possible after 1996 such to have numbers  $ a,b,c,d$  such the numbers  $ |bc\\minus{}ad|, |ac \\minus{} bd|, |ab \\minus{} cd|$  are primes?",
@@ -9271,26 +9493,6 @@
     }
   },
   "pendingKeys": [
-    "isl:1996:G1",
-    "isl:1996:G2",
-    "isl:1996:G3",
-    "isl:1996:G4",
-    "isl:1996:G5",
-    "isl:1996:G7",
-    "isl:1996:G8",
-    "isl:1996:G9",
-    "isl:1995:G1",
-    "isl:1995:G2",
-    "isl:1995:G3",
-    "isl:1995:G4",
-    "isl:1995:G5",
-    "isl:1995:G6",
-    "isl:1995:G7",
-    "isl:1995:G8",
-    "isl:1994:G1",
-    "isl:1994:G2",
-    "isl:1994:G3",
-    "isl:1994:G4",
-    "isl:1994:G5"
+    "isl:1994:G2"
   ]
 }

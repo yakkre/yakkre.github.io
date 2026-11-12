@@ -499,8 +499,8 @@ function renderNotes(p) {
   const box = $('problem-notes'), ta = $('notes-text');
   if (!progress || !p) { flushNotes(); box.hidden = true; notesKey = null; return; }
   box.hidden = false;
-  if (notesKey !== p.key) { flushNotes(); notesKey = p.key; ta.value = progress.note(p.key); $('notes-status').textContent = ''; renderNotesPreview(); }
-  else if (!notesDirty && document.activeElement !== ta && ta.value !== progress.note(p.key)) { ta.value = progress.note(p.key); renderNotesPreview(); } // changed on another device
+  if (notesKey !== p.key) { flushNotes(); notesKey = p.key; ta.value = progress.note(p.key); $('notes-status').textContent = ''; fitNotes(); renderNotesPreview(); }
+  else if (!notesDirty && document.activeElement !== ta && ta.value !== progress.note(p.key)) { ta.value = progress.note(p.key); fitNotes(); renderNotesPreview(); } // changed on another device
   $('notes-where').textContent = progress.user ? 'Private: only you can see these. Saved to your account.'
     : 'Private, saved in this browser. Sign in (top right) to keep notes on every device.';
 }
@@ -510,10 +510,25 @@ async function renderNotesPreview() {
   clearTimeout(previewTimer); previewTimer = null;
   const box = $('notes-preview'), body = $('notes-preview-body'), text = $('notes-text').value;
   const run = ++previewRun;
-  if (!/\$|\\\(|\\\[/.test(text)) { box.hidden = true; body.textContent = ''; return; }
-  box.hidden = false; body.textContent = text;
-  try { await typesetMath(body); } catch { if (run === previewRun) $('notes-preview-note').textContent = 'Math preview is unavailable right now.'; return; }
-  if (run === previewRun) $('notes-preview-note').textContent = '';
+  if (!/\$|\\\(|\\\[/.test(text)) { box.hidden = true; $('problem-notes').classList.remove('with-preview'); body.textContent = ''; body.style.minHeight = ''; return; }
+  // Hold the old height while the new text is typeset, so the page doesn't shrink and pull the view up.
+  if (!box.hidden) body.style.minHeight = `${body.offsetHeight}px`;
+  box.hidden = false; $('problem-notes').classList.add('with-preview'); body.textContent = text;
+  try { await typesetMath(body); } catch { if (run === previewRun) { body.style.minHeight = ''; $('notes-preview-note').textContent = 'Math preview is unavailable right now.'; } return; }
+  if (run === previewRun) { body.style.minHeight = ''; $('notes-preview-note').textContent = ''; followCaret(); }
+}
+// When the preview is a scrolling panel beside the note, show the part matching where the cursor is.
+function followCaret() {
+  const box = $('notes-preview'), ta = $('notes-text'), room = box.scrollHeight - box.clientHeight;
+  if (room <= 0 || document.activeElement !== ta || !ta.value.length) return;
+  box.scrollTop = Math.round(room * ta.selectionEnd / ta.value.length);
+}
+// Grow the note box to fit its text (no inner scrollbar), keeping the page where it is.
+function fitNotes() {
+  const ta = $('notes-text'), x = scrollX, y = scrollY;
+  ta.style.height = 'auto';
+  ta.style.height = `${ta.scrollHeight + ta.offsetHeight - ta.clientHeight}px`;
+  if (scrollX !== x || scrollY !== y) scrollTo(x, y);
 }
 async function flushNotes() {
   clearTimeout(notesTimer); notesTimer = null;
@@ -526,8 +541,9 @@ async function flushNotes() {
 }
 function setupNotes() {
   const ta = $('notes-text');
-  ta.addEventListener('input', () => { clearTimeout(previewTimer); previewTimer = setTimeout(renderNotesPreview, 400); notesDirty = true; $('notes-status').textContent = 'Saving…'; clearTimeout(notesTimer); notesTimer = setTimeout(flushNotes, 700); });
+  ta.addEventListener('input', () => { fitNotes(); clearTimeout(previewTimer); previewTimer = setTimeout(renderNotesPreview, 400); notesDirty = true; $('notes-status').textContent = 'Saving…'; clearTimeout(notesTimer); notesTimer = setTimeout(flushNotes, 700); });
   ta.addEventListener('blur', flushNotes);
+  addEventListener('resize', () => { if (!$('problem-notes').hidden) fitNotes(); });
   addEventListener('pagehide', flushNotes);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushNotes(); });
 }

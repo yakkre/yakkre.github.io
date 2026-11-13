@@ -228,14 +228,7 @@ tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
 .notes-head{display:flex;align-items:baseline;gap:10px}
 .notes-head h2{font-size:16px;font-weight:600;margin:0 0 6px}
 .notes-head .help{margin:0}
-#notes-text{display:block;width:100%;min-height:120px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:inherit;font:inherit;line-height:1.5;resize:none;overflow:hidden}
-/* The note box grows with its text (catalogue.js), so the cursor stays where you're reading instead of the page jumping to it.
-   With LaTeX in the note, the preview sits beside the box on wide screens so both are in view while typing. */
-.problem-notes.with-preview{max-width:none}
-@container (min-width:640px){
-  .with-preview .notes-editor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
-  .with-preview .notes-preview{margin-top:0;position:sticky;top:8px;max-height:calc(100vh - 16px);overflow:auto}
-}
+#notes-text{display:block;width:100%;min-height:120px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:inherit;font:inherit;line-height:1.5;resize:vertical}
 .problem-notes #notes-where{margin-top:4px}
 .note-tag{margin-left:6px;font-size:11px;font-weight:600;color:var(--sel)}
 .grid-cell{position:relative}

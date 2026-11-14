@@ -10,6 +10,42 @@
       "postDate": "Nov 2, 2005, 6:51 AM",
       "retrieved": "2026-11-01"
     },
+    "isl:1990:10": {
+      "text": "A plane tangent to the circumference of the base of a right circular cone passes through the midpoint of its altitude and cuts the cone into two parts. Find the volume of the smaller part as a fraction of the cone's volume.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1990,
+      "sourceProblem": "10",
+      "sourcePage": 260,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceAlias": "Legacy10 / ICE 2"
+    },
+    "isl:1990:11": {
+      "text": "Chords $AB,CD$ of a circle meet at $E$. Choose $M$ on chord $AB$, with $M\\ne E$, and draw the circle through $D,E,M$. Its tangent at $E$ meets lines $BC,AC$ at $F,G$. Given $AM/AB=\\lambda$, determine $GE/EF$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1990,
+      "sourceProblem": "11",
+      "sourcePage": 260,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceAlias": "Legacy11 / IND 3-prime / main IMO1"
+    },
+    "isl:1990:12": {
+      "text": "Through $C$ of triangle $ABC$, draw line $L\\parallel AB$. The internal bisector at $A$ meets $BC,L$ at $D,E$, respectively; the internal bisector at $B$ meets $AC,L$ at $F,G$. If $GF=DE$, prove that $AC=BC$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1990,
+      "sourceProblem": "12",
+      "sourcePage": 260,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceAlias": "Legacy12 / IRE 1"
+    },
     "isl:1990:13": {
       "text": "An eccentric mathematician has a ladder with $ n$ rungs that he always ascends and descends in the following way: When he ascends, each step he takes covers $ a$ rungs of the ladder, and when he descends, each step he takes covers $ b$ rungs of the ladder, where $ a$ and $ b$ are fixed positive integers. By a sequence of ascending and descending steps he can climb from ground level to the top rung of the ladder and come back down to ground level again. Find, with proof, the minimum value of $ n,$ expressed in terms of $ a$ and $ b.$",
       "kind": "forum",
@@ -198,6 +234,18 @@
       "author": "orl",
       "postDate": "Aug 15, 2008, 10:53 AM",
       "retrieved": "2026-11-02"
+    },
+    "isl:1990:9": {
+      "text": "Triangle $ABC$ has incenter $K$. Let $C_1,B_1$ be the midpoints of $AB,AC$. Put $B_2=C_1K\\cap AC$ and $C_2=B_1K\\cap AB$. If triangles $AB_2C_2$ and $ABC$ have equal areas, determine $\\angle CAB$.",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1990,
+      "sourceProblem": "9",
+      "sourcePage": 260,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceAlias": "Legacy9 / HUN 3"
     },
     "isl:1991:1": {
       "text": "Let $P$ be inside triangle $ABC$. Drop perpendiculars from $P$ to $AC,BC$, with feet $P_1,P_2$. Drop perpendiculars from $C$ to $AP,BP$, with feet $Q_1,Q_2$. Prove that $Q_1P_2,Q_2P_1,AB$ are concurrent.",
@@ -423,6 +471,18 @@
       "verified": "2026-11-10",
       "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
       "sourceAlias": "Legacy4 / FRA 2 / main IMO5"
+    },
+    "isl:1991:6": {
+      "text": "Let $I$ be the incenter of triangle $ABC$, and let $\\ell_A,\\ell_B,\\ell_C$ be its internal angle-bisector lengths. Prove that\n$$\\frac14<\\frac{IA\\cdot IB\\cdot IC}{\\ell_A\\ell_B\\ell_C}\\leq\\frac8{27}.$$",
+      "kind": "reference",
+      "sourceUrl": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf",
+      "sourceYear": 1991,
+      "sourceProblem": "6",
+      "sourcePage": 264,
+      "sourceLabel": "The IMO Compendium compiled shortlist reproduction; organizer-original provenance distinguished",
+      "verified": "2026-11-10",
+      "transcription": "Mathematically equivalent wording and normalized LaTeX; matched to the complete printed statement.",
+      "sourceAlias": "Legacy6 / USS 4 / main IMO1"
     },
     "isl:1991:7": {
       "text": "Let $O$ be the circumsphere center of tetrahedron $ABCD$, and let $L,M,N$ be the midpoints of $BC,CA,AB$. Suppose\n$$AB+BC=AD+CD,\\quad BC+CA=BD+AD,\\quad CA+AB=CD+BD.$$\nProve that $\\angle LOM=\\angle MON=\\angle NOL$.",
@@ -9663,11 +9723,6 @@
     }
   },
   "pendingKeys": [
-    "isl:1994:G2",
-    "isl:1991:6",
-    "isl:1990:9",
-    "isl:1990:10",
-    "isl:1990:11",
-    "isl:1990:12"
+    "isl:1994:G2"
   ]
 }

@@ -46,6 +46,7 @@ def apply(data, ledger):
         if p is None:
             continue  # row not in this export (e.g. not yet reviewed); keep the ledger entry
         g = p.get('geometry')
+        newly_reviewed = False  # analytic route that had no primary before this entry
         for raw in e.get('addTags', []):
             route, _, label = raw.partition(':') if raw.startswith(('syn:', 'ana:')) else ('', '', raw)
             tag_id = labels[label]
@@ -58,6 +59,7 @@ def apply(data, ledger):
                 a = g['analytic']
                 if not a['primaryTag']:
                     a['primaryTag'] = tag_id
+                    newly_reviewed = True
                     if e.get('ana_status'):
                         a['status'] = e['ana_status']
                     p['primaryTags'] = [v for v in [g['synthetic']['primaryTag'], a['primaryTag']] if v]
@@ -65,7 +67,15 @@ def apply(data, ledger):
                     _add(a['additionalTags'], tag_id)
             _add(p['tags'], tag_id)
         if g and e.get('ana_explanation'):
-            g['analytic']['explanation'] = _append(g['analytic']['explanation'], e['ana_explanation'])
+            a = g['analytic']
+            if newly_reviewed:
+                # The old text was a "pending" note; keep it as a reference, not as the explanation.
+                old = a['explanation']
+                a['explanation'] = e['ana_explanation']
+                if old and old != e['ana_explanation']:
+                    a['references'] = _append(a['references'], 'earlier note: ' + old, ' | ')
+            else:
+                a['explanation'] = _append(a['explanation'], e['ana_explanation'])
         if g and e.get('ana_refs'):
             g['analytic']['references'] = _append(g['analytic']['references'], e['ana_refs'], ' | ')
         p['explanation'] = _append(p['explanation'], e.get('explanationAppend'))

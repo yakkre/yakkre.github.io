@@ -39,6 +39,18 @@ class TailPass(unittest.TestCase):
         apply(data, LEDGER)
         self.assertEqual(data, once)
 
+    def test_new_analytic_route_replaces_pending_note(self):
+        data = toy()
+        data['problems'][1]['geometry']['analytic']['explanation'] = 'Pending: no analytic proof found.'
+        ledger = dict(entries={'isl:1:G1': dict(range='r', note='n', addTags=['ana:G: Complex numbers'],
+                                                ana_status='Reviewed', ana_explanation='Complex bash.', ana_refs='#9 user')})
+        apply(data, ledger)
+        apply(data, ledger)
+        ana = data['problems'][1]['geometry']['analytic']
+        self.assertEqual(ana['explanation'], 'Complex bash.')
+        self.assertIn('earlier note: Pending: no analytic proof found.', ana['references'])
+        self.assertEqual(ana['references'].count('earlier note'), 1)
+
     def test_existing_analytic_primary_is_kept(self):
         data = toy()
         data['problems'][1]['geometry']['analytic'] = dict(primaryTag=62, additionalTags=[], explanation='', references='', status='Reviewed')

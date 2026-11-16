@@ -2020,6 +2020,170 @@
    "date": "2026-11-16",
    "range": "#94–#103 of 103 (all loaded); middle skimmed by thanks",
    "note": "Late posts (thomasuh12 #94, Royal_mhyasd #95, KlepoNT #96, e2.718281828 #97, megahertz13 #98, isache #99, maromex #100, alupigus #101, UberPiggy #102, Nemo99999 #103) take large primes p≡1 mod 4 with p | n²+1 and choose n<p/2 with size bounds; corroborates existing tags."
+  },
+  "isl:2007:A1": {
+   "date": "2026-11-16",
+   "range": "#54–#63 of 63 (all loaded)",
+   "note": "Late posts (cj13609517288 #54, User-1948581 #55, maromex #56, endless_abyss #57, anudeep #58, SomeonecoolLovesMaths #59, sks987 #60, lpieleanu #61, Shiny_zubat #62, CubeAlgo15 #63) use the maximal drop a_i−a_j and the triangle inequality with x_i = max(a_1..a_i) − d/2; corroborates existing tags."
+  },
+  "isl:2007:A2": {
+   "date": "2026-11-16",
+   "range": "#30–#39 of 39 (all loaded; first live-thread read)",
+   "note": "Late posts (cursed_tangent1434 #30, pie854 #31–#32, N3bula #33, ezpotd #34, heheman #35, math-olympiad-clown #36, Likeminded2017 #37, son__im_crine #38, InftyByond #39) show f is nondecreasing with f(n) ≤ n+1 and give piecewise constructions for every value 1..2008; corroborates existing tags."
+  },
+  "isl:2007:A3": {
+   "date": "2026-11-16",
+   "range": "#27–#36 of 36 (all loaded; first live-thread read)",
+   "note": "Late posts (pie854 #27, cj13609517288 #28, endless_abyss #29, Alex-131 #32, User-1948581 #31/#33, Royal_mhyasd #34, Tomilovedoingmath #35, m735821 #36) bound each term by 1/x^k (or via (1+x^{2k})²/2) and sum the geometric series against y^n=1−x^n; corroborates existing tags."
+  },
+  "isl:2007:A4": {
+   "date": "2026-11-16",
+   "range": "#103–#112 of 112 (all loaded; first live-thread read); middle skimmed by thanks",
+   "note": "Late posts (User-1948581 #103, ThatApollo777 #104, Royal_mhyasd #105, papDEO #106, OronSH #107, ezpotd #108, V0305 #109, MR.1 #110, m735821 #111, megahertz13 #112) show f(y)>y, injectivity and Cauchy-type additivity of f(x)−2x to get f(x)=2x; corroborates existing tags."
+  },
+  "isl:2007:A5": {
+   "date": "2026-11-16",
+   "range": "#5–#17 of 17 (all loaded; first live-thread read)",
+   "note": "Late posts (bodan #5 binary representation, GoldenFrog1618 #6, JuanOrtiz #7, ABCDE #8, Kayak #10 query, alexiaslexia #11, Supercali #12, IAmTheHazard #14/#17, starchan #16) split n into powers of 2 and use the superadditivity inequality with Σ1/2^... bounds; corroborates existing sequence/digits/induction tags."
+  },
+  "isl:2007:A6": {
+   "date": "2026-11-16",
+   "range": "#16–#26 of 26 (all loaded; first live-thread read)",
+   "note": "Late posts (berik #17, F10tothepowerof34 #20 (Chebyshev step criticised in #23), awesomeming327. #22 and m735821 #26 Lagrange multipliers, PEKKA #24 Cauchy–Schwarz (flagged in #25)) corroborate the standard and optimisation tags."
+  },
+  "isl:2007:A7": {
+   "date": "2026-11-16",
+   "range": "#31–#40 of 40 (all loaded)",
+   "note": "Late posts (ZETA_in_olympiad #33, JAnatolGT_00 #34, Leo.Euler #35, YaoAOPS #36, dolphinday #37 and HamstPan38825 #39 and ezpotd #40 polynomial/Combinatorial-Nullstellensatz arguments, kingu #38 official 'normal' solution) give 3n planes with the x+y+z=i construction; corroborates existing tags (tari3x #31–#32 discuss a variant)."
+  },
+  "isl:2007:C1": {
+   "date": "2026-11-16",
+   "range": "#36–#46 of 46 (all loaded; first live-thread read)",
+   "note": "Late posts (YaoAOPS #37 grid model, wangyanliluke #38, eg4334 #39, lpieleanu #40, Ilikeminecraft #42, Just1 #43 blocks, m735821 #45, DensSv #46) show the unique 0…0|0…01|…|1…1 sequence via the chain of block-sum inequalities; corroborates existing tags."
+  },
+  "isl:2007:C2": {
+   "date": "2026-11-16",
+   "range": "#20–#29 of 29 (all loaded)",
+   "note": "Late posts (asdf334 #20, ihatemath123 #21, ezpotd #22, heheman #23, Bonime #24, cursed_tangent1434 #25, BS2012 #26, lpieleanu #27, Adit-Reddy #28 cutting lines) use maximal internal segments and an extremal rectangle to find one touching no boundary; corroborates existing tags."
+  },
+  "isl:2007:C3": {
+   "date": "2026-11-16",
+   "range": "#28–#37 of 37 (all loaded; first live-thread read)",
+   "note": "mananaban #36 and ezpotd #37 give complete generating-function proofs: with r(x), b(x) the red/blue generating polynomials, r³+b³=(r+b)(r²−rb+b²) and r(ω)+b(ω)=0 at non-trivial n-th roots of unity, so the roots-of-unity filter gives exactly r²−rb+b² monochromatic triples, and r²−rb+b²=2007 is solved to n=69, 84. Added Algebraic combinatorics methods. Also YaoAOPS #28, megarnie #31, smileapple #33, eg4334 #34, mananaban #35 (double counting); Curious_Droid #29 is a sketch.",
+   "addTags": [
+    "C: Algebraic combinatorics methods"
+   ],
+   "explanationAppend": "A late forum proof uses a roots-of-unity filter on the red and blue generating polynomials: since r+b vanishes at non-trivial n-th roots of unity, the count of monochromatic triples is exactly r²−rb+b².",
+   "cite": "#36 (mananaban) and #37 (ezpotd) complete generating-function proofs"
+  },
+  "isl:2007:C4": {
+   "date": "2026-11-16",
+   "range": "#6–#18 of 18 (all loaded; first live-thread read)",
+   "note": "Late posts (DrMath #6 fractional parts, yayups #7, Kayak #8, mathaddiction #9, hakN #10, L567 #14, bluelinfish #15 and AwesomeYRY #16 Σx_i² monovariant, everythingpi3141592 #17) show the sum of squares strictly increases while all |x| < n/2, a contradiction; corroborates existing tags."
+  },
+  "isl:2007:C5": {
+   "date": "2026-11-16",
+   "range": "#5–#15 of 15 (all loaded; first live-thread read)",
+   "note": "Late posts (leader #5, AnonymousBunny #6, JuanOrtiz #7, william122 #9, TheUltimate123 #11, Kayak #12, awesomeming327. #13 ±1 colour function, User-1948581 #14–#15) reduce to integer sides with gcd 1 and use periodicity of the colouring sequence; corroborates existing tags."
+  },
+  "isl:2007:C6": {
+   "date": "2026-11-16",
+   "range": "#84–#93 of 93 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (topfyfwhoami #84, 606234 #85, Sprites #86, RGB #87, awesomeming327. #88, huashiliao2020 #89, CircleInvert #90, N3bula #91, YaoAOPS #92, bin_sherlo #93) start with a maximum clique in one room and move vertices one at a time, tracking clique numbers; corroborates existing tags."
+  },
+  "isl:2007:C7": {
+   "date": "2026-11-16",
+   "range": "#1–#11 of 11 (whole thread; first live-thread read)",
+   "note": "Posts (DisnerComputuar #3, Taha1381 #5 double counting, 62861 #6, yugrey #7 Daykin–Frankl reference, CANBANKAN #8 optimality of (3−√5)/2, squareman #9, YaoAOPS #10, awesomeming327. #11 block construction) corroborate the set-system/counting tags."
+  },
+  "isl:2007:C8": {
+   "date": "2026-11-16",
+   "range": "#1–#8 of 8 (whole thread; first live-thread read)",
+   "note": "Posts (test20 #2, JuanOrtiz #5, yayups #8 counting triples (T,v,ε)) bound good equilateral triangles by a double count over vertices; corroborates existing tags."
+  },
+  "isl:2007:G1": {
+   "date": "2026-11-16",
+   "range": "#137–#148 of 148 (all loaded); middle skimmed by thanks",
+   "note": "cheltstudent #148 gives a complete barycentric proof: R=(a(a+b):b(a+b):−c²), P=(a²:ab:ab+b²−c²), Q=(ab:b²:ab+a²−c²); all rows have the same coordinate sum, and the two area determinants agree in absolute value (checked numerically), so [KPR]=[LQR]. Added Barycentric coordinates to the analytic route. Also Kempu33334 #137, YaoAOPS #138, Math_AlexG #141, cyroah1331 #143 (PK, QL meet at O), Benjaminxiao #144 sine-area, NicoN9 #145, mucube #146.",
+   "addTags": [
+    "ana:G: Barycentric coordinates"
+   ],
+   "cite": "#148 (cheltstudent) complete barycentric proof"
+  },
+  "isl:2007:G2": {
+   "date": "2026-11-16",
+   "range": "#43–#52 of 52 (all loaded)",
+   "note": "Late posts (LeYohan #44, blueprimes #45, cyroah1331 #47 parallelogram, Andyluo #48, TheOneAndOnlyOFT #49 and m735821 #50 midpoint N of BT with XTNM cyclic, Half_Blood_Prince #51, zhoujef000 #52) corroborate angle/reflection tags; ezpotd #43 complex bash matches the analytic primary."
+  },
+  "isl:2007:G3": {
+   "date": "2026-11-16",
+   "range": "#65–#75 of 75 (all loaded)",
+   "note": "Late posts (Bonime #67, reyaansh_agrawal #69 and RadiantMeteor #75 homothety at P, bayern271 #70, ezpotd #71, V0305 #72, Half_Blood_Prince #74 isogonality; Siddharthmaybe #68 and numbertheory97 #73 short DDIT sketches) corroborate homothety/isogonal tags; Ilovegeom1 #65 barycentric matches the analytic primary."
+  },
+  "isl:2007:G4": {
+   "date": "2026-11-16",
+   "range": "#88–#97 of 97 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ihatemath123 #88 homothety, ItsBesi #89, Nari_Tom #90, blueprimes #91, DensSv #93, LHE96 #94 and Eda_no11 #95 reflection of F, PSS1234 #96 and ezpotd #97 Simson line + homothety) corroborate homothety/similarity tags."
+  },
+  "isl:2007:G5": {
+   "date": "2026-11-16",
+   "range": "#27–#36 of 36 (all loaded)",
+   "note": "Late posts (awesomeming327. #27, huashiliao2020 #28 and YaoAOPS #32 Pascal, mcmp #29, MathLuis #30 area, Half_Blood_Prince #33, ezpotd #34, borovtori #35, otwaenng #36) corroborate projective/area/Ceva tags; Double07 #31 complex bash matches the analytic tags."
+  },
+  "isl:2007:G6": {
+   "date": "2026-11-16",
+   "range": "#1–#10 of 10 (whole thread)",
+   "note": "Posts (math154 #3, JuanOrtiz #4 lemma (questioned by shanelin-sigma #8–#9), awesomeming327. #5, HamstPan38825 #6 degenerate construction, endless_abyss #7, H_Taken #10 three lemmas) prove k=1 via area ratios; corroborates existing area/extremal tags and the analytic tags."
+  },
+  "isl:2007:G7": {
+   "date": "2026-11-16",
+   "range": "#1–#9 of 9 (whole thread); analytic scan #1–#9",
+   "note": "Posts (pohoatza #3 metric lemma ∠KID=(B−C)/2 via the law of cosines, The QuattoMaster 6000 #4, nima1376 #5, anantmudgal09 #6, nikolapavlovic #7, awesomeming327. #8 antipode, GrantStar #9 two cases) corroborate synthetic tags. Analytic scan: pohoatza #3 uses a law-of-cosines length computation only for the lemma inside a synthetic argument; no complete analytic proof, analytic route stays pending."
+  },
+  "isl:2007:G8": {
+   "date": "2026-11-16",
+   "range": "#26–#36 of 36 (all loaded); analytic scan #1–#36",
+   "note": "Late posts (Ywgh1 #26, MathLuis #27, bin_sherlo #29 exsimilicentres, Ilikeminecraft #30, OronSH #31 Pitot + Monge, SleepyGirraffe #32, Ciobi_ #33 moving points, V0305 #34, HHGB #35 hyperbola with foci, otwaenng #36) corroborate homothety/projective/metric tags. Analytic scan: no coordinate or trigonometric proof; analytic route stays pending."
+  },
+  "isl:2007:N1": {
+   "date": "2026-11-16",
+   "range": "#43–#52 of 52 (all loaded; first live-thread read)",
+   "note": "Late posts (sansgankrsngupta #43, lunasgraph_d #44, math-olympiad-clown #45, Markas #46, lelouchvigeo #47, alexanderhamilton124 #48, L13832 #49, ray66 #50, lpieleanu #51, maromex #52) force a, b even, factor 7^{2l}−3^{4k} as a difference of squares and bound sizes; corroborates existing tags."
+  },
+  "isl:2007:N2": {
+   "date": "2026-11-16",
+   "range": "#81–#91 of 91 (all loaded; first live-thread read)",
+   "note": "Late posts (ray66 #81, Eka01 #82, maromex #83, AlastorMoody #84, bir_mat_oimpiyatcisi #85, Royal_mhyasd #86, InftyByond #87, Sxmplicity #89, SomeonecoolLovesMaths #90, Adit-Reddy #91) take k=b² or k=p^{ν_p(b)+1} to show n | ν_p(b); corroborates existing tags."
+  },
+  "isl:2007:N3": {
+   "date": "2026-11-16",
+   "range": "#18–#27 of 27 (all loaded; first live-thread read)",
+   "note": "Late posts (huashiliao2020 #18, awesomeming327. #19, john0512 #20, HamstPan38825 #21 and cursed_tangent1434 #22 the sets {±r,±3r,…,±9r}, ray66 #25, Martin2001 #26–#27) average over the 46 multiplicative translates to find a set capturing ≥ 2007 elements; corroborates existing additive/global tags."
+  },
+  "isl:2007:N4": {
+   "date": "2026-11-16",
+   "range": "#17–#32 of 32 (all loaded; first live-thread read)",
+   "note": "Late posts (jj_ca888 #17, GeronimoStilton #18, oVlad #19, IAmTheHazard #20 Kummer, HamstPan38825 #24, awesomeming327. #26, Ritwin #27, Mr.Sharkman #29, ray66 #31) compute ν2 of the binomial difference via the product of odd numbers and congruences mod powers of 2; corroborates existing tags."
+  },
+  "isl:2007:N5": {
+   "date": "2026-11-16",
+   "range": "#55–#64 of 64 (all loaded; first live-thread read)",
+   "note": "Late posts (lpieleanu #55, Ilikeminecraft #56, bin_sherlo #57, eg4334 #58, MR.1 #59, Kempu33334 #60, cosinesine #61 same-radical relation, Royal_mhyasd #62–#63 induction on 2^n) show f(2^n)=2^n, f(2^n−1)=2^n−1 and f is the identity; corroborates existing tags."
+  },
+  "isl:2007:N6": {
+   "date": "2026-11-16",
+   "range": "#1–#7 of 7 (whole thread; first live-thread read)",
+   "note": "Posts (The QuattoMaster 6000 #2, AMN300 #3, GeronimoStilton #4, megarnie #5, metricpaper #6, Assassino9931 #7) reduce to IMO 2007/5 (Vieta-jumping descent) with a=k, b=2n; corroborates existing tags."
+  },
+  "isl:2007:N7": {
+   "date": "2026-11-16",
+   "range": "#5–#15 of 15 (all loaded; first live-thread read)",
+   "note": "yayups #8 gives a complete proof via Legendre's formula ν_p(n!)=(n−s_p(n))/(p−1): with widely spaced powers (p1⋯pk)^{a_j}, base-p digit sums add, so ν_p is additive over the blocks and pigeonhole on the residues mod d gives n with d | ν_{p_i}(n) for all i; Ru83n05 #11, Zhero #5, IAmTheHazard #12 use the same digit-sum idea. Added Digits and representations.",
+   "addTags": [
+    "N: Digits and representations"
+   ],
+   "explanationAppend": "A late forum proof uses ν_p(n!)=(n−s_p(n))/(p−1): sums of widely spaced powers of p1⋯pk have additive base-p digit sums, and pigeonhole on the resulting valuation vectors mod d gives the required n.",
+   "cite": "#8 (yayups) complete digit-sum proof"
   }
  }
 }

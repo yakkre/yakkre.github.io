@@ -1430,6 +1430,299 @@
    "date": "2026-11-16",
    "range": "#33–#43 of 43 (all loaded)",
    "note": "Late posts (dolphinday #33, awesomeming327. #35, ihatemath123 #37 moving points, ohiorizzler1434 #36 nine-point circle, Ilikeminecraft #38, Aiden-1089 #39 homothety, hung9A #40, ezpotd #42 spiral similarity) corroborate spiral-similarity tags; SimplisticFormulas #41 and pl246631 #43 complex routes match the analytic primary."
+  },
+  "isl:2015:G1": {
+   "date": "2026-11-16",
+   "range": "#161–#173 of 173 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Ilikeminecraft #161, otwaenng #162, Royal_mhyasd #163, cyroah1331 #164 cyclic BGCH, NicoN9 #165 and lpieleanu #167 and pirateNT0611 #173 reflection of H over AC, alexanderchew #166, DensSv #169 parallelogram, FunctionGenerator #171 power of a point) corroborate existing tags."
+  },
+  "isl:2015:G2": {
+   "date": "2026-11-16",
+   "range": "#109–#118 of 118 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Eda_no11 #110 and mael_AMO #111 AO ⟂ FG, Ilikeminecraft #113, otwaenng #114, Math1lover #115, cyroah1331 #116, InftyByond #117, Assassino9931 #118) angle chase to the isosceles triangle on FG; Thelink_20 #112 complex bash matches the analytic primary. Corroborates existing tags."
+  },
+  "isl:2015:G3": {
+   "date": "2026-11-16",
+   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Markas #99, PSS1234 #100 ratio AH/BH, V0305 #101, Math1lover #102, littlefox_amc #104, pirateNT0611 #105 phantom points, Ashwath2011 #106, alupigus #107) corroborate synthetic tags; Siddharthmaybe #108 Cartesian coordinates matches the analytic primary."
+  },
+  "isl:2015:G4": {
+   "date": "2026-11-16",
+   "range": "#68–#77 of 77 (all loaded)",
+   "note": "Scilyse #70 gives a complete complex-number proof (B=0, A,P real, C,Q on rℝ; the two concyclicity conditions give (a+c'r)(a+c'/r)=2(p+q'r)(p+q'/r), i.e. 4|m|²=2|t|²); added Complex numbers to the analytic route. InterLoop #72 is a second complex route; shendrew7 #71, Royal_mhyasd #73, zhoujef000 #74, V0305 #75, Ashwath2011 #77 barycentric (matches primary); YaoAOPS #68 Miquel point, ezpotd #76 synthetic.",
+   "addTags": [
+    "ana:G: Complex numbers"
+   ],
+   "cite": "#70 (Scilyse) complete complex-number proof"
+  },
+  "isl:2015:G5": {
+   "date": "2026-11-16",
+   "range": "#31–#40 of 40 (all loaded)",
+   "note": "Late posts (Saucepan_man02 #31 Menelaus, lelouchvigeo #32 Reim, Ilikeminecraft #33 DIT, CatinoBarbaraCombinatoric #34, OronSH #35, Benjaminxiao #37, b1zmark #38, bin_sherlo #39, kotmhn #40) use the power-of-point cyclicity of FGH'I' and Menelaus; YaoAOPS #36 bash. Corroborates existing tags."
+  },
+  "isl:2015:G6": {
+   "date": "2026-11-16",
+   "range": "#164–#174 of 174 (all loaded); analytic scan #1–#174",
+   "note": "Late posts (Stead #164, InterLoop #165, pirateNT0611 #166, Cool12345678 #167, Mo.11ss #168, PK10 #173 negative inversion at H; konargyr14 #169/PK10 #174 length computation; otwaenng #170) corroborate inversion tags. Analytic scan: leminscate #5 (cited) complex route, EulerMacaroni #41 inversion+complex hybrid, pi37 #42 length bash; no new pure analytic proof, hybrid status stands."
+  },
+  "isl:2015:G7": {
+   "date": "2026-11-16",
+   "range": "#27–#36 of 36 (all loaded)",
+   "note": "Late posts (rcorreaa #27, MarkBcc168 #28 DDIT finish, math_comb01 #29 Pitot + Monge, Shreyasharma #30, awesomehuman #31, Ywgh1 #32, mcmp #33, kotmhn #35) first show ABCD tangential by Pitot and then use Monge/homothety; corroborates existing tags."
+  },
+  "isl:2015:G8": {
+   "date": "2026-11-16",
+   "range": "#5–#15 of 15 (all loaded); analytic scan #1–#15",
+   "note": "Late posts (william122 #5, SnowPanda #6, Idio-logy #7, L567 #8, Inconsistent #9, Eyed #10, YaoAOPS #11, Leo.Euler #13, awesomehuman #14, BS2012 #15) show every triangle of a Thaiangulation shares a side with Π and finish by area comparison; corroborates existing tags. Analytic scan: barycentrics/coordinates appear only as single steps inside these combinatorial arguments; analytic route stays pending."
+  },
+  "isl:2014:G1": {
+   "date": "2026-11-16",
+   "range": "#207–#216 of 216 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Jupiterballs #208, cubres #210 cotangent trick, Sxmplicity #211, methovermath #212, otwaenng #214 projective, pirateNT0611 #215, benjaminchew13 #216) show the tangents at B, C are parallel to AP, AQ and conclude by similar triangles; Ashwath2011 #207 and hellohi321 #213 barycentric (matches analytic primary). Corroborates existing tags."
+  },
+  "isl:2014:G2": {
+   "date": "2026-11-16",
+   "range": "#8–#18 of 18 (all loaded); analytic scan #1–#18",
+   "note": "Late posts (mastermind.hk16 #10 and JAnatolGT_00 #11 and awesomeming327. #14 and ezpotd #17 Ceva ratio pigeonhole, asdf334 #12 sketch, Inconsistent #13 and OronSH #18 parallel-tangent homothety, popop614 #15) corroborate the homothety/Ceva tags. Analytic scan: no coordinate or trigonometric proof (the ratio arguments are synthetic); analytic route stays pending."
+  },
+  "isl:2014:G3": {
+   "date": "2026-11-16",
+   "range": "#48–#57 of 57 (all loaded)",
+   "note": "Late posts (SimplisticFormulas #48, Rayvhs #49, eg4334 #50 and ezpotd #52 cyclic PQNO, Giant_PT #51, YaoAOPS #53, Assassino9931 #55) corroborate radical/angle tags; Andyluo #56 complex bash matches the analytic primary; #54/#57 discuss a generalisation."
+  },
+  "isl:2014:G4": {
+   "date": "2026-11-16",
+   "range": "#24–#33 of 33 (all loaded)",
+   "note": "Late posts (popop614 #24, HamstPan38825 #25, IAmTheHazard #26, GeoKing #27 homothety at C, TestX01 #28 √ab inversion, Ilikeminecraft #29, jp62 #30, YaoAOPS #31, Scilyse #32, ezpotd #33) all invert at C to a fixed-line problem; corroborates existing Miquel/inversion/spiral tags."
+  },
+  "isl:2014:G5": {
+   "date": "2026-11-16",
+   "range": "#112–#122 of 122 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (DottedCaculator #112, L13832 #113 centres on AB, AD, Mysteriouxxx #115 isogonal conjugates, OronSH #116 force-overlay inversion, kotmhn #117, Royal_mhyasd #118, Mo.11ss #119 reflection of C, Cool12345678 #120, Bridgeon #121, otwaenng #122) corroborate reflection/angle tags."
+  },
+  "isl:2014:G6": {
+   "date": "2026-11-16",
+   "range": "#34–#43 of 43 (all loaded); analytic scan #1–#43",
+   "note": "Late posts (Ilikeminecraft #34, OronSH #35, GrantStar #36 AK, AM isogonal, bin_sherlo #37 and kotmhn #39 K = tangent intersection, Orzify #38, YaoAOPS #41 homothety, alupigus #42–#43) corroborate synthetic tags. Analytic scan: apotosaurus #32 mixes Cartesian coordinates (Claim 1), harmonic bundles, linearity of power and barycentrics, so it is a hybrid rather than an analytic route; m.candales #2 (already cited) and the many law-of-sines steps (#9, #21, #29, #36, #37) do not give a new pure analytic proof. Analytic route stays pending."
+  },
+  "isl:2014:G7": {
+   "date": "2026-11-16",
+   "range": "#50–#60 of 60 (all loaded)",
+   "note": "Late posts (thdnder #50 and Ilikeminecraft #55 and YaoAOPS #60 cyclic BYIV, awesomeming327. #51, ohhh #52, bin_sherlo #54, OronSH #57, iStud #58, cursed_tangent1434 #59 V is the arc midpoint) corroborate synthetic tags; davbeshka26 #56 barycentric matches the analytic primary."
+  },
+  "isl:2013:G1": {
+   "date": "2026-11-16",
+   "range": "#222–#231 of 231 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (quannc #222, maromex #223 and cyroah1331 #226 and SomeonecoolLovesMaths #231 Miquel point P with right angles, cubres #224, pirateNT0611 #227, pimarts #230 moving points) corroborate radical/Miquel tags. Rassym #229 sketches a composition of loosely defined projective maps; not rigorous enough to tag."
+  },
+  "isl:2013:G2": {
+   "date": "2026-11-16",
+   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (mananaban #99, Eda_no11 #100, lksb #101 and UberPiggy #107 reflection over the perpendicular bisector of AT (isosceles trapezoids), iStud #103, Assassino9931 #104, cyroah1331 #105, CubeAlgo15 #108) corroborate reflection/similarity tags."
+  },
+  "isl:2013:G3": {
+   "date": "2026-11-16",
+   "range": "#4–#15 of 15 (all loaded)",
+   "note": "Late posts (Generic_Username #4 flagged wrong in #5, william122 #8, bluelinfish #9, JAnatolGT_00 #11, Inconsistent #12, awesomeming327. #13, MathLuis #14, Zhaom #15) compare rhombus side lengths with angle-dependent bounds; corroborates existing metric/trigonometric tags."
+  },
+  "isl:2013:G4": {
+   "date": "2026-11-16",
+   "range": "#84–#93 of 93 (all loaded)",
+   "note": "Late posts (maths_enthusiast_0001 #84, lendsarctix280 #87, eg4334 #88, ezpotd #90 Reim, Benjaminxiao #91, V0305 #92, PC75 #93) show DRCQ cyclic and angle chase; Giant_PT #89 uses an inversion at A only to obtain AQ·AC=AD·AR (power of a point); OronSH #86 is a two-line inversion-at-B sketch. Corroborates existing tags."
+  },
+  "isl:2013:G5": {
+   "date": "2026-11-16",
+   "range": "#23–#35 of 35 (all loaded)",
+   "note": "Late posts (jj_ca888 #23, JAnatolGT_00 #27, awesomeming327. #29 and huashiliao2020 #32 parallelograms/translations, OronSH #33, DottedCaculator #34) corroborate reflection/translation tags; Davsch #24, Inconsistent #28, Leo.Euler #31 complex routes match the analytic primary."
+  },
+  "isl:2013:G6": {
+   "date": "2026-11-16",
+   "range": "#91–#101 of 101 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (bin_sherlo #91, torch #93, LHE96 #94, Royal_mhyasd #96, der_Englander #97, otwaenng #98/#101 Mandart circle, Math1lover #100) use excentres and the circumcentre of the extouch triangle; KnowingAnt #95 (15 thanks) is a long algebraic bash consistent with the analytic tags. Corroborates existing tags."
+  },
+  "isl:2012:G1": {
+   "date": "2026-11-16",
+   "range": "#166–#177 of 177 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (fruitmonster97 #166, quannc #167, CubeAlgo15 #171, futureMEDALIST #174, Primeniyazidayi #176, hellohi321 #177) show AFKJLG concyclic and finish by angle chasing; shendrew7 #168, PSS1234 #169, lpieleanu #170, cyroah1331 #175 barycentric routes match the analytic primary. Corroborates existing tags."
+  },
+  "isl:2012:G2": {
+   "date": "2026-11-16",
+   "range": "#110–#119 of 119 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Assassino9931 #110, cyroah1331 #111, megahertz13 #115 moving points, windrock #116 isogonality lemma, godchunguus #117 FBEA~FCGD, alupigus #118, MR.1 #119) corroborate spiral-similarity/isogonal tags; lpieleanu #112, TThB0501 #113, Ashwath2011 #114 complex routes match the analytic primary."
+  },
+  "isl:2012:G3": {
+   "date": "2026-11-16",
+   "range": "#85–#95 of 95 (all loaded)",
+   "note": "Late posts (ezpotd #85, mpcnotnpc #86, Eda_no11 #87, Lunatic_Lunar7986 #88, Cool12345678 #93 incentre on the radical axis, wangyanchuanjude #94, MR.1 #95) corroborate radical/spiral tags; Scilyse #89 and Ilovegeom1 #91/#92 complex/barycentric routes are already cited."
+  },
+  "isl:2012:G4": {
+   "date": "2026-11-16",
+   "range": "#95–#104 of 104 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (bir_mat_oimpiyatcisi #96, Benjaminxiao #97, lunasgraph_d #98, Illusioner #99 reflection over the perpendicular bisector, siamchung_degree #100 length chase, CubeAlgo15 #101, Math_AlexG #102, amogususususus #103) use the arc midpoint and power of a point; corroborates existing tags."
+  },
+  "isl:2012:G5": {
+   "date": "2026-11-16",
+   "range": "#139–#149 of 149 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (One_piece_fan #139, Warideeb #140, blueprimes #142, mudkip42 #143, Ashwath2011 #145, Siddharthmaybe #146, otwaenng #147, megahertz13 #149) use the circles about A and B through C and power of a point; Royal_mhyasd #141 orthocentre route; Andyluo #144 coordinate bash matches the analytic primary. Corroborates existing tags."
+  },
+  "isl:2012:G6": {
+   "date": "2026-11-16",
+   "range": "#80–#89 of 89 (all loaded)",
+   "note": "Late posts (YaoAOPS #80 Bevan point, ezpotd #81 Ptolemy, cj13609517288 #82, Om245 #83, cubres #85, BS2012 #86 Miquel point P, Royal_mhyasd #88, ihatemath123 #89 reflections of I) corroborate power/Miquel/similarity tags; Thelink_20 #84 barycentric matches the analytic primary."
+  },
+  "isl:2012:G7": {
+   "date": "2026-11-16",
+   "range": "#8–#17 of 17 (all loaded); analytic scan #1–#17",
+   "note": "Late posts (DrMath #10, MarkBcc168 #11, olympiadguru #12, mathaddiction #13, JAnatolGT_00 #14, Inconsistent #15 projective maps, awesomeming327. #16, OronSH #17 excircle/incircle of TAB, TCD) corroborate similarity/homothety tags. Analytic scan: only sine-ratio steps inside synthetic arguments (#7, #16) and a coordinate alignment remark (#15); no complete analytic proof, analytic route stays pending."
+  },
+  "isl:2012:G8": {
+   "date": "2026-11-16",
+   "range": "#47–#56 of 56 (all loaded)",
+   "note": "Late posts (cubres #48 linear power, Benjaminxiao #49, bin_sherlo #50, Royal_mhyasd #51 power-ratio coaxality, V0305 #52 inversion, MarkBcc168 #53 and otwaenng #54 DDIT, Mano #55 moving points, H_Taken #56) corroborate radical/inversion/projective tags; Scilyse #47 complex matches the analytic primary."
+  },
+  "isl:2011:G1": {
+   "date": "2026-11-16",
+   "range": "#47–#56 of 56 (all loaded)",
+   "note": "Late posts (Maximilian113 #47, HamstPan38825 #48, InterLoop #49, OronSH #50, happypi31415 #51, ihatemath123 #53, InftyByond #54, cyroah1331 #56) show ∠A<60° from the angle condition and finish with OL ≥ R cos(A/2)-type bounds; corroborates existing angle/metric and trigonometric tags."
+  },
+  "isl:2011:G2": {
+   "date": "2026-11-16",
+   "range": "#28–#38 of 38 (all loaded)",
+   "note": "Pitchu-25 #29 gives a complete trigonometric proof: each power equals −sin(α_{i−1}+α_{i+1})·(product of adjacent sides)/sin α_{i+2} by the law of sines, and pairing opposite terms gives −T/sin(α2+α4) and −T/sin(α1+α3) with T=2S/(product of sides), which cancel since sin(α1+α3)=−sin(α2+α4); added Trigonometric computation to the analytic route. Also InterLoop #35 and m735821 #38 linearity of power, Novmath #34 and cyroah1331 #36 barycentric (matches analytic tags), AylyGayypow009 #31, ezpotd #32, lpieleanu #37.",
+   "addTags": [
+    "ana:G: Trigonometric computation"
+   ],
+   "cite": "#29 (Pitchu-25) complete trigonometric proof"
+  },
+  "isl:2011:G3": {
+   "date": "2026-11-16",
+   "range": "#32–#41 of 41 (all loaded); analytic scan #1–#41",
+   "note": "Late posts (huashiliao2020 #32 sketch, Shreyasharma #33, GrantStar #34, shendrew7 #35, Ywgh1 #36 sketch, YaoAOPS #37, OronSH #38 isogonal conjugates, Sanjana42 #39, reyaansh_agrawal #40) use pedal points of E, F and radical axes; corroborates existing tags. Analytic scan: only a sine-ratio step in #38; analytic route stays pending."
+  },
+  "isl:2011:G4": {
+   "date": "2026-11-16",
+   "range": "#150–#160 of 160 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (SimplisticFormulas #150 cross ratios, Royal_mhyasd #153–#154, shendrew7 #157 and Math_AlexG #158 D, G, T collinear by homothety, Hip1zzzil #160) corroborate projective/homothety tags; Namura #151 complex matches the analytic primary. Sir_Denungerus #156 and Primeniyazidayi #159 sketch a √(bc/2) / √bc inversion, but #156's reduction uses undefined images (G') and #159 is storage-level, so no Inversion tag added."
+  },
+  "isl:2011:G5": {
+   "date": "2026-11-16",
+   "range": "#80–#89 of 89 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (lian_the_noob12 #80, Lunatic_Lunar7986 #81 poles, stanpi31415 #82, ezpotd #83, SleepyGirraffe #85, reyaansh_agrawal #86, pl246631 #88, Primeniyazidayi #89) use Pascal on AADBBE plus homothety; PikaBlaze #84 length chase; siamchung_degree #87 Pascal + law of sines hybrid. Corroborates existing tags."
+  },
+  "isl:2011:G6": {
+   "date": "2026-11-16",
+   "range": "#60–#69 of 69 (all loaded)",
+   "note": "Late posts (pikapika007 #60, MathMaxGreat #61 E is the incentre of ABD, shendrew7 #62, Lunatic_Lunar7986 #64, bin_sherlo #65, stanpi31415 #66, cubres #67, Scilyse #68, yang71 #69) corroborate power/angle/radical tags; llddmmtt1 #63 barycentric matches the analytic primary."
+  },
+  "isl:2011:G7": {
+   "date": "2026-11-16",
+   "range": "#14–#23 of 23 (all loaded)",
+   "note": "Late posts (DrMath #14 length bash with f(P)=DP²−FP², MarkBcc168 #15 tangent lengths, yayups #16, mira74 #17 moving points, mathaddiction #18, IndoMathXdZ #19, VicKmath7 #20, PNT #21, OronSH #22 reflections of B, ihatemath123 #23) corroborate the metric/reflection/radical tags."
+  },
+  "isl:2011:G8": {
+   "date": "2026-11-16",
+   "range": "#92–#102 of 102 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Mr.Sharkman #92, davbeshka26 #94, bin_sherlo #95 anti-Steiner point, YaoAOPS #96, cursed_tangent1434 #97, SleepyGirraffe #100, Gandalf_Greyhame #101) reflect the tangency point over the sides and use Miquel/reflection arguments; KnowingAnt #98 outlines a complex bash (matches the analytic primary). Corroborates existing tags."
+  },
+  "isl:2010:C1": {
+   "date": "2026-11-16",
+   "range": "#39–#49 of 49 (all loaded)",
+   "note": "Late posts (blueprimes #39, Blast_S1 #40, akasht #41 block construction, lpieleanu #42, mananaban #44, busy-beaver #45, ray66 #46 and V0305 #48 graph interpretation with 67 = C(5,2)+C(6,2)+C(7,2), Schintalpati #47, isache #49) give explicit preference constructions counting linear extensions; corroborates existing tags."
+  },
+  "isl:2010:C2": {
+   "date": "2026-11-16",
+   "range": "#40–#49 of 49 (all loaded)",
+   "note": "Late posts (asdf334 #40, abeot #41, ezpotd #43, Ilikeminecraft #44, TwentyIQ #45, Kempu33334 #46, BS2012 #47, lpieleanu #48, numbertheory97 #49) use the binary interpretation, the 2^{N−2} counterexample and an inductive/Hall-type matching argument; corroborates existing tags."
+  },
+  "isl:2010:C3": {
+   "date": "2026-11-16",
+   "range": "#18–#29 of 29 (all loaded)",
+   "note": "Late posts (cj13609517288 #18, awesomeming327. #19, mathboy100 #20, lnzhonglp #22, atdaotlohbh #23, ezpotd #24, BS2012 #25, AbhiChaitKulk #27, Alex-131 #28, isache #29) partition into 2×2 blocks with one king each and classify the up/down, left/right shifts; corroborates existing tags."
+  },
+  "isl:2010:C4": {
+   "date": "2026-11-16",
+   "range": "#56–#67 of 67 (all loaded)",
+   "note": "Late posts (Scilyse #57, shanelin-sigma #60–#61, maromex #62, monval #63, eg4334 #64, BS2012 #65, ihategeo_1969 #66, siamchung_degree #67) build huge counts via the (a,b)→(0,b+2a) and tower operations, then delete coins; corroborates existing process/algorithm/induction tags."
+  },
+  "isl:2010:C5": {
+   "date": "2026-11-16",
+   "range": "#43–#52 of 52 (all loaded)",
+   "note": "Late posts (ray66 #43, Ilikeminecraft #44 and lpieleanu #45 and mathMagicOPS #46 and pl246631 #50 classify 4-player sub-tournaments by out-degrees and double count, Dr-car-Chase #47, TThB0501 #48, Half_Blood_Prince #49 injection, Ashwath2011 #51, Cool12345678 #52) corroborate global/extremal tags."
+  },
+  "isl:2010:C6": {
+   "date": "2026-11-16",
+   "range": "#4–#13 of 13 (all loaded)",
+   "note": "Late posts (leader #4, sabbasi #5 (misread, #7), dgrozev #6, SnowPanda #8, TechnoLenzer #9, IAmTheHazard #10, Iveela #11, YaoAOPS #12 self-flagged, N3bula #13) track the shortest/longest strings of each colour as monovariants; corroborates existing tags."
+  },
+  "isl:2010:C7": {
+   "date": "2026-11-16",
+   "range": "#3–#12 of 12 (whole thread)",
+   "note": "Late posts (math154 #6/#9 simplified Simpson proof, Drytime #10, MathPanda1 #11 sharpness example, Idio-logy #12 complete proof) use prime-power decomposition of the common differences with covering/residue arguments; corroborates existing tags."
+  },
+  "isl:2010:G1": {
+   "date": "2026-11-16",
+   "range": "#168–#179 of 179 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Sxmplicity #168, theodosiul #170 antiparallel EF, cyroah1331 #171 and SomeonecoolLovesMaths #173 and Tau_6.28 #175 cyclic APQF, windrock #174, themathchaos #176, Adit-Reddy #177, naht #179) are short angle chases; corroborates existing tags."
+  },
+  "isl:2010:G2": {
+   "date": "2026-11-16",
+   "range": "#151–#160 of 160 (all loaded); analytic scan #1–#160",
+   "note": "Late posts (Math1lover #151 and TheOneAndOnlyOFT #156 and Send_SMS #158 Pascal, cyroah1331 #152 and Kempu33334 #154 tangency SP²=SA·SB, windrock #153, Half_Blood_Prince #155, Sxmplicity #157 harmonic projection, pirateNT0611 #159) corroborate synthetic tags. Analytic scan: trig hits (#15, #31, #32) are angle-chase/law-of-sines hybrids already reflected in the hybrid status; no new pure analytic proof."
+  },
+  "isl:2010:G3": {
+   "date": "2026-11-16",
+   "range": "#13–#23 of 23 (all loaded); analytic scan #1–#23",
+   "note": "Late posts (guptaamitu1 #13, awesomeming327. #15, asdf334 #16, smileapple #17, HamstPan38825 #18, YaoAOPS #20, AbhiChaitKulk #21, ezpotd #22, m735821 #23) compare X_iX_{i+1} and P_iP_{i+1} via circumdiameters and an index with a large angle at P; corroborates existing tags. Analytic scan: the trig hits (#2, #3, #7, #11, #17, #18, #22) all use the extended law of sines as one step inside this synthetic angle comparison; no separate analytic route, so it stays pending."
+  },
+  "isl:2010:G4": {
+   "date": "2026-11-16",
+   "range": "#100–#109 of 109 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (BS2012 #100, TUAN2k8 #101 XE∥BC, lightsynth123 #102 and cubres #103 and TigerOnion #104 moving points, Royal_mhyasd #105 isogonal lines, MerabiZariashvili #106 similar triangles, windrock #108 Menelaus, dno1467 #109 √bc inversion) corroborate synthetic tags; ezpotd #107 complex matches the analytic primary."
+  },
+  "isl:2010:G5": {
+   "date": "2026-11-16",
+   "range": "#16–#25 of 25 (all loaded); analytic scan #1–#25",
+   "note": "Late posts (char2539 #16, rafaello #18, L567 #19, lazizbek42 #20 sketch, Mogmog8 #21, awesomeming327. #22, Andyluo #24, Royal_mhyasd #25) reflect B and D over M to get cyclic ABDL with AB=AL; corroborates reflection/angle tags. Analytic scan: crazyfehmy #3 and sayantanchakraborty #9 finish the same reflection construction with a sine-rule angle comparison (hybrid); no complete analytic proof, analytic route stays pending."
+  },
+  "isl:2010:G6": {
+   "date": "2026-11-16",
+   "range": "#5–#14 of 14 (all loaded)",
+   "note": "Late posts (leader #6 trigonometry, mathcool2009 #7, tastymath75025 #9 Miquel point, MathStudent2002 #10, mathaddiction #11 sine bounds, Autistic_Turk #12, GoldenBoy03 #13, ezpotd #14) corroborate the inversion/Miquel synthetic and trigonometric analytic tags; Ghoshadi #8 self-retracted."
+  },
+  "isl:2010:G7": {
+   "date": "2026-11-16",
+   "range": "#15–#26 of 26 (all loaded); analytic scan #1–#26",
+   "note": "Late posts (Coder_P137G #15, desargues #18, iman007 #19 and TheHazard #23 Monge, duanby #20, popop614 #22, ohiorizzler1434 #25, MathLuis #26) corroborate homothety/radical tags. Analytic scan: G81928128 #24 (13 thanks) maps circles to points (a,b,±r) so tangency becomes light-like separation, then argues with light cones, planes and reflections in space (also proving a generalisation); this is a spatial synthetic model rather than a coordinate computation, so it is recorded here but not used as the analytic route. SebP #8 3D translation, Kayak #11 only cites a Cartesian handout. Analytic route stays pending."
+  },
+  "isl:2010:N1": {
+   "date": "2026-11-16",
+   "range": "#52–#61 of 61 (all loaded)",
+   "note": "Late posts (shendrew7 #52, ostriches88 #53, math-olympiad-clown #54, cubres #55, lpieleanu #56, Tau_6.28 #57, sks987 #58, mudkip42 #59, Kempu33334 #60, Royal_mhyasd #61) bound ∏(1−1/s_i) ≥ 1/(n+1) and construct n=39 using the factor 67; corroborates existing tags."
+  },
+  "isl:2010:N2": {
+   "date": "2026-11-16",
+   "range": "#28–#38 of 38 (all loaded)",
+   "note": "Late posts (shendrew7 #28, ezpotd #29, megarnie #30, cursed_tangent1434 #31, lpieleanu #33, eg4334 #34, User-1948581 #36, Royal_mhyasd #37, Tibd #38 Vieta) treat the equation as a quadratic in m, factor 2·3^n and bound the exponents; corroborates existing tags."
+  },
+  "isl:2010:N3": {
+   "date": "2026-11-16",
+   "range": "#32–#42 of 42 (all loaded)",
+   "note": "Late posts (cj13609517288 #32, eg4334 #33, HamstPan38825 #35 Legendre three-square obstruction, Siddharthmaybe #36, quantam13 #37, AlastorMoody #38 (integer-coefficient slip noted in #40), lightsynth123 #41) reduce to linear f_i and use the 7 = sum-of-three-rational-squares obstruction (descent); corroborates existing tags."
+  },
+  "isl:2010:N4": {
+   "date": "2026-11-16",
+   "range": "#8–#18 of 18 (all loaded)",
+   "note": "Late posts (anantmudgal09 #8, grupyorum #9, rocketscience #11, Idio-logy #12, Aryan-23 #13, mathaddiction #14, Eyed #15, vsamc #16, L13832 #17, OronSH #18) reduce n-goodness to ax³+bx being a permutation mod each prime factor (CRT) and use cubic residues; corroborates existing tags."
+  },
+  "isl:2010:N5": {
+   "date": "2026-11-16",
+   "range": "#56–#66 of 66 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (GrantStar #56, awesomeming327. #57, bin_sherlo #58, cubres #59, pi271828 #60, Saucepan_man02 #61, lunasgraph_d #62, MR.1 #65) show g(a)≡g(b) mod p forces a≡b by choosing n with odd p-adic valuations, then g(n)=n+c; corroborates existing tags."
+  },
+  "isl:2010:N6": {
+   "date": "2026-11-16",
+   "range": "#7–#16 of 16 (all loaded)",
+   "note": "Late posts (tastymath75025 #7, pandadude #8, stroller #9, mathaddiction #10, cadaeibf #11 ring Z[φ]/2^n, CyclicISLscelesTrapezoid #12, Leo.Euler #14 matrix powers, Polyquadratus #16) reduce to the Fibonacci period 3·2^{n−1} mod 2^n; MathSaiyan #13 self-flagged wrong, YaoAOPS #15 unsure. Corroborates existing tags."
   }
  }
 }

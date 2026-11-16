@@ -4,7 +4,7 @@ Open tasks for raindrops, in priority order. Written 2026-11-16. Not started unl
 
 ## 1. Tail pass over AoPS threads (most important)
 
-Status: not started.
+Status: in progress (started 2026-11-16). Results are recorded in `problems/data/tail-pass.json` (one entry per row: posts read, tags added, explanation additions) and applied by `scripts/tail_pass.py`, which `scripts/export_catalogue.py` also runs after every export so the results survive workbook refreshes. The Drive Sheets were a week behind the committed catalogue, so the pass works from `problems/data/catalogue.json` instead of the workbooks. Rows without an AoPS URL are skipped. Each row in the catalogue that has been tail-passed carries a `tailPass` field.
 
 Every forum check so far read only the first ~10 posts of each AoPS thread. The newest posts in a long thread often distil the best earlier ideas into a short clean solution, so each problem needs a second pass over the END of its thread.
 

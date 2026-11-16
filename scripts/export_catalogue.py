@@ -69,6 +69,10 @@ def export(imo, rmm, output):
                  'Official booklets, attributed reproductions and Compendium fallbacks are distinguished in each entry. Some original older booklets remain unavailable.',
                  '2016 N8 has a literal-versus-intended-statement caveat, retained in its research notes.',
                  'Main RMM problem numbers are preserved; A/C/N/G subjects are descriptive mappings. RMM shortlists are not included.'])
+    # Re-apply the AoPS tail-pass ledger so later-thread findings survive re-exports.
+    from tail_pass import apply as apply_tail_pass, DEFAULT_LEDGER
+    if DEFAULT_LEDGER.exists():
+        print(f'Tail-pass ledger applied to {apply_tail_pass(data, json.loads(DEFAULT_LEDGER.read_text()))} rows')
     output=Path(output);output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps(data, ensure_ascii=False, separators=(',',':'))+'\n')
     print(f'Exported {len(problems)} entries, {len(taxonomy)} tags; '+str(dict(counts)))

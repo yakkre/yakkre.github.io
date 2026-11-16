@@ -59,15 +59,16 @@ def export(imo, rmm, output):
     counts = collections.Counter(p['contest'] for p in problems)
     recent_pending = sum(p['contest']=='isl' and p['year']>=2010 and p['forumStatus']=='pending' for p in problems)
     rmm_ids = ', '.join(f"{p['year']} {p['id']}" for p in problems if p['contest']=='rmm')
+    rmm_geo = sum(p['contest']=='rmm' and p['subject']=='G' for p in problems)
     data = dict(updated=datetime.datetime.now(datetime.timezone.utc).isoformat(), taxonomy=taxonomy,
         problems=problems, snapshots=snapshots, counts=dict(counts),
-        scope='IMO A/C/N 1990–2025 plus all seven 2025 geometry problems. Geometry in earlier years and RMM has not yet been added. Geometry records separate reviewed synthetic and analytic primaries; unreviewed routes remain pending.',
+        scope='IMO Shortlist 1990–2025 and the main RMM papers 2008–2026, both including geometry. Geometry records separate reviewed synthetic and analytic primaries; unreviewed routes remain pending, and problems without a reviewed complete proof are not listed.',
         coverage=[dict(contest='isl', title='IMO Shortlist · 1990–2025', text=f"{counts['isl']} classifications. The later forum audit is ongoing: {recent_pending} recent entries currently have official-only evidence. Earlier archived and live checks are preserved. Pending source checks are distinguished from completed classifications."),
-                  dict(contest='rmm', title='RMM · work in progress', text=f"{counts['rmm']} reviewed entries: {rmm_ids}. Both main papers and shortlists are in scope. This is partial collection coverage; entries with unresolved official-solution support or unpublished inventories are not included as reviewed. Individual research notes identify reproduced official booklets and any incomplete forum proofs.")],
+                  dict(contest='rmm', title='RMM · main papers 2008–2026', text=f"{counts['rmm']} reviewed main-paper entries, including {rmm_geo} geometry problems: {rmm_ids}. RMM shortlists are not in scope. Main-paper problems without a reviewed complete proof are not listed. Individual research notes identify reproduced official booklets and any incomplete forum proofs.")],
         caveats=['A forum check can find an incomplete proof; it does not certify every reply. Expand research notes for the exact outcome.',
                  'Official booklets, attributed reproductions and Compendium fallbacks are distinguished in each entry. Some original older booklets remain unavailable.',
                  '2016 N8 has a literal-versus-intended-statement caveat, retained in its research notes.',
-                 'Main RMM problem numbers are preserved; A/C/N subjects are descriptive mappings. Shortlist IDs will remain distinct from main-contest IDs.'])
+                 'Main RMM problem numbers are preserved; A/C/N/G subjects are descriptive mappings. RMM shortlists are not included.'])
     output=Path(output);output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps(data, ensure_ascii=False, separators=(',',':'))+'\n')
     print(f'Exported {len(problems)} entries, {len(taxonomy)} tags; '+str(dict(counts)))

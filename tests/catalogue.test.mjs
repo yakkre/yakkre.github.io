@@ -68,7 +68,12 @@ test('geometry keeps independent proof routes and both verified primary tags',()
   for(const p of geometry)for(const tag of p.geometry.configurations)assert.ok(!p.primaryTags.includes(tag));
   const allG=problems.filter(p=>p.subject==='G');
   assert.equal(selectProblems(problems,taxonomy,{subject:'G'}).length,allG.length);
-  for(const p of allG){assert.ok(p.geometry.synthetic.primaryTag);assert.ok(p.primaryTags.includes(p.geometry.synthetic.primaryTag));if(!p.geometry.analytic.primaryTag)assert.match(p.geometry.analytic.status,/Pending/);}
+  for(const p of allG){
+    // Every geometry entry has at least one reviewed primary; computation-only problems have an analytic primary and no synthetic one.
+    if(p.geometry.synthetic.primaryTag)assert.ok(p.primaryTags.includes(p.geometry.synthetic.primaryTag));
+    else{assert.equal(p.geometry.synthetic.status,'None found');assert.ok(p.geometry.analytic.primaryTag);assert.match(p.geometry.analytic.status,/^Reviewed/);}
+    if(!p.geometry.analytic.primaryTag)assert.match(p.geometry.analytic.status,/Pending/);
+  }
 });
 
 

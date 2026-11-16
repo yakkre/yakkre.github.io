@@ -46,7 +46,7 @@ def export(imo, rmm, output):
                 assert len(row)>=21, 'Geometry requires reviewed route fields'
                 def route(primary,extra,explanation,refs,status):
                     return dict(primaryTag=tag_ids.get(primary),additionalTags=[tag_ids[x.strip()] for x in (extra or '').split(';') if x.strip()],explanation=explanation or '',references=refs or '',status=status)
-                syn=route(row[11],row[12],row[13],row[14],'Reviewed')
+                syn=route(row[11],row[12],row[13],row[14],'Reviewed' if row[11] else 'None found')  # computation-only problems: analytic route only
                 analytic=route(row[15],row[16],row[17],row[18],row[19])
                 problems[-1]['geometry']=dict(synthetic=syn,analytic=analytic,configurations=[tag_ids[x.strip()] for x in (row[20] or '').split(';') if x.strip()])
                 problems[-1]['primaryTags']=[v for v in [syn['primaryTag'],analytic['primaryTag']] if v]

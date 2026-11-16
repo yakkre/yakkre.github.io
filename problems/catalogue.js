@@ -152,7 +152,7 @@ function problemRow(result) {
   if (p.geometry) {
     for (const [label, route] of [['Synthetic',p.geometry.synthetic],['Analytic',p.geometry.analytic]]) {
       const block = node('div','geometry-route'); block.append(node('span','sub',label));
-      block.append(route.primaryTag ? tagButton(route.primaryTag) : node('span','sub','Not yet reviewed')); primary.append(block);
+      block.append(route.primaryTag ? tagButton(route.primaryTag) : node('span','sub',route.status==='None found'?'None found':'Not yet reviewed')); primary.append(block);
     }
   } else primary.append(tagButton(p.primaryTag));
   const others = p.tags.filter(id => !(p.primaryTags || [p.primaryTag]).includes(id)), other = cell('c-other');
@@ -562,7 +562,7 @@ function collectionProblems(keys, byKey, own) {
   for (const k of keys) {
     const p = byKey.get(k), li = node('li'), overall = !!progress?.isDone(k), here = own ? progress.isDoneIn(own.id, k) : overall;
     if (here) li.classList.add('is-done');
-    const primary = p.geometry ? p.geometry.synthetic?.primaryTag : p.primaryTag;
+    const primary = p.geometry ? (p.geometry.synthetic?.primaryTag ?? p.geometry.analytic?.primaryTag) : p.primaryTag;
     const info = node('span', 'sub', `${SUBJECTS[p.subject] || p.subject}${primary && tags.get(primary) ? ` · ${shorten(tags.get(primary).label)}` : ''}${p.difficulty ? ` · difficulty ${p.difficulty}/5` : ''}${progress?.hasNote(k) ? ' · has notes' : ''}`);
     const name = node('div', 'coll-pname'); name.append(problemLink(p, null, problemName(p)));
     if (own && overall) { const t = node('span', 'done-tag overall', '✓ done overall'); t.title = 'Marked done in your overall progress'; name.append(t); }

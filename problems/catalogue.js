@@ -1,5 +1,6 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
 import {renderStatement, typesetMath} from './statement-view.mjs?v=20261110-aopsmacros';
+import {parseNote, renderNote, noteExcerpt} from './notes-view.mjs?v=20261116-hide';
 
 const START_HREF = location.href; // before render() rewrites the URL: a sign-in link's code is in it
 const $ = id => document.getElementById(id);
@@ -465,7 +466,7 @@ function renderCollectMenu() {
     const open = button(null, 'Open problem', () => { closeCollectMenu(); openProblem(p); });
     row.append(mark, open); items.push(row);
     const text = progress.note(p.key);
-    if (text) { const q = node('p', 'menu-note', text.length > 160 ? text.slice(0, 160).trimEnd() + '…' : text); q.title = 'Your notes (open the problem to edit)'; items.push(q); }
+    if (text) { const q = node('p', 'menu-note', noteExcerpt(text)); q.title = 'Your notes (open the problem to edit)'; items.push(q); }
     items.push(node('p', 'collect-sub', 'Add to collection'));
   } else items.push(node('p', 'collect-title', `Add ${problemName(p)} to:`));
   const list = progress.collections();
@@ -504,16 +505,19 @@ function renderNotes(p) {
   $('notes-where').textContent = progress.user ? 'Private: only you can see these. Saved to your account.'
     : 'Private, saved in this browser. Sign in (top right) to keep notes on every device.';
 }
-// Rendered preview of the note when it contains LaTeX ($…$, $$…$$, \(…\), \[…\]).
+// Rendered preview of the note when it contains LaTeX ($…$, $$…$$, \(…\), \[…\]) or a hidden box ([\hide="Label"] … [\hide]).
 let previewTimer = null, previewRun = 0;
 async function renderNotesPreview() {
   clearTimeout(previewTimer); previewTimer = null;
   const box = $('notes-preview'), body = $('notes-preview-body'), text = $('notes-text').value;
   const run = ++previewRun;
-  if (!/\$|\\\(|\\\[/.test(text)) { box.hidden = true; body.textContent = ''; body.style.minHeight = ''; return; }
+  if (!/\$|\\\(|\\\[|\[\\hide/.test(text)) { box.hidden = true; body.textContent = ''; body.style.minHeight = ''; return; }
   // Hold the old height while the new text is typeset, so the page doesn't shrink and pull the view up.
   if (!box.hidden) body.style.minHeight = `${body.offsetHeight}px`;
-  box.hidden = false; body.textContent = text;
+  // Boxes the reader has opened stay open (by position) while the preview is rebuilt as they type.
+  const wasOpen = [...body.querySelectorAll('details.note-hide')].map(d => d.open);
+  box.hidden = false; body.replaceChildren(); renderNote(body, parseNote(text));
+  body.querySelectorAll('details.note-hide').forEach((d, i) => { if (wasOpen[i]) d.open = true; });
   try { await typesetMath(body); } catch { if (run === previewRun) { body.style.minHeight = ''; $('notes-preview-note').textContent = 'Math preview is unavailable right now.'; } return; }
   if (run === previewRun) { body.style.minHeight = ''; $('notes-preview-note').textContent = ''; }
 }

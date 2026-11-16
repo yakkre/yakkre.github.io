@@ -1723,6 +1723,303 @@
    "date": "2026-11-16",
    "range": "#7–#16 of 16 (all loaded)",
    "note": "Late posts (tastymath75025 #7, pandadude #8, stroller #9, mathaddiction #10, cadaeibf #11 ring Z[φ]/2^n, CyclicISLscelesTrapezoid #12, Leo.Euler #14 matrix powers, Polyquadratus #16) reduce to the Fibonacci period 3·2^{n−1} mod 2^n; MathSaiyan #13 self-flagged wrong, YaoAOPS #15 unsure. Corroborates existing tags."
+  },
+  "isl:2009:A1": {
+   "date": "2026-11-16",
+   "range": "#19–#28 of 28 (all loaded; first live-thread read)",
+   "note": "Late posts (asdf334 #19–#20, awesomeming327. #21, lrjr24 #22, john0512 #23, huashiliao2020 #24, ezpotd #25, Maximilian113 #26, ostriches88 #27, User-1948581 #28) show the largest sides form a triangle and give geometric-sequence counterexamples for k≥2; corroborates existing tags."
+  },
+  "isl:2009:A2": {
+   "date": "2026-11-16",
+   "range": "#106–#115 of 115 (all loaded; first live-thread read); middle skimmed by thanks",
+   "note": "Late posts (lpieleanu #106, math-olympiad-clown #107, LayZee #108, oooahin #110, laitth #111, PSS1234 #113, pl246631 #114, cubres #115) homogenise and finish with AM–GM / Cauchy–Schwarz / Muirhead; endless_abyss #109 tangent-line sketch only. Corroborates existing tag."
+  },
+  "isl:2009:A3": {
+   "date": "2026-11-16",
+   "range": "#119–#128 of 128 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ezpotd #120/#122 with corrections from siamchung_degree #121, isache #123, zhoujef000 #124, megahertz13 #125, numbertheory97 #126, otwaenng #127, Primeniyazidayi #128) prove f(1)=1, f(f(n))=n and periodicity/size arguments to reach the identity; corroborates existing tags."
+  },
+  "isl:2009:A4": {
+   "date": "2026-11-16",
+   "range": "#14–#24 of 24 (all loaded; first live-thread read)",
+   "note": "solasky #19 gives a complete two-step Jensen proof: homogenise 3 ≤ 3√3·√(abc/(ab+bc+ca)), bound this by Σ√(2ab/(a+b)) via convexity of x^{−1/2}, then √(2ab/(a+b))+√((a²+b²)/(a+b)) ≤ √(2(a+b)) by concavity of √x. Added Inequalities—convexity arguments. mcmp #20 and Adywastaken #22 use the same power-mean pairing; ZETA_in_olympiad #14 Hölder, DottedCaculator #15, lksb #23, OronSH #24 AM–GM routes.",
+   "addTags": [
+    "A: Inequalities—convexity arguments"
+   ],
+   "explanationAppend": "A late forum proof pairs each √(2ab/(a+b)) with √((a²+b²)/(a+b)) by concavity of the square root and bounds the homogenised constant by Jensen for x^{−1/2}.",
+   "cite": "#19 (solasky) complete Jensen proof"
+  },
+  "isl:2009:A5": {
+   "date": "2026-11-16",
+   "range": "#23–#33 of 33 (all loaded; first live-thread read)",
+   "note": "Late posts (ZETA_in_olympiad #23, Number1048576 #24, VicKmath7 #25, megarnie #26, awesomeming327. #27, Marata566 #28, ezpotd #29, alupigus #30, T.TEAM #31) assume the inequality, derive f ≤ 0 eventually and get a contradiction from P(x,0), P(f(y),y); corroborates existing tags."
+  },
+  "isl:2009:A6": {
+   "date": "2026-11-16",
+   "range": "#53–#62 of 62 (all loaded)",
+   "note": "Late posts (bin_sherlo #53, Iveela #54, N3bula #55, ihatemath123 #57, D4N13LCarpenter #58, ray66 #59, Om245 #60, Amkan2022 #61, otwaenng #62) show s_{s_n+1}−s_{s_n} is constant using the extremal differences and integrality; corroborates existing tags."
+  },
+  "isl:2009:A7": {
+   "date": "2026-11-16",
+   "range": "#58–#68 of 68 (all loaded; first live-thread read)",
+   "note": "Late posts (cosdealfa #58, bin_sherlo #59, Orzify #61, ravengsd #62, MR.1 #63, kotmhn #64, Bold_Dalai #65, ostriches88 #66, Royal_mhyasd #67, Benjaminxiao #68) prove f(0)=0, injectivity and oddness, then f(x)=±x by standard substitutions; corroborates existing tag."
+  },
+  "isl:2009:C1": {
+   "date": "2026-11-16",
+   "range": "#71–#81 of 81 (all loaded; first live-thread read)",
+   "note": "Late posts (TwentyIQ #71, lpieleanu #72 weights 2^k, math-olympiad-clown #73, ray66 #75, Kempu33334 #76, zhoujef000 #77, InftyByond #78, Ashwath2011 #79, orangutan1434 #80, RadiantMeteor #81) read the cards as a binary number that strictly decreases (monovariant) and analyse the strategy for (b); corroborates existing tags."
+  },
+  "isl:2009:C2": {
+   "date": "2026-11-16",
+   "range": "#38–#47 of 47 (all loaded; first live-thread read)",
+   "note": "Late posts (shendrew7 #38, Saucepan_man02 #39, lksb #41, lpieleanu #46, lightsynth123 #47) sum the triples to get N ≤ ⌊2n/3⌋+1; mathwiz_1207 #40, UberPiggy #42, maromex #43, numbertheory97 #45 give the explicit constructions; corroborates existing tags."
+  },
+  "isl:2009:C3": {
+   "date": "2026-11-16",
+   "range": "#18–#29 of 29 (all loaded; first live-thread read)",
+   "note": "Late posts (tastymath75025 #18, pandadude #19, yayups #20, pad #21, CT17 #22, HamstPan38825 #25, asdf334 #26, zuat.e #27, lpieleanu #29) induct on the binary sequence with the linear maps (2a+3b, 3a+b) and reversal symmetry; popop614 #28 motivates via continued fractions. Corroborates existing algebraic/sequence/induction tags."
+  },
+  "isl:2009:C4": {
+   "date": "2026-11-16",
+   "range": "#16–#25 of 25 (all loaded; first live-thread read)",
+   "note": "Late posts (v_Enhance #16, mathaddiction #18, Eyed #19, awesomeming327. #20, Kappa_Beta_725 #21, Mr.Sharkman #22, GoldenBoy03 #23, ray66 #24, ezpotd #25) show each diagonal cell lies in a distinct rectangle, bound perimeters by AM–GM/convexity and build the recursive construction (yayups #17 retracted); corroborates existing tags."
+  },
+  "isl:2009:C5": {
+   "date": "2026-11-16",
+   "range": "#39–#48 of 48 (all loaded; first live-thread read)",
+   "note": "Late posts (cursed_tangent1434 #39, ihategeo_1969 #40, MathematicalArceus #41, bin_sherlo #42, lunasgraph_d #43, Ilikeminecraft #44, ray66 #45, de-Kirschbaum #46, ezpotd #47, Martin2001 #48) keep the invariant form (a,x,b,0,0) with a+b<1, x<1 after Cinderella's move; corroborates existing tags."
+  },
+  "isl:2009:C6": {
+   "date": "2026-11-16",
+   "range": "#4–#13 of 13 (all loaded; first live-thread read)",
+   "note": "Late posts (TheUltimate123 #4, v_Enhance #5, SnowPanda #6, Eyed #7 and awesomeming327. #8 and ray66 #12 four-colouring of cells, YaoAOPS #9, Kappa_Beta_725 #10, math_comb01 #11, blueprimes #13) give the 4(499²−1) answer via a colouring of the grid with the cycle structure and explicit constructions; corroborates existing tags."
+  },
+  "isl:2009:C7": {
+   "date": "2026-11-16",
+   "range": "#92–#102 of 102 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #92, dolphinday #94, Maximilian113 #95, atdaotlohbh #96, Yiyj1 #97, ray66 #98, bin_sherlo #99, N3bula #100, Soupboy0 #101) induct on n with case analysis on the largest jump and the mines below s−a_n; corroborates existing tags."
+  },
+  "isl:2009:C8": {
+   "date": "2026-11-16",
+   "range": "#12–#21 of 21 (all loaded; first live-thread read)",
+   "note": "Late posts (bern-1-16-4-13 #12, mathcool2009 #13, suli #14, william122 #15, SnowPanda #16, Anzoteh #17, CircleInvert #18, ray66 #19, N3bula #20 base-n induction, TThB0501 #21) treat numbers as digit strings split by zeros and induct on length; corroborates existing tags."
+  },
+  "isl:2009:G1": {
+   "date": "2026-11-16",
+   "range": "#64–#74 of 74 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ihatemath123 #64, mudkip42 #67, lunasgraph_d #68 and zhoujef000 #74 and little-fermat #70 trigonometric equations, Jakjjdm #69, InftyByond #71, cyroah1331 #72, littlefox_amc #73) use the incentre I and the 45° angles at D, E with reflection or trig to get 60° or 90°; corroborates existing synthetic and analytic tags."
+  },
+  "isl:2009:G2": {
+   "date": "2026-11-16",
+   "range": "#167–#177 of 177 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (quannc #167, CubeAlgo15 #168, Og_math_guy #169, cyroah1331 #171, littlefox_amc #172, Fractalpi-Matrix #173, apokono #174, m735821 #175, pirateNT0611 #176, eggon #177) use midlines and AQP ~ MLK with power of a point to get OP=OQ; corroborates existing tags."
+  },
+  "isl:2009:G3": {
+   "date": "2026-11-16",
+   "range": "#55–#64 of 64 (all loaded)",
+   "note": "Late posts (hgomamogh #55, asdf334 #56, Markas #57, Ilikeminecraft #58, YaoAOPS #59, lpieleanu #60, godchunguus #62, Sxmplicity #64) add the A-excircle and show G is the radical centre with point circles R, S; corroborates radical-axis tags."
+  },
+  "isl:2009:G4": {
+   "date": "2026-11-16",
+   "range": "#92–#103 of 103 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (YaoAOPS #92 Miquel point, ezpotd #93 harmonic projection, kotmhn #94, SimplisticFormulas #95 inversion, PSS1234 #98, PikaBlaze #99, littlefox_amc #100 and ostriches88 #102 harmonic midpoint lemma, Ashwath2011 #101 Newton–Gauss line, otwaenng #103) corroborate harmonic/Miquel/power tags."
+  },
+  "isl:2009:G5": {
+   "date": "2026-11-16",
+   "range": "#5–#15 of 15 (all loaded); analytic scan #1–#15",
+   "note": "Late posts (litongyang #5/#7, daniel73 #8, polya78 #10, Idio-logy #11 two enclosing parallelograms, william122 #13 minimal-area parallelogram + shear, MarkBcc168 #14, yayups #15 smooth-curve generalisation) corroborate the area/extremal tags (timon92 #6/#9 discuss the sharp constant 4/3). Analytic scan: only a sine-area step in #13; analytic route stays pending."
+  },
+  "isl:2009:G6": {
+   "date": "2026-11-16",
+   "range": "#24–#33 of 33 (all loaded)",
+   "note": "Late posts (crazyeyemoody907 #24, Marinchoo #25, Leo.Euler #26 computational ending, awesomeming327. #27, popop614 #28, Batsuh #29, OronSH #30 Euler-line projections, Benjaminxiao #31 nine-point centres, ezpotd #33 moving points; e2.718281828 #32 outline) corroborate existing tags."
+  },
+  "isl:2009:G7": {
+   "date": "2026-11-16",
+   "range": "#8–#19 of 19 (all loaded)",
+   "note": "Late posts (sayantanchakraborty #8, tastymath75025 #10, Idio-logy #12, Aryan-23 #13, i3435 #18, ezpotd #19) are trigonometric computations matching the analytic primary. home245 #15 claims the first synthetic proof (isogonal conjugates in ABCO via a lemma with angle ∠BXC = 135°−A/2), acknowledged as neat in #17; its key claim is proved partly through an external link and a 'well known' isogonal fact, so no synthetic primary is created automatically — flagged as a candidate synthetic route for manual review."
+  },
+  "isl:2009:G8": {
+   "date": "2026-11-16",
+   "range": "#46–#55 of 55 (all loaded); analytic scan #1–#55",
+   "note": "Late posts (arnov67 #46 Monge, kes0716 #47 isogonal conjugate, torch #48, drmzjoseph #49 Pitot, HamstPan38825 #50 and Ilikeminecraft #53 cyclic C I1 I2 I3, X.Luser #51, YaoAOPS #52 and OronSH #54 moving points, bin_sherlo #55) corroborate angle/metric tags. Analytic scan: trigonometric work appears only as ratio-lemma/law-of-sines steps in mixed proofs (#5, #6, #17, #20, #27, #30), already seen by the earlier review; no complete analytic proof, analytic route stays pending."
+  },
+  "isl:2009:N1": {
+   "date": "2026-11-16",
+   "range": "#165–#174 of 174 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (zhoujef000 #166, TheMathCanadian #167, Eda_no11 #168, lpieleanu #169, Alex-131 #170 prime-power split, isache #171, Lunatic_Lunar7986 #172, Adit-Reddy #174 gcd split) chase the congruences a_i a_{i+1} ≡ a_i mod n around the cycle to force a_1 ≡ a_2; corroborates existing tags."
+  },
+  "isl:2009:N2": {
+   "date": "2026-11-16",
+   "range": "#38–#48 of 48 (all loaded; first live-thread read)",
+   "note": "Late posts (P2nisic #38, ezpotd #39, L13832 #40 Liouville function, sansgankrsngupta #41, EpicBird08 #42, eg4334 #44, lpieleanu #46, maromex #47, Adit-Reddy #48) use the parity of Ω(n) with pigeonhole on parity vectors for (a) and the polynomial square construction for (b); corroborates existing tags."
+  },
+  "isl:2009:N3": {
+   "date": "2026-11-16",
+   "range": "#71–#80 of 80 (all loaded; first live-thread read)",
+   "note": "Late posts (dragoon #74, ezpotd #75 p-adic valuation stability, maromex #77, Royal_mhyasd #78, megahertz13 #80) assume finitely many prime divisors and use CRT-chosen inputs with valuation bounds; imo2026 #79 size sketch, lightsynth123 #76 joke. Corroborates existing tags."
+  },
+  "isl:2009:N4": {
+   "date": "2026-11-16",
+   "range": "#6–#16 of 16 (all loaded; first live-thread read)",
+   "note": "Late posts (TheUltimate123 #6, mathaddiction #7 construction (4,33,217,1384), Al3jandro0000 #9 parity lemma, awesomeming327. #12, vsamc #13) show n≥5 impossible via a descent on the even-parity pairs and build n=4; corroborates existing tags."
+  },
+  "isl:2009:N5": {
+   "date": "2026-11-16",
+   "range": "#38–#49 of 49 (all loaded; first live-thread read)",
+   "note": "Late posts (ohiorizzler1434 #38, OronSH #39, Ilikeminecraft #40, Doppel #41, Royal_mhyasd #42, ezpotd #43, lele0305 #44, sks987 #46, Lunatic_Lunar7986 #48, Shiny_zubat #49) write P(n)=Σ_{d|n} d·a_d via cycle counts of T and use P(pq)−P(q) divisibility to force a contradiction; corroborates existing tags."
+  },
+  "isl:2009:N6": {
+   "date": "2026-11-16",
+   "range": "#15–#24 of 24 (all loaded; first live-thread read)",
+   "note": "Late posts (IAmTheHazard #15, LightChaser #16, vsamc #17, HamstPan38825 #18, luutrongphuc #19, john0512 #20, Ilikeminecraft #21, SimplisticFormulas #22, IamYourFriend #23, MathLuis #24) write a_n=(Σ i^{k−1}·i!)/n!, build the polynomial P with xP(x)=P(x−1)+x^k+c and argue modulo primes; corroborates existing tags."
+  },
+  "isl:2009:N7": {
+   "date": "2026-11-16",
+   "range": "#18–#30 of 30 (all loaded)",
+   "note": "Late posts (Loppukilpailija #18/#20, ubermensch #19, KOMKZ #25 with Adil1 #26, bmw5 #28 limit argument, Assassino9931 #29 original proposal) corroborate the exponential/size/sequence tags. Number1048576 #22 offers a quadratic-reciprocity route, but its key equation is corrected in #23 and it uses rad(ab) where the squarefree part is needed, so no quadratic-residue tag added."
+  },
+  "isl:2008:A1": {
+   "date": "2026-11-16",
+   "range": "#145–#154 of 154 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (UberPiggy #146, isache #148, martianrunner #149, ThePeeps191 #150, orangutan1434 #151, SomeonecoolLovesMaths #152, otwaenng #153, der_Englander #154) get f(1)=1, f(t²)=f(t)², the quadratic for f(w) and rule out mixing pointwise; corroborates existing tags."
+  },
+  "isl:2008:A2": {
+   "date": "2026-11-16",
+   "range": "#118–#128 of 128 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (asdf334 #119, pie854 #120, Shreyasharma #121, EpicBird08 #124, Adywastaken #125 substitute a=x/(x−1) to get a+b+c=ab+bc+ca+1 and (a+b+c−1)²≥0; Maximilian113 #123, ezpotd #127 parametrise the equality family); B0409 #128 Lagrange sketch only. Corroborates existing tags."
+  },
+  "isl:2008:A3": {
+   "date": "2026-11-16",
+   "range": "#15–#25 of 25 (all loaded)",
+   "note": "Late posts (hakN #15, bora_olmez #16, awesomeming327. #17, asdf334 #18, VicKmath7 #20, son__im_crine #22, ezpotd #23, Diamond-jumper76 #25) show f(x),g(x) ≥ x and iterate f(g(g(x)))<g(f(x)) to contradict for ℕ, with explicit constructions for the other set; corroborates existing tags."
+  },
+  "isl:2008:A4": {
+   "date": "2026-11-16",
+   "range": "#7–#16 of 16 (all loaded; first live-thread read)",
+   "note": "Late posts (hxy09 #7, alkjash #8, guptaamitu1 #9, GoodMorning #10, huashiliao2020 #12, awesomeming327. #13, siamchung_degree #14) compute f at 2^n−1, 2^n−2, 2^n−3 by induction; OronSH #15 states the closed form via binary digit sums. Corroborates existing sequence/digits/modular tags."
+  },
+  "isl:2008:A5": {
+   "date": "2026-11-16",
+   "range": "#33–#42 of 42 (all loaded)",
+   "note": "Late posts (everythingpi3141592 #34, OronSH #35, shendrew7 #36 Cauchy–Schwarz, abeot #37 power-mean, MathLuis #38, pie854 #39, thdwlgh1229 #40, Man0308Fong #41, ihategeo_1969 #42 AM–GM) compare the two cyclic sums with a+b+c+d; corroborates existing tags."
+  },
+  "isl:2008:A6": {
+   "date": "2026-11-16",
+   "range": "#12–#21 of 21 (all loaded; first live-thread read)",
+   "note": "Late posts (ZETA_in_olympiad #14–#15, starchan #16, awesomeming327. #17, megarnie #18, MathLuis #19 translation invariance, vsamc #20 level sets S_n, expsaggaf #21) assume surjectivity and derive periodicity/divisibility contradictions; Mathboi489 #13 self-flagged and corrected in #15. Corroborates existing tags."
+  },
+  "isl:2008:A7": {
+   "date": "2026-11-16",
+   "range": "#8–#17 of 17 (all loaded)",
+   "note": "Late posts (Zhero #8 corrected, quangminhltv99 #9 and Radar #10, MathPanda1 #11, szl6208 #13, for63434 #14, mathcool2009 #15, v_Enhance #16 main rewrite, Dark_Fallen_Matemat1k #17) rewrite the inequality as a sum of squares-type expression with Cauchy/AM–GM; anantmudgal09 #12 only asks about Lagrange multipliers. Corroborates existing tags."
+  },
+  "isl:2008:C1": {
+   "date": "2026-11-16",
+   "range": "#21–#36 of 36 (all loaded)",
+   "note": "Late posts (awesomeming327. #21, asdf334 #22, HoRI_DA_GRe8 #24, ezpotd #25, Maximilian113 #26, heheman #27, InftyByond #28, lpieleanu #29, Adit-Reddy #36) give n=6 with constructions and an extremal intersection argument for n≥7; corroborates existing tags."
+  },
+  "isl:2008:C2": {
+   "date": "2026-11-16",
+   "range": "#38–#47 of 47 (all loaded)",
+   "note": "Late posts (de-Kirschbaum #39, EpicBird08 #40, numbertheory97 #41, mananaban #42, NicoN9 #43, alexanderhamilton124 #44, lpieleanu #45, TwentyIQ #46, ezpotd #47) show the last element is 1 or n (or near it) by divisibility of partial sums and get 3·2^{n−2} by recursion; corroborates existing tags."
+  },
+  "isl:2008:C3": {
+   "date": "2026-11-16",
+   "range": "#30–#40 of 40 (all loaded)",
+   "note": "Late posts (Pitchu-25 #30, motannoir #31, GrantStar #32, ItsBesi #34, heheman #35, cubres #36, Kempu33334 #37, Alex-131 #38, oooahin #39 shoelace, lightsynth123 #40 Bézout) characterise k-friends via shoelace/Bézout and get k=lcm(1..14)/2 with a 15×15 grid; corroborates existing tags."
+  },
+  "isl:2008:C4": {
+   "date": "2026-11-16",
+   "range": "#53–#62 of 62 (all loaded); middle skimmed by thanks",
+   "note": "chenghaohu #58 gives a complete exponential-generating-function proof: per-lamp EGFs sinh x (odd toggles) and cosh x (even) give N ↔ (sinh 2x/2)^n and M ↔ (sinh x)^n, so N/M = 2^{k−n}; eg4334 #56 a roots-of-unity-filter variant, MathCosine #61 another bash. Added Algebraic combinatorics methods (generating functions). The bijection route (cj13609517288 #53, shendrew7 #54, Mr.Sharkman #55, heheman #57, BS2012 #60, Ilikeminecraft #62) matches the existing counting tag.",
+   "addTags": [
+    "C: Algebraic combinatorics methods"
+   ],
+   "explanationAppend": "A late forum proof compares exponential generating functions: sinh x per off-lamp and cosh x per on-lamp give (sinh 2x/2)^n against (sinh x)^n, hence the ratio 2^{k−n}.",
+   "cite": "#58 (chenghaohu) complete generating-function proof"
+  },
+  "isl:2008:C5": {
+   "date": "2026-11-16",
+   "range": "#2–#15 of 15 (all loaded)",
+   "note": "Late posts (MellowMelon #2 potential f(A), v_Enhance #6, TheUltimate123 #7, L567 #8, JAnatolGT_00 #11, IAmTheHazard #12 and awesomeming327. #13 cyclic-interval averaging over permutations, smileapple #14, ezpotd #15) corroborate global/permutation/probability tags."
+  },
+  "isl:2008:C6": {
+   "date": "2026-11-16",
+   "range": "#3–#12 of 12 (whole thread; first live-thread read)",
+   "note": "Late posts (daniel73 #3/#5, MellowMelon #4/#8 official solution sketches, hxy09 #6–#7 'amazing solution', AnonymousBunny #11, ILikeMarvel #12 official Sol1) give the 2n+1 / 3n+1 bounds by induction on set systems; corroborates existing tags."
+  },
+  "isl:2008:G1": {
+   "date": "2026-11-16",
+   "range": "#177–#186 of 186 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (mpcnotnpc #177, cyroah1331 #178, SomeonecoolLovesMaths #179, imo2026 #182, alupigus #183, reyaansh_agrawal #184 radical axis through A, powerman999 #185 O is the centre, RadiantMeteor #186 reflections of H) corroborate radical/power/metric tags."
+  },
+  "isl:2008:G2": {
+   "date": "2026-11-16",
+   "range": "#46–#55 of 55 (all loaded); analytic scan #1–#55",
+   "note": "Late posts (s27_SaparbekovUmar #46, ezpotd #47, cyroah1331 #50, Math_AlexG #51, littlefox_amc #52 harmonic midpoint lemma, Ashwath2011 #53, m735821 #54 Reim + power, otwaenng #55 Newton) corroborate power/harmonic tags. Analytic scan: bluelinfish #29 and arnov67 #40 use coordinates only to prove the harmonic-midpoint lemma inside a power-of-a-point argument; exmath89 #4 and bonciocatciprian #5 are signed-length chases. No complete analytic proof; analytic route stays pending."
+  },
+  "isl:2008:G3": {
+   "date": "2026-11-16",
+   "range": "#43–#52 of 52 (all loaded); analytic scan #1–#52",
+   "note": "Late posts (huashiliao2020 #43, AshAuktober #46, OronSH #47, lelouchvigeo #50 inversion at E to isosceles trapezoids; PotatoTheMathematician #44, Pitchu-25 #45, Aiden-1089 #48, AngeloChu #49, Maximilian113 #51) corroborate inversion/similarity tags. Analytic scan: bobthesmartypants #21 (also ezpotd #52, SnowEverywhere #12) gives a complete ratio-lemma computation: (PE/QE)² = PA·PD/(QA·QD) = δ(P,AD)/δ(Q,AD), and the same for BC, so AD, BC, PQ concur and the radical-axis converse finishes. Recorded as a hybrid trigonometric analytic route.",
+   "addTags": [
+    "ana:G: Trigonometric computation"
+   ],
+   "cite": "#21 (bobthesmartypants) ratio-lemma proof; #52 (ezpotd) same computation",
+   "ana_explanation": "A hybrid trigonometric route: the ratio lemma at A and at D gives (PE/QE)² = (PA·PD)/(QA·QD), which equals the ratio of distances from P and Q to AD and likewise to BC, so AD, BC and PQ concur and the converse of the radical-axis theorem shows ABCD is cyclic.",
+   "ana_refs": "https://artofproblemsolving.com/community/c6h287865p1555919 | #21 bobthesmartypants ratio-lemma proof; #52 ezpotd same computation",
+   "ana_status": "Reviewed — hybrid"
+  },
+  "isl:2008:G4": {
+   "date": "2026-11-16",
+   "range": "#102–#114 of 114 (all loaded); analytic scan #1–#114",
+   "note": "Late posts (Eka01 #102 inversion, TestX01 #103, InterLoop #104 humpty point, happypi31415 #105, Aiden-1089 #107 harmonic, ezpotd #108, CubeAlgo15 #110, Math_AlexG #112, YaoAOPS #113, Sxmplicity #114) use BP=BQ and power of a point; corroborates existing tags. Analytic scan: utkarshgupta #27, aditya21 #24 and bonciocatciprian #19 compute CP·CQ = CE·CA by a cosine/trig length step inside an otherwise synthetic proof; Garfield #32 only sets up barycentrics and declines the bash. No complete analytic proof; analytic route stays pending."
+  },
+  "isl:2008:G5": {
+   "date": "2026-11-16",
+   "range": "#1–#7 of 7 (whole thread); analytic scan #1–#7",
+   "note": "Posts (bertram #2 minimal-distance line, feliz #3 duality, Zhero #4, JuanOrtiz #5, iman007 #6, JAnatolGT_00 #7) induct on n and k with the line nearest to O; corroborates existing combinatorial-geometry tags. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "isl:2008:G6": {
+   "date": "2026-11-16",
+   "range": "#14–#25 of 25 (all loaded); analytic scan #1–#25",
+   "note": "Late posts (asdf334 #14, Leo.Euler #16 continuity, popop614 #17 and OronSH #20 pedal-circle lemma, shendrew7 #18, awesomeming327. #21, dolphinday #22, Eka01 #23, YaoAOPS #24, ezpotd #25) use isogonal conjugates of the diagonal intersection; corroborates existing tags. Analytic scan: mathocean97 #6 is a law-of-cosines/sines computation for both directions and is the best analytic candidate, but its final identity is asserted 'after elementary calculation' (and some symbols failed to render), so it is not recorded as a reviewed route; Leo.Euler #16 uses coordinates for one check. Analytic route stays pending (candidate: #6)."
+  },
+  "isl:2008:G7": {
+   "date": "2026-11-16",
+   "range": "#109–#118 of 118 (all loaded); analytic scan #1–#118",
+   "note": "Late posts (joshualiu315 #109 exsimilicentre on ω, Martin2001 #110 length chase, Bridgeon #111, ReticulatedPython #112 Pitot for ex-tangential quadrilaterals, otwaenng #116, Sxmplicity #117 and ArcadiaLaw #118 external homothety) corroborate homothety/harmonic/polar tags. Analytic scan: bin_sherlo #104 is a projective proof using complex numbers only inside a lemma after a projective transformation; Ivan #14 and JasonLiu #20 are not analytic. Analytic route stays pending."
+  },
+  "isl:2008:N1": {
+   "date": "2026-11-16",
+   "range": "#72–#82 of 82 (all loaded)",
+   "note": "Late posts (ezpotd #72, Maximilian113 #73, SSS_123 #75, djmathman #77, quantam13 #79, Kempu33334 #80, Nemo99999 #81, Wwxyz #82) multiply the three equations to get ∏(a^n−b^n)/(a−b) = −p³ and case on parity/divisibility; corroborates existing tags."
+  },
+  "isl:2008:N2": {
+   "date": "2026-11-16",
+   "range": "#45–#54 of 54 (all loaded)",
+   "note": "Late posts (cubres #45, Ilikeminecraft #46, EpicBird08 #47, dragoon #48, blueprimes #49, V0305 #50, isache #51, MR.1 #52, Royal_mhyasd #53, alupigus #54) normalise gcd=1 and use the largest elements with a_i+a_n | 3a_k size bounds; corroborates existing tags."
+  },
+  "isl:2008:N3": {
+   "date": "2026-11-16",
+   "range": "#24–#34 of 34 (all loaded)",
+   "note": "Late posts (vsamc #24, i3435 #25, lnzhonglp #26, L13832 #29, sansgankrsngupta #30, AmirhoseinHasani.09 #31 and math90 #32 reduced ratios, PikaBlaze #33, ezpotd #34) show a_{i+1} > a_i + a_{i−1} by gcd arguments and induct; corroborates existing tags."
+  },
+  "isl:2008:N4": {
+   "date": "2026-11-16",
+   "range": "#12–#23 of 23 (all loaded; first live-thread read)",
+   "note": "Late posts (rocketscience #12, HKIS200543 #13, yayups #14, bora_olmez #15, HamstPan38825 #16, signifance #17, Mr.Sharkman #18 Lucas, Ilikeminecraft #19, megarnie #23) show the binomials are odd and distinct mod 2^n by pairing/2-adic valuation and induction; corroborates existing tags."
+  },
+  "isl:2008:N5": {
+   "date": "2026-11-16",
+   "range": "#22–#32 of 32 (all loaded)",
+   "note": "Late posts (Th3Numb3rThr33 #22, mathaddiction #23, blacksheep2003 #24, Mathematicsislovely #25, L567 #26, green_leaf #27, BlazingMuddy #29, Toll #30, awesomeming327. #31, zuat.e #32) determine f on prime powers via the divisor-count condition and valuations, giving f(p^k)=p^{p^k−1}; corroborates existing tags."
+  },
+  "isl:2008:N6": {
+   "date": "2026-11-16",
+   "range": "#94–#103 of 103 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (thomasuh12 #94, Royal_mhyasd #95, KlepoNT #96, e2.718281828 #97, megahertz13 #98, isache #99, maromex #100, alupigus #101, UberPiggy #102, Nemo99999 #103) take large primes p≡1 mod 4 with p | n²+1 and choose n<p/2 with size bounds; corroborates existing tags."
   }
  }
 }

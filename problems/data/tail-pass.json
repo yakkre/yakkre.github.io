@@ -3281,6 +3281,71 @@
    "date": "2026-11-16",
    "range": "#6–#15 of 15 (all loaded; thread https://artofproblemsolving.com/community/c6h1480732p8639362 via the AoPS 2016 ISL collection)",
    "note": "Posts (anything-- #6, Lam.DL.01 #7, CANBANKAN #9 analytic estimates, bora_olmez #10 rational approximations, YaoAOPS #11, mojyla222 #12, EthanWYX2009 #13, Giabach298 #14, Nemo99999 #15) show P must be a(bx+c)^d by comparing P(x_i)/P(x_j) with d-th powers via approximation; corroborates existing tags."
+  },
+  "isl:2015:A1": {
+   "date": "2026-11-16",
+   "range": "#80–#90 of 90 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1268809p6621766 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (peaks #80, ray66 #81, Mathandski #82, isache #84, numbertheory97 #85, PSS1234 #86, lpieleanu #87, FunctionGenerator #88, futureMEDALIST #90) rewrite as k/a_{k+1} ≤ a_k + (k−1)/a_k and telescope, or induct with AM–GM; corroborates existing tags."
+  },
+  "isl:2015:A2": {
+   "date": "2026-11-16",
+   "range": "#199–#211 of 211 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1268817p6621849 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (PSS1234 #199, ThePeeps191 #200, martianrunner #203, Hip1zzzil #207, mael_AMO #208, otwaenng #209, futureMEDALIST #210, pl246631 #211) use P(x,f(x)) to find a with f(a) = −1, then show f is linear: f ≡ −1 or f(x) = x+1; corroborates existing tags."
+  },
+  "isl:2015:A3": {
+   "date": "2026-11-16",
+   "range": "#4–#13 of 13 (whole thread)",
+   "note": "Posts (rkm0959 #5, Generic_Username #8 multilinearity → hypercube corners, Idio-logy #9, tigerzhang #10, supercarry #12, Ritwin #13) reduce to x_i = ±1 by linearity in each variable and count sign changes to get n(n−1); corroborates existing tags."
+  },
+  "isl:2015:A4": {
+   "date": "2026-11-16",
+   "range": "#119–#128 of 128 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1113162p5083463 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (ray66 #119, HamstPan38825 #121, Subhan11 #122, Benjaminxiao #123 fixed points, isache #124, OronSH #125, Om245 #126, Royal_mhyasd #127, InftyByond #128) split on f(0) ∈ {0,2} and use fixed points to get f(x)=x or 2−x; corroborates existing tags."
+  },
+  "isl:2015:A5": {
+   "date": "2026-11-16",
+   "range": "#6–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h1268849p6622192 via the AoPS 2015 ISL collection)",
+   "note": "Posts (Pathological #6 with stroller #7–#8, MarkBcc168 #9, CANBANKAN #11, YaoAOPS #13 A(x,y)=A(x,y+f(x)) periodicity, HelpfulPython83 #15 sketch, EthanWYX2009 #17) classify f via periodicity of f(x+y)+f(x−y) in y with periods f(x) and a gcd argument; corroborates existing tags."
+  },
+  "isl:2015:A6": {
+   "date": "2026-11-16",
+   "range": "#4–#15 of 15 (all loaded; thread https://artofproblemsolving.com/community/c6h1268901p6622740 via the AoPS 2015 ISL collection)",
+   "note": "Posts (darthur #4 and #7 author's remarks, talkon #8, pieater314159 #10, v_Enhance #12, awesomehuman #14, ray66 #15) construct P(x)=Π(x−2015i) for even n and use a degree/derivative counting argument on block sums for the impossibility case; corroborates existing tags."
+  },
+  "isl:2015:C1": {
+   "date": "2026-11-16",
+   "range": "#70–#79 of 79 (all loaded; thread https://artofproblemsolving.com/community/c6h1268873p6622370 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (quantam13 #70, lelouchvigeo #71, oooahin #72, 1017124 #73, lpieleanu #74, PSS1234 #75, Benjaminxiao #76 largest bulldozer, Ashwath2011 #77, numbertheory97 #78, Adit-Reddy #79) induct on n by removing the town with the largest bulldozer; corroborates existing tags."
+  },
+  "isl:2015:C2": {
+   "date": "2026-11-16",
+   "range": "#103–#112 of 112 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1112753p5079689 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (endless_abyss #103, PSS1234 #104, tsaihaojiang #105, numbertheory97 #106, ostriches88 #107 triangular lattice, DensSv #108, NO_SQUARES #109, cosinesine #110, Ashwath2011 #111, EXCLUZIVE #112) use the regular n-gon (odd n) and circle-plus-centre constructions, and a pair-counting argument for center-free; corroborates existing tags."
+  },
+  "isl:2015:C3": {
+   "date": "2026-11-16",
+   "range": "#32–#41 of 41 (all loaded; thread https://artofproblemsolving.com/community/c6h1268855p6622233 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (cosinesine #32, blueprimes #33, SimplisticFormulas #34, ezpotd #35, numbertheory97 #36, Royal_mhyasd #38 induction, HenryTung2010 #39, otwaenng #40) get 3024 via a lcm/gcd chain bound and the {6^i·1, 6^i·2, 6^i·3}-type construction; corroborates existing tags."
+  },
+  "isl:2015:C4": {
+   "date": "2026-11-16",
+   "range": "#31–#40 of 40 (all loaded; thread https://artofproblemsolving.com/community/c6h1268903p6622756 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (Shreyasharma #31, asdf334 #32, DottedCaculator #33, MathLuis #34, john0512 #35, User-1948581 #36, lightsynth123 #37, ray66 #38, BossBabyOnDuty #39, Alex-131 #40) show a draw for n ∈ {1,2,4,6} by small cases and a second-player win otherwise by pairing/strategy induction; corroborates existing tags."
+  },
+  "isl:2015:C5": {
+   "date": "2026-11-16",
+   "range": "#43–#52 of 52 (all loaded; thread https://artofproblemsolving.com/community/c6h1113168p5083494 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (Martin.s #43 intervals, john0512 #44, Toll #45 juggling, N3bula #46 and Ywgh1 #47 and KevinYang2.71 #50 directed graph n → n+a_n, PerfectPlayer #49, maromex #51, bin_sherlo #52) show exactly 1008 eventual chains, so Σ(a_j − 1008) is bounded by 1007²; corroborates existing tags."
+  },
+  "isl:2015:C6": {
+   "date": "2026-11-16",
+   "range": "#27–#37 of 37 (all loaded; thread https://artofproblemsolving.com/community/c6h1268814p6621831 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (OronSH #27, golue3120 #28 analytic, mathfun07 #29, straight #31 incomplete, HamstPan38825 #32, ray66 #33 and dgrozev #35 generating function Π(1−x^{s_i}), kotmhn #34, expsaggaf #36, cubres #37 sketch) compare odd and even representation counts via generating functions/density; corroborates existing tags (generating functions already tagged)."
+  },
+  "isl:2015:C7": {
+   "date": "2026-11-16",
+   "range": "#18–#27 of 27 (all loaded; thread https://artofproblemsolving.com/community/c6h1268906p6622769 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (dgrozev #18, TheUltimate123 #19, AdventuringHobbit #20, YaoAOPS #21, MathLuis #22, awesomeming327. #26, Giabach298 #27) show chromatic number k forces at least 2^{k−1}−k odd-cycle vertex sets, by greedy recolouring/induction; corroborates existing tags."
   }
  }
 }

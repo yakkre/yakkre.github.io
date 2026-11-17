@@ -2669,43 +2669,43 @@
   },
   "isl:1999:G3": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 9 is a symmetry/centroid argument; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #11–#20 of 20 (all loaded); analytic scan #1–#20",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 9 is a symmetry/centroid argument; analytic route stays pending.; Late posts (v_Enhance #12 centroid/sphere, awesomeming327. #13, asdf334 #14, ezpotd #15) classify completely symmetric sets via the centroid and planes of symmetry; corroborates existing tags. Analytic scan: vectors/coordinates appear only as the centroid average; analytic route stays pending."
   },
   "isl:1999:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 13 builds the parallelogram PQRS from similar triangles; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #2–#11 of 11 (whole thread); analytic scan #1–#11",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 13 builds the parallelogram PQRS from similar triangles; analytic route stays pending.; Posts (sprmnt21 #3, orl #4 official solution: similar-triangle construction of parallelogram PQRS, The QuattoMaster 6000 #5, alkjash #6, GoldenFrog1618 #7, polya78 #8 perpendicular bisector reflection, JuanOrtiz #9, Anaskudsi #10 inversion at M, awesomeming327. #11) corroborate existing tags. Analytic scan: no analytic proof (Anaskudsi #10 is an inversion length computation); analytic route stays pending."
   },
   "isl:1999:G8": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 uses the incenter–arc-midpoint lemma and similarity; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #16–#25 of 25 (all loaded); analytic scan #1–#25",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 uses the incenter–arc-midpoint lemma and similarity; analytic route stays pending.; Late posts (math_pi_rate #16 harmonic CM1M2T, TheDarkPrince #17, JAnatolGT_00 #18, awesomeming327. #19, MathLuis #20 incenter–excenter lemma, Om245 #22, bin_sherlo #23 √(ab) inversion, YaoAOPS #24, ezpotd #25) identify the fixed point as the C-mixtilinear touch point; orl #4 official solution is synthetic. Analytic scan: HoRI_DA_GRe8 #21 gives a short complex bash with T = a²(b+c)/(c−2a−b), but a numeric check (A,B,C at angles 1.9, 4.0, 5.6) shows |T| ≠ 1 for every square-root sign choice while the true fixed point is on the circle, so the stated incenter/sign conventions are wrong; not adopted. Analytic route stays pending."
   },
   "isl:1997:P7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 7 is the Ptolemy-inequality argument; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #2–#12 of 12 (whole thread); analytic scan #1–#12",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 7 is the Ptolemy-inequality argument; analytic route stays pending.; Posts (probability1.01 #4, tc1729 #5, sayantanchakraborty #6, biomathematics #8, huashiliao2020 #11, DensSv #12) all apply Ptolemy's inequality in ACEF-type quadrilaterals, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
   },
   "isl:1997:P9": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is synthetic (arc midpoints, coaxial circles); analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #16–#25 of 25 (all loaded); analytic scan #1–#25",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is synthetic (arc midpoints, coaxial circles); analytic route stays pending.; Late posts (shendrew7 #16, OronSH #18, ihategeo_1969 #19, Ilikeminecraft #20, Kempu33334 #21, Yiyj1 #22, oooahin #23, PSS1234 #24, Royal_mhyasd #25) invert in the incircle and reduce collinearity of centres to coaxality, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
   },
   "isl:1997:P20": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 20 is a Simson-line argument with oriented angles; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #1–#9 of 9 (whole thread); analytic scan #1–#9",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 20 is a Simson-line argument with oriented angles; analytic route stays pending.; Posts (grobber #1, AnonymousBunny #3, hayoola #7, jayme #8, yojan_sushi #9 read in full: an angle chase with θ=∠XAC, not trigonometric) use the Simson line of X through the foot R; corroborates existing tags. Analytic scan: no analytic proof; analytic route stays pending."
   },
   "isl:1997:P25": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 25 is synthetic (second intersection with the circumcircle); analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #17–#29 of 29 (all loaded); analytic scan #1–#29",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 25 is synthetic (second intersection with the circumcircle); analytic route stays pending.; Late posts (darij grinberg #18, sprmnt21 #19, alkjash #20 synthetic with excentre, oneplusone #21, jayme #22 Reim, polya78 #23, sayantanchakraborty #24, rafaello #26, incog1089 #29) corroborate the existing second-intersection/concyclicity route. Analytic scan: treegoner #14 only remarks that an xy-coordinate approach is possible; analytic route stays pending."
   },
   "isl:1996:G5": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a side-length/law-of-sines estimate matching the existing synthetic route; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #2–#11 of 11 (whole thread); analytic scan #1–#11",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a side-length/law-of-sines estimate matching the existing synthetic route; analytic route stays pending.; Posts (probability1.01 #2 reflections, Learner94 #3 projection/sine bounds, math154 #4, TheUltimate123 #9 parallelograms FABX, BCDY, DEFZ with sine-weighted projections, Mogmog8 #10) match the existing law-of-sines/parallel-sides route. Analytic scan: sines appear only inside the projection estimates of these synthetic proofs; analytic route stays pending."
   },
   "isl:1993:MAK1": {
    "date": "2026-11-16",
@@ -2746,6 +2746,11 @@
    "date": "2026-11-16",
    "range": "official solutions (IMO Compendium text)",
    "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted; analytic route stays pending."
+  },
+  "isl:1996:G8": {
+   "date": "2026-11-16",
+   "range": "#1–#3 of 3 (whole thread); analytic scan #1–#3",
+   "note": "Bugi #2 gives a law-of-sines argument that alkjash #3 points out is flawed (sines of possibly obtuse angles); alkjash #3 gives a case-split argument extending AC to the circle ABD, matching the existing route. Analytic scan: no complete analytic proof; analytic route stays pending."
   }
  }
 }

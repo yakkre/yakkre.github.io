@@ -3416,6 +3416,61 @@
    "date": "2026-11-16",
    "range": "#15–#26 of 26 (all loaded; thread https://artofproblemsolving.com/community/c6h1113182p5083542 via the AoPS 2014 ISL collection)",
    "note": "Late posts (william122 #15, 508669 #16, Idio-logy #17, vladimir92 #18 NT steps, Inconsistent #21, ZETA_in_olympiad #22, YaoAOPS #23 chains, vsamc #24–#26) analyse n² + 4f(n) = f(f(n))² via square-difference bounds and chains to get f(x)=x+1 and its piecewise variants; corroborates existing tags."
+  },
+  "isl:2014:C1": {
+   "date": "2026-11-16",
+   "range": "#70–#79 of 79 (all loaded; thread https://artofproblemsolving.com/community/c6h1113183p5083543 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (Martin2001 #70, ashboy_14 #72, Siddharthmaybe #73, lightsynth123 #74, lpieleanu #75 maximal segments, hectorleo123 #76, UberPiggy #77, Cool12345678 #78, Jupiterballs #79) count maximal segments through the n points to get at least n+1 rectangles; corroborates existing tags."
+  },
+  "isl:2014:C2": {
+   "date": "2026-11-16",
+   "range": "#70–#80 of 80 (all loaded; thread https://artofproblemsolving.com/community/c6h1113184p5083546 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (BS2012 #70, PSS1234 #71, lpieleanu #72, ray66 #73, Ashwath2011 #74, isache #75, tungtungtungsahur #76, InftyByond #77, Jupiterballs #78, apokono #80) note the product grows by ≥ 4 per move ((a+b)² ≥ 4ab) and finish with AM–GM on the final sum; corroborates existing tags."
+  },
+  "isl:2014:C3": {
+   "date": "2026-11-16",
+   "range": "#77–#90 of 90 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h596929p3542094 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (hung9A #77, SimplisticFormulas #78, numbertheory97 #79, NicoN9 #80, ezpotd #81, isache #82, Assassino9931 #86 and #88 remarks, Gandalf_Greyhame #89) give ⌈√n⌉ − 1 by a block-diagonal construction and a pigeonhole bound on k×k squares; corroborates existing tags."
+  },
+  "isl:2014:C4": {
+   "date": "2026-11-16",
+   "range": "#35–#46 of 46 (all loaded; thread https://artofproblemsolving.com/community/c6h1113185p5083550 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (YaoAOPS #35 polynomial ideal over Z[x,y], OronSH #37 and fearsum_fyz #39 and vincentwant #41 colourings mod 4, Assassino9931 #40 and #46, ray66 #43, numbertheory97 #44, V0305 #45) use a parity colouring invariant (or the polynomial-ring interpretation already tagged); corroborates existing tags."
+  },
+  "isl:2014:C5": {
+   "date": "2026-11-16",
+   "range": "#69–#79 of 79 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h597095p3543151 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (dolphinday #69, OronSH #70, Martin2001 #71, john0512 #72, AR17296174 #74, lightsynth123 #75 Po-Shen Loh's argument, Cool12345678 #77, EeEeRUT #78, pl246631 #79) colour lines greedily and count the regions each blue line can ban to reach √n; corroborates existing tags."
+  },
+  "isl:2014:C6": {
+   "date": "2026-11-16",
+   "range": "#18–#27 of 27 (all loaded; thread https://artofproblemsolving.com/community/c6h1113186p5083553 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (TechnoLenzer #18, IAmTheHazard #19, awesomehuman #21, cj13609517288 #22, awesomeming327. #23, Giabach298 #24, YaoAOPS #25, vsamc #26, kotmhn #27) show the only rules compare the k-th largest elements, giving 100; corroborates existing tags."
+  },
+  "isl:2014:C7": {
+   "date": "2026-11-16",
+   "range": "#15–#24 of 24 (all loaded; thread https://artofproblemsolving.com/community/c6h1113187p5083554 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (JAnatolGT_00 #15, gvole #16, CyclicISLscelesTrapezoid #17, Yue-Zhang_3906 #19 projection sketch, awesomeming327. #20, quantam13 #21, HamstPan38825 #22 pairs (s,{A,B}), EeEeRUT #23, Giabach298 #24) use the monovariant counting lines crossed by marked segments; corroborates existing tags."
+  },
+  "isl:2014:C8": {
+   "date": "2026-11-16",
+   "range": "#3–#12 of 12 (whole thread)",
+   "note": "Posts (nunoarala #3 vectors in F_2^10, Aryan-23 #4, william122 #5, Pascal96 #6, mathleticguyyy #7, Inconsistent #8, JAnatolGT_00 #9, Leo.Euler #10, Giabach298 #11, YaoAOPS #12) identify cards with F_2-vectors and give A a linear-algebra pairing strategy unless the empty card is taken; corroborates existing tags (algebraic methods already tagged)."
+  },
+  "isl:2014:C9": {
+   "date": "2026-11-16",
+   "range": "#5–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h1113189p5083556 via the AoPS 2014 ISL collection)",
+   "note": "Posts (Géza Kós #5 related KöMaL, oneplusone #6, bern-1-16-4-13 #7, pandadude #11 with JustKeepRunning #12, MathStudent2002 #13 directed graph in/out-degree 2, JAnatolGT_00 #14 split crossings into arcs, a22886 #15, Giabach298 #17) turn the snail path into closed curves/an Eulerian-type circuit and use a 2-colouring of regions; corroborates existing tags."
+  },
+  "isl:2014:N1": {
+   "date": "2026-11-16",
+   "range": "#49–#58 of 58 (all loaded; thread https://artofproblemsolving.com/community/c6h1113195p5083566 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (smileapple #49, CyclicISLscelesTrapezoid #50 recursion A_n = 2A_{n−1} ∪ {2^n−1}, cursed_tangent1434 #51, TigerOnion #54, maromex #55, reyaansh_agrawal #56, lpieleanu #57, golniyami #58) give (n−2)2^n + 1 by induction on n with a mod-2^{n−1} reduction; corroborates existing tags."
+  },
+  "isl:2014:N2": {
+   "date": "2026-11-16",
+   "range": "#34–#43 of 43 (all loaded; thread https://artofproblemsolving.com/community/c6h1113196p5083567 via the AoPS 2014 ISL collection)",
+   "note": "Late posts (ezpotd #34, Maximilian113 #35, cursed_tangent1434 #36, reni_wee #37, lakshya2009 #38, zhoujef000 #40, eg4334 #41, Benjaminxiao #42) set x − y = k, reduce to a quadratic in y with discriminant a square, and parametrise (1,1) and (z³+2z²−z−1, z³+z²−2z−1); corroborates existing tags."
   }
  }
 }

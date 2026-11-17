@@ -3531,6 +3531,51 @@
    "date": "2026-11-16",
    "range": "#6–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h597124p3543375 via the AoPS 2013 ISL collection)",
    "note": "Posts (jeff10 #6, CANBANKAN #8, TheUltimate123 #9, yayups #10 formal identity, cefer #11, alexiaslexia #12, vsamc #14, awesomehuman #15, Bold_Dalai #16, Rassym #17 vector space) compare coefficients/roots of unity (x³+1 factors) to force P(x)=cx; corroborates existing tags."
+  },
+  "isl:2013:C1": {
+   "date": "2026-11-16",
+   "range": "#88–#97 of 97 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h597127p3543383 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (Just1 #88, Benjaminxiao #89, UberPiggy #90, alexanderchew #91, TwentyIQ #92, isache #93, otwaenng #94, numbertheory97 #95, Adit-Reddy #96, pointblue #97) show k = 2n−1 via the equal-values example and a minimal-partition merging argument; corroborates existing tags."
+  },
+  "isl:2013:C2": {
+   "date": "2026-11-16",
+   "range": "#37–#46 of 46 (all loaded; thread https://artofproblemsolving.com/community/c6h1181527p5720110 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (ezpotd #37, maromex #38, Mr.Sharkman #39, fearsum_fyz #40, genius_007 #41, HamstPan38825 #42, User-1948581 #43, zuat.e #44, monval #45, lpieleanu #46) give 2013 via alternating points on a circle and an inductive construction enclosing pairs with two lines; corroborates existing tags."
+  },
+  "isl:2013:C3": {
+   "date": "2026-11-16",
+   "range": "#38–#47 of 47 (all loaded; thread https://artofproblemsolving.com/community/c6h597130p3543398 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (OronSH #38, VideoCake #39, ray66 #40, genius_007 #41, quantam13 #42, SimplisticFormulas #43, ezpotd #44, seriousPossibilist #45, mucube #46, MathCosine #47) reduce the chromatic number by deleting a vertex and doubling (bipartite double cover) until no edges remain; corroborates existing tags."
+  },
+  "isl:2013:C4": {
+   "date": "2026-11-16",
+   "range": "#23–#32 of 32 (all loaded; thread https://artofproblemsolving.com/community/c6h597131p3543403 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (john0512 #23, Ciobi_ #24 log bound, OronSH #25, HamstPan38825 #26, genius_007 #27, Amkan2022 #28, OrgaaninenKe #29–#30 self-corrected, ray66 #31, ezpotd #32) show an optimal partition with more than ∛(6n) distinct parts can be shortened by swapping equal subset sums (pigeonhole); corroborates existing tags."
+  },
+  "isl:2013:C5": {
+   "date": "2026-11-16",
+   "range": "#9–#21 of 21 (all loaded; thread https://artofproblemsolving.com/community/c6h597133p3543427 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (FE_Eliminator #9, SmartClown #10, william122 #12, SnowPanda #13, NoctNight #16–#17, Inconsistent #19, SimplisticFormulas #20, ezpotd #21) take s = 0 to bound the number of distinct values by r, then compare block sums to force periodicity; corroborates existing tags."
+  },
+  "isl:2013:C6": {
+   "date": "2026-11-16",
+   "range": "#26–#35 of 35 (all loaded; thread https://artofproblemsolving.com/community/c6h597136p3543443 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (Iveela #26, asdf334 #27 BFS tree, awesomehuman #28, YaoAOPS #29, zuat.e #30, N3bula #31, mananaban #32, BS2012 #33 self-flagged unsure, dno1467 #34, GrantStar #35) count length-4 paths from a vertex with degree bounds to get at most 2550; corroborates existing tags."
+  },
+  "isl:2013:C7": {
+   "date": "2026-11-16",
+   "range": "#17–#29 of 29 (all loaded; thread https://artofproblemsolving.com/community/c6h1181543p5720264 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (goodar2006 #17, Idio-logy #18 induction on n, idkwhatthisis #19 N+1 = Σφ, NoctNight #20 m-chords, Inconsistent #22, Leo.Euler #24 Farey fractions, signifance #25, awesomehuman #26, mcmp #28, YaoAOPS #29) build beautiful labelings inductively and count them via reduced fractions; corroborates existing tags."
+  },
+  "isl:2013:C8": {
+   "date": "2026-11-16",
+   "range": "#7–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h597140p3543469 via the AoPS 2013 ISL collection)",
+   "note": "Posts (chaotic_iak #7 and darthur #8 on the official solution, MathPanda1 #10, Zawadx #12, SnowPanda #15, naman12 #16 greedy, Inconsistent #17) give B a greedy painting strategy so A cannot force a win; corroborates existing tags."
+  },
+  "isl:2013:N1": {
+   "date": "2026-11-16",
+   "range": "#200–#210 of 210 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h597243p3544096 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (roohrooh #200, MahdiLikesMath123 #201 corrected by maromex #202, martianrunner #204, methovermath #205, Dr-car-Chase #206, alupigus #207, Conquest #208, Sxmplicity #209, Carlos123jin #210) use P(f(n),n) to get f(n) | n and P(n,n) / P(m,1) for the reverse bound, so f(n)=n; corroborates existing tags."
   }
  }
 }

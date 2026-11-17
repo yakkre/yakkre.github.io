@@ -3061,6 +3061,66 @@
    "date": "2026-11-16",
    "range": "#58–#67 of 67 (all loaded; thread https://artofproblemsolving.com/community/c6h1671279p10632313 via the AoPS 2017 ISL collection)",
    "note": "Late posts (RecursiveCo #59, endless_abyss #60, ihatemath123 #61, OronSH #62 running max/min, qxns_gmbt #63, cursed_tangent1434 #64, otwaenng #66, m735821 #67) bound the sequence by tracking the running maximum and minimum after index 2017; corroborates existing tags."
+  },
+  "isl:2017:A5": {
+   "date": "2026-11-16",
+   "range": "#8–#20 of 20 (all loaded; thread https://artofproblemsolving.com/community/c6h1671280p10632315 via the AoPS 2017 ISL collection)",
+   "note": "Posts (MarkBcc168 #8, uvuvwevwevwe #9, spiros_gal #10 corrected by Tintarn #11, TheUltimate123 #12, NoctNight #13, Leo.Euler #17 and YaoAOPS #19 weighted K_n, awesomeming327. #18, john0512 #20) give K(n) = (1−n)/2 with constructions (n−1 equal negatives) and sign/graph counting; corroborates existing tags."
+  },
+  "isl:2017:A6": {
+   "date": "2026-11-16",
+   "range": "#181–#192 of 192 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1480146p8633190 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (optimusprime154 #181 with MR.1 #184 correction, Saucepan_man02 #182, MR.1 #183, Bridgeon #185, kjhgyuio #186, isache #187, expsaggaf #188, endless_abyss #189, pl246631 #192) show f(c)=0 iff c=1, then injectivity and f(x)=±(x−1); corroborates existing tags."
+  },
+  "isl:2017:A7": {
+   "date": "2026-11-16",
+   "range": "#3–#14 of 14 (all loaded; thread https://artofproblemsolving.com/community/c6h1671327p10632648 via the AoPS 2017 ISL collection)",
+   "note": "Posts (GaryTam #3, genius09 #4, Aryan-23 #6, Cindy.tw #7, L567 #8, NoctNight #9, bin_sherlo #10 uphill paths, mijail #12, cursed_tangent1434 #13) prove a_i > 0 and a_{i+1} > a_i when b_i > 1 by strong induction, then count increases; corroborates existing tags."
+  },
+  "isl:2017:A8": {
+   "date": "2026-11-16",
+   "range": "#6–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h1671299p10632376 via the AoPS 2017 ISL collection)",
+   "note": "Posts (william122 #6, CANBANKAN #7, Idio-logy #8, MatteD #9, ZETA_in_olympiad #10, tesla501 #11, thdnder #12, Tqhoud #14, N3bula #16, math90 #17) set g(x)=f(x)−x and show monotonicity from (g(x)+x+y)(g(y)+x+y)>0 ⇒ g(x)=g(y); corroborates existing tags."
+  },
+  "isl:2017:C1": {
+   "date": "2026-11-16",
+   "range": "#80–#90 of 90 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1671298p10632375 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (busy-beaver #80, ray66 #81, lpieleanu #82, endless_abyss #83, tungtungtungsahur #84, TigerOnion #85, lovematch13 #86, isache #88, UberPiggy #89, mucube #90) checkerboard-colour with black corners: only odd×odd tiles have an extra black cell, so one must touch two corners' parity; corroborates existing tags."
+  },
+  "isl:2017:C2": {
+   "date": "2026-11-16",
+   "range": "#63–#72 of 72 (all loaded; thread https://artofproblemsolving.com/community/c6h1671304p10632393 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (User-1948581 #63, AR17296174 #64, mananaban #65 inversion count, Royal_mhyasd #66, isache #67, Half_Blood_Prince #68, tungtungtungsahur #69, Jupiterballs #70, RadiantMeteor #71, Adit-Reddy #72) compare inversion distances to a^n b^n c^n and its reverse, averaging over the six block orderings; corroborates existing tags."
+  },
+  "isl:2017:C3": {
+   "date": "2026-11-16",
+   "range": "#35–#44 of 44 (all loaded; thread https://artofproblemsolving.com/community/c6h1671318p10632509 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (eg4334 #35, TwentyIQ #36, Mr.Sharkman #37, ray66 #38, ezpotd #39 interpolating polynomial, lpieleanu #40 recursion f(n,k), Cool12345678 #41, m735821 #42, vincentwant #43, TheBaiano #44 generating functions) get 2Σ_{i≤8}C(n,i) − 1 by a recursion on (exponent, free cells); corroborates existing tags (generating functions already tagged)."
+  },
+  "isl:2017:C4": {
+   "date": "2026-11-16",
+   "range": "#75–#85 of 85 (all loaded; thread https://artofproblemsolving.com/community/c6h1480685p8639240 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (IAmTheHazard #75, heheman #77, KevinYang2.71 #78, BS2012 #79, ray66 #80, Monk27 #81, ostriches88 #82 stronger induction, isache #83, Royal_mhyasd #84, MathCosine #85) split players into N groups of N+1 consecutive heights and greedily pick pairs; corroborates existing tags."
+  },
+  "isl:2017:C5": {
+   "date": "2026-11-16",
+   "range": "#85–#94 of 94 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1480157p8633324 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (kbh12 #85, Bratin_Dasgupta #86 self-flagged unsure, ALM_04 #87, dgrozev #88–#89 on rigour of rabbit-strategy arguments, signifance #90, awesomeming327. #91, ray66 #92) use the rabbit strategy of drifting perpendicular to the line to the hunter, gaining about 1/(2d) in squared distance per 200 moves; corroborates existing tags."
+  },
+  "isl:2017:C6": {
+   "date": "2026-11-16",
+   "range": "#18–#32 of 32 (all loaded; thread https://artofproblemsolving.com/community/c6h1671284p10632333 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (sman96 #19 layers, Leo.Euler #23, awesomeming327. #24 coordinates, asdf334 #25, lnzhonglp #26, kujyi #27–#28 questions, Blast_S1 #31, hung9A #32) give 1²+⋯+n² via a diagonal-shell construction and an inductive bound on rare colours; corroborates existing tags."
+  },
+  "isl:2017:C7": {
+   "date": "2026-11-16",
+   "range": "#13–#22 of 22 (all loaded; thread https://artofproblemsolving.com/community/c6h1671320p10632559 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (starchan #14 order statistics, math_comb01 #15 f_{A*B}=f_A∘f_B sketch, EthanWYX2009 #16, YaoAOPS #17, MathLuis #18, cj13609517288 #19 associativity via gaps, numbertheory97 #20, newtonianramanujan #21–#22) encode sets by their complement-enumerating functions and compare compositions; corroborates existing tags."
+  },
+  "isl:2017:C8": {
+   "date": "2026-11-16",
+   "range": "#3–#13 of 13 (whole thread)",
+   "note": "Posts (joyce_tan #3 [20 thanks], 62861 #4, txc #6, Leo.Euler #8, EthanWYX2009 #9, Giabach298 #11, Phuc62794 #12, IamYourFriend #13) prove the answer n²+1 with lone-point/configuration counting arguments; corroborates existing tags."
   }
  }
 }

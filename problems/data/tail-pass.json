@@ -3501,6 +3501,36 @@
    "date": "2026-11-16",
    "range": "#1–#11 of 11 (whole thread)",
    "note": "Posts (codyj #2 and #4, CANBANKAN #7, NoctNight #8, Inconsistent #9 prime powers between 2b and 2(a+b), JAnatolGT_00 #10, Aaron314 #11) translate ||x|| into floors and pick a prime power to force the fractional-part condition; corroborates existing tags."
+  },
+  "isl:2013:A1": {
+   "date": "2026-11-16",
+   "range": "#36–#45 of 45 (all loaded; thread https://artofproblemsolving.com/community/c6h597118p3543340 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (lian_the_noob12 #36, mannshah1211 #37, Ywgh1 #38, ezpotd #39, Maximilian113 #40, cj13609517288 #41, maromex #42, SimplisticFormulas #43, lpieleanu #44, Adit-Reddy #45) express u_n as a sum over index sets with no two consecutive elements (gaps ≥ 2), which is symmetric under reversal; corroborates existing tags."
+  },
+  "isl:2013:A2": {
+   "date": "2026-11-16",
+   "range": "#26–#35 of 35 (all loaded; thread https://artofproblemsolving.com/community/c6h597119p3543341 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (asdf334 #26, Inconsistent #27, awesomeming327. #28, john0512 #29, ezpotd #30, maromex #31, InftyByond #32, Bonime #33, ray66 #34, lpieleanu #35) sort the C(2000,2) differences, note consecutive ratios ≥ 1+10^{−5} would make the spread too large, and pigeonhole; corroborates existing tags."
+  },
+  "isl:2013:A3": {
+   "date": "2026-11-16",
+   "range": "#74–#83 of 83 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1181547p5720286 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (maromex #74, definite_denny #75, Royal_mhyasd #76, bin_sherlo #77, ezpotd #78, isache #79, UberPiggy #80, Kempu33334 #81, MR.1 #82, Assassino9931 #83) prove f(n) ≥ n for integers, f(1)=1, then squeeze f(x)=x via f(a)=a>1 and powers; corroborates existing tags."
+  },
+  "isl:2013:A4": {
+   "date": "2026-11-16",
+   "range": "#77–#86 of 86 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h597122p3543362 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (Siddharthmaybe #77, User-1948581 #78, gladIasked #79 blocks, Ilikeminecraft #80, Alex-131 #81, NicoN9 #82, ray66 #83 box picture, TThB0501 #84, Soupboy0 #85, isache #86) bound a_1 ≤ n and sum the block inequalities a_{a_i+1}+⋯+a_{a_{i+1}} ≤ (a_{i+1}−a_i)(n+i); corroborates existing tags."
+  },
+  "isl:2013:A5": {
+   "date": "2026-11-16",
+   "range": "#32–#42 of 42 (all loaded; thread https://artofproblemsolving.com/community/c6h597123p3543371 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (cj13609517288 #32, idkk #33, ihategeo_1969 #34 f^4(n+1) = f^4(n)+1, Ilikeminecraft #35–#36, HamstPan38825 #37, ray66 #38 injectivity, ezpotd #39, MR_FIGOO #41, siamchung_degree #42) prove injectivity and classify f(n)=n+1 and the mod-4 exceptional function; corroborates existing tags."
+  },
+  "isl:2013:A6": {
+   "date": "2026-11-16",
+   "range": "#6–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h597124p3543375 via the AoPS 2013 ISL collection)",
+   "note": "Posts (jeff10 #6, CANBANKAN #8, TheUltimate123 #9, yayups #10 formal identity, cefer #11, alexiaslexia #12, vsamc #14, awesomehuman #15, Bold_Dalai #16, Rassym #17 vector space) compare coefficients/roots of unity (x³+1 factors) to force P(x)=cx; corroborates existing tags."
   }
  }
 }

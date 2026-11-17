@@ -2349,6 +2349,76 @@
    "date": "2026-11-16",
    "range": "#53–#62 of 62 (all loaded; first live-thread read)",
    "note": "Late posts (PNT #53, thdnder #54, megarnie #55 stronger statement, Ritwin #56, Assassino9931 #58 generalised CRT, SimplisticFormulas #59, HamstPan38825 #60 strong induction on the largest prime, zuat.e #61, IMOasspirant #62) induct on n using ord_n(2) and generalised CRT; corroborates existing tags."
+  },
+  "isl:2005:G1": {
+   "date": "2026-11-16",
+   "range": "#95–#104 of 104 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (bir_mat_oimpiyatcisi #95, oooahin #96, PSS1234 #98 excircle, m735821 #100 Ptolemy, Doppel #101, cyroah1331 #102 and ostriches88 #104 ABIK cyclic, Hussienahmad #103) corroborate reflection/metric tags; shendrew7 #97 and lpieleanu #99 barycentric match the analytic primary."
+  },
+  "isl:2005:G2": {
+   "date": "2026-11-16",
+   "range": "#91–#101 of 101 (all loaded); analytic scan #1–#101",
+   "note": "Late posts (OronSH #91 and ezpotd #92 vector sums, Baimukh #93, batzorig.b #95 with Bold_Dalai #96 rhombus, MeLe3 #98 length case analysis, MerabiZariashvili #99, Assassino9931 #100) corroborate the spiral/angle tags and the hybrid vector route. Analytic scan: the vector posts (#14, #31, #40, #86, #88, #90–#92) all use the unit-vector sum A1A2+B1B2+C1C2=0 followed by angle reasoning, matching the existing hybrid status; trig attempts #8/#9 were judged wrong by darij grinberg #26. No change."
+  },
+  "isl:2005:G3": {
+   "date": "2026-11-16",
+   "range": "#25–#34 of 34 (all loaded); analytic scan #1–#34",
+   "note": "Late posts (bluelinfish #25, awesomeming327. #26, ike.chen #27, asdf334 #28, lelouchvigeo #29, bryanguo #30 moving points, ezpotd #31 and ihatemath123 #32 and Om245 #33 ABK ~ LDA so AB·AD=BK·DL, borovtori #34) corroborate similarity/angle tags. Analytic scan: no analytic proof in the thread; analytic route stays pending."
+  },
+  "isl:2005:G4": {
+   "date": "2026-11-16",
+   "range": "#75–#84 of 84 (all loaded); analytic scan #1–#84",
+   "note": "Late posts (shendrew7 #75, lelouchvigeo #76, MagicalToaster53 #77, john0512 #78, SimplisticFormulas #80, ezpotd #81 gliding principle, Kempu33334 #82, ihatemath123 #83, littlefox_amc #84) identify the fixed point as the spiral centre/Miquel point; corroborates synthetic tags. Analytic scan: Agrippina #21 sketches a complex setup, Fedor Petrov #3 skew coordinates, Armo #12 and Giedrius #22 sine ratios; nothing beyond the existing hybrid analytic route."
+  },
+  "isl:2005:G5": {
+   "date": "2026-11-16",
+   "range": "#143–#153 of 153 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Lunatic_Lunar7986 #143 queue point, RANDOM__USER #144, cubres #145, YaoAOPS #147, blueprimes #148, lpieleanu #149, Ianis #150 second intersection of (ABC),(ADE), definite_denny #152 √(AH·AD) inversion question, megahertz13 #153 forgotten coaxiality) use the Miquel/spiral-centre point on the circumcircle; corroborates existing tags."
+  },
+  "isl:2005:G6": {
+   "date": "2026-11-16",
+   "range": "#137–#147 of 147 (all loaded); analytic scan #1–#147",
+   "note": "Late posts (FredAlexander #137, PSS1234 #139 projective, TThB0501 #140, UberPiggy #141, hellohi321 #142, pirateNT0611 #143, otwaenng #144, zer0cun #145, Jakamousepro #146, Primeniyazidayi #147 AM, EF, DI concurrent) corroborate the harmonic/projective/polar tags. Analytic scan: infiniteturtle #24 claims a full barycentric bash, but its stated coordinates for X fail a numeric check (a=5 test triangle, both S-conventions), so it is not recorded; Kayak #34 uses barycentrics only for one collinearity inside a projective argument; trig posts (#10, #20, #22, #29, #30, #32) are ratio-lemma steps in synthetic proofs. Analytic route stays pending."
+  },
+  "isl:2005:G7": {
+   "date": "2026-11-16",
+   "range": "#9–#18 of 18 (all loaded)",
+   "note": "Late posts (sayantanchakraborty #10, AnonymousBunny #11, AMN300 #13 and sqing #16 trig lemma, anantmudgal09 #14, william122 #15 projections with cos² factors, Modesti #17 spiral similarity, ezpotd #18 Cauchy) corroborate the metric/inequality tags and the reviewed analytic route."
+  },
+  "isl:2005:N1": {
+   "date": "2026-11-16",
+   "range": "#149–#158 of 158 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (littlefox_amc #151, Alex-131 #152, orangutan1434 #154, MR.1 #155, Adit-Reddy #156, Bongcloud45 #157, RadiantMeteor #158) take n=p−2 and Fermat's little theorem to get 6a_{p−2}≡0 mod p; corroborates existing tags."
+  },
+  "isl:2005:N2": {
+   "date": "2026-11-16",
+   "range": "#97–#106 of 106 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Amkan2022 #97, mathMagicOPS #98, DensSv #99, dragoon #100, ishan.panpaliya #101, der_Englander #103, Kempu33334 #104, pl246631 #105, otwaenng #106) show terms are distinct and each initial block is a set of consecutive integers by residue/size arguments; corroborates existing tags."
+  },
+  "isl:2005:N3": {
+   "date": "2026-11-16",
+   "range": "#42–#51 of 51 (all loaded; first live-thread read)",
+   "note": "Late posts (SomeonecoolLovesMaths #42, MR.1 #44, sansgankrsngupta #46, Scilyse #47 S | (a+d)(b+d)(c+d), AbhiChaitKulk #49, IceDelta #50, dragoon #51) use f(x)=(x+a)(x+b)(x+c)−(x−d)(x−e)(x−f) ≡ 0 mod S and evaluate at x=d; corroborates existing tags."
+  },
+  "isl:2005:N4": {
+   "date": "2026-11-16",
+   "range": "#78–#88 of 88 (all loaded; first live-thread read)",
+   "note": "Late posts (Siddharthmaybe #78, ItsBesi #80, Royal_mhyasd #81, ray66 #82, tacocat14641 #83, m735821 #85, MR.1 #87, littlefox_amc #88) show n odd, then n prime via orders and lifting the exponent, with uniqueness constructed by CRT; corroborates existing tags."
+  },
+  "isl:2005:N5": {
+   "date": "2026-11-16",
+   "range": "#1–#11 of 11 (whole thread; first live-thread read)",
+   "note": "Posts (Yimin Ge #1, Zhero #2, JuanOrtiz #3, anantmudgal09 #6, 62861 #7, yayups #8, IAmTheHazard #10, bhan2025 #11) establish exponent-pattern properties of highly divisible numbers and compare d(n) under local prime exchanges; corroborates existing tags."
+  },
+  "isl:2005:N6": {
+   "date": "2026-11-16",
+   "range": "#110–#119 of 119 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (MR.1 #110, pl246631 #112, goon_guzzler #113, UberPiggy #115, Nemo99999 #116, Sxmplicity #118, SomeonecoolLovesMaths #119) choose a large prime p and n by CRT (n≡1 mod p−1, n≡−a mod p) so that p | a^n+n forces p | b−a; corroborates existing tags."
+  },
+  "isl:2005:N7": {
+   "date": "2026-11-16",
+   "range": "#16–#25 of 25 (all loaded; first live-thread read)",
+   "note": "Late posts (IAmTheHazard #16, VicKmath7 #17, awesomeming327. #18 and GrantStar #19 reversed polynomial, MathLuis #20, ihategeo_1969 #21, N3bula #22, Markas #23, Assassino9931 #25 degree-1 case) use Wilson's theorem (p−1−k)! ≡ ±1/k! mod p to make P(m!) divisible by a chosen prime; corroborates existing tags."
   }
  }
 }

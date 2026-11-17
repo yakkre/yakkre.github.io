@@ -3866,6 +3866,106 @@
    "date": "2026-11-17",
    "range": "#4–#13 of 13 (all loaded; thread https://artofproblemsolving.com/community/c6h418684p2362291 via the AoPS 2010 ISL collection); middle skimmed by thanks",
    "note": "Posts (jgnr #4, Sung-yoon Kim #5 proposer's remarks, daniel73 #6, can_hang2007 #7, wintree #8, GeronimoStilton #9 polynomial T(x−a)(x−c)(x−e)+S(x−b)(x−d)(x−f) with three real roots, 508669 #10, nourcherif #11 off-topic, awesomeming327. #12, CyclicISLscelesTrapezoid #13 Cauchy–Schwarz) reduce to a discriminant/symmetric-function inequality; corroborates existing tags."
+  },
+  "isl:2003:A1": {
+   "date": "2026-11-17",
+   "range": "#2–#11 of 11 (all loaded)",
+   "note": "Posts (grobber #2 vectors, dgreenb801 #3 and darij grinberg #4 on the official geometric reduction, asdf334 #5 determinants, darij grinberg #6 analysis, sman96 #7 sign table, YaoAOPS #8 positive span, awesomeming327. #9, bobthegod78 #10, ezpotd #11 triangle meets the same-sign octant) show some positive combination of the rows has all coordinates of one sign; corroborates existing tags."
+  },
+  "isl:2003:A2": {
+   "date": "2026-11-17",
+   "range": "#7–#16 of 16 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (xottabich #7, olorin #8, manuel153 #9 proposer note, Twistya #10, bora_olmez #11, megarnie #12, ZETA_in_olympiad #13, asdf334 #14, awesomeming327. #15, ezpotd #16) substitute g(x)=f(x+1)−1 to get −g(x)g(y)=g(−xy) and, with monotonicity, the power-type piecewise solutions; corroborates existing tags."
+  },
+  "isl:2003:A3": {
+   "date": "2026-11-17",
+   "range": "#4–#13 of 13 (all loaded; #3 absent); middle skimmed by thanks",
+   "note": "Late posts (va2010 #4/#5 fedja's construction, Shaddoll #6, william122 #7, everythingpi3141592 #8 question, vsamc #9, asdf334 #10/#13, awesomeming327. #11, pie854 #12) build a, b from blocks of powers of 1/2 so both sums diverge while the minima converge, and show the second part fails; corroborates existing tags."
+  },
+  "isl:2003:A4": {
+   "date": "2026-11-17",
+   "range": "#17–#26 of 26 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (IndoMathXdZ #17, jeteagle #18, TheUltimate123 #19, awesomeming327. #20, sami1618 #22 Cauchy–Schwarz, solasky #21 induction, pie854 #23 and Ahmqd #24 differences a_i ≥ 0, eevee9406 #25 question, OronSH #26) shift to Σx_i=0 and apply Cauchy–Schwarz, equality for arithmetic progressions; corroborates existing tags."
+  },
+  "isl:2003:A5": {
+   "date": "2026-11-17",
+   "range": "#21–#30 of 30 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ZETA_in_olympiad #21, awesomeming327. #22, Pyramix #23, joshualiu315 #24, Ilikeminecraft #25, Mathandski #26 attachment, pi_quadrat_sechstel #27, BS2012 #28, Ilovegeom1 #29, Royal_mhyasd #30) get f(1)=2, f(x)=f(1/x), f(x²)=f(x)²−2 and use monotonicity to reach x^k+x^{−k}; corroborates existing tags."
+  },
+  "isl:2003:A6": {
+   "date": "2026-11-17",
+   "range": "#12–#23 of 23 (all loaded; #18, #19 absent); middle skimmed by thanks",
+   "note": "Late posts (fuzzylogic #12 and manlio #15 counting terms above each threshold, darij grinberg #13, harazi #14 Prékopa–Leindler remark, Aryan-23 #16, jj_ca888 #17 |X+Y|+1 ≥ |X|+|Y|, guptaamitu1 #20, huashiliao2020 #21, shendrew7 #22, awesomeming327. #23) scale the maxima to 1 and count, for each r, terms exceeding r; corroborates existing tags."
+  },
+  "isl:2003:C1": {
+   "date": "2026-11-17",
+   "range": "#88–#99 of 99 (all loaded; #94, #95 absent); middle skimmed by thanks",
+   "note": "Late posts (eg4334 #88, lightsynth123 #89, NicoN9 #90, SimplisticFormulas #91, bryanguo #92, Kempu33334 #93, Gandalf_Greyhame #96, Royal_mhyasd #97, alupigus #98 graph degree bound, Ashwath2011 #99) choose t_i greedily, each forbidding at most 101·100+1 values, so 100 choices exist; corroborates existing tags."
+  },
+  "isl:2003:C2": {
+   "date": "2026-11-17",
+   "range": "#10–#20 of 20 (all loaded; #13 absent); middle skimmed by thanks",
+   "note": "Late posts (khbghvb #10 no solution, yayups #11, alexiaslexia #12, sman96 #14, awesomeming327. #15, sansgankrsngupta #16 question, asdf334 #17, ezpotd #18, heheman #19, lpieleanu #20) take the smallest disk and seven points (its centre and a hexagon at distance r√3), each in every disk of one class, then pigeonhole; corroborates existing tags."
+  },
+  "isl:2003:C3": {
+   "date": "2026-11-17",
+   "range": "#3–#12 of 12 (all loaded)",
+   "note": "Posts (jb05 #3, gold1 #4, Wolstenholme #5, theflowerking #6, MathInfinite #7, pad #8, awesomeming327. #9, cursed_tangent1434 #10, asdf334 #11, heheman #12) bound right angles by the exterior-angle sum and build matching polygons inductively, with k(5)=3; corroborates existing tags."
+  },
+  "isl:2003:C4": {
+   "date": "2026-11-17",
+   "range": "#39–#48 of 48 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Maximilian113 #39, AshAuktober #40, ThatApollo777 #41 bipartite red/blue edges, heheman #42, eg4334 #43, de-Kirschbaum #44, ezpotd #45, BS2012 #46, Cool12345678 #47, Viandante-assopito #48) sort rows and columns and induct after removing a forced row or column, or use the Σ(x_i+y_j)(a_ij−b_ij) identity; corroborates existing tags."
+  },
+  "isl:2003:C5": {
+   "date": "2026-11-17",
+   "range": "#4–#13 of 13 (all loaded)",
+   "note": "Posts (architkarandikar #4 Kronecker density, jgnr #5, Ravi B #6 mentions a complex-number bound without proof, Quique #7, math154 #8, for63434 #9 question, william122 #10, yayups #11, mathaddiction #12, awesomeming327. #13 via (√3−1)^x) take equilateral triangles with {k√3} tiny for (a) and bound the side length by geometry for (b); corroborates existing tags."
+  },
+  "isl:2003:C6": {
+   "date": "2026-11-17",
+   "range": "#1–#11 of 11 (all loaded; #4, #6 absent)",
+   "note": "Posts (darij grinberg #1/#8, orl #2, rem #3 and Pathological #5 bijections, william122 #7, MarkBcc168 #9, MathLuis #10, Nguyen #11 affine maps mod 11) count digit strings with a permutation divisible by 11 against those with odd length via a bijection; corroborates existing tags."
+  },
+  "isl:2003:N1": {
+   "date": "2026-11-17",
+   "range": "#18–#27 of 27 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (DakuMangalSingh #18, vsamc #19, EpicBird08 #20, Sagnik123Biswas #21, ezpotd #22, AshAuktober #23 sketch, quantam13 #24, Jupiterballs #25, Lunatic_Lunar7986 #26, genius_007 #27) reduce mod m, show m consecutive zeros propagate backwards to a contradiction and get m−1 from periodicity; corroborates existing tags."
+  },
+  "isl:2003:N2": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (darij grinberg #1/#3, vinoth_90_2004 #2, v_Enhance #4, AlastorMoody #5, awesomeming327. #6, asdf334 #7, ezpotd #8) write a=10X+Y, compare the squared digit blocks by size and case on the last digit to get 1, 2, 3 and 2…21; corroborates existing tags."
+  },
+  "isl:2003:N3": {
+   "date": "2026-11-17",
+   "range": "#51–#60 of 60 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Mr.Sharkman #51, Markas #52 discriminant, OronSH #53, Marcos_Vinicius #54 and asdf334 #55 Vieta jumping, InftyByond #56, DensSv #57 without Vieta, Royal_mhyasd #58, TThB0501 #59, maromex #60) treat a²−2kb²a+k(b³−1)=0 as a quadratic in a and descend; corroborates existing tags."
+  },
+  "isl:2003:N4": {
+   "date": "2026-11-17",
+   "range": "#12–#21 of 21 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Stormersyle #12, fidgetboss_4000 #13 remark, weaving2 #14 deleted, mathaddiction #15, oVlad #16, awesomeming327. #17 and megarnie #18 and ezpotd #21 quadratic residues mod b−1, Blast_S1 #19 size, cubres #20) write x_n=((2b^n+b)²−(b−2)(b−10))/(4(b−1)) and force b=10; corroborates existing tags."
+  },
+  "isl:2003:N5": {
+   "date": "2026-11-17",
+   "range": "#10–#20 of 20 (all loaded; #17 absent)",
+   "note": "Late posts (Myth #10/#14, darij grinberg #11/#13, Valentin Vornicu #12, Kayak #15 relies on an unproved assumption, tree3 #16, oVlad #18, awesomeming327. #19, cj13609517288 #20) rule out m ≢ 3 mod 4 and build infinitely many representations for m ≡ 3 mod 4 with explicit square products; corroborates existing tags."
+  },
+  "isl:2003:N6": {
+   "date": "2026-11-17",
+   "range": "#52–#62 of 62 (all loaded; #53 absent); middle skimmed by thanks",
+   "note": "Late posts (Kappa_Beta_725 #52, ihategeo_1969 #54, HasnatFarooq #56 and otwaenng #61 via Chebotarev (outside result), Mr.Sharkman #55, Scilyse #57, Royal_mhyasd #58, littlefox_amc #59, pl246631 #60, IMOasspirant #62 retracted) pick a prime q | (p^p−1)/(p−1) with q ≢ 1 mod p² and use orders mod q; corroborates existing tags."
+  },
+  "isl:2003:N7": {
+   "date": "2026-11-17",
+   "range": "#23–#32 of 32 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Eyed #23, GeronimoStilton #24 and IAmTheHazard #27 in F_{p²}, oVlad #25 Lucas–Lehmer background, ThisNameIsNotAvailable #26, OronSH #28, MathLuis #29 and ihategeo_1969 #30 and onyqz #31 Chebyshev polynomials, InftyByond #32 cosh) write a_n=((2+√3)^{2^n}+(2−√3)^{2^n})/2 and bound the order of 2+√3 (or √2-type elements) mod p; corroborates existing tags."
+  },
+  "isl:2003:N8": {
+   "date": "2026-11-17",
+   "range": "#4–#15 of 15 (all loaded; #10, #12 absent)",
+   "note": "Posts (v_Enhance #4, Math_Is_Fun_101 #5, Leo.Euler #6, HamstPan38825 #7, CANBANKAN #8, YaoAOPS #9, Sourorange #11, IAmTheHazard #13, Aaron314 #14, cubres #15) turn exponents into vectors in F_p^{p−1} and bound zero-sum-free multisets by Chevalley–Warning, giving (p−1)²; corroborates existing tags."
   }
  }
 }

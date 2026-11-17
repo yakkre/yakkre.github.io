@@ -56,7 +56,15 @@ const TEMPLATE = `
     <div class="nbk-turn"></div>
   </div></div>
   <div class="nbk-spine" title="Slide to give a page more room · double-click to even them out" aria-hidden="true"></div>
-  <div class="nbk-grip" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="n" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="s" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="e" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="w" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="ne" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="nw" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="se" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-rz" data-dir="sw" title="Drag to resize" aria-hidden="true"></div>
+  <div class="nbk-grip" aria-hidden="true"></div>
   <div class="nbk-cover" aria-hidden="true">
     <div class="nbk-face nbk-out"><svg viewBox="0 0 20 28" preserveAspectRatio="none" focusable="false"><path class="nbk-g-paper" d="M4 20H20V24H4A2 2 0 0 1 4 20Z"/><path class="nbk-g-paper" d="M12 0H16V10L14 8L12 10Z"/></svg></div>
     <div class="nbk-face nbk-in"></div>
@@ -89,7 +97,7 @@ export function createNotebook({store, has, hrefFor, open}) {
   const front = $('.nbk-front'), toc = $('.nbk-toc'), add = $('.nbk-add'), intro = $('.nbk-intro');
   const running = $('.nbk-running'), ribbon = $('.nbk-ribbon'), body = $('.nbk-body'), text = $('.nbk-text'), view = $('.nbk-view');
   const statusEl = $('.nbk-status'), turnEl = $('.nbk-turn');
-  const spine = $('.nbk-spine'), grip = $('.nbk-grip'), menu = $('.nbk-menu'), contentsBtn = $('.nbk-contents');
+  const spine = $('.nbk-spine'), menu = $('.nbk-menu'), contentsBtn = $('.nbk-contents');
   const modeBtn = {edit: $('[data-mode=edit]'), view: $('[data-mode=view]')};
   text.maxLength = MAX_TEXT;
   text.placeholder = 'Main ideas, tricks, observations…\n\nLaTeX works: $x^2$ or $$\\sum a_i$$.\nHide a spoiler with [\\hide="Label"] … [\\hide].\nProblem names like 2019 C6 become links in View.';
@@ -174,6 +182,30 @@ export function createNotebook({store, has, hrefFor, open}) {
     }
   }
   function focusPage() { (ui.mode === 'edit' ? text : view).focus({preventScroll: true}); }
+  // The cover is as wide as the right-hand page and swings about the middle. Once it passes edge-on it is sized at
+  // every angle so its on-screen footprint (perspective included) never reaches past either edge of the book, and it lands
+  // exactly on the left page however far the middle has been slid. Returns keyframes for the opening swing.
+  const PERSPECTIVE = 2200; // must match .nbk-spread perspective in catalogue.css
+  function coverSwing() {
+    const R = rightWidth(), L = spread.offsetWidth - R, frames = [];
+    for (let a = 0; a <= 180; a += 7.5) {
+      let sx = 1;
+      if (a > 0 && a < 90) {
+        // lifting off the right page: perspective would push the free edge past the book's right edge
+        const rad = a * Math.PI / 180;
+        sx = Math.min(1, PERSPECTIVE / (Math.cos(rad) * PERSPECTIVE + R * Math.sin(rad)));
+      } else if (a > 90) {
+        const rad = a * Math.PI / 180, c = -Math.cos(rad), si = Math.sin(rad);
+        // largest scale whose free edge, projected, stays within the left page: R·s·c·P / (P − R·s·si) ≤ L
+        const fit = L * PERSPECTIVE / (R * (c * PERSPECTIVE + L * si));
+        const ease = (a - 90) / 90;
+        sx = Math.min(1 + (L / R - 1) * ease, fit, Math.max(1, L / R));
+        if (a === 180) sx = L / R;
+      }
+      frames.push({transform: `rotateY(${-a}deg) scaleX(${sx.toFixed(4)})`, offset: a / 180});
+    }
+    return frames;
+  }
   function openAnimations() {
     const list = [spread.animate([{transform: closedTransform()}, {transform: 'translate(0px, 0px) scale(1, 1)'}], {duration: 520, easing: 'cubic-bezier(.2, .85, .25, 1)', fill: 'both'})];
     if (single()) {
@@ -181,7 +213,7 @@ export function createNotebook({store, has, hrefFor, open}) {
         {duration: 520, delay: 70, easing: 'cubic-bezier(.45, .05, .35, 1)', fill: 'both'}));
     } else {
       const timing = {duration: 580, delay: 70, easing: 'cubic-bezier(.45, .05, .3, 1)', fill: 'both'};
-      list.push(cover.animate([{transform: 'rotateY(0deg)'}, {transform: 'rotateY(-180deg)'}], timing));
+      list.push(cover.animate(coverSwing(), timing));
       list.push(shade.animate([{transform: `scaleX(${rfrac()})`}, {transform: `scaleX(${rfrac()})`, offset: 0.5}, {transform: 'scaleX(1)'}], timing));
     }
     return list;
@@ -193,7 +225,7 @@ export function createNotebook({store, has, hrefFor, open}) {
         {duration: 420, easing: 'cubic-bezier(.45, .05, .35, 1)', fill: 'both'}));
     } else {
       const timing = {duration: 440, easing: 'cubic-bezier(.45, .05, .3, 1)', fill: 'both'};
-      list.push(cover.animate([{transform: 'rotateY(-180deg)'}, {transform: 'rotateY(0deg)'}], timing));
+      list.push(cover.animate(coverSwing().reverse().map(k => ({...k, offset: 1 - k.offset})), timing));
       list.push(shade.animate([{transform: 'scaleX(1)'}, {transform: `scaleX(${rfrac()})`, offset: 0.5}, {transform: `scaleX(${rfrac()})`}], timing));
     }
     return list;
@@ -227,19 +259,23 @@ export function createNotebook({store, has, hrefFor, open}) {
   function finishTurn() { const t = turn; if (!t) return; turn = null; if (t.swap) t.swap(); if (t.anim) t.anim.cancel(); turnEl.style.visibility = ''; }
 
   // ---------- dragging: the closed book; the open book (frame, left page, header, empty space in View);
-  // the middle slider (page widths); the corner grip (size)
+  // the middle slider (page widths); the edges and corners (size)
   function dragStart(e, what) {
     if (drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
     if (what === 'tome' ? state !== 'closed' : state !== 'open') return;
-    const target = what === 'tome' ? tome : what === 'grip' ? grip : what === 'split' ? spine : spread;
-    drag = {id: e.pointerId, what, target, x: e.clientX, y: e.clientY, moved: false, lw: ui.lw, rw: ui.rw};
+    const target = what === 'tome' ? tome : what === 'resize' ? e.target : what === 'split' ? spine : spread;
+    // resize works from the size actually on screen (the page may be capped by the window)
+    const right = root.querySelector('.nbk-right .nbk-page');
+    drag = {id: e.pointerId, what, target, x: e.clientX, y: e.clientY, moved: false, dir: e.target.dataset?.dir,
+      lw: ui.lw, rw: what === 'resize' ? right.offsetWidth : ui.rw, ph: right.offsetHeight, px: pos.x, py: pos.y};
+    if (what === 'resize') root.style.setProperty('--nbk-rz-cursor', getComputedStyle(e.target).cursor);
     try { target.setPointerCapture(e.pointerId); } catch { /* gone */ }
     if (what !== 'tome') e.preventDefault();
   }
   function dragMove(e) {
     const d = drag; if (!d || e.pointerId !== d.id) return;
     let dx = e.clientX - d.x, dy = e.clientY - d.y;
-    if (!d.moved) { if (Math.hypot(dx, dy) < DRAG_THRESHOLD) return; d.moved = true; root.classList.add({grip: 'nbk-resizing', split: 'nbk-splitting'}[d.what] || 'nbk-dragging'); closeMenu(); }
+    if (!d.moved) { if (Math.hypot(dx, dy) < DRAG_THRESHOLD) return; d.moved = true; root.classList.add({resize: 'nbk-resizing', split: 'nbk-splitting'}[d.what] || 'nbk-dragging'); closeMenu(); }
     const v = vp();
     if (d.what === 'tome') {
       const bx = home.x, by = home.y; home.x += dx; home.y += dy; clampHome();
@@ -256,11 +292,25 @@ export function createNotebook({store, has, hrefFor, open}) {
       ui.lw = Math.round(clamp(d.lw + dx, MIN_LW, Math.min(MAX_LW, total - MIN_RW)));
       ui.rw = total - ui.lw;
       applySize();
-    } else {
-      const left = single() ? 0 : ui.lw + FRAME;
-      ui.rw = Math.round(clamp(e.clientX - pos.x - left - FRAME, MIN_RW, Math.min(MAX_RW, v.w - EDGE - pos.x - left - FRAME)));
-      ui.ph = Math.round(clamp(e.clientY - pos.y - 2 * FRAME, MIN_PH, Math.min(MAX_PH, v.h - EDGE - pos.y - 2 * FRAME)));
-      applySize();
+    } else if (d.what === 'resize') {
+      // Edges move with the pointer: east/south grow the right page and the height; west grows the left page
+      // (or the only page) and moves the book left; north grows the height and moves the book up.
+      const one = single(), dir = d.dir;
+      if (dir.includes('e')) {
+        const left = one ? 0 : ui.lw + FRAME;
+        ui.rw = Math.round(clamp(d.rw + dx, MIN_RW, Math.min(MAX_RW, v.w - EDGE - d.px - left - FRAME)));
+      }
+      if (dir.includes('w')) {
+        const key = one ? 'rw' : 'lw', min = one ? MIN_RW : MIN_LW, max = one ? MAX_RW : MAX_LW;
+        const w = Math.round(clamp(d[key] - dx, min, Math.min(max, d[key] + d.px - EDGE)));
+        pos.x = d.px + (d[key] - w); ui[key] = w;
+      }
+      if (dir.includes('s')) ui.ph = Math.round(clamp(d.ph + dy, MIN_PH, Math.min(MAX_PH, v.h - EDGE - d.py - 2 * FRAME)));
+      if (dir.includes('n')) {
+        const h = Math.round(clamp(d.ph - dy, MIN_PH, Math.min(MAX_PH, d.ph + d.py - EDGE)));
+        pos.y = d.py + (d.ph - h); ui.ph = h;
+      }
+      applySize(); applySpread();
     }
   }
   function dragEnd(e) {
@@ -270,7 +320,7 @@ export function createNotebook({store, has, hrefFor, open}) {
     if (!d.moved) return;
     root.classList.remove('nbk-dragging', 'nbk-resizing', 'nbk-splitting');
     lastDragEnd = performance.now();
-    if (d.what === 'grip' || d.what === 'split') { saveUi(); updateLayout(); keepSpreadOnScreen(); } else anchorFromHome();
+    if (d.what === 'resize' || d.what === 'split') { saveUi(); updateLayout(); keepSpreadOnScreen(); } else anchorFromHome();
   }
   tome.addEventListener('pointerdown', e => dragStart(e, 'tome'));
   tome.addEventListener('click', () => { if (performance.now() - lastDragEnd < 350) return; setOpen(true); });
@@ -307,7 +357,7 @@ export function createNotebook({store, has, hrefFor, open}) {
     return false;
   }
   spread.addEventListener('pointerdown', e => {
-    if (e.target === grip) dragStart(e, 'grip');
+    if (e.target.classList.contains('nbk-rz')) dragStart(e, 'resize');
     else if (e.target === spine) dragStart(e, 'split');
     else if (moveTarget(e)) dragStart(e, 'spread');
   });

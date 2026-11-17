@@ -5251,6 +5251,136 @@
    "date": "2026-11-17",
    "range": "#1–#4 of 4 (all loaded)",
    "note": "Posts (shallow #2 chaos remark, stranger #3 induction on F_n/F_{n+1}, Pathological #4 continued fractions) bound Σx_1x_2…x_k by Fibonacci ratios via the Gauss map; corroborates existing tags."
+  },
+  "isl:1991:4": {
+   "date": "2026-11-17",
+   "range": "#2–#12 of 12 (all loaded)",
+   "note": "Posts (darij grinberg #2 link, boxedexe #3, 77ant #4 and samrocksnature #9 and OlympusHero #10 and RaymondZhu #11 Erdős–Mordell, Zhero #5 and 596066 #8 trigonometric Ceva, Konigsberg #6, Bajaj_ra #7 with Twan #12 pointing out a gap) show one of the angles is at most 30° (IMO 1991/5); corroborates existing tags."
+  },
+  "isl:1991:5": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded; #7 absent)",
+   "note": "Posts (livetolove212 #2 link, Nam Luu #3, tc1729 #4, Pedram-Safaei #5 similar triangles, sayantanchakraborty #6 and TripteshBiswas #8 trigonometry, kapilpavase #9 claims a synthetic proof via a point P' with ∠BFP'=B/2, parmenides51 #10 empty) prove BP=… for ∠A=60°. kapilpavase #9 is only a sketch (519 characters), so the row stays without a synthetic route. Corroborates existing tags."
+  },
+  "isl:1991:6": {
+   "date": "2026-11-17",
+   "range": "#14–#24 of 24 (all loaded; #17 absent)",
+   "note": "Late posts (lucasxia01 #14 and carzland #15 aside, MathBoy23 #16 Euler–Gergonne remark, pinkpig #18 and Mahdi_Mashayekhi #19 and AshAuktober #23 AI/AA'=(b+c)/(a+b+c), sqing #20 variants, Kunihiko_Chikaya #21/#22 proofs of (a+b+c)³<4(a+b)(b+c)(c+a), Math_.only. #24 Ravi hint) reduce IMO 1991/1 to an algebraic inequality in the side lengths; corroborates existing tags."
+  },
+  "isl:1991:8": {
+   "date": "2026-11-17",
+   "range": "#1–#11 of 11 (all loaded; #6 absent)",
+   "note": "Posts (mavropnevma #3 sharpness via triangulations, Generic_Username #4 with dgrozev #5, pi_quadrat_sechstel #7/#9 and dgrozev #8/#10 doubling each point by ±εv, smileapple #11 question) build 2n−5 points hitting every triangle; corroborates existing tags."
+  },
+  "isl:1991:9": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (cosinator #2, va2010 #3 Zarankiewicz lemma, namanrobin08 #4) show a K₆-free graph with minimum degree ≥ 1593 cannot exist, so the graph contains six mutually joined points; corroborates existing tags."
+  },
+  "isl:1991:10": {
+   "date": "2026-11-17",
+   "range": "#28–#37 of 37 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (doulai1 #28, lpieleanu #29, cubres #30/#32 corrected after dgrozev #31, Siddharthmaybe #33, Royal_mhyasd #34 tree induction, not_detriti #35 'sidewalks', Half_Blood_Prince #36 DFS labelling, RadiantMeteor #37) label edges along trails so every vertex of degree ≥ 2 sees two consecutive labels (IMO 1991/4); corroborates existing tags."
+  },
+  "isl:1991:12": {
+   "date": "2026-11-17",
+   "range": "#1–#7 of 7 (all loaded)",
+   "note": "Posts (Ilthigore #2, Wave-Particle #3, xwang1 #4, HamstPan38825 #5 with Assassino9931 #7 correcting a claim, StarLex1 #6) take the 216 multiples of 2, 3, 5, 7 for the bound and pigeonhole on prime-indexed classes to get n=217 (IMO 1991/3); corroborates existing tags."
+  },
+  "isl:1991:13": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded; #2, #3 absent)",
+   "note": "Posts (Aiscrim #4 binary-matrix lemma, P-H-David-Clarence #5) prove a vector with entries in {0,1} has dot product divisible by n via the binary-matrix lemma; corroborates existing tags."
+  },
+  "isl:1991:14": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded; #6 absent)",
+   "note": "Posts (xxp2000 #2, shoki #3 link, shinichiman #4, mst.4921 #5 Legendre-symbol sums, Nektarinki #7 question, Ilikeminecraft #8) show b²−4ac ≡ 0 mod p by summing Legendre symbols of f over a complete residue system; corroborates existing tags."
+  },
+  "isl:1991:15": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (fedja #2, mahanmath #3 attachment, math154 #4 L(5q+r) recursion, Severus #5/#6 question) show the last nonzero digit of n! is not eventually periodic via the 5-adic recursion; corroborates existing tags."
+  },
+  "isl:1991:16": {
+   "date": "2026-11-17",
+   "range": "#46–#56 of 56 (all loaded; #54 absent); middle skimmed by thanks",
+   "note": "Late posts (blueberryfaygo_55 #46, eg4334 #47, ray66 #48, sansgankrsngupta #49, Kempu33334 #50, Beromatrix #51, Royal_mhyasd #52, Assassino9931 #53, Sxmplicity #55, TheOneAndOnlyOFT #56) show the common difference is p−1 for the least prime p ∤ n and force n prime, a power of 2, or 6 (IMO 1991/2); corroborates existing tags."
+  },
+  "isl:1991:17": {
+   "date": "2026-11-17",
+   "range": "#19–#30 of 30 (all loaded; #23, #24 absent); middle skimmed by thanks",
+   "note": "Late posts (uptownmath #19, ilikemath40 #20/#22, x3yukari #21, alexanderhamilton124 #25, hanulyeongsam #26, sansgankrsngupta #27, eric201291 #28, laitth #29, Just1 #30) get x, z even mod 3 and 4, factor (5^c−3^a)(5^c+3^a)=2^{2y} and finish with x=y=z=2; corroborates existing tags."
+  },
+  "isl:1991:11": {
+   "date": "2026-11-17",
+   "range": "#1–#11 of 11 (all loaded; #6 absent); #2, #3, #11 read in full",
+   "note": "Posts (Myth #2 residue/coefficient extraction, unfinished and pointing to another thread, pleurestique #3, blahblahblah #4, utkarshgupta #5 and tt_in_CHN #9 and SomeonecoolLovesMaths #10 asking for a combinatorial proof, Anigasan1328 #7, NTistrulove #8 partial, ray66 #11 complete) — ray66 reduces the sum to S_{1992}=Σ(−1)^k C(1992−k,k) with S_n=S_{n−1}−S_{n−2}, which has period 6. No complete generating-function proof, so no new tag; corroborates existing tags."
+  },
+  "isl:1991:18": {
+   "date": "2026-11-17",
+   "range": "#43–#55 of 55 (all loaded; #47–#49 absent); middle skimmed by thanks",
+   "note": "Late posts (eg4334 #43, SirAppel #44, Laudrup18 #45 empty, oooahin #46, Mo.11ss #50, JSJ20142014 #51, Royal_mhyasd #52, laitth #53 retracted, zhoujef000 #54, Ashwath2011 #55) apply LTE at 11 and 181 after rewriting as a sum of 1991^{1990}-th powers, giving k=1991; corroborates existing tags."
+  },
+  "isl:1991:19": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (SplashD #2 and sansgankrsngupta #5 factor (2x+1)(2x²+x−2) with x=cos πα, orl #3 olorin's cyclotomic-field argument, math154 #4 algebraic-integer argument) show cos πα=−1/2, so α=2/3; corroborates existing tags."
+  },
+  "isl:1991:20": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (hxy09 #2/#4 reduction to ⌊(α−1991){pα}{qα}⌋=0 with a1k38 #3 and MBGO #5 questions) prove associativity from α²=1991α+1 and floor identities; corroborates existing tags."
+  },
+  "isl:1991:21": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only MichaelHo #2 (complete) factors f−3 and f+3 over integer roots and bounds the number of integer roots of f²−9 by 1995 via divisibility of differences by 6; corroborates existing tags."
+  },
+  "isl:1991:22": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (hell_ever #2, Rofler #3 and JGU #4/#5 shifting the centre to the origin and solving (3x²+b)(3y²+b)+1=0, Davsch #6 odd-part argument) show the square's side is ⁴√72 when unique; corroborates existing tags."
+  },
+  "isl:1991:23": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (BanziC #2, KenHungKK #3/#5, jUaNi #4) fix the statement and use surjectivity to get f(m+1)=−f(m)−1-type relations, hence f(1991) and g; corroborates existing tags."
+  },
+  "isl:1991:24": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (JBL #2 noting the statement typo, hxy09 #3 construction (1,3,…,4k+1,4k,…,2)) characterise nice n and give the permutation; corroborates existing tags."
+  },
+  "isl:1991:25": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only gilcu3 #2 (complete) assumes x_i(1−x_{i+1}) < x_1(1−x_n)/4 for all i and multiplies to a contradiction; corroborates existing tags."
+  },
+  "isl:1991:26": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (feliz #2 and msecco #3 clarifying the product inside the sum, sayantanchakraborty #4 recalling the original normalisation and equality case) discuss the statement only; no new method. Corroborates existing tags."
+  },
+  "isl:1991:27": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (sayantanchakraborty #2 smoothing to two nonzero variables, mindpuzzler #3 Σx_i²(1−x_i) ≤ 1/4, sqing #4 and Scrutiny #5 minimum variant) find the maximum 1/4; corroborates existing tags."
+  },
+  "isl:1991:28": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (alkjash #2 and Swistak #4 greedy open-interval choice, scythe33 #3 misreading, randomusername #5 Kömal A.624 link, dgrozev #6 link) construct the sequence from fractional parts of n√2-type terms; corroborates existing tags."
+  },
+  "isl:1991:29": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (shallow #2/#4 and t0rajir0u #3 reformulation, GaryTam #5 full classification: ∅, ℝ, points, complements, rays) classify superinvariant sets; corroborates existing tags."
+  },
+  "isl:1991:30": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (iTAQ #2 question, MellowMelon #3 example, xxp2000 #4 and demetre #5 interval-shrinking argument) show a 'yes' must eventually come by tracking the shrinking ranges of possible numbers; corroborates existing tags."
   }
  }
 }

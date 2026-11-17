@@ -5381,6 +5381,136 @@
    "date": "2026-11-17",
    "range": "#1–#5 of 5 (all loaded)",
    "note": "Posts (iTAQ #2 question, MellowMelon #3 example, xxp2000 #4 and demetre #5 interval-shrinking argument) show a 'yes' must eventually come by tracking the shrinking ranges of possible numbers; corroborates existing tags."
+  },
+  "isl:1990:1": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (freemind #2/#4, bearkiller #3, sayantanchakraborty #5, vsathiam #6, ayan_mathematics_king #7 unchecked construction, endless_abyss #8) count representations as sums of consecutive integers via odd divisors to get n=5^{30}·199^{…}-type answers; corroborates existing tags."
+  },
+  "isl:1990:2": {
+   "date": "2026-11-17",
+   "range": "#2–#13 of 13 (all loaded; #4, #6 absent)",
+   "note": "Posts (goodar2006 #2 with anonymouslonely #3 and vsathiam #5, Wizard_32 #7/#9/#11 retracted after Taha1381 #8/#10, e_plus_pi #12 explicit construction, kotmhn #13 expectation sketch) construct a cycle of 1990 committees from 11 countries; corroborates existing tags."
+  },
+  "isl:1990:3": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (grobber #2 graph joining points n apart, nickthegreek #3 and Pascal96 #4 closed form via gcd(2n−1,3), Mathematicsislovely #5, alba_tross1867 #6, SomeonesPenguin #7, whatwhyandhow #8) reduce to independent sets in a cycle and get k=n−1 or n by n mod 3 (IMO 1990/2); corroborates existing tags."
+  },
+  "isl:1990:4": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded; #5 absent)",
+   "note": "Posts (dzeta #2 good sets, orl #3 Severius' induction on r, demetre #4 n-strings, Ainulindale #6 m-good sets) show some A_i has bounded gaps in arbitrarily long progressions by induction on the number of parts; corroborates existing tags."
+  },
+  "isl:1990:5": {
+   "date": "2026-11-17",
+   "range": "#4–#13 of 13 (all loaded); #1, #2, #3, #10 read in full",
+   "note": "Posts (Sailor #2 vectors H·G=−(2/3)r(R−2r), darij grinberg #3 Euler's result, pbornsztein #4 Guinand, Virgil Nicula #5/#7 explanations, sunchips #6/#8, lomos_lupin #9, sayantanchakraborty #11 length computation, DottedCaculator #12 and pinkpig #13 dot products) prove ∠GIH > 90° by computation. Little Gauss #10 sketches a region argument (G in triangle CIE, H in triangle BIF, so ∠GIH ≥ ∠BIC) for acute triangles only and skips the obtuse case, so it is not recorded as a synthetic route; the row stays computation-only. Corroborates existing tags."
+  },
+  "isl:1990:6": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded; #5 absent)",
+   "note": "Posts (Ilthigore #2, daniel73 #3, SCP #4 statement check, Ainulindale #6) show A wins for n₀ ≥ 8, B for n₀ ≤ 5, and draws for 6, 7 via 1990-type prime-power strategies (IMO 1990/5); corroborates existing tags."
+  },
+  "isl:1990:7": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (t0rajir0u #2 substitution g(n)=f(n)/2^{n(n−1)}, Mathias_DK #3) solve the recurrence in closed form and check divisibility by 13 for 1989–1991; corroborates existing tags."
+  },
+  "isl:1990:8": {
+   "date": "2026-11-17",
+   "range": "#2–#8 of 8 (all loaded)",
+   "note": "Posts (ramakrishna #2 copying the Compendium with Akashnil #3 and goodar2006 #4 remarks, demetre #5 mod 9, RedFireTruck #6, ryanbear #7, cj13609517288 #8) bound f_n(2^{1990}) by size and use digit sums mod 9 to find the eventual cycle 169, 256; corroborates existing tags."
+  },
+  "isl:1990:10": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only yetti #2 (complete) computes the cut ellipse's axes and the smaller volume by similar cones and areas; corroborates existing tags."
+  },
+  "isl:1990:11": {
+   "date": "2026-11-17",
+   "range": "#5–#16 of 16 (all loaded; #10, #11 absent)",
+   "note": "Posts (Altheman #5, sayantanchakraborty #6 sine rule, jayme #7/#13 and Moubinool #14 links, AlastorMoody #8 and SemsPolat #12 and AwesomeYRY #15 and iflugkiwmu #16 similar triangles ECG ~ MBD and ECF ~ MAD, AIME12345 #9 ratio lemma) get EG/EF=t/(1−t) (IMO 1990/1); corroborates existing tags."
+  },
+  "isl:1990:12": {
+   "date": "2026-11-17",
+   "range": "#2–#11 of 11 (all loaded)",
+   "note": "Posts (grobber #2, jgnr #3, dgreenb801 #4, sayantanchakraborty #5 sine rule, WolfusA #6/#8/#10 and adamov1 #7/#9 debating the WLOG, Keith50 #11) compare lengths along FG and DE to force CA=CB; corroborates existing tags."
+  },
+  "isl:1990:13": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (tjhance #2, yunustuncbilek #3 and Arc_archer #4 on a gap, L567 #5 Bézout, v_Enhance #6) show the minimum number of rungs is a+b−gcd(a,b); corroborates existing tags."
+  },
+  "isl:1990:14": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (sholly #2 cycles through triangles alternating colours, huangke3847 #3, Vietnamisalwaysinmyheart #4 question, Pathological #5 black-minus-white offset) show at least two triangles have two good sides; corroborates existing tags."
+  },
+  "isl:1990:15": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (mszew #2 hints, Mathias_DK #3 with gogyan #4 checking a bound, FISHMJ25 #5) need k ≡ 0, 3 mod 4 by parity of the sum and balance the partition, with the size bound excluding small k ≡ 0 mod 4; corroborates existing tags."
+  },
+  "isl:1990:16": {
+   "date": "2026-11-17",
+   "range": "#7–#18 of 18 (all loaded; #8 absent); middle skimmed by thanks",
+   "note": "Late posts (v_Enhance #7, shendrew7 #9, Cusofay #10, joshualiu315 #11, lpieleanu #12, jmathers870 #13 question, akliu #14, Ilikeminecraft #15, Kempu33334 #16, TheMathCanadian #17, RadiantMeteor #18) pair sides (2k−1)² and (2k)² opposite and use 995th roots of unity to make the side vectors sum to zero (IMO 1990/6); corroborates existing tags."
+  },
+  "isl:1990:17": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (TheHeinrich #2 question on the Compendium's Eulerian argument, v_Enhance #3) show (a) always works and (b) works iff at least two of p, q, r are even, via a graph on cube vertices; corroborates existing tags."
+  },
+  "isl:1990:18": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only pco #2 (complete) tracks f modulo a+b to get the least k=(a+b)/gcd(a,b); corroborates existing tags."
+  },
+  "isl:1990:20": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (ramakrishna #2 with Akashnil #3 questions, tc1729 #4) pigeonhole 2^m 0/1-digit numbers mod k so a difference uses digits from {0,1,8,9}, giving a multiple below k⁴; corroborates existing tags."
+  },
+  "isl:1990:21": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (tjhance #2 inverse of 1+2^p+2^{n−p} mod 2^n by cases on n/p, Yabadabadou #3 question, Pathological #4) give the binary form of N; corroborates existing tags."
+  },
+  "isl:1990:22": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (Erken #2 graph restatement, orl #3, Gamamal #4/#6/#8 odd cycles and R(3,3), 62861 #5/#7 on a different 1990 problem, Psyduck909 #9) show one airline has two disjoint odd cycles by bipartiteness of the complement colour classes; corroborates existing tags."
+  },
+  "isl:1990:23": {
+   "date": "2026-11-17",
+   "range": "#146–#157 of 157 (all loaded; #155, #156 absent); middle skimmed by thanks",
+   "note": "Late posts (SomeonecoolLovesMaths #146, MR.1 #147 attachment, mathfortaleza23 #148, methovermath #149 avoiding LTE, mohamedprimenumber #150 with ddot1 #151 corrections, Soupboy0 #152, ostriches88 #153, pimarts #154, Nemo99999 #157) take the smallest prime p | n to force p=3, then LTE and the next smallest prime to get n=3 (IMO 1990/3); corroborates existing tags."
+  },
+  "isl:1990:24": {
+   "date": "2026-11-17",
+   "range": "#18–#27 of 27 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Pumpko #18, sqing #19/#21, Bluesoul #20 and clew28 #22 and SirAppel #25 Titu, megahertz13 #23, hgomamogh #24 homogenising, greenAB08 #26 Hölder, Og_math_guy #27) use w²+x²+y²+z² ≥ 1 with Titu/Chebyshev to get the 1/3 bound; corroborates existing tags."
+  },
+  "isl:1990:25": {
+   "date": "2026-11-17",
+   "range": "#17–#29 of 29 (all loaded; #18, #25, #28 absent); middle skimmed by thanks",
+   "note": "Late posts (MathPanda1 #17 and vsathiam #19 on the multiplicativity gap, ubermensch #20, megarnie #21, ZETA_in_olympiad #22, john0512 #23, AshAuktober #24, Maximilian113 #26, math-olympiad-clown #27, Ainulindale #29) build a multiplicative f with f(f(y))=1/y by pairing primes p_{2k−1} → p_{2k} → 1/p_{2k−1} (IMO 1990/4); corroborates existing tags."
+  },
+  "isl:1990:26": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only Leva1980 #2 (complete) clears denominators and bounds the sequence's denominators to show it is eventually periodic; corroborates existing tags."
+  },
+  "isl:1990:27": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (tjhance #2 with mathink #3 correction and #4, Mewto55555 #5, megarnie #6) exclude 3 | n by digit sums and use the residues of 6·10^k mod 7 to find a multiple of 7, leaving n=1, 2; corroborates existing tags."
+  },
+  "isl:1990:28": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (tjhance #2 scaling to integers and parity of Pythagorean steps, analytic #3 sketch) show an odd closed rational unit-length broken line cannot exist; corroborates existing tags."
   }
  }
 }

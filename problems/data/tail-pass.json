@@ -4806,6 +4806,136 @@
    "date": "2026-11-17",
    "range": "#1–#7 of 7 (all loaded)",
    "note": "Posts (BaBaK Ghalebi #2 and jasperE3 #6 g(3n+1)=4f(n)+1 is multiplicative, math_pi_rate #3, duongbgbg32 #4, ZETA_in_olympiad #5, wasd- #7) build a bijection by matching primes ≡ 1, 2 mod 3 with primes ≡ 1, 3 mod 4; corroborates existing tags."
+  },
+  "isl:1995:A1": {
+   "date": "2026-11-17",
+   "range": "#166–#177 of 177 (all loaded; #169, #172 absent); middle skimmed by thanks",
+   "note": "Late posts (sunmuel #166 and orangutan1434 #176 Cauchy–Schwarz, Siddharthmaybe #167 and Sxmplicity #177 Titu, Clashron #168, Stead #170 substitution x=1/a, Lunatic_Lunar7986 #171 empty, zhoujef000 #173 homogenised Muirhead, CubeAlgo15 #174 Hölder, TestX01 #175 SOS) prove IMO 1995/2 via x=1/a and Titu; corroborates existing tags."
+  },
+  "isl:1995:A2": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (BaBaK Ghalebi #2 case descent, alexiaslexia #3 long descent, lian_the_noob12 #4 and sidhu09 #5 and PROBLEM-SOLVER11 #6 discussing why Cauchy–Schwarz does not apply) reduce (a,b,c) by a descent step until c=0; corroborates existing tags."
+  },
+  "isl:1995:A3": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (BaBaK Ghalebi #2, tc1729 #3) bound each term (a_i²+a_{i+1}²−a_{i+2}²)/(a_i+a_{i+1}−a_{i+2}) by a_i+a_{i+1}+a_{i+2} minus a correction using 2 ≤ a_i ≤ 3; corroborates existing tags."
+  },
+  "isl:1995:A4": {
+   "date": "2026-11-17",
+   "range": "#5–#14 of 14 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (harazi #5, Myth #6 extremal method, Ji Chen #7 SOS, ishfaq420haque #8, can_hang2007 #9, bearkiller #10 Lagrange remark, Mewto55555 #11, hctb00 #12, math90 #13, manlio #14) solve x=(b+c)/2 etc. via the trigonometric substitution a=2√(yz)cos A-type or an SOS/extremal argument; corroborates existing tags."
+  },
+  "isl:1995:A5": {
+   "date": "2026-11-17",
+   "range": "#4–#15 of 15 (all loaded; #11, #14 absent)",
+   "note": "Posts (v235711 #4, erudito #5, Dijkschneier #6/#8/#10 with mavropnevma #7/#9 corrections, william122 #12, ZETA_in_olympiad #13, ThatApollo777 #15) take the supremum M of f, use f(2)=2 and f(x+1/x²)=f(x)+f(1/x)² to show f(1/2)=0 and contradict boundedness; corroborates existing tags."
+  },
+  "isl:1995:A6": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (kaymant #2 rewriting as a sum of positive products of gaps, Fotros #3, Gems98 #4 induction with shifting) prove the inequality for x_1<…<x_n; corroborates existing tags."
+  },
+  "isl:1995:N1": {
+   "date": "2026-11-17",
+   "range": "#5–#14 of 14 (all loaded)",
+   "note": "Posts (Math1331Math #5 and Gh324 #6/#8 with IMO2019 #7 noting gaps, Aibek2004 #9 misreading, Polynom_Efendi #10, pad #11 and lifeismathematics #12 and RedFireTruck #13 and Adit-Reddy #14 Hensel-type lifting of x² ≡ −7 mod 2^k) show −7 is a square mod every 2^k; corroborates existing tags."
+  },
+  "isl:1995:N2": {
+   "date": "2026-11-17",
+   "range": "#2–#15 of 15 (all loaded; #3–#5 absent); middle skimmed by thanks",
+   "note": "Posts (t0rajir0u #2/#10, dgreenb801 #6/#8, boxedexe #7, ZetaX #9, Zhero #11, ubermensch #12 and heheman #13 and maromex #15 mod 4 casework, Assassino9931 #14) pick C by parity of A and B so the two value sets differ mod 4; corroborates existing tags."
+  },
+  "isl:1995:N3": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded; #3 absent)",
+   "note": "Posts (grobber #2, Jackson0423 #4) show only n=4 works by comparing area equations for quadrilaterals and the convex-hull cases of five points (IMO 1995/3); corroborates existing tags."
+  },
+  "isl:1995:N4": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (Myth #2/#3, FelixD #4 extra solutions, Jorge Miranda #5, RishiNandha_M #6) write y=xy', z=x²z' and solve by divisibility and size; corroborates existing tags."
+  },
+  "isl:1995:N5": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (kevinatcausa #2, mavropnevma #3, Elasmosaur #4 Compendium, ubermensch #5, AlastorMoody #6, puntre #7, primesarespecial #8, fearsum_fyz #9) double count greeting triples to get 12k people with k=3, i.e. 36; corroborates existing tags."
+  },
+  "isl:1995:N7": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (tjhance #2, GoldenFrog1618 #3, mathophile593 #4, ubermensch #5) show no such partition exists by comparing least elements and sums in different classes; corroborates existing tags."
+  },
+  "isl:1995:N6": {
+   "date": "2026-11-17",
+   "range": "#52–#61 of 61 (all loaded); middle skimmed by thanks; #61 read in full",
+   "note": "Late posts (TwentyIQ #52, megahertz13 #53, cubres #54, mathkiddus #55, numbertheory97 #56/#57, zhoujef000 #58, alupigus #59, littlefox_amc #60, teralux #61) use the bivariate generating function Π(1+xy^k) with a roots-of-unity filter; the earlier iura #2 combinatorial bijection and 62861 #19 lemma are also there. teralux #61 is complete; its answer (C(2p,p)+2p−2)/p matches a brute-force count for p=3, 5, 7 (8, 52, 492).",
+   "addTags": [
+    "A: Generating functions"
+   ],
+   "explanationAppend": "Late forum proofs (e.g. teralux #61) encode subsets by size and sum in F(x,y)=Π_{k=1}^{2p}(1+xy^k), apply a roots-of-unity filter in y, and read off the coefficient of x^p to get (C(2p,p)+2p−2)/p.",
+   "cite": "#61 (teralux) bivariate generating function, complete"
+  },
+  "isl:1995:N8": {
+   "date": "2026-11-17",
+   "range": "#12–#21 of 21 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (OronSH #12, Ywgh1 #13 sketch, shendrew7 #14, cubres #15, Ilikeminecraft #16, V0305 #17 attachment, blueprimes #18, lightsynth123 #19 rationalising, Royal_mhyasd #20, LemmaLover #21 basic calculus) compare (√x+√y)² with 2p using size of 4xy against (2p−x−y)² to get ((p−1)/2,(p+1)/2); corroborates existing tags."
+  },
+  "isl:1995:S1": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded; #5 absent)",
+   "note": "Posts (mr.danh #2 construction with F(1)=0, F(361)=1, omegatheo #3, GaryTam #4 number of prime factors, math_pi_rate #6 motivated construction) show such a sequence exists; corroborates existing tags."
+  },
+  "isl:1995:S2": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (shyong #2 and vyfukas #5, BaBaK Ghalebi #3 factoring to x_i ∈ {1/x_{i−1}, x_{i−1}/2}, AFdrolf #4 question, Legend-crush #6, alex443399 #7 parity of reciprocal steps, lahmacun #8) get x_{1995}=x_0^{±1}/2^m with parity constraints, maximum x_0=2^{997}; corroborates existing tags."
+  },
+  "isl:1995:S3": {
+   "date": "2026-11-17",
+   "range": "#15–#24 of 24 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (bryanguo #15, shendrew7 #16 binary strings, eg4334 #17, Maximilian113 #18, de-Kirschbaum #19, happypi31415 #20, ihategeo_1969 #21 sketch, lpieleanu #22, Ilikeminecraft #23, wikjay #24) show the prime factorisation of x_n encodes n in binary, so x_n=1995 gives n=142; corroborates existing tags."
+  },
+  "isl:1995:S4": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (sambitnayak #2 partial, darij grinberg #3, tc1729 #4 Descartes' rule of signs) bound the root of x^n=Σx^j between 2−1/2^{n−1} and 2−1/2^n by evaluating (x−2)x^n+1; corroborates existing tags."
+  },
+  "isl:1995:S5": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only BaBaK Ghalebi #2 (complete) determines f(n) on residues mod 4 (with small exceptions) and finds the arithmetic progressions; corroborates existing tags."
+  },
+  "isl:1995:S6": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (eloris #2 guess, N.T.TUAN #3 injectivity, trungnghia215 #4 general K) prove f(n)=n+95 is the unique solution via injectivity and Cauchy-type additivity; corroborates existing tags."
+  },
+  "isl:1995:G1": {
+   "date": "2026-11-17",
+   "range": "#78–#88 of 88 (all loaded; #80 absent); middle skimmed by thanks",
+   "note": "Late posts (cyroah1331 #78 Cartesian coordinates, Fly_into_the_sky #79, mudkip42 #81, Shan3t #82, Kempu33334 #83, quannc #84 power of a point, JKH123 #85, Astrox #86, Assassino9931 #87, Fractalpi-Matrix #88) use BCNM cyclic and the radical axis XY of the two circles (IMO 1995/1); corroborates existing tags."
+  },
+  "isl:1995:G2": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded; #7 absent)",
+   "note": "Posts (Mathias_DK #2, Luis González #3 de Longchamps point, kyyuanmathcount #4 three circles, jayme #5, viperstrike #6 and mathmax12 #8 and Lunatic_Lunar7986 #10 coordinates, Aiden-1089 #9 reflected altitudes) show X is the unique intersection of three lines from the conditions; corroborates existing tags."
+  },
+  "isl:1995:G3": {
+   "date": "2026-11-17",
+   "range": "#27–#37 of 37 (all loaded; #29 absent); middle skimmed by thanks",
+   "note": "Late posts (ike.chen #27, HamstPan38825 #28 cross ratio (T,D;B,C)=−1, Telgite #30/#31, lelouchvigeo #32, AshAuktober #33 Ceva–Menelaus, Fly_into_the_sky #34 angle chase, quannc #35, Math_AlexG #36, ThatApollo777 #37) show EF, YZ and BC concur at the harmonic conjugate T, then TE·TF=TD²=TY·TZ; corroborates existing tags."
+  },
+  "isl:1995:G6": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (mihai miculita #2, tc1729 #3, Marinchoo #4 Leibniz's theorem twice, asdf334 #5 power of G) express GA_i·GA'_i as the power of G and bound the sums by AM–GM; corroborates existing tags."
+  },
+  "isl:1995:G8": {
+   "date": "2026-11-17",
+   "range": "#37–#47 of 47 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (BorisAngelov1 #37 radical axis, MagicalToaster53 #38 and dolphinday #39 and Aiden-1089 #40 and mathwiz_1207 #41 and Ilikeminecraft #42 Steiner line as radical axis of (AB) and (CD), Ilovegeom1 #43 and methovermath #47 complex numbers, Kempu33334 #44, cubres #45, DensSv #46 Desargues) show F, H₁, H₂ are collinear; corroborates existing tags."
   }
  }
 }

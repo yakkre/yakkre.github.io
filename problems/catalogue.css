@@ -349,8 +349,9 @@ body.focus-mode #notes-preview-body{font-size:17px;line-height:1.7}
 .nbk-left .nbk-page::after{left:0;background:repeating-linear-gradient(to right,var(--ink) 0 1px,transparent 1px 2.5px)}
 .nbk-right .nbk-page::after{right:0;background:repeating-linear-gradient(to left,var(--ink) 0 1px,transparent 1px 2.5px)}
 .nbk[data-layout=single] .nbk-page::before{display:none}
-.nbk[data-state=open] .nbk-left .nbk-page>*{animation:nbk-ink-in .28s ease-out both}
-@keyframes nbk-ink-in{from{opacity:0}}
+/* both pages' contents appear together once the cover has landed, and leave together when it closes */
+.nbk-page>:not(.nbk-turn){transition:opacity .3s ease-out}
+.nbk:not([data-state=open]) .nbk-page>:not(.nbk-turn){opacity:0;transition-duration:.12s}
 
 /* the middle slider: slide left or right to give one page more room (double-click evens them out) */
 .nbk-spine{position:absolute;top:var(--frame);bottom:var(--frame);left:calc(var(--frame) + var(--lw));width:28px;margin-left:-14px;z-index:4;cursor:col-resize;touch-action:none}
@@ -409,6 +410,12 @@ body.focus-mode #notes-preview-body{font-size:17px;line-height:1.7}
 .nbk-contents svg{width:12px;height:12px}
 .nbk[data-layout=single] .nbk-contents{display:inline-flex}
 .nbk-mode{flex:none;display:inline-flex;border:1px solid var(--ink)}
+.nbk-size{flex:none;display:none;align-items:center;gap:2px}
+.nbk-viewing .nbk-size{display:inline-flex}
+.nbk-size button{width:24px;height:24px;display:grid;place-items:center;border-radius:50%;line-height:1}
+.nbk-size button:hover:not(:disabled){background:var(--ink);color:var(--paper)}
+.nbk-a-small{font-size:11px}.nbk-a-large{font-size:16px}
+.nbk-size button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
 .nbk-mode button{padding:3px 10px;font-size:12.5px;letter-spacing:.02em;line-height:1.3}
 .nbk-mode button+button{border-left:1px solid var(--ink)}
 .nbk-mode button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
@@ -422,7 +429,7 @@ body.focus-mode #notes-preview-body{font-size:17px;line-height:1.7}
 .nbk-text{flex:1;width:100%;margin:0;padding:18px 26px 26px 30px;border:0;outline:0;resize:none;background:transparent;color:var(--ink);font:15px/1.6 var(--serif);
   scrollbar-width:thin;scrollbar-color:var(--ink) transparent}
 .nbk-text::placeholder{color:var(--ink);opacity:.42;font-style:italic}
-.nbk-view{display:none;flex:1;overflow:auto;padding:18px 26px 26px 30px;font-size:15px;line-height:1.6;user-select:text;-webkit-user-select:text;scrollbar-width:thin;scrollbar-color:var(--ink) transparent}
+.nbk-view{display:none;flex:1;overflow:auto;padding:18px 26px 26px 30px;font-size:var(--nbk-fs,15px);line-height:1.6;user-select:text;-webkit-user-select:text;scrollbar-width:thin;scrollbar-color:var(--ink) transparent}
 .nbk-viewing .nbk-text{display:none}
 .nbk-viewing .nbk-view{display:block}
 .nbk-view.nbk-grabbable{cursor:grab}
@@ -456,5 +463,15 @@ body.focus-mode #notes-preview-body{font-size:17px;line-height:1.7}
 .nbk-out svg{display:block;width:100%;height:100%}
 .nbk-in{transform:rotateY(180deg);background:var(--paper);border:var(--frame) solid var(--ink);border-right-width:0;border-radius:8px 0 0 8px}
 
-@media(prefers-reduced-motion:reduce){.nbk-tome svg,.nbk-ribbon,.nbk-spine::after{transition:none}.nbk[data-state=open] .nbk-left .nbk-page>*{animation:none}}
+@media(prefers-reduced-motion:reduce){.nbk-tome svg,.nbk-ribbon,.nbk-spine::after{transition:none}.nbk-page>:not(.nbk-turn){transition:none}}
 @media(max-width:600px){.nbk-grip,.nbk-rz{display:none}.nbk-text{font-size:16px}}
+
+/* Text-mode LaTeX in notes: enumerate / itemize / description, and \textbf-style formatting */
+.note-list{margin:.35em 0;padding:0;list-style:none;white-space:normal}
+.note-list>li{display:flex;gap:.55em;margin:.2em 0}
+.note-label{flex:none;min-width:1.4em;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.note-itemize>li>.note-label{min-width:.9em}
+.note-label-custom{min-width:0;font-weight:600}
+.note-item{flex:1;min-width:0;white-space:pre-wrap}
+.note-item>.note-list{margin:.15em 0 .25em}
+.statement-text code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em}

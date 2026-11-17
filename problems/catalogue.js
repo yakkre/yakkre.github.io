@@ -1,6 +1,6 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
 import {renderStatement, typesetMath} from './statement-view.mjs?v=20261110-aopsmacros';
-import {parseNote, renderNote, noteExcerpt} from './notes-view.mjs?v=20261116-hide';
+import {parseNote, renderNote, noteExcerpt} from './notes-view.mjs?v=20261117-latex';
 
 const START_HREF = location.href; // before render() rewrites the URL: a sign-in link's code is in it
 const $ = id => document.getElementById(id);
@@ -821,7 +821,7 @@ async function start() {
     }));
     await setupProgress();
     try {
-      const {createNotebook} = await import('./notebook.mjs?v=20261117-resize');
+      const {createNotebook} = await import('./notebook.mjs?v=20261117-latex');
       const keys = new Set(data.problems.map(p => p.key)), byKey = new Map(data.problems.map(p => [p.key, p]));
       notebook = createNotebook({store: progress, has: k => keys.has(k), hrefFor: k => entryUrl(byKey.get(k)), open: k => openProblem(byKey.get(k))});
     } catch (error) { console.error('Notebook unavailable:', error); }

@@ -30,3 +30,32 @@ test('excerpts never leak hidden text', () => {
   assert.equal(noteExcerpt('Key idea: [\\hide="Solution"] the answer is 42 [\\hide]\nthen finish'), 'Key idea: [Solution] then finish');
   assert.equal(noteExcerpt('x'.repeat(200)).length, 161);
 });
+
+import {parseLatexText, parseInline, itemLabel} from '../problems/notes-view.mjs';
+const list = (kind, label, ...items) => ({type: 'list', kind, label, items});
+const item = (label, ...parts) => ({label, parts});
+test('enumerate and itemize become lists, nested lists stay inside their item', () => {
+  const t = 'Plan:\n\\begin{enumerate}\n  \\item First $x$.\n  \\item Then\n    \\begin{itemize}\n      \\item a\n      \\item[$\\star$] b\n    \\end{itemize}\n\\end{enumerate}\nDone.';
+  assert.deepEqual(parseLatexText(t), [text('Plan:'),
+    list('enumerate', null, item(null, text('First $x$.')), item(null, text('Then'), list('itemize', null, item(null, text('a')), item('$\\star$', text('b'))))),
+    text('Done.')]);
+});
+test('list commands inside math are left for MathJax, and stray \\item or \\end stay as text', () => {
+  assert.deepEqual(parseLatexText('$\\begin{itemize}$ and $$\\item$$'), [text('$\\begin{itemize}$ and $$\\item$$')]);
+  assert.deepEqual(parseLatexText('a \\item b \\end{enumerate}'), [text('a \\item b \\end{enumerate}')]);
+  assert.deepEqual(parseLatexText('\\begin{enumerate}[(a)]\\item x'), [list('enumerate', '(a)', item(null, text('x')))]);
+});
+test('enumerate labels follow depth or the given label', () => {
+  const e = {kind: 'enumerate'};
+  assert.deepEqual([0, 1].map(i => itemLabel(e, i, 0)), ['1.', '2.']);
+  assert.equal(itemLabel(e, 1, 1), '(b)');
+  assert.equal(itemLabel(e, 3, 2), 'iv.');
+  assert.equal(itemLabel({kind: 'enumerate', label: '(a)'}, 26, 0), '(aa)');
+  assert.equal(itemLabel({kind: 'enumerate', label: 'label=(\\roman*)'}, 2, 0), '(iii)');
+  assert.equal(itemLabel({kind: 'itemize'}, 0, 1), '–');
+});
+test('text formatting nests and skips math', () => {
+  assert.deepEqual(parseInline('a \\textbf{b \\emph{c}} $\\textbf{x}$'), [text('a '),
+    {type: 'fmt', tag: 'strong', parts: [text('b '), {type: 'fmt', tag: 'em', parts: [text('c')]}]}, text(' $\\textbf{x}$')]);
+  assert.deepEqual(parseInline('\\textbf{open'), [text('\\textbf{open')]);
+});

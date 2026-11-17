@@ -5,7 +5,7 @@
 // drag the book from its frame, anywhere on the left page, the header, or empty space on the right page in View mode;
 // resize it from the bottom-right corner. On narrow screens it opens as a single page with a Tabs button.
 // Design adapted from the user's <book-widget> reference; built in the light DOM so MathJax can render notes.
-import {parseNote} from './notes-view.mjs?v=20261116-hide';
+import {parseNote, renderNote} from './notes-view.mjs?v=20261117-latex';
 import {typesetMath} from './statement-view.mjs?v=20261110-aopsmacros';
 import {cleanTabs, moveTab, nextOrder, newTabId, linkProblems, readLocalTabs, writeLocalTabs, MAX_TABS, MAX_TITLE, MAX_TEXT} from './notebook-core.mjs?v=20261117-notebook';
 
@@ -44,6 +44,7 @@ const TEMPLATE = `
     <div class="nbk-head">
       <button class="nbk-contents" type="button" aria-label="Show tabs">${ARROW('M9 2L4 7L9 12')}<span>Tabs</span></button>
       <span class="nbk-running"></span><span class="nbk-status" aria-live="polite"></span>
+      <div class="nbk-size" role="group" aria-label="Text size"><button type="button" data-size="-1" aria-label="Smaller text" title="Smaller text (Ctrl/⌘ −)"><span class="nbk-a-small">A</span></button><button type="button" data-size="1" aria-label="Larger text" title="Larger text (Ctrl/⌘ +)"><span class="nbk-a-large">A</span></button></div>
       <div class="nbk-mode" role="group" aria-label="Mode"><button type="button" data-mode="edit">Edit</button><button type="button" data-mode="view">View</button></div>
     </div>
     <button class="nbk-ribbon" type="button" aria-label="Close notebook" title="Close (Esc)">
@@ -85,7 +86,7 @@ function localStore() {
 // store: the progress object (or null); has(key)/hrefFor(key)/open(key) link problem names to their entries.
 export function createNotebook({store, has, hrefFor, open}) {
   store = store || localStore();
-  const ui = {open: false, mode: 'edit', active: null, anchor: null, lw: 300, rw: 400, ph: 470, ...readUi()};
+  const ui = {open: false, mode: 'edit', active: null, anchor: null, lw: 300, rw: 400, ph: 470, fs: 15, ...readUi()};
   if (ui.pw && !readUi().lw) { ui.lw = ui.pw; ui.rw = ui.pw; } delete ui.pw; // sizes saved before the slider
   const saveUi = () => { try { localStorage.setItem(UI_KEY, JSON.stringify(ui)); } catch { /* ignore */ } };
 
@@ -112,6 +113,7 @@ export function createNotebook({store, has, hrefFor, open}) {
     root.style.setProperty('--nbk-lw', ui.lw + 'px');
     root.style.setProperty('--nbk-rw', ui.rw + 'px');
     root.style.setProperty('--nbk-ph', ui.ph + 'px');
+    root.style.setProperty('--nbk-fs', ui.fs + 'px');
     // share of the spread taken by the right-hand page (the closed book is that page)
     root.style.setProperty('--nbk-rfrac', String((ui.rw + FRAME) / (ui.lw + ui.rw + 2 * FRAME)));
   }
@@ -514,6 +516,24 @@ export function createNotebook({store, has, hrefFor, open}) {
     if (!quiet && state === 'open') focusPage();
   }
   for (const [k, b] of Object.entries(modeBtn)) b.addEventListener('click', () => setMode(k));
+  // View text size (equations scale with it): A A buttons in the header, or Ctrl/⌘ +, −, 0 while the book has focus.
+  const SIZES = [11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 27, 30], DEFAULT_FS = 15;
+  const sizeBtns = root.querySelectorAll('[data-size]');
+  function setSize(fs) {
+    ui.fs = fs; saveUi(); applySize();
+    sizeBtns[0].disabled = fs <= SIZES[0]; sizeBtns[1].disabled = fs >= SIZES.at(-1);
+  }
+  function stepSize(dir) {
+    const i = SIZES.findIndex(v => v >= ui.fs);
+    setSize(SIZES[clamp((i < 0 ? SIZES.length - 1 : SIZES[i] === ui.fs ? i : dir > 0 ? i - 1 : i) + dir, 0, SIZES.length - 1)]);
+  }
+  sizeBtns.forEach(b => b.addEventListener('click', () => stepSize(Number(b.dataset.size))));
+  spread.addEventListener('keydown', e => {
+    if (!(e.metaKey || e.ctrlKey) || e.altKey || ui.mode !== 'view') return;
+    if (e.key === '=' || e.key === '+') { e.preventDefault(); stepSize(1); }
+    else if (e.key === '-' || e.key === '_') { e.preventDefault(); stepSize(-1); }
+    else if (e.key === '0') { e.preventDefault(); setSize(DEFAULT_FS); }
+  });
   function renderRunning() { running.textContent = active()?.title ?? 'Notebook'; }
   function renderFolio() { statusEl.textContent = status; }
   let viewRun = 0;
@@ -525,22 +545,16 @@ export function createNotebook({store, has, hrefFor, open}) {
     const run = ++viewRun, src = t ? (dirty ? text.value : t.text) : '';
     view.replaceChildren();
     if (!src.trim()) { view.append(el('p', 'nbk-empty', t ? 'This page is empty. Switch to Edit to write on it.' : 'No tabs yet. Add one on the left, or switch to Edit and start writing.')); return; }
-    renderParts(view, parseNote(src));
+    renderNote(view, parseNote(src), linkText);
     try { await typesetMath(view); } catch { if (run === viewRun) view.prepend(el('p', 'nbk-empty', 'Math rendering is unavailable right now.')); }
   }
-  function renderParts(parent, parts) {
-    for (const part of parts) {
-      if (part.type === 'text') {
-        for (const p of linkProblems(part.text, has)) {
-          if (p.type === 'text') { parent.append(document.createTextNode(p.text)); continue; }
-          const a = el('a', 'nbk-link', p.text); a.href = hrefFor(p.key);
-          a.addEventListener('click', e => { if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); open(p.key); });
-          parent.append(a);
-        }
-        continue;
-      }
-      const box = el('details', 'note-hide'), summary = el('summary', null, part.label), inner = el('div', 'note-hide-body');
-      renderParts(inner, part.children); box.append(summary, inner); parent.append(box);
+  // Plain text, with problem names (2019 C6, RMM 2017/6) turned into links to their entries.
+  function linkText(parent, str) {
+    for (const p of linkProblems(str, has)) {
+      if (p.type === 'text') { parent.append(document.createTextNode(p.text)); continue; }
+      const a = el('a', 'nbk-link', p.text); a.href = hrefFor(p.key);
+      a.addEventListener('click', e => { if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); open(p.key); });
+      parent.append(a);
     }
   }
   // Autosave while typing; the first words written with no tab create one.
@@ -576,7 +590,7 @@ export function createNotebook({store, has, hrefFor, open}) {
   }
 
   // ---------- start
-  applySize();
+  applySize(); setSize(clamp(Number(ui.fs) || DEFAULT_FS, SIZES[0], SIZES.at(-1)));
   for (const [k, b] of Object.entries(modeBtn)) b.setAttribute('aria-pressed', String(k === ui.mode));
   root.classList.toggle('nbk-viewing', ui.mode === 'view');
   placeTome();

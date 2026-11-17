@@ -3006,6 +3006,41 @@
    "date": "2026-11-16",
    "range": "#19–#28 of 28 (all loaded; thread https://artofproblemsolving.com/community/c6h1876756p12752807 via the AoPS 2018 ISL collection)",
    "note": "Late posts (AdventuringHobbit #19 global count, signifance #20, thdnder #21, N3bula #22 2-or-6 yellow points per triple, dolphinday #23 parity per region, HamstPan38825 #24, Giabach298 #25, Martin2001 #26, Akacool #27, EeEeRUT #28) corroborate existing tags."
+  },
+  "isl:2018:N1": {
+   "date": "2026-11-16",
+   "range": "#48–#57 of 57 (all loaded; thread https://artofproblemsolving.com/community/c6h1876768p12752840 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (endless_abyss #48, Kempu33334 #49, mpcnotnpc #51, b1zmark #52, ray66 #53, Math1lover #55, Adit-Reddy #56, hellohi321 #57) show the answer is n∤k and k∤n by adjusting prime exponents to equalise divisor counts; corroborates existing tags."
+  },
+  "isl:2018:N2": {
+   "date": "2026-11-16",
+   "range": "#29–#40 of 40 (all loaded; thread https://artofproblemsolving.com/community/c6h1876750p12752787 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (ezpotd #29, eg4334 #30, heheman #32, math-olympiad-clown #33, KevinYang2.71 #35, lelouchvigeo #36, maromex #37, ilovemath0402 #38, cubres #39, lpieleanu #40) write entries as n²a + nb + 1 and expand the row products mod n⁴; corroborates existing tags."
+  },
+  "isl:2018:N3": {
+   "date": "2026-11-16",
+   "range": "#16–#25 of 25 (all loaded; thread https://artofproblemsolving.com/community/c6h1876764p12752823 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (awesomeming327. #16, OronSH #17, Ilikeminecraft #19, endless_abyss #20, ezpotd #23, maromex #24, pl246631 #25) compare a_{2n+1} with the sum of all earlier terms and use binary representations for the even-index terms; corroborates existing tags."
+  },
+  "isl:2018:N4": {
+   "date": "2026-11-16",
+   "range": "#113–#124 of 124 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1671291p10632353 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (Royal_mhyasd #115, Zany9998 #117, zhoujef000 #118, isache #120, pl246631 #121, Ashwath2011 #122, blug #123, Siddharthmaybe #124) take the difference of consecutive sums and show ν_p(a_n) is eventually non-increasing hence constant; corroborates existing tags."
+  },
+  "isl:2018:N5": {
+   "date": "2026-11-16",
+   "range": "#44–#54 of 54 (all loaded; thread https://artofproblemsolving.com/community/c6h1876761p12752815 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (Assassino9931 #44 stronger non-square claim, endless_abyss #45, lunasgraph_d #46 (x−z)(k−x−z)=k, bin_sherlo #47 discriminants, Likeminded2017 #50 parity, SleepyGirraffe #51, Turtwig113 #52, wangyanliluke #53, Royal_mhyasd #54) factor the common value and bound to show xyzt is not a square; corroborates existing tags."
+  },
+  "isl:2018:N6": {
+   "date": "2026-11-16",
+   "range": "#31–#40 of 40 (all loaded; thread https://artofproblemsolving.com/community/c6h1876765p12752830 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (idkk #31 gcd closure, Akacool #32, HamstPan38825 #33, N3bula #34, GrantStar #35, cursed_tangent1434 #36, Ilikeminecraft #37 record values, ihatemath123 #38, BS2012 #39, john0512 #40 peaks) split into bounded (periodic via divisibility classes) and unbounded (linear) cases; corroborates existing tags."
+  },
+  "isl:2018:N7": {
+   "date": "2026-11-16",
+   "range": "#13–#24 of 24 (all loaded; thread https://artofproblemsolving.com/community/c6h1876776p12752855 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (NoctNight #13, Marinchoo #14, CyclicISLscelesTrapezoid #16 p-adic structure of APs, megarnie #17, ihategeo_1969 #19, MathLuis #20, kotmhn #21, HamstPan38825 #24; EthanWYX2009 #18 notes a sharper bound) bound denominators via ν_p of terms of the progression; corroborates existing tags."
   }
  }
 }

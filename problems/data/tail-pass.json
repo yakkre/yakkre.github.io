@@ -3041,6 +3041,26 @@
    "date": "2026-11-16",
    "range": "#13–#24 of 24 (all loaded; thread https://artofproblemsolving.com/community/c6h1876776p12752855 via the AoPS 2018 ISL collection)",
    "note": "Late posts (NoctNight #13, Marinchoo #14, CyclicISLscelesTrapezoid #16 p-adic structure of APs, megarnie #17, ihategeo_1969 #19, MathLuis #20, kotmhn #21, HamstPan38825 #24; EthanWYX2009 #18 notes a sharper bound) bound denominators via ν_p of terms of the progression; corroborates existing tags."
+  },
+  "isl:2017:A1": {
+   "date": "2026-11-16",
+   "range": "#111–#120 of 120 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1671272p10632289 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (lovematch13 #111, isache #112, lpieleanu #113, alupigus #114, mudkip42 #115, DensSv #116, TwentyIQ #117, IMOasspirant #119 binomial, MR.1 #120) use x + a_i ≥ a_i(x+1)^{1/a_i} by AM–GM (or Bernoulli) and multiply; corroborates existing tags."
+  },
+  "isl:2017:A2": {
+   "date": "2026-11-16",
+   "range": "#37–#46 of 46 (all loaded; thread https://artofproblemsolving.com/community/c6h1671307p10632422 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (GrantStar #37 identity 2(a−b)(c−d)=…, asdf334 #38, NicoN9 #39, ezpotd #40, eg4334 #41, math-olympiad-clown #42, busy-beaver #43, maromex #44, lovematch13 #45, isache #46) show q ∈ {−2,0,2} via the four-square identity and generic-number counterexamples; corroborates existing tags."
+  },
+  "isl:2017:A3": {
+   "date": "2026-11-16",
+   "range": "#34–#45 of 45 (all loaded; thread https://artofproblemsolving.com/community/c6h1671322p10632599 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (thdnder #34, Iveela #35, GrantStar #36, lelouchvigeo #37, cursed_tangent1434 #38 functional graph, ray66 #39, vsamc #40, ezpotd #42, Royal_mhyasd #44, lksb #45) use eventual periodicity of iterates of f on a finite set and image sizes; corroborates existing tags."
+  },
+  "isl:2017:A4": {
+   "date": "2026-11-16",
+   "range": "#58–#67 of 67 (all loaded; thread https://artofproblemsolving.com/community/c6h1671279p10632313 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (RecursiveCo #59, endless_abyss #60, ihatemath123 #61, OronSH #62 running max/min, qxns_gmbt #63, cursed_tangent1434 #64, otwaenng #66, m735821 #67) bound the sequence by tracking the running maximum and minimum after index 2017; corroborates existing tags."
   }
  }
 }

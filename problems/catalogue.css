@@ -360,6 +360,9 @@ body.focus-mode #notes-preview-body{font-size:17px;line-height:1.7}
   background:linear-gradient(var(--ink),var(--ink)) 4px 50%/1px 20px no-repeat,linear-gradient(var(--ink),var(--ink)) 7px 50%/1px 20px no-repeat,var(--paper);
   box-shadow:0 1px 5px rgb(0 0 0 / .18);transition:transform .2s cubic-bezier(.3,1.5,.5,1)}
 .nbk-spine:hover::after,.nbk.nbk-splitting .nbk-spine::after{transform:scale(1.12)}
+/* the handle and resize mark belong to the open book: hidden while the cover swings, shown with the pages */
+.nbk-spine,.nbk-grip{transition:opacity .3s ease-out}
+.nbk:not([data-state=open]) .nbk-spine,.nbk:not([data-state=open]) .nbk-grip{opacity:0;transition-duration:.12s}
 .nbk-spine:hover::before,.nbk.nbk-splitting .nbk-spine::before{opacity:.35}
 .nbk[data-layout=single] .nbk-spine{display:none}
 .nbk[data-layout=single] .nbk-head{margin-left:26px}.nbk[data-layout=single] .nbk-text,.nbk[data-layout=single] .nbk-view{padding-left:26px}.nbk[data-layout=single] .nbk-front{padding-right:26px}
@@ -461,9 +464,9 @@ body.focus-mode #notes-preview-body{font-size:17px;line-height:1.7}
 .nbk-out{background:var(--ink);border-radius:0 8px 8px 0;overflow:hidden}
 .nbk[data-layout=single] .nbk-out{border-radius:8px}
 .nbk-out svg{display:block;width:100%;height:100%}
-.nbk-in{transform:rotateY(180deg);background:var(--paper);border:var(--frame) solid var(--ink);border-right-width:0;border-radius:8px 0 0 8px}
+.nbk-in{transform:rotateY(180deg);background:linear-gradient(to left,var(--shade),transparent 30px),var(--paper);border:var(--frame) solid var(--ink);border-right-width:0;border-radius:8px 0 0 8px}
 
-@media(prefers-reduced-motion:reduce){.nbk-tome svg,.nbk-ribbon,.nbk-spine::after{transition:none}.nbk-page>:not(.nbk-turn){transition:none}}
+@media(prefers-reduced-motion:reduce){.nbk-tome svg,.nbk-ribbon,.nbk-spine::after,.nbk-spine,.nbk-grip{transition:none}.nbk-page>:not(.nbk-turn){transition:none}}
 @media(max-width:600px){.nbk-grip,.nbk-rz{display:none}.nbk-text{font-size:16px}}
 
 /* Text-mode LaTeX in notes: enumerate / itemize / description, and \textbf-style formatting */

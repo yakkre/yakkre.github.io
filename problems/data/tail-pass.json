@@ -3966,6 +3966,156 @@
    "date": "2026-11-17",
    "range": "#4–#15 of 15 (all loaded; #10, #12 absent)",
    "note": "Posts (v_Enhance #4, Math_Is_Fun_101 #5, Leo.Euler #6, HamstPan38825 #7, CANBANKAN #8, YaoAOPS #9, Sourorange #11, IAmTheHazard #13, Aaron314 #14, cubres #15) turn exponents into vectors in F_p^{p−1} and bound zero-sum-free multisets by Chevalley–Warning, giving (p−1)²; corroborates existing tags."
+  },
+  "isl:2003:G1": {
+   "date": "2026-11-17",
+   "range": "#109–#121 of 121 (all loaded; #112, #113, #117 absent); middle skimmed by thanks",
+   "note": "Late posts (cj13609517288 #109 projective, alexanderchew #110, Aiden-1089 #111, Jackson0423 #114 sine ratios, Kempu33334 #115, littlefox_amc #118, Ashwath2011 #119, TheOneAndOnlyOFT #121) use the Simson line and reduce both conditions to ABCD harmonic; blueprimes #116 and otwaenng #120 complex-number routes match the recorded analytic route. Corroborates existing tags."
+  },
+  "isl:2003:G2": {
+   "date": "2026-11-17",
+   "range": "#49–#58 of 58 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Siddharthmaybe #49, OronSH #50, cj13609517288 #51, ezpotd #52, eg4334 #53, YaoAOPS #54 harmonic quadrilateral, bir_mat_oimpiyatcisi #55, User1030070 #56, whatwhyandhow #57, TheOneAndOnlyOFT #58) note QB is the Q-symmedian of AQC, so (AQ/QC)²=AB/BC is fixed, and finish with the angle bisector theorem; corroborates existing tags."
+  },
+  "isl:2003:G3": {
+   "date": "2026-11-17",
+   "range": "#31–#40 of 40 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (asdf334 #31, lian_the_noob12 #32, onyqz #33, AshAuktober #34, zuat.e #35, Siddharthmaybe #36, YaoAOPS #37, ezpotd #38, m735821 #39, cj13609517288 #40) use Pythagoras to get AE=BD etc., so D, E, F are the extouch points and P is the Bevan point; corroborates existing tags."
+  },
+  "isl:2003:G4": {
+   "date": "2026-11-17",
+   "range": "#55–#64 of 64 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (PEKKA #55, lksb #56, lpieleanu #57, Kempu33334 #58, ezpotd #59, oooahin #60, soryn #61, math-olympiad-clown #62, Tau_6.28 #63, Sxmplicity #64) invert at P so A*B*C*D* is a parallelogram and convert with the inversion distance formula; corroborates existing tags."
+  },
+  "isl:2003:G5": {
+   "date": "2026-11-17",
+   "range": "#29–#38 of 38 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (lelouchvigeo #29, Saucepan_man02 #30 incenter–excenter lemma, asdf334 #31 Monge, YaoAOPS #32, ezpotd #33, batzorig.b #34, starchan #35 similar triangles, Likeminded2017 #36, Hussienahmad #37, TheOneAndOnlyOFT #38) show AFPE and BGPD are cyclic and their second meeting point lies on (ABC), then angle-chase; corroborates existing tags."
+  },
+  "isl:2003:G6": {
+   "date": "2026-11-17",
+   "range": "#1–#11 of 11 (all loaded; #6 absent)",
+   "note": "Posts (Fedor Petrov #2, math154 #4, awesomeming327. #9, MathsLover04 #10 vector triangle inequality, jgnr #3 and squareman #8 and JuanOrtiz #5 the 60° median lemma, v_Enhance #7, atdaotlohbh #11) combine |a+b−d−e| ≥ √3|…| over the three pairs or use diagonals meeting at ≥ 60°; the vector proofs match the recorded analytic route. Corroborates existing tags."
+  },
+  "isl:2002:A1": {
+   "date": "2026-11-17",
+   "range": "#164–#175 of 175 (all loaded; #170, #173 absent); middle skimmed by thanks",
+   "note": "Late posts (JerryZYang #164/#169, FrenchFry99 #165/#167, isache #166, Sakura-junlin #168, HeshTarg #171, pl246631 #172, mael_AMO #174, Sxmplicity #175) prove f surjective from P(x,−f(x)), then injective-type comparisons give f(x)=x+c; corroborates existing tags."
+  },
+  "isl:2002:A2": {
+   "date": "2026-11-17",
+   "range": "#26–#36 of 36 (all loaded; #33 absent); middle skimmed by thanks",
+   "note": "Late posts (Fibonacci_11235 #26, pie854 #27, emi3.141592 #28, HamstPan38825 #29, ezpotd #30, watery #31, smileapple #32, Likeminded2017 #34, BS2012 #35, lpieleanu #36) sort the first N terms and bound the spread by Σ1/(j_i+j_{i+1}) via Cauchy–Schwarz, giving c ≥ 1; corroborates existing tags."
+  },
+  "isl:2002:A3": {
+   "date": "2026-11-17",
+   "range": "#21–#31 of 31 (all loaded; #23 absent)",
+   "note": "Late posts (IAmTheHazard #21, awesomeming327. #22, megarnie #24, asdf334 #25 (unsure), HamstPan38825 #26, pie854 #27, cj13609517288 #28, Mathandski #29 attachment, abeot #30, ezpotd #31) show x+y is bounded for Q(x)=xP(x) with Q(x)=Q(y), so some fixed sum recurs and forces a root at 0; corroborates existing tags."
+  },
+  "isl:2002:A4": {
+   "date": "2026-11-17",
+   "range": "#63–#72 of 72 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (joshualiu315 #63, pie854 #64, OronSH #65, Ilikeminecraft #66, cj13609517288 #67, Ihatecombin #68, Mr.Sharkman #69, Royal_mhyasd #70, EpicBird08 #71, Hip1zzzil #72) get f(0) ∈ {0,1/2}, f even and multiplicative with (f(x)+f(y))²=f(x²+y²), then monotonicity gives x²; corroborates existing tags."
+  },
+  "isl:2002:A5": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (Simo_the_Wolf #2, The Captain #3 typo note, Wolstenholme #4, Nanas #5, bobthesmartypants #6 and pieater314159 #7 variant, awesomeming327. #8, HamstPan38825 #9) choose n=m³+3m²+m so ⌊b⌋=1 and rationalise to get a rational linear relation among a, b, c; corroborates existing tags."
+  },
+  "isl:2002:C1": {
+   "date": "2026-11-17",
+   "range": "#63–#72 of 72 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (cubres #63, TwentyIQ #64, eg4334 #65, Mr.Sharkman #66, cursed_tangent1434 #67, not_detriti #68 maximal red points, lpieleanu #69, Cool12345678 #70, tsogt091206 #71, Adit-Reddy #72) prove by induction that the multisets of row and column blue counts agree; corroborates existing tags."
+  },
+  "isl:2002:C2": {
+   "date": "2026-11-17",
+   "range": "#1–#11 of 11 (all loaded; #5 absent)",
+   "note": "Posts (tim1234133 #3, mastermind.hk16 #4, awesomehuman #6, awesomeming327. #7, th1nq3r #8, asdf334 #9, starchan #10, megarnie #11) count the (k+1)² black cells at even distance from every side, none sharing a tromino, and tile n ≥ 7 with four rectangles plus the centre; corroborates existing tags."
+  },
+  "isl:2002:C3": {
+   "date": "2026-11-17",
+   "range": "#18–#28 of 28 (all loaded; #22 absent); middle skimmed by thanks",
+   "note": "Late posts (tenplusten #18, Wizard_32 #19 and Chillwithmath #20 on small cases, kvs #21, DrYouKnowWho #23, awesomeming327. #24 recursion, TheProblem10 #25 question, huashiliao2020 #26, asdf334 #27, Natrium #28 recursive bijection S_n→S_{n−1}×[n]) biject full sequences with permutations to get n!; corroborates existing tags."
+  },
+  "isl:2002:C4": {
+   "date": "2026-11-17",
+   "range": "#2–#11 of 11 (all loaded)",
+   "note": "Posts (mr.danh #3 parity count, anonymouslonely #4, math154 #5 fixes a case, vsathiam #6, Nathanisme #7 objection, awesomeming327. #8, Flint_Steel #9, Blast_S1 #10 taxicab view, Alex-131 #11) show two moves give at most 28² < 1000 outcomes and three suffice by querying (0,0,0) then case-splitting on S; corroborates existing tags."
+  },
+  "isl:2002:A6": {
+   "date": "2026-11-17",
+   "range": "#11–#20 of 20 (all loaded); #1, #11, #15, #17 read in full",
+   "note": "Posts (math154 #11 Dirichlet-series comparison, mathuz #12, dgrozev #13 density, solver6 #14, anantmudgal09 #15 power series f(z)=Σz^a — assumes lim (1−z)f(z) exists and the author asks whether it is correct, not used, kk108 #16, william122 #17 and Aryan-23 #19 forest growth counting, stroller #18 attachment, Assassino9931 #20 Erdős Problem 481). math154 #11 is a complete proof by a method not yet tagged (checked: the images b_iA+c_i for a ≥ M are disjoint subsets of A∩[M,∞), so Σ_i Σ_{a≥M}(b_ia+c_i)^{−s} ≤ Σ_{a≥M}a^{−s}, which is finite for s>1).",
+   "addTags": [
+    "A: Generating functions"
+   ],
+   "explanationAppend": "A late forum proof (math154 #11) encodes A by the Dirichlet series Σ_{a∈A} a^{−s}: the disjoint copies b_iA+c_i give Σ b_i^{−s} ≤ (1+ε)^s for every s>1, and letting s→1 yields Σ 1/b_i ≤ 1.",
+   "cite": "#11 (math154) Dirichlet series comparison, complete"
+  },
+  "isl:2002:C5": {
+   "date": "2026-11-17",
+   "range": "#12–#21 of 21 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (tastymath75025 #12 countable case, yugrey #13/#16 transfinite remark and new bounds, dgrozev #14/#15, mathaddiction #17, Rg230403 #18, awesomeming327. #19, ezpotd #20, lpieleanu #21) take a maximal set S lying in infinitely many members and show |S| = r−1 forces a blocking set of size r−1; corroborates existing tags."
+  },
+  "isl:2002:C6": {
+   "date": "2026-11-17",
+   "range": "#12–#21 of 21 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (cwein3 #12 doubling chains, xayax #13 with JBL #14 counterexample, MellowMelon #15 Eulerian cycle, theflowerking #16, rkm0959 #17 and KevinYang2.71 #19 and Assassino9931 #21 de Bruijn-type digraph, ABCDE #18 non-graph argument, IAmTheHazard #20 colouring) build the permutation from an Eulerian/Hamiltonian walk in the doubling digraph mod n; corroborates existing tags."
+  },
+  "isl:2002:C7": {
+   "date": "2026-11-17",
+   "range": "#2–#11 of 11 (all loaded)",
+   "note": "Posts (math154 #3 cloning, tim1234133 #4 question, MathDelicacy12 #5, v_Enhance #6, IAmTheHazard #7 and math_comb01 #9 and Half_Blood_Prince #11 Zykov symmetrization, awesomeming327. #8, MathLuis #10) show an optimal graph is a disjoint union of cliques and optimise to five K₂₄'s; corroborates existing tags."
+  },
+  "isl:2002:G2": {
+   "date": "2026-11-17",
+   "range": "#21–#30 of 30 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #21, asdf334 #22, anantmudgal09 #23, pikapika007 #24, lian_the_noob12 #25 remark, oooahin #26, EpicBird08 #27, HamstPan38825 #28 EF=AF·BF/(AF+BF), ZZzzyy #29, ezpotd #30) erect equilateral triangles on AB and AC and bound FX ≥ 4FE by Ptolemy-type length estimates; corroborates existing tags."
+  },
+  "isl:2002:G3": {
+   "date": "2026-11-17",
+   "range": "#82–#91 of 91 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (oooahin #82, CubeAlgo15 #83, Kempu33334 #84, sks987 #85/#87 and math_holmes15 #86 duplicates, MathCosine #88, martianrunner #89, zhoujef000 #90) show ADOI is a parallelogram and AE=AF=AJ, so J is the incenter of CEF; KnowingAnt #91 complex bash matches the recorded analytic route. Corroborates existing tags."
+  },
+  "isl:2002:G5": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded)",
+   "note": "Posts (grobber #3, math154 #4 gap note, polya78 #5 parallelogram, bobthesmartypants #6 coordinates, yayups #7, test20 #8 source in Erdős–Meir–Sós–Turán, awesomeming327. #9, Assassino9931 #10) reduce to a convex pentagon and compare areas of consecutive-vertex triangles to get the golden ratio; corroborates existing tags."
+  },
+  "isl:2002:G7": {
+   "date": "2026-11-17",
+   "range": "#130–#141 of 141 (all loaded; #135, #139 absent); middle skimmed by thanks",
+   "note": "Late posts (TwentyIQ #130, littlefox_amc #131, TUAN2k8 #132, irc.inses. #133 inversion at K, ezpotd #134, SirAppel #136 code only, Hussienahmad #137, Geominator #138, ZVFrozel #140, lunasgraph_d #141 partial complex step) use the A-excenter line through K and the midpoint M, or radical-axis power arguments; corroborates existing tags and the hybrid analytic status."
+  },
+  "isl:2002:N1": {
+   "date": "2026-11-17",
+   "range": "#92–#101 of 101 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (littlefox_amc #92, Siddharthmaybe #93, oooahin #94, numbertheory97 #95, Royal_mhyasd #96, zhoujef000 #97, Beromatrix #98, UberPiggy #99, orangutan1434 #100, mpcnotnpc #101) rule out t ≤ 3 by cubes mod 9 and use 2002^{2002}=2002·(2002^{667})³ with 2002=10³+10³+1+1; corroborates existing tags."
+  },
+  "isl:2002:N2": {
+   "date": "2026-11-17",
+   "range": "#66–#76 of 76 (all loaded; #69 absent); middle skimmed by thanks",
+   "note": "Late posts (Markas #66, Kempu33334 #67, lightsynth123 #68, Assassino9931 #70 sharper bound n²−n, isache #71, SomeonecoolLovesMaths #72, Sxmplicity #73, TwentyIQ #74, CubeAlgo15 #75, RadiantMeteor #76) pair d_i with n/d_i to bound the sum by n²Σ1/(i(i+1)) and show divisibility forces n prime; corroborates existing tags."
+  },
+  "isl:2002:N3": {
+   "date": "2026-11-17",
+   "range": "#57–#66 of 66 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ezpotd #57, quantam13 #58, oooahin #59 and BS2012 #60 and LemmaLover #65 and narutu_chutu #66 via Zsigmondy (outside result), lpieleanu #61 induction, tacocat14641 #62, Alex-131 #63 gcd(x^m+1,x^n+1), kitkatz29 #64 cyclotomic remark) find 2n distinct prime factors and count divisors; corroborates existing tags."
+  },
+  "isl:2002:N4": {
+   "date": "2026-11-17",
+   "range": "#18–#27 of 27 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (mijail #18, jasperE3 #19, awesomeming327. #20, GioOrnikapa #21 degree motivation, macharstein #22, thdnder #23, megarnie #24 closed form in 2±√3, HamstPan38825 #25, Assassino9931 #26, vsamc #27) take m=12 and generate infinitely many solutions by Vieta jumping on a²−3ab+b²+1=0; corroborates existing tags."
+  },
+  "isl:2002:N5": {
+   "date": "2026-11-17",
+   "range": "#3–#13 of 13 (all loaded; #6 absent)",
+   "note": "Posts (fwolth #3 pigeonhole on m^n sums, Kayak #4, Nymoldin #5 Romanian TST link, oVlad #7, IAmTheHazard #8, starchan #9, awesomeming327. #10, HamstPan38825 #11, MathLuis #12, cubres #13) suppose the m^n sums form a complete residue system mod m^n and derive a contradiction (official route via roots of unity); corroborates existing tags."
+  },
+  "isl:2002:N6": {
+   "date": "2026-11-17",
+   "range": "#33–#42 of 42 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Markas #33, Rayvhs #34, lksb #35/#36, megahertz13 #37, ThatSerbOnMath24-7 #38, Royal_mhyasd #39, Cool12345678 #40 root in (0,1), InftyByond #41, BossBabyOnDuty #42) reduce to polynomial divisibility, show m ≤ 2n by comparing a root r ∈ (0,1) and get (m,n)=(5,3); corroborates existing tags."
   }
  }
 }

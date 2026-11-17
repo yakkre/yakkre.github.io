@@ -4116,6 +4116,146 @@
    "date": "2026-11-17",
    "range": "#33–#42 of 42 (all loaded); middle skimmed by thanks",
    "note": "Late posts (Markas #33, Rayvhs #34, lksb #35/#36, megahertz13 #37, ThatSerbOnMath24-7 #38, Royal_mhyasd #39, Cool12345678 #40 root in (0,1), InftyByond #41, BossBabyOnDuty #42) reduce to polynomial divisibility, show m ≤ 2n by comparing a root r ∈ (0,1) and get (m,n)=(5,3); corroborates existing tags."
+  },
+  "isl:2001:A1": {
+   "date": "2026-11-17",
+   "range": "#38–#47 of 47 (all loaded); middle skimmed by thanks; #44 read in full",
+   "note": "Late posts (pie854 #38, shendrew7 #39, quantam13 #40, Saucepan_man02 #41, bjump #42/#43, lpieleanu #45, pl246631 #46, alexanderchew #47) verify 3pqr/(p+q+r) and prove uniqueness with a maximum principle on h=f−g along each level p+q+r. cj13609517288 #44 reads f as the expected length of a chip game and proves uniqueness by expanding the recurrence; its key decay bound is only asserted, so no probability tag. Corroborates existing tags."
+  },
+  "isl:2001:A2": {
+   "date": "2026-11-17",
+   "range": "#36–#45 of 45 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (scannose #36, peace09 #37, pie854 #38 harmonic lemma, Iveela #39, emi3.141592 #40 and HamstPan38825 #42 and apokono #45 Bernoulli 2^{1/n} ≤ (n+1)/n, EpicBird08 #41, smileapple #43, watery #44) assume the inequality fails eventually and show a_n/(n+1) decreases by a harmonic sum until it turns negative; corroborates existing tags."
+  },
+  "isl:2001:A3": {
+   "date": "2026-11-17",
+   "range": "#17–#26 of 26 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (arnov67 #17, awesomeming327. #18, john0512 #19, solasky #20 Cauchy–Schwarz and #21 trigonometric substitution, gvole #22, pie854 #23, StarShipTrooper #24 sketch, suinemon #25, SomeonecoolLovesMaths #26 RMS–AM) apply Cauchy–Schwarz and telescope x_k²/(1+…+x_k²)² ≤ 1/(1+…+x_{k−1}²) − 1/(1+…+x_k²); corroborates existing tags."
+  },
+  "isl:2001:A4": {
+   "date": "2026-11-17",
+   "range": "#34–#44 of 44 (all loaded; #38 absent); middle skimmed by thanks",
+   "note": "Late posts (pie854 #34, Ilikeminecraft #35, HamstPan38825 #36, Maximilian113 #37, math-olympiad-clown #39, maromex #40, OronSH #41, V0305 #42 attachment, BS2012 #43, zer0cun #44) get f(x) ∈ {0, cx} from y=1 and show the support is a multiplicative subgroup; corroborates existing tags."
+  },
+  "isl:2001:A5": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (BaBaK Ghalebi #3, Wolstenholme #4 reverse induction, Xblade124 #5 retracted, Sourorange #6, Iveela #7, awesomeming327. #8 'ideal sequences', m735821 #9) bound each tail by a_{i}/(a_{i+1}−1) and pin a = (1,2,5,56,25²·56); corroborates existing tags."
+  },
+  "isl:2001:A6": {
+   "date": "2026-11-17",
+   "range": "#164–#173 of 173 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ezpotd #164 and pl246631 #165 and Kenan_Math #166 Hölder, ullipalla #167/#169 with arqady #168 correction, otwaenng #170 Jensen, MITYMI #171, meowmeowmeow1504 #172 substitution with product 512, Sxmplicity #173 sketch) prove the IMO 2001/2 inequality by Hölder, Jensen or tangent-line bounds; corroborates existing tags."
+  },
+  "isl:2001:C1": {
+   "date": "2026-11-17",
+   "range": "#35–#44 of 44 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (eg4334 #35 sketch, ItsBesi #36, Ilikeminecraft #37, lpieleanu #38, SimplisticFormulas #39, Adit-Reddy #40, pl246631 #41, Ashwath2011 #42, Royal_mhyasd #43, cheltstudent #44) sort the sequence, reduce to three consecutive values (or residues mod 3) and maximise abc with a+b+c=2001 to get 667³; corroborates existing tags."
+  },
+  "isl:2001:C2": {
+   "date": "2026-11-17",
+   "range": "#85–#95 of 95 (all loaded; #93 absent); middle skimmed by thanks",
+   "note": "Late posts (falkwine #85, maromex #86, OrgaaninenKe #87, not_detriti #88, UberPiggy #89, mudkip42 #90, pl246631 #91, SomeonecoolLovesMaths #92, Lunatic_Lunar7986 #94, reyaansh_agrawal #95) sum S(a) over all permutations two ways mod n! to contradict a complete residue system (n odd); corroborates existing tags."
+  },
+  "isl:2001:C3": {
+   "date": "2026-11-17",
+   "range": "#37–#46 of 46 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Ilikeminecraft #37 with deduck #38 objection, lpieleanu #39 K₄ case, llddmmtt1 #40, gold_duck #41/#42, Royal_mhyasd #43, ezpotd #44, Half_Blood_Prince #45, pl246631 #46) split on whether two triangles share an edge or a K₄ appears and delete two vertices hitting all triangles; corroborates existing tags."
+  },
+  "isl:2001:C4": {
+   "date": "2026-11-17",
+   "range": "#8–#17 of 17 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #8, cj13609517288 #9, programmeruser #10, awesomehuman #11, huashiliao2020 #12, Maximilian113 #13 general a<b, Aiden-1089 #14, anudeep #15, cubres #16, ezpotd #17) cover the smallest uncovered integer greedily with {x,x+a,x+a+b} or {x,x+b,x+a+b} and show it never gets stuck; corroborates existing tags."
+  },
+  "isl:2001:C5": {
+   "date": "2026-11-17",
+   "range": "#8–#17 of 17 (all loaded)",
+   "note": "Late posts (yayups #8, william122 #9, math_pi_rate #10, awesomeming327. #11, megarnie #12, Maximilian113 #13, BS2012 #14, ezpotd #15, Cool12345678 #16, LogicalWallaby94 #17) use Σx_i = Σ i·x_i = n+1 to force a large x_0 and few nonzero terms, finding the self-describing sequences; corroborates existing tags."
+  },
+  "isl:2001:C6": {
+   "date": "2026-11-17",
+   "range": "#7–#19 of 19 (all loaded; #13, #16, #17 absent)",
+   "note": "Posts (Myth #7, AnonymousBunny #8 retracted, pi37 #9, mihirb #10 and yugrey #11 and EhsanP #12 on the Catalan red herring, for63434 #14, yayups #15, EthanWYX2009 #18, awesomeming327. #19) take the residue class mod n+1 of the sum of positions of the 1's with fewest members; corroborates existing tags."
+  },
+  "isl:2001:C7": {
+   "date": "2026-11-17",
+   "range": "#28–#38 of 38 (all loaded; #33 absent); middle skimmed by thanks",
+   "note": "Late posts (shendrew7 #28, cursed_tangent1434 #29, eg4334 #30, dolphinday #31, cubres #32, lpieleanu #34, ezpotd #35, numbertheory97 #36, pl246631 #37, lightsynth123 #38) show columns stay nonincreasing with drops of at most 1 and that the process ends in the unique staircase t,…,r,r,…,1; corroborates existing tags."
+  },
+  "isl:2001:C8": {
+   "date": "2026-11-17",
+   "range": "#26–#35 of 35 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #26, IAmTheHazard #27, YaoAOPS #28 and BS2012 #34 and blueprimes #35 21×21 grid, HamstPan38825 #29, xeroxia #30, Blast_S1 #31, MathLuis #32, bjump #33) label each boy–girl cell by a common problem and double count boy-hard and girl-hard problems by rows and columns; corroborates existing tags."
+  },
+  "isl:2001:G1": {
+   "date": "2026-11-17",
+   "range": "#68–#89 of 89 (all loaded; posts #73, #76–#85, #88 absent from the thread); middle skimmed by thanks",
+   "note": "Late posts (Vedoral #68, reni_wee #69, Maximilian113 #70, Avron #71, Turtwig113 #72, mudkip42 #74, Kempu33334 #75, giguer #86, Likeminded2017 #87 sketch, Geomathmaster #89) map each inscribed square by a homothety at the vertex to an outer square and finish with (trigonometric) Ceva; corroborates existing tags."
+  },
+  "isl:2001:G2": {
+   "date": "2026-11-17",
+   "range": "#48–#58 of 58 (all loaded; #55 absent); middle skimmed by thanks",
+   "note": "Late posts (Danielzh #48, EpicBird08 #49, ezpotd #50, legogubbe #51 sine rule, Nari_Tom #52, Kempu33334 #53, endless_abyss #54, dubabuba #56 diagram, MathCosine #57, n-k-p #58) reduce ∠COP < 90°−∠A to PC < PO and compare lengths or trigonometric expressions; corroborates existing tags."
+  },
+  "isl:2001:G3": {
+   "date": "2026-11-17",
+   "range": "#18–#28 of 28 (all loaded; #26 absent); middle skimmed by thanks",
+   "note": "Late posts (OlympusHero #18/#19/#21 vector attempt, IAmTheHazard #20, awesomeming327. #22 and ezpotd #27 dot products, popop614 #23, asdf334 #24, SenorSloth #25, orangutan1434 #28 coordinates) bound AP·AG ≥ AP⃗·AG⃗ and sum to (a²+b²+c²)/3 with P=G; corroborates existing tags."
+  },
+  "isl:2001:G4": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded)",
+   "note": "Posts (Marian Dinca #3, Zhero #4, resurrection #5, utkarshgupta #6, ABCDE #7 trig Ceva, Msn05 #8, awesomeming327. #9, ezpotd #10 chords of the circumcircle) write p(M) as a product of sines and maximise it at the incenter-type configuration; no synthetic route appears, so the row stays computation-only. Corroborates existing tags."
+  },
+  "isl:2001:G5": {
+   "date": "2026-11-17",
+   "range": "#3–#12 of 12 (all loaded)",
+   "note": "Posts (grobber #3 with Arne #4 and darij grinberg #5 pointing out its error, Zhero #6, yugrey #7 law of sines, pi37 #8, anser #9 and awesomeming327. #10 areas, pikapika007 #11, ezpotd #12) convert DB/DD' etc. to area ratios and show [ADE]+[BEF]+[CFD]=[DEF], giving 4; corroborates existing tags."
+  },
+  "isl:2001:G6": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (Zhero #2 affine coordinates, Mewto55555 #3 barycentric with Dragonboy #4 and Mahi #5 on sign issues, dk911 #6 question, mathaddiction #7 configuration, Phorphyrion #8 and awesomeming327. #9 barycentric) compute the areas in coordinates; no synthetic route appears, so the row stays computation-only. Corroborates existing tags."
+  },
+  "isl:2001:G8": {
+   "date": "2026-11-17",
+   "range": "#31–#41 of 41 (all loaded; #36 absent); middle skimmed by thanks",
+   "note": "Late posts (InterLoop #31 and MerabiZariashvili #39 equal-length constructions, joshualiu315 #32 and Markas #34 and Kempu33334 #37 and ezpotd #41 law of sines, ehuseyinyigit #33, Mathandski #35 attachment, cubres #38 trigonometry, TheOneAndOnlyOFT #40 barycentric) reduce AB+BP=AQ+QB to an angle equation; corroborates existing tags."
+  },
+  "isl:2001:N1": {
+   "date": "2026-11-17",
+   "range": "#21–#30 of 30 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (awesomehuman #21, cj13609517288 #22, john0512 #23, sman96 #24, lrjr24 #25 and Ritwin #26 fractional parts of log₁₀, ezpotd #27, Jupiterballs #28 sketch, shawancool #29, imo2026 #30) compare leading digits of consecutive factorial ratios to force n+k to start with 1 and reach a contradiction; corroborates existing tags."
+  },
+  "isl:2001:N2": {
+   "date": "2026-11-17",
+   "range": "#23–#32 of 32 (all loaded)",
+   "note": "Late posts (awesomeming327. #23, lrjr24 #24 Pythagorean parametrisation, asdf334 #25, huashiliao2020 #26, john0512 #27, ezpotd #28, Ritwin #29, math-olympiad-clown #30/#31 partial, Assassino9931 #32 link) get x²−6xy+y²=(z−u)² ≥ 0, so x/y ≥ 3+2√2, and approach it via Pell-type solutions; corroborates existing tags."
+  },
+  "isl:2001:N3": {
+   "date": "2026-11-17",
+   "range": "#2–#11 of 11 (all loaded)",
+   "note": "Posts (mathangel #2, Zhero #3, james digol #4 official, TheUltimate123 #5, lorodane #6, megarnie #7, asdf334 #8/#9 nonincreasing maxima, awesomeming327. #10, OronSH #11) pass to s_n=|a_n−a_{n−1}| with s_n=|s_{n−1}−s_{n−3}|, track parity and the decreasing maximum to get a_{14^{14}}=1; corroborates existing tags."
+  },
+  "isl:2001:N4": {
+   "date": "2026-11-17",
+   "range": "#55–#65 of 65 (all loaded; #58 absent); middle skimmed by thanks",
+   "note": "Late posts (LHE96 #55, Kempu33334 #56, DensSv #57 primitive roots mod p², ezpotd #59, shendrew7 #60, otwaenng #61, zhoujef000 #62, maromex #63 pairs k and p−k, ThatApollo777 #64, IMOasspirant #65) count residues with a^{p−1} ≡ 1 mod p² (exactly p−1 of them) and show two consecutive bad values exist; corroborates existing tags."
+  },
+  "isl:2001:N5": {
+   "date": "2026-11-17",
+   "range": "#77–#86 of 86 (all loaded); middle skimmed by thanks; #78 read in full",
+   "note": "Late posts (L13832 #77, Kempu33334 #79, cubres #80, XX-math-XX #81, Zubopasa37 #82/#84 with maromex #83 correction, teralux #85 and mudkip42 #86 cyclic-quadrilateral construction) corroborate the factorisation route. pi_quadrat_sechstel #78 gives a complete Eisenstein-integer proof (it also fixes the unit error of #14 and #75); checked numerically: with a+ωc=(p+qω)(s+tω) and b−ωd=±(p+qω)(s+tω̄), ab+cd=±(p²−q²)(s²−st+t²) holds in 2000 random trials.",
+   "addTags": [
+    "N: Advanced NT"
+   ],
+   "explanationAppend": "A late forum proof (pi_quadrat_sechstel #78) factors a²−ac+c²=b²+bd+d² as norms in the Eisenstein integers, writes a+ωc=xy and b−ωd=±xȳ, and gets ab+cd=±(p²−q²)(s²−st+t²), which cannot be prime when a>b>c>d.",
+   "cite": "#78 (pi_quadrat_sechstel) Eisenstein integers, complete"
+  },
+  "isl:2001:N6": {
+   "date": "2026-11-17",
+   "range": "#8–#18 of 18 (all loaded; #12 absent)",
+   "note": "Posts (Zhero #8 2pn+[n²]_p construction with SCP #9/#11 and alex443399 #13 discussion, Justanaccount #14 Putnam 1994 B6 remark, Sprites #15, awesomeming327. #16, Ritwin #17 two-dimensional construction, hcdgj #18 Sidon remark) build 100 numbers 202n+(n² mod 101) with distinct pairwise sums; corroborates existing tags."
   }
  }
 }

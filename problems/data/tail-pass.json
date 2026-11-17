@@ -2644,28 +2644,28 @@
   },
   "isl:2000:G1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 20 is synthetic; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #12–#24 of 24 (all loaded); analytic scan #1–#24",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 20 is synthetic; analytic route stays pending.; Late posts (Mahdi_Mashayekhi #12, awesomeming327. #13, awesomehuman #14 directed angles, asdf334 #15 self-flagged unsure, JAnatolGT_00 #17, ezpotd #18 tangent points, Tau_6.28 #24 inversion at Y; batzorig.b #20 one-line hint) corroborate existing tags. Analytic scan: no analytic proof; analytic route stays pending."
   },
   "isl:2000:G2": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a power-of-a-point argument; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #121–#130 of 130 (all loaded); middle skimmed by thanks; analytic scan #1–#130",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a power-of-a-point argument; analytic route stays pending.; Late posts (Math_AlexG #121, mpcnotnpc #122 E is the reflection of M, Karaoglan #123, reyaansh_agrawal #124 MN bisects AB via the radical axis, NicoN9 #125, mathMagicOPS #126, littlefox_amc #127 homothety, TheOneAndOnlyOFT #128 inversion at M, godchunguus #129, RadiantMeteor #130) corroborate existing tags. Analytic scan: only Vrangr #36 matches (directed angles, synthetic); analytic route stays pending."
   },
   "isl:2000:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 26 is a combinatorial-geometric reformulation; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #8–#19 of 19 (all loaded); analytic scan #1–#19",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 26 is a combinatorial-geometric reformulation; analytic route stays pending.; Late posts (v_Enhance #9, Vrangr #12, mathleticguyyy #14 with awesomeming327. #15 repost, endless_abyss #16, Likeminded2017 #17 sketch) give the answer 3 by angle-sector arguments around each shot gangster; corroborates existing tags. Analytic scan: mathleticguyyy #14 uses polar angles only to describe sectors; analytic route stays pending."
   },
   "isl:1999:G1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a quadrilateral-perimeter lemma; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #13–#24 of 24 (all loaded); analytic scan #1–#24",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a quadrilateral-perimeter lemma; analytic route stays pending.; Late posts (Pathological #14, awesomeming327. #15, lethan3 #17, mathmax12 #18, popop614 #19 and ezpotd #21 medial triangle, lnzhonglp #20 trapezoid lemma, Maximilian113 #22, Tau_6.28 #24) corroborate existing tags. Analytic scan: Pathological #14 (read in full) uses barycentric coordinates only as notation for a triangle-inequality argument; Zhero #9, orl #7 and Maximilian113 #22 reduce special cases to sin A + sin B + sin C bounds inside synthetic proofs; analytic route stays pending."
   },
   "isl:1999:G2": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 8 inverts and counts separators case by case; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #6–#16 of 16 (whole thread); analytic scan #1–#16",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 8 inverts and counts separators case by case; analytic route stays pending.; Posts (math154 #6 stereographic projection, MathPanda1 #7, viperstrike #10, biomathematics #11, seoneo #12 Möbius map in complex coordinates, awesomehuman #13, awesomeming327. #14 inversion, ezpotd #15) corroborate existing tags. Analytic scan: orl #4 quotes official Solution 2 (determinant/coordinate sign count: separators counted by sign agreements in S=(a1,−a2,a3,−a4,a5) with a1−a2+a3−a4+a5=0), but the post stops at the four polar-coordinate determinant inequalities without finishing the contradiction, so it is incomplete as written and not adopted; analytic route stays pending (candidate to verify against the original booklet)."
   },
   "isl:1999:G3": {
    "date": "2026-11-16",

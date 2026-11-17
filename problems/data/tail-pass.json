@@ -3346,6 +3346,46 @@
    "date": "2026-11-16",
    "range": "#18–#27 of 27 (all loaded; thread https://artofproblemsolving.com/community/c6h1268906p6622769 via the AoPS 2015 ISL collection)",
    "note": "Late posts (dgrozev #18, TheUltimate123 #19, AdventuringHobbit #20, YaoAOPS #21, MathLuis #22, awesomeming327. #26, Giabach298 #27) show chromatic number k forces at least 2^{k−1}−k odd-cycle vertex sets, by greedy recolouring/induction; corroborates existing tags."
+  },
+  "isl:2015:N1": {
+   "date": "2026-11-16",
+   "range": "#100–#109 of 109 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1268859p6622268 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (heheman #100, Kempu33334 #101, Yiyj1 #102, maromex #103 b_k = 2a_k, oooahin #104, cursed_tangent1434 #105, mudkip42 #106, lpieleanu #107, isache #108, Cool12345678 #109 induction on ν2(M−1)) show M=1 is constant 3/2 and otherwise ν2 of the numerator drops until an integer appears; corroborates existing tags."
+  },
+  "isl:2015:N2": {
+   "date": "2026-11-16",
+   "range": "#33–#42 of 42 (all loaded; thread https://artofproblemsolving.com/community/c6h1268852p6622214 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (ZNatox #34 correction, HamstPan38825 #35, Maximilian113 #36, Ilikeminecraft #37, lunasgraph_d #38, ezpotd #39, Markas #40, lpieleanu #41, DensSv #42) reduce to 1 + b!/a! | b!, note it is coprime to the factors a+1,…,b and bound with a! to get 3a ≥ 2b+2; corroborates existing tags."
+  },
+  "isl:2015:N3": {
+   "date": "2026-11-16",
+   "range": "#79–#89 of 89 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1268874p6622379 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (Just1 #79, Monk27 #80, pl246631 #81, lightsynth123 #82, EpicBird08 #83, tungtungtungsahur #84, Royal_mhyasd #88 unique maximal ν2 in [n+1, 2n+1], reyaansh_agrawal #89) show the product minus 1 is not a power of 2 via the unique index with maximal 2-adic valuation; corroborates existing tags."
+  },
+  "isl:2015:N4": {
+   "date": "2026-11-16",
+   "range": "#17–#27 of 27 (all loaded; thread https://artofproblemsolving.com/community/c6h1268845p6622169 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (pad #17, megarnie #18, Inconsistent #19, awesomeming327. #20, IAmTheHazard #21 'trapped' between mountains, mathfun07 #22, L13832 #23, TwentyIQ #26 peaks, ihatemath123 #27 blocks) show a_n is eventually periodic by tracking increases a_{n+1} = a_n + 1 iff a_n | b_n and bounding peaks; corroborates existing tags."
+  },
+  "isl:2015:N5": {
+   "date": "2026-11-16",
+   "range": "#65–#76 of 76 (all loaded; thread https://artofproblemsolving.com/community/c6h1112743p5079630 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (monval #65, ilikemath247365 #66, cubres #67 partial, KevinYang2.71 #68, Mo.11ss #69, Thelink_20 #71, kurisu-tina_ #72, isache #73, Cool12345678 #75, Aaron314 #76) case-bash on equal entries and parity, factor (a+1)(b−c)-type relations and bound powers of 2 to get (2,2,2),(2,2,3),(2,6,11),(3,5,7); corroborates existing tags."
+  },
+  "isl:2015:N6": {
+   "date": "2026-11-16",
+   "range": "#26–#35 of 35 (all loaded; thread https://artofproblemsolving.com/community/c6h1268916p6622847 via the AoPS 2015 ISL collection)",
+   "note": "Late posts (YaoAOPS #26, atdaotlohbh #27, quantam13 #28, awesomeming327. #29, pi271828 #30, bin_sherlo #31, BS2012 #32 functional graph, vsamc #33, kotmhn #34, b1zmark #35) show f is injective with f(n) > n, the functional graph is a finite union of chains, and conclude periodicity of f(n)−n; corroborates existing tags."
+  },
+  "isl:2015:N7": {
+   "date": "2026-11-16",
+   "range": "#5–#14 of 14 (all loaded; thread https://artofproblemsolving.com/community/c6h1268919p6622862 via the AoPS 2015 ISL collection)",
+   "note": "Posts (mathaddiction #5, squareman #6, IAmTheHazard #7, thdnder #8, awesomehuman #9, YaoAOPS #10, ihategeo_1969 #11, pi271828 #12, N3bula #13, ShadowXD #14) rule out k=1 by parity and construct 2-good functions via f(n) = 2^{g(n)} − n − 1-type choices; corroborates existing tags."
+  },
+  "isl:2015:N8": {
+   "date": "2026-11-16",
+   "range": "#7–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h1268921p6622883 via the AoPS 2015 ISL collection)",
+   "note": "Posts (MarkBcc168 #7, Roct-7 #8, rama1728 #9–#10, ZETA_in_olympiad #11, Inconsistent #12, L567 #14 ν_p(f(a)−f(b)) = ν_p(a−b) for large p, Leo.Euler #15, awesomehuman #16, N3bula #17) show f(a) = kx + c with k free of large primes by inducting over the large-prime parts; corroborates existing tags."
   }
  }
 }

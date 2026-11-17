@@ -111,9 +111,11 @@ Practical notes:
 
 ## Flagged for the user (do not decide alone)
 
-- 2009 G7: no synthetic route; home245 #15 is a candidate synthetic proof.
 - 2008 G6: mathocean97 #6 is a candidate trigonometric proof.
 - 2010 G7: G81928128 #24 light-cone proof (the official vector-hybrid route is already recorded).
 - 1990 #9 and 1993 ISA1: the Compendium solutions are length/cosine-law computations that might
   count as analytic routes.
 - 2005 G6: infiniteturtle #24's barycentric coordinates fail a numeric check; not used.
+
+Resolved: 2009 G7 (2026-11-16) — home245's synthetic proof (#14 of 17; the ledger's "#15") was added in the
+workbook as the synthetic route with Medium confidence, by user decision (IMO workbook checkpoint 194).

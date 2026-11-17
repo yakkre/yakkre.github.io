@@ -10,7 +10,7 @@ Progress (2026-11-16): ISL 2025–2004 and RMM 2026–2025 done (plus ISL 2005 A
 1. Rows without an AoPS URL: ISL 2013 N5–N7, 2012 A/C/N, 2011 A/C/N, 2010 A1–A8. Collection threads: 2013 `c3964_2013_imo_shortlist`, 2012 `c3963_2012_imo_shortlist`, 2011 `c3962_2011_imo_shortlist`, 2010 `c3961_2010_imo_shortlist`.
 2. Late-post pass for ISL 2003–1990 (non-geometry; 1999 A1–A6 and C1–C5 are done) and RMM 2024 and older.
 3. 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 were thread-scanned but not matched to Compendium solutions.
-Flagged for a human decision: 2009 G7 (home245 #15 synthetic candidate), 2008 G6 (mathocean97 #6 trig), 2010 G7 (G81928128 #24 light-cone proof), 1990 #9 and 1993 ISA1 (Compendium computations that might count as analytic routes), 2005 G6 (infiniteturtle #24 barycentric coordinates fail a numeric check).
+Flagged for a human decision: 2008 G6 (mathocean97 #6 trig), 2010 G7 (G81928128 #24 light-cone proof), 1990 #9 and 1993 ISA1 (Compendium computations that might count as analytic routes), 2005 G6 (infiniteturtle #24 barycentric coordinates fail a numeric check). Resolved 2026-11-16: 2009 G7 — home245's proof (#14 of 17) added to the workbook as the synthetic route, Medium confidence (user decision).
 
 Every forum check so far read only the first ~10 posts of each AoPS thread. The newest posts in a long thread often distil the best earlier ideas into a short clean solution, so each problem needs a second pass over the END of its thread.
 

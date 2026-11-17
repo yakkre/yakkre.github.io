@@ -3241,6 +3241,46 @@
    "date": "2026-11-16",
    "range": "#10–#20 of 20 (all loaded; thread https://artofproblemsolving.com/community/c6h1480704p8639279 via the AoPS 2016 ISL collection)",
    "note": "Late posts (ThE-dArK-lOrD #10, Makaveli #11 official, MarkBcc168 #12 and Idio-logy #13 cycles from two tilings, JAnatolGT_00 #15, CANBANKAN #16, awesomeming327. #17, math_comb01 #18, Giabach298 #19, Akacool #20) give k = 2n by the staircase construction and the alternating-cycle argument; corroborates existing tags."
+  },
+  "isl:2016:N1": {
+   "date": "2026-11-16",
+   "range": "#46–#55 of 55 (all loaded; thread https://artofproblemsolving.com/community/c6h1480723p8639330 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (Ilikeminecraft #46, Shreyasharma #47, anudeep #48, cursed_tangent1434 #49, TwentyIQ #50, ihatemath123 #51, cubres #52, pl246631 #53, MR.1 #54 n·10^k trick, lpieleanu #55) use n → n·10^k and the S(n) ≤ 9(log n + 1) growth bound to force P(x) = x or a constant digit; corroborates existing tags."
+  },
+  "isl:2016:N2": {
+   "date": "2026-11-16",
+   "range": "#22–#31 of 31 (all loaded; thread https://artofproblemsolving.com/community/c6h1480726p8639339 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (eg4334 #22, Schintalpati #23, lpieleanu #25, ihatemath123 #26, Kempu33334 #27, LHE96 #28, oooahin #29, tungtungtungsahur #30, TestX01 #31) count divisors ≡ 1 mod 3 multiplicatively by prime type and show the ratio covers 2 and all composites; corroborates existing tags."
+  },
+  "isl:2016:N3": {
+   "date": "2026-11-16",
+   "range": "#72–#82 of 82 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1270992p6642559 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (tungtungtungsahur #72, isache #74, Kempu33334 #75, not_detriti #77, TestX01 #78, DensSv #79, mucube #80, Assassino9931 #81, Conquest #82) find the primes 3, 7, 19 dividing gaps 1–4 via the Euclidean algorithm and assemble b = 6 by CRT; corroborates existing tags."
+  },
+  "isl:2016:N4": {
+   "date": "2026-11-16",
+   "range": "#42–#51 of 51 (all loaded; thread https://artofproblemsolving.com/community/c6h1480731p8639358 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (Ilikeminecraft #42, EpicBird08 #43, vsamc #44, Lunatic_Lunar7986 #45, ray66 #46, maromex #47, pl246631 #48, MR.1 #49, DensSv #50, Assassino9931 #51) reduce n^{k+l}−1 modulo the divisor and compare sizes in the cases l ≤ k and l > k; corroborates existing tags."
+  },
+  "isl:2016:N5": {
+   "date": "2026-11-16",
+   "range": "#20–#30 of 30 (all loaded; thread https://artofproblemsolving.com/community/c6h1480706p8639282 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (EthanWYX2009 #20, OronSH #21, zuat.e #22, cursed_tangent1434 #24, ihategeo_1969 #25, b1zmark #26, NicoN9 #27 norm form, TThB0501 #28, TwentyIQ #29, LemmaLover #30) rewrite as the Pell-type equation z² − k(k−1)x² = ka and move between solutions by the fundamental unit; corroborates existing tags (Pell descent is within Diophantine descent/Advanced NT)."
+  },
+  "isl:2016:N6": {
+   "date": "2026-11-16",
+   "range": "#86–#95 of 95 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1480691p8639255 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (LHE96 #86, Royal_mhyasd #87, isache #88, Just1 #89, InftyByond #90, pl246631 #91, Conquest #92 outline, orz_in_being_nub #94, Kempu33334 #95) get f(1)=1, f(p)=p² for primes via P(p,p) and P(p,1), then f(n)=n² by comparing with large primes; corroborates existing tags."
+  },
+  "isl:2016:N7": {
+   "date": "2026-11-16",
+   "range": "#75–#85 of 85 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1270467p6637660 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (chirita.andrei #75, JAnatolGT_00 #76 Pick, HamstPan38825 #78 Ptolemy, IAmTheHazard #79 shoelace + CRT, palindrome868 #80 with MyobDoesMath #82, asbodke #83, OronSH #84 strong induction on prime powers) reduce to prime powers, use shoelace/Ptolemy for integrality and induct on the number of vertices; corroborates existing tags."
+  },
+  "isl:2016:N8": {
+   "date": "2026-11-16",
+   "range": "#6–#15 of 15 (all loaded; thread https://artofproblemsolving.com/community/c6h1480732p8639362 via the AoPS 2016 ISL collection)",
+   "note": "Posts (anything-- #6, Lam.DL.01 #7, CANBANKAN #9 analytic estimates, bora_olmez #10 rational approximations, YaoAOPS #11, mojyla222 #12, EthanWYX2009 #13, Giabach298 #14, Nemo99999 #15) show P must be a(bx+c)^d by comparing P(x_i)/P(x_j) with d-th powers via approximation; corroborates existing tags."
   }
  }
 }

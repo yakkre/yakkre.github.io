@@ -506,13 +506,13 @@ function renderNotes(p) {
   $('notes-where').textContent = progress.user ? 'Private: only you can see these. Saved to your account.'
     : 'Private, saved in this browser. Sign in (top right) to keep notes on every device.';
 }
-// Rendered preview of the note when it contains LaTeX ($…$, $$…$$, \(…\), \[…\]) or a hidden box ([\hide="Label"] … [\hide]).
+// Rendered preview of the note (LaTeX, hidden boxes [\hide="Label"] … [\hide]), shown whenever the note has text.
 let previewTimer = null, previewRun = 0;
 async function renderNotesPreview() {
   clearTimeout(previewTimer); previewTimer = null;
   const box = $('notes-preview'), body = $('notes-preview-body'), text = $('notes-text').value;
   const run = ++previewRun;
-  if (!/\$|\\\(|\\\[|\[\\hide/.test(text)) { box.hidden = true; body.textContent = ''; body.style.minHeight = ''; return; }
+  if (!text.trim()) { box.hidden = true; body.textContent = ''; body.style.minHeight = ''; return; }
   // Hold the old height while the new text is typeset, so the page doesn't shrink and pull the view up.
   if (!box.hidden) body.style.minHeight = `${body.offsetHeight}px`;
   // Boxes the reader has opened stay open (by position) while the preview is rebuilt as they type.

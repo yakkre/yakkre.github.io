@@ -4256,6 +4256,126 @@
    "date": "2026-11-17",
    "range": "#8–#18 of 18 (all loaded; #12 absent)",
    "note": "Posts (Zhero #8 2pn+[n²]_p construction with SCP #9/#11 and alex443399 #13 discussion, Justanaccount #14 Putnam 1994 B6 remark, Sprites #15, awesomeming327. #16, Ritwin #17 two-dimensional construction, hcdgj #18 Sidon remark) build 100 numbers 202n+(n² mod 101) with distinct pairwise sums; corroborates existing tags."
+  },
+  "isl:2000:A1": {
+   "date": "2026-11-17",
+   "range": "#264–#273 of 273 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (PSS1234 #264, lpieleanu #265, pl246631 #266, Tau_6.28 #267, CubeAlgo15 #268, orangutan1434 #269 Schur, otwaenng #270, methovermath #271, RadiantMeteor #272, Bongcloud45 #273) substitute a=x/y, b=y/z, c=z/x and reduce IMO 2000/2 to (x+y−z)(y+z−x)(z+x−y) ≤ xyz; corroborates existing tags."
+  },
+  "isl:2000:A2": {
+   "date": "2026-11-17",
+   "range": "#4–#14 of 14 (all loaded); middle skimmed by thanks",
+   "note": "Posts (JSGandora #4, math154 #5, theflowerking #6, Mathscienceclass #7, Msn05 #8, awesomeming327. #9, asdf334 #10, Maximilian113 #11, Natrium #12, onyqz #13, ezpotd #14 checkpoints) write the good λ for each of a, b, c as unions of intervals ((3k+1)/3x, (3k+2)/3x] and show one interval for c lies inside common ones for a and b; corroborates existing tags."
+  },
+  "isl:2000:A3": {
+   "date": "2026-11-17",
+   "range": "#13–#23 of 23 (all loaded; #21 absent); middle skimmed by thanks",
+   "note": "Late posts (mathverse06 #13, TheUltimate123 #14, ZETA_in_olympiad #15/#16, asdf334 #17, Saucepan_man02 #18, Natrium #19, Mathandski #20, Ilikeminecraft #22, ezpotd #23) show f is surjective or g has a zero, then force both linear: f=c(x−c)/(c+1), g=c(x−c); corroborates existing tags."
+  },
+  "isl:2000:A4": {
+   "date": "2026-11-17",
+   "range": "#3–#12 of 12 (all loaded)",
+   "note": "Posts (going3killu #3/#5, mehdi cherif #4 Fibonacci-in-binary hint, mathocean97 #6, EZmath2006 #7, awesomeming327. #8 sketch, cj13609517288 #9 bitwise AND, Natrium #10 without binary, OronSH #11, ezpotd #12) prove F(n)=Σ f_{i+1} over the binary digits of n and count n with no two adjacent ones; corroborates existing tags."
+  },
+  "isl:2000:A5": {
+   "date": "2026-11-17",
+   "range": "#15–#26 of 26 (all loaded; #22, #25 absent); middle skimmed by thanks",
+   "note": "Late posts (JAnatolGT_00 #15, starchan #16, Number1048576 #17, YaoAOPS #18, kingu #19 motivation, jp62 #20, Ywgh1 #21, Blast_S1 #23, john0512 #24, dolphinday #26) jump the leftmost flea over the rightmost for λ ≥ 1/(n−1) and use a weighted-position invariant for the converse (IMO 2000/3); corroborates existing tags."
+  },
+  "isl:2000:A6": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (Zhero #2 difference functions, mathaddiction #3 pair sums are distinct) show a B₃-set with the same difference set as B must equal B up to translation; corroborates existing tags."
+  },
+  "isl:2000:A7": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only math154 #2 (complete) shows 0- and 1-independent polynomials exist and rules out other n by permutation counting; corroborates existing tags."
+  },
+  "isl:2000:C1": {
+   "date": "2026-11-17",
+   "range": "#57–#66 of 66 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Yiyj1 #57, Mathandski #58 attachment, lelouchvigeo #59, PSS1234 #60, lpieleanu #61, Ashwath2011 #62, Half_Blood_Prince #63, Cool12345678 #64, rudbam_in #65, wangyanchuanjude #66) show by induction on n that only the mod-3 split and {1},{2..n−1},{n} work, giving 12 (IMO 2000/4); corroborates existing tags."
+  },
+  "isl:2000:C2": {
+   "date": "2026-11-17",
+   "range": "#4–#13 of 13 (all loaded); middle skimmed by thanks",
+   "note": "Posts (feliz #4, elcinmusazade #5 fourth-roots-of-unity weights with awesomeming327. #6 questioning a step, bluelinfish #7, Math_Is_Fun_101 #8, asdf334 #9 colouring, john0512 #10, PEKKA #11, NTguy #12, Maximilian113 #13 corner argument) show 12 | n by colourings or the corner-filling argument and tile with 2×3×4 boxes; corroborates existing tags."
+  },
+  "isl:2000:C3": {
+   "date": "2026-11-17",
+   "range": "#5–#14 of 14 (all loaded); middle skimmed by thanks",
+   "note": "Posts (JackXD #5, william122 #6, niyu #7, bluelinfish #8, awesomeming327. #9, john0512 #10, asdf334 #11, onyqz #12, Maximilian113 #13, fearsum_fyz #14) count each 4-point subset as contributing 2 if convex and 1 otherwise, so f(n)=2·C(n,4); corroborates existing tags."
+  },
+  "isl:2000:C4": {
+   "date": "2026-11-17",
+   "range": "#3–#13 of 13 (all loaded; #9 absent)",
+   "note": "Posts (StanleyST #3 and JackXD #4 on a wrong formula, JackXD #5 colouring mod k, FISHMJ25 #6, william122 #7, awesomeming327. #8, a_0a #10, Chikara #11, Assassino9931 #12 four (n−k)×k rectangles, math_holmes15 #13) prove m=4(n−k) by splitting the board into strips and constructing a matching placement; corroborates existing tags."
+  },
+  "isl:2000:C5": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (fwolth #2/#5 cwein3's corner counting, goldeneagle #3 and spanferkel #4 on the statement, theflowerking #6, MathStudent2002 #7, william122 #8 'leakiness', awesomeming327. #9) count rectangle vertices on region boundaries to bound Σ over nice regions; corroborates existing tags."
+  },
+  "isl:2000:C6": {
+   "date": "2026-11-17",
+   "range": "#6–#17 of 17 (all loaded; #8, #13 absent); middle skimmed by thanks",
+   "note": "Posts (william122 #6, mathaddiction #7, Leo.Euler #9 lattice paths above y=qx/p, signifance #10, awesomeming327. #11, YaoAOPS #12, dolphinday #14 sketch, BS2012 #15, rdfzlls #16 Dyck-path remark, Siddharthmaybe #17) use Frobenius/Sylvester to reduce to subsets of [0,pq−p−q] and biject ideal sets with lattice paths, counting C(p+q,p)/(p+q); corroborates existing tags."
+  },
+  "isl:2000:G3": {
+   "date": "2026-11-17",
+   "range": "#54–#63 of 63 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (BS2012 #54, lunasgraph_d #56 and megahertz13 #62 inconic with foci O, H plus Brianchon, ezpotd #55, quantam13 #57, zhoujef000 #58, Tau_6.28 #59 reflections of H, cosinesine #60 complex numbers, Half_Blood_Prince #61, PK10 #63) take D=OH_A∩BC etc. so OD+DH=R and prove concurrency by Ceva or Brianchon; corroborates existing tags and the hybrid analytic status."
+  },
+  "isl:2000:G4": {
+   "date": "2026-11-17",
+   "range": "#3–#14 of 14 (all loaded; #6, #10 absent)",
+   "note": "Posts (gorrina #3, v_Enhance #4 coordinates A_i=(R cos2θ_i, R sin2θ_i), ktthree #5 question, AwesomeYRY #7 Ptolemy inequality, DottedCaculator #8, awesomeming327. #9, starchan #11 inversion-like choice of X, HamstPan38825 #12, endless_abyss #13, YaoAOPS #14 determinants) prove both directions via Ptolemy and the determinant identity; corroborates existing tags."
+  },
+  "isl:2000:G5": {
+   "date": "2026-11-17",
+   "range": "#5–#14 of 14 (all loaded)",
+   "note": "Posts (WL0410 #5 no trig, tastymath75025 #6 lengths, zuss77 #7, awesomeming327. #8, Rijul saini #9 and smileapple #12 barycentric, Amiralizakeri2007 #10, Lemmas #11, batzorig.b #13, ezpotd #14 trig) show BQ and AS meet on the circumcircle via symmedians and similar triangles; corroborates existing tags."
+  },
+  "isl:2000:G6": {
+   "date": "2026-11-17",
+   "range": "#19–#31 of 31 (all loaded; #24, #26, #27 absent); middle skimmed by thanks",
+   "note": "Late posts (JAnatolGT_00 #19, awesomeming327. #20, popop614 #21 spiral similarity, OronSH #22 and TestX01 #23/#25 and InterLoop #28 Clawson–Schmidt conjugate, Nari_Tom #29 gliding principle, Mr.Sharkman #30, shendrew7 #31 complex numbers) identify Y via the spiral centre of (AXD) and (BXC); corroborates existing tags."
+  },
+  "isl:2000:G8": {
+   "date": "2026-11-17",
+   "range": "#48–#58 of 58 (all loaded; #53 absent); middle skimmed by thanks",
+   "note": "Late posts (OronSH #48, BlizzardWizard #49 and arnov67 #51 and shendrew7 #52 and der_Englander #55 and TThB0501 #57 and pl246631 #58 complex numbers with the incircle as unit circle, Natrium #50 code, bin_sherlo #54, ezpotd #56 synthetic) show the reflected lines form a triangle with vertices on the incircle; the complex proofs match the recorded analytic route. Corroborates existing tags."
+  },
+  "isl:2000:N1": {
+   "date": "2026-11-17",
+   "range": "#121–#131 of 131 (all loaded; #130 absent); middle skimmed by thanks",
+   "note": "Late posts (Temuulen0208 #121/#122, hellohi321 #123, SirAppel #124, zhoujef000 #125 CRT, shawancool #126, Tau_6.28 #127, isache #128, orangutan1434 #129, IMOasspirant #131) reduce to a² ≡ 1 mod n for all units and get the divisors of 24; corroborates existing tags."
+  },
+  "isl:2000:N2": {
+   "date": "2026-11-17",
+   "range": "#27–#36 of 36 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (pie854 #27, ezpotd #28 and Tau_6.28 #34 multiplicative d(n)³/n, Maximilian113 #29, eg4334 #30, bir_mat_oimpiyatcisi #31, shawancool #32, Cool12345678 #33, maromex #35, Adit-Reddy #36) write n=2k³, bound (3e+1)/p^e per prime and find n=2, 128, 2000; corroborates existing tags."
+  },
+  "isl:2000:N3": {
+   "date": "2026-11-17",
+   "range": "#77–#86 of 86 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (numbertheory97 #77, Kempu33334 #78, Royal_mhyasd #79, shawancool #80, NicoN9 #81, ezpotd #82 and SomeonecoolLovesMaths #83 and otwaenng #84 via Zsigmondy (outside result), IMOasspirant #85, pl246631 #86 3^{2000}·p_1…p_{1999}) build n with 2000 prime factors and n | 2^n+1 by adding one new prime factor at a time (IMO 2000/5); corroborates existing tags."
+  },
+  "isl:2000:N4": {
+   "date": "2026-11-17",
+   "range": "#36–#45 of 45 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ray66 #36, Maximilian113 #37, Fly_into_the_sky #38, oooahin #39, Lunatic_Lunar7986 #40, lpieleanu #41, Royal_mhyasd #42, shawancool #43, ezpotd #44, LemmaLover #45) apply Zsigmondy (outside result) to a^m+1 to leave a=1, m=1 or (2,3,n≥2); the official elementary prime-divisor route is already tagged. Corroborates existing tags."
+  },
+  "isl:2000:N5": {
+   "date": "2026-11-17",
+   "range": "#9–#18 of 18 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (toto1234567890 #9, the_executioner #10/#11, va2010 #12 Vieta jumping, HKIS200543 #13 Pell x²−5y²=−4, DanjelZone #14 with djmathman #15 refuting it, math_comb01 #16, ezpotd #17, shawancool #18 parametric family) turn p²=nS via Heron into an equation with infinitely many solutions; corroborates existing tags."
+  },
+  "isl:2000:N6": {
+   "date": "2026-11-17",
+   "range": "#17–#26 of 26 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Sardor #17, oVlad #18 induction from 129–324, guptaamitu1 #19/#21, p_ben #20 question, math_comb01 #22 Compendium idea and #23 list of exceptions, Autistic_Turk #24, shawancool #25 interval lemma, Swiszcz #26 base-4 for multiples of 25) show all large integers are sums of distinct squares by an inductive interval-extension argument; corroborates existing tags."
   }
  }
 }

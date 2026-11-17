@@ -3121,6 +3121,46 @@
    "date": "2026-11-16",
    "range": "#3–#13 of 13 (whole thread)",
    "note": "Posts (joyce_tan #3 [20 thanks], 62861 #4, txc #6, Leo.Euler #8, EthanWYX2009 #9, Giabach298 #11, Phuc62794 #12, IamYourFriend #13) prove the answer n²+1 with lone-point/configuration counting arguments; corroborates existing tags."
+  },
+  "isl:2017:N1": {
+   "date": "2026-11-16",
+   "range": "#184–#193 of 193 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1480154p8633268 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (b1zmark #184, not_detriti #185, themathchaos #186, isache #187, ostriches88 #188, Kempu33334 #189, SomeonecoolLovesMaths #190, mucube #191, ishan.panpaliya #192, MR.1 #193) case on a_0 mod 3 (2 mod 3 never square, 0 mod 3 bounded, 1 mod 3 reaches 2 mod 3); corroborates existing tags."
+  },
+  "isl:2017:N2": {
+   "date": "2026-11-16",
+   "range": "#53–#63 of 63 (all loaded; thread https://artofproblemsolving.com/community/c6h1671275p10632294 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (math-olympiad-clown #53, Sagnik123Biswas #54, BossBabyOnDuty #56, Eka01 #57, ray66 #58 classes by ord_p 10, anudeep #59, PSS1234 #60 pairing indices, isache #61, lpieleanu #62, tungtungtungsahur #63) give Eduardo a pairing strategy using 10^{(p−1)/2} ≡ ±1; corroborates existing tags."
+  },
+  "isl:2017:N3": {
+   "date": "2026-11-16",
+   "range": "#46–#55 of 55 (all loaded; thread https://artofproblemsolving.com/community/c6h1671289p10632346 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (quantam13 #46, OronSH #47, Jlzh25 #48, AleMM #50 graph-free, heheman #51, Ilikeminecraft #53, MaThEmoTa #54, Royal_mhyasd #55) show composites fail with (d,…,d,0) and primes work by a residue/cycle argument; corroborates existing tags."
+  },
+  "isl:2017:N4": {
+   "date": "2026-11-16",
+   "range": "#30–#40 of 40 (all loaded; thread https://artofproblemsolving.com/community/c6h1671331p10632689 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (kotmhn #30, cursed_tangent1434 #31, AR17296174 #32, lpieleanu #33 short rationals via ν_p, amogususususus #34, Assassino9931 #35, hung9A #36, Royal_mhyasd #37, reyaansh_agrawal #39) reduce to c coprime to 10 and count via multiplicative orders to get 807; corroborates existing tags."
+  },
+  "isl:2017:N5": {
+   "date": "2026-11-16",
+   "range": "#25–#35 of 35 (all loaded; thread https://artofproblemsolving.com/community/c6h1671301p10632380 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (Ilikeminecraft #26, pi271828 #27, eg4334 #28, ray66 #29 size bound, cursed_tangent1434 #30 difference of squares, Likeminded2017 #31, Royal_mhyasd #32, Nemo99999 #34, MR.1 #35) reduce to D | (p+q)^{2q} − (p−q)^{2q}, factor and bound to get (3,2); corroborates existing tags."
+  },
+  "isl:2017:N6": {
+   "date": "2026-11-16",
+   "range": "#63–#72 of 72 (all loaded; thread https://artofproblemsolving.com/community/c6h1671292p10632354 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (methovermath #63 and #71, isache #65, blueprimes #66, otwaenng #67, Royal_mhyasd #68, pl246631 #69 ν_p, Gandalf_Greyhame #70 and #72) show n=1,2 fail and give n=3 families via a Pell-type parametrisation; corroborates existing tags."
+  },
+  "isl:2017:N7": {
+   "date": "2026-11-16",
+   "range": "#51–#62 of 62 (all loaded; thread https://artofproblemsolving.com/community/c6h1480686p8639242 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (YaoAOPS #51, thdnder #52 and N3bula #53 and akasht #61 and Aaron314 #62 induction on |S| from Bezout, GrantStar #54–#55, Davdav1232 #56, monval #59 p-adic then CRT, Cats_on_a_computer #60) build the homogeneous polynomial by induction with CRT/Lagrange-type adjustments; corroborates existing tags."
+  },
+  "isl:2017:N8": {
+   "date": "2026-11-16",
+   "range": "#18–#27 of 27 (all loaded; thread https://artofproblemsolving.com/community/c6h1671295p10632363 via the AoPS 2017 ISL collection)",
+   "note": "Late posts (squareman #18, rama1728 #19, Leo.Euler #21, mcmp #22, pi271828 #23 characterisation f(a,b)=1 iff a^{-1} mod b ≤ b/2, Martin2001 #24 outline, bin_sherlo #25, Aaron314 #26, Royal_mhyasd #27) count quadratic residues in [1,(p−1)/2]; corroborates existing tags."
   }
  }
 }

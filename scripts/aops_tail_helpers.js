@@ -1,0 +1,24 @@
+// Browser helpers for the AoPS tail pass. Paste the whole file into a Claude-in-Chrome
+// javascript_exec call on any artofproblemsolving.com/community page (after a full page load;
+// re-paste after every full reload). Navigation inside the page uses Backbone with a RELATIVE
+// path such as 'c6h1480690p8639254' (never '/community/…').
+//
+//   await __many(['c6h…','c6h…'], 120)  -> per thread: title, last post number, loaded range,
+//                                          and the first 120 chars of each of the last 10 posts
+//   await __go('c6h…', 120)             -> the same for one thread, which stays loaded for:
+//   __f(41)                             -> full text of post #41 (slice long posts: __f(41).slice(0,1500))
+//   __scan()                            -> every post mentioning coordinates/complex/bary/trig/vectors
+//   await __ana('c6h…')                 -> __go + __scan (use for geometry rows with a pending analytic route)
+//   await __coll('c3962_2011_imo_shortlist') -> ['A1=c6h…', …] thread ids of an AoPS contest collection
+//
+// The tool output is blocked if it contains = ; & ?  — __clean swaps them for full-width lookalikes.
+window.__clean=s=>s.replace(/https?:\S+/g,'[url]').replace(/=/g,'＝').replace(/;/g,'；').replace(/&/g,'＆').replace(/\?/g,'？');
+window.__f=n=>{const p=[...document.querySelectorAll('.cmty-post')].find(p=>new RegExp('#'+n+'\\b').test(p.querySelector('.cmty-post-number')?.textContent||''));const k=p.querySelector('.cmty-post-body').cloneNode(true);k.querySelectorAll('img').forEach(i=>i.replaceWith(' '+(i.alt||'')+' '));return __clean(k.innerText.replace(/\s+/g,' '))};
+window.__tail=async(L=550,K=10)=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));for(let i=0;i<20&&!document.querySelector('.cmty-post-body');i++)await sleep(300);const lastNum=()=>{const ps=document.querySelectorAll('.cmty-post-number');return ps.length?parseInt(ps[ps.length-1].textContent.replace(/\D/g,'')):0};let prev=-1,st=0,c=0;for(;c<80&&st<3;c++){const b=document.querySelector('.cmty-topic-jump-bottom');if(b)b.click();await sleep(600);const n=lastNum();if(n===prev)st++;else{st=0;prev=n}}const tx=e=>{if(!e)return'';const k=e.cloneNode(true);k.querySelectorAll('img').forEach(i=>i.replaceWith(' '+(i.alt||'[img]')+' '));return __clean(k.innerText.replace(/\s+/g,' ').trim())};const P=[...document.querySelectorAll('.cmty-post')].map(p=>({n:parseInt((p.querySelector('.cmty-post-number')?.textContent||'').replace(/\D/g,'')),u:(p.querySelector('.cmty-post-username')?.innerText||'').trim(),t:(p.querySelector('.cmty-post-thank-count')?.innerText||'').replace(/\D/g,''),b:tx(p.querySelector('.cmty-post-body'))})).sort((a,b)=>a.n-b.n);return [`${document.title} | last #${prev} | loaded ${P[0]?.n}-${P.at(-1)?.n}`,...P.slice(-K).map(p=>`#${p.n} ${p.u}${p.t?' ['+p.t+'th]':''} (${p.b.length}c): ${p.b.replace(/^Y by [^.$:]*?(?=[A-Z][a-z]|\$)/,'').slice(0,L)}`)]};
+window.__go=async(path,L=500,K=10)=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const old=document.title;Backbone.history.navigate(path,{trigger:true});for(let i=0;i<40&&(document.title===old||!document.querySelector('.cmty-post-body'));i++)await sleep(250);await sleep(800);return __tail(L,K)};
+window.__many=async(paths,L=380)=>{const out=[];for(const p of paths){out.push(...(await __go(p,L)))}return out};
+window.__scan=(re=/complex|bary|coordinat|unit circle|bash|trig|law of sines|sine rule|ratio lemma|cartesian|vector|\\cos|\\sin|\\tan/i,L=220)=>[...document.querySelectorAll('.cmty-post')].map(p=>{const k=p.querySelector('.cmty-post-body')?.cloneNode(true);if(k)k.querySelectorAll('img').forEach(i=>i.replaceWith(' '+(i.alt||'')+' '));const b=__clean((k?.innerText||'').replace(/\s+/g,' '));const m=b.match(re);return m&&b.length>600?`#${(p.querySelector('.cmty-post-number')?.textContent||'').replace(/\D/g,'')} ${(p.querySelector('.cmty-post-username')?.innerText||'').trim()} (${b.length}c) [${m[0]}]: `+b.slice(Math.max(0,m.index-60),m.index+L):null}).filter(Boolean);
+window.__ana=async(path)=>{const t=await __go(path,110,10);return [...t,'--SCAN--',...__scan(undefined,150)]};
+window.__items=async()=>{let n=-1;for(let i=0;i<15;i++){window.scrollTo(0,document.body.scrollHeight);await new Promise(r=>setTimeout(r,1000));const m=document.querySelectorAll('.cmty-view-posts-item').length;if(m===n&&i>2)break;n=m}return [...document.querySelectorAll('.cmty-view-posts-item')].map(it=>{const lab=((it.querySelector('.cmty-view-post-item-label')||{}).textContent||'').trim();const a=[...it.querySelectorAll('a')].map(a=>a.getAttribute('href')).find(h=>h&&/c6h/.test(h));return lab&&a?lab+'='+a.split('/').pop():null}).filter(Boolean)};
+window.__coll=async(p)=>{Backbone.history.navigate(p,{trigger:true});await new Promise(r=>setTimeout(r,4000));return __items()};
+'helpers loaded'

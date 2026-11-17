@@ -6,6 +6,12 @@ Open tasks for raindrops, in priority order. Written 2026-11-16. Not started unl
 
 Status: in progress (started 2026-11-16). Results are recorded in `problems/data/tail-pass.json` (one entry per row: posts read, tags added, explanation additions) and applied by `scripts/tail_pass.py`, which `scripts/export_catalogue.py` also runs after every export so the results survive workbook refreshes. The Drive Sheets were a week behind the committed catalogue, so the pass works from `problems/data/catalogue.json` instead of the workbooks. Rows without an AoPS URL are skipped. Each row in the catalogue that has been tail-passed carries a `tailPass` field.
 
+Progress (2026-11-16): ISL 2025–2004 and RMM 2026–2025 done (plus ISL 2005 A/C and 1999 A1–A6, C1–C5). Every pending/hybrid ISL geometry analytic route was also checked against the official solutions (imo-official booklets for 2006–2025; IMO Compendium text for 2005–1990, since the imomath 2001–2003 scans have no text layer), which added analytic routes for 2010 G3/G5/G7, 2014 G6, 2016 G6 and 2003 G7. Remaining, in priority order:
+1. Analytic first: thread scans (early and late posts) for the pending geometry rows from 2003 down to 1990 and for RMM (2018 1, 2017 6, 2016 5, 2015 4, 2013 4, 2012 6, 2009 3); the RMM official solutions are not checked yet; 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 could not be matched to Compendium solutions automatically.
+2. Rows without an AoPS URL (195: 2021 A1–A3, 2019 C6/C9/N5–N8, most of 2018–2011 A/C/N, 2010 A1–A8): the AoPS ISL collections (e.g. `c3080392_2021_imo_shortlist`) list a thread for each problem.
+3. Late-post pass for ISL 2003–1990 and RMM 2024 and older.
+Flagged for a human decision: 2009 G7 (home245 #15 synthetic candidate), 2008 G6 (mathocean97 #6 trig), 2010 G7 (G81928128 #24 light-cone proof), 1990 #9 and 1993 ISA1 (Compendium computations that might count as analytic routes), 2005 G6 (infiniteturtle #24 barycentric coordinates fail a numeric check).
+
 Every forum check so far read only the first ~10 posts of each AoPS thread. The newest posts in a long thread often distil the best earlier ideas into a short clean solution, so each problem needs a second pass over the END of its thread.
 
 Scope, per problem row in the IMO Shortlist Classification and RMM Classification workbooks:

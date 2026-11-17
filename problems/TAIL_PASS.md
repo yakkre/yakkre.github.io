@@ -91,22 +91,19 @@ Practical notes:
   functions, 2006 C3 Probability, 2006 C6 Matchings, 2019 A4 Induction, 2009 A4 Convexity.
 - RMM official solutions: the RMM site only posts problem papers for 2009–2018, so none could be checked.
 
+## Done on 2026-11-17
+
+- Rows without an AoPS URL: ISL 2013 N5–N7, all of 2012 and 2011, 2010 A1–A8 (thread ids from the AoPS collections; the link is in each row's range).
+- Late-post pass for every remaining ISL row, 2003 back to 1990 (geometry rows included). ISL is now complete: 1,050 ledger rows.
+- New secondary tags (each from a complete late proof, checked): 2002 A6 Generating functions (math154 #11, Dirichlet-series comparison), 2001 N5 Advanced NT (pi_quadrat_sechstel #78, Eisenstein integers; ab+cd=±(p²−q²)(s²−st+t²) checked in 2000 random trials), 1995 N6 Generating functions (teralux #61; (C(2p,p)+2p−2)/p matches brute force for p=3, 5, 7).
+- Considered and not tagged: Lagrange multipliers (2010 A2, 1993 VIE2; same as 2007 A6), outside results (Zsigmondy, Kobayashi, Chebotarev, Perron, Han's inequality), expected-value rephrasings of double counting (1998 C5), unfinished or flagged sketches (2012 C6 #37, 2001 A1 #44, 1999 C6 #8, 1991 #11 #2, 1990 #5 #10).
+
+Reading method that worked well: the Chrome tool cuts JS results at about 1,000 characters, so the batch helper writes its summary into an off-screen `<article id="__o">` and `get_page_text` reads it (up to ~40,000 characters). Run batches of 10–13 threads asynchronously (`__batch(...).then(n=>window.__done=n)`) and poll `window.__done`, since one JS call times out after 45 s.
+
 ## What is left (resume here)
 
-1. **Rows without an AoPS URL** — ISL 2013 N5–N7, then 2012, 2011, 2010 (A/C/N; 2010 is A1–A8 only).
-   - 2013 N5 `c6h597247p3544105`, N6 `c6h597248p3544109`, N7 `c6h597250p3544112`
-   - 2012 A1 `c6h488500p2737336` A2 `c6h546162p3160551` A3 `c6h488342p2736375` A4 `c6h546164p3160553`
-     A5 `c6h546165p3160554` A6 `c6h546166p3160555` A7 `c6h546167p3160557` C1 `c6h546168p3160559`
-     C2 `c6h546169p3160560` C3 `c6h546170p3160563` C4 `c6h546171p3160567` C5 `c6h546172p3160571`
-     C6 `c6h488351p2736406` C7 `c6h546174p3160574` N1 `c6h546186p3160599` N2 `c6h546188p3160603`
-     N3 `c6h545764p3156840` N4 `c6h546190p3160606` N5 `c6h546191p3160608` N6 `c6h545765p3156844`
-     N7 `c6h488512p2737435` N8 `c6h545767p3156853`
-   - 2011: collection `c3962_2011_imo_shortlist`; 2010: collection `c3961_2010_imo_shortlist`.
-2. **Late-post pass for ISL 2003–1990** (non-geometry rows; geometry rows there were already
-   thread-scanned for analytic proofs but still need their late-post note) **and RMM 2024 and older**.
-   Use `tail_pass_todo.py` for each year.
-3. Loose ends: 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 were thread-scanned but could not be
-   matched to their Compendium solutions; 1999 G2's official "Solution 2" (coordinate determinants)
+1. **RMM 2024 and older** (75 rows; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
+2. Loose ends: 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 were thread-scanned but could not be matched to their Compendium solutions; 1999 G2's official "Solution 2" (coordinate determinants)
    is only known from a truncated AoPS quote and could be verified against an original booklet.
 
 ## Flagged for the user (do not decide alone)
@@ -116,6 +113,10 @@ Practical notes:
 - 1990 #9 and 1993 ISA1: the Compendium solutions are length/cosine-law computations that might
   count as analytic routes.
 - 2005 G6: infiniteturtle #24's barycentric coordinates fail a numeric check; not used.
+- 1993 CAN2: YII.I. #4 says the stated inequality should be p ≤ 1 − (1+r)²/3 (statement typo?).
+- 1992 SWE: aansc1729 #6 says part (a) as posted has a typo (Compendium: α(n²) ≤ α(n)(α(n)+1)/2).
+- 1992 IRE1: no complete correct solution in the thread; litongyang #2 doubts the Compendium's.
+- 1990 #5: Little Gauss #10 sketches a synthetic region argument (acute case only); not recorded as a route.
 
 Resolved: 2009 G7 (2026-11-16) — home245's synthetic proof (#14 of 17; the ledger's "#15") was added in the
 workbook as the synthetic route with Medium confidence, by user decision (IMO workbook checkpoint 194).

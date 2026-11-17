@@ -2891,6 +2891,51 @@
    "date": "2026-11-16",
    "range": "#13–#22 of 22 (all loaded; first live-thread read); analytic scan #1–#22",
    "note": "Late posts (JuanOrtiz #13, TelvCohl #14 isogonal conjugates, anantmudgal09 #15 isodynamic point + Sondat + distance Ceva with an unexplained sine product, ABCDE #16 and WizardMath #17 Apollonius circles, 62861 #18, Mindstormer #20, DottedCaculator #21 √(bc) inversion with a skipped 'quick complex bash', YaoAOPS #22) corroborate existing tags. Analytic scan: #15 and #21 are sketches whose analytic steps are asserted, not carried out; analytic route stays pending."
+  },
+  "isl:2021:A1": {
+   "date": "2026-11-16",
+   "range": "#69–#79 of 79 (all loaded; thread https://artofproblemsolving.com/community/c6h2882570p25627665 found via the AoPS 2021 ISL collection)",
+   "note": "Late posts (lksb #69, SyScorch #70, tungtungtungsahur #71, Nonecludiangeofan #72, DensSv #74, Adit-Reddy #76, sks987 #77, futureMEDALIST #78, maromex #79) assume c+2a ≤ 3b for consecutive-index triples and get geometric decay of the gaps from the largest element, contradicting the range 5^n; corroborates existing tags (ianpark_ #75 is a flawed one-choice argument)."
+  },
+  "isl:2021:A2": {
+   "date": "2026-11-16",
+   "range": "#68–#77 of 77 (all loaded; thread https://artofproblemsolving.com/community/c6h2882567p25627655 found via the AoPS 2021 ISL collection)",
+   "note": "Late posts (lelouchvigeo #68, oooahin #69, SomeonecoolLovesMaths #70, numbertheory97 #71, zhoujef000 #72, methovermath #73, isache #74, tungtungtungsahur #75, neeyakkid23 #76, apokono #77) compare the floor sum with the fractional parts, using that ij runs over residues mod n+1 exactly when gcd(i,n+1)=1, so equality holds iff n+1 is prime; corroborates existing tags."
+  },
+  "isl:2021:A3": {
+   "date": "2026-11-16",
+   "range": "#42–#51 of 51 (all loaded; thread https://artofproblemsolving.com/community/c6h2882539p25627503 found via the AoPS 2021 ISL collection)",
+   "note": "Late posts (lelouchvigeo #42, maromex #43, math-olympiad-clown #44, ray66 #45, Shreyasharma #46, InftyByond #47, UberPiggy #48, MahdiLikesMath123 #49) give ⌊log2 n⌋+1 via the 2^k → 2^{k+1}−1 construction and an induction/interval-shift lower bound; corroborates existing tags."
+  },
+  "isl:2019:C6": {
+   "date": "2026-11-16",
+   "range": "#7–#17 of 17 (all loaded; thread https://artofproblemsolving.com/community/c6h2279018p17828946 via the AoPS 2019 ISL collection)",
+   "note": "Late posts (rcorreaa #7, JAnatolGT_00 #8, awesomeming327. #9, asdf334 #10, Leo.Euler #11 windmill, awesomehuman #12, ray66 #16, dno1467 #17) split the points by a halving line, alternate between the halves and use a rotating-line (windmill) process to balance clockwise and anticlockwise angles; corroborates existing tags (Giabach298 #14 self-flagged unsure)."
+  },
+  "isl:2019:C9": {
+   "date": "2026-11-16",
+   "range": "#1–#10 of 10 (whole thread; https://artofproblemsolving.com/community/c6h2279019p17828982 via the AoPS 2019 ISL collection)",
+   "note": "Posts (MathStudent2002 #2, USJL #3, hdighfan #4, mela_20-15 #7 Σ 2^{-scales(x)} ≤ 1, JAnatolGT_00 #8, Giabach298 #9, quantam13 #10) prove the answer 2^k by splitting at the largest scale and inducting with a Kraft-type inequality; corroborates existing tags."
+  },
+  "isl:2019:N5": {
+   "date": "2026-11-16",
+   "range": "#36–#45 of 45 (all loaded; thread https://artofproblemsolving.com/community/c6h2279015p17828930 via the AoPS 2019 ISL collection)",
+   "note": "Late posts (cursed_tangent1434 #36, ihatemath123 #37, SimplisticFormulas #40, megarnie #41, IamYourFriend #42, maromex #43, Aaron314 #44, apokono #45 Dirichlet) show b is a-good iff b is even and every prime ≤ b divides a, via Lucas/Wilson-type residue arguments mod an+1; corroborates existing tags."
+  },
+  "isl:2019:N6": {
+   "date": "2026-11-16",
+   "range": "#12–#24 of 24 (all loaded; thread https://artofproblemsolving.com/community/c6h2279051p17829382 via the AoPS 2019 ISL collection)",
+   "note": "Late posts (Inconsistent #12, CANBANKAN #13 sketch, akasht #16, TechnoLenzer #17, NoctNight #18, IAmTheHazard #20 lemma {x√2} ≥ 1/(2√2x), jp62 #21, Pyramix #22, monval #23, MR.1 #24) use Beatty's theorem (complement ⌊i(2+√2)⌋) and fractional-part bounds; corroborates existing tags."
+  },
+  "isl:2019:N7": {
+   "date": "2026-11-16",
+   "range": "#17–#32 of 32 (all loaded; thread https://artofproblemsolving.com/community/c6h2279001p17828757 via the AoPS 2019 ISL collection)",
+   "note": "Late posts (dolphinday #17, idkk #18, ihategeo_1969 #19 with analytic-NT bounds, E0231 #20 self-flagged, megarnie #21, HamstPan38825 #30 lcm(p_i−1) construction, N3bula #31 Zsigmondy, Aaron314 #32) take n = lcm(p_1−1,…,p_k−1) and use Fermat/CRT residue sums with prime-counting bounds; corroborates existing tags."
+  },
+  "isl:2019:N8": {
+   "date": "2026-11-16",
+   "range": "#52–#61 of 61 (all loaded; thread https://artofproblemsolving.com/community/c6h2278989p17828642 via the AoPS 2019 ISL collection)",
+   "note": "Late posts (Bold_Dalai #52, Kempu33334 #53, Maximilian113 #54, Benjaminxiao #55 Vieta jumping, lksb #56, ray66 #57, Royal_mhyasd #58, LHE96 #59, apokono #60, Nemo99999 #61) write ⌈4a²/b⌉ = (4a²+r)/b and descend on the resulting quadratic (Vieta jumping); corroborates existing tags."
   }
  }
 }

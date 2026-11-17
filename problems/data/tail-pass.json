@@ -4936,6 +4936,121 @@
    "date": "2026-11-17",
    "range": "#37–#47 of 47 (all loaded); middle skimmed by thanks",
    "note": "Late posts (BorisAngelov1 #37 radical axis, MagicalToaster53 #38 and dolphinday #39 and Aiden-1089 #40 and mathwiz_1207 #41 and Ilikeminecraft #42 Steiner line as radical axis of (AB) and (CD), Ilovegeom1 #43 and methovermath #47 complex numbers, Kempu33334 #44, cubres #45, DensSv #46 Desargues) show F, H₁, H₂ are collinear; corroborates existing tags."
+  },
+  "isl:1994:A1": {
+   "date": "2026-11-17",
+   "range": "#2–#11 of 11 (all loaded)",
+   "note": "Posts (t0rajir0u #2 and Siddharthmaybe #5 telescoping a_k=1994−k+Σ1/(a_j+1), JBL #3 and Jan #4 on the ln 2 remark, AshAuktober #6, Jupiterballs #7, quantam13 #8, Andyluo #9, Adit-Reddy #10, SomeonecoolLovesMaths #11 b_n=a_n−(1994−n)) bound the accumulated fractions below 1 to get ⌊a_n⌋=1994−n; corroborates existing tags."
+  },
+  "isl:1994:A2": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded)",
+   "note": "Posts (e.lopes #2 and SnowEverywhere #4 and Scilyse #9 a_k+a_{m+1−k} ≥ n+1, stsamster #3/#6 induction corrected by saywhattt #5, JWK750 #7, SnowPanda #8, Lampa21987 #10) pair smallest with largest elements to bound the average by (n+1)/2; corroborates existing tags."
+  },
+  "isl:1994:A3": {
+   "date": "2026-11-17",
+   "range": "#8–#17 of 17 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (CJA #8, pad #9 fixed points, khanhnx #10, Ali3085 #11, ZETA_in_olympiad #12/#15, Quidditch #13, megarnie #14, PROBLEM-SOLVER11 #16 question, Lampa21987 #17) show fixed points propagate via w→w²+2w, contradicting monotonicity unless f(x)=−x/(1+x) (IMO 1994/5); corroborates existing tags."
+  },
+  "isl:1994:A4": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (eloris #2 attachment, Mathias_DK #3, alkjash #4, TheUltimate123 #5, ZETA_in_olympiad #6) compare P(x,y) and P(y,x) to get f(x/2)=c(x^α−x^β) for α≠β and f=x^α/2^{α−1} or 0 for α=β; corroborates existing tags."
+  },
+  "isl:1994:A5": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (xxp2000 #2 noting the exponent should be 2^n, feliz #3 induction) write f^{(n)}(x) as a ratio and telescope; corroborates existing tags."
+  },
+  "isl:1994:C1": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (jgnr #2 official domino tiling, math154 #3, Ali-Seyedpour13 #4, Ihatecombin #5) show the second player keeps the score ≤ 6 by a domino pairing and the first player achieves 6; corroborates existing tags."
+  },
+  "isl:1994:C2": {
+   "date": "2026-11-17",
+   "range": "#7–#17 of 17 (all loaded; #13 absent)",
+   "note": "Posts (srikanth #7, grobber #8/#10, JBL #9 invertibility, v_Enhance #11 amusing not-solution, vickymano #12 with FISHMJ25 #14, Mindstormer #15 matrix, yayups #16 reduced Laplacian sketch, john0512 #17 random-walk expected value sketch) show the linear system for female ages has a unique (positive) solution; corroborates existing tags."
+  },
+  "isl:1994:C3": {
+   "date": "2026-11-17",
+   "range": "#6–#15 of 15 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Vo Duc Dien #6 USAMTS link, utkarshgupta #7, Knty2006 #8, TheUltimate123 #9 binary transfers, lian_the_noob12 #10 and eduD_looC #11/#12 clarifications, kotmhn #13, mahyar_ais #14, pi_quadrat_sechstel #15) empty the smallest account by doubling moves following the binary digits of the quotient; corroborates existing tags."
+  },
+  "isl:1994:C4": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded; #9 absent)",
+   "note": "Posts (grobber #2/#4/#6, Pascual2005 #3/#5/#7 n-tuple encoding, orl #8 seshadri's induction, Missaeaemnl #10 characteristic function) bound the number of moves by 2^n−1 via a binary weight and show the extreme starting position; corroborates existing tags."
+  },
+  "isl:1994:C5": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (orl #2 link, ophiophagous #3 refuted by Kayak #4, Kayak #4 symmetric invariant, TwilightZone #5 weighted invariant Σ i·(tokens)) show the game ends for n < 1994 and cannot end for n=1994; corroborates existing tags."
+  },
+  "isl:1994:C6": {
+   "date": "2026-11-17",
+   "range": "#1–#7 of 7 (all loaded; #5, #6 absent)",
+   "note": "Posts (mavropnevma #2 k-in-a-row references, mindpuzzler #3 staggered 3×3 blocks, th1nq3r #4, Ali-Seyedpour13 #7 10×10 pairing tile) give the second player a pairing strategy that blocks 11 in a row; corroborates existing tags."
+  },
+  "isl:1994:C7": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (Brut3Forc3 #2 on the correct count, mavropnevma #3 Happy Ending remark, Fedor Petrov #4 induction M ∪ (M+x), manuel153 #5 Lovász reference) double the set with a far translate to avoid convex 2n-gons; corroborates existing tags."
+  },
+  "isl:1994:G1": {
+   "date": "2026-11-17",
+   "range": "#22–#38 of 38 (all loaded; #24, #27, #29–#32, #36 absent)",
+   "note": "Late posts (SidVicious #22, TRYTOSOLVE #23, AlastorMoody #25 orthic reformulation, 452832 #26, AopsUser101 #28, zuss77 #33, dchenmathcounts #34, huashiliao2020 #35, Aiden-1089 #37 Pascal, Beromatrix #38 coordinates) show AD, BC, EF concur and the concurrency point's foot makes EF a bisector; corroborates existing tags and the hybrid analytic status."
+  },
+  "isl:1994:G2": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded; #5–#7 absent)",
+   "note": "Posts (polya78 #2 and TRYTOSOLVE #4 parallel lines, gev_gev #3 areas, Ali3085 #8 and mathmax12 #10 coordinates, Davsch #9 barycentric) show N lies inside ABCD via area comparisons or coordinates; corroborates existing tags."
+  },
+  "isl:1994:G4": {
+   "date": "2026-11-17",
+   "range": "#21–#32 of 32 (all loaded; #27, #29 absent); middle skimmed by thanks",
+   "note": "Late posts (Wolowizard #21 perpendicularity lemma, pad #22 Simson line, ubermensch #23, AopsUser101 #24, GaU1Er #25, green_leaf #26, conker23 #28 coordinates remark, hanulyeongsam #30, Rayvhs #31, SomeonecoolLovesMaths #32) prove OQ ⊥ EF iff QE=QF via the cyclic quadrilaterals BEQO and OQCF; corroborates existing tags."
+  },
+  "isl:1994:G5": {
+   "date": "2026-11-17",
+   "range": "#4–#13 of 13 (all loaded)",
+   "note": "Posts (darij grinberg #4 orthogonal circles, orl #5 grobber's approach and #6 restatement, math154 #7/#9, riemannHypothesis2.71828 #8 question, tc1729 #10, mathocean97 #11 complex numbers, thecmd999 #12 polars, TheHazard #13 Simson line) show the fixed point through the polar of P; corroborates existing tags."
+  },
+  "isl:1994:N1": {
+   "date": "2026-11-17",
+   "range": "#11–#21 of 21 (all loaded; #19 absent); middle skimmed by thanks",
+   "note": "Late posts (ana pereira #11/#13 corrected by sumita #12, Binomial-theorem #14 exhaustive triples, Gh324 #15 question, IMO2019 #16, ESCmath #17, JustKeepRunning #18, lian_the_noob12 #20, bir_mat_oimpiyatcisi #21) list triples with square product and show 10 is the maximum with an explicit set; corroborates existing tags."
+  },
+  "isl:1994:N2": {
+   "date": "2026-11-17",
+   "range": "#13–#23 of 23 (all loaded; #15 absent); middle skimmed by thanks",
+   "note": "Late posts (AlastorMoody #13, 62861 #14, AopsUser101 #16, dchenmathcounts #17 and FarrukhKhayitboyev #22 Vieta jumping, green_leaf #18, jasperE3 #19, mathmax12 #20, Marcos_Vinicius #21, Assassino9931 #23) reduce to mn−1 | n²+m and m²+n and bound the quotient; corroborates existing tags."
+  },
+  "isl:1994:N3": {
+   "date": "2026-11-17",
+   "range": "#4–#14 of 14 (all loaded; #10 absent); middle skimmed by thanks",
+   "note": "Posts (edriv #4, TomciO #5, epitomy01 #6, SnowEverywhere #7 index-sum condition, viperstrike #8 question, McTeague #9, conker23 #11, dgrozev #12 countable family reformulation, Saucepan_man02 #13, bin_sherlo #14) define A by a condition on the indices of the prime factors so every infinite S meets A and its complement (IMO 1994/6); corroborates existing tags."
+  },
+  "isl:1994:N4": {
+   "date": "2026-11-17",
+   "range": "#1–#11 of 11 (all loaded; #10 absent)",
+   "note": "Posts (manifestdestiny #2, sayantanchakraborty #3, hajimbrak #4/#6/#7/#9 k(2k+1) characterisation, Ingix #5/#8 retracted misreading, UphluMuach #11 invariant a_n b_n+c_n²/2) show the good k are exactly k(2k+1) via the invariant and reversibility; corroborates existing tags."
+  },
+  "isl:1994:N5": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (grobber #2, AK1024 #3 never constant, Sagnik123Biswas #4 indicator sum f(k)=ΣI(2i−1), yang2k #5) show f_k changes by at most 1 and is unbounded, so every m occurs, uniquely only for C(n,2)+1 (IMO 1994/4); corroborates existing tags."
+  },
+  "isl:1994:N6": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (grobber #2, orl #3 dblues' approach, Allnames #4, shinichiman #5, rkm0959 #6 pure periodicity mod p, Sprites #7, Jalil_Huseynov #8) show the sequence is purely periodic mod each prime p | a_m, so a_m | a_n for suitable n; corroborates existing tags."
+  },
+  "isl:1994:N7": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (grobber #2, Gh324 #3/#5 questions, arc_ankon #4, Sohil_Doshi #6) show multiples of 10 or 25 fail and build wobbly multiples for the rest by periodicity of 100^k mod m; corroborates existing tags."
   }
  }
 }

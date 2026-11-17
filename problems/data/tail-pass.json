@@ -2761,14 +2761,14 @@
   },
   "isl:1993:MAK1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument; analytic route stays pending.",
+   "range": "official solutions (IMO Compendium text); #1–#2 of 2 (whole thread); analytic scan #1–#2",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument; analytic route stays pending.; probability1.01 #2 gives the longest-side/area case argument matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.",
    "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument — no analytic route there"
   },
   "isl:1993:UNK1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route; analytic route stays pending.",
+   "range": "official solutions (IMO Compendium text); #1–#3 of 3 (whole thread); analytic scan #1–#3",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route; analytic route stays pending.; yetti #2 and supercomputer #3 use radical axes and radius relations r² = PA² + r_A², matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.",
    "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route — no analytic route there"
   },
   "isl:1995:G5": {
@@ -2785,8 +2785,8 @@
   },
   "isl:1994:G3": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument; analytic route stays pending.",
+   "range": "official solutions (IMO Compendium text); #1–#6 of 6 (whole thread); analytic scan #1–#6",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument; analytic route stays pending.; Posts (Tiks #2, Virgil Nicula #3, Zhero #4 homothety at Y, Ashutoshmaths #5, YaoAOPS #6) match the existing homothety/tangency route. Analytic scan: no analytic proof; analytic route stays pending.",
    "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument — no analytic route there"
   },
   "isl:1995:G4": {
@@ -2797,20 +2797,50 @@
   },
   "isl:1990:9": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law; analytic route stays pending.",
+   "range": "official solutions (IMO Compendium text); #1–#4 of 4 (whole thread); analytic scan #1–#4",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law; analytic route stays pending.; The QuattoMaster 6000 #2 (area ratio with Menelaus), sunken rock #3 (Cristea transversal theorem) and lym #4 (area/ratio chain) are length computations like the Compendium solution already flagged; analytic route stays pending.",
    "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law — no analytic route there"
   },
   "isl:1993:ISA1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted; analytic route stays pending.",
+   "range": "official solutions (IMO Compendium text); #1–#11 of 11 (whole thread); analytic scan #1–#11",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted; analytic route stays pending.; Posts (yetti #3 pedal triangle of the isodynamic point with sine lengths, yetti #5 area formula, Luis González #6, SUPERMAN2 #7 Torricelli-point areas, Luis González #8 noting its configuration gap, 596066 #11 = Compendium solution with the cosine rule) match the existing Fermat-point route; the cosine-rule computations are the same hybrid already flagged from the Compendium; analytic route stays pending.",
    "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted — no analytic route there"
   },
   "isl:1996:G8": {
    "date": "2026-11-16",
    "range": "#1–#3 of 3 (whole thread); analytic scan #1–#3",
    "note": "Bugi #2 gives a law-of-sines argument that alkjash #3 points out is flawed (sines of possibly obtuse angles); alkjash #3 gives a case-split argument extending AC to the circle ABD, matching the existing route. Analytic scan: no complete analytic proof; analytic route stays pending."
+  },
+  "isl:1992:CHN-2": {
+   "date": "2026-11-16",
+   "range": "#1–#2 of 2 (whole thread); analytic scan #1–#2",
+   "note": "polya78 #2 uses the quarter-turn rotation mapping side lines, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "isl:1992:FRA1": {
+   "date": "2026-11-16",
+   "range": "#1–#9 of 9 (whole thread); analytic scan #1–#9",
+   "note": "Posts (behzad #2, saywhattt #3, Wictro #5, MP8148 #6, AwesomeYRY #7, Jalil_Huseynov #8, Mogmog8 #9) use the homothety at P sending the incircle to the excircle (reflection of the tangency point over M), matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "isl:1992:IND-4": {
+   "date": "2026-11-16",
+   "range": "#9–#18 of 18 (all loaded); analytic scan #1–#18",
+   "note": "Late posts (sunken rock #9, vslmat #10, thecmd999 #11, algemania #12, jayme #13, math_pi_rate #14, MathLuis #15, rafaello #16, HamstPan38825 #17 shooting lemma, Eka01 #18) match the existing arc-midpoint/shooting-lemma route; orl #4 notes the official proof uses no trigonometry. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "isl:1991:1": {
+   "date": "2026-11-16",
+   "range": "#1–#10 of 10 (whole thread); analytic scan #1–#10",
+   "note": "Posts (grobber #2, darij grinberg #5, dchenmathcounts #7, parmenides51 #9, AshAuktober #10) apply Pascal to the cyclic hexagon on diameter AP, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "isl:1991:2": {
+   "date": "2026-11-16",
+   "range": "#1–#6 of 6 (whole thread); analytic scan #1–#6",
+   "note": "Posts (yptsoi #2, sayantanchakraborty #4, TestX01 #5 ratio argument XY ∥ PQ) match the existing right-angle/rectangle route; PROBLEM-SOLVER11 #6 only asserts a trig bash exists. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "isl:1991:7": {
+   "date": "2026-11-16",
+   "range": "#1–#3 of 3 (whole thread); analytic scan #1–#3",
+   "note": "grobber #2 and nguyenhoangvietdeptrai #3 show opposite edges equal and use the common midpoint of the bimedians, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
   }
  }
 }

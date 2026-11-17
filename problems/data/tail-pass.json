@@ -3591,6 +3591,281 @@
    "date": "2026-11-16",
    "range": "#30–#40 of 40 (all loaded; thread https://artofproblemsolving.com/community/c6h597246p3544103 via the AoPS 2013 ISL collection)",
    "note": "Late posts (naonaoaz #30, OronSH #31, Martin2001 #32, NTguy #33, dolphinday #35, Doppel #36, maromex #37 5-adic and 2-adic, numbertheory97 #38, V0305 #39 sketch, Royal_mhyasd #40) show no such sequence by factoring x_{k+1}² − x_k² = a_{k+1}·10^k and comparing ν2/ν5 with size; corroborates existing tags."
+  },
+  "isl:2013:N5": {
+   "date": "2026-11-17",
+   "range": "#27–#37 of 37 (all loaded; thread https://artofproblemsolving.com/community/c6h597247p3544105 via the AoPS 2013 ISL collection)",
+   "note": "Late posts (Martin2001 #27/#28 sketch, mathfun07 #29 induction, Mr.Sharkman #30, Ilikeminecraft #31, ihategeo_1969 #32 minimal representatives M_A, lelouchvigeo #33 asks for a check, vsamc #34, V0305 #35 attachment, Assassino9931 #36 link to IMO 2026/6, quantam13 #37) reduce n to the least number ≥ k with the same prime factors ≤ k and induct on the good numbers; corroborates existing tags."
+  },
+  "isl:2013:N6": {
+   "date": "2026-11-17",
+   "range": "#38–#47 of 47 (all loaded; thread https://artofproblemsolving.com/community/c6h597248p3544109 via the AoPS 2013 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (signifance #38, IAmTheHazard #39, vsamc #40, joshualiu315 #41, MathLuis #42, Ilikeminecraft #43, OronSH #44, ihategeo_1969 #45, Bold_Dalai #46, Royal_mhyasd #47) show f is constant unless it fixes every integer, then pin f between floor and ceiling by choosing a and b in P(x,a,b); corroborates existing tags."
+  },
+  "isl:2013:N7": {
+   "date": "2026-11-17",
+   "range": "#6–#17 of 17 (all loaded; #8 and #16 absent; thread https://artofproblemsolving.com/community/c6h597250p3544112 via the AoPS 2013 ISL collection); middle skimmed by thanks",
+   "note": "Posts (oneplusone #6, v_Enhance #7, mela_20-15 #9, 62861 #10, TheUltimate123 #11, GeronimoStilton #12, NoctNight #13, Inconsistent #15, Leo.Euler #17) track f(a,b)=a⌈bν⌉−b⌊aν⌋ along the Euclid/Stern–Brocot tree (f(a+b,b) or f(a,a+b) grows by b or a) and count excellent coprime pairs by induction; corroborates existing tags."
+  },
+  "isl:2012:A1": {
+   "date": "2026-11-17",
+   "range": "#84–#95 of 95 (all loaded; #86 and #90 absent; thread https://artofproblemsolving.com/community/c6h488500p2737336 = IMO 2012 P4, via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (Nari_Tom #84, arnov67 #85, maromex #87, math-olympiad-clown #88, ihatemath123 #89 g=√f reformulation, Biagii_ #91, isache #92, Shreyasharma #93, kurisu-tina_ #94, numbertheory97 #95) get f(0)=0 and f even, factor the equation, then split on f(1), f(2), f(4) to reach kx², the mod-2 and mod-4 families; corroborates existing tags."
+  },
+  "isl:2012:A2": {
+   "date": "2026-11-17",
+   "range": "#21–#30 of 30 (all loaded; thread https://artofproblemsolving.com/community/c6h546162p3160551 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (bluelinfish #21, jasperE3 #22, L567 #23, awesomeming327. #24, asdf334 #25 and ray66 #29 density arguments, InterLoop #26 via IMO 2000/4 and scaling, ezpotd #27, cursed_tangent1434 #28, ishan.panpaliya #30) show the residue classes mod 3 are the only partition of ℤ and that no partition of ℚ exists; corroborates existing tags."
+  },
+  "isl:2012:A3": {
+   "date": "2026-11-17",
+   "range": "#168–#177 of 177 (all loaded; thread https://artofproblemsolving.com/community/c6h488342p2736375 = IMO 2012 P2, via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (zhoujef000 #168, SimplisticFormulas #169, isache #170, pl246631 #171, godchunguus #172, otwaenng #173, orangutan1434 #174, Primeniyazidayi #175, RadiantMeteor #176, MR.1 #177) all split 1 into k−1 copies of 1/(k−1) and apply AM–GM, with equality impossible; corroborates existing tags."
+  },
+  "isl:2012:A4": {
+   "date": "2026-11-17",
+   "range": "#32–#43 of 43 (all loaded; #36 and #37 absent; thread https://artofproblemsolving.com/community/c6h546164p3160553 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #32, HamstPan38825 #33, ihategeo_1969 #34, OronSH #35, ihatemath123 #38 infinite pigeonhole, Bonime #39, ishan.panpaliya #40, ezpotd #41, V0305 #42 attachment, BS2012 #43) bound the rational roots of pf+g by size and the rational root theorem, then let p grow to force a common root with f; corroborates existing tags."
+  },
+  "isl:2012:A5": {
+   "date": "2026-11-17",
+   "range": "#37–#46 of 46 (all loaded; thread https://artofproblemsolving.com/community/c6h546165p3160554 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (joshualiu315 #37, OronSH #38, Ilikeminecraft #39, cj13609517288 #40, pie854 #41, bin_sherlo #42, MR.1 #43 monotonicity, hung9A #44, Royal_mhyasd #45, son__im_crine #46) derive f(1)=0, f(0)=−1, f(x)=−f(2−x) and a shift recurrence to reach f(x)=x−1; corroborates existing tags."
+  },
+  "isl:2012:A6": {
+   "date": "2026-11-17",
+   "range": "#43–#52 of 52 (all loaded; thread https://artofproblemsolving.com/community/c6h546166p3160555 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (MellowMelon #43 link, awesomehuman #44, Toll #45, kmh1 #46 example of such f, Pyramix #47, Ywgh1 #48, MathLuis #49, Acclab #50 periodicity mod lcm, Mathandski #51 attachment, BS2012 #52) show orbits have no cycles and, assuming bounded k_n, reach a contradiction from f^{2k}(x)=x+k; corroborates existing tags."
+  },
+  "isl:2012:A7": {
+   "date": "2026-11-17",
+   "range": "#2–#12 of 12 (all loaded; #6 absent; thread https://artofproblemsolving.com/community/c6h546167p3160557 via the AoPS 2012 ISL collection)",
+   "note": "Posts (jaydoubleuel #2/#4, SCP #3, MathPanda1 #5, mela_20-15 #7 via f³, TheUltimate123 #8, CANBANKAN #9, CHN_Lucas #10 question, awesomehuman #11, N3bula #12) prove metapolynomials are closed under sums, negation and products by rearranging max–min matrices; corroborates existing tags."
+  },
+  "isl:2012:C1": {
+   "date": "2026-11-17",
+   "range": "#95–#105 of 105 (all loaded; #103 absent; thread https://artofproblemsolving.com/community/c6h546168p3160559 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (maromex #95, kisah_sangjuara #96, godchunguus #97, GreekIdiot #98 weighted sum, ray66 #99 induction, pl246631 #100, Ashwath2011 #101 and hulk_buster #105 monovariant Σ i·a_i, isache #102, orangutan1434 #104 permutation order) use the fixed maximum plus a bounded increasing monovariant or induction; corroborates existing tags."
+  },
+  "isl:2012:C2": {
+   "date": "2026-11-17",
+   "range": "#44–#53 of 53 (all loaded; thread https://artofproblemsolving.com/community/c6h546169p3160560 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (lksb #44, Mathandski #45, lelouchvigeo #46, quantam13 #47, reyaansh_agrawal #48, stanpi31415 #49, ray66 #50, ezpotd #51, lpieleanu #52 compares ISL 2009 C2, maromex #53) bound k by comparing 1+…+2k with n+…+(n−k+1) and build pairs for n ≡ 1, 3 mod 5; corroborates existing tags."
+  },
+  "isl:2012:C3": {
+   "date": "2026-11-17",
+   "range": "#15–#25 of 25 (all loaded; #22 absent; thread https://artofproblemsolving.com/community/c6h546170p3160563 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (jasperE3 #15, IAmTheHazard #16, awesomeming327. #17, AwesomeYRY #18, signifance #19, john0512 #20, lian_the_noob12 #21, Assassino9931 #23, MathCosine #24, lpieleanu #25) write T as a sum over red cells of row·column white counts, bound it by AM–GM to 12·333⁴ and use the diagonal 3×3 block colouring; corroborates existing tags."
+  },
+  "isl:2012:C4": {
+   "date": "2026-11-17",
+   "range": "#10–#19 of 19 (all loaded; thread https://artofproblemsolving.com/community/c6h546171p3160567 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (TheUltimate123 #10, yayups #11, Idio-logy #12, mathlogician #13, squareman #14, awesomeming327. #15 distance-weighted score, fearsum_fyz #16, Ilikeminecraft #17, quantam13 #18, ezpotd #19 arc values) give the 2-per-box strategy for 4022 coins and B's move-toward-a-point strategy with a weight potential below it; corroborates existing tags."
+  },
+  "isl:2012:C5": {
+   "date": "2026-11-17",
+   "range": "#10–#20 of 20 (all loaded; #18 absent; thread https://artofproblemsolving.com/community/c6h546172p3160571 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (mathaddiction #10, squareman #11, tesla501 #12, Inconsistent #13, YaoAOPS #14, HamstPan38825 #15, quantam13 #16, N3bula #17, ray66 #19, ijco #20) partition the board into 1×3 tiles and match each colour's tokens to tiles by Hall's theorem; corroborates existing tags."
+  },
+  "isl:2012:C6": {
+   "date": "2026-11-17",
+   "range": "#31–#42 of 42 (all loaded; #34 and #40 absent; thread https://artofproblemsolving.com/community/c6h488351p2736406 = IMO 2012 P3, via the AoPS 2012 ISL collection); middle skimmed by thanks; #36–#37 read in full",
+   "note": "Late posts (wack #31, mathleticguyyy #32, Inconsistent #33, YaoAOPS #35, IAmTheHazard #36 potential Σ1.999^{d_i}, cj13609517288 #38 library reformulation, awesomehuman #39, ihatemath123 #41 via TST USA 2017/4, Martin2001 #42) halve an impossibility set for part (a) and keep an exponential weight sum small for part (b). #37 quotes a random-answer (expected value) argument for (b) and points out it is wrong, so no probability tag; corroborates existing tags."
+  },
+  "isl:2012:C7": {
+   "date": "2026-11-17",
+   "range": "#2–#13 of 13 (all loaded; #9 absent; thread https://artofproblemsolving.com/community/c6h546174p3160574 via the AoPS 2012 ISL collection)",
+   "note": "Posts (theflowerking #2, oneplusone #3 fatness lemma, jaydoubleuel #4, A02 #7 chords by endpoint sum, alexiaslexia #8 averaging with weights, Leo.Euler #10/#12, Inconsistent #11 greedy, awesomeming327. #13) group chords by endpoint sum and find many pairwise disjoint chords in one class by counting/averaging; corroborates existing tags."
+  },
+  "isl:2012:N1": {
+   "date": "2026-11-17",
+   "range": "#52–#62 of 62 (all loaded; #58 absent; thread https://artofproblemsolving.com/community/c6h546186p3160599 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (Jupiterballs #52 attachment, anudeep #53, cursed_tangent1434 #54, Benjaminxiao #55, maromex #56, lpieleanu #57 t,t+1∈A lemma, isache #59, MR.1 #60, HeshTarg #61, Adit-Reddy #62) show gcd(m,n)=1 is needed and sufficient by generating squares and consecutive integers via Bézout; corroborates existing tags."
+  },
+  "isl:2012:N2": {
+   "date": "2026-11-17",
+   "range": "#49–#58 of 58 (all loaded; thread https://artofproblemsolving.com/community/c6h546188p3160603 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (ezpotd #49, OronSH #50, Kempu33334 #51, mael_AMO #52 503-adic valuation, User-1948581 #53 cubes mod 503, ray66 #54, Just1 #55, lpieleanu #56, MR.1 #57 Legendre symbol (−3/503), Nemo99999 #58) get x | 4024, rule out 503 | x by valuations, force 503 | y+z and finish by size; corroborates existing tags."
+  },
+  "isl:2012:N3": {
+   "date": "2026-11-17",
+   "range": "#18–#28 of 28 (all loaded; #21 absent; thread https://artofproblemsolving.com/community/c6h545764p3156840 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (cmsgr8er #18 Legendre's formula, Sprites #19, thekingjoker #20, Chiaquinha #22, vsamc #23, awesomeming327. #24, Inconsistent #25 Kummer, eg4334 #26, MR.1 #27, Nemo99999 #28) use n·C(n−1,k)/(3n−m) and pick n against the smallest prime factor to show exactly the primes work; corroborates existing tags."
+  },
+  "isl:2012:N4": {
+   "date": "2026-11-17",
+   "range": "#26–#35 of 35 (all loaded; thread https://artofproblemsolving.com/community/c6h546190p3160606 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (megarnie #26, awesomeming327. #27, Inconsistent #28 and Dr-car-Chase #32 valuations, Assassino9931 #29 m=dx n=dy, OronSH #30 square identity, MR.1 #31, maromex #33, IMOasspirant #34, golniyami #35) use m=2n+1 for (a) and m−n | n²+n with size or a square factor to exclude a=2; corroborates existing tags."
+  },
+  "isl:2012:N5": {
+   "date": "2026-11-17",
+   "range": "#39–#48 of 48 (all loaded; thread https://artofproblemsolving.com/community/c6h546191p3160608 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (OronSH #39 orders, EpicBird08 #40, kotmhn #41 iterating n→n^{rad(n)}, MathLuis #42, ezpotd #43 and cursed_tangent1434 #44 and MR.1 #48 Schur's theorem, Bold_Dalai #45, SimplisticFormulas #46, Cool12345678 #47) show a prime dividing f(k) with p∤k leads to a contradiction via orders, so f(x)=cx^k; corroborates existing tags."
+  },
+  "isl:2012:N6": {
+   "date": "2026-11-17",
+   "range": "#41–#50 of 50 (all loaded; thread https://artofproblemsolving.com/community/c6h545765p3156844 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (Number1048576 #41 primitive roots, CT17 #42, IAmTheHazard #43, Inconsistent #44, KOMKZ #45 asks for a check, HamstPan38825 #46, ihategeo_1969 #47, Ilikeminecraft #48, Bold_Dalai #49, MR.1 #50) find infinitely many primes ≡ 3 mod 4 (or ≢ 1 mod 2^{r+2}) dividing some 2^n·y+1 and use 2-adic orders to force x=1; corroborates existing tags."
+  },
+  "isl:2012:N7": {
+   "date": "2026-11-17",
+   "range": "#27–#36 of 36 (all loaded; thread https://artofproblemsolving.com/community/c6h488512p2737435 = IMO 2012 P5, via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (yayups #27, TheUltimate123 #28, Idio-logy #29 splitting identities, Inconsistent #30 induction by 8, OronSH #31, endless_abyss #32, Schintalpati #33, vincentwant #34/#36 question, MR.1 #35) get n ≡ 1, 2 mod 4 by parity and build the rest by induction with splitting identities; corroborates existing tags."
+  },
+  "isl:2012:N8": {
+   "date": "2026-11-17",
+   "range": "#14–#23 of 23 (all loaded; thread https://artofproblemsolving.com/community/c6h545767p3156853 via the AoPS 2012 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (cursed #14, atdaotlohbh #15 question, TwentyIQ #16, Kappa_Beta_725 #17 elementary counting, thdwlgh1229 #18 and sargamsujit #23 Hasse–Weil, Ilikeminecraft #19, lightsynth123 #20 and Aaron314 #22 Jacobi sums, MR.1 #21) count solutions of a²+b⁵≡r with characters or power sums in F_p; corroborates existing tags."
+  },
+  "isl:2011:A1": {
+   "date": "2026-11-17",
+   "range": "#111–#121 of 121 (all loaded; #117 absent; thread https://artofproblemsolving.com/community/c6h418793p2363530 = IMO 2011 P1, via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (eg4334 #111, BS2012 #112, Arcticturn #113, not_detriti #114, ektorasmiliotis #115 sketch, Royal_mhyasd #116, tungtungtungsahur #118, Kempu33334 #119, lpieleanu #120, otwaenng #121) bound n_A ≤ 4 by size, then solve the forced divisibilities to get {k,5k,7k,11k} and {k,11k,19k,29k}; corroborates existing tags."
+  },
+  "isl:2011:A2": {
+   "date": "2026-11-17",
+   "range": "#43–#52 of 52 (all loaded; thread https://artofproblemsolving.com/community/c6h488534p2737640 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (ihatemath123 #43, P2nisic #44, onyqz #45, Ilikeminecraft #46, ezpotd #47, ihategeo_1969 #48 limits, Markas #49, lightsynth123 #50, ray66 #51, kokos #52) squeeze a_n between (n+1)-th roots to show a_n equals the maximum for large n and read off (1,k,…,k); corroborates existing tags."
+  },
+  "isl:2011:A3": {
+   "date": "2026-11-17",
+   "range": "#50–#59 of 59 (all loaded; thread https://artofproblemsolving.com/community/c6h488535p2737643 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (Ilikeminecraft #50, Fly_into_the_sky #51, Martin2001 #52, maromex #53, lpieleanu #54, ray66 #55, sks987 #56, Aopsismywarmup #57 image, megahertz13 #58, isache #59) use the x↔y symmetry to make g linear and get f=x²+c, g=x or f=g=0; corroborates existing tags."
+  },
+  "isl:2011:A4": {
+   "date": "2026-11-17",
+   "range": "#14–#23 of 23 (all loaded; thread https://artofproblemsolving.com/community/c6h488536p2737644 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (megarnie #14, ZETA_in_olympiad #15, SHZhang #16, MathsLover04 #17, awesomeming327. #18, huashiliao2020 #19, N3bula #20, shanelin-sigma #21 general form, ihatemath123 #22, OronSH #23 descent) prove f(n) ≥ n by induction, then f strictly increasing, so f=id and g=1; corroborates existing tags."
+  },
+  "isl:2011:A5": {
+   "date": "2026-11-17",
+   "range": "#11–#20 of 20 (all loaded; thread https://artofproblemsolving.com/community/c6h488537p2737645 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (yayups #11, math_pi_rate #12, stroller #13 non-inductive, william122 #14, IAmTheHazard #15, awesomeming327. #16, megarnie #17, YaoAOPS #18, mathfun07 #19 sketch, ray66 #20) build obtuse triples by shifting (a,b+t,c+t) and induction on n; corroborates existing tags."
+  },
+  "isl:2011:A6": {
+   "date": "2026-11-17",
+   "range": "#100–#112 of 112 (all loaded; #103, #105, #106 absent; thread https://artofproblemsolving.com/community/c6h418798p2363539 = IMO 2011 P3, via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (GrantStar #100, combking #101 empty, MR.1 #102, ihategeo_1969 #104 xf(x) ≤ 0, Royal_mhyasd #107, MerabiZariashvili #108, ioannism45 #109, ray66 #110, ezpotd #111, SleepyGirraffe #112) show f ≤ 0 by letting y→±∞, then f(0)=0 and f(x)=0 for x ≤ 0; corroborates existing tags."
+  },
+  "isl:2011:A7": {
+   "date": "2026-11-17",
+   "range": "#15–#25 of 25 (all loaded; #19 absent; thread https://artofproblemsolving.com/community/c6h488538p2737646 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (WolfusA #15 and solver1104 #17 off-topic, Math-wiz #16/#18, ZETA_in_olympiad #20 Hölder + Schur, strong_boy #21 Titu, awesomeming327. #22 Schur, sqing #23 variant, S.Das93 #24 question, bin_sherlo #25 Ravi substitution) prove the triangle condition and finish with Hölder/Schur; corroborates existing tags."
+  },
+  "isl:2011:C1": {
+   "date": "2026-11-17",
+   "range": "#101–#110 of 110 (all loaded; thread https://artofproblemsolving.com/community/c6h418978p2365036 = IMO 2011 P4, via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (Sh_Mahapatra2010 #101, cubres #102, Alex-131 #103, LHE96 #104, Kempu33334 #105, tacocat14641 #106, Ashwath2011 #107, DensSv #108, isache #109, Adit-Reddy #110) note only the heaviest weight placed so far matters and prove a_n=(2n−1)a_{n−1} by inserting the lightest weight; corroborates existing tags."
+  },
+  "isl:2011:C2": {
+   "date": "2026-11-17",
+   "range": "#24–#33 of 33 (all loaded; thread https://artofproblemsolving.com/community/c6h488626p2738008 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (sansgankrsngupta #24 asks for a claimed probabilistic proof that was never posted, Iveela #25, ezpotd #26, eg4334 #27, Siddharthmaybe #28, v_Enhance #29, BS2012 #30, ray66 #31, lpieleanu #32, Adit-Reddy #33) follow the girls-minus-boys difference of adjacent arcs as k runs from 100 to 300 and use a parity/discrete-continuity argument; corroborates existing tags."
+  },
+  "isl:2011:C3": {
+   "date": "2026-11-17",
+   "range": "#48–#57 of 57 (all loaded; thread https://artofproblemsolving.com/community/c6h418796p2363537 = IMO 2011 P2, via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #48, s12d34 #49 and TabrizMusali #57 video links, JAnatolGT_00 #50, skyboy2007 #51, huashiliao2020 #52, Mr.Sharkman #53, Mathandski #54 attachment, ray66 #55, lightsynth123 #56) start with a line through a point splitting the rest evenly and show the split is invariant, so every point becomes a pivot; corroborates existing tags."
+  },
+  "isl:2011:C4": {
+   "date": "2026-11-17",
+   "range": "#7–#16 of 16 (all loaded; thread https://artofproblemsolving.com/community/c6h488627p2738014 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (lifeisgood03 #7, HKIS200543 #8, Krits #9, TheUltimate123 #10, Number1048576 #11, awesomeming327. #12, cj13609517288 #13, son__im_crine #14, zuat.e #15, ray66 #16) give the k=3 construction and rule out k ≥ 4 by counting small elements needed in each set; corroborates existing tags."
+  },
+  "isl:2011:C5": {
+   "date": "2026-11-17",
+   "range": "#18–#27 of 27 (all loaded; thread https://artofproblemsolving.com/community/c6h488628p2738017 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (SnowPanda #18, yayups #19, TheUltimate123 #20, Number1048576 #21, mathleticguyyy #22, squareman #23, arvind_r #24 question, awesomeming327. #25, YaoAOPS #26, zuat.e #27) show the latest time is 3m/2−1 by tracking ants' distances to a diagonal; corroborates existing tags."
+  },
+  "isl:2011:C6": {
+   "date": "2026-11-17",
+   "range": "#5–#15 of 15 (all loaded; #8 absent; thread https://artofproblemsolving.com/community/c6h488630p2738024 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Posts (solver6 #5/#6, MNJ2357 #7 question, william122 #9, CANBANKAN #10, SnowPanda #11 halving set S, Number1048576 #12, squareman #13 pigeonhole, L567 #14, ihatemath123 #15) extend a frequent word one letter at a time, keeping it above half the period's occurrences, until it is ubiquitous; corroborates existing tags."
+  },
+  "isl:2011:C7": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded; #7 absent; thread https://artofproblemsolving.com/community/c6h488631p2738027 via the AoPS 2011 ISL collection)",
+   "note": "Posts (MellowMelon #2 close to the first official solution, Anzoteh #3, MathPanda1 #4/MellowMelon #5 on the construction, alexiaslexia #6, Leo.Euler #8, YaoAOPS #9) split the board into 35/17 strips, bound uniform cells per strip and match the construction for 3986729; corroborates existing tags."
+  },
+  "isl:2011:N1": {
+   "date": "2026-11-17",
+   "range": "#68–#77 of 77 (all loaded; thread https://artofproblemsolving.com/community/c6h488539p2737648 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (lunasgraph_d #68 sketch, megahertz13 #69 and Kempu33334 #70 grid of p^{2^c}, hellohi321 #71 greedy algorithm, LHE96 #72, Tibd #73, AmjadEH #74, pl246631 #75, lpieleanu #76, Adit-Reddy #77) show f(2^k) is the product of the k smallest numbers p^{2^i}, so f(2^k) | f(2^{k+1}); corroborates existing tags."
+  },
+  "isl:2011:N2": {
+   "date": "2026-11-17",
+   "range": "#22–#31 of 31 (all loaded; thread https://artofproblemsolving.com/community/c6h488540p2737650 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (megarnie #22, asdf334 #23, PEKKA #24 'best prime divisor', ihategeo_1969 #25, OronSH #27 and lksb #28 via Kobayashi's theorem (outside result), ezpotd #26, ray66 #29, lpieleanu #30, HeshTarg #31) give each of eight factors the largest power of one prime < 20, so the ninth divides a fixed product of differences; corroborates existing tags."
+  },
+  "isl:2011:N3": {
+   "date": "2026-11-17",
+   "range": "#55–#65 of 65 (all loaded; #61 absent; thread https://artofproblemsolving.com/community/c6h488541p2737651 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (eg4334 #55, BS2012 #56, megahertz13 #57, Siddharthmaybe #58, der_Englander #59, hung9A #60, ray66 #62, Royal_mhyasd #63, pl246631 #64, Conquest #65) shift to f(0)=0, f(1)=1, show f(p) is a power of p for primes and pin f(x)=±x^d+c with d | n; corroborates existing tags."
+  },
+  "isl:2011:N4": {
+   "date": "2026-11-17",
+   "range": "#8–#18 of 18 (all loaded; #10 absent; thread https://artofproblemsolving.com/community/c6h488542p2737653 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (blacksheep2003 #8, bora_olmez #9, IAmTheHazard #11, awesomeming327. #12, sman96 #13, signifance #14, sansgankrsngupta #15 variant, L13832 #16, OronSH #17, siamchung_degree #18) exclude even a by 2-adic valuations and odd a ≥ 7 mod 4, leaving a = 1, 3, 5; corroborates existing tags."
+  },
+  "isl:2011:N5": {
+   "date": "2026-11-17",
+   "range": "#96–#106 of 106 (all loaded; #100 absent; thread https://artofproblemsolving.com/community/c6h418981p2365041 = IMO 2011 P5, via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (TwentyIQ #96, megahertz13 #97, Ilikeminecraft #98, MR.1 #99, Just1 #101, Royal_mhyasd #102, ZZ_zz #103, pl246631 #104, Zoz99 #105 off-topic, Zany9998 #106) get f(m) | f(0), f even, then compare sizes in f(x−y) | f(x)−f(y) to force divisibility; corroborates existing tags."
+  },
+  "isl:2011:N6": {
+   "date": "2026-11-17",
+   "range": "#39–#50 of 50 (all loaded; #42 and #43 absent; thread https://artofproblemsolving.com/community/c6h488543p2737654 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (Cookierookie #39, everythingpi3141592 #40, thdnder #41 Zsigmondy, megarnie #44, L13832 #45, MathLuis #46, Scilyse #47, OronSH #48, Ilikeminecraft #49 orders, HamstPan38825 #50) use Bézout for coprime P and Q plus orders mod a large prime p | 2^{Q(n)}−1 to force Q constant; corroborates existing tags."
+  },
+  "isl:2011:N7": {
+   "date": "2026-11-17",
+   "range": "#26–#35 of 35 (all loaded; thread https://artofproblemsolving.com/community/c6h488544p2737656 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (Leo.Euler #26, tesla501 #27, signifance #28, cj13609517288 #29, Maximilian113 #30, prMoLeGend42 #31, Kempu33334 #32, Scilyse #33 derivative, mudkip42 #34, apokono #35) use 1/k ≡ (−1)^{k−1}C(p,k)/p mod p to turn S_a into ((1−a)^p+a^p−1)/p and finish with (2^p−2)²; corroborates existing tags."
+  },
+  "isl:2011:N8": {
+   "date": "2026-11-17",
+   "range": "#15–#27 of 27 (all loaded; #19, #20, #25 absent; thread https://artofproblemsolving.com/community/c6h488545p2737657 via the AoPS 2011 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (L567 #15, MatBoy-123 #16, squareman #17, tesla501 #18, Leo.Euler #21, YaoAOPS #22, N3bula #23, MathLuis #24, ihategeo_1969 #26, qwertyuiop123456789 #27 asks for a check) count quadratic residues against even a_i to force n prime and use 3 as a primitive root to build the cycle; corroborates existing tags."
+  },
+  "isl:2010:A1": {
+   "date": "2026-11-17",
+   "range": "#168–#178 of 178 (all loaded; #175 absent; thread https://artofproblemsolving.com/community/c6h356075p1935849 = IMO 2010 P1, via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (mpcnotnpc #168, littlefox_amc #169, isache #170, Tau_6.28 #171, nexus17 #172, ThePeeps191 #173, orangutan1434 #174, narutu_chutu #176, otwaenng #177, Nemo99999 #178) split on f(0)=0 or ⌊f(0)⌋=1 and use P(1,y), P(x,1) and small arguments to reach f ≡ 0 or f ≡ c ∈ [1,2); corroborates existing tags."
+  },
+  "isl:2010:A2": {
+   "date": "2026-11-17",
+   "range": "#53–#62 of 62 (all loaded; thread https://artofproblemsolving.com/community/c6h418679p2362276 via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (LayZee #53, ray66 #54 and cursed_tangent1434 #57 and maromex #62 via Σ(a−1)⁴, Alex-131 #55 and kurisu-tina_ #58 via a²(a−2)² ≥ 0 with a ∈ [0,3], busy-beaver #56 and lpieleanu #59 Lagrange multipliers (as in 2007 A6, not tagged), OrgaaninenKe #60, XX-math-XX #61) bound the expression by polynomial SOS-type estimates; corroborates existing tags."
+  },
+  "isl:2010:A3": {
+   "date": "2026-11-17",
+   "range": "#24–#33 of 33 (all loaded; thread https://artofproblemsolving.com/community/c6h418680p2362280 via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (asdf334 #24, InterLoop #25, pie854 #26, HamstPan38825 #27, Mathandski #28 attachment, CyclicISLscelesTrapezoid #29 and ezpotd #32 multiply the condition by x_i, ray66 #30, siamchung_degree #31 adjustment, mathriller #33) bound each x_{2k−1}x_{2k+1}+x_{2k}x_{2k+2} by t(1−t) ≤ 1/4 for the maximum 25/2; corroborates existing tags."
+  },
+  "isl:2010:A4": {
+   "date": "2026-11-17",
+   "range": "#27–#36 of 36 (all loaded; thread https://artofproblemsolving.com/community/c6h418681p2362283 via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (awesomehuman #27, bora_olmez #28, IAmTheHazard #29 blocks, sman96 #30, awesomeming327. #31, huashiliao2020 #32, pie854 #33 s_{2n} recursion, megarnie #34 minimal counterexample, ray66 #35, OronSH #36 binary-digit interpretation) derive S_{4k}=2S_k-type relations and induct; corroborates existing tags."
+  },
+  "isl:2010:A5": {
+   "date": "2026-11-17",
+   "range": "#34–#44 of 44 (all loaded; #40 absent; thread https://artofproblemsolving.com/community/c6h418682p2362286 via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (megarnie #34, Ibrahim_K #35, huashiliao2020 #36, everythingpi3141592 #37, vsamc #38, pie854 #39, pi_quadrat_sechstel #41, kokos #42, m735821 #43, otwaenng #44) show f injective and f(1)=1, then multiplicativity and prime-exponent arguments give f(x)=1/x; corroborates existing tags."
+  },
+  "isl:2010:A6": {
+   "date": "2026-11-17",
+   "range": "#24–#34 of 34 (all loaded; #25 absent; thread https://artofproblemsolving.com/community/c6h418683p2362289 via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #24, YaoAOPS #26, math90 #27, Iveela #28, shendrew7 #29, Om245 #30, ZVFrozel #31, Royal_mhyasd #32, TThB0501 #33, lli #34) show the images of f and g are upward-closed rays and compare their minima to force f=g; corroborates existing tags."
+  },
+  "isl:2010:A7": {
+   "date": "2026-11-17",
+   "range": "#39–#48 of 48 (all loaded; thread https://artofproblemsolving.com/community/c6h356197p1936918 = IMO 2010 P6, via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Late posts (IAmTheHazard #39, asdf334 #40/#41, atdaotlohbh #42, pi271828 #43, awesomeming327. #44, vsamc #45, dolphinday #46, BS2012 #47, thoofng #48) pick ℓ maximising a_ℓ/ℓ, show a_n ≤ n·a_ℓ/ℓ by induction and that b_n = n·a_ℓ/ℓ − a_n eventually becomes periodic; corroborates existing tags."
+  },
+  "isl:2010:A8": {
+   "date": "2026-11-17",
+   "range": "#4–#13 of 13 (all loaded; thread https://artofproblemsolving.com/community/c6h418684p2362291 via the AoPS 2010 ISL collection); middle skimmed by thanks",
+   "note": "Posts (jgnr #4, Sung-yoon Kim #5 proposer's remarks, daniel73 #6, can_hang2007 #7, wintree #8, GeronimoStilton #9 polynomial T(x−a)(x−c)(x−e)+S(x−b)(x−d)(x−f) with three real roots, 508669 #10, nourcherif #11 off-topic, awesomeming327. #12, CyclicISLscelesTrapezoid #13 Cauchy–Schwarz) reduce to a discriminant/symmetric-function inequality; corroborates existing tags."
   }
  }
 }

@@ -5166,6 +5166,91 @@
    "date": "2026-11-17",
    "range": "#2–#12 of 12 (all loaded)",
    "note": "Posts (Chen241290 #2 Kalva link, sinajackson #3 Lagrange multipliers (as in 2007 A6, not tagged), hungkhtn #4 SMV, chien than #5, ricardokaka #6/#7 n=5 variant, zaizai-hoang #8, arqady #9/#12 mixing variables, red3 #10, Relic_93 #11 pairing a+b, c+d) prove Σabc ≤ 1/27 + (176/27)abcd by smoothing; corroborates existing tags."
+  },
+  "isl:1992:AUS-2": {
+   "date": "2026-11-17",
+   "range": "#1–#7 of 7 (all loaded; #5 absent)",
+   "note": "Posts (tjhance #2 on the sign condition, AnonymousBunny #3 and alifenix- #4 jumping (x,y)→(x,kx−y), ryanbear #6 recurrence a_n=(m+2)a_{n−1}−a_{n−2}, Assassino9931 #7) generate infinitely many coprime pairs with x | y²+m and y | x²+m by Vieta-type jumps; corroborates existing tags."
+  },
+  "isl:1992:CHN-1": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (ghostchungho #2 and Olympikus #5 and ZETA_in_olympiad #6 and RedFireTruck #7 and Assassino9931 #9 iterate u_{n+2}=b(a+b)u_n−au_{n+1} and use nonnegativity to kill the (−a−b)^n term, Ramanujan… #3 and Wizard0001 #4 discussion, Assassino9931 #8 Putnam 1988 A5 link) show f(x)=bx; corroborates existing tags."
+  },
+  "isl:1992:CHN-3": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded; #7–#9 absent)",
+   "note": "Posts (epitomy01 #2 vertex-degree argument, Bugi #3, va2010 #4 and mavropnevma #5 Turán, onyqz #6 Ramsey R(3,3)=6, WallyWalrus #10) show 33 coloured edges force a monochromatic triangle and 32 do not (IMO 1992/3); corroborates existing tags."
+  },
+  "isl:1992:COL-3": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (grobber #2 and adamz #6 and HamstPan38825 #8 and sayantanchakraborty #5 complex numbers with ω, orl #3, luiseduardo #4 asks for vectors, drmzjoseph #7 Napoleon-area remark) show the segments joining opposite centres are perpendicular iff the diagonals are equal; the complex proofs match the recorded analytic route. Corroborates existing tags."
+  },
+  "isl:1992:IND-2": {
+   "date": "2026-11-17",
+   "range": "#55–#67 of 67 (all loaded; #59, #64, #66 absent); middle skimmed by thanks",
+   "note": "Late posts (Saucepan_man02 #55, alexanderhamilton124 #56, KAME06 #57, Rayvhs #58, math-olympiad-clown #60, quannc #61, Fly_into_the_sky #62, mael_AMO #63, Aopsismywarmup #65, Tudor026 #67) show f bijective with f(0)=0, f odd and additive on squares, then monotone, so f(x)=x (IMO 1992/2); corroborates existing tags."
+  },
+  "isl:1992:IND-5": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only pco #2 (complete) pairs the side lengths so tangent lengths stay positive and builds the circumscribed 1992-gon; corroborates existing tags."
+  },
+  "isl:1992:IRA-1": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only Niichavo #2 (complete) shows x³−x−33^{1992} is irreducible over ℚ, so f(α) must be a root and the composition f^{(n)}(α) cycles; corroborates existing tags."
+  },
+  "isl:1992:IRE1": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (litongyang #2 doubting the Compendium solution, mathmaths #3 writing f(z)=(z⁴+2z²−1)²+32z² so −2 is a quadratic residue, chenghaohu #4 still asking for a correct full solution) only partially prove that some w ≡ z² ... exists mod p; the thread has no checked complete proof, so this row is worth comparing with the official booklet. Corroborates existing tags."
+  },
+  "isl:1992:ITA-1": {
+   "date": "2026-11-17",
+   "range": "#2–#13 of 13 (all loaded; #10 absent); middle skimmed by thanks",
+   "note": "Posts (mathmanman #2 counting, math154 #3 Cauchy–Schwarz with indicator sums, Learner94 #4 n-dimensional version, dgrozev #5 sweeping plane, grupyorum #6 entropy and Han's inequality (outside result), Pathological #7, Vlados021 #8, silouan #9 link, HamstPan38825 #11 and Saucepan_man02 #12 induction by splitting, peace09 #13 entropy sketch) prove |S|² ≤ |S_x||S_y||S_z| (IMO 1992/5); corroborates existing tags."
+  },
+  "isl:1992:NET-1": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (n-naoufal #2 induction on deg f with Third Edition #3 checking a step, Zhero #4) show f=h(g) for a polynomial h by induction on the degree; corroborates existing tags."
+  },
+  "isl:1992:NZL": {
+   "date": "2026-11-17",
+   "range": "#17–#26 of 26 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (th1nq3r #17, Infinity_Integral #18, lifeismathematics #19 a < 4, AngeloChu #20, megarnie #21, MagicalToaster53 #22, reni_wee #23, math-olympiad-clown #24 empty, Kempu33334 #25, not_detriti #26) substitute x=a−1 etc. and bound xyz | xy+yz+zx+x+y+z to get (2,4,8), (3,5,15) (IMO 1992/1); corroborates existing tags."
+  },
+  "isl:1992:POL-2": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (JoeBlow #2 x_{(n+3)(n+1)/8}=n for odd n, Math4tots #3, JustKeepRunning #4 x_{(n²+n+2)/2} pattern) find the position of 1992 via the triangular-number pattern of odd values; corroborates existing tags."
+  },
+  "isl:1992:PRK-2": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (Myth #2 and v_Enhance #5 M={t,2t,…,1992t} with t chosen by CRT on exponents so every subset sum is a perfect power, wierdo2134 #3/#4 off-track) construct the set; corroborates existing tags."
+  },
+  "isl:1992:ROK-2": {
+   "date": "2026-11-17",
+   "range": "#3–#12 of 12 (all loaded)",
+   "note": "Posts (ideahitme #3, manjil #4 Aurifeuillean factorisation x⁴+x³+x²+x+1=(x²+3x+1)²−5x(x+1)² with x=5^{25}, Peter #5, 123eeee #6 generalisation, Kouichi Nakagawa #7 link, lightstar_01 #8 and utkarshgupta #9 and aansc1729 #10 on motivation, XX-math-XX #11 AMM reference, Takeya.O #12 Zsigmondy remark) factor the quotient as a difference of squares; corroborates existing tags."
+  },
+  "isl:1992:SWE": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (loup blanc #2/#4, mszew #3, Pathological #5 construction for (c), aansc1729 #6 noting the stated inequality in (a) has a typo; the Compendium has α(n²) ≤ α(n)(α(n)+1)/2) bound α(n²) by expanding n² and build n with α(n²)/α(n) → 0; corroborates existing tags."
+  },
+  "isl:1992:UNK-2": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (epitomy01 #2, bboypa #3 13 is not a sum of x²−1 values, Binomial-theorem #4, DoctorB #5 variant, HarvardMit #6 and 62861 #7 opinions, GaryTam #8 lemma for (c), ZETA_in_olympiad #9 doubling 2x_i) show S(n)=n²−14 for n ≥ 4 by splitting squares into four quarter squares; corroborates existing tags."
+  },
+  "isl:1992:USA": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (shallow #2 chaos remark, stranger #3 induction on F_n/F_{n+1}, Pathological #4 continued fractions) bound Σx_1x_2…x_k by Fibonacci ratios via the Gauss map; corroborates existing tags."
   }
  }
 }

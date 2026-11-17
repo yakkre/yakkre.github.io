@@ -723,38 +723,28 @@ function setFiltersCollapsed(on) {
 }
 function setProblemView(on) {
   document.body.classList.toggle('viewing-problem', on);
-  $('filters-collapse').hidden = !on; $('focus-toggle').hidden = !on;
+  $('focus-toggle').hidden = !on;
   if (!on) setFocus(false, true);
 }
-// Focus mode lifts the statement and notes into a centred layer above the (blurred) page.
-// The block is moved to <body> while focused so it isn't clipped by the results column, then put back.
-const focusHome = document.createComment('problem-focus');
+// Focus mode hides everything except the statement and notes (fade out, then enlarge them in place).
 let focusTimer = null;
 function setFocus(on, instant = false) {
-  const box = $('problem-focus'), focused = document.body.classList.contains('focus-mode');
-  if (on === focused && !focusTimer) return;
+  const body = document.body, b = $('focus-toggle');
+  if (on === body.classList.contains('focus-mode') && !focusTimer) return;
   clearTimeout(focusTimer); focusTimer = null;
-  const b = $('focus-toggle');
   b.setAttribute('aria-pressed', String(on));
   b.textContent = on ? 'Exit focus' : 'Focus';
   b.title = on ? 'Back to the full page (Esc)' : 'Show only the statement and your notes';
-  const reduced = instant || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const quick = instant || matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (on) {
-    if (!focusHome.isConnected) { box.before(focusHome); document.body.append(box); }
-    document.body.classList.add('focus-mode');
-    box.scrollTop = 0;
-    if (reduced) box.classList.add('is-focused');
-    else requestAnimationFrame(() => requestAnimationFrame(() => box.classList.add('is-focused')));
-    b.focus({preventScroll: true});
+    body.classList.add('focus-fade');
+    const go = () => { focusTimer = null; body.classList.add('focus-mode'); window.scrollTo(0, 0); b.focus({preventScroll: true}); };
+    if (quick) go(); else focusTimer = setTimeout(go, 180);
   } else {
-    box.classList.remove('is-focused');
-    const restore = () => {
-      focusTimer = null;
-      document.body.classList.remove('focus-mode');
-      if (focusHome.isConnected) focusHome.replaceWith(box);
-      if (!b.hidden) { b.focus({preventScroll: true}); box.scrollIntoView({block: 'nearest'}); }
-    };
-    if (reduced) restore(); else focusTimer = setTimeout(restore, 300);
+    body.classList.remove('focus-mode');
+    if (quick) body.classList.remove('focus-fade');
+    else requestAnimationFrame(() => requestAnimationFrame(() => body.classList.remove('focus-fade')));
+    if (!instant) { $('problem-focus').scrollIntoView({block: 'start'}); b.focus({preventScroll: true}); }
   }
 }
 function setupProblemView() {
@@ -762,8 +752,6 @@ function setupProblemView() {
   $('filters-collapse').addEventListener('click', () => setFiltersCollapsed(!document.body.classList.contains('filters-collapsed')));
   $('filters-rail').addEventListener('click', () => setFiltersCollapsed(false));
   $('focus-toggle').addEventListener('click', () => setFocus(!document.body.classList.contains('focus-mode')));
-  // Clicking the blurred page around the card leaves focus mode.
-  $('problem-focus').addEventListener('click', e => { if (e.target === e.currentTarget && document.body.classList.contains('focus-mode')) setFocus(false); });
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape' || !document.body.classList.contains('focus-mode') || menuProblem || menuBulk || $('coverage-dialog').open || !$('account-menu').hidden) return;
     e.preventDefault(); setFocus(false);

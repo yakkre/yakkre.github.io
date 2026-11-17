@@ -249,3 +249,49 @@ tr.is-selected,tr.is-selected:hover{background:var(--todo-bg)}
 .coll-filtered{margin:4px 0 0;font-size:13px;color:var(--warn)}
 .coll-filtered .link-button{font-size:13px}
 
+
+/* Problem view: collapsible filters sidebar (only while a problem is open) */
+.layout{transition:grid-template-columns .25s ease}
+.filters{position:sticky}
+.filters-collapse{position:absolute;top:5px;right:6px;width:28px;height:28px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--muted);font-size:15px;line-height:1;padding:0;cursor:pointer}
+.filters-collapse:hover{color:var(--fg);border-color:var(--muted)}
+body.viewing-problem.filters-collapsed .layout{grid-template-columns:42px minmax(0,1fr)}
+body.viewing-problem.filters-collapsed .filters{overflow:hidden}
+body.viewing-problem.filters-collapsed .filters>summary,
+body.viewing-problem.filters-collapsed .filters-body{visibility:hidden;opacity:0}
+body.viewing-problem.filters-collapsed .filters{min-height:120px}
+body.viewing-problem.filters-collapsed .filters-collapse{right:6px}
+.filters>summary,.filters-body{transition:opacity .2s ease,visibility .2s}
+.filters-rail-label{display:none}
+body.viewing-problem.filters-collapsed .filters-rail-label{display:block;position:absolute;top:44px;left:50%;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:0;background:none;padding:4px 0}
+@media(max-width:860px){.filters-collapse,body.viewing-problem.filters-collapsed .filters-rail-label{display:none}
+  body.viewing-problem.filters-collapsed .filters>summary,body.viewing-problem.filters-collapsed .filters-body{visibility:visible;opacity:1}
+  body.viewing-problem.filters-collapsed .filters{min-height:0}}
+
+/* Problem view: focus mode (statement + notes enlarged, the rest of the page blurred) */
+.problem-focus{position:relative;margin-top:20px}
+.problem-focus .problem-statement{margin-top:0}
+.focus-card{position:relative}
+.focus-toggle{position:absolute;top:-3px;right:0;z-index:1;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--fg);padding:3px 10px;font-size:13px;cursor:pointer}
+.focus-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.focus-toggle::before{content:"";width:11px;height:11px;border:1.5px solid currentColor;border-radius:2px;box-sizing:border-box}
+.problem-focus:has(.focus-toggle:not([hidden])) .problem-statement h2{padding-right:96px}
+body.focus-mode{overflow:hidden}
+body.focus-mode .problem-focus{position:fixed;inset:0;z-index:30;margin:0;overflow-y:auto;overscroll-behavior:contain;padding:clamp(16px,6vh,64px) 16px;
+  background:color-mix(in srgb,var(--bg) 0%,transparent);-webkit-backdrop-filter:blur(0);backdrop-filter:blur(0);
+  transition:background-color .3s ease,backdrop-filter .3s ease,-webkit-backdrop-filter .3s ease}
+body.focus-mode .problem-focus.is-focused{background:color-mix(in srgb,var(--bg) 55%,transparent);-webkit-backdrop-filter:blur(7px) saturate(.9);backdrop-filter:blur(7px) saturate(.9)}
+body.focus-mode .focus-card{max-width:860px;margin:0 auto;padding:28px clamp(18px,4vw,44px) 32px;border:1px solid var(--line);border-radius:10px;background:var(--bg);box-shadow:0 18px 50px #0000002e;
+  opacity:0;transform:translateY(10px) scale(.985);transition:opacity .3s ease,transform .3s cubic-bezier(.2,.8,.2,1)}
+body.focus-mode .problem-focus.is-focused .focus-card{opacity:1;transform:none}
+body.focus-mode .focus-toggle{top:22px;right:clamp(14px,3vw,30px)}
+body.focus-mode .focus-toggle::before{border-width:0;content:"✕";width:auto;height:auto;font-size:11px}
+body.focus-mode .problem-statement h2{font-size:21px;margin-bottom:18px}
+body.focus-mode .problem-statement .statement-text{font-size:18px;line-height:1.7}
+body.focus-mode .problem-notes{margin-top:28px}
+body.focus-mode .problem-notes h2{font-size:17px}
+body.focus-mode #notes-text{font-size:16px;line-height:1.6;min-height:32vh}
+body.focus-mode #notes-preview-body{font-size:17px}
+@media(prefers-reduced-motion:reduce){.layout,.filters>summary,.filters-body,body.focus-mode .problem-focus,body.focus-mode .focus-card{transition:none}}
+@media(max-width:600px){body.focus-mode .problem-focus{padding:10px 8px}body.focus-mode .focus-card{padding:18px 14px 22px;border-radius:8px}
+  body.focus-mode .problem-statement .statement-text{font-size:17px}body.focus-mode .focus-toggle{top:12px;right:10px}}

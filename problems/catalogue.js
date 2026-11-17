@@ -201,7 +201,7 @@ function render() {
     // Filters and search narrow the open collection's problems ("Your progress" uses its own Done here marks).
     $('grid-view').hidden = true; $('problem-list').hidden = true; $('pagination').hidden = true;
     $('select-bar').hidden = true; $('select-toggle').hidden = true;
-    renderStatement($('problem-statement'), null); renderNotes(null);
+    renderStatement($('problem-statement'), null); renderNotes(null); setProblemView(false);
     const f = {...filters, problem: '', done: ''};
     collMatch = filtersActive(f) ? new Set(selectProblems(data.problems, data.taxonomy, f).map(r => r.problem.key)) : null;
     $('result-count').textContent = 'Filters and search apply to the collection you open';
@@ -214,7 +214,7 @@ function render() {
   if (grid) {
     const active = filtersActive(filters);
     $('result-count').textContent = active ? `${total.toLocaleString()} problems match your filters` : 'Pick methods or filters to highlight problems';
-    renderStatement($('problem-statement'), null); renderNotes(null);
+    renderStatement($('problem-statement'), null); renderNotes(null); setProblemView(false);
     renderGrid(active ? new Set(results.map(r => r.problem.key)) : null);
     lastResults = results; renderSelectBar();
     return;
@@ -247,6 +247,7 @@ function render() {
   const shown = filters.problem && results.find(r => r.problem.key === filters.problem)?.problem;
   renderStatement($('problem-statement'), shown);
   renderNotes(shown);
+  setProblemView(!!shown);
 }
 function changePage(value) { page = value; render(); $('results').scrollIntoView({block:'start'}); }
 function reset() { filters = emptyFilters(); page = 1; $('tag-search').value = ''; syncControls(); render(); }
@@ -708,6 +709,67 @@ function renderCollections() {
   box.replaceChildren(side, main);
 }
 
+// ---- Problem view: collapsible filters sidebar and focus mode (statement + notes only)
+const FILTERS_KEY = 'raindrops.filtersCollapsed';
+function storedCollapsed() { try { return localStorage.getItem(FILTERS_KEY) === '1'; } catch { return false; } }
+function setFiltersCollapsed(on) {
+  document.body.classList.toggle('filters-collapsed', on);
+  const b = $('filters-collapse');
+  b.setAttribute('aria-expanded', String(!on));
+  b.title = on ? 'Show the filters' : 'Hide the filters';
+  b.firstElementChild.textContent = on ? '»' : '«';
+  b.lastElementChild.textContent = on ? 'Show filters' : 'Hide filters';
+  try { localStorage.setItem(FILTERS_KEY, on ? '1' : '0'); } catch {}
+}
+function setProblemView(on) {
+  document.body.classList.toggle('viewing-problem', on);
+  $('filters-collapse').hidden = !on; $('focus-toggle').hidden = !on;
+  if (!on) setFocus(false, true);
+}
+// Focus mode lifts the statement and notes into a centred layer above the (blurred) page.
+// The block is moved to <body> while focused so it isn't clipped by the results column, then put back.
+const focusHome = document.createComment('problem-focus');
+let focusTimer = null;
+function setFocus(on, instant = false) {
+  const box = $('problem-focus'), focused = document.body.classList.contains('focus-mode');
+  if (on === focused && !focusTimer) return;
+  clearTimeout(focusTimer); focusTimer = null;
+  const b = $('focus-toggle');
+  b.setAttribute('aria-pressed', String(on));
+  b.textContent = on ? 'Exit focus' : 'Focus';
+  b.title = on ? 'Back to the full page (Esc)' : 'Show only the statement and your notes';
+  const reduced = instant || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (on) {
+    if (!focusHome.isConnected) { box.before(focusHome); document.body.append(box); }
+    document.body.classList.add('focus-mode');
+    box.scrollTop = 0;
+    if (reduced) box.classList.add('is-focused');
+    else requestAnimationFrame(() => requestAnimationFrame(() => box.classList.add('is-focused')));
+    b.focus({preventScroll: true});
+  } else {
+    box.classList.remove('is-focused');
+    const restore = () => {
+      focusTimer = null;
+      document.body.classList.remove('focus-mode');
+      if (focusHome.isConnected) focusHome.replaceWith(box);
+      if (!b.hidden) { b.focus({preventScroll: true}); box.scrollIntoView({block: 'nearest'}); }
+    };
+    if (reduced) restore(); else focusTimer = setTimeout(restore, 300);
+  }
+}
+function setupProblemView() {
+  setFiltersCollapsed(storedCollapsed());
+  $('filters-collapse').addEventListener('click', () => setFiltersCollapsed(!document.body.classList.contains('filters-collapsed')));
+  $('filters-rail').addEventListener('click', () => setFiltersCollapsed(false));
+  $('focus-toggle').addEventListener('click', () => setFocus(!document.body.classList.contains('focus-mode')));
+  // Clicking the blurred page around the card leaves focus mode.
+  $('problem-focus').addEventListener('click', e => { if (e.target === e.currentTarget && document.body.classList.contains('focus-mode')) setFocus(false); });
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || !document.body.classList.contains('focus-mode') || menuProblem || menuBulk || $('coverage-dialog').open || !$('account-menu').hidden) return;
+    e.preventDefault(); setFocus(false);
+  }, true); // capture: decide before other Escape handlers close their menus
+}
+
 async function setupProgress() {
   try {
     const {createProgress} = await import('./progress.mjs?v=20261110-colldone');
@@ -763,6 +825,7 @@ async function start() {
     $('select-toggle').addEventListener('click', () => setSelecting(!selecting));
     setupGridDrag();
     setupNotes();
+    setupProblemView();
     document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => {
       gridContest = b.dataset.grid;
       if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();

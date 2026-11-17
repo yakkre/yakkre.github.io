@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261116-hide">
-  <script type="module" src="./catalogue.js?v=20261116-hide"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261117-focus">
+  <script type="module" src="./catalogue.js?v=20261117-focus"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -46,6 +46,8 @@
     <div class="layout">
       <details class="filters" id="filters" open>
         <summary>Filters <span id="filter-count"></span></summary>
+        <button id="filters-collapse" class="filters-collapse" type="button" aria-expanded="true" aria-controls="filters" title="Hide the filters" hidden><span aria-hidden="true">«</span><span class="sr-only">Hide filters</span></button>
+        <button id="filters-rail" class="filters-rail-label" type="button" tabindex="-1" aria-hidden="true">Filters</button>
         <div class="filters-body">
           <div class="row2">
             <label>Collection<select id="contest"><option value="">All</option><option value="isl">IMO Shortlist</option><option value="rmm">RMM</option></select></label>
@@ -97,7 +99,10 @@
         </div>
         <div id="problem-list" aria-busy="true"><p class="loading">Loading problems…</p></div>
         <nav id="pagination" class="pagination" aria-label="Result pages"></nav>
-        <section id="problem-statement" class="problem-statement" aria-label="Problem statement" hidden></section>
+        <div id="problem-focus" class="problem-focus">
+          <div class="focus-card" role="region" aria-label="Problem and notes">
+            <button id="focus-toggle" class="focus-toggle" type="button" aria-pressed="false" hidden title="Show only the statement and your notes">Focus</button>
+            <section id="problem-statement" class="problem-statement" aria-label="Problem statement" hidden></section>
         <section id="problem-notes" class="problem-notes" aria-labelledby="notes-heading" hidden>
           <div class="notes-head"><h2 id="notes-heading">Your notes</h2><span id="notes-status" class="help" aria-live="polite"></span></div>
           <textarea id="notes-text" rows="7" maxlength="10000" placeholder="Ideas, where you got stuck, the key step, a sketch of your solution… LaTeX works: $x^2+y^2$ or $$\sum a_i$$. Hide a spoiler behind a click: [\hide=&quot;Solution&quot;] … [\hide]" aria-labelledby="notes-heading"></textarea>
@@ -108,6 +113,8 @@
             <p id="notes-preview-note" class="help"></p>
           </div>
         </section>
+          </div>
+        </div>
         <p class="footnote">Classifications are original summaries. Full statements and solutions are at the linked sources. A forum-check label records that a review was done, not that every forum proof is correct.</p>
       </section>
     </div>

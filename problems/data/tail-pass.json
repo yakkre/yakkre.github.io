@@ -2936,6 +2936,76 @@
    "date": "2026-11-16",
    "range": "#52–#61 of 61 (all loaded; thread https://artofproblemsolving.com/community/c6h2278989p17828642 via the AoPS 2019 ISL collection)",
    "note": "Late posts (Bold_Dalai #52, Kempu33334 #53, Maximilian113 #54, Benjaminxiao #55 Vieta jumping, lksb #56, ray66 #57, Royal_mhyasd #58, LHE96 #59, apokono #60, Nemo99999 #61) write ⌈4a²/b⌉ = (4a²+r)/b and descend on the resulting quadratic (Vieta jumping); corroborates existing tags."
+  },
+  "isl:2018:A1": {
+   "date": "2026-11-16",
+   "range": "#133–#142 of 142 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1876757p12752810 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (Royal_mhyasd #133, Eda_no11 #134, AshAuktober #135, Giant_PT #136, Biagii_ #137, megahertz13 #139, lpieleanu #140, otwaenng #141, Ostad_Ardeshir #142) find a with f(a)=1 and iterate f(x)^{2^k}-type relations / valuations to force f ≡ 1; corroborates existing tags."
+  },
+  "isl:2018:A2": {
+   "date": "2026-11-16",
+   "range": "#114–#123 of 123 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1670581p10626524 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (KevinYang2.71 #114, cubres #115, iStud #116 sign pattern, endless_abyss #117, lunasgraph_d #118, Royal_mhyasd #120, isache #121, MR.1 #123) multiply the recurrence by a_{i+2} and sum to get Σ(a_i − a_{i+3})² = 0, giving period 3 and 3 | n; corroborates existing tags."
+  },
+  "isl:2018:A3": {
+   "date": "2026-11-16",
+   "range": "#40–#50 of 50 (all loaded; thread https://artofproblemsolving.com/community/c6h1876779p12752861 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (MathLuis #40, Pitchu-25 #41, maromex #42, TwentyIQ #43, ray66 #44, User-1948581 #45, cursed_tangent1434 #46, ezpotd #48, InftyByond #49, lpieleanu #50) assume unique representations and derive a contradiction from greedy/Egyptian-fraction sums of reciprocals; corroborates existing tags."
+  },
+  "isl:2018:A4": {
+   "date": "2026-11-16",
+   "range": "#28–#37 of 37 (all loaded; thread https://artofproblemsolving.com/community/c6h1876762p12752819 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (cj13609517288 #28, N3bula #29, HamstPan38825 #30, vsamc #32, mananaban #34, OronSH #35 linearity in a_n, dno1467 #36, ezpotd #37) bound a_2018 − a_2017 by extremal averages and reach 2016/2017²; corroborates existing tags."
+  },
+  "isl:2018:A5": {
+   "date": "2026-11-16",
+   "range": "#39–#48 of 48 (all loaded; thread https://artofproblemsolving.com/community/c6h1876752p12752798 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (squareman #39, YaoAOPS #40 vector space of solutions, AdventuringHobbit #41, Sivege #42, lian_the_noob12 #43, ray66 #44, peaks #45, InftyByond #47, mathMagicOPS #48) subtract ax + b/x and show the remainder vanishes; corroborates existing tags."
+  },
+  "isl:2018:A6": {
+   "date": "2026-11-16",
+   "range": "#31–#41 of 41 (all loaded; thread https://artofproblemsolving.com/community/c6h1876783p12752880 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (gvole #31, YaoAOPS #32, AdventuringHobbit #33, IAmTheHazard #34 and HamstPan38825 #36 and lightsynth123 #39 Lagrange interpolation, Seungjun_Lee #35, monval #37 finite differences, cubres #41 sketch) reduce modulo x_i(x_i−1)⋯(x_i−m+1) and show a full-support monomial survives; corroborates existing tags. numbersandnumbers #40 gives a roots-of-unity/discrete-Fourier reduction but relies on an outside result (TSTST 2026 P3) and only treats n ≥ m, so no tag added."
+  },
+  "isl:2018:A7": {
+   "date": "2026-11-16",
+   "range": "#39–#48 of 48 (all loaded; thread https://artofproblemsolving.com/community/c6h1876747p12752777 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (AdventuringHobbit #39 rearrangement, ehuseyinyigit #40–#43 generalisations, Mano #44 with arqady #45 Hölder, thdwlgh1229 #46 AM–GM one-liner, MR.1 #47, reyaansh_agrawal #48) use Hölder/AM–GM with equality at (1,49,1,49); corroborates existing tags."
+  },
+  "isl:2018:C1": {
+   "date": "2026-11-16",
+   "range": "#99–#109 of 109 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1876759p12752812 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (isache #99, maromex #100–#101, Jupiterballs #102 and pointblue #109 Fibonacci sets, orangutan1434 #103 powers of 2 plus two adjusters, Ashwath2011 #104, MR.1 #105, Adit-Reddy #106–#107) give explicit constructions; corroborates existing tags."
+  },
+  "isl:2018:C2": {
+   "date": "2026-11-16",
+   "range": "#69–#78 of 78 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1671290p10632348 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (SimplisticFormulas #69, Ilikeminecraft #70, Royal_mhyasd #71, ezpotd #72 knight-move 4-cycles, InftyByond #73, isache #74 4×4 blocks, tungtungtungsahur #75, Alex-131 #77, Half_Blood_Prince #78) give K=100 via the checkerboard strategy and knight cycles in 4×4 blocks; corroborates existing tags."
+  },
+  "isl:2018:C3": {
+   "date": "2026-11-16",
+   "range": "#51–#60 of 60 (all loaded; thread https://artofproblemsolving.com/community/c6h1876784p12752893 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (Siddharthmaybe #51, ihategeo_1969 #52, Likeminded2017 #53, lightsynth123 #54, BossBabyOnDuty #55, mananaban #56, ezpotd #57, CCawciet #58, DensSv #59, lpieleanu #60) label the stones, always move the heaviest, and count moves per stone to get the harmonic-sum bound; corroborates existing tags."
+  },
+  "isl:2018:C4": {
+   "date": "2026-11-16",
+   "range": "#79–#89 of 89 (all loaded; thread https://artofproblemsolving.com/community/c6h1670582p10626557 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (awesomeming327. #79, lnzhonglp #80, asdf334 #81, dkedu #82, popop614 #83, ray66 #85, Scilyse #86, HamstPan38825 #88, N3bula #89) follow the larger-child path from the top, forcing the path sum to exceed 1+2+⋯+2018; corroborates existing tags."
+  },
+  "isl:2018:C5": {
+   "date": "2026-11-16",
+   "range": "#25–#35 of 35 (all loaded; thread https://artofproblemsolving.com/community/c6h1876763p12752820 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (awesomeming327. #25, DongerLi #26, AdventuringHobbit #27, asdf334 #28, thdnder #29, Likeminded2017 #30, YaoAOPS #31, zuat.e #32, ihatemath123 #35) bound arrival/departure days by pairing first and last matches and build the two-group schedule for k(4k²+k−1)/2; corroborates existing tags."
+  },
+  "isl:2018:C6": {
+   "date": "2026-11-16",
+   "range": "#21–#30 of 30 (all loaded; thread https://artofproblemsolving.com/community/c6h1876766p12752833 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (Leo.Euler #21, IAmTheHazard #22, awesomeming327. #23, asdf334 #24, DottedCaculator #25, fearsum_fyz #26, Giabach298 #27, BS2012 #28 linear algebra in three coordinates, User-1948581 #29) reduce to gcd(a,b)=1 and track the multiset as a lattice configuration Xa+Yb to show termination; ray66 #30 is a short generating-function sketch, not tagged. Corroborates existing tags."
+  },
+  "isl:2018:C7": {
+   "date": "2026-11-16",
+   "range": "#19–#28 of 28 (all loaded; thread https://artofproblemsolving.com/community/c6h1876756p12752807 via the AoPS 2018 ISL collection)",
+   "note": "Late posts (AdventuringHobbit #19 global count, signifance #20, thdnder #21, N3bula #22 2-or-6 yellow points per triple, dolphinday #23 parity per region, HamstPan38825 #24, Giabach298 #25, Martin2001 #26, Akacool #27, EeEeRUT #28) corroborate existing tags."
   }
  }
 }

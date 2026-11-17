@@ -5051,6 +5051,121 @@
    "date": "2026-11-17",
    "range": "#1–#6 of 6 (all loaded)",
    "note": "Posts (grobber #2, Gh324 #3/#5 questions, arc_ankon #4, Sohil_Doshi #6) show multiples of 10 or 25 fail and build wobbly multiples for the rest by periodicity of 100^k mod m; corroborates existing tags."
+  },
+  "isl:1993:BRA1": {
+   "date": "2026-11-17",
+   "range": "#1–#11 of 11 (all loaded; #6 absent)",
+   "note": "Posts (Nima Ahmadi Pour #2 sums of p-th roots of unity, xirti #3 inductive equilateral copies, dgreenb801 #4 and HamstPan38825 #10 rational points on the unit circle, v_Enhance #5 lattice points on x²+y²=r² and #9 joke, blackbluecar #7 induction with unit vectors, john0512 #8, ihatemath123 #11 copy-shift) build a finite set where every point has 1993 points at unit distance; corroborates existing tags."
+  },
+  "isl:1993:CAN2": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (al.M.V. #2 hint p=2|cos A cos B cos C|, Zhang2018 #3 question, YII.I. #4 noting the stated bound should read p ≤ 1−(1+r)²/3, parmenides51 #5 restatement) give only the trigonometric reduction; no synthetic route appears, so the row stays computation-only. Corroborates existing tags; the statement typo flagged in #4 is worth checking against the official booklet."
+  },
+  "isl:1993:ESP1": {
+   "date": "2026-11-17",
+   "range": "#17–#28 of 28 (all loaded; #21, #22 absent)",
+   "note": "Late posts (Goutham #17, sayantanchakraborty #18 Casey's theorem, drmzjoseph #19 Sawayama's lemma, ATimo #20, book_learner #23 with nikolapavlovic #24 objection, ilikemath40 #25/#27 unchecked, ike.chen #26 handout, asdf334 #28 √(bc) inversion to the excircle) show the incenter is the midpoint of the tangency chord; corroborates existing tags."
+  },
+  "isl:1993:ESP2": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (Gabriel(fr) #2 trigonometry, fagot #3 lengths with the altitude, M4RI0 #4/#5 non-trigonometric lemma via tangency points, djmathman #6 standard-notation computation) prove 1/MB+1/MD=1/NC+1/NE; corroborates existing tags."
+  },
+  "isl:1993:FIN3": {
+   "date": "2026-11-17",
+   "range": "#5–#14 of 14 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (gjw #5 and Assassino9931 #13 Russia 1992 link, frill #6 and Ali3085 #8 colouring mod 3 / cube roots of unity invariant, lifeisgood03 #7, v_Enhance #9, Mathandski #10 attachment, cursed_tangent1434 #11, MathematicalArceus #12, methovermath #14) show the game can end with one piece iff 3 ∤ n (IMO 1993/3); corroborates existing tags."
+  },
+  "isl:1993:FRG1": {
+   "date": "2026-11-17",
+   "range": "#20–#29 of 29 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (rcorreaa #20 Fibonacci orbits, DottedCaculator #21 and jasperE3 #22 and megarnie #23 and ZETA_in_olympiad #24 and BS2012 #28 f(n)=⌊φn+1/2⌋, Leo.Euler #25 Zeckendorf shift, cursed_tangent1434 #26, dolphinday #27, Siddharthmaybe #29) construct f via the golden ratio or Zeckendorf representations (IMO 1993/5); corroborates existing tags."
+  },
+  "isl:1993:GEO3": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (grobber #2 roots α, ᾱ of at²+2bt+c, alkjash #3 completing the square (ad+be)²+Pe²=an) count representations via solutions of x² ≡ −P mod n; corroborates existing tags."
+  },
+  "isl:1993:IND1": {
+   "date": "2026-11-17",
+   "range": "#1–#7 of 7 (all loaded)",
+   "note": "Posts (Vor #2 f(3n−1)=2(3n−1) pattern, Rust #3 m_{k+1}=3m_k−1, Math-wiz #4/#7 with InkretBear #5, rchokler #6 OEIS A046901 block structure) describe the blocks between returns to f(n)=2n and locate f(n)=1993; corroborates existing tags."
+  },
+  "isl:1993:IND4": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (Nima Ahmadi Pour #2 homomorphism ℤ_p* → cube roots of unity via a prime p ≡ 1 mod 3, Valentin Vornicu #3 seshadri's solution via 3-adic valuations, Just1 #4 for part (b)) partition ℚ⁺ by a multiplicative character of order 3; corroborates existing tags."
+  },
+  "isl:1993:IND5": {
+   "date": "2026-11-17",
+   "range": "#2–#12 of 12 (all loaded; #9 absent)",
+   "note": "Posts (ZetaX #2, Binomial-theorem #3 and kootrapali #5 and Jupiterballs #10 and Just1 #12 Fermat plus LTE for primes, djmathman #4, SPHS1234 #6 and Adi1005247 #11 relying on infinitely many twin primes (unproved, not a valid route), insertionsort #7, programmeruser #8) prove primes have property P and build infinitely many composites; corroborates existing tags."
+  },
+  "isl:1993:IRE1": {
+   "date": "2026-11-17",
+   "range": "#38–#50 of 50 (all loaded; #42, #44, #45 absent); middle skimmed by thanks",
+   "note": "Late posts (djmathman #38 refuting almagest3001 #39, bissonter #40, Ilikeminecraft #41 and shendrew7 #43 reduction mod 3, quannc #46, Brainbot #47 Perron's criterion (outside result), Maths_Genius #48 and PC75 #50 extended Eisenstein, Royal_mhyasd #49) show x^n+5x^{n−1}+3 is irreducible (IMO 1993/1); corroborates existing tags."
+  },
+  "isl:1993:IRE2": {
+   "date": "2026-11-17",
+   "range": "#1–#10 of 10 (all loaded; #6 absent)",
+   "note": "Posts (Nima Ahmadi Pour #2 and vntbqpqh234 #3 chains of k-sums, Pascal96 #4 visual, IMO2022Goldinshallah #5 remark, lian_the_noob12 #7, cubres #8, ray66 #9, Ahmed_mallek #10 induction) list k(n−k)+1 strictly increasing k-sums by swapping one element at a time; corroborates existing tags."
+  },
+  "isl:1993:IRE3": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (Vor #2 Vietnam TST 1999 link, ociretsih #3 sketch: f permutes residues and acts like doubling mod n−m) relate the order of f to the multiplicative order of 2; corroborates existing tags."
+  },
+  "isl:1993:MAK3": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only dgrozev #2 (complete) inducts on n, noting a_{i+1,j} depends only on the first j entries, to show A_{t+1}=A_t eventually; corroborates existing tags."
+  },
+  "isl:1993:NET2": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (cm #2, epitomy01 #3, math154 #4 polynomial (1+x)^{…} over ℤ/2ℤ, v_Enhance #5, GeronimoStilton #6 blocks of n moves, Safal #7 attachment, YaoAOPS #8) model the lamps as polynomials over F₂ and use (1+x)^{2^k} = 1+x^{2^k} to get the periods n²−1 and n²−n+1 (IMO 1993/6); corroborates existing tags."
+  },
+  "isl:1993:POL1": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (Severius #2 and xirti #4 and adityaguharoy #6 via cube-free infinite words, spdf #3 and Pinko #5 recurrence S_n ≥ (3/2)S_{n−1}) bound the number of sequences without six equal consecutive blocks below exponentially; corroborates existing tags."
+  },
+  "isl:1993:ROM2": {
+   "date": "2026-11-17",
+   "range": "#1–#5 of 5 (all loaded)",
+   "note": "Posts (bhzhan #2, xirti #3 padding to multiples of n digits, supercomputer #4, eulerleonhardfan #5 minimal counterexample) show any multiple of b^n−1 has at least n nonzero base-b digits by folding digit blocks mod b^n−1; corroborates existing tags."
+  },
+  "isl:1993:ROM3": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (Rust #2/#4 with orl #3 request) choose k_i from floors of partial sums to keep the adjusted sums in the required range; corroborates existing tags."
+  },
+  "isl:1993:UNK2": {
+   "date": "2026-11-17",
+   "range": "#11–#20 of 20 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (HamstPan38825 #11 complex numbers, IAmTheHazard #12 and Martin2001 #14 and Royal_mhyasd #19 inversion at D, shendrew7 #13 and OronSH #15 and Ilikeminecraft #16 and Kempu33334 #17 and oooahin #18 and Tau_6.28 #20 inversion at A) turn the conditions into an isosceles right triangle, giving √2 and the orthogonality (IMO 1993/2); corroborates existing tags."
+  },
+  "isl:1993:UNK3": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (grobber #2 lemma, GoldenFrog1618 #3 with hydo2332 #4) extend S to {1,…,n} plus suitable multiples so each element divides the total; corroborates existing tags."
+  },
+  "isl:1993:USA3": {
+   "date": "2026-11-17",
+   "range": "#25–#34 of 34 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (ZETA_in_olympiad #25, lian_the_noob12 #26, jawadkaleem #27 with blueberryfaygo_55 #28, math-olympiad-clown #29, Just1 #30, endless_abyss #31, Beromatrix #32, MikayilQasimov #33, Sxmplicity #34) apply Titu and 3(a+b+c+d)² ≥ 8Σab; corroborates existing tags."
+  },
+  "isl:1993:VIE1": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only tµtµ #2 (complete) reduces to a > 1, shows all x_i are equal by monotonicity of the cyclic system and solves x²=ax+1; corroborates existing tags."
+  },
+  "isl:1993:VIE2": {
+   "date": "2026-11-17",
+   "range": "#2–#12 of 12 (all loaded)",
+   "note": "Posts (Chen241290 #2 Kalva link, sinajackson #3 Lagrange multipliers (as in 2007 A6, not tagged), hungkhtn #4 SMV, chien than #5, ricardokaka #6/#7 n=5 variant, zaizai-hoang #8, arqady #9/#12 mixing variables, red3 #10, Relic_93 #11 pairing a+b, c+d) prove Σabc ≤ 1/27 + (176/27)abcd by smoothing; corroborates existing tags."
   }
  }
 }

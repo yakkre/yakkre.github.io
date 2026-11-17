@@ -2419,6 +2419,156 @@
    "date": "2026-11-16",
    "range": "#16–#25 of 25 (all loaded; first live-thread read)",
    "note": "Late posts (IAmTheHazard #16, VicKmath7 #17, awesomeming327. #18 and GrantStar #19 reversed polynomial, MathLuis #20, ihategeo_1969 #21, N3bula #22, Markas #23, Assassino9931 #25 degree-1 case) use Wilson's theorem (p−1−k)! ≡ ±1/k! mod p to make P(m!) divisible by a chosen prime; corroborates existing tags."
+  },
+  "isl:2004:A1": {
+   "date": "2026-11-16",
+   "range": "#108–#118 of 118 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (TheMathCanadian #108, Ashwath2011 #110, Stead #112, Royal_mhyasd #116, orangutan1434 #117, RadiantMeteor #118) expand the product and bound pairwise terms after assuming t_1 ≥ t_2+t_3; zhoujef000 #113 inducts on n, and not_detriti #115 sketches a Lagrange-multiplier route (truncated, not tagged). Corroborates existing tags."
+  },
+  "isl:2004:A2": {
+   "date": "2026-11-16",
+   "range": "#74–#83 of 83 (all loaded; first live-thread read)",
+   "note": "Late posts (ezpotd #74, Jndd #75, endless_abyss #76, Likeminded2017 #77, TwentyIQ #78, zhoujef000 #79, lpieleanu #80, isache #81, maromex #82, otwaenng #83) use a_{n+2} = a_{n+1} ± a_n, a minimum-element argument and gcd/descent to show unboundedness; corroborates existing tags."
+  },
+  "isl:2004:A3": {
+   "date": "2026-11-16",
+   "range": "#8–#17 of 17 (all loaded; first live-thread read)",
+   "note": "Late posts (Wolstenholme #9 continued-fraction construction, dgrozev #10 uniqueness up to sign, math_pi_rate #11, blacksheep2003 #12, yayups #13, awesomeming327. #14, asdf334 #15, YaoAOPS #16, ezpotd #17) construct s via the Calkin–Wilf/continued-fraction structure on rationals; corroborates existing tags."
+  },
+  "isl:2004:A4": {
+   "date": "2026-11-16",
+   "range": "#88–#97 of 97 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (cj13609517288 #88, ezpotd #89, Royal_mhyasd #91, Zany9998 #92, OronSH #93, UberPiggy #94, isache #95, pl246631 #96, Kempu33334 #97) substitute (a,b,c)=(6x,3x,−2x) type triples, show f is even with f(0)=0 and compare coefficients to get rx⁴+sx²; corroborates existing tags."
+  },
+  "isl:2004:A5": {
+   "date": "2026-11-16",
+   "range": "#129–#138 of 138 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (endless_abyss #129, BS2012 #130 and Ashwath2011 #131 Hölder, Stead #132 power mean, Royal_mhyasd #133 AM–GM, zhoujef000 #134 homogenised, V0305 #135, CubeAlgo15 #136, orangutan1434 #137, martianrunner #138) rewrite 1/a+6b=(7ab+bc+ca)/a and finish with Hölder/power mean/concavity; corroborates existing tags."
+  },
+  "isl:2004:A6": {
+   "date": "2026-11-16",
+   "range": "#59–#70 of 70 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (MarkBcc168 #59, yayups #61, guptaamitu1 #62, CANBANKAN #64, ZETA_in_olympiad #66, YaoAOPS #67, Saucepan_man02 #68, m735821 #70) substitute s=x+y, p=xy and classify the solution family f≡0, x, and the step functions f_S; corroborates existing tags."
+  },
+  "isl:2004:A7": {
+   "date": "2026-11-16",
+   "range": "#1–#9 of 9 (whole thread; first live-thread read)",
+   "note": "Posts (harazi #3, yayups #5, awesomeming327. #6, MathLuis #7, Maximilian113 #8, m735821 #9) write a_k = kA_k − (k−1)A_{k−1}, set b_k = A_{k−1}/A_k and apply AM–GM; corroborates existing tags."
+  },
+  "isl:2004:C1": {
+   "date": "2026-11-16",
+   "range": "#46–#56 of 56 (all loaded; first live-thread read)",
+   "note": "Late posts (quantam13 #46, Saucepan_man02 #47, Maximilian113 #48, fearsum_fyz #49, oooahin #51, gold_duck #52, Ashwath2011 #53, SirAppel #54, lpieleanu #55, DensSv #56) double count (student, club, society) triples and pair-in-club incidences to force k=5000; corroborates existing tags."
+  },
+  "isl:2004:C2": {
+   "date": "2026-11-16",
+   "range": "#21–#31 of 31 (all loaded; first live-thread read)",
+   "note": "Late posts (math154 #22, Zawadx #23, v_Enhance #24, bluelinfish #26, Ru83n05 #27, asdf334 #28, awesomeming327. #30, ezpotd #31) give the answer k=2 for n=2,3 and 3≤k≤n, with explicit circle colourings and a global count; corroborates existing tags."
+  },
+  "isl:2004:C3": {
+   "date": "2026-11-16",
+   "range": "#46–#55 of 55 (all loaded; first live-thread read)",
+   "note": "Late posts (asdf334 #46, cursed_tangent1434 #47, heheman #48, ray66 #49, SyScorch #50, numbertheory97 #51, Royal_mhyasd #52, Ashwath2011 #53, Half_Blood_Prince #54, Cool12345678 #55) prove the answer n via connectivity/non-bipartiteness invariants and an inductive construction; corroborates existing tags."
+  },
+  "isl:2004:C4": {
+   "date": "2026-11-16",
+   "range": "#10–#19 of 19 (all loaded; first live-thread read)",
+   "note": "Late posts (Generic_Username #11, Ali3085 #12, awesomeming327. #14, IAmTheHazard #16, cj13609517288 #17, ezpotd #18, cursed_tangent1434 #19) give C=n/2 via the four-quadrant construction and a row/column sign-counting bound; corroborates existing tags."
+  },
+  "isl:2004:C5": {
+   "date": "2026-11-16",
+   "range": "#35–#45 of 45 (all loaded; first live-thread read)",
+   "note": "Late posts (eg4334 #35, lightsynth123 #36, dadatuzhijia33 #37, ravengsd #38, Ilikeminecraft #39, ihategeo_1969 #41, lelouchvigeo #42, MR_FIGOO #43, vsamc #44 base-4 digits, Alex-131 #45) show A wins for odd N and reduce even N to N/4 (or N/2), so B wins iff N has only 0s and 2s in base 4; corroborates existing tags."
+  },
+  "isl:2004:C6": {
+   "date": "2026-11-16",
+   "range": "#3–#12 of 12 (whole thread; first live-thread read)",
+   "note": "Posts (darij grinberg #3, Pascual2005 #6–#7, Peter Scholze #8, BOBTHEGR8 #10, mathaddiction #11 answer 13, ezpotd #12) bound the golden-matrix size via set-system counting with an explicit construction; corroborates existing tags."
+  },
+  "isl:2004:C7": {
+   "date": "2026-11-16",
+   "range": "#41–#51 of 51 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (JuanOrtiz #41, themathematicalmantra #42, Invert_DOG_about_centre_O #44, awesomeming327. #45, IAmTheHazard #46, YaoAOPS #47, cj13609517288 #48, cursed_tangent1434 #50, blueprimes #51) pair hooks into 3×4 or 2×6 blocks and use colourings to force 12 | mn with 3|m or 4|n; CyclicISLscelesTrapezoid #43 self-flagged fakesolve. Corroborates existing tags."
+  },
+  "isl:2004:C8": {
+   "date": "2026-11-16",
+   "range": "#23–#32 of 32 (all loaded; first live-thread read)",
+   "note": "Late posts (SnowPanda #23, KevinYang2.71 #24, HamstPan38825 #25, math_comb01 #26, ihategeo_1969 #27, quantam13 #28, MathLuis #29, math90 #30, cj13609517288 #31, cubres #32) prove the K_r-count inequality N_{r+1}^r ≤ c N_r^{r+1} by double counting with power-mean bounds, giving 3/32; corroborates existing tags."
+  },
+  "isl:2004:G1": {
+   "date": "2026-11-16",
+   "range": "#152–#161 of 161 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (pirateNT0611 #152, InftyByond #153, CubeAlgo15 #154, m735821 #156 Reim, Bridgeon #157 south pole, AZ02336 #158, mael_AMO #159 Miquel, Sxmplicity #160, TheOneAndOnlyOFT #161) show AMRN is cyclic since R is the arc midpoint of MN on the bisector; corroborates existing tags."
+  },
+  "isl:2004:G2": {
+   "date": "2026-11-16",
+   "range": "#65–#74 of 74 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (john0512 #65 DG tangent, Patrik #66 projective map, SimplisticFormulas #67 and ezpotd #68 Pascal, Rayvhs #69, YaoAOPS #70, Aiden-1089 #71, Kempu33334 #72, Half_Blood_Prince #73, TheOneAndOnlyOFT #74 inversion at F) corroborate the polar/projective/inversion tags."
+  },
+  "isl:2004:G3": {
+   "date": "2026-11-16",
+   "range": "#28–#37 of 37 (all loaded); analytic scan #1–#37",
+   "note": "Late posts (joshualiu315 #28, shendrew7 #29 EF=BC, zuat.e #30, YaoAOPS #32, Siddharthmaybe #33, Scilyse #34, oooahin #35, reyaansh_agrawal #36 Reim, V0305 #37) corroborate similarity/angle tags. Analytic scan: ezpotd #31 (read in full) is the law-of-sines computation already recorded as the hybrid trigonometric route; no pure analytic proof beyond it. No change."
+  },
+  "isl:2004:G4": {
+   "date": "2026-11-16",
+   "range": "#84–#95 of 95 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (cj13609517288 #84, LHE96 #87, InterLoop #90 isogonal conjugate in ABCD, Bridgeon #92 synthetic plus a self-described failed barycentric attempt, MerabiZariashvili #93, ezpotd #94 reflections over the bisectors, Gandalf_Greyhame #95) corroborate the reflection/isogonal tags; batzorig.b #88 is a one-line hint."
+  },
+  "isl:2004:G5": {
+   "date": "2026-11-16",
+   "range": "#5–#14 of 14 (all loaded)",
+   "note": "Posts (TheUltimate123 #5, v_Enhance #6, mathlogician #7, Gaussian_cyber #8, CyclicISLscelesTrapezoid #9, JAnatolGT_00 #10, Rexaria112 #11, OronSH #12, BS2012 #13, cursed_tangent1434 #14) use the midpoints M_i and the cyclic A_1A_nB_iM_i to reduce to an angle sum; corroborates existing synthetic tags and the reviewed analytic route."
+  },
+  "isl:2004:G6": {
+   "date": "2026-11-16",
+   "range": "#5–#14 of 14 (whole thread); analytic scan #1–#14",
+   "note": "Posts (silouan #5, probability1.01 #6 and awesomeming327. #13 and N3bula #14 largest inscribed triangle, JuanOrtiz #7, Wolstenholme #8 affine/ellipse optimum n/(2π)·sin(2π/n), v_Enhance #10 calculus with tangents) corroborate area/extremal tags. Analytic scan: as in the earlier review, #8 and #10 use coordinates only inside extremal/calculus arguments; analytic route stays pending."
+  },
+  "isl:2004:G7": {
+   "date": "2026-11-16",
+   "range": "#28–#37 of 37 (all loaded)",
+   "note": "Late posts (Ilikeminecraft #28, Markas #29, YaoAOPS #31, TwentyIQ #32 radical axis through a fixed midline point, vincentwant #33, cubres #34, ihatemath123 #35, Royal_mhyasd #36, ezpotd #37) show the incircle radical axes pass through the fixed point via equal tangent lengths; lksb #30 bash matches the reviewed analytic route. Corroborates existing tags."
+  },
+  "isl:2004:G8": {
+   "date": "2026-11-16",
+   "range": "#106–#115 of 115 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Buh_-1235 #107, Eda_no11 #108, Math1lover #109 harmonic (H,I;C,D), blueprimes #110, Royal_mhyasd #111, littlefox_amc #113, Siddharthmaybe #114 Ceva/Menelaus, otwaenng #115 projective) corroborate harmonic/polar tags; lunasgraph_d #106 complex sketch matches the reviewed analytic route; UnscalableWall #112 self-retracted."
+  },
+  "isl:2004:N1": {
+   "date": "2026-11-16",
+   "range": "#50–#60 of 60 (all loaded; first live-thread read)",
+   "note": "Late posts (vsamc #50, cj13609517288 #51, monval #52, IAmTheHazard #53, ezpotd #54, YaoAOPS #55, genius_007 #56 Dirichlet, lpieleanu #58, maromex #59, IMOasspirant #60) take a=p^{p−1} and bound τ(an)/n multiplicatively prime by prime; corroborates existing tags."
+  },
+  "isl:2004:N2": {
+   "date": "2026-11-16",
+   "range": "#39–#48 of 48 (all loaded; first live-thread read)",
+   "note": "Late posts (Maximilian113 #39, pie854 #40, ezpotd #41, HamstPan38825 #42, Ilikeminecraft #43 f=1∗φ, BS2012 #44, Kempu33334 #45, lightsynth123 #46, lovematch13 #47, HoRI_DA_GRe8 #48) write f(n)=Σ d·φ(n/d), prove multiplicativity and solve f(n)=an via prime powers; corroborates existing tags."
+  },
+  "isl:2004:N3": {
+   "date": "2026-11-16",
+   "range": "#74–#84 of 84 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (InterLoop #75, SomeonecoolLovesMaths #76, math-olympiad-clown #77, eg4334 #78, ektorasmiliotis #79, Eda_no11 #80, ezpotd #82, Jupiterballs #83, IMOasspirant #84) get f(1)=1, then f(p−1)=p−1 for primes p and propagate to the identity; corroborates existing tags."
+  },
+  "isl:2004:N4": {
+   "date": "2026-11-16",
+   "range": "#27–#36 of 36 (all loaded; first live-thread read)",
+   "note": "Late posts (Sprites #27 Fibonacci form x_n=F_{n−1}a+F_nb, hakN #28 CRT over primes p|m, CyclicISLscelesTrapezoid #29, awesomehuman #30, IAmTheHazard #31–#32 explicit a=1,b=2k²+k−2, awesomeming327. #33 5 is a QR mod p, monval #34, bhan2025 #35, pl246631 #36) corroborate existing tags."
+  },
+  "isl:2004:N5": {
+   "date": "2026-11-16",
+   "range": "#45–#55 of 55 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (xProblemDestroyer1434 #45, YaoAOPS #46, OronSH #47, cj13609517288 #48, zuat.e #49, john0512 #50, BS2012 #52 self-flagged unsure, Royal_mhyasd #53, imo2026 #54) reduce to powers of 2 and 5 and build alternating-digit multiples digit by digit; answer: non-multiples of 20. Corroborates existing tags."
+  },
+  "isl:2004:N6": {
+   "date": "2026-11-16",
+   "range": "#10–#20 of 20 (all loaded; first live-thread read)",
+   "note": "Late posts (Sprites #10, oVlad #11, cj13609517288 #12, ihategeo_1969 #13, MathLuis #14, popop614 #15, lunasgraph_d #16, zhoujef000 #17, ezpotd #18, pointblue #20) pair x with n−x and with its inverse so P_n ≡ (−1)^{k/2}, k = number of square roots of 1 mod n, counted by CRT; corroborates existing tags."
+  },
+  "isl:2004:N7": {
+   "date": "2026-11-16",
+   "range": "#5–#14 of 14 (all loaded; first live-thread read)",
+   "note": "Posts (james digol #5 official, Zhero #6, math154 #7, Muriatic #8, Mathotsav #9, Idio-logy #11, megarnie #12, HamstPan38825 #13, BS2012 #14) use p-adic valuations of coordinate differences and a pigeonhole/graph argument on 7 points; corroborates existing tags."
   }
  }
 }

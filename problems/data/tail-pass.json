@@ -2864,6 +2864,33 @@
    "date": "2026-11-16",
    "range": "#7–#16 of 16 (all loaded; first live-thread read); analytic scan #1–#16",
    "note": "Late posts (juckter #9, jj_ca888 #10, v_Enhance #11, guptaamitu1 #12, asdf334 #13 sketch, Leo.Euler #14, Ilikeminecraft #15, YaoAOPS #16) use parallel tangent lines, arc midpoints and homotheties; corroborates existing tags. Analytic scan: YaoAOPS #16 uses normalised barycentrics only for the final ratio sum p+q+r=1 inside a homothety argument; analytic route stays pending."
+  },
+  "rmm:2015:4": {
+   "date": "2026-11-16",
+   "range": "#24–#33 of 33 (all loaded; first live-thread read); analytic scan #1–#33",
+   "note": "Late posts (IAmTheHazard #24, john0512 #25 angle chase with θ, AshAuktober #26 sketch, khanhnx #27, lelouchvigeo #29 hint, YaoAOPS #30, sks987 #31, Monk27 #32, med18ali #33) show J_bJ_c ⊥ AD by tangent-length chasing and finish by angle chasing; corroborates existing tags. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "rmm:2013:4": {
+   "date": "2026-11-16",
+   "range": "#1–#6 of 6 (whole thread; first live-thread read); analytic scan #1–#6",
+   "note": "Posts (dinoboy #2, JuanOrtiz #3, rkm0959 #4 square construction up to 2−ε, IAmTheHazard #5, YaoAOPS #6 picture) answer yes with an explicit square-based construction; corroborates existing tags. Analytic scan: no analytic proof; analytic route stays pending."
+  },
+  "rmm:2012:6": {
+   "date": "2026-11-16",
+   "range": "#45–#54 of 54 (all loaded; first live-thread read); analytic scan #1–#54",
+   "note": "Late posts (cursed_tangent1434 #45 via ISL 2002 G7, ihategeo_1969 #46, Ilikeminecraft #47, math_holmes15 #48, Aiden-1089 #49, Scilyse #50, YaoAOPS #52, PSS1234 #53 point circle) corroborate existing tags; Ilovegeom1 #51 is a barycentric bash. Analytic scan: Thelink_20 #54 (read in full) is a complete complex-number proof with the incircle as unit circle: ω_A = Γ + λ_A(z/d + d·z̄ − 2) with λ_A fixed by the double-root tangency condition, AA' is the radical axis of ω_B and ω_C, and intersecting it with OI (s2·z − s1s3·z̄ = 0) gives z = 4s1s3/(s1s2+3s3), symmetric in d, e, f. Numerically verified (d, e, f at angles 0.3, 2.4, 4.4): this point lies on all three radical axes and on OI. Recorded as the analytic route.",
+   "addTags": [
+    "ana:G: Complex numbers"
+   ],
+   "cite": "#54 (Thelink_20) complete complex-number proof",
+   "ana_explanation": "A complex-number route (forum, Thelink_20): with the incircle as the unit circle and contact points d, e, f, every circle through B and C is Γ(z) + λ(z/d + d·z̄ − 2) = 0, and tangency to the incircle fixes λ_A by a double-root condition; AA' is the radical axis of ω_B and ω_C, and intersecting it with OI (s2·z = s1s3·z̄) gives the point 4s1s3/(s1s2 + 3s3), which is symmetric in d, e, f, so all three lines pass through it.",
+   "ana_refs": "https://artofproblemsolving.com/community/c6h467561p2617981 | #54 Thelink_20 complete complex proof (numerically checked) ; #51 Ilovegeom1 barycentric bash",
+   "ana_status": "Reviewed"
+  },
+  "rmm:2009:3": {
+   "date": "2026-11-16",
+   "range": "#13–#22 of 22 (all loaded; first live-thread read); analytic scan #1–#22",
+   "note": "Late posts (JuanOrtiz #13, TelvCohl #14 isogonal conjugates, anantmudgal09 #15 isodynamic point + Sondat + distance Ceva with an unexplained sine product, ABCDE #16 and WizardMath #17 Apollonius circles, 62861 #18, Mindstormer #20, DottedCaculator #21 √(bc) inversion with a skipped 'quick complex bash', YaoAOPS #22) corroborate existing tags. Analytic scan: #15 and #21 are sketches whose analytic steps are asserted, not carried out; analytic route stays pending."
   }
  }
 }

@@ -70,6 +70,8 @@ def export(imo, rmm, output):
                  '2016 N8 has a literal-versus-intended-statement caveat, retained in its research notes.',
                  'Main RMM problem numbers are preserved; A/C/N/G subjects are descriptive mappings. RMM shortlists are not included.'])
     # Re-apply the AoPS tail-pass ledger so later-thread findings survive re-exports.
+    # refresh_site.sh runs this with `python -I`, which leaves the script's own folder off sys.path.
+    import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
     from tail_pass import apply as apply_tail_pass, DEFAULT_LEDGER
     if DEFAULT_LEDGER.exists():
         print(f'Tail-pass ledger applied to {apply_tail_pass(data, json.loads(DEFAULT_LEDGER.read_text()))} rows')

@@ -1,6 +1,7 @@
 /* Home page styles. Colour tokens and header match problems/catalogue.css. */
 :root{color-scheme:light;--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d8dee4;--soft:#f6f8fa;--accent:#0b5cad;--mark:#fff3bf}
-@media(prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#16181b;--fg:#e6e8ea;--muted:#9aa3ad;--line:#353b42;--soft:#1f2327;--accent:#6cb2ff;--mark:#4a3f12}}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#16181b;--fg:#e6e8ea;--muted:#9aa3ad;--line:#353b42;--soft:#1f2327;--accent:#6cb2ff;--mark:#4a3f12}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#16181b;--fg:#e6e8ea;--muted:#9aa3ad;--line:#353b42;--soft:#1f2327;--accent:#6cb2ff;--mark:#4a3f12}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:var(--accent)}

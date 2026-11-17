@@ -2,6 +2,10 @@
 
 > **Blog disabled (Nov 2026).** The site root now redirects to `/problems/`. The blog page is kept as an HTML comment inside `index.html` and `404.html` (restore steps are at the top of that comment); `app.js`, `style.css`, `firebase-config.js` and `firestore.rules` are unchanged but not loaded. The blog documentation below describes the disabled blog.
 
+## Light and dark mode
+
+Every page loads `theme.js` in `<head>`: a small hanging lamp at the top right of the header switches themes (lamp on = light, off = dark). The choice is saved in `localStorage` (`raindrops-theme`) and applied before the first paint; until the reader chooses, pages follow the system setting. Stylesheets key their dark colours on `<html data-theme>` as well as `prefers-color-scheme`.
+
 ## Olympiad problem catalogue
 
 The searchable classification catalogue lives at [`/problems/`](https://yakkre.github.io/problems/), with IMO Shortlist and RMM entries, the exact60 method tags, AND/OR filtering, original classification summaries, proof/source caveats and official/AoPS links. See [`problems/README.md`](problems/README.md) for refresh and verification instructions.

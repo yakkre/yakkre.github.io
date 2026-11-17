@@ -2681,6 +2681,71 @@
    "date": "2026-11-16",
    "range": "official solutions (IMO Compendium text)",
    "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 uses the incenter–arc-midpoint lemma and similarity; analytic route stays pending."
+  },
+  "isl:1997:P7": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 7 is the Ptolemy-inequality argument; analytic route stays pending."
+  },
+  "isl:1997:P9": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is synthetic (arc midpoints, coaxial circles); analytic route stays pending."
+  },
+  "isl:1997:P20": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 20 is a Simson-line argument with oriented angles; analytic route stays pending."
+  },
+  "isl:1997:P25": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 25 is synthetic (second intersection with the circumcircle); analytic route stays pending."
+  },
+  "isl:1996:G5": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a side-length/law-of-sines estimate matching the existing synthetic route; analytic route stays pending."
+  },
+  "isl:1993:MAK1": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument; analytic route stays pending."
+  },
+  "isl:1993:UNK1": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route; analytic route stays pending."
+  },
+  "isl:1995:G5": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 11 is the kite-reflection argument; analytic route stays pending."
+  },
+  "isl:1995:G7": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 13 is the similarity/homothety area argument; analytic route stays pending."
+  },
+  "isl:1994:G3": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument; analytic route stays pending."
+  },
+  "isl:1995:G4": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 10 uses sine-rule length equalities inside an angle chase (second solution: orthocentre distances 2R·sinθ); treated as synthetic, not adopted; analytic route stays pending."
+  },
+  "isl:1990:9": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law; analytic route stays pending."
+  },
+  "isl:1993:ISA1": {
+   "date": "2026-11-16",
+   "range": "official solutions (IMO Compendium text)",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted; analytic route stays pending."
   }
  }
 }

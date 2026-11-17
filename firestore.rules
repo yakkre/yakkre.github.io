@@ -97,6 +97,22 @@ service cloud.firestore {
         && request.resource.data.updatedAt == request.time;
     }
 
+    // Floating notebook on /problems/: one document per tab, readable and writable only by its owner.
+    // Limits match problems/notebook-core.mjs (MAX_TITLE 60, MAX_TEXT 50000).
+    match /progress/{userId}/notebook/{tabId} {
+      allow get, list, delete: if signedIn() && request.auth.uid == userId;
+      allow create, update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly(["title", "text", "order", "updatedAt"])
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 60
+        && request.resource.data.text is string
+        && request.resource.data.text.size() <= 50000
+        && request.resource.data.order is number
+        && request.resource.data.updatedAt == request.time;
+    }
+
     // Public problem collections: a read-only copy of a reader's collection that anyone with the link can view.
     // Not listable; only the signed-in owner can create, change or delete it.
     function validShared(d) {

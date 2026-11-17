@@ -2,11 +2,13 @@
 // A collection can be made public (signed-in owners only): a read-only copy is kept at
 // sharedCollections/{id} that anyone with the link can view; private collections exist only here.
 // Private notes per problem live in their own documents at progress/{uid}/notes/{problemKey}.
+// The floating notebook's tabs live at progress/{uid}/notebook/{tabId} ({title, text, order, updatedAt}).
 // Signed out: kept in this browser (localStorage).
 // Signed in by emailed link (Firebase passwordless auth): kept in Firestore at progress/{uid},
 // so it follows the reader to any device. Local data is merged into the account on sign-in.
 // Firebase loads lazily; if it is unavailable the catalogue still works with local data only.
 import {firebaseConfig} from '../firebase-config.js';
+import {cleanTabs, tabsToMigrate, readLocalTabs, writeLocalTabs, clearLocalTabs, MAX_TEXT, MAX_TITLE} from './notebook-core.mjs?v=20261117-notebook';
 
 const SDK = 'https://www.gstatic.com/firebasejs/10.12.5/';
 const LOCAL_KEY = 'raindrops-done-v1';
@@ -47,6 +49,7 @@ const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2
 export function createProgress({startHref, validKeys, onChange}) {
   let done = readLocal(), collections = readLocalCollections(), user = null, status = '', fb = null, unsubscribe = null;
   let remoteHasCollections = false, notes = readLocalNotes(), unsubNotes = null;
+  let tabs = readLocalTabs(), unsubTabs = null;
   const keep = k => !validKeys || validKeys.has(k);
   const emit = () => onChange?.();
   const setStatus = text => { status = text; emit(); };
@@ -63,6 +66,10 @@ export function createProgress({startHref, validKeys, onChange}) {
   const sharedRef = id => fb.doc(fb.db, 'sharedCollections', id);
   const notesCol = () => fb.collection(fb.db, 'progress', user.uid, 'notes');
   const noteRef = key => fb.doc(fb.db, 'progress', user.uid, 'notes', key);
+  const tabsCol = () => fb.collection(fb.db, 'progress', user.uid, 'notebook');
+  const tabRef = id => fb.doc(fb.db, 'progress', user.uid, 'notebook', id);
+  const tabData = t => ({title: t.title, text: t.text, order: t.order, updatedAt: fb.serverTimestamp()});
+  const fromSnap = s => cleanTabs(s.docs.map(d => ({id: d.id, ...d.data(), updated: d.data().updatedAt?.toMillis?.() || 0})));
   // Push a public collection's current contents to its shared copy.
   const publish = c => fb.setDoc(sharedRef(c.id), {ownerUid: user.uid, name: c.name, description: c.description, keys: c.keys, updatedAt: fb.serverTimestamp()});
   async function syncShared(id) {
@@ -103,9 +110,20 @@ export function createProgress({startHref, validKeys, onChange}) {
       notes = new Map(s.docs.map(d => [d.id, String(d.data().text || '')])); emit();
     }, e => { console.error('Notes sync failed:', e); setStatus('Couldn’t sync your notes.'); });
   }
+  async function attachNotebook() {
+    const remote = fromSnap(await fb.getDocs(tabsCol()));
+    const extra = tabsToMigrate(remote, readLocalTabs());
+    for (const t of extra) await fb.setDoc(tabRef(t.id), tabData(t));
+    clearLocalTabs();
+    tabs = cleanTabs([...remote, ...extra]);
+    unsubTabs = fb.onSnapshot(tabsCol(), s => {
+      if (s.metadata.hasPendingWrites) return;
+      tabs = fromSnap(s); emit();
+    }, e => { console.error('Notebook sync failed:', e); setStatus('Couldn’t sync your notebook.'); });
+  }
   async function attach(u) {
-    unsubscribe?.(); unsubscribe = null; unsubNotes?.(); unsubNotes = null; user = u;
-    if (!u) { done = readLocal(); collections = readLocalCollections(); notes = readLocalNotes(); emit(); return; }
+    unsubscribe?.(); unsubscribe = null; unsubNotes?.(); unsubNotes = null; unsubTabs?.(); unsubTabs = null; user = u;
+    if (!u) { done = readLocal(); collections = readLocalCollections(); notes = readLocalNotes(); tabs = readLocalTabs(); emit(); return; }
     status = '';
     const snap = await fb.getDoc(docRef());
     takeRemote(snap.exists() ? snap.data() : {});
@@ -120,6 +138,7 @@ export function createProgress({startHref, validKeys, onChange}) {
       e => { console.error('Progress sync failed:', e); setStatus('Couldn’t sync your marks. Check your connection.'); });
     emit();
     try { await attachNotes(); } catch (e) { console.error('Notes load failed:', e); setStatus('Couldn’t load your notes.'); }
+    try { await attachNotebook(); } catch (e) { console.error('Notebook load failed:', e); setStatus('Couldn’t load your notebook.'); }
     emit();
   }
 
@@ -164,6 +183,28 @@ export function createProgress({startHref, validKeys, onChange}) {
         console.error(e); if (before == null) notes.delete(key); else notes.set(key, before);
         return false;
       }
+    },
+    // Notebook tabs [{id, title, text, order, updated}] in display order. Saves return true when stored.
+    notebookTabs: () => tabs.map(t => ({...t})),
+    async saveTabs(changed) {
+      const list = cleanTabs(changed.map(t => ({...t, title: String(t.title ?? '').slice(0, MAX_TITLE), text: String(t.text ?? '').slice(0, MAX_TEXT), updated: Date.now()})));
+      const before = tabs;
+      const byId = new Map(tabs.map(t => [t.id, t]));
+      for (const t of list) byId.set(t.id, t);
+      tabs = cleanTabs([...byId.values()]);
+      try {
+        if (!user) return writeLocalTabs(tabs);
+        await Promise.all(list.map(t => fb.setDoc(tabRef(t.id), tabData(t))));
+        return true;
+      } catch (e) { console.error(e); tabs = before; return false; }
+    },
+    async deleteTab(id) {
+      const before = tabs;
+      tabs = tabs.filter(t => t.id !== id);
+      try {
+        if (!user) return writeLocalTabs(tabs);
+        await fb.deleteDoc(tabRef(id)); return true;
+      } catch (e) { console.error(e); tabs = before; return false; }
     },
     toggle: key => change(() => { if (done.has(key)) done.delete(key); else if (done.size < MAX_MARKS) done.add(key); }),
     setDoneMany: (keys, on) => change(() => { for (const k of keys) { if (!on) done.delete(k); else if (done.size < MAX_MARKS) done.add(k); } }),
@@ -263,7 +304,7 @@ export function createProgress({startHref, validKeys, onChange}) {
     },
     async signOut() {
       if (!fb || !user) return;
-      unsubscribe?.(); unsubscribe = null; unsubNotes?.(); unsubNotes = null;
+      unsubscribe?.(); unsubscribe = null; unsubNotes?.(); unsubNotes = null; unsubTabs?.(); unsubTabs = null;
       await fb.signOut(fb.auth); status = ''; emit();
     },
     init,

@@ -385,6 +385,7 @@ function openProblem(p) {
 }
 
 // ---- "+ Collection" menu on a problem
+let notebook = null;
 let menuProblem = null, menuDraft = '', menuActions = false;
 // actions: also offer "mark done" and "open problem" (used by the progress grid).
 function openCollectMenu(p, anchor, actions = false) {
@@ -760,8 +761,8 @@ function setupProblemView() {
 
 async function setupProgress() {
   try {
-    const {createProgress} = await import('./progress.mjs?v=20261110-colldone');
-    progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); render(); }});
+    const {createProgress} = await import('./progress.mjs?v=20261117-notebook');
+    progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); render(); notebook?.refresh(); }});
     $('signin-form').addEventListener('submit', async e => {
       e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
       if (await progress.sendLink($('signin-email').value)) $('signin-email').value = '';
@@ -819,6 +820,11 @@ async function start() {
       if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();
     }));
     await setupProgress();
+    try {
+      const {createNotebook} = await import('./notebook.mjs?v=20261117-book');
+      const keys = new Set(data.problems.map(p => p.key)), byKey = new Map(data.problems.map(p => [p.key, p]));
+      notebook = createNotebook({store: progress, has: k => keys.has(k), hrefFor: k => entryUrl(byKey.get(k)), open: k => openProblem(byKey.get(k))});
+    } catch (error) { console.error('Notebook unavailable:', error); }
     window.addEventListener('popstate', () => { filters = readFilters(); readView(); page = 1; syncControls(); render(); });
     render();
   } catch (error) {

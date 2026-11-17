@@ -29,7 +29,7 @@ See also: Drive doc "Forum-check guidance — read the END of AoPS threads (2026
 
 ## 2. Personal notebook tab ("quick reference notes")
 
-Status: not started.
+Status: done 2026-11-17 as a floating notebook (book button → movable, resizable panel; tabs on the left; Edit/View modes; problem-name links; Firestore sync at `progress/{uid}/notebook/{tabId}`). The user chose a floating panel instead of a fourth view tab, so the `?view=notebook` URL below was not built. The original brief is kept for reference.
 
 A fourth view tab on `/problems/`, next to Problem lookup / Progress grid / Collections, holding free-form notes that are not tied to one problem: a main idea from a problem worth remembering, a small observation, a trick. Like a mini document with its own tabs.
 

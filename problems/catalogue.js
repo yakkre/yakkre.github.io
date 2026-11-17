@@ -821,7 +821,7 @@ async function start() {
     }));
     await setupProgress();
     try {
-      const {createNotebook} = await import('./notebook.mjs?v=20261117-book');
+      const {createNotebook} = await import('./notebook.mjs?v=20261117-slider');
       const keys = new Set(data.problems.map(p => p.key)), byKey = new Map(data.problems.map(p => [p.key, p]));
       notebook = createNotebook({store: progress, has: k => keys.has(k), hrefFor: k => entryUrl(byKey.get(k)), open: k => openProblem(byKey.get(k))});
     } catch (error) { console.error('Notebook unavailable:', error); }

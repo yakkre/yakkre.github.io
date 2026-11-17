@@ -2184,6 +2184,171 @@
    ],
    "explanationAppend": "A late forum proof uses ν_p(n!)=(n−s_p(n))/(p−1): sums of widely spaced powers of p1⋯pk have additive base-p digit sums, and pigeonhole on the resulting valuation vectors mod d gives the required n.",
    "cite": "#8 (yayups) complete digit-sum proof"
+  },
+  "isl:2006:A1": {
+   "date": "2026-11-16",
+   "range": "#57–#69 of 69 (all loaded; first live-thread read)",
+   "note": "Late posts (ezpotd #57, ihatemath123 #58, Maximilian113 #59, study1126 #60, Marcus_Zhang #63, lpieleanu #64, Assassino9931 #65, Ilikeminecraft #67, sks987 #69) treat a_0 ≥ 0 (eventually 0) and a_0 < 0 (floor decreases until periodic) cases; corroborates existing tags."
+  },
+  "isl:2006:A2": {
+   "date": "2026-11-16",
+   "range": "#40–#50 of 50 (all loaded; first live-thread read)",
+   "note": "Late posts are mostly strong inductions (Assassino9931 #40, chenghaohu #41, endless_abyss #42, lian_the_noob12 #45, InftyByond #46, Lunatic_Lunar7986 #47, sks987 #48, zhoujef000 #50). dgrozev #43 completes the generating-function approach of randomusername #8: f(x)=Σa_jx^j = x/ln(1−x), giving a_n = ∫₀¹ t(1−t)⋯(n−1−t)/n! dt > 0. Added Generating functions.",
+   "addTags": [
+    "A: Generating functions"
+   ],
+   "explanationAppend": "A forum alternative identifies Σa_nx^n with x/ln(1−x) and extracts a_n=∫₀¹ t(1−t)⋯(n−1−t)/n! dt, which is visibly positive.",
+   "cite": "#8 (randomusername) and #43 (dgrozev) generating-function proofs"
+  },
+  "isl:2006:A3": {
+   "date": "2026-11-16",
+   "range": "#3–#12 of 12 (whole thread; first live-thread read)",
+   "note": "Posts (zgorkster #5, Samusasuke #6–#7 on the statement's correctness, ACGNmath #8, SnowPanda #9, bluelinfish #10, popop614 #11, asdf334 #12) use the golden-ratio conjugate (1−φ)^n = c_{n+2}−c_{n+1}φ to control the pseudo-Fibonacci sequence; corroborates existing tags."
+  },
+  "isl:2006:A4": {
+   "date": "2026-11-16",
+   "range": "#14–#23 of 23 (all loaded; first live-thread read)",
+   "note": "Late posts (arqady #15 correcting Modesti #14, JAnatolGT_00 #17, awesomeming327. #18, huashiliao2020 #19, onyqz #20, OronSH #21, sks987 #22, PROBLEM-SOLVER11 #23) multiply by Σa_i and expand into sums of (a_i−a_j)² terms; corroborates existing tags."
+  },
+  "isl:2006:A5": {
+   "date": "2026-11-16",
+   "range": "#35–#44 of 44 (all loaded; first live-thread read)",
+   "note": "Late posts (YaoAOPS #35, shendrew7 #36, Shreyasharma #37, IAmTheHazard #38, cj13609517288 #40, mudkip42 #41, endless_abyss #42 AM–QM, Royal_mhyasd #43, Assassino9931 #44) substitute x=√b+√c−√a and finish with standard inequalities; corroborates existing tags."
+  },
+  "isl:2006:A6": {
+   "date": "2026-11-16",
+   "range": "#48–#57 of 57 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (jeteagle #50, megarnie #51, ZETA_in_olympiad #52, sqing #53, AdventuringHobbit #54, awesomeming327. #55, HormigaCebolla #56 shifting, NerdyGarde #57) factor (a−b)(b−c)(c−a)(a+b+c) and optimise with AM–GM in the shifted variables to get 9√2/32; corroborates existing tags."
+  },
+  "isl:2006:C1": {
+   "date": "2026-11-16",
+   "range": "#54–#63 of 63 (all loaded; first live-thread read)",
+   "note": "Late posts (Yiyj1 #54, hung9A #55, AR17296174 #56, oooahin #57, Alex-131 #58, lpieleanu #59, martianrunner #60, Cool12345678 #61, godchunguus #62 binary encoding, orangutan1434 #63) induct on n=2^k and use the XOR/period structure for n=2^k+1; corroborates existing tags."
+  },
+  "isl:2006:C2": {
+   "date": "2026-11-16",
+   "range": "#34–#45 of 45 (all loaded)",
+   "note": "Late posts (ETS1331 #34, asdf334 #35, SHZhang #36, Leo.Euler #38, alba_tross1867 #39, Maximilian113 #40, ezpotd #42, heheman #43, hung9A #44, pl246631 #45) map each isosceles triangle with two odd sides to boundary arcs and get 1003; corroborates existing tags."
+  },
+  "isl:2006:C3": {
+   "date": "2026-11-16",
+   "range": "#35–#44 of 44 (all loaded; first live-thread read)",
+   "note": "Most late posts give the probabilistic proof (Saucepan_man02 #35, Martin2001 #38, BS2012 #40, UberPiggy #41, Cool12345678 #42, reyaansh_agrawal #44): choose each point independently with probability x; P is the convex hull of the chosen set with probability x^{a(P)}(1−x)^{b(P)} (interior points free), and exactly one hull occurs, so the sum is 1 (polynomial identity extends from 0<x<1). Added Probability and expected value. hung9A #39 and pl246631 #43 give non-probabilistic inductions.",
+   "addTags": [
+    "C: Probability and expected value"
+   ],
+   "explanationAppend": "A late forum proof reads each term as the probability that P is the convex hull of a random subset (each point chosen with probability x), so the sum over all P is 1.",
+   "cite": "#40 (BS2012) and #38 (Martin2001) complete probabilistic proofs"
+  },
+  "isl:2006:C4": {
+   "date": "2026-11-16",
+   "range": "#13–#23 of 23 (all loaded; first live-thread read)",
+   "note": "Late posts (ABCDE #13, Kayak #14, william122 #15, mathaddiction #17, IAmTheHazard #18, Ru83n05 #19, awesomeming327. #20 bijection with permutations, shanelin-sigma #21, atdaotlohbh #22 switching, ihatemath123 #23 strengthening) corroborate existing tags."
+  },
+  "isl:2006:C5": {
+   "date": "2026-11-16",
+   "range": "#11–#20 of 20 (all loaded; first live-thread read)",
+   "note": "Late posts (rocketscience #11, yayups #12, SnowPanda #13, L567 #14, awesomeming327. #15, N3bula #16, BS2012 #17, YaoAOPS #18, Martin2001 #19) show k ≤ 2^{ν2(n)}−1 by the graph-of-rounds argument and build the tournament from F_2^m; corroborates existing graph/construction/algebraic tags."
+  },
+  "isl:2006:C6": {
+   "date": "2026-11-16",
+   "range": "#8–#17 of 17 (all loaded; first live-thread read)",
+   "note": "IAmTheHazard #11 gives a complete Hall's-theorem proof: match down-triangles to non-hole up-triangles; every connected set D of down-triangles has at least |D|+f(D) adjacent up-triangles (f = side of its bounding triangle), so the hole condition gives Hall's condition, and the converse is immediate. v_Enhance #9 and Cindy.tw #8 outline the same matching; awesomeming327. #13, TwentyIQ #14, V0305 #16, D4N13LCarpenter #17 also complete; BS2012 #15 self-described as not rigorous. Added Matchings and assignments.",
+   "addTags": [
+    "C: Matchings and assignments"
+   ],
+   "explanationAppend": "A forum proof models diamonds as a perfect matching between down-triangles and non-hole up-triangles and verifies Hall's condition, since any connected set of down-triangles touches at least as many up-triangles as its size plus the side of its bounding triangle.",
+   "cite": "#11 (IAmTheHazard) complete Hall's-theorem proof"
+  },
+  "isl:2006:C7": {
+   "date": "2026-11-16",
+   "range": "#1–#7 of 7 (whole thread; first live-thread read)",
+   "note": "Posts (iura #2, Fedor Petrov #3 Euler-characteristic count, alkjash #4, theflowerking #5, william122 #6 answer V−1, mathcool2009 #7) use projections/Euler's formula on the polyhedron graph; corroborates existing tags."
+  },
+  "isl:2006:G1": {
+   "date": "2026-11-16",
+   "range": "#158–#167 of 167 (all loaded); analytic scan #1–#167",
+   "note": "Late posts (maromex #158, Arcticturn #159, Eka01 #160, AlastorMoody #161, m735821 #162, cyroah1331 #163, Assassino9931 #165, pl246631 #166, RadiantMeteor #167) show BPIC is cyclic with centre the arc midpoint M and conclude by AP ≥ AM−MP = AI; corroborates existing tags. Analytic scan: only Donaphew #19 computes AP, AI with cosines as part of a synthetic argument; analytic route stays pending."
+  },
+  "isl:2006:G2": {
+   "date": "2026-11-16",
+   "range": "#84–#93 of 93 (all loaded); analytic scan #1–#93",
+   "note": "Late posts (lpieleanu #84, Kempu33334 #85, b1zmark #86, gold_duck #87 and cyroah1331 #89 and Sxmplicity #93 homothety at AD∩BC, lian_the_noob12 #88, NicoN9 #90, imo2026 #91, mael_AMO #92) corroborate homothety/power/angle tags. Analytic scan: no analytic proof in the thread; analytic route stays pending."
+  },
+  "isl:2006:G3": {
+   "date": "2026-11-16",
+   "range": "#106–#115 of 115 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (wangyanchuanjude #106, RC34649332927 #107, ray66 #108 spiral similarity at A, Math1lover #109, Yassine-Driouche #110, Sxmplicity #111, Assassino9931 #112, Karaoglan #113, alupigus #114 isogonal lines, Umidizibabomen #115) use ABCD~ACDE and power of a point to show AP bisects CD; corroborates existing tags."
+  },
+  "isl:2006:G4": {
+   "date": "2026-11-16",
+   "range": "#72–#83 of 83 (all loaded)",
+   "note": "Late posts (ezpotd #72 projections, borovtori #73, Bonime #74, lian_the_noob12 #77, Buh_-1235 #81, PeteZahut068 #82, alupigus #83) corroborate homothety/metric/ratio tags; siamchung_degree #78–#79 barycentric matches the analytic primary."
+  },
+  "isl:2006:G5": {
+   "date": "2026-11-16",
+   "range": "#20–#29 of 29 (all loaded)",
+   "note": "Late posts (tree_3 #20, v4913 #21, HamstPan38825 #22, awesomeming327. #23, huashiliao2020 #24, john0512 #25 external bisector, DensSv #26, Zhandaulet #27 power JC1²=JE·JD, Jakamousepro #29 CA=CB) corroborate power/polar/angle tags; ezpotd #28 complex bash matches the analytic primary."
+  },
+  "isl:2006:G6": {
+   "date": "2026-11-16",
+   "range": "#53–#62 of 62 (all loaded)",
+   "note": "Late posts (cursed_tangent1434 #53, YaoAOPS #54 arc midpoints, Markas #55, b1zmark #56 homothety at F, zuat.e #57, ezpotd #59, Cool12345678 #60 Pappus/Monge, SleepyGirraffe #61, alupigus #62) corroborate homothety/polar/projective tags; mr_bedrockman #58 barycentric matches the analytic primary."
+  },
+  "isl:2006:G7": {
+   "date": "2026-11-16",
+   "range": "#7–#16 of 16 (all loaded)",
+   "note": "Late posts (math154 #7, skytin #8, sergei93 #9, sayantanchakraborty #10, Wizard_32 #11, CyclicISLscelesTrapezoid #12, cocohearts #13, john0512 #14, awesomeming327. #15, ezpotd #16) use the homothety between the tangent triangle and ABC through the incentre; corroborates existing tags."
+  },
+  "isl:2006:G8": {
+   "date": "2026-11-16",
+   "range": "#1–#7 of 7 (whole thread); analytic scan #1–#7",
+   "note": "Posts (Little Gauss #2 second intersection Q, Zhero #4 vector midpoint lemma 2MN ≤ WX+YZ, alkjash #5, awesomeming327. #7) combine the midpoint-segment inequality with a cyclic-quadrilateral construction; corroborates existing tags. Analytic scan: vectors/complex numbers appear only in the midpoint lemma (triangle inequality); analytic route stays pending."
+  },
+  "isl:2006:G9": {
+   "date": "2026-11-16",
+   "range": "#52–#61 of 61 (all loaded)",
+   "note": "Late posts (Ilikeminecraft #52, Kempu33334 #53, cubres #54, YaoAOPS #55, Royal_mhyasd #58, alupigus #59, otwaenng #60) use the Miquel points as spiral centres to get the similarity; ezpotd #56, mudkip42 #57, Baimukh #61 complex routes match the analytic primary. Corroborates existing tags."
+  },
+  "isl:2006:G10": {
+   "date": "2026-11-16",
+   "range": "#39–#51 of 51 (all loaded); analytic scan #1–#51",
+   "note": "Late posts (Bugi #41 Russian solution, larkl #42 and neergard #43 Fedja-style area argument, v_Enhance #48, yayups #49, chirita.andrei #50 induction) corroborate area/combinatorial tags. numbersandnumbers #51 (13 thanks) gives an analytic-style proof by smooth approximation and a complex/Fourier parametrisation of the boundary; it is noted here but, being a real-analysis argument rather than a coordinate-geometry route, it is not recorded as the analytic route, which stays pending."
+  },
+  "isl:2006:N1": {
+   "date": "2026-11-16",
+   "range": "#104–#113 of 113 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Namura #104, heheman #105, ray66 #106, math-olympiad-clown #107, fearsum_fyz #108, zuat.e #109, Nonecludiangeofan #111, orangutan1434 #112, Nemo99999 #113) factor 2^x(2^{x+1}+1)=(y−1)(y+1), use ν2 to write y=2^{x−1}k±1 and bound k; corroborates existing tags."
+  },
+  "isl:2006:N2": {
+   "date": "2026-11-16",
+   "range": "#58–#67 of 67 (all loaded; first live-thread read)",
+   "note": "Late posts (TestX01 #58, hellohi321 #59, DensSv #60, zhoujef000 #61, Royal_mhyasd #62, zuat.e #63, InftyByond #64, orangutan1434 #65, martianrunner #66) use eventual periodicity of decimal digits and periodicity of 10^k mod the period to show y's digits are eventually periodic; corroborates existing tags."
+  },
+  "isl:2006:N3": {
+   "date": "2026-11-16",
+   "range": "#53–#62 of 62 (all loaded; first live-thread read)",
+   "note": "Late posts (mananaban #55, BS2012 #57, ioannism45 #58, zuat.e #59, Beromatrix #60, ray66 #61) swap the order of summation to get average divisor counts Σ⌊n/i⌋/n and compare n=2^k−1 with 2^k; Assassino9931 #62 notes OEIS A359028. Corroborates existing tags."
+  },
+  "isl:2006:N4": {
+   "date": "2026-11-16",
+   "range": "#76–#85 of 85 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (quantam13 #76, Ilikeminecraft #77, cubres #78, shendrew7 #79, ezpotd #80, zuat.e #81, PSS1234 #82, blueprimes #85) show every periodic point of an integer polynomial has period ≤2 by the a−b | P(a)−P(b) chain, then count roots; corroborates existing tags."
+  },
+  "isl:2006:N5": {
+   "date": "2026-11-16",
+   "range": "#88–#98 of 98 (all loaded; first live-thread read); middle skimmed by thanks",
+   "note": "Late posts (eg4334 #88, anudeep #90, numbertheory97 #91, oooahin #92, Kempu33334 #93, Royal_mhyasd #94, zuat.e #95, littlefox_amc #96) use that primes dividing Φ_7(x) are 7 or ≡1 mod 7, then y−1 and y⁴+…+1 force a contradiction mod 7; corroborates existing tags."
+  },
+  "isl:2006:N6": {
+   "date": "2026-11-16",
+   "range": "#1–#3 of 3 (whole thread; first live-thread read)",
+   "note": "Only shunka #2 (original version remark) and Hamper.r #3 (long solution) follow the statement; corroborates existing tags."
+  },
+  "isl:2006:N7": {
+   "date": "2026-11-16",
+   "range": "#53–#62 of 62 (all loaded; first live-thread read)",
+   "note": "Late posts (PNT #53, thdnder #54, megarnie #55 stronger statement, Ritwin #56, Assassino9931 #58 generalised CRT, SimplisticFormulas #59, HamstPan38825 #60 strong induction on the largest prime, zuat.e #61, IMOasspirant #62) induct on n using ord_n(2) and generalised CRT; corroborates existing tags."
   }
  }
 }

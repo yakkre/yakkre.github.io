@@ -3201,6 +3201,46 @@
    "date": "2026-11-16",
    "range": "#16–#26 of 26 (all loaded; thread https://artofproblemsolving.com/community/c6h1480693p8639259 via the AoPS 2016 ISL collection)",
    "note": "Late posts (IndoMathXdZ #16, jj_ca888 #18, Kei0923 #19, MathLuis #20 with rama1728 #21, CANBANKAN #22, awesomeming327. #23, NerdyNashville #24, uneamedechue #25 Titu/telescoping, m735821 #26) get a = 4/9 via differences d_i = C(i+2,2) and a telescoping Cauchy–Schwarz bound; corroborates existing tags."
+  },
+  "isl:2016:C1": {
+   "date": "2026-11-16",
+   "range": "#88–#97 of 97 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1480687p8639246 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (oooahin #88, Ashwath2011 #89, theodosiul #90, Yiyj1 #91, InftyByond #92, tungtungtungsahur #93, Just1 #94, DensSv #95, mudkip42 #96, SirAppel #97) count digit majorities over the C(n,k) flipped strings: one guess if n ≠ 2k, two if n = 2k (complement symmetry); corroborates existing tags."
+  },
+  "isl:2016:C2": {
+   "date": "2026-11-16",
+   "range": "#51–#60 of 60 (all loaded; thread https://artofproblemsolving.com/community/c6h1480692p8639256 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (Likeminded2017 #51, ray66 #53, cursed_tangent1434 #54, isache #55, lpieleanu #56, lovematch13 #57, MR.1 #58, Adit-Reddy #59, fruitmonster97 #60) compare the row sum σ(n)/h with the largest divisor n in a column to force n = 1; corroborates existing tags."
+  },
+  "isl:2016:C3": {
+   "date": "2026-11-16",
+   "range": "#50–#59 of 59 (all loaded; thread https://artofproblemsolving.com/community/c6h1480694p8639260 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (lightsynth123 #50, Likeminded2017 #51 parity, mananaban #52, UberPiggy #53, Cool12345678 #54, wikjay #55 sketch, lpieleanu #56, m735821 #57, reyaansh_agrawal #58, Adit-Reddy #59) double count isosceles triangles by colour pattern using the odd-n structure; corroborates existing tags."
+  },
+  "isl:2016:C4": {
+   "date": "2026-11-16",
+   "range": "#70–#80 of 80 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1270471p6637677 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (mathwiz_1207 #70, Mathgloggers #71, Kempu33334 #73, lunasgraph_d #74, oooahin #75, Ashwath2011 #76, ray66 #77, isache #78, UberPiggy #79, RadiantMeteor #80) build the 9×9 tile and count I/M/O on 3×3 blocks and diagonals to force 9 | n; corroborates existing tags."
+  },
+  "isl:2016:C5": {
+   "date": "2026-11-16",
+   "range": "#42–#52 of 52 (all loaded; thread https://artofproblemsolving.com/community/c6h1480696p8639265 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (fearsum_fyz #42, zuat.e #43, Kempu33334 #45, AbhiChaitKulk #46, Lunatic_Lunar7986 #47, bayern271 #48, UberPiggy #50, hung9A #51, lightsynth123 #52) give n−3 (odd: no perpendicular diagonals) and n−2 (even) via an inductive bound on diagonal splits; corroborates existing tags."
+  },
+  "isl:2016:C6": {
+   "date": "2026-11-16",
+   "range": "#13–#23 of 23 (all loaded; thread https://artofproblemsolving.com/community/c6h1480703p8639274 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (chirita.andrei #13, gvole #14, CANBANKAN #15 invariant N(u,v), JAnatolGT_00 #16, gghx #18 sketch, YaoAOPS #19, IAmTheHazard #20, asdf334 #21, mathfun07 #22 sketch) use the graph interpretation, connectivity preservation and a pair invariant to find a universal vertex; corroborates existing tags."
+  },
+  "isl:2016:C7": {
+   "date": "2026-11-16",
+   "range": "#78–#87 of 87 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1271000p6642576 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (cursed_tangent1434 #78, Giabach298 #79, lightsynth123 #81, reyaansh_agrawal #82, YaoAOPS #83 slopes, cubres #84, ihategeo_1969 #85, ostriches88 #86) extend segments to a circle, alternate frog directions around it for odd n, and pair endpoints to block even n; corroborates existing tags."
+  },
+  "isl:2016:C8": {
+   "date": "2026-11-16",
+   "range": "#10–#20 of 20 (all loaded; thread https://artofproblemsolving.com/community/c6h1480704p8639279 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (ThE-dArK-lOrD #10, Makaveli #11 official, MarkBcc168 #12 and Idio-logy #13 cycles from two tilings, JAnatolGT_00 #15, CANBANKAN #16, awesomeming327. #17, math_comb01 #18, Giabach298 #19, Akacool #20) give k = 2n by the staircase construction and the alternating-cycle argument; corroborates existing tags."
   }
  }
 }

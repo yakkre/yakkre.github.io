@@ -4376,6 +4376,116 @@
    "date": "2026-11-17",
    "range": "#17–#26 of 26 (all loaded); middle skimmed by thanks",
    "note": "Late posts (Sardor #17, oVlad #18 induction from 129–324, guptaamitu1 #19/#21, p_ben #20 question, math_comb01 #22 Compendium idea and #23 list of exceptions, Autistic_Turk #24, shawancool #25 interval lemma, Swiszcz #26 base-4 for multiples of 25) show all large integers are sums of distinct squares by an inductive interval-extension argument; corroborates existing tags."
+  },
+  "isl:1999:C6": {
+   "date": "2026-11-17",
+   "range": "#8–#17 of 17 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (dgrozev #8 discrete Fourier transform, questioned by PureRun89 #11 and answered in #15, not used for a tag, hyperbolictangent #9 and me9hanics #10, awesomeming327. #12, HamstPan38825 #13 elementary, peppapig_ #14, eg4334 #16 lattice of ax+by, cursed_tangent1434 #17) show s, s+x, s+y, s+x+y would all have distinct colours and derive periodicity contradictions; corroborates existing tags."
+  },
+  "isl:1999:C7": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded; #7 absent)",
+   "note": "Posts (russell paradox #3 and BaBaK Ghalebi #4 generating function Π(1+x^i+x^{2i}), GoldenFrog1618 #5 and suli #6 on Π(1+ω^t+ω^{3t}) ≥ 1 with equality only at p=5, trinhquockhanh #8 in progress, awesomeming327. #9) compare |E(T)| via roots-of-unity filters; corroborates existing tags."
+  },
+  "isl:1999:G5": {
+   "date": "2026-11-17",
+   "range": "#8–#17 of 17 (all loaded)",
+   "note": "Late posts (JuanOrtiz #8, JAnatolGT_00 #9, lrjr24 #10, ike.chen #11, awesomeming327. #12, asdf334 #13, cj13609517288 #14, Aiden-1089 #15, eg4334 #16, ezpotd #17) invert in the incircle, which fixes the orthogonal circles, so A', B', C' are midpoints of the intouch triangle and the radius is half the inradius; corroborates existing tags."
+  },
+  "isl:1999:G6": {
+   "date": "2026-11-17",
+   "range": "#31–#40 of 40 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (segment #31 question, IAmTheHazard #32, asdf334 #33/#34, awesomeming327. #35, ezpotd #36 radii computation, TestX01 #37, blueprimes #38, Mathandski #39 attachment, JKH123 #40) use the radical-axis concurrence of the tangents at M, N with AB, then homothety and power of a point to show CD ∥ AB and the concyclicity; corroborates existing tags."
+  },
+  "isl:1999:N1": {
+   "date": "2026-11-17",
+   "range": "#73–#82 of 82 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Lunatic_Lunar7986 #73, Kempu33334 #74, Royal_mhyasd #75, lpieleanu #76, Tau_6.28 #77, maromex #78, methovermath #79 and MR.1 #80 attachments, Hip1zzzil #81, ostriches88 #82) take the smallest prime q | x, show q=p via orders, then bound ν_p with LTE to get (1,p), (2,2), (3,3); corroborates existing tags."
+  },
+  "isl:1999:N2": {
+   "date": "2026-11-17",
+   "range": "#5–#14 of 14 (all loaded); middle skimmed by thanks",
+   "note": "Posts (viperstrike #5 and awesomeming327. #7 asking for motivation, WL0410 #6, awesomeming327. #8 and pikapika007 #10 and Tau_6.28 #13 identity x/y=((x+y)³+(2x−y)³)/((x+y)³+(2y−x)³), asdf334 #9, abeot #11, ezpotd #12, maromex #14) use the identity on (1/2,2) and scale by cubes; corroborates existing tags."
+  },
+  "isl:1999:N3": {
+   "date": "2026-11-17",
+   "range": "#22–#31 of 31 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (naonaoaz #22 retracted, john0512 #23, HamstPan38825 #24 and Ilikeminecraft #30 a=5^{2n}(+1), AlanLG #25, asdf334 #26 Pell y²=2x²−1, cursed_tangent1434 #27 and OronSH #29 primes ≡ 1 mod 4, cj13609517288 #28, ezpotd #31 Pell d²−5c²=−9) choose a with all prime factors of a(a+1) ≡ 1 mod 4 and solve b²≡−1 by CRT; corroborates existing tags."
+  },
+  "isl:1999:N4": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (Zhero #3, math154 #4, va2010 #5 and Mathematicsislovely #8 and awesomeming327. #9 via Zsigmondy, suli #6, tastymath75025 #7 cyclotomic Φ_{3m}(10)) find infinitely many primes with 3 | ord_p(10) and bound f(k,p) by splitting the period into thirds, maximum 19 at p=7; corroborates existing tags."
+  },
+  "isl:1999:N5": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded)",
+   "note": "Posts (RaleD #3, viperstrike #4, skipiano #5, awesomeming327. #6, megarnie #7, asdf334 #8) remove factors of 2 and 5, then pick k powers of 10 in a common residue class mod n (periodicity) whose sum is divisible by n; corroborates existing tags."
+  },
+  "isl:1999:N6": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded)",
+   "note": "Posts (Rofler #3, Zhero #4, Mathotsav #5 and squareman #6 common difference 11…1, Master_of_Aops #7 and awesomeming327. #8 and cj13609517288 #9 difference 10^n−1) show every multiple of a repunit or of 10^n−1 has digit sum at least about 9n, giving the progression; corroborates existing tags."
+  },
+  "isl:1998:A1": {
+   "date": "2026-11-17",
+   "range": "#38–#47 of 47 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Marcus_Zhang #38, Ilikeminecraft #39, Siddharthmaybe #40, TwentyIQ #41, lpieleanu #42, Kempu33334 #43, chenghaohu #44, AshAuktober #45, godchunguus #46, sks987 #47) add a_{n+1}=1−Σa_i and apply AM–GM to each 1−a_i=Σ_{j≠i}a_j; corroborates existing tags."
+  },
+  "isl:1998:A2": {
+   "date": "2026-11-17",
+   "range": "#38–#47 of 47 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (huashiliao2020 #38 attachment, bobthegod78 #39 smoothing, IAmTheHazard #40 and Maximilian113 #43 and CubeAlgo15 #46 Jensen on 1/(e^x+1), ehuseyinyigit #41, ezpotd #42, heheman #44, little-fermat #45, Tau_6.28 #47 Cauchy induction) prove Σ1/(r_i+1) ≥ n/(ⁿ√(Πr_i)+1) by convexity or two-variable smoothing; corroborates existing tags."
+  },
+  "isl:1998:A3": {
+   "date": "2026-11-17",
+   "range": "#92–#101 of 101 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (SimplisticFormulas #92 convexity, PSS1234 #93 and mucube #98 and orangutan1434 #99 Titu, zhoujef000 #94 and ezpotd #95 and lovematch13 #97 homogenise/Muirhead, CubeAlgo15 #96 and martianrunner #100 Hölder, sqing #101 variant) prove the inequality with xyz=1 by Titu/Hölder plus AM–GM; corroborates existing tags."
+  },
+  "isl:1998:A4": {
+   "date": "2026-11-17",
+   "range": "#7–#16 of 16 (all loaded)",
+   "note": "Posts (anantmudgal09 #7, Davsch #8 combinatorial L/R sequences, MathLuis #9, DrYouKnowWho #10, awesomeming327. #11, math_comb01 #12 Gaussian binomial at q=2, pie854 #13, OronSH #14 paths weighted by 2^area, son__im_crine #15, ezpotd #16) identify c(n,k) as the q=2 Gaussian binomial by induction, giving the symmetry; corroborates existing tags."
+  },
+  "isl:1998:A5": {
+   "date": "2026-11-17",
+   "range": "#19–#28 of 28 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (YaoAOPS #19, cj13609517288 #20 prime involutions, Ilikeminecraft #21, Sadigly #22 question, HamstPan38825 #23, ezpotd #24, son__im_crine #25, Ritwin #26 additive reformulation, V0305 #27 attachment, maromex #28) show f(m)f(n)=f(1)f(mn), f(1) | f(n), and minimise f(1998)=120 via a prime-swapping involution; corroborates existing tags."
+  },
+  "isl:1998:C1": {
+   "date": "2026-11-17",
+   "range": "#45–#54 of 54 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (awesomeming327. #45 and YaoAOPS #51 cycles of non-integers, ezpotd #46, abeot #47, Leo.Euler #48, asdf334 #49, Davdav1232 #50 potential Σx², lpieleanu #52, Ostad_Ardeshir #53 question, Adit-Reddy #54 'incorrectness') reduce entries to [0,1) and push along alternating cycles until all are integers; corroborates existing tags."
+  },
+  "isl:1998:C2": {
+   "date": "2026-11-17",
+   "range": "#3–#12 of 12 (all loaded)",
+   "note": "Posts (tim1234133 #3, ophiophagous #4 question, Phorphyrion #5, AliAlavi #6/#8 sketch, awesomeming327. #7, asdf334 #9/#10, ezpotd #11, lpieleanu #12) show odd numbers are unattainable for even n and build infinitely many unattainable integers ≡ −2 mod n−2 for odd n; corroborates existing tags."
+  },
+  "isl:1998:C3": {
+   "date": "2026-11-17",
+   "range": "#6–#17 of 17 (all loaded; #10, #15 absent)",
+   "note": "Posts (RadioActive #6, Spacesam #7 2n−6 bound, awesomehuman #8, awesomeming327. #9, sman96 #11, asdf334 #12, ezpotd #13 and lovematch13 #14 extend a monotone run by one element in two moves, Adit-Reddy #16, lpieleanu #17) sort nine cards in at most 12 block reversals; corroborates existing tags."
+  },
+  "isl:1998:C4": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (hxy09 #3 alternative induction, asdf334 #4, awesomeming327. #5, ezpotd #6 with small-case casework) induct on n, splitting off an element and fixing the arrangement so every given subset is split; corroborates existing tags."
+  },
+  "isl:1998:C5": {
+   "date": "2026-11-17",
+   "range": "#53–#62 of 62 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (eg4334 #53, ezpotd #54, anudeep #55 and Ashwath2011 #58 and TPColor #61 phrased as an expected number of agreements, BS2012 #56, lelouchvigeo #57, UberPiggy #59, Tau_6.28 #60, lightsynth123 #62) double count (judge pair, contestant) agreements to get k/m ≥ (b−1)/(2b); the expected-value phrasing is the same count, so no new tag. Corroborates existing tags."
+  },
+  "isl:1998:C6": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded; #5 absent)",
+   "note": "Posts (alkjash #3, CyclicISLscelesTrapezoid #4 k=5 construction, awesomeming327. #6, ezpotd #7 Caro–Wei bound, Ritwin #8 general 2A points) rule out k ≤ 4 by counting edges of the sparsest colour and construct colourings for k ≥ 5; corroborates existing tags."
+  },
+  "isl:1998:C7": {
+   "date": "2026-11-17",
+   "range": "#3–#13 of 13 (all loaded; #5 absent)",
+   "note": "Posts (jb05 #3 induction, Kayak #4 and edfearay123 #7 on the invariant white markers + shared sides, Thing__2 #6, MatBoy-123 #8 graph conversion, guptaamitu1 #9 without invariant, awesomeming327. #10, idkk #11, legogubbe #12, ezpotd #13) show all markers can be removed iff m or n is odd; corroborates existing tags."
   }
  }
 }

@@ -3161,6 +3161,46 @@
    "date": "2026-11-16",
    "range": "#18–#27 of 27 (all loaded; thread https://artofproblemsolving.com/community/c6h1671295p10632363 via the AoPS 2017 ISL collection)",
    "note": "Late posts (squareman #18, rama1728 #19, Leo.Euler #21, mcmp #22, pi271828 #23 characterisation f(a,b)=1 iff a^{-1} mod b ≤ b/2, Martin2001 #24 outline, bin_sherlo #25, Aaron314 #26, Royal_mhyasd #27) count quadratic residues in [1,(p−1)/2]; corroborates existing tags."
+  },
+  "isl:2016:A1": {
+   "date": "2026-11-16",
+   "range": "#80–#90 of 90 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1480690p8639254 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (Burak0609 #80, Siddharthmaybe #82, endless_abyss #84, jeff10 #85, Kempu33334 #86 log-convexity, Royal_mhyasd #87 smoothing b=c, Altheman #89) prove the two-variable lemma (x²+1)(y²+1) ≤ (((x+y)/2)²+1)² for xy ≥ 1 and smooth; corroborates existing tags."
+  },
+  "isl:2016:A2": {
+   "date": "2026-11-16",
+   "range": "#30–#39 of 39 (all loaded; thread https://artofproblemsolving.com/community/c6h1480705p8639281 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (Philomath_314 #30, Shreyasharma #31, Sedro #32, ezpotd #33, math-olympiad-clown #34, lelouchvigeo #35, maromex #36, b1zmark #37, otwaenng #39) give C = 1/2 via (1,1,1,2,N) and a sorted-pairing argument; corroborates existing tags."
+  },
+  "isl:2016:A3": {
+   "date": "2026-11-16",
+   "range": "#19–#28 of 28 (all loaded; thread https://artofproblemsolving.com/community/c6h1480716p8639312 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (huashiliao2020 #19, pie854 #20, Mr.Sharkman #21, HamstPan38825 #22, Ilikeminecraft #23, lelouchvigeo #24, cursed_tangent1434 #25, ezpotd #26, V0305 #27, InftyByond #28) show even n fails by explicit pairs and odd n works by ordering vectors by slope; corroborates existing tags."
+  },
+  "isl:2016:A4": {
+   "date": "2026-11-16",
+   "range": "#81–#90 of 90 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1480721p8639325 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (PSS1234 #81, mathloversSD #82, lksb #83, UberPiggy #84, Kempu33334 #85, benjaminchew13 #86, martianrunner #87, DensSv #88, apokono #89, Jupiterballs #90) get f(1)=1, f(x²)=f(x)/x and iterate to f(x)=1/x; corroborates existing tags."
+  },
+  "isl:2016:A5": {
+   "date": "2026-11-16",
+   "range": "#22–#31 of 31 (all loaded; thread https://artofproblemsolving.com/community/c6h1480728p8639342 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (emi3.141592 #22, Scilyse #23, john0512 #24, vsamc #25, maromex #26, chenghaohu #27, Shreyasharma #28, Cool12345678 #29, Alex-131 #30) write n = k²+r, pick a/b with b ≤ k explicitly for (a) and show n = k²+1 fails in (b) by bounding a² − nb²; corroborates existing tags."
+  },
+  "isl:2016:A6": {
+   "date": "2026-11-16",
+   "range": "#94–#103 of 103 (all loaded; middle skimmed by thanks; thread https://artofproblemsolving.com/community/c6h1270996p6642565 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (Bold_Dalai #94, jeff10 #96, lpieleanu #98, ray66 #99, ezpotd #100, Ilikeminecraft #101, V0305 #102, isache #103) prove 2016 is needed (shared roots otherwise) and split factors by residues mod 4 into products with no real common value; corroborates existing tags."
+  },
+  "isl:2016:A7": {
+   "date": "2026-11-16",
+   "range": "#22–#31 of 31 (all loaded; thread https://artofproblemsolving.com/community/c6h1480730p8639356 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (jasperE3 #22, rama1728 #23, MathsLover04 #24, Inconsistent #25, ZETA_in_olympiad #26, math_comb01 #27, Giabach298 #28, bin_sherlo #29–#30, Zezohabibullah #31) get f(0)=−1, f(x²)=f(x)²+2f(x) and show f(x)=x²−1; corroborates existing tags."
+  },
+  "isl:2016:A8": {
+   "date": "2026-11-16",
+   "range": "#16–#26 of 26 (all loaded; thread https://artofproblemsolving.com/community/c6h1480693p8639259 via the AoPS 2016 ISL collection)",
+   "note": "Late posts (IndoMathXdZ #16, jj_ca888 #18, Kei0923 #19, MathLuis #20 with rama1728 #21, CANBANKAN #22, awesomeming327. #23, NerdyNashville #24, uneamedechue #25 Titu/telescoping, m735821 #26) get a = 4/9 via differences d_i = C(i+2,2) and a telescoping Cauchy–Schwarz bound; corroborates existing tags."
   }
  }
 }

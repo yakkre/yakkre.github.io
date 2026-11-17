@@ -2619,28 +2619,28 @@
   },
   "isl:2002:G1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a directed-angle argument; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #42–#52 of 52 (all loaded); analytic scan #1–#52",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a directed-angle argument; analytic route stays pending.; Late posts (ike.chen #42, lrjr24 #43, jelena_ivanchic #44, lambda5 #45, huashiliao2020 #46, starchan #47, ezpotd #50, Avron #51, YaoAOPS #52) are angle chases with the circle centres O1, O2; corroborates existing tags. Analytic scan: only AK1024 #14 mentions trig Ceva inside a synthetic argument; analytic route stays pending."
   },
   "isl:2002:G4": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 10 is synthetic; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #20–#29 of 29 (all loaded); analytic scan #1–#29",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 10 is synthetic; analytic route stays pending.; Late posts (Knty2006 #20, IAmTheHazard #21, mananaban #22, john0512 #23, shendrew7 #24, EpicBird08 #25, Avron #26, YaoAOPS #27, ezpotd #29) use the Miquel point Q on (A1A2C) and a spiral similarity, corroborating existing tags. Analytic scan: IAmTheHazard #21 uses complex numbers only for the one-line lemma b=za; analytic route stays pending."
   },
   "isl:2002:G6": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 12 is an arc-length lemma with a single sine step; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #5–#14 of 14 (whole thread); analytic scan #1–#14",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 12 is an arc-length lemma with a single sine step; analytic route stays pending.; Posts (Zhero #5, math154 #6, mathocean97 #7, yugrey #8, JuanOrtiz #9, ochoa #10 integral-geometry measure, v_Enhance #11, stroller #12, MarkBcc168 #13, awesomeming327. #14) bound Σ1/O_iO_j by angles using sin x ≤ x; corroborates existing tags. Analytic scan: trig appears only as the sin x ≤ x estimate in a combinatorial-geometric argument; analytic route stays pending."
   },
   "isl:2002:G8": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 is a similarity argument; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #16–#26 of 26 (all loaded); analytic scan #1–#26",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 is a similarity argument; analytic route stays pending.; Late posts (ABCDE #16, mcdonalds106_7 #17, jred #18 configuration caveat, AlastorMoody #19, awesomeming327. #20, JAnatolGT_00 #21, starchan #22 spiral similarity, bin_sherlo #24) corroborate existing tags. Analytic scan: Zhero #9 (read in full) mixes sine-rule ratios with an inversion at A and cross-ratios, math154 #8 and pi37 #15 use sines inside synthetic arguments; no pure analytic proof, analytic route stays pending."
   },
   "isl:2001:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a perimeter/angle comparison (parallelogram reflection and cyclic quadrilaterals); analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #1–#10 of 10 (whole thread); analytic scan #1–#10",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a perimeter/angle comparison (parallelogram reflection and cyclic quadrilaterals); analytic route stays pending.; Posts (pohoatza #3 cos-ratio BO/CO argument, GoldenFrog1618 #5, Zhero #6 and pokpokben #9 long lemma-based proofs, pi37 #7 trig comparison of perimeter ratios around the orthocentre of A1B1C1, ezpotd #10 linear-motion argument) corroborate existing tags. Analytic scan: pi37 #7 is a trigonometric hybrid that depends on a configuration case split; not adopted; analytic route stays pending."
   },
   "isl:2000:G1": {
    "date": "2026-11-16",

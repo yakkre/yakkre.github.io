@@ -4566,6 +4566,111 @@
    "date": "2026-11-17",
    "range": "#22–#31 of 31 (all loaded); middle skimmed by thanks",
    "note": "Late posts (EpicBird08 #22, Maximilian113 #23, lpieleanu #24, Ilikeminecraft #25, lunasgraph_d #26, Magdalo #27 and oooahin #29 and Aaron314 #30 generating function f(x)f(x²)f(x⁴)=1/(1−x), ezpotd #28, methovermath #31) show a_n is n written in binary and read in base 8; corroborates existing tags."
+  },
+  "isl:1997:P1": {
+   "date": "2026-11-17",
+   "range": "#1–#6 of 6 (all loaded)",
+   "note": "Posts (chien than #2, goodar2006 #3, v_Enhance #4 discrepancy of regions, Joider #5 question, methovermath #6) compute the black-minus-white area of right triangles with legs along grid lines by splitting into rectangles and half-triangles, bounding f(m,n) and showing it is unbounded (IMO 1997/1); corroborates existing tags."
+  },
+  "isl:1997:P2": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (math154 #2 links and OEIS, randomusername #3 companion family Q_{ni}) prove the symmetry of R_n by an inductive bijection between the sequences; corroborates existing tags."
+  },
+  "isl:1997:P3": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only mbalunovic #2 (complete) shows maximal subsets are exactly half-plane subsets and counts them by rotating a line, giving at most 2n for n vectors; corroborates existing tags."
+  },
+  "isl:1997:P4": {
+   "date": "2026-11-17",
+   "range": "#29–#38 of 38 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (blueprimes #29, gladIasked #30, akliu #31, clarkculus #32, Ilikeminecraft #33, lpieleanu #34, Kempu33334 #35, cursed_tangent1434 #36, not_detriti #37, Ashwath2011 #38) count appearances in the n crosses to rule out odd n and give a recursive construction for powers of 2 (IMO 1997/4); corroborates existing tags."
+  },
+  "isl:1997:P6": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (Allnames #2 partial, thanhtra_dhsp #3 prime-exponent construction) build x, y, z as products of common primes with exponents solving congruences by CRT; corroborates existing tags."
+  },
+  "isl:1997:P8": {
+   "date": "2026-11-17",
+   "range": "#26–#35 of 35 (all loaded)",
+   "note": "Late posts (fearsum_fyz #26, Maximilian113 #27, Ilikeminecraft #28, LeYohan #29, Marcus_Zhang #30, lpieleanu #31, Ryanswan12 #32, b1zmark #33 power of a point, Kempu33334 #34, imo2026 #35 isosceles trapezium) extend BV and CW to the circumcircle and chase equal chords to get AU=TB+TC (IMO 1997/2); corroborates existing tags."
+  },
+  "isl:1997:P10": {
+   "date": "2026-11-17",
+   "range": "#1–#2 of 2 (all loaded)",
+   "note": "Only BaBaK Ghalebi #2 (complete) uses F(k+1)−F(0) ≡ 0 mod k+1 and size bounds to show the statement holds exactly for k ≥ 4; corroborates existing tags."
+  },
+  "isl:1997:P11": {
+   "date": "2026-11-17",
+   "range": "#1–#8 of 8 (all loaded; #4 absent)",
+   "note": "Posts (JoeBlow #2 idea, Erken #3, cefer #5 notes the earlier proofs are incomplete and proves the quadratic case, DottedCaculator #6, HamstPan38825 #7, pinkpig #8) reduce to quadratics with non-real roots and show (1+x)^m(x²+bx+c) has nonnegative coefficients for large m; corroborates existing tags."
+  },
+  "isl:1997:P12": {
+   "date": "2026-11-17",
+   "range": "#9–#21 of 21 (all loaded; #11, #15, #16 absent); middle skimmed by thanks",
+   "note": "Late posts (Sprites #9, HamstPan38825 #10, Pyramix #12, dolphinday #13 and Just1 #21 power sums Σi^k ≡ 0 mod p for k < p−1, Mathandski #14 finite differences, #17 variant, Ilikeminecraft #18, Fahmid_rng #19 Lagrange interpolation, lightsynth123 #20 link) sum f over a complete residue system to force deg f ≥ p−1; corroborates existing tags."
+  },
+  "isl:1997:P13": {
+   "date": "2026-11-17",
+   "range": "#1–#4 of 4 (all loaded)",
+   "note": "Posts (srikanth #2 recursion for A(n,r) and B(n,r), JBL #3 rook-polynomial remark, lazizbek42 #4 source) show both towns satisfy the same recurrence; corroborates existing tags."
+  },
+  "isl:1997:P14": {
+   "date": "2026-11-17",
+   "range": "#9–#18 of 18 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (hydo2332 #9, Aliosman #10, smileapple #12, otwaenng #18 and MELSSATIMOV40 #13 and Eka01 #14 and Frank25 #15 and AbdulWaheed #17 via Zsigmondy (outside result), hectorleo123 #11 statement, SlovEcience #16 question) reduce to b^d−1 and its multiples and apply Zsigmondy's exceptions; the elementary valuation route is already tagged. Corroborates existing tags."
+  },
+  "isl:1997:P15": {
+   "date": "2026-11-17",
+   "range": "#12–#23 of 23 (all loaded; #20, #21 absent); middle skimmed by thanks",
+   "note": "Late posts (spoudyal #12, da-kid #13/#15/#17 misread corrected by t0rajir0u #14/#16, esque #18, rafayaashary1 #19 generalisation link, frogftw #22 reduction to prime powers, qwerty123456asdfgzxcvb #23 question) reduce mod the common difference to prime powers and build a sixth power in the residue class; corroborates existing tags."
+  },
+  "isl:1997:P16": {
+   "date": "2026-11-17",
+   "range": "#1–#9 of 9 (all loaded; #6 absent)",
+   "note": "Posts (mr.danh #2, mihai miculita #3 barycentric coordinates, livetolove212 #4 lemma, WJ.JamshiD #5/#9, TelvCohl #7 generalisation link, jayme #8 link) prove the collinearity equivalence by coordinates or an isogonal lemma; no new synthetic route appears, so the row stays computation-only. Corroborates existing tags."
+  },
+  "isl:1997:P17": {
+   "date": "2026-11-17",
+   "range": "#36–#45 of 45 (all loaded); middle skimmed by thanks",
+   "note": "Late posts (Mr.Sharkman #36 logarithms, Mathandski #37 attachment, shendrew7 #38, eg4334 #39, cubres #40, Cool12345678 #41 a > b², lightsynth123 #42, alexanderchew #43 common-base lemma, Royal_mhyasd #44 radicals, LemmaLover #45) write a and b as powers of a common base and solve the exponent equation to get (1,1), (16,2), (27,3) (IMO 1997/5); corroborates existing tags."
+  },
+  "isl:1997:P18": {
+   "date": "2026-11-17",
+   "range": "#21–#32 of 32 (all loaded; #25, #30 absent); middle skimmed by thanks",
+   "note": "Late posts (452832 #21, MathsLover04 #22, bora_olmez #23, lazizbek42 #24, Evolhimar #26 question, Mogmog8 #27, JAnatolGT_00 #28, Pyramix #29, Eka01 #31, zhoujef000 #32) use (P,D;B,C)=−1 to get DM·DP=DB·DC=DQ·DR with BRCQ cyclic, so (PQR) passes through the midpoint; corroborates existing tags."
+  },
+  "isl:1997:P19": {
+   "date": "2026-11-17",
+   "range": "#1–#7 of 7 (all loaded)",
+   "note": "Posts (arthur #2/#3/#5 official solution, Peter Scholze #4 short telescoping, kvs #6 lemma √(k+d)−√k decreasing, beiqiang #7 question) write a_k as telescoping squares and apply Cauchy–Schwarz or the concavity lemma; corroborates existing tags."
+  },
+  "isl:1997:P21": {
+   "date": "2026-11-17",
+   "range": "#9–#20 of 20 (all loaded; #11, #15 absent); middle skimmed by thanks",
+   "note": "Late posts (v_Enhance #9, YaoAOPS #10, HamstPan38825 #12, shendrew7 #13 and ostriches88 #17 average (n+1)/2, dolphinday #14, der_Englander #16 minefield picture, Schintalpati #18, UberPiggy #19, Cool12345678 #20) pair a permutation with its reverse and move between them by adjacent swaps, each changing the sum by at most n+1 (IMO 1997/3); corroborates existing tags."
+  },
+  "isl:1997:P22": {
+   "date": "2026-11-17",
+   "range": "#21–#31 of 31 (all loaded; #30 absent); middle skimmed by thanks",
+   "note": "Late posts (Valentin Vornicu #21/#23/#25/#27 and Arne #22/#24/#26 discussion, trigg #28 construction for k=4, tmath #29 statement, Saucepan_man02 #31) show k=3 is impossible via injectivity and fixed points of x³ and build f, g for k=4 using x^{ln x}; corroborates existing tags."
+  },
+  "isl:1997:P23": {
+   "date": "2026-11-17",
+   "range": "#2–#11 of 11 (all loaded)",
+   "note": "Posts (zengmao #2/#6, Fiachra #3/#5, Jimmy #4, darij grinberg #7, Max D.R. #8 Crux source, varunrocks #9, tc1729 #10 pedal-point lengths, Sardor_Ruzimurodov #11 sine rule for the easy direction) prove the cyclic criterion with the law of sines and a monotonicity argument for the converse; corroborates existing tags and the hybrid analytic status."
+  },
+  "isl:1997:P24": {
+   "date": "2026-11-17",
+   "range": "#5–#15 of 15 (all loaded; #7 absent); middle skimmed by thanks",
+   "note": "Late posts (t0rajir0u #5 generating-function remark, toumaf #6, larkl #8/#9 bounds, Epistle #10, v_Enhance #11, HamstPan38825 #12, OronSH #13, john0512 #14, eg4334 #15) use f(2n)=f(2n+1)=f(0)+…+f(n) and induction to bound f(2^n) between 2^{n²/4} and 2^{n²/2} (IMO 1997/6); corroborates existing tags."
+  },
+  "isl:1997:P26": {
+   "date": "2026-11-17",
+   "range": "#1–#3 of 3 (all loaded)",
+   "note": "Posts (ZHANGWENZHONGKK #2 partial, Sergic Primazon #3) bound Σa_i under a_i ≤ a_{i+1}+a_{i+2} by a Fibonacci-type recursion and match it with a construction; corroborates existing tags."
   }
  }
 }

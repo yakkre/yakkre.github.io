@@ -30,7 +30,7 @@ Keep workbook review/source caveats intact during refresh. Snapshot provenance i
 
 ## RMM statement sources (2026-11-17)
 
-All 98 main-paper statements across the 17 published editions have been collected; all 94 currently classified RMM entries have active statements. The four remaining main-paper sources await catalogue entries, rather than statement research.
+All 98 main-paper statements across the 17 published editions have been collected. Current classification coverage is 97/98 main-paper problems plus 9 shortlist problems; see the [18 November checkpoint](RMM_PROGRESS_2026-11-18.md) for exact completed and pending IDs. Statements, classifications and official/forum proof checks are separate tasks.
 
 `data/statement-supplements.json` also holds all 81 numbered statements in the eight populated AoPS shortlist branches: 2016 (9), 2017 (8), 2018 (9), 2019 (11), 2020 (11), 2021 (12), 2023 (9), and 2024 (12). The two versions of 2019 SL G4 share their original label; the three withdrawn 2019 Day 2 statements have separate `original P4`–`original P6` keys and must not replace the contest paper. AoPS's 2019 shortlist numbering differs from the compiled booklet because selected contest problems were omitted; preserve the AoPS IDs.
 

@@ -9143,6 +9143,18 @@
       "postDate": "Jul 15, 2026, 10:00 PM",
       "retrieved": "2026-10-15T22:43:07.991Z"
     },
+    "rmm:2008:1": {
+      "text": "Let $ABC$ be an equilateral triangle, and let $P$ vary inside it. Its perpendicular distances to the sides are $a^2,b^2,c^2$, where $a,b,c$ are positive real numbers. Find the locus of points $P$ for which $a,b,c$ can be the side lengths of a nondegenerate triangle.",
+      "kind": "reference",
+      "sourceUrl": "https://bmos.ukmt.org.uk/home/rmm-2008-original.pdf",
+      "sourceYear": 2008,
+      "sourceProblem": "1",
+      "sourcePage": 1,
+      "verified": "2026-11-10",
+      "sourceLabel": "UK competition-team archive reproduction of the RMM contest paper",
+      "transcription": "Full statement matched to the printed paper; normalized LaTeX and mathematically equivalent wording. No proof review claimed.",
+      "sourceCaveat": "The original paper preserved by the UK team is used. Its separately labelled clarified version has the same Problem 1 formulation."
+    },
     "rmm:2008:2": {
       "text": "Prove that every bijective function $ f: \\mathbb{Z}\\rightarrow\\mathbb{Z}$ can be written in the way $ f=u+v$ where $ u,v: \\mathbb{Z}\\rightarrow\\mathbb{Z}$ are bijective functions.",
       "kind": "forum",
@@ -9638,6 +9650,18 @@
       "postDate": "Feb 25, 2018, 2:55 AM",
       "retrieved": "2026-11-04T20:58:35.114Z"
     },
+    "rmm:2018:5": {
+      "text": "Let $n$ be a positive integer, and fix $2n$ distinct points on a circle. Split them into $n$ pairs, and join the points in each pair by an arrow, that is, an oriented segment. The configuration is good if no two arrows cross and there are no arrows $\\overrightarrow{AB}$ and $\\overrightarrow{CD}$ for which $ABCD$ is a convex quadrilateral oriented clockwise. Determine the number of good configurations.",
+      "kind": "official",
+      "sourceUrl": "https://rmms.lbi.ro/rmm2018/pr2/RMM2018-Day2-English.pdf",
+      "sourceYear": 2018,
+      "sourceProblem": "5",
+      "sourcePage": 3,
+      "verified": "2026-11-10",
+      "sourceLabel": "RMM organizer published English statement",
+      "transcription": "Full statement matched to the printed paper; normalized LaTeX and mathematically equivalent wording. No proof review claimed.",
+      "sourceCaveat": "The complete statement is taken from the organizer-linked supplied solutions booklet. This statement collection does not resolve the previously pending proof assessment."
+    },
     "rmm:2018:6": {
       "text": "Fix a circle $\\Gamma$, a line $\\ell$ tangent to $\\Gamma$, and another circle $\\Omega$ disjoint from $\\ell$ such that $\\Gamma$ and $\\Omega$ lie on opposite sides of $\\ell$. The tangents to $\\Gamma$ from a variable point $X$ on $\\Omega$ meet $\\ell$ at $Y,Z$. Prove that, as $X$ traces $\\Omega$, the circle $XYZ$ is tangent to two fixed circles.",
       "kind": "official",
@@ -9810,6 +9834,17 @@
       "author": "Olympiadium",
       "postDate": "Oct 13, 2021, 6:03 PM",
       "retrieved": "2026-11-04T20:55:56.851Z"
+    },
+    "rmm:2021:6": {
+      "text": "Initially, a nonconstant polynomial $S(x)$ with real coefficients is written on a board. Whenever the board contains a polynomial $P(x)$, one may write any polynomial $P(C+x)$ or $C+P(x)$ on the board, where $C$ is a real constant. If the board contains two not necessarily distinct polynomials $P(x),Q(x)$, one may also write $P(Q(x))$ and $P(x)+Q(x)$. No polynomial is ever erased.\n\nFor finite sets $A=\\{a_1,\\ldots,a_n\\}$ and $B=\\{b_1,\\ldots,b_n\\}$ of real numbers, a real polynomial $f$ is $(A,B)$-nice if $f(A)=B$, where $f(A)=\\{f(a_i):1\\le i\\le n\\}$.\n\nDetermine all initial polynomials $S(x)$ for which, for any two finite sets $A,B$ of real numbers with $|A|=|B|$, an $(A,B)$-nice polynomial can be produced in finitely many steps.",
+      "kind": "official",
+      "sourceUrl": "https://rmms.lbi.ro/rmm2021/pr2/RMM2021-Day2-English.pdf",
+      "sourceYear": 2021,
+      "sourceProblem": "6",
+      "sourcePage": 1,
+      "verified": "2026-11-10",
+      "sourceLabel": "RMM organizer published English statement",
+      "transcription": "Full statement matched to the printed paper; normalized LaTeX and mathematically equivalent wording. No proof review claimed."
     },
     "rmm:2023:1": {
       "text": "Determine all prime numbers $p$ and all positive integers $x$ and $y$ satisfying $$x^3+y^3=p(xy+p).$$",

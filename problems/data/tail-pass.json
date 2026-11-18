@@ -5683,6 +5683,24 @@
    ],
    "explanationAppend": "Supplied alternatives contract a monochromatic cut inductively, or minimize the number of edges whose membership varies across a suitable family of spanning trees.",
    "cite": "https://artofproblemsolving.com/community/c6h3025646p27211191 | #31 CT17, #38 ZVFrozel; https://rmms.lbi.ro/rmm2023/pr2/RMM2023-Day2-English_Solutions.pdf, physical pp3–4 Solutions 1–2"
+  },
+  "rmm:2021:1": {
+   "date": "2026-11-18",
+   "range": "#1–#14 of 14 (whole available thread)",
+   "note": "SnowPanda #12 supplies a complete additional hybrid proof: homotheties give the centre parallelogram, dot products make the alternating sum of circle powers constant, and the transversal power expansion forces the endpoint identity. Add analytic Vectors and dot products and Power of a point; both decisive identities passed 1000 valid tangency configurations. Existing synthetic and Cartesian primaries/statuses retained. Supplied organizer Day1 pp1–2 read in full: its two projection finishes corroborate the prior routes; the last RQ is a typo for RS. TheUltimate123 #9 swaps V/W relative to the current statement, IAmTheHazard #13 projects to the T-line where the transversal is needed, and YaoAOPS #14 leaves its reflection-line reduction compressed. No tag relies on those slips.",
+   "addTags": [
+    "ana:G: Vectors and dot products",
+    "ana:G: Power of a point"
+   ],
+   "cite": "https://artofproblemsolving.com/community/c6h2692527p23374851 | #12 SnowPanda; https://rmms.lbi.ro/rmm2021/pr1/RMM2021-Day1-English_Solutions.pdf, physical pp1–2",
+   "ana_explanation": "A further hybrid proof first obtains the centre parallelogram by homothety, then uses a dot-product identity to make the alternating sum of circle powers constant; expanding those powers on the transversal gives the required endpoint relation.",
+   "ana_refs": "https://artofproblemsolving.com/community/c6h2692527p23374851 | #12 SnowPanda complete homothety + dot-product/circle-power argument; numerical identities checked in 1000 tangency configurations. Supplied Day1 pp1–2 corroborate the projection routes."
+  },
+  "rmm:2021:2": {
+   "date": "2026-11-18",
+   "range": "#1–#22 of 22 (whole available thread; #7–#8 and #19 absent)",
+   "note": "v_Enhance #3, L567 #6, CT17 #16 and Assassino9931 #20 give the cyclic generalized-CRT obstruction; all existing modular/construction/game tags are corroborated, with no addition. Supplied Day1 p3 read in full and matched: two overlapping two-index queries recover three residues; its cyclic lower bound needs singleton queries treated separately. oVlad #2 has an invalid fixed-swap restriction to arbitrary queried subsets and writes gcd for lcm. #13/#15 discuss altered non-distinct/remainder versions; #21 strengthens the threshold and #22 discusses adaptive variants, not new proofs of the catalogue statement. The current distinctness condition is essential.",
+   "cite": "https://artofproblemsolving.com/community/c6h2692530p23374854 | #16 CT17, #20 Assassino9931; https://rmms.lbi.ro/rmm2021/pr1/RMM2021-Day1-English_Solutions.pdf, physical p3"
   }
  }
 }

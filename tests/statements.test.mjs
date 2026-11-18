@@ -18,9 +18,14 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
       const p = catalogue.problems.find(p => p.key === key);
       assert.equal(statement.sourceYear, p.year);
       assert.equal(statement.sourceProblem, p.id);
-      assert.ok(Number.isInteger(statement.sourcePage) && statement.sourcePage > 0);
+      if (key.startsWith('usatst:') && statement.sourceFormat === 'tex') {
+        assert.equal(statement.sourceSection, `USA TST ${p.year}/${p.id}`);
+      } else assert.ok(Number.isInteger(statement.sourcePage) && statement.sourcePage > 0);
       const source = new URL(statement.sourceUrl);
-      if (key.startsWith('rmm:')) {
+      if (key.startsWith('usatst:')) {
+        if (p.year === 2026) assert.equal(statement.sourceUrl, 'https://raw.githubusercontent.com/usa-tst-public/USA-TST-Archive/main/IMOTST2026Problems.pdf');
+        else assert.equal(statement.sourceUrl, `https://web.evanchen.cc/exams/sols-TST-IMO-${p.year}.${statement.sourceFormat}`);
+      } else if (key.startsWith('rmm:')) {
         assert.equal(source.hostname, 'rmms.lbi.ro');
         if (p.year === 2018 && p.id.startsWith('SL ')) {
           assert.equal(source.pathname, '/rmm2019/_dwl/RMM_2018_Extra_List.pdf');
@@ -73,6 +78,22 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
   assert.match(sample.text, /at most \$n\$ distinct prime divisors/);
   assert.match(sample.text, /\\varphi_0/);
   assert.match(sample.sourceUrl, /h3780397/);
+});
+
+test('every current USA TST entry has a matched, complete statement', () => {
+  for (const p of catalogue.problems.filter(p => p.contest === 'usatst')) {
+    const s = data.statements[p.key];
+    assert.ok(s?.text.trim(), p.key);
+    assert.equal(s.sourceYear, p.year);
+    assert.equal(s.sourceProblem, p.id);
+    assert.equal(s.kind, 'official');
+    assert.ok(s.sourceSha256 && s.verified);
+    assert.doesNotMatch(s.text, /\\(?:RR|ZZ|NN|FF|ol|arc|dg|ii)(?![A-Za-z])/);
+    assert.doesNotMatch(s.text, /\\(?:begin|end)\{(?:enumerate|itemize)\}/);
+    assert.match(s.text, /Proposed by [^\n]+\.$/);
+  }
+  assert.match(data.statements['usatst:2026:1'].text, /2\^n-1/);
+  assert.match(data.statements['usatst:2025:3'].text, /P_i\^\{j\+1\}/);
 });
 
 test('geometry statement supplements have complete verified source metadata', () => {

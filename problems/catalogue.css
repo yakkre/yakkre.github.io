@@ -139,7 +139,13 @@ dialog h3{font-size:14px;margin:14px 0 2px}dialog p,dialog li{margin:4px 0}
 .done-box{display:inline-block;width:14px;height:14px;margin:0 6px 0 0;padding:0;vertical-align:-2px;accent-color:var(--done);cursor:pointer}
 .grid-view{margin-top:6px;border:1px solid var(--line);border-radius:4px;padding-top:10px}
 .grid-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:0 10px}
-.grid-switch{width:240px;margin:0}
+.grid-chooser{display:flex;align-items:center;gap:6px;flex:1 1 100%;min-width:0;flex-wrap:wrap}
+.grid-chooser input{flex:0 1 210px;min-width:130px;margin:0}
+.grid-switch{display:flex;flex:1 1 220px;min-width:0;max-width:700px;width:auto;margin:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.grid-switch button{flex:none;white-space:nowrap;padding:7px 12px}
+.grid-scroll{flex:none;width:30px;height:34px;padding:0;font-size:20px}
+.grid-chooser [role=status]:empty{display:none}
+@media(max-width:560px){.grid-chooser input{flex-basis:100%}.grid-switch{flex-basis:0}.grid-chooser{margin-bottom:4px}}
 .grid-legend{margin:0;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px}
 .grid-legend .grid-cell{width:14px;height:14px;padding:0}
 .grid-body{--units:34;--cell:clamp(22px,calc((100cqi - 80px) / var(--units) - 3px),34px);padding:8px 10px 10px;overflow-x:auto}

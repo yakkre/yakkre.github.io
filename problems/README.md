@@ -4,7 +4,11 @@ Static, buildless catalogue at `/problems/`. It adds to the existing raindrops b
 
 ## Data
 
-`data/catalogue.json` is a reviewed snapshot exported from the canonical IMO Shortlist, RMM and USA TST workbooks. It contains original classification summaries, the exact60-label taxonomy, evidence types, caveats and source links. Full copyrighted problem statements and solutions are not copied here. Pending problems are not fabricated as completed entries.
+`data/catalogue.json` is a reviewed snapshot exported from the canonical IMO Shortlist, RMM and USA TST workbooks. It contains original classification summaries, the stable 88-label taxonomy, evidence types, caveats and source links. Verified problem statements are stored separately; solutions are linked rather than republished. Pending classifications are never fabricated as completed reviews.
+
+The grid collection selector is populated from the current data, searchable by name or abbreviation, and horizontally scrollable (touch/trackpad or arrow buttons when it overflows). Arrow keys move between collection buttons; Enter selects the sole search match, and Escape clears the collection search. Grid links preserve the selected collection in `?view=grid&grid=…`.
+
+Verified TST and RMM statements can appear before classification. `statement-catalogue.mjs` adds these only in the browser, with no tags and an explicit **Classification pending** label. They work in lookup, grid, notes and progress; method filters exclude them until actual tags arrive. Exact reviewed catalogue keys take precedence on later exports. The reviewed catalogue and its workbook snapshots remain unchanged by this display step. `statement-view.mjs` merges non-held supplements with active statements, preserving active objects. Held sources are not exposed automatically.
 
 Both RMM main papers and shortlists are in scope; current coverage is explicit in the site. The USA TST (for the IMO only; not TSTST or the TST for EGMO) is a third contest with keys such as `usatst:2026:5`, added from 2026 backwards. Its workbook is `~/Downloads/USA-TST/USA TST Classification.xlsx` (same Problems A:U and Taxonomy layout as RMM; research and the guarded writer in `~/Downloads/USA-TST/research/`). Official solutions: the USA TST archive on GitHub (usa-tst-public, TST 2025 onward) and Evan Chen's solution files (web.evanchen.cc, to TST 2025); `--usatst` is optional in the export. `Live forum checked` and `Archived forum checked` describe the recorded check source, not a guarantee that all replies are complete correct proofs.
 
@@ -30,7 +34,15 @@ All 98 main-paper statements across the 17 published editions have been collecte
 
 The 2025 shortlist branch still contains only subject headings; no 2026 shortlist branch or pre-2016 shortlist branch was listed in the collection when checked. These are source-publication limits, not empty completed inventories. In 2020 SL G3, the source omits the definition of I; a labelled statement note identifies I as the incircle centre from the supplied solution. The original two displayed conditions and caveat for 2021 SL A3 are retained.
 
-Supplements attach only to exact existing catalogue keys when the exporter is invoked; collecting a statement does not create a classification, complete a proof review, or continuously refresh the site.
+The exporter attaches supplements to exact existing reviewed catalogue keys when invoked. Separately, the browser can show verified statement-only TST/RMM entries with classification pending; this does not complete a proof review or continuously refresh the published source files.
+
+## USA TST statements (2026-11-17)
+
+All 172 original problem slots in the listed 2000–2026 AoPS USA TST editions have statement sources, including geometry and problems not yet tagged. There was no 2022 winter TST. The current source inventory is 6 problems per edition except 2021 (3), 2012–2013 (8 each), and 2001/2008/2009/2010/2011 (9 each). This is the IMO TST, not TSTST or EGMO TST.
+
+Sources are the public official USA TST archive (2026), Evan Chen's supplied papers/TeX (2014–2025), and the complete rendered AoPS year collections with their provided printable PDFs (2000–2013). Original labels, topic links, collection context, authors and source hashes are retained. Opening statements rendered in collections are not claimed as new solution/forum-proof reviews.
+
+In 2012 and 2013, numbering restarts at 1 in the December and January papers. Keys use `usatst:2012:Dec 1` and `usatst:2012:Jan 1` (and likewise 2013); preserve these distinct original sessions. Do not flatten them into guessed 1–8 labels on a later classification export. Two source notes remain visible: 2003/4 omits the domain restriction needed for f(m−n), and 2005/3 switches g/f and uses “unitary” for monic. The source wording is retained with explicit notes.
 
 ## Hosting
 

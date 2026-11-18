@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
   <title>Problems by method · raindrops</title>
-  <link rel="stylesheet" href="./catalogue.css?v=20261117-theme">
-  <script type="module" src="./catalogue.js?v=20261117-latex"></script>
+  <link rel="stylesheet" href="./catalogue.css?v=20261117-grid-picker">
+  <script type="module" src="./catalogue.js?v=20261117-grid-picker"></script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to results</a>
@@ -91,10 +91,13 @@
         <section id="collections-view" class="collections-view" aria-label="Collections" hidden></section>
         <div id="grid-view" class="grid-view" hidden>
           <div class="grid-top">
-            <div class="mode grid-switch" role="group" aria-label="Collection">
-              <button type="button" data-grid="isl" aria-pressed="true">IMO Shortlist</button>
-              <button type="button" data-grid="rmm" aria-pressed="false">RMM</button>
-              <button type="button" data-grid="usatst" aria-pressed="false">USA TST</button>
+            <div id="grid-chooser" class="grid-chooser">
+              <label class="sr-only" for="grid-search">Find a grid collection</label>
+              <input id="grid-search" type="search" placeholder="Find a collection…" autocomplete="off" aria-controls="grid-options">
+              <button type="button" class="grid-scroll" data-grid-scroll="previous" aria-label="Scroll collections left" hidden>‹</button>
+              <div id="grid-options" class="mode grid-switch" data-grid-options role="group" aria-label="Grid collection"></div>
+              <button type="button" class="grid-scroll" data-grid-scroll="next" aria-label="Scroll collections right" hidden>›</button>
+              <span class="help" role="status" aria-live="polite"></span>
             </div>
             <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done <span id="grid-legend-match" hidden><span class="grid-cell todo match" aria-hidden="true"></span> matches your filters</span> <span class="grid-cell todo has-note" aria-hidden="true"></span> has notes · click a square for options, or use Select for several (drag to select a block)</p>
             <p id="grid-count" class="grid-count"></p>

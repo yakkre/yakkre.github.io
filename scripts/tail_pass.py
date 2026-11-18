@@ -18,8 +18,11 @@ Ledger entry fields (all optional except range/note):
   explanationAppend                   -> appended to the brief classification explanation
   ana_explanation, ana_refs, ana_status -> analytic route fields (explanation/refs appended;
                                          status set only together with a new analytic primary)
+  official                            -> the official solutions were checked: drops the stale
+                                         "Official solutions not consulted (…)." sentence, updates
+                                         the evidence label and records the source in the notes
 """
-import argparse, json
+import argparse, json, re
 from pathlib import Path
 
 DEFAULT_LEDGER = Path(__file__).resolve().parent.parent / 'problems' / 'data' / 'tail-pass.json'
@@ -30,6 +33,22 @@ def _append(text, extra, sep=' '):
     if not extra or extra in text:
         return text
     return (text.rstrip() + sep + extra) if text.strip() else extra
+
+
+STALE = re.compile(r'\s*Official solutions not consulted(?: \([^)]*\))?\.?', re.I)
+
+
+def _official(p, source):
+    p['notes'] = STALE.sub('', p.get('notes') or '').strip()
+    g = p.get('geometry')
+    if g:
+        for route in (g['synthetic'], g['analytic']):
+            for f in ('explanation', 'references'):
+                if isinstance(route.get(f), str):
+                    route[f] = STALE.sub('', route[f]).strip()
+    p['evidence'] = re.sub(r'official solutions not consulted', 'official solutions checked',
+                           p.get('evidence') or '', flags=re.I)
+    p['notes'] = _append(p['notes'], f'official check: {source}', ' | ')
 
 
 def _add(lst, tag_id):
@@ -79,6 +98,8 @@ def apply(data, ledger):
         if g and e.get('ana_refs'):
             g['analytic']['references'] = _append(g['analytic']['references'], e['ana_refs'], ' | ')
         p['explanation'] = _append(p['explanation'], e.get('explanationAppend'))
+        if e.get('official'):
+            _official(p, e['official'])
         record = f"tail pass {e.get('date', '')}: {e['range']}" + (f"; cite {e['cite']}" if e.get('cite') else '') + f"; {e['note']}"
         p['notes'] = _append(p['notes'], record, ' | ')
         p['tailPass'] = dict(date=e.get('date'), range=e['range'])

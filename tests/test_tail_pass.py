@@ -39,6 +39,21 @@ class TailPass(unittest.TestCase):
         apply(data, LEDGER)
         self.assertEqual(data, once)
 
+    def test_official_check_replaces_stale_wording_idempotently(self):
+        data = toy()
+        g1 = data['problems'][1]
+        g1['evidence'] = 'Live AoPS checked; official solutions not consulted'
+        g1['notes'] = 'Scan of all 20 posts. Official solutions not consulted (the 2017 booklet is not cached locally and browsing is restricted to AoPS). Focused proof review.'
+        ledger = dict(entries={'isl:1:G1': dict(date='d', range='booklet', note='n', official='IMO 1 SL booklet, Solutions 1–2 read')})
+        apply(data, ledger)
+        self.assertEqual(g1['evidence'], 'Live AoPS checked; official solutions checked')
+        self.assertNotIn('not consulted', g1['notes'])
+        self.assertIn('official check: IMO 1 SL booklet, Solutions 1–2 read', g1['notes'])
+        self.assertEqual(g1['primaryTag'], 61)
+        once = copy.deepcopy(data)
+        apply(data, ledger)
+        self.assertEqual(data, once)
+
     def test_new_analytic_route_replaces_pending_note(self):
         data = toy()
         data['problems'][1]['geometry']['analytic']['explanation'] = 'Pending: no analytic proof found.'

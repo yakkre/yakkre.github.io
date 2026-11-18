@@ -7,6 +7,7 @@ so a later official-solution check or analytic scan can be added to an existing 
 Usage:
   python3 scripts/tail_pass_add.py KEY RANGE NOTE [--tags "T1;T2"] [--explanation TEXT] [--cite TEXT]
                                    [--ana-status S] [--ana-explanation TEXT] [--ana-refs TEXT]
+                                   [--official TEXT]
 
 Examples:
   python3 scripts/tail_pass_add.py isl:2012:A1 "#40–#49 of 49 (all loaded; thread https://artofproblemsolving.com/community/c6h…)" \
@@ -15,6 +16,9 @@ Examples:
       --tags "C: Matchings and assignments" --explanation "A forum proof …" --cite "#11 (userC) complete Hall proof"
   Geometry rows prefix tags with syn:/ana:, e.g. --tags "ana:G: Complex numbers" --ana-status "Reviewed"
       --ana-explanation "…" --ana-refs "<thread url> | #54 user complete complex proof".
+  Official-solution check of a row whose notes say "Official solutions not consulted":
+      --official "IMO 2017 SL booklet (imo-official.org), Solutions 1–2 and Comment read" (the stale
+      sentence is then dropped and the evidence label says the official solutions were checked).
 Tag labels must match the taxonomy exactly (see `taxonomy` in problems/data/catalogue.json).
 """
 import argparse, datetime, json
@@ -30,6 +34,7 @@ def main():
     ap.add_argument('--tags', default=''); ap.add_argument('--explanation', default='')
     ap.add_argument('--cite', default='')
     ap.add_argument('--ana-status'); ap.add_argument('--ana-explanation'); ap.add_argument('--ana-refs')
+    ap.add_argument('--official', help='what official solution source was read for this row')
     a = ap.parse_args()
 
     labels = {t['label'] for t in json.loads(CATALOGUE.read_text())['taxonomy']}
@@ -54,7 +59,7 @@ def main():
             m.setdefault('addTags', [])
             if t not in m['addTags']:
                 m['addTags'].append(t)
-    for f, v in (('ana_status', a.ana_status), ('ana_explanation', a.ana_explanation), ('ana_refs', a.ana_refs)):
+    for f, v in (('ana_status', a.ana_status), ('ana_explanation', a.ana_explanation), ('ana_refs', a.ana_refs), ('official', a.official)):
         if v:
             E[a.key][f] = v
     E[a.key] = {f: v for f, v in E[a.key].items() if v not in ('', [], None)}

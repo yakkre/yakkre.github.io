@@ -118,14 +118,14 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 - Five remaining rows recorded; the pre-existing problem 4 review is preserved. The 2023 todo is empty.
 - Added Graph theory—structural on problem 2, plus Induction and recursion and Extremal arguments on problem 6, each from complete proofs.
 - Read both supplied Day1/Day2 solution booklets for these five problems, including their alternatives; minor slips and incomplete forum candidates are flagged below. Problem 3 remains Medium for the user’s decision.
-- Next row: **rmm:2021:1** (confirm against the year todo). Python ledger tests OK; 34 Node checks passed, fail 0. Exact preservation confirmed: only five 2023 rows changed, existing ledger entries/primaries/tags/confidence retained. Local year commit prepared; no push is claimed.
+- 2023 year todo empty; see the 2021 partial checkpoint for the current next row. Python ledger tests OK; 34 Node checks passed, fail 0. Exact preservation confirmed: only five 2023 rows changed, existing ledger entries/primaries/tags/confidence retained. Published as `4fd7871` after explicit approval; tree matches validated local commit `faf7f24`.
 
 ## RMM 2021 partial checkpoint (2026-11-18)
 
 - Problems 1 and 2 checked and recorded; four rows remain for 2021. This year is incomplete.
 - Problem 1 adds analytic Vectors and dot products and Power of a point from SnowPanda #12’s complete hybrid proof. Problem 2 adds nothing. Existing routes, primaries and confidence retained.
 - Supplied organizer Day1 pp1–3 read for these two rows. Next row: **rmm:2021:3**.
-- Publishing this partial checkpoint at the user’s explicit “push everything that is local rn” request; no completed-year claim.
+- Partial checkpoint published as `2c6a730` at the user’s explicit “push everything that is local rn” request; no completed-year claim. Python ledger tests and all 34 Node checks passed, fail 0; existing routes and other rows preserved.
 
 ## Flagged for the user (do not decide alone)
 
@@ -186,3 +186,5 @@ RMM 2021 flags (2026-11-18):
 - Main 1: #9 swaps V/W relative to the present statement; existing Cartesian source #13 projects onto the T-line where the transversal is needed. #14 compresses its reflection reduction. Official final RQ should be RS. Added analytic vector and circle-power methods only from complete #12; existing primaries and Reviewed status retained.
 
 - Main 2: #2’s fixed-swap construction does not cover arbitrary query subsets. The official cyclic lower bound needs singleton queries treated separately; the forum #3/#14 do so explicitly. #13/#15 alter the statement by changing distinctness/remainder requirements. No new tags.
+
+Publication verification (2026-11-18): remote commits `3d1da1a` (2024), `4fd7871` (2023), and `2c6a730` (2021 partial) have exactly the same Git trees as the validated local checkpoints. Publication used the connected GitHub account with fresh expected-main-SHA guards after CLI authentication was unavailable. Original approval-review rejection was resolved by explicit approval in the current chat; no approval remains pending. A concurrent worker merged these reviews with other catalogue work as `9072d12`; the final notes were rebased onto that merge, preserving its catalogue and ledger byte-for-byte.

@@ -788,7 +788,7 @@ async function setupProgress() {
 
 async function start() {
   try {
-    const response = await fetch('./data/catalogue.json'); if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const response = await fetch('./data/catalogue.json', {cache:'no-cache'}); if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
     const classifiedCount = data.problems.length;
     try {

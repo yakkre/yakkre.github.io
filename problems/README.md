@@ -22,6 +22,16 @@ Forum-check guidance for workbook reviewers (2026-11-16): light forum passes so 
 
 Keep workbook review/source caveats intact during refresh. Snapshot provenance includes input hashes without local machine paths. Do not publish arbitrary research caches, credentials, Firebase data, or project administration notes.
 
+## RMM statement sources (2026-11-17)
+
+All 98 main-paper statements across the 17 published editions have been collected; all 94 currently classified RMM entries have active statements. The four remaining main-paper sources await catalogue entries, rather than statement research.
+
+`data/statement-supplements.json` also holds all 81 numbered statements in the eight populated AoPS shortlist branches: 2016 (9), 2017 (8), 2018 (9), 2019 (11), 2020 (11), 2021 (12), 2023 (9), and 2024 (12). The two versions of 2019 SL G4 share their original label; the three withdrawn 2019 Day 2 statements have separate `original P4`–`original P6` keys and must not replace the contest paper. AoPS's 2019 shortlist numbering differs from the compiled booklet because selected contest problems were omitted; preserve the AoPS IDs.
+
+The 2025 shortlist branch still contains only subject headings; no 2026 shortlist branch or pre-2016 shortlist branch was listed in the collection when checked. These are source-publication limits, not empty completed inventories. In 2020 SL G3, the source omits the definition of I; a labelled statement note identifies I as the incircle centre from the supplied solution. The original two displayed conditions and caveat for 2021 SL A3 are retained.
+
+Supplements attach only to exact existing catalogue keys when the exporter is invoked; collecting a statement does not create a classification, complete a proof review, or continuously refresh the site.
+
 ## Hosting
 
 The folder works with an existing GitHub Pages deployment from the repository root. Ensure the `.mjs` files and `data/catalogue.json` are served. The repository visibility/Pages plan is configured separately by its owner; this change does not change access settings or Firebase rules.

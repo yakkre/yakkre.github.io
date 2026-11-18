@@ -22,8 +22,12 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
       const source = new URL(statement.sourceUrl);
       if (key.startsWith('rmm:')) {
         assert.equal(source.hostname, 'rmms.lbi.ro');
-        assert.ok(source.pathname.startsWith(`/rmm${p.year}/`));
-        assert.match(source.pathname, /(?:RMM\d{4}-Day[12]-English|Probs201[12](?:-D[12]-Eng|D[12]))\.pdf$/);
+        if (p.year === 2018 && p.id.startsWith('SL ')) {
+          assert.equal(source.pathname, '/rmm2019/_dwl/RMM_2018_Extra_List.pdf');
+        } else {
+          assert.ok(source.pathname.startsWith(`/rmm${p.year}/`));
+          assert.match(source.pathname, /(?:RMM\d{4}-Day[12]-English|Probs201[12](?:-D[12]-Eng|D[12]))\.pdf$/);
+        }
       } else {
         assert.equal(source.hostname, 'www.imo-official.org');
         assert.equal(source.pathname, `/assets/documents/problems/${p.year}/IMO${p.year}SL.pdf`);
@@ -43,7 +47,10 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
         2004: 'https://www.imomath.com/imocomp/sl04.pdf',
         2005: 'https://www.imomath.com/imocomp/sl05_0707.pdf'};
       if (key.startsWith('rmm:')) {
-        assert.match(statement.sourceUrl, /^https:\/\/bmos\.ukmt\.org\.uk\/home\/rmm-(?:2008-original|2009|2010-day[12]|2020-day1)\.pdf$/);
+        if (p.id.startsWith('SL ')) {
+          const ids = {2017:902314, 2019:1205070, 2021:3560410};
+          assert.equal(statement.sourceUrl, `https://artofproblemsolving.com/downloads/printable_post_collections/${ids[p.year]}`);
+        } else assert.match(statement.sourceUrl, /^https:\/\/bmos\.ukmt\.org\.uk\/home\/rmm-(?:2008-original|2009|2010-day[12]|2020-day1)\.pdf$/);
       } else if (p.year >= 1990 && p.year <= 1997) {
         assert.ok([compiled, 'https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf'].includes(statement.sourceUrl));
       } else assert.equal(statement.sourceUrl, sources[p.year]);
@@ -157,7 +164,46 @@ test('RMM supplements complete the verified 17-edition main-paper inventory', ()
     count++;
   }
   assert.equal(count, 98);
-  assert.equal(Object.keys(supplements).filter(k => k.startsWith('rmm:')).length, 25);
+  assert.equal(Object.keys(supplements).filter(k => /^rmm:\d{4}:\d+$/.test(k)).length, 25);
   assert.ok(supplements['rmm:2020:1'].sourceCaveat.includes('2019'));
   assert.ok(supplements['rmm:2018:5'].sourceCaveat.includes('pending proof'));
+});
+
+test('RMM shortlist sources preserve collection IDs, distinct versions and source caveats', () => {
+  const supplements = read('../problems/data/statement-supplements.json').statements;
+  const inventories = {
+    2016:'A1 A2 C1 C2 C3 C4 G1 N1 N2',
+    2017:'A1 C1 C2 G1 G2 G3 N1 N2',
+    2018:'A1 C1 C2 C3 C4 G1 G2 N1 N2',
+    2019:'A1 A2 C1 C2 C3 G1 G2 G3 G4 G5 N1',
+    2020:'A1 A2 C1 C2 C3 C4 G1 G2 G3 N1 N2',
+    2021:'A1 A2 A3 A4 C1 C2 G1 G2 G3 G4 N1 N2',
+    2023:'A1 A2 C1 C2 G1 G2 G3 N1 N2',
+    2024:'A1 A2 A3 A4 C1 C2 C3 C4 G1 G2 N1 N2'
+  };
+  let count = 0;
+  for (const [year, ids] of Object.entries(inventories)) for (const id of ids.split(' ')) {
+    const key = `rmm:${year}:SL ${id}`, s = supplements[key];
+    assert.ok(s?.text.length > 60, key);
+    assert.equal(s.sourceYear, Number(year));
+    assert.equal(s.sourceProblem, `SL ${id}`);
+    assert.ok(s.verified && s.sourceLabel);
+    assert.equal(new URL(s.sourceUrl).protocol, 'https:');
+    assert.equal(s.text.split('$').length % 2, 1);
+    assert.equal('solution' in s, false);
+    assert.doesNotMatch(s.text, /\[(?:list|\/list|\*)[^\]]*\]/);
+    count++;
+  }
+  assert.equal(count, 81);
+  for (const n of [4,5,6]) {
+    const s = supplements[`rmm:2019:original P${n}`];
+    assert.equal(s.sourceProblem, `original P${n}`);
+    assert.match(s.sourceCaveat, /Withdrawn/);
+    assert.notEqual(s.sourceUrl, data.statements[`rmm:2019:${n}`]?.sourceUrl);
+  }
+  assert.match(supplements['rmm:2019:SL G4'].text, /Version I\./);
+  assert.match(supplements['rmm:2019:SL G4'].text, /Version II\./);
+  assert.match(supplements['rmm:2020:SL G3'].text, /Source note:.*centre of the incircle/);
+  assert.match(supplements['rmm:2020:SL G3'].sourceCaveat, /omit the definition/);
+  assert.match(supplements['rmm:2021:SL A3'].sourceCaveat, /third/);
 });

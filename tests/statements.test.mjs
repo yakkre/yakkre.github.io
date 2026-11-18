@@ -80,8 +80,9 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
   assert.match(sample.sourceUrl, /h3780397/);
 });
 
-// No proposer is named for these in the official solution notes or on AoPS, so no "Proposed by" line exists.
-const USATST_NO_PROPOSER = new Set(['usatst:2015:6']);
+// No proposer is named for these in the official solution notes (the statement source), so no "Proposed by" line exists.
+// (2015/6 and 2014/4 name none anywhere; AoPS credits 2014/3 to Füredi via Loh and 2014/6 to Alon and Bourgain, and 2014/1 jokingly to Simson.)
+const USATST_NO_PROPOSER = new Set(['usatst:2015:6', 'usatst:2014:1', 'usatst:2014:3', 'usatst:2014:4', 'usatst:2014:6']);
 
 test('every current USA TST entry has a matched, complete statement', () => {
   for (const p of catalogue.problems.filter(p => p.contest === 'usatst')) {

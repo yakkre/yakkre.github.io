@@ -10827,6 +10827,78 @@
       "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
       "sourceSha256": "897678bd189e2944fae6cd0632fdd3acda498bb254848cd148567ee864904855",
       "verified": "2026-11-17"
+    },
+    "usatst:2014:1": {
+      "text": "Let $ABC$ be an acute triangle, and let $X$ be a variable interior point on the minor arc $BC$ of its circumcircle. Let $P$ and $Q$ be the feet of the perpendiculars from $X$ to lines $CA$ and $CB$, respectively. Let $R$ be the intersection of line $PQ$ and the perpendicular from $B$ to $AC$. Let $\\ell$ be the line through $P$ parallel to $XR$. Prove that as $X$ varies along minor arc $BC$, the line $\\ell$ always passes through a fixed point.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2014.tex",
+      "sourceYear": 2014,
+      "sourceProblem": "1",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2014/1",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "b94666d0abea6a13ef6e9a07117dca02aa77ae3fd81eed75bc52d0e252ffc2f6",
+      "verified": "2026-11-17"
+    },
+    "usatst:2014:2": {
+      "text": "Let $a_1$, $a_2$, $a_3$, … be a sequence of integers, with the property that every consecutive group of $a_i$'s averages to a perfect square. More precisely, for all positive integers $n$ and $k$, the quantity \\[ \\frac{a_n + a_{n+1} + \\dots + a_{n+k-1}}{k} \\] is always the square of an integer. Prove that the sequence must be constant (all $a_i$ are equal to the same perfect square).\n\nProposed by Victor Wang.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2014.tex",
+      "sourceYear": 2014,
+      "sourceProblem": "2",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2014/2",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "b94666d0abea6a13ef6e9a07117dca02aa77ae3fd81eed75bc52d0e252ffc2f6",
+      "verified": "2026-11-17"
+    },
+    "usatst:2014:3": {
+      "text": "Let $n$ be an even positive integer, and let $G$ be an $n$-vertex (simple) graph with exactly $\\frac{n^2}{4}$ edges. An unordered pair of distinct vertices $\\{x,y\\}$ is said to be amicable if they have a common neighbor (there is a vertex $z$ such that $xz$ and $yz$ are both edges). Prove that $G$ has at least $2\\binom{n/2}{2}$ pairs of vertices which are amicable.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2014.tex",
+      "sourceYear": 2014,
+      "sourceProblem": "3",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2014/3",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "b94666d0abea6a13ef6e9a07117dca02aa77ae3fd81eed75bc52d0e252ffc2f6",
+      "verified": "2026-11-17"
+    },
+    "usatst:2014:4": {
+      "text": "Let $n$ be a positive even integer, and let $c_1$, $c_2$, …, $c_{n-1}$ be real numbers satisfying \\[ \\sum_{i=1}^{n-1} \\left\\lvert c_i-1 \\right\\rvert < 1. \\] Prove that \\[ 2x^n - c_{n-1}x^{n-1} + c_{n-2}x^{n-2} - \\dots - c_1x^1 + 2 \\] has no real roots.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2014.tex",
+      "sourceYear": 2014,
+      "sourceProblem": "4",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2014/4",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "b94666d0abea6a13ef6e9a07117dca02aa77ae3fd81eed75bc52d0e252ffc2f6",
+      "verified": "2026-11-17"
+    },
+    "usatst:2014:5": {
+      "text": "Let $ABCD$ be a cyclic quadrilateral, and let $E$, $F$, $G$, and $H$ be the midpoints of $AB$, $BC$, $CD$, and $DA$ respectively. Let $W$, $X$, $Y$ and $Z$ be the orthocenters of triangles $AHE$, $BEF$, $CFG$ and $DGH$, respectively. Prove that the quadrilaterals $ABCD$ and $WXYZ$ have the same area.\n\nProposed by Po-Shen Loh.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2014.tex",
+      "sourceYear": 2014,
+      "sourceProblem": "5",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2014/5",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "b94666d0abea6a13ef6e9a07117dca02aa77ae3fd81eed75bc52d0e252ffc2f6",
+      "verified": "2026-11-17"
+    },
+    "usatst:2014:6": {
+      "text": "For a prime $p$, a subset $S$ of residues modulo $p$ is called a sum-free multiplicative subgroup of $\\mathbb{F}_p$ if\n\n • there is a nonzero residue $\\alpha$ modulo $p$ such that $S = \\left\\{ 1, \\alpha^1, \\alpha^2, \\dots \\right\\}$ (all considered mod $p$), and \n • there are no $a,b,c \\in S$ (not necessarily distinct) such that $a+b \\equiv c \\pmod p$.\n\n Prove that for every integer $N$, there is a prime $p$ and a sum-free multiplicative subgroup $S$ of $\\mathbb{F}_p$ such that $\\left\\lvert S \\right\\rvert \\ge N$.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2014.tex",
+      "sourceYear": 2014,
+      "sourceProblem": "6",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2014/6",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "b94666d0abea6a13ef6e9a07117dca02aa77ae3fd81eed75bc52d0e252ffc2f6",
+      "verified": "2026-11-17"
     }
   },
   "pendingKeys": [

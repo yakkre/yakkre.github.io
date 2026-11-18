@@ -1,5 +1,7 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
-import {renderStatement, typesetMath} from './statement-view.mjs?v=20261110-aopsmacros';
+import {renderStatement, typesetMath, loadStatementSources} from './statement-view.mjs?v=20261117-statement-only';
+import {withStatementOnlyProblems, collectionOptions} from './statement-catalogue.mjs?v=20261117-statement-only';
+import {createGridPicker} from './grid-picker.mjs?v=20261117-grid-picker';
 import {parseNote, renderNote, noteExcerpt} from './notes-view.mjs?v=20261117-latex';
 
 const START_HREF = location.href; // before render() rewrites the URL: a sign-in link's code is in it
@@ -12,11 +14,13 @@ const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],[
 const DONE = {yes:'Marked done', no:'Not done yet'};
 let data, tags, filters, page = 1, progress = null, view = 'list', currentColl = '', sharedId = '', sharedCache = null;
 let selecting = false, selectNote = '', lastResults = [];
+let gridPicker;
 const selected = new Set();
 const VIEWS = ['list', 'grid', 'collections'];
 function readView() {
   const q = new URLSearchParams(location.search);
   view = VIEWS.includes(q.get('view')) ? q.get('view') : 'list';
+  if (view === 'grid' && Object.hasOwn(CONTESTS, q.get('grid'))) gridContest = q.get('grid');
   currentColl = view === 'collections' ? q.get('c') || '' : '';
   sharedId = view === 'collections' && /^[A-Za-z0-9_-]{4,40}$/.test(q.get('shared') || '') ? q.get('shared') : '';
 }
@@ -60,6 +64,7 @@ function searchUrl(override={}) {
   if (f.tags.length) q.set('tags', f.tags.join(','));
   const v = override.view ?? view;
   if (v !== 'list') q.set('view', v);
+  if (v === 'grid') q.set('grid', filters.contest || gridContest);
   if (v === 'collections' && (override.c ?? currentColl)) q.set('c', override.c ?? currentColl);
   if (v === 'collections' && (override.shared ?? sharedId)) q.set('shared', override.shared ?? sharedId);
   if (f.mode === 'OR') q.set('mode', 'OR');
@@ -146,7 +151,7 @@ function problemRow(result) {
   head.append(link);
   if (on) head.append(node('span', 'done-tag', '✓ Done'));
   if (progress?.hasNote(p.key)) { const t = node('span', 'note-tag', 'Notes'); t.title = 'You have notes on this problem'; head.append(t); }
-  head.append(node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''} · ${SUBJECTS[p.subject] || p.subject}`));
+  head.append(node('span', 'sub', `${CONTESTS[p.contest] || p.contestName}${p.section && p.section !== 'Shortlist' ? ` ${p.section}` : ''}${p.subject ? ` · ${SUBJECTS[p.subject] || p.subject}` : ''}`));
   if (p.difficulty) { const d = node('span', 'sub difficulty', `Difficulty ${p.difficulty}/5 (estimate)`); d.title = p.difficultyBasis || ''; head.append(d); }
   if (filters.tags.length) head.append(node('span', 'sub match', `${result.primary ? 'Primary match' : 'Additional match'} · ${result.hits}/${filters.tags.length}`));
   const primary = cell('c-method');
@@ -155,11 +160,11 @@ function problemRow(result) {
       const block = node('div','geometry-route'); block.append(node('span','sub',label));
       block.append(route.primaryTag ? tagButton(route.primaryTag) : node('span','sub',route.status==='None found'?'None found':'Not yet reviewed')); primary.append(block);
     }
-  } else primary.append(tagButton(p.primaryTag));
+  } else primary.append(p.primaryTag ? tagButton(p.primaryTag) : node('span','sub','Classification pending'));
   const others = p.tags.filter(id => !(p.primaryTags || [p.primaryTag]).includes(id)), other = cell('c-other');
   if (others.length) { const box = node('span', 'others'); box.append(...others.map(tagButton)); other.append(box); }
   const notes = cell('c-notes'), classification = node('details', 'classification');
-  classification.append(node('summary', null, 'Classification'));
+  classification.append(node('summary', null, p.statementOnly ? 'Classification pending' : 'Classification'));
   if (p.geometry) {
     for (const [label, route] of [['Synthetic',p.geometry.synthetic],['Analytic',p.geometry.analytic]]) {
       classification.append(node('h3','route-heading',label),node('p',null,route.explanation));
@@ -175,7 +180,10 @@ function problemRow(result) {
   detail.append(research); classification.append(detail); notes.append(classification);
   const src = cell('c-src');
   for (const [label, url] of [['AoPS', p.aopsUrl], ['Official', p.officialUrl]]) { const a = url && sourceLink(label, url); if (a) src.append(a); }
-  src.append(node('span', `status ${p.forumStatus}`, STATUS[p.forumStatus]));
+  if (p.statementOnly && !p.aopsUrl && !p.officialUrl && p.sourceUrls[0]) {
+    const a = sourceLink('Source', p.sourceUrls[0]); if (a) src.append(a);
+  }
+  src.append(node('span', `status ${p.forumStatus}`, p.statementOnly ? 'Statement only · proof review pending' : STATUS[p.forumStatus]));
   return tr;
 }
 function resultsTable(rows) {
@@ -259,6 +267,8 @@ async function copyUrl(url, b) {
 }
 function renderCoverage() {
   const c = $('coverage-content'); c.append(node('p', null, data.scope));
+  const waiting = data.problems.filter(p => p.statementOnly).length;
+  if (waiting) c.append(node('p', null, `${waiting} additional verified statements are available without method tags. Classification and proof review are still pending for these entries.`));
   for (const s of data.snapshots || []) if (s.count != null) c.append(node('p', null, `${CONTESTS[s.contest] || s.contest}: ${s.count} entries`));
   for (const x of data.coverage) c.append(node('h3', null, x.title), node('p', null, x.text));
   c.append(node('h3', null, 'Caveats'));
@@ -287,7 +297,7 @@ const idOrder = id => { const m = String(id).match(/^(\D*)(\d+)/); return m ? [m
 function renderGrid(matches) {
   if (filters.contest) gridContest = filters.contest;
   const isDone = key => !!progress?.isDone(key);
-  document.querySelectorAll('[data-grid]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.grid === gridContest)));
+  gridPicker?.setSelected(gridContest);
   const probs = data.problems.filter(p => p.contest === gridContest);
   const doneCount = probs.filter(p => isDone(p.key)).length;
   const hits = matches ? probs.filter(p => matches.has(p.key)).length : 0;
@@ -310,7 +320,7 @@ function renderGrid(matches) {
       last = p.subject;
       const on = isDone(p.key), hit = matches?.has(p.key), sel = selecting && selected.has(p.key);
       const a = node('a', `grid-cell ${on ? 'done' : 'todo'}${hit ? ' match' : ''}${sel ? ' selected' : ''}${progress?.hasNote(p.key) ? ' has-note' : ''}`, p.id); a.href = entryUrl(p);
-      a.title = `${problemName(p)}: ${on ? 'done' : 'not done'}${hit ? ', matches your filters' : ''}${selecting ? (sel ? ' (selected)' : ' (click to select)') : ''}`;
+      a.title = `${problemName(p)}: ${on ? 'done' : 'not done'}${p.statementOnly ? ', statement available; classification pending' : ''}${hit ? ', matches your filters' : ''}${selecting ? (sel ? ' (selected)' : ' (click to select)') : ''}`;
       a.dataset.key = p.key;
       if (selecting) { a.setAttribute('aria-pressed', String(sel)); a.draggable = false; } else a.setAttribute('aria-haspopup', 'dialog');
       a.addEventListener('click', e => {
@@ -780,9 +790,18 @@ async function start() {
   try {
     const response = await fetch('./data/catalogue.json'); if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
+    const classifiedCount = data.problems.length;
+    try {
+      const sources = await loadStatementSources();
+      data.problems = withStatementOnlyProblems(data.problems, sources.statements);
+    } catch (error) { console.warn('Additional statements unavailable:', error); }
+    const options = collectionOptions(data.problems, CONTESTS);
+    for (const o of options) CONTESTS[o.id] = o.label;
+    const contestSelect = $('contest');
+    contestSelect.replaceChildren(new Option('All',''), ...options.map(o => new Option(o.label,o.id)));
     tags = new Map(data.taxonomy.map(t => [t.id, t])); filters = readFilters();
     $('tag-total').textContent = data.taxonomy.length;
-    $('total-stat').textContent = `${data.problems.length.toLocaleString()} (${Object.entries(data.counts || {}).map(([k,v]) => `${CONTESTS[k] || k} ${v}`).join(', ')})`;
+    $('total-stat').textContent = `${data.problems.length.toLocaleString()} (${options.map(o => `${o.label} ${o.count}`).join(', ')})${data.problems.length > classifiedCount ? ` · ${(data.problems.length-classifiedCount).toLocaleString()} awaiting classification` : ''}`;
     $('updated').textContent = 'snapshot ' + new Intl.DateTimeFormat('en', {dateStyle:'medium', timeZone:'UTC'}).format(new Date(data.updated));
     const years = [...new Set(data.problems.map(p => p.year))].sort((a,b) => b - a);
     for (const id of ['from-year','to-year']) for (const year of years) { const o = node('option', null, year); o.value = year; $(id).append(o); }
@@ -815,10 +834,10 @@ async function start() {
     setupGridDrag();
     setupNotes();
     setupProblemView();
-    document.querySelectorAll('[data-grid]').forEach(b => b.addEventListener('click', () => {
-      gridContest = b.dataset.grid;
+    gridPicker = createGridPicker($('grid-chooser'), options, id => {
+      gridContest = id;
       if (filters.contest && filters.contest !== gridContest) update({contest:''}); else render();
-    }));
+    });
     await setupProgress();
     try {
       const {createNotebook} = await import('./notebook.mjs?v=20261117-latex');

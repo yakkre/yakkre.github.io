@@ -1,6 +1,15 @@
 import {problemName} from './catalogue-core.mjs?v=20261103-names';
 
 let statementsPromise, mathPromise, currentKey;
+export function loadStatementSources() {
+  if (!statementsPromise) statementsPromise = Promise.all(['statements.json','statement-supplements.json'].map(name =>
+    fetch(`./data/${name}`).then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  )).then(([active, supplements]) => ({...active, statements:{
+    ...Object.fromEntries(Object.entries(supplements.statements || {}).filter(([,s]) => s.publicationStatus !== 'hold')),
+    ...active.statements
+  }})).catch(error => { statementsPromise = null; throw error; });
+  return statementsPromise;
+}
 const element = (tag, text, className) => {
   const node = document.createElement(tag);
   if (text != null) node.textContent = text;
@@ -83,11 +92,7 @@ export async function renderStatement(panel, problem) {
   const title = element('h2', `${problemName(problem)} — Problem statement`);
   panel.append(title, element('p', 'Loading statement…', 'statement-source'));
   try {
-    if (!statementsPromise) statementsPromise = fetch('./data/statements.json').then(r => {
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return r.json();
-    }).catch(error => { statementsPromise = null; throw error; });
-    const data = await statementsPromise;
+    const data = await loadStatementSources();
     if (currentKey !== key) return;
     const statement = data.statements[key];
     panel.replaceChildren(title);

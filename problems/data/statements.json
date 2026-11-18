@@ -10372,7 +10372,7 @@
       "verified": "2026-11-17"
     },
     "usatst:2026:2": {
-      "text": "Let $p$ be a prime and let $a,b$ be positive integers less than $p$. Prove that $$\\sum_{k=1}^{b}(-1)^{\\lfloor (a-1)k/p\\rfloor+\\lfloor ak/p\\rfloor}\\ge0.$$\n\nProposed by Ruben Carpenter.",
+      "text": "Let $p$ be a prime and let $a,b$ be positive integers less than $p$. Prove that $$\\sum_{k=1}^{b}(-1)^{\\lfloor (a-1)k/p\\rfloor+\\lfloor ak/p\\rfloor}\\ge0.$$\n\nProposed by Daniel Zhu.",
       "kind": "official",
       "sourceUrl": "https://raw.githubusercontent.com/usa-tst-public/USA-TST-Archive/main/IMOTST2026Problems.pdf",
       "sourceYear": 2026,
@@ -10381,7 +10381,9 @@
       "sourcePage": 1,
       "sourceLabel": "Official USA IMO TST problem paper",
       "sourceSha256": "1aca34d1e17799324c6880344fcd5b0a1da7e34bdd81ee0164ee3228bcf5d523",
-      "verified": "2026-11-17"
+      "verified": "2026-11-17",
+      "creditSourceUrl": "https://artofproblemsolving.com/community/c6h3733954p36710650",
+      "creditSourcePost": 1
     },
     "usatst:2026:3": {
       "text": "Prove that for every subset $S\\subseteq\\mathbb{R}^2$ there is a rectangle of area $1$, not necessarily axis-aligned, whose strict interior contains either zero or more than $2025$ points of $S$.\n\nProposed by Ryan Alweiss.",

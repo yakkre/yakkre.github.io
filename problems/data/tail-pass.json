@@ -5511,6 +5511,35 @@
    "date": "2026-11-17",
    "range": "#1–#3 of 3 (all loaded)",
    "note": "Posts (tjhance #2 scaling to integers and parity of Pythagorean steps, analytic #3 sketch) show an odd closed rational unit-length broken line cannot exist; corroborates existing tags."
+  },
+  "usatst:2026:5": {
+   "date": "2026-11-17",
+   "range": "Official-solution sample: USA TST 2026 Solutions pp9–10, Involutions alternative (not a new tail-post pass)",
+   "note": "The complete supplied alternative proves the crucial midpoint claim using Desargues' involution theorem on the tangency-point quadrilateral, then completes the same radical-axis argument. Add the projective-method tag to the synthetic route; both existing primaries and the Cartesian route remain unchanged.",
+   "addTags": [
+    "syn:G: Projective incidence"
+   ],
+   "cite": "https://github.com/usa-tst-public/USA-TST-Archive/blob/main/IMOTST2026Solutions.pdf, pp9–10"
+  },
+  "usatst:2024:3": {
+   "date": "2026-11-17",
+   "range": "Official-solution sample: USA TST 2024/3, both complete cyclotomic-divisibility proofs (not a new tail-post pass)",
+   "note": "The subset-sum generating function and coefficient extraction drive both supplied proofs. The existing algebraic-combinatorics primary already covers this broadly; add the precise generating-functions label for method search. No primary change.",
+   "addTags": [
+    "A: Generating functions"
+   ],
+   "cite": "https://web.evanchen.cc/exams/sols-TST-IMO-2024.tex, section USA TST 2024/3"
+  },
+  "rmm:2023:4": {
+   "date": "2026-11-17",
+   "range": "Official-solution sample: RMM 2023 Day2 supplied solutions p1, Solution4 (not a new tail-post pass)",
+   "note": "The supplied ellipse proof is a complete additional Cartesian route: parametrize the ellipse with foci P,Q and focal sum BC and complete a square to place it inside the circle centred at M of radius R=MK. Degenerate projections follow directly or by continuity. Add Cartesian as analytic additional; keep complex as analytic primary and all synthetic tags.",
+   "addTags": [
+    "ana:G: Cartesian coordinates"
+   ],
+   "ana_explanation": "Alternatively, use coordinates centred at the midpoint of the projections: parametrize the ellipse whose focal sum is BC and complete a square to show it lies inside the circle centred at M of radius MK. This yields the same distance inequality.",
+   "ana_refs": "https://rmms.lbi.ro/rmm2023/pr2/RMM2023-Day2-English_Solutions.pdf | physical p1, Solution4; complete Cartesian ellipse proof checked in the 2026-11-17 sample; degenerate projections handled directly/continuously.",
+   "cite": "https://rmms.lbi.ro/rmm2023/pr2/RMM2023-Day2-English_Solutions.pdf, p1 Solution4"
   }
  }
 }

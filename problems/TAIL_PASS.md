@@ -102,9 +102,16 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 
 ## What is left (resume here)
 
-1. **RMM 2024 and older** (75 rows; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
+1. **RMM 2023 and older** (71 open rows after completing 2024; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
 2. Loose ends: 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 were thread-scanned but could not be matched to their Compendium solutions; 1999 G2's official "Solution 2" (coordinate determinants)
    is only known from a truncated AoPS quote and could be verified against an original booklet.
+
+## RMM pass completed for 2024 (2026-11-18)
+
+- All 14 originally open 2024 rows checked and recorded, plus the pre-existing shortlist A4 entry. The 2024 todo is empty; 71 rows remain from 2023 back to 2008.
+- Four secondary additions: main 1 and main 6 Algebraic combinatorics methods, main 4 Number theoretic sequences, shortlist C4 Inequalities—convexity arguments. No primary or existing tag changed.
+- Official-source check: organizer 2024 problems page and linked Day1/Day2 papers, plus UKMT Day1, expose statements only. A focused search on rmms.lbi.ro and bmos.ukmt.org.uk found no supplied main/shortlist solution booklet. This is a source gap, not a claim that none exists online. Main 2 #17 and shortlist A2 #3 are attributed forum reproductions, with caveats below.
+- Resume at **rmm:2023:1**, using the current year todo. Validation and publication are recorded below after the year checks.
 
 ## Flagged for the user (do not decide alone)
 
@@ -120,3 +127,32 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 
 Resolved: 2009 G7 (2026-11-16) — home245's synthetic proof (#14 of 17; the ledger's "#15") was added in the
 workbook as the synthetic route with Medium confidence, by user decision (IMO workbook checkpoint 194).
+
+RMM 2024 flags (2026-11-18):
+- Main 1: vsamc #5 and lnzhonglp #8 print a geometric sum as 2^n instead of 2^n−1. The added tag relies on KevinYang2.71 #12, not these slips.
+- Main 2: Assassino9931 #17 is labelled the second official solution, but alpha is undefined in the final estimate and the j>1 argument counts q remaining b values after a preceding b is consumed; the missing case/parity justification should be checked against the original booklet. No tag added from it. DottedCaculator #2 invokes Cauchy–Davenport without supplying that result; MS_Kekas #4 links an outside editorial and Safal #7 supplies only an attachment. These were not used as complete proofs for new tags.
+
+- Main 3: #2 Hall/determinant argument is compressed and #6 invokes Chevalley–Warning without proof. #8 claims all three colors are used, whereas its dimension argument only establishes nonconstancy; the weaker conclusion suffices. No new tags.
+- Main 4: #4 omits a difference-sign case; #15 is an uncertain sketch; #16 stronger generalization fails for a=3,b=2; #19 omits a multiplier-sign justification; #20 reverses a valuation inequality. The addition uses the complete #21 instead.
+- Main 5: #6 complex expansion failed numerical checks in its first expanded line (100/100 trials), despite the final cross-ratio being real; do not add Complex numbers from it. #13 has a final circle-power sign issue; #22 barycentric formulas remain unverified here. #17/#19/#24/#26 invoke outside degree-counting/conic results, #18 leaves its lemma to an inversion, #20 is explicitly a sketch and #23 invokes DDIT without proof. None used for a new tag.
+- Main 6: #8 invokes Fourier inversion, #9 leaves its Littlewood–Offord/Sperner step unproved, #10 links part of its auxiliary argument, and #12 is link-only. #13 drops Q² to Q in the flip argument and omits the degree cutoff in a displayed bound. The new Algebraic combinatorics methods tag uses the complete #11 finite-field counting argument.
+
+Year validation passed: Python ledger tests OK; 34 Node tests passed, fail 0. Exact preservation check: all existing ledger entries, all primaries/confidence/existing tags and every non-2024 catalogue object unchanged; 14 new ledger entries. Run the shell rebuild with NODE_OPTIONS=--test-reporter=spec in this non-TTY environment so its existing summary grep sees the expected output. No script changes.
+
+- Shortlist A1: #2 states its dominance claims with arbitrary real constants where positivity is needed, and its constant-shift sentence needs a sign correction. #3 swaps a/b in its final display; its pairing argument otherwise corroborates the existing tags. No new tag.
+
+- Shortlist A2: #5 is corrected in #6 and retracted in #7; #9 has malformed/sign-inconsistent identities. Attributed official reproduction #3 prints xt for zt and omits the zero-sum additivity boundary (covered by the same negative auxiliary-variable argument); #4 is explicitly tentative. No new tag.
+
+- Shortlist A3: #2 is not injective: exponent triples (1,2,2) and (0,2,3) have the same proposed image. #5 has an induction-list typo and stops its claim one index early; zero variables need continuity. Exact-rational checks corroborate its corrected ratio argument. #6 is attachment/outside-research only. No new tag.
+
+- Shortlist C1: #2 says 2n points instead of n and its attainment configuration needs distinct pairwise directions. #5 does not justify its scanning-line model/count; not used for additions.
+
+- Shortlist C3: #2/#6 wrongly count entire same-majority blocks as popular cells (#5 objects); all 512 n=3 grids confirm counterexamples. #3 has a plus/minus typo in its block inequality and only sketches zero-block cases. No additions or confidence changes; the prior classification remains untouched.
+
+- Shortlist C4: #2 uses inconsistent 0/1-based bucket notation and reverses the two comparisons with n/p in its missing/repeated-bucket sentence. With the earlier 0-based ranks retained, the full elementary majorization proof is correct; its score identities passed n=2–30 checks. Added convexity/majorization, with all existing tags and primary retained.
+
+- Shortlist N1: #3 has an incorrect displayed quotient identity and later loses a 2024 factor; #4 omits k=0 (b=a²), which needs exclusion using the next sequence step. No new tags; complete #2 retained as evidence.
+
+- Shortlist N2: #3 prints a strict lower bound a_(i_k)>2kp where ≥ is justified; the earlier strict bound a_p>a_(i_k) suffices. #4 is tentative/attachment-only, not used for additions.
+
+- Shortlist A4: the pre-existing reviewed entry retains Medium confidence because the posted positive-root branch omits negative tails; the prior review supplies a finite-branch/fallback completion. Keep confidence unchanged pending the user’s decision.

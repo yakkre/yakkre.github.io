@@ -102,7 +102,7 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 
 ## What is left (resume here)
 
-1. **RMM 2021 and older** (66 open rows after completing 2024 and 2023; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
+1. **RMM 2021 and older** (64 open rows after completing 2024/2023 and two 2021 checks; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
 2. Loose ends: 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 were thread-scanned but could not be matched to their Compendium solutions; 1999 G2's official "Solution 2" (coordinate determinants)
    is only known from a truncated AoPS quote and could be verified against an original booklet.
 
@@ -111,7 +111,7 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 - All 14 originally open 2024 rows checked and recorded, plus the pre-existing shortlist A4 entry. The 2024 todo is empty; 71 rows remain from 2023 back to 2008.
 - Four secondary additions: main 1 and main 6 Algebraic combinatorics methods, main 4 Number theoretic sequences, shortlist C4 Inequalities—convexity arguments. No primary or existing tag changed.
 - Official-source check: organizer 2024 problems page and linked Day1/Day2 papers, plus UKMT Day1, expose statements only. A focused search on rmms.lbi.ro and bmos.ukmt.org.uk found no supplied main/shortlist solution booklet. This is a source gap, not a claim that none exists online. Main 2 #17 and shortlist A2 #3 are attributed forum reproductions, with caveats below.
-- 2024 saved as commit `8afdfec`; publication is pending explicit approval in this chat after automatic approval review rejected prior-chat authorization. Do not bypass that rejection.
+- 2024 published via the connected GitHub account as `3d1da1a` (tree identical to validated local `8afdfec`), after explicit approval in this chat. CLI authentication was unavailable.
 
 ## RMM pass completed for 2023 (2026-11-18)
 
@@ -119,6 +119,13 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 - Added Graph theory—structural on problem 2, plus Induction and recursion and Extremal arguments on problem 6, each from complete proofs.
 - Read both supplied Day1/Day2 solution booklets for these five problems, including their alternatives; minor slips and incomplete forum candidates are flagged below. Problem 3 remains Medium for the user’s decision.
 - Next row: **rmm:2021:1** (confirm against the year todo). Python ledger tests OK; 34 Node checks passed, fail 0. Exact preservation confirmed: only five 2023 rows changed, existing ledger entries/primaries/tags/confidence retained. Local year commit prepared; no push is claimed.
+
+## RMM 2021 partial checkpoint (2026-11-18)
+
+- Problems 1 and 2 checked and recorded; four rows remain for 2021. This year is incomplete.
+- Problem 1 adds analytic Vectors and dot products and Power of a point from SnowPanda #12’s complete hybrid proof. Problem 2 adds nothing. Existing routes, primaries and confidence retained.
+- Supplied organizer Day1 pp1–3 read for these two rows. Next row: **rmm:2021:3**.
+- Publishing this partial checkpoint at the user’s explicit “push everything that is local rn” request; no completed-year claim.
 
 ## Flagged for the user (do not decide alone)
 
@@ -174,3 +181,8 @@ RMM 2023 flags (2026-11-18):
 - Main 5: official Solution 1 substitutes S(x) where Q(x) is intended. Forum #10 has undefined/inconsistent symbols, #11 needs branch/uniform-asymptotic justification, #12 confuses powers/composition and degrees, #14 compresses its asymptotic fibre matching and induction. No new tags from these candidates.
 
 - Main 6: #10/#14/#18/#23/#24 use unproved matroid, polytope or real-stability results; no tags from those. #34 wrongly infers isolated vertices from disconnection; #37 leaves mutual tree exchange unjustified and reverses its common-edge potential; #32/#36 compress the cut invariant. #38 reverses the words naming the removed/added edges but its counts specify the intended valid two-edge repair. Official Solution 2 has minor R(C) and C1/C2 symbol slips. Added induction and extremal methods from the two complete supplied proofs.
+
+RMM 2021 flags (2026-11-18):
+- Main 1: #9 swaps V/W relative to the present statement; existing Cartesian source #13 projects onto the T-line where the transversal is needed. #14 compresses its reflection reduction. Official final RQ should be RS. Added analytic vector and circle-power methods only from complete #12; existing primaries and Reviewed status retained.
+
+- Main 2: #2’s fixed-swap construction does not cover arbitrary query subsets. The official cyclic lower bound needs singleton queries treated separately; the forum #3/#14 do so explicitly. #13/#15 alter the statement by changing distinctness/remainder requirements. No new tags.

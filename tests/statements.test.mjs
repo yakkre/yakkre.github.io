@@ -80,6 +80,9 @@ test('statement coverage reconciles with catalogue and preserves provenance', ()
   assert.match(sample.sourceUrl, /h3780397/);
 });
 
+// No proposer is named for these in the official solution notes or on AoPS, so no "Proposed by" line exists.
+const USATST_NO_PROPOSER = new Set(['usatst:2015:6']);
+
 test('every current USA TST entry has a matched, complete statement', () => {
   for (const p of catalogue.problems.filter(p => p.contest === 'usatst')) {
     const s = data.statements[p.key];
@@ -90,7 +93,8 @@ test('every current USA TST entry has a matched, complete statement', () => {
     assert.ok(s.sourceSha256 && s.verified);
     assert.doesNotMatch(s.text, /\\(?:RR|ZZ|NN|FF|ol|arc|dg|ii)(?![A-Za-z])/);
     assert.doesNotMatch(s.text, /\\(?:begin|end)\{(?:enumerate|itemize)\}/);
-    assert.match(s.text, /Proposed by [^\n]+\.$/);
+    if (USATST_NO_PROPOSER.has(p.key)) assert.doesNotMatch(s.text, /Proposed by/);
+    else assert.match(s.text, /Proposed by [^\n]+\.$/);
   }
   assert.match(data.statements['usatst:2026:1'].text, /2\^n-1/);
   assert.match(data.statements['usatst:2025:3'].text, /P_i\^\{j\+1\}/);

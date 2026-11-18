@@ -10755,6 +10755,78 @@
       "sourceLabel": "Official TST solution source published by Evan Chen",
       "sourceSha256": "0190326365f3778af058dfaf1e09676e5065a4e6dbf151b23e2d18fb9cc64d40",
       "verified": "2026-11-17"
+    },
+    "usatst:2015:1": {
+      "text": "Let $ABC$ be a scalene triangle whose incircle is tangent to $\\overline{BC}$, $\\overline{CA}$, $\\overline{AB}$ at $D$, $E$, $F$, respectively. Denote by $M$ the midpoint of $\\overline{BC}$ and let $P$ be a point in the interior of $\\triangle ABC$ so that $MD = MP$ and $\\angle PAB = \\angle PAC$. Let $Q$ be a point on the incircle such that $\\angle AQD = 90^{\\circ}$. Prove that either $\\angle PQE = 90^{\\circ}$ or $\\angle PQF = 90^{\\circ}$.\n\nProposed by Evan Chen.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2015.tex",
+      "sourceYear": 2015,
+      "sourceProblem": "1",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2015/1",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "897678bd189e2944fae6cd0632fdd3acda498bb254848cd148567ee864904855",
+      "verified": "2026-11-17"
+    },
+    "usatst:2015:2": {
+      "text": "Prove that for every positive integer $n$, there exists a set $S$ of $n$ positive integers such that for any two distinct $a,b \\in S$, $a-b$ divides $a$ and $b$ but none of the other elements of $S$.\n\nProposed by Iurie Boreico.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2015.tex",
+      "sourceYear": 2015,
+      "sourceProblem": "2",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2015/2",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "897678bd189e2944fae6cd0632fdd3acda498bb254848cd148567ee864904855",
+      "verified": "2026-11-17"
+    },
+    "usatst:2015:3": {
+      "text": "A physicist encounters $2015$ atoms called usamons. Each usamon either has one electron or zero electrons, and the physicist can't tell the difference. The physicist's only tool is a diode. The physicist may connect the diode from any usamon $A$ to any other usamon $B$. (This connection is directed.) When she does so, if usamon $A$ has an electron and usamon $B$ does not, then the electron jumps from $A$ to $B$. In any other case, nothing happens. In addition, the physicist cannot tell whether an electron jumps during any given step. The physicist's goal is to isolate two usamons that she is 100% sure are currently in the same state. Is there any series of diode usage that makes this possible?\n\nProposed by Linus Hamilton.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2015.tex",
+      "sourceYear": 2015,
+      "sourceProblem": "3",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2015/3",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "897678bd189e2944fae6cd0632fdd3acda498bb254848cd148567ee864904855",
+      "verified": "2026-11-17"
+    },
+    "usatst:2015:4": {
+      "text": "Let $f \\colon \\mathbb{Q} \\to \\mathbb{Q}$ be a function such that for any $x,y \\in \\mathbb{Q}$, the number $f(x+y)-f(x)-f(y)$ is an integer. Decide whether there must exist a constant $c$ such that $f(x) - cx$ is an integer for every rational number $x$.\n\nProposed by Victor Wang.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2015.tex",
+      "sourceYear": 2015,
+      "sourceProblem": "4",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2015/4",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "897678bd189e2944fae6cd0632fdd3acda498bb254848cd148567ee864904855",
+      "verified": "2026-11-17"
+    },
+    "usatst:2015:5": {
+      "text": "Fix a positive integer $n$. Find the smallest positive integer $\\chi$ for which there exists a tournament on $n$ vertices, and a coloring of each of the tournament's edges by one of $\\chi$ colors, such that: any two directed edges $u \\to v$ and $v \\to w$ have different colors.\n\nProposed by Po-Shen Loh.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2015.tex",
+      "sourceYear": 2015,
+      "sourceProblem": "5",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2015/5",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "897678bd189e2944fae6cd0632fdd3acda498bb254848cd148567ee864904855",
+      "verified": "2026-11-17"
+    },
+    "usatst:2015:6": {
+      "text": "Let $ABC$ be a non-equilateral triangle and let $M_a$, $M_b$, $M_c$ be the midpoints of the sides $BC$, $CA$, $AB$, respectively. Let $S$ be a point lying on the Euler line. Denote by $X$, $Y$, $Z$ the second intersections of $M_a S$, $M_b S$, $M_c S$ with the nine-point circle. Prove that $AX$, $BY$, $CZ$ are concurrent.",
+      "kind": "official",
+      "sourceUrl": "https://web.evanchen.cc/exams/sols-TST-IMO-2015.tex",
+      "sourceYear": 2015,
+      "sourceProblem": "6",
+      "sourceFormat": "tex",
+      "sourceSection": "USA TST 2015/6",
+      "sourceLabel": "USA TST supplied solution source published by Evan Chen; statement only collected",
+      "sourceSha256": "897678bd189e2944fae6cd0632fdd3acda498bb254848cd148567ee864904855",
+      "verified": "2026-11-17"
     }
   },
   "pendingKeys": [

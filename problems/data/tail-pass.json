@@ -5540,6 +5540,12 @@
    "ana_explanation": "Alternatively, use coordinates centred at the midpoint of the projections: parametrize the ellipse whose focal sum is BC and complete a square to show it lies inside the circle centred at M of radius MK. This yields the same distance inequality.",
    "ana_refs": "https://rmms.lbi.ro/rmm2023/pr2/RMM2023-Day2-English_Solutions.pdf | physical p1, Solution4; complete Cartesian ellipse proof checked in the 2026-11-17 sample; degenerate projections handled directly/continuously.",
    "cite": "https://rmms.lbi.ro/rmm2023/pr2/RMM2023-Day2-English_Solutions.pdf, p1 Solution4"
+  },
+  "rmm:2024:SL A4": {
+   "date": "2026-11-18",
+   "range": "#1–#2 of 2 (all loaded); original statement and proposer proof",
+   "cite": "#2 dgrozev",
+   "note": "Focused recheck while restoring the saved classification. The positive-root-only proof omits negative tails; the explicit finite-branch and eventual-fallback completion is recorded in the review. Original Medium confidence retained. No new method tag; official booklet still pending."
   }
  }
 }

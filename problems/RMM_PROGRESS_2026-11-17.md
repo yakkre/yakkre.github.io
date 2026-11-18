@@ -1,5 +1,7 @@
 # RMM checkpoint, 2026-11-17
 
+Latest continuation: [18 November checkpoint](RMM_PROGRESS_2026-11-18.md), with 106 classifications (97 main + 9 restored shortlist). The dated record below is retained as history.
+
 The main-paper catalogue now has **97 of 98 original problems classified**, across the 17 published editions. All 98 main-paper statements are accessible, including the remaining unclassified 2010 P5. All 22 main geometry problems are listed; 2008 P1 has only a reviewed analytic route, with no synthetic primary invented.
 
 Added in this checkpoint:

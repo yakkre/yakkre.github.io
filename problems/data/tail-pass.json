@@ -5546,6 +5546,104 @@
    "range": "#1–#2 of 2 (all loaded); original statement and proposer proof",
    "cite": "#2 dgrozev",
    "note": "Focused recheck while restoring the saved classification. The positive-root-only proof omits negative tails; the explicit finite-branch and eventual-fallback completion is recorded in the review. Original Medium confidence retained. No new method tag; official booklet still pending."
+  },
+  "rmm:2024:1": {
+   "date": "2026-11-18",
+   "range": "#1–#14 of 14 (all loaded; #6 and #9 absent); whole available thread, including opening posts",
+   "note": "Late posts: awesomeming327. #11 proves forced block swaps and commuting involutions; KevinYang2.71 #12 identifies an F2 basis and fills the remaining travel with 1-jumps; freshestcheese #14 gives the same doubling induction. These corroborate existing binary/permutation tags; #12 additionally supplies the complete finite-field formulation. XOR commutation and the 2^(n−1) odd-mask count checked numerically for n=1–7. Official-source check: organizer 2024 problems page and its Day1 PDF, plus the UKMT Day1 PDF, provide statements only; no supplied proof was found at these links, so official-solution review remains unfulfilled rather than claimed absent online. vsamc #5 and lnzhonglp #8 print 2^n=sum(2^i) where the sum is 2^n−1; not used for the added tag.",
+   "addTags": [
+    "C: Algebraic combinatorics methods"
+   ],
+   "cite": "https://artofproblemsolving.com/community/c6h3266692p30041312 | #12 KevinYang2.71 complete F2-basis formulation; official links checked: https://rmms.lbi.ro/rmm2024/pr1/RMM2024-Day1-English.pdf and https://bmos.ukmt.org.uk/home/rmm-2024-day1.pdf"
+  },
+  "rmm:2024:2": {
+   "date": "2026-11-18",
+   "range": "#1–#17 of 17 (all loaded; #12 and #15 absent); whole available thread",
+   "note": "Late posts: KevinYang2.71 #14 gives a complete merge/split induction with the stronger multiplicity bound (N+p)/2; Zena_B #6, bhan2025 #9 and sami1618 #11 use frequency-greedy constructions. These corroborate the existing local/inductive number-theoretic combinatorics tags; no addition. Assassino9931 #17 labels its greedy argument Second official solution: read as an attributed AoPS reproduction, not an organizer PDF; its final displayed bound uses undefined alpha, and the j>1 count needs clarification after the preceding b is consumed, so this reproduction is flagged rather than treated as an independently complete official proof. Organizer and UKMT 2024 Day1 PDFs checked: statements only. #2 invokes Cauchy–Davenport without proof; #4 points to an outside editorial and #7 is attachment-only; none used to add tags.",
+   "cite": "https://artofproblemsolving.com/community/c6h3266693p30041340 | #14 KevinYang2.71; #17 Assassino9931 attributed second official solution (caveats flagged); https://rmms.lbi.ro/rmm2024/pr1/RMM2024-Day1-English.pdf"
+  },
+  "rmm:2024:3": {
+   "date": "2026-11-18",
+   "range": "#1–#9 of 9 (whole thread, all loaded)",
+   "note": "lminsl #8 and dgrozev #9 construct a nonconstant F3-kernel coloring and recursively shrink monochromatic configurations around equilateral-triangle vertices; these corroborate all four existing tags, so no addition. The dimension argument guarantees a nonconstant coloring, not the stronger all-three-colors wording in #8; that stronger claim is unnecessary. DottedCaculator #2 sketches a Hall/determinant route without a full determinant argument, and MathLover_ZJ #6 invokes Chevalley–Warning; neither supplies a new tagged method here. Official organizer Day1 paper checked and matched: statements only; no supplied proof located on the authorized official hosts.",
+   "cite": "https://artofproblemsolving.com/community/c6h3266696p30041370 | #8 lminsl and #9 dgrozev; https://rmms.lbi.ro/rmm2024/pr1/RMM2024-Day1-English.pdf"
+  },
+  "rmm:2024:4": {
+   "date": "2026-11-18",
+   "range": "#1–#21 of 21 (whole thread, all loaded)",
+   "note": "VicKmath7 #8, vsamc #10 and sami1618 #18 force r_(n+1)=b r_n by congruence plus size, then contradict the remainder bound. KevinYang2.71 #21 gives a complete fractional-part recurrence for q=b/a>1 and its iterated-growth contradiction; add Number theoretic sequences for this substantive recurrence route. Official organizer Day2 PDF checked: statements only; no supplied proof located on the authorized official hosts. Candidate cautions: bin_sherlo #4 omits the negative-difference branch; Iveela #15 asks whether its sketch works; dgrozev #16 claims the stronger o(a^n) impossibility without excluding b<a (counterexample a=3,b=2); megarnie #19 assumes the congruence multiplier positive without first bounding b r_n; AleMM #20 reverses the final valuation inequality. None of those candidates supports the addition.",
+   "addTags": [
+    "N: Number theoretic sequences"
+   ],
+   "explanationAppend": "A late proof forces the fractional parts of (b/a)^n to multiply by b/a, contradicting their decay unless a divides b.",
+   "cite": "https://artofproblemsolving.com/community/c6h3266700p30041396 | #21 KevinYang2.71 full fractional-part recurrence proof; https://rmms.lbi.ro/rmm2024/pr2/RMM2024-Day2-English.pdf"
+  },
+  "rmm:2024:5": {
+   "date": "2026-11-18",
+   "range": "#17–#26 of 26 (all loaded; #10–#12 absent); thanked middle posts #5–#7 and #13 read in full",
+   "note": "The late Cartesian proof Assassino9931 #25 confirms the existing analytic tag and fixed equilateral vertices; its center/radius identities passed four nondegenerate numerical cases. trigadd123 #5 gives a clean point-circle radical-axis proof, corroborating existing synthetic tags. No new tag: BlizzardWizard #6 complex proof has a sign error in its first expanded product (failed 100/100 numerical checks, although the final cross-ratio is real); Bajkinman #13 ends by equating a negative circle power to MU^2; KevinYang2.71 #22 barycentric expansion remains unverified in this pass. Moving-points/projective candidates #17/#19/#24/#26 use unproved degree-counting or conic results, MathSaiyan #18 leaves a lemma to inversion, GrantStar #20 is explicitly a sketch, and #23 relies on DDIT without proof. Candidates are flagged, not used for new route tags. Official organizer Day2 paper checked: statements only; no supplied proof located on the authorized official hosts. Existing Reviewed analytic route and both primaries retained.",
+   "cite": "https://artofproblemsolving.com/community/c6h3266702p30041431 | #25 Assassino9931 Cartesian proof, #5 trigadd123 point-circle proof; https://rmms.lbi.ro/rmm2024/pr2/RMM2024-Day2-English.pdf"
+  },
+  "rmm:2024:6": {
+   "date": "2026-11-18",
+   "range": "#1–#13 of 13 (whole available thread; endpoint checked)",
+   "note": "IAmTheHazard #11 gives the complete mod-2 large-factor count and bounded-root/Vieta plus disjoint coefficient-flip argument for small factors; add Algebraic combinatorics methods for the substantive finite-field counting step. F2 product counts checked exhaustively for n=2–10. numbersandnumbers #8 supplies a 2-adic/Fourier argument but invokes Fourier inversion; mathocean97 #9 leaves its Littlewood–Offord/Sperner step unproved, dgrozev #10 links part of its auxiliary argument, and Oksutok #12 is link-only. Giabach298 #13 drops the square in its flip argument and omits the degree cutoff in a displayed bound; no addition from these candidates. Organizer Day2 paper checked in the shared 2024 source audit: statements only; no supplied proof located on the authorized official hosts.",
+   "addTags": [
+    "C: Algebraic combinatorics methods"
+   ],
+   "cite": "https://artofproblemsolving.com/community/c6h3266703p30041456 | #11 IAmTheHazard; https://rmms.lbi.ro/rmm2024/pr2/RMM2024-Day2-English.pdf"
+  },
+  "rmm:2024:SL A1": {
+   "date": "2026-11-18",
+   "range": "#1–#3 of 3 (whole available thread; endpoint checked)",
+   "note": "SyScorch #3 pairs adjacent odd/even coefficients and allocates a share of the leading monomial to each pair; this corroborates Games and Real polynomials, with no new substantial method. Its final a/b names are interchanged and positivity at x=0 comes from the constant-term pair. YaoAOPS #2 needs positive epsilon/C in its claims and correction of the final constant-shift sign; not used for additions. Official shortlist source check: the organizer problems page lists main Day1/Day2 papers only, and a focused search on rmms.lbi.ro and bmos.ukmt.org.uk located no supplied shortlist solution; direct official review remains unavailable.",
+   "cite": "https://artofproblemsolving.com/community/c6h3561061p34727395 | #3 SyScorch; official source audit https://rmms.lbi.ro/rmm2024/index.php?id=problems_math"
+  },
+  "rmm:2024:SL A2": {
+   "date": "2026-11-18",
+   "range": "#1–#9 of 9 (whole available thread; endpoint checked)",
+   "note": "Late posts corroborate the standard-substitution/algebraic tags; no addition. ringodanya #8 uses reciprocal/reflection substitutions to force vanishing on two tails, then chooses the remaining variables far apart (x=0 handled separately). Assassino9931 #3 is explicitly an attributed official-solution reproduction, read in full; it has zt printed as xt and leaves the zero-sum additivity boundary unstated, which the same negative auxiliary-variable argument covers. #4 presents a shorter range argument with an uncertainty caveat. Vivouaf #5 is corrected by Jt.-. #6 and retracted in #7; ray66 #9 has malformed/sign-inconsistent identities and is not used. No direct official shortlist booklet was located in the shared organizer/UKMT audit; forum attribution is not direct booklet verification.",
+   "cite": "https://artofproblemsolving.com/community/c6h3502929p34037764 | #3 Assassino9931 attributed official reproduction; #8 ringodanya"
+  },
+  "rmm:2024:SL A3": {
+   "date": "2026-11-18",
+   "range": "#1–#7 of 7 (whole available thread; endpoint checked)",
+   "note": "math90 #5 supplies the telescoping-ratio induction already described by the row; its reciprocal identity and ordered-variable comparison passed 1000 exact-rational trials. Read its induction list as x_2,...,x_(n+1) and extend the claimed ratio index through n+1; zero variables follow by continuity. No new substantial method. NO_SQUARES #2 claims an injection that fails: exponent triples (1,2,2) and (0,2,3) have the same image; do not add a bijection tag from it. #6 points to an attachment and outside research, #7 requests a file; neither is a new complete proof. No direct official shortlist solution was located in the shared authorized-host audit.",
+   "cite": "https://artofproblemsolving.com/community/c6h3561066p34727427 | #5 math90"
+  },
+  "rmm:2024:SL C1": {
+   "date": "2026-11-18",
+   "range": "#1–#5 of 5 (whole available thread; #4 absent; endpoint checked)",
+   "note": "YaoAOPS #2 counts projection-order sectors cut by pairwise normals, and proposer Assassino9931 #3 confirms that interpretation. This corroborates geometric combinatorics, permutations and counting; no new method tag. The opening 2n points in #2 is a typo for n; attainment needs all pairwise segment directions distinct, beyond merely distinct points. SyScorch #5 offers a scanning-line picture but does not justify its change of model or distinct-permutation count, so no tag relies on it. No direct official shortlist solution was located in the shared authorized-host audit.",
+   "cite": "https://artofproblemsolving.com/community/c6h3561070p34727501 | #2 YaoAOPS; #3 Assassino9931"
+  },
+  "rmm:2024:SL C3": {
+   "date": "2026-11-18",
+   "range": "#1–#6 of 6 (whole available thread; #4 absent; endpoint checked)",
+   "note": "The grid/block-count approach in cj13609517288 #3 corroborates the existing global/grid/construction tags; no addition. Its displayed block inequality has a plus where the counting argument requires a minus, and its zero-block cases are sketched. Yerassyl2008 #5 correctly objects to internationalnick123456 #2 counting whole same-majority blocks as popular cells; the same invalid count appears in goon_guzzler #6, whose displayed n=5 construction also has a short row. Exhaustive enumeration of all 512 n=3 grids confirms minimum 4 and gives counterexamples to that block-equality claim. No new proof tag relies on these incomplete/incorrect candidates. No direct official shortlist solution was located in the shared authorized-host audit.",
+   "cite": "https://artofproblemsolving.com/community/c6h3561073p34727583 | #3 cj13609517288; #5 Yerassyl2008 objection"
+  },
+  "rmm:2024:SL C4": {
+   "date": "2026-11-18",
+   "range": "#1–#3 of 3 (whole available thread; #2 spoiler expanded; two replies)",
+   "note": "BlizzardWizard #2 supplies a complete majorization route: rank maximal arithmetic progressions by length, bound their prefix edge counts by p-scores, then prove the sum-of-squares comparison. Add the convexity/majorization tag. Read the score buckets on indices 0,...,n−1 consistently with the earlier rank definition; the later [n] bucket notation shifts an endpoint, and its missing/repeated-bucket sentence reverses the two comparisons with n/p without changing the contradiction. Corrected score identities checked for n=2–30, and all majorization prefixes checked on 1000 sampled finite sets. Assassino9931 #3 reproduces the complete stronger fixed-length induction and corroborates the existing tags; no external paper was opened or needed. No direct official shortlist solution was located in the shared authorized-host audit.",
+   "addTags": [
+    "A: Inequalities—convexity arguments"
+   ],
+   "explanationAppend": "Another proof majorizes the maximal-progression length sequence by that of an interval, then compares their sums of squares.",
+   "cite": "https://artofproblemsolving.com/community/c6h3561076p34727613 | #2 BlizzardWizard complete majorization proof, including its comparison lemma"
+  },
+  "rmm:2024:SL N1": {
+   "date": "2026-11-18",
+   "range": "#1–#4 of 4 (whole available thread; three replies)",
+   "note": "Assassino9931 #2 gives the complete divisibility-and-size squeeze, excludes the equality case by the next recurrence step and verifies the resulting affine sequence; corroborates all existing tags, with no addition. zRevenant #3 has an incorrect displayed quotient identity and later drops a 2024 factor; SyScorch #4 omits k=0 in its quotient argument, corresponding to b=a² and requiring the infinite-sequence exclusion used in #2. No new method relies on those candidates. No direct official shortlist solution was located in the shared authorized-host audit.",
+   "cite": "https://artofproblemsolving.com/community/c6h3502802p34035618 | #2 Assassino9931"
+  },
+  "rmm:2024:SL N2": {
+   "date": "2026-11-18",
+   "range": "#1–#4 of 4 (whole available thread; three replies)",
+   "note": "Proposer Zsigmondy #2 and Assassino9931 #3 prove eventual evenness, then count earlier multiples of a large prime under a hypothetical increasing tail to contradict the gcd-sum bound. These corroborate the existing sequence/prime/parity tags; no substantial new route. In #3 read a_(i_k)≥2kp rather than the printed strict inequality; a_p>a_(i_k) still gives the contradiction, including k=1. The final attachment post Jupiterballs #4 is explicitly tentative and supplies no readable proof body, so no tag relies on it. No direct official shortlist solution was located in the shared authorized-host audit.",
+   "cite": "https://artofproblemsolving.com/community/c6h3502803p34035641 | #2 Zsigmondy proposer proof; #3 Assassino9931"
   }
  }
 }

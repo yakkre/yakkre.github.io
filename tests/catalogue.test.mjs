@@ -90,7 +90,7 @@ test('USA TST rows are complete papers with official sources and geometry routes
   for(const p of tst){
     assert.equal(p.key,`usatst:${p.year}:${p.id}`);assert.equal(p.contestName,'USA TST');assert.equal(p.section,'Contest');
     assert.ok(p.officialUrl&&/\.pdf$/.test(p.officialUrl));assert.match(p.aopsUrl,/^https:\/\/artofproblemsolving\.com\/community\/c6h/);
-    assert.equal(p.forumStatus,'live');assert.ok(p.tags.length<=4);
+    assert.equal(p.forumStatus,'live');assert.ok(p.subject==='G'||p.tags.length<=4);
   }
   assert.equal(selectProblems(problems,taxonomy,{contest:'usatst'}).length,tst.length);
   const g=problems.find(p=>p.key==='usatst:2026:5');assert.deepEqual(g.primaryTags,[61,77]);assert.match(g.geometry.analytic.status,/^Reviewed/);

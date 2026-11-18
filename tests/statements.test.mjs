@@ -90,10 +90,13 @@ test('every current USA TST entry has a matched, complete statement', () => {
     assert.ok(s?.text.trim(), p.key);
     assert.equal(s.sourceYear, p.year);
     assert.equal(s.sourceProblem, p.id);
-    assert.equal(s.kind, 'official');
+    // Years with an official solution file use it as the statement source; earlier (AoPS-only) years keep the verified
+    // opening post of the AoPS thread from statement-supplements.json, which carries no "Proposed by" line.
+    assert.equal(s.kind, p.year >= 2014 ? 'official' : 'forum');
     assert.ok(s.sourceSha256 && s.verified);
     assert.doesNotMatch(s.text, /\\(?:RR|ZZ|NN|FF|ol|arc|dg|ii)(?![A-Za-z])/);
     assert.doesNotMatch(s.text, /\\(?:begin|end)\{(?:enumerate|itemize)\}/);
+    if (s.kind === 'forum') continue;
     if (USATST_NO_PROPOSER.has(p.key)) assert.doesNotMatch(s.text, /Proposed by/);
     else assert.match(s.text, /Proposed by [^\n]+\.$/);
   }

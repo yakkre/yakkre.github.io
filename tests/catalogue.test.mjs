@@ -91,7 +91,8 @@ test('USA TST rows are complete papers with official sources and geometry routes
   assert.deepEqual(problems.filter(p=>p.contest==='usatst'&&p.year===2026).map(p=>p.id),['1','2','3','4','5','6']);
   for(const p of tst){
     assert.equal(p.key,`usatst:${p.year}:${p.id}`);assert.equal(p.contestName,'USA TST');assert.equal(p.section,'Contest');
-    assert.ok(p.officialUrl&&/\.pdf$/.test(p.officialUrl));assert.match(p.aopsUrl,/^https:\/\/artofproblemsolving\.com\/community\/c6h/);
+    // TST 2013 and earlier have no official solution file (AoPS only): no official link is exported for them.
+    if(p.year<=2013) assert.equal(p.officialUrl,null); else assert.ok(p.officialUrl&&/\.pdf$/.test(p.officialUrl));assert.match(p.aopsUrl,/^https:\/\/artofproblemsolving\.com\/community\/c6h/);
     assert.equal(p.forumStatus,'live');assert.ok(p.subject==='G'||p.tags.length<=4);
   }
   assert.equal(selectProblems(problems,taxonomy,{contest:'usatst'}).length,tst.length);

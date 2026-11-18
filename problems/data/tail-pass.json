@@ -5644,6 +5644,45 @@
    "range": "#1–#4 of 4 (whole available thread; three replies)",
    "note": "Proposer Zsigmondy #2 and Assassino9931 #3 prove eventual evenness, then count earlier multiples of a large prime under a hypothetical increasing tail to contradict the gcd-sum bound. These corroborate the existing sequence/prime/parity tags; no substantial new route. In #3 read a_(i_k)≥2kp rather than the printed strict inequality; a_p>a_(i_k) still gives the contradiction, including k=1. The final attachment post Jupiterballs #4 is explicitly tentative and supplies no readable proof body, so no tag relies on it. No direct official shortlist solution was located in the shared authorized-host audit.",
    "cite": "https://artofproblemsolving.com/community/c6h3502803p34035641 | #2 Zsigmondy proposer proof; #3 Assassino9931"
+  },
+  "rmm:2023:1": {
+   "date": "2026-11-18",
+   "range": "#1–#36 of 36 (whole available thread; #3, #7, #24 and #33 absent)",
+   "note": "Late proofs Antarctic #14, ike.chen #20, monval #28 and KevinYang2.71 #34 use the same factor/divisibility and size squeeze; no substantial untagged method. Supplied Day1 p1 Solutions 1 and 2 (both approaches) read: they corroborate existing tags; in Solution 1 the coprime cancellation requires p≠3, the residue is 27−3s, and the factored size bound is a sufficient weakening of the exact factorization, whose right side is 4(p²−p³). Handle p=3 directly modulo 3. Exhaustive x,y<p checks for primes p≤300 give exactly the six listed triples. Candidates #16 and #27/#36 omit cancellation/divisor-case justifications, #19 has sign/solution typos, #21 is only an outline, #25 omits its k=1 branch, #32 has an unjustified strict inequality and prints 12 for 13, #35 has an incorrect discriminant. No tag added from those candidates.",
+   "cite": "https://artofproblemsolving.com/community/c6h3024159p27195228 | #14 Antarctic; #20 ike.chen; #28 monval; https://rmms.lbi.ro/rmm2023/pr1/RMM2023-Day1-English_Solutions.pdf, physical p1 Solutions 1–2"
+  },
+  "rmm:2023:2": {
+   "date": "2026-11-18",
+   "range": "#1–#20 of 20 (whole available thread)",
+   "note": "TheUltimate123 #4 and john0512 #18 give complete connectivity/counting proofs; KevinYang2.71 #19 gives the triangle-by-area graph process. Add Graph theory—structural for the substantial connected-component argument. IAmTheHazard #16 corroborates the existing iterative extremal construction. Supplied Day1 p2 read in full: both lower-bound approaches and the sharpness remark; the graph proof on the forum spells out the hypergraph bound abbreviated in the supplied first approach. N3bula #17 reverses several component inequalities, so no tag relies on it. dgrozev #5 and v_Enhance #8 note that arbitrary triple weights suffice for the lower bound; flag that classification observation without changing the geometric-combinatorics tag or primary.",
+   "addTags": [
+    "C: Graph theory—structural"
+   ],
+   "explanationAppend": "Alternatively, the graph formed from beautiful triangles is connected, and each triangle can merge at most three components.",
+   "cite": "https://artofproblemsolving.com/community/c6h3024163p27195305 | #4 TheUltimate123 and #18 john0512 complete connectivity proofs; https://rmms.lbi.ro/rmm2023/pr1/RMM2023-Day1-English_Solutions.pdf, physical p2"
+  },
+  "rmm:2023:3": {
+   "date": "2026-11-18",
+   "range": "#1–#21 of 21 (whole available thread; #2, #9–#10, #13 and #20 absent); most-thanked proof #11 and correction #14 read in full",
+   "note": "Proposer 62861 #11 and supplied Day1 pp3–4 give the complete moving-reflections lower bound and equal-modulus/Newton-sum construction; ABCDE #14 supplies a complete two-variable Laurent-polynomial alternative, correcting #8. These corroborate all existing tags, so no addition. Regular-polygon constraints checked numerically for n=2–8. #8 uses unsquared moduli and an invalid one-variable divisibility inference; #15 has reciprocal/sign/zero-locus slips and leaves cancellation in its final degree argument unaddressed. walldrum #19 incorrectly claims 2n allowable values of q/conjugate(q): for n=2 and q=exp(iπ/4), the claimed root condition holds but the points repeat in pairs. Official sign constancy is justified by the complement of finitely many labelled regular-configuration subspaces being path connected. Medium confidence retained; the complete proposer/official proof and #14 make a High upgrade plausible for the user to decide.",
+   "cite": "https://artofproblemsolving.com/community/c6h3024172p27195414 | #11 62861 proposer proof, #14 ABCDE full corrected Laurent proof; https://rmms.lbi.ro/rmm2023/pr1/RMM2023-Day1-English_Solutions.pdf, physical pp3–4, main proof, lemma and remarks"
+  },
+  "rmm:2023:5": {
+   "date": "2026-11-18",
+   "range": "#1–#14 of 14 (whole available thread; #4 and #7–#9 absent)",
+   "note": "MatteD #2, TheUltimate123 #6 and IAmTheHazard #13 give the complete base-Q remainder/unique-leading-term argument; these corroborate the existing polynomial-functional-equation and real-polynomial tags, with no new main method. Supplied Day2 physical p2 Solutions 1 and 2, including the approximate-root lemma and minimal-common-composition descent, read in full. Solution 1 prints t=S(x) where t=Q(x) is intended. Candidate #10 uses undefined c and inconsistent degree symbols; #11 needs a justified inverse-branch choice and uniform asymptotic estimate; #12 confuses powers/composition and degree assignments; #14 leaves its asymptotic fibre-matching and induction steps compressed. No new tag from these candidates.",
+   "cite": "https://artofproblemsolving.com/community/c6h3025645p27211186 | #2 MatteD, #6 TheUltimate123, #13 IAmTheHazard; https://rmms.lbi.ro/rmm2023/pr2/RMM2023-Day2-English_Solutions.pdf, physical p2 Solutions 1–2"
+  },
+  "rmm:2023:6": {
+   "date": "2026-11-18",
+   "range": "#29–#38 of 38 (#30 absent); opening #1–#12 (#3 absent); middle #14, #18 and #21–#25 read; middle skimmed by thanks",
+   "note": "CT17 #31 spells out the original merge-only invariants; ZVFrozel #38 gives a minimum-green-defect proof with a two-edge repair. Supplied Day2 pp3–4 Solutions 1 and 2 read in full: add Induction and recursion for monochromatic-cut contraction in Solution 1, and Extremal arguments for the minimal-suspicious-edge family in Solution 2 (also reflected in #38). All 729 three-colour K4 labellings and their qualifying count triples checked. The graph/local/algorithm tags remain. Matroid/polytope/stable-polynomial candidates #10/#14/#18/#23/#24 invoke unproved outside results, so no algebraic or generating-functions tag from them. #34 wrongly infers an isolated vertex from disconnection; #37 leaves the mutual tree exchange unjustified and reverses its intersection potential; #32/#36 compress the cut invariant. Official Solution 2 has R(C) and C1/C2 symbol slips; its inequalities remain valid after reading the intended symbols.",
+   "addTags": [
+    "C: Induction and recursion",
+    "C: Extremal arguments"
+   ],
+   "explanationAppend": "Supplied alternatives contract a monochromatic cut inductively, or minimize the number of edges whose membership varies across a suitable family of spanning trees.",
+   "cite": "https://artofproblemsolving.com/community/c6h3025646p27211191 | #31 CT17, #38 ZVFrozel; https://rmms.lbi.ro/rmm2023/pr2/RMM2023-Day2-English_Solutions.pdf, physical pp3–4 Solutions 1–2"
   }
  }
 }

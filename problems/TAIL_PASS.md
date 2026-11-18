@@ -102,7 +102,7 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 
 ## What is left (resume here)
 
-1. **RMM 2023 and older** (71 open rows after completing 2024; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
+1. **RMM 2021 and older** (66 open rows after completing 2024 and 2023; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
 2. Loose ends: 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 were thread-scanned but could not be matched to their Compendium solutions; 1999 G2's official "Solution 2" (coordinate determinants)
    is only known from a truncated AoPS quote and could be verified against an original booklet.
 
@@ -111,7 +111,14 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 - All 14 originally open 2024 rows checked and recorded, plus the pre-existing shortlist A4 entry. The 2024 todo is empty; 71 rows remain from 2023 back to 2008.
 - Four secondary additions: main 1 and main 6 Algebraic combinatorics methods, main 4 Number theoretic sequences, shortlist C4 Inequalities—convexity arguments. No primary or existing tag changed.
 - Official-source check: organizer 2024 problems page and linked Day1/Day2 papers, plus UKMT Day1, expose statements only. A focused search on rmms.lbi.ro and bmos.ukmt.org.uk found no supplied main/shortlist solution booklet. This is a source gap, not a claim that none exists online. Main 2 #17 and shortlist A2 #3 are attributed forum reproductions, with caveats below.
-- Resume at **rmm:2023:1**, using the current year todo. Validation and publication are recorded below after the year checks.
+- 2024 saved as commit `8afdfec`; publication is pending explicit approval in this chat after automatic approval review rejected prior-chat authorization. Do not bypass that rejection.
+
+## RMM pass completed for 2023 (2026-11-18)
+
+- Five remaining rows recorded; the pre-existing problem 4 review is preserved. The 2023 todo is empty.
+- Added Graph theory—structural on problem 2, plus Induction and recursion and Extremal arguments on problem 6, each from complete proofs.
+- Read both supplied Day1/Day2 solution booklets for these five problems, including their alternatives; minor slips and incomplete forum candidates are flagged below. Problem 3 remains Medium for the user’s decision.
+- Next row: **rmm:2021:1** (confirm against the year todo). Python ledger tests OK; 34 Node checks passed, fail 0. Exact preservation confirmed: only five 2023 rows changed, existing ledger entries/primaries/tags/confidence retained. Local year commit prepared; no push is claimed.
 
 ## Flagged for the user (do not decide alone)
 
@@ -156,3 +163,14 @@ Year validation passed: Python ledger tests OK; 34 Node tests passed, fail 0. Ex
 - Shortlist N2: #3 prints a strict lower bound a_(i_k)>2kp where ≥ is justified; the earlier strict bound a_p>a_(i_k) suffices. #4 is tentative/attachment-only, not used for additions.
 
 - Shortlist A4: the pre-existing reviewed entry retains Medium confidence because the posted positive-root branch omits negative tails; the prior review supplies a finite-branch/fallback completion. Keep confidence unchanged pending the user’s decision.
+
+RMM 2023 flags (2026-11-18):
+- Main 1: official Solution 1 needs p≠3 for coprime cancellation, prints 27−s for 27−3s, while its factored size inequality is a valid weakening of the exact bound with 4(p²−p³), rather than an equivalent rewrite. The intended bound survives; p=3 is handled directly. Forum #16/#27/#36 leave cancellation/divisor-case gaps, #19 has sign/answer typos, #21 is outline-only, #25 omits k=1, #32 has an unjustified strict inequality and a 12/13 typo, and #35 has an incorrect discriminant. No new tags.
+
+- Main 2: #5/#8 observe that the lower bound works for arbitrary triple weights and question the geometric label; existing classification and primary retained for the user’s decision. #17 reverses component inequalities. Added Graph theory—structural from complete #4/#18, not that faulty write-up.
+
+- Main 3 (Medium retained): complete proposer #11, official pp3–4 and corrected #14 support a possible High upgrade for the user to decide. #8’s one-variable divisibility argument is invalid and its construction needs squared moduli; #15 has reciprocal/zero-locus slips and an unaddressed final cancellation step. #19’s claimed 2n ratio roots fail already for n=2, q=exp(iπ/4), where the four points repeat in pairs. #14’s final “nth roots” should read “2nth roots”; the preceding proof is complete.
+
+- Main 5: official Solution 1 substitutes S(x) where Q(x) is intended. Forum #10 has undefined/inconsistent symbols, #11 needs branch/uniform-asymptotic justification, #12 confuses powers/composition and degrees, #14 compresses its asymptotic fibre matching and induction. No new tags from these candidates.
+
+- Main 6: #10/#14/#18/#23/#24 use unproved matroid, polytope or real-stability results; no tags from those. #34 wrongly infers isolated vertices from disconnection; #37 leaves mutual tree exchange unjustified and reverses its common-edge potential; #32/#36 compress the cut invariant. #38 reverses the words naming the removed/added edges but its counts specify the intended valid two-edge repair. Official Solution 2 has minor R(C) and C1/C2 symbol slips. Added induction and extremal methods from the two complete supplied proofs.

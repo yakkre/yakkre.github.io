@@ -7,7 +7,7 @@ const $ = id => document.getElementById(id);
 const PAGE_SIZE = 50;
 const SUBJECTS = {A:'Algebra', C:'Combinatorics', N:'Number theory', G:'Geometry'};
 const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pending:'Forum check pending'};
-const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM'};
+const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM', usatst:'USA TST'};
 const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['done','done'],['from-year','from'],['to-year','to']];
 const DONE = {yes:'Marked done', no:'Not done yet'};
 let data, tags, filters, page = 1, progress = null, view = 'list', currentColl = '', sharedId = '', sharedCache = null;
@@ -45,7 +45,7 @@ const emptyFilters = () => ({query:'', contest:'', subject:'', from:'', to:'', e
 
 function readFilters() {
   const q = new URLSearchParams(location.search);
-  return {query:q.get('q')||'', contest:['isl','rmm'].includes(q.get('contest'))?q.get('contest'):'',
+  return {query:q.get('q')||'', contest:Object.keys(CONTESTS).includes(q.get('contest'))?q.get('contest'):'',
     subject:Object.hasOwn(SUBJECTS,q.get('subject'))?q.get('subject'):'',
     evidence:['live','archive','pending'].includes(q.get('evidence'))?q.get('evidence'):'',
     difficulty:['1','2','3','4','5','none'].includes(q.get('difficulty'))?q.get('difficulty'):'',

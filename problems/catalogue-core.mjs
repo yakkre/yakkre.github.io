@@ -4,6 +4,7 @@ export function normalize(text) {
 export function problemName(problem) {
   const collection = problem.contest === 'isl' ? 'ISL'
     : problem.contest === 'rmm' ? `RMM${problem.section === 'Shortlist' ? ' SL' : ''}`
+    : problem.contest === 'usatst' ? 'USA TST'
     : problem.contestName || problem.contest;
   return `${problem.year} ${collection} ${problem.id}`;
 }

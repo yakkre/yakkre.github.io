@@ -8,6 +8,8 @@ test('problem names distinguish collections and original contest versus shortlis
   assert.equal(problemName({year:2025,contest:'isl',id:'A6',section:'Shortlist'}),'2025 ISL A6');
   assert.equal(problemName({year:2026,contest:'rmm',id:'4',section:'Contest'}),'2026 RMM 4');
   assert.equal(problemName({year:2026,contest:'rmm',id:'A6',section:'Shortlist'}),'2026 RMM SL A6');
+  assert.equal(problemName({year:2026,contest:'usatst',id:'5',section:'Contest'}),'2026 USA TST 5');
+  assert.ok(selectProblems(problems,taxonomy,{query:'2026 USA TST 5'}).some(x=>x.problem.key==='usatst:2026:5'));
   assert.ok(selectProblems(problems,taxonomy,{query:'2025 ISL A6'}).some(x=>x.problem.key==='isl:2025:A6'));
 });
 test('export preserves complete reviewed keys, exact taxonomy and source caveats',()=>{
@@ -80,4 +82,17 @@ test('geometry keeps independent proof routes and both verified primary tags',()
 test('difficulty filter returns only matching ISL estimates',()=>{
   for(const d of ['1','2','3','4','5']){const r=selectProblems(problems,taxonomy,{difficulty:d});assert.ok(r.length>0);for(const x of r)assert.equal(String(x.problem.difficulty),d);}
   const none=selectProblems(problems,taxonomy,{difficulty:'none'});assert.ok(none.every(x=>x.problem.difficulty==null));
+});
+
+test('USA TST rows are complete papers with official sources and geometry routes',()=>{
+  const tst=problems.filter(p=>p.contest==='usatst');
+  assert.deepEqual(problems.filter(p=>p.contest==='usatst'&&p.year===2026).map(p=>p.id),['1','2','3','4','5','6']);
+  for(const p of tst){
+    assert.equal(p.key,`usatst:${p.year}:${p.id}`);assert.equal(p.contestName,'USA TST');assert.equal(p.section,'Contest');
+    assert.ok(p.officialUrl&&/\.pdf$/.test(p.officialUrl));assert.match(p.aopsUrl,/^https:\/\/artofproblemsolving\.com\/community\/c6h/);
+    assert.equal(p.forumStatus,'live');assert.ok(p.tags.length<=4);
+  }
+  assert.equal(selectProblems(problems,taxonomy,{contest:'usatst'}).length,tst.length);
+  const g=problems.find(p=>p.key==='usatst:2026:5');assert.deepEqual(g.primaryTags,[61,77]);assert.match(g.geometry.analytic.status,/^Reviewed/);
+  assert.ok(data.coverage.some(c=>c.contest==='usatst'));
 });

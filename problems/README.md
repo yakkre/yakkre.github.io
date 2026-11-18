@@ -4,14 +4,14 @@ Static, buildless catalogue at `/problems/`. It adds to the existing raindrops b
 
 ## Data
 
-`data/catalogue.json` is a reviewed snapshot exported from the canonical IMO Shortlist and RMM workbooks. It contains original classification summaries, the exact60-label taxonomy, evidence types, caveats and source links. Full copyrighted problem statements and solutions are not copied here. Pending problems are not fabricated as completed entries.
+`data/catalogue.json` is a reviewed snapshot exported from the canonical IMO Shortlist, RMM and USA TST workbooks. It contains original classification summaries, the exact60-label taxonomy, evidence types, caveats and source links. Full copyrighted problem statements and solutions are not copied here. Pending problems are not fabricated as completed entries.
 
-Both RMM main papers and shortlists are in scope; current coverage is explicit in the site. `Live forum checked` and `Archived forum checked` describe the recorded check source, not a guarantee that all replies are complete correct proofs.
+Both RMM main papers and shortlists are in scope; current coverage is explicit in the site. The USA TST (for the IMO only; not TSTST or the TST for EGMO) is a third contest with keys such as `usatst:2026:5`, added from 2026 backwards. Its workbook is `~/Downloads/USA-TST/USA TST Classification.xlsx` (same Problems A:U and Taxonomy layout as RMM; research and the guarded writer in `~/Downloads/USA-TST/research/`). Official solutions: the USA TST archive on GitHub (usa-tst-public, TST 2025 onward) and Evan Chen's solution files (web.evanchen.cc, to TST 2025); `--usatst` is optional in the export. `Live forum checked` and `Archived forum checked` describe the recorded check source, not a guarantee that all replies are complete correct proofs.
 
 Refresh from the current canonical workbooks, without modifying them:
 
 ```sh
-python3 scripts/export_catalogue.py --imo '/path/to/IMO Shortlist Classification.xlsx' --rmm '/path/to/RMM Classification.xlsx' --output problems/data/catalogue.json
+python3 scripts/export_catalogue.py --imo '/path/to/IMO Shortlist Classification.xlsx' --rmm '/path/to/RMM Classification.xlsx' --usatst '/path/to/USA TST Classification.xlsx' --output problems/data/catalogue.json
 node --test tests/catalogue.test.mjs
 python3 -m http.server 8765 --bind 127.0.0.1
 ```

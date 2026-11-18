@@ -7,8 +7,9 @@ import argparse, collections, datetime, hashlib, json, re
 from pathlib import Path
 import openpyxl
 
-def export(imo, rmm, output):
+def export(imo, rmm, output, usatst=None):
     sources = [('isl', 'IMO Shortlist', Path(imo)), ('rmm', 'RMM', Path(rmm))]
+    if usatst: sources.append(('usatst', 'USA TST', Path(usatst)))
     problems, taxonomy, snapshots = [], None, []
     for contest, name, path in sources:
         raw = path.read_bytes()
@@ -60,15 +61,19 @@ def export(imo, rmm, output):
     recent_pending = sum(p['contest']=='isl' and p['year']>=2010 and p['forumStatus']=='pending' for p in problems)
     rmm_ids = ', '.join(f"{p['year']} {p['id']}" for p in problems if p['contest']=='rmm')
     rmm_geo = sum(p['contest']=='rmm' and p['subject']=='G' for p in problems)
+    tst_years = sorted({p['year'] for p in problems if p['contest']=='usatst'}, reverse=True)
+    tst_span = f'{tst_years[-1]}–{tst_years[0]}' if len(tst_years) > 1 else ''.join(map(str, tst_years))
     data = dict(updated=datetime.datetime.now(datetime.timezone.utc).isoformat(), taxonomy=taxonomy,
         problems=problems, snapshots=snapshots, counts=dict(counts),
-        scope='IMO Shortlist 1990–2025 and the main RMM papers 2008–2026, both including geometry. Geometry records separate reviewed synthetic and analytic primaries; unreviewed routes remain pending, and problems without a reviewed complete proof are not listed.',
+        scope='IMO Shortlist 1990–2025, the main RMM papers 2008–2026 and the USA TST for the IMO (from 2026 backwards), all including geometry. Geometry records separate reviewed synthetic and analytic primaries; unreviewed routes remain pending, and problems without a reviewed complete proof are not listed.',
         coverage=[dict(contest='isl', title='IMO Shortlist · 1990–2025', text=f"{counts['isl']} classifications. The later forum audit is ongoing: {recent_pending} recent entries currently have official-only evidence. Earlier archived and live checks are preserved. Pending source checks are distinguished from completed classifications."),
-                  dict(contest='rmm', title='RMM · main papers 2008–2026', text=f"{counts['rmm']} reviewed main-paper entries, including {rmm_geo} geometry problems: {rmm_ids}. RMM shortlists are not in scope. Main-paper problems without a reviewed complete proof are not listed. Individual research notes identify reproduced official booklets and any incomplete forum proofs.")],
+                  dict(contest='rmm', title='RMM · main papers 2008–2026', text=f"{counts['rmm']} reviewed main-paper entries, including {rmm_geo} geometry problems: {rmm_ids}. RMM shortlists are not in scope. Main-paper problems without a reviewed complete proof are not listed. Individual research notes identify reproduced official booklets and any incomplete forum proofs.")]
+             + ([dict(contest='usatst', title=f'USA TST · {tst_span}', text=f"{counts['usatst']} reviewed entries from the USA Team Selection Test for the IMO (TSTST and the TST for EGMO are not in scope), added from 2026 backwards. Official solutions are the USA TST archive (2025 onward) and Evan Chen's solution files; AoPS threads supply tags and alternative methods.")] if counts['usatst'] else []),
         caveats=['A forum check can find an incomplete proof; it does not certify every reply. Expand research notes for the exact outcome.',
                  'Official booklets, attributed reproductions and Compendium fallbacks are distinguished in each entry. Some original older booklets remain unavailable.',
                  '2016 N8 has a literal-versus-intended-statement caveat, retained in its research notes.',
-                 'Main RMM problem numbers are preserved; A/C/N/G subjects are descriptive mappings. RMM shortlists are not included.'])
+                 'Main RMM problem numbers are preserved; A/C/N/G subjects are descriptive mappings. RMM shortlists are not included.']
+                 + (['USA TST years are IMO years (TST 2026 was held in December 2025 and January 2026); problem numbers are the paper numbers, and subjects are descriptive mappings.'] if counts['usatst'] else []))
     # Re-apply the AoPS tail-pass ledger so later-thread findings survive re-exports.
     # refresh_site.sh runs this with `python -I`, which leaves the script's own folder off sys.path.
     import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -82,7 +87,7 @@ def export(imo, rmm, output):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()
-    p.add_argument('--imo',required=True);p.add_argument('--rmm',required=True)
+    p.add_argument('--imo',required=True);p.add_argument('--rmm',required=True);p.add_argument('--usatst')
     p.add_argument('--output',default='problems/data/catalogue.json')
-    args=p.parse_args();export(args.imo,args.rmm,args.output)
+    args=p.parse_args();export(args.imo,args.rmm,args.output,args.usatst)
 

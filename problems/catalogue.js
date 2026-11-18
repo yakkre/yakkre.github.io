@@ -1,5 +1,5 @@
-import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261104-geometry';
-import {renderStatement, typesetMath, loadStatementSources} from './statement-view.mjs?v=20261117-statement-only';
+import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261118-source-wording';
+import {renderStatement, typesetMath, loadStatementSources} from './statement-view.mjs?v=20261118-source-wording';
 import {withStatementOnlyProblems, collectionOptions} from './statement-catalogue.mjs?v=20261117-statement-only';
 import {createGridPicker} from './grid-picker.mjs?v=20261117-grid-picker';
 import {parseNote, renderNote, noteExcerpt} from './notes-view.mjs?v=20261117-latex';

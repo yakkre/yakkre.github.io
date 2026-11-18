@@ -2167,15 +2167,16 @@
       "sourcePage": 2
     },
     "rmm:2017:SL N2": {
-      "text": "Given positive integers $x,y,k$, show that there are a positive integer $N$ and $k+1$ distinct bases $b_0,b_1,\\ldots,b_k$ in each of which $N$ has a three-digit palindromic expansion. In base $b_0$, require the three digits, in order, to be $x,y,x$.\n\nProposed by Bojan Basic, Serbia.",
+      "text": "Let $x$, $y$ and $k$ be three positive integers. Prove that there exist a positive integer $N$ and a set of $k+1$ positive integers $\\{b_0,b_1,b_2,\\ldots,b_k\\}$, such that, for every $i=0,1,\\ldots,k$, the $b_i$-ary expansion of $N$ is a 3-digit palindrome, and the $b_0$-ary expansion is exactly $\\overline{xyx}$.\n\nProposed by Bojan Basic, Serbia.",
       "kind": "reference",
       "sourceUrl": "https://artofproblemsolving.com/downloads/printable_post_collections/902314",
       "sourceYear": 2017,
       "sourceProblem": "SL N2",
       "sourceLabel": "AoPS community shortlist PDF; organizer original unverified (attributed reproduction)",
-      "verified": "2026-11-15",
-      "transcription": "Reworded statement with normalized mathematical notation.",
-      "sourcePage": 2
+      "verified": "2026-11-18",
+      "transcription": "Faithful AoPS wording; only TeX/layout and proposer-credit capitalization/punctuation normalized.",
+      "sourcePage": 2,
+      "sourceSha256": "9b68224740988acc2f04cfa77686a7a7061f32f0594ce8b26c93fe608a2d12ba"
     },
     "rmm:2018:1": {
       "text": "Let $ABCD$ be a cyclic quadrilateral and let $P$ lie on side $AB$. Diagonal $AC$ meets segment $DP$ at $Q$. The parallel to $CD$ through $P$ meets the extension of side $BC$ beyond $B$ at $K$, and the parallel to $BD$ through $Q$ meets that extension beyond $B$ at $L$. Prove that the circumcircles of $BKP$ and $CLQ$ are tangent.",

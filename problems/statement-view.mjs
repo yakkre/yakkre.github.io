@@ -1,9 +1,9 @@
-import {problemName} from './catalogue-core.mjs?v=20261103-names';
+import {problemName} from './catalogue-core.mjs?v=20261118-source-wording';
 
 let statementsPromise, mathPromise, currentKey;
 export function loadStatementSources() {
   if (!statementsPromise) statementsPromise = Promise.all(['statements.json','statement-supplements.json'].map(name =>
-    fetch(`./data/${name}`, {cache:'no-cache'}).then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    fetch(`./data/${name}?v=20261118-source-wording`, {cache:'no-cache'}).then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
   )).then(([active, supplements]) => ({...active, statements:{
     ...Object.fromEntries(Object.entries(supplements.statements || {}).filter(([,s]) => s.publicationStatus !== 'hold')),
     ...active.statements

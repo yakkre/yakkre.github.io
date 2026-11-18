@@ -2,11 +2,14 @@ export function normalize(text) {
   return String(text ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 export function problemName(problem) {
+  const rmmShortlist = problem.contest === 'rmm'
+    && (problem.section === 'Shortlist' || /^SL\s+/i.test(String(problem.id)));
   const collection = problem.contest === 'isl' ? 'ISL'
-    : problem.contest === 'rmm' ? `RMM${problem.section === 'Shortlist' ? ' SL' : ''}`
+    : problem.contest === 'rmm' ? `RMM${rmmShortlist ? ' SL' : ''}`
     : problem.contest === 'usatst' ? 'USA TST'
     : problem.contestName || problem.contest;
-  return `${problem.year} ${collection} ${problem.id}`;
+  const displayId = rmmShortlist ? String(problem.id).replace(/^SL\s+/i, '') : problem.id;
+  return `${problem.year} ${collection} ${displayId}`;
 }
 export function validTagIds(ids, taxonomy) {
   const valid = new Set(taxonomy.map(t => t.id));

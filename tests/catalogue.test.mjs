@@ -8,6 +8,8 @@ test('problem names distinguish collections and original contest versus shortlis
   assert.equal(problemName({year:2025,contest:'isl',id:'A6',section:'Shortlist'}),'2025 ISL A6');
   assert.equal(problemName({year:2026,contest:'rmm',id:'4',section:'Contest'}),'2026 RMM 4');
   assert.equal(problemName({year:2026,contest:'rmm',id:'A6',section:'Shortlist'}),'2026 RMM SL A6');
+  assert.equal(problemName({year:2017,contest:'rmm',id:'SL N2',section:'Shortlist'}),'2017 RMM SL N2');
+  assert.equal(problemName({year:2019,contest:'rmm',id:'original P4',section:'Contest'}),'2019 RMM original P4');
   assert.equal(problemName({year:2026,contest:'usatst',id:'5',section:'Contest'}),'2026 USA TST 5');
   assert.ok(selectProblems(problems,taxonomy,{query:'2026 USA TST 5'}).some(x=>x.problem.key==='usatst:2026:5'));
   assert.ok(selectProblems(problems,taxonomy,{query:'2025 ISL A6'}).some(x=>x.problem.key==='isl:2025:A6'));

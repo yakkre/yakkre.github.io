@@ -2889,57 +2889,90 @@
   },
   "isl:2006:G1": {
    "date": "2026-11-16",
-   "range": "#158–#167 of 167 (all loaded); analytic scan #1–#167; official solutions booklet",
-   "note": "Late posts (maromex #158, Arcticturn #159, Eka01 #160, AlastorMoody #161, m735821 #162, cyroah1331 #163, Assassino9931 #165, pl246631 #166, RadiantMeteor #167) show BPIC is cyclic with centre the arc midpoint M and conclude by AP ≥ AM−MP = AI; corroborates existing tags. Analytic scan: only Donaphew #19 computes AP, AI with cosines as part of a synthetic argument; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic — no analytic route there"
+   "range": "#158–#167 of 167 (all loaded); analytic scan #1–#167; official solutions booklet; official booklet",
+   "note": "Late posts (maromex #158, Arcticturn #159, Eka01 #160, AlastorMoody #161, m735821 #162, cyroah1331 #163, Assassino9931 #165, pl246631 #166, RadiantMeteor #167) show BPIC is cyclic with centre the arc midpoint M and conclude by AP ≥ AM−MP = AI; corroborates existing tags. Analytic scan: only Donaphew #19 computes AP, AI with cosines as part of a synthetic argument; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic; analytic route stays pending.; Official check: the Solution turns the condition into ∠BPC=90°+α/2=∠BIC, so P lies on the circle BCI centred at the arc midpoint M on AI, and finishes with the triangle inequality AP+PM ≥ AM=AI+IM. Uses only methods already tagged. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic — no analytic route there",
+   "official": "IMO 2006 SL booklet (imo-official.org), Solution read"
   },
   "isl:2006:G2": {
    "date": "2026-11-16",
-   "range": "#84–#93 of 93 (all loaded); analytic scan #1–#93; official solutions booklet",
-   "note": "Late posts (lpieleanu #84, Kempu33334 #85, b1zmark #86, gold_duck #87 and cyroah1331 #89 and Sxmplicity #93 homothety at AD∩BC, lian_the_noob12 #88, NicoN9 #90, imo2026 #91, mael_AMO #92) corroborate homothety/power/angle tags. Analytic scan: no analytic proof in the thread; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): Solutions 1–2 are synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): Solutions 1–2 are synthetic — no analytic route there"
+   "range": "#84–#93 of 93 (all loaded); analytic scan #1–#93; official solutions booklet; official booklet",
+   "note": "Late posts (lpieleanu #84, Kempu33334 #85, b1zmark #86, gold_duck #87 and cyroah1331 #89 and Sxmplicity #93 homothety at AD∩BC, lian_the_noob12 #88, NicoN9 #90, imo2026 #91, mael_AMO #92) corroborate homothety/power/angle tags. Analytic scan: no analytic proof in the thread; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): Solutions 1–2 are synthetic; analytic route stays pending.; Official check: Sol1 shows BC is tangent to the circles ABP and CDQ, so the homothety at S=AD∩BC∩KL maps one circle to the other and SP·SQ=SB·SC; Sol2 gets PEQF cyclic and EF ∥ AB from Menelaus in ASP and BSP, then chases angles. Uses only methods already tagged. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): Solutions 1–2 are synthetic — no analytic route there",
+   "official": "IMO 2006 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2006:G3": {
    "date": "2026-11-16",
-   "range": "#106–#115 of 115 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (wangyanchuanjude #106, RC34649332927 #107, ray66 #108 spiral similarity at A, Math1lover #109, Yassine-Driouche #110, Sxmplicity #111, Assassino9931 #112, Karaoglan #113, alupigus #114 isogonal lines, Umidizibabomen #115) use ABCD~ACDE and power of a point to show AP bisects CD; corroborates existing tags."
+   "range": "#106–#115 of 115 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (wangyanchuanjude #106, RC34649332927 #107, ray66 #108 spiral similarity at A, Math1lover #109, Yassine-Driouche #110, Sxmplicity #111, Assassino9931 #112, Karaoglan #113, alupigus #114 isogonal lines, Umidizibabomen #115) use ABCD~ACDE and power of a point to show AP bisects CD; corroborates existing tags.; Official check: the Solution gets ABC~ACD~ADE and ABD~ACE, compares the angle-bisector ratios to get QR ∥ CD, and finishes with Ceva in ACD; the Comment notes ABCD~ACDE. Uses only methods already tagged. No new tag.",
+   "official": "IMO 2006 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2006:G4": {
    "date": "2026-11-16",
-   "range": "#72–#83 of 83 (all loaded)",
-   "note": "Late posts (ezpotd #72 projections, borovtori #73, Bonime #74, lian_the_noob12 #77, Buh_-1235 #81, PeteZahut068 #82, alupigus #83) corroborate homothety/metric/ratio tags; siamchung_degree #78–#79 barycentric matches the analytic primary."
+   "range": "#72–#83 of 83 (all loaded); official booklet",
+   "note": "Late posts (ezpotd #72 projections, borovtori #73, Bonime #74, lian_the_noob12 #77, Buh_-1235 #81, PeteZahut068 #82, alupigus #83) corroborate homothety/metric/ratio tags; siamchung_degree #78–#79 barycentric matches the analytic primary.; Official check: the Solution draws JM ∥ KL, chases angles to JD=JM, and uses the incircle of BCD (DM=2DT=BD+CD−BC) to get AM=AB+AC−BC=2AL. Uses only methods already tagged. No new tag.",
+   "official": "IMO 2006 SL booklet (imo-official.org), Solution read"
   },
   "isl:2006:G5": {
    "date": "2026-11-16",
-   "range": "#20–#29 of 29 (all loaded)",
-   "note": "Late posts (tree_3 #20, v4913 #21, HamstPan38825 #22, awesomeming327. #23, huashiliao2020 #24, john0512 #25 external bisector, DensSv #26, Zhandaulet #27 power JC1²=JE·JD, Jakamousepro #29 CA=CB) corroborate power/polar/angle tags; ezpotd #28 complex bash matches the analytic primary."
+   "range": "#20–#29 of 29 (all loaded); official booklet",
+   "note": "Late posts (tree_3 #20, v4913 #21, HamstPan38825 #22, awesomeming327. #23, huashiliao2020 #24, john0512 #25 external bisector, DensSv #26, Zhandaulet #27 power JC1²=JE·JD, Jakamousepro #29 CA=CB) corroborate power/polar/angle tags; ezpotd #28 complex bash matches the analytic primary.; Official check: Sol1 gets JB1²=JC·C1D, hence the similar right triangles DC1J~C1JC and DJ ⊥ CC1, then cyclic quadrilaterals on the circle with diameter CJ; Sol2 uses equal powers JD·JE of the excircle radii; Sol3 shows C1 is an excentre of B1A1J and that the similarity B1A1J→ABC is a 90° rotation-homothety whose centre is E. Added Similarity and Spiral similarity; analytic status unchanged.",
+   "cite": "official Sol1 (DC1J ~ C1JC); Sol3 (90° spiral similarity B1A1J → ABC centred at E)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Spiral similarity"
+   ],
+   "official": "IMO 2006 SL booklet (imo-official.org), Solutions 1–3 and Comment read"
   },
   "isl:2006:G6": {
    "date": "2026-11-16",
-   "range": "#53–#62 of 62 (all loaded)",
-   "note": "Late posts (cursed_tangent1434 #53, YaoAOPS #54 arc midpoints, Markas #55, b1zmark #56 homothety at F, zuat.e #57, ezpotd #59, Cool12345678 #60 Pappus/Monge, SleepyGirraffe #61, alupigus #62) corroborate homothety/polar/projective tags; mr_bedrockman #58 barycentric matches the analytic primary."
+   "range": "#53–#62 of 62 (all loaded); official booklet",
+   "note": "Late posts (cursed_tangent1434 #53, YaoAOPS #54 arc midpoints, Markas #55, b1zmark #56 homothety at F, zuat.e #57, ezpotd #59, Cool12345678 #60 Pappus/Monge, SleepyGirraffe #61, alupigus #62) corroborate homothety/polar/projective tags; mr_bedrockman #58 barycentric matches the analytic primary.; Official check: Sol1 uses the homotheties at E and F to make D the orthocentre of ABC with C on t, the similarity FEC~ABC in ratio cos γ, and Menelaus in DCN to reduce to PD/PC=KD/CK; Sol2 finds a homothety from ABC to O1O2M and finishes with Pappus; the Comment notes (C,D;P,K) is harmonic (the trigonometric check there is only sketched). Added Orthocenter and orthic triangle, Ceva, Menelaus and ratio chains and Similarity; analytic status unchanged.",
+   "cite": "official Sol1/Sol2 (D is the orthocentre of ABC); Sol1 (Menelaus in DCN; FEC ~ ABC in ratio cos γ)",
+   "addTags": [
+    "syn:G: Orthocenter and orthic triangle",
+    "syn:G: Ceva, Menelaus and ratio chains",
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2006 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2006:G7": {
    "date": "2026-11-16",
-   "range": "#7–#16 of 16 (all loaded)",
-   "note": "Late posts (math154 #7, skytin #8, sergei93 #9, sayantanchakraborty #10, Wizard_32 #11, CyclicISLscelesTrapezoid #12, cocohearts #13, john0512 #14, awesomeming327. #15, ezpotd #16) use the homothety between the tangent triangle and ABC through the incentre; corroborates existing tags."
+   "range": "#7–#16 of 16 (all loaded); official booklet",
+   "note": "Late posts (math154 #7, skytin #8, sergei93 #9, sayantanchakraborty #10, Wizard_32 #11, CyclicISLscelesTrapezoid #12, cocohearts #13, john0512 #14, awesomeming327. #15, ezpotd #16) use the homothety between the tangent triangle and ABC through the incentre; corroborates existing tags.; Official check: the Solution maps ωb to the circumcircle by the homothety at Tb (tangent UX ∥ BC), uses TaI=TaB, TcI=TcB to see B and I symmetric in TaTc so PQ ∥ BC through I, and gets pa from a trapezoid midline; the three lines form the image of MaMbMc under the homothety at I, ratio 1/4 to ABC. Added Reflections, rotations and translations; analytic status unchanged.",
+   "cite": "official Solution (B and I symmetric in TaTc)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO 2006 SL booklet (imo-official.org), Solution read"
   },
   "isl:2006:G8": {
    "date": "2026-11-16",
-   "range": "#1–#7 of 7 (whole thread); analytic scan #1–#7; official solutions booklet",
-   "note": "Posts (Little Gauss #2 second intersection Q, Zhero #4 vector midpoint lemma 2MN ≤ WX+YZ, alkjash #5, awesomeming327. #7) combine the midpoint-segment inequality with a cyclic-quadrilateral construction; corroborates existing tags. Analytic scan: vectors/complex numbers appear only in the midpoint lemma (triangle inequality); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic — no analytic route there"
+   "range": "#1–#7 of 7 (whole thread); analytic scan #1–#7; official solutions booklet; official booklet",
+   "note": "Posts (Little Gauss #2 second intersection Q, Zhero #4 vector midpoint lemma 2MN ≤ WX+YZ, alkjash #5, awesomeming327. #7) combine the midpoint-segment inequality with a cyclic-quadrilateral construction; corroborates existing tags. Analytic scan: vectors/complex numbers appear only in the midpoint lemma (triangle inequality); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic; analytic route stays pending.; Official check: the Solution proves a tangent-chord criterion for the two circles to touch, moves the tangency point to the second intersection Q of the circles ABP and CDP, puts the inward half-discs on BC and DA inside the tangent circles, and finishes with MN ≥ (BC+DA)/2 and the vector identity MN=(BA+CD)/2. Uses only methods already tagged; the one vector identity is a step, not a coordinate proof, so the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): the single solution is synthetic — no analytic route there",
+   "official": "IMO 2006 SL booklet (imo-official.org), Solution read"
   },
   "isl:2006:G9": {
    "date": "2026-11-16",
-   "range": "#52–#61 of 61 (all loaded)",
-   "note": "Late posts (Ilikeminecraft #52, Kempu33334 #53, cubres #54, YaoAOPS #55, Royal_mhyasd #58, alupigus #59, otwaenng #60) use the Miquel points as spiral centres to get the similarity; ezpotd #56, mudkip42 #57, Baimukh #61 complex routes match the analytic primary. Corroborates existing tags."
+   "range": "#52–#61 of 61 (all loaded); official booklet",
+   "note": "Late posts (Ilikeminecraft #52, Kempu33334 #53, cubres #54, YaoAOPS #55, Royal_mhyasd #58, alupigus #59, otwaenng #60) use the Miquel points as spiral centres to get the similarity; ezpotd #56, mudkip42 #57, Baimukh #61 complex routes match the analytic primary. Corroborates existing tags.; Official check: the Solution works with oriented angles: the three circles meet at the Miquel point P (Comment 2), A4B4C4 is ABC rotated by 2ϕ about O, isosceles trapezoids give A5B5C5 ≅ A3B3C3, and concyclic quadruples give A5B5C5~A2B2C2. Added Miquel and complete quadrilaterals; analytic status unchanged.",
+   "cite": "official Solution and Comment 2 (common Miquel point of the three circles)",
+   "addTags": [
+    "syn:G: Miquel and complete quadrilaterals"
+   ],
+   "official": "IMO 2006 SL booklet (imo-official.org), Solution and Comments 1–2 read"
   },
   "isl:2006:G10": {
    "date": "2026-11-16",
-   "range": "#39–#51 of 51 (all loaded); analytic scan #1–#51; official solutions booklet",
-   "note": "Late posts (Bugi #41 Russian solution, larkl #42 and neergard #43 Fedja-style area argument, v_Enhance #48, yayups #49, chirita.andrei #50 induction) corroborate area/combinatorial tags. numbersandnumbers #51 (13 thanks) gives an analytic-style proof by smooth approximation and a complex/Fourier parametrisation of the boundary; it is noted here but, being a real-analysis argument rather than a coordinate-geometry route, it is not recorded as the analytic route, which stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): Solution 1 is an area argument and Solution 2 builds a centrally symmetric 2n-gon from the side vectors (Minkowski-type area comparison), not an analytic-geometry computation; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): Solution 1 is an area argument and Solution 2 builds a centrally symmetric 2n-gon from the side vectors (Minkowski-type area comparison), not an analytic-geometry computation — no analytic route there"
+   "range": "#39–#51 of 51 (all loaded); analytic scan #1–#51; official solutions booklet; official booklet",
+   "note": "Late posts (Bugi #41 Russian solution, larkl #42 and neergard #43 Fedja-style area argument, v_Enhance #48, yayups #49, chirita.andrei #50 induction) corroborate area/combinatorial tags. numbersandnumbers #51 (13 thanks) gives an analytic-style proof by smooth approximation and a complex/Fourier parametrisation of the boundary; it is noted here but, being a real-analysis argument rather than a coordinate-geometry route, it is not recorded as the analytic route, which stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2006SL.pdf): Solution 1 is an area argument and Solution 2 builds a centrally symmetric 2n-gon from the side vectors (Minkowski-type area comparison), not an analytic-geometry computation; analytic route stays pending.; Official check: Sol1 covers a convex 2n-gon by the triangles on its sides with apex at the crossing of the main diagonals, finds a side and vertex spanning area ≥ S/n, and subdivides the sides with rational weights to reach a contradiction; Sol2 builds the centrally symmetric associate polygon from the side vectors, shows its area is 2ΣSi, and proves it is at least 4 times the area by induction on the number of side directions. Added Induction and recursion; the analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2006SL.pdf): Solution 1 is an area argument and Solution 2 builds a centrally symmetric 2n-gon from the side vectors (Minkowski-type area comparison), not an analytic-geometry computation — no analytic route there",
+   "cite": "official Sol2 (induction on the number of side directions)",
+   "addTags": [
+    "syn:C: Induction and recursion"
+   ],
+   "official": "IMO 2006 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2006:N1": {
    "date": "2026-11-16",
@@ -2978,40 +3011,70 @@
   },
   "isl:2005:G1": {
    "date": "2026-11-16",
-   "range": "#95–#104 of 104 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (bir_mat_oimpiyatcisi #95, oooahin #96, PSS1234 #98 excircle, m735821 #100 Ptolemy, Doppel #101, cyroah1331 #102 and ostriches88 #104 ABIK cyclic, Hussienahmad #103) corroborate reflection/metric tags; shendrew7 #97 and lpieleanu #99 barycentric match the analytic primary."
+   "range": "#95–#104 of 104 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (bir_mat_oimpiyatcisi #95, oooahin #96, PSS1234 #98 excircle, m735821 #100 Ptolemy, Doppel #101, cyroah1331 #102 and ostriches88 #104 ABIK cyclic, Hussienahmad #103) corroborate reflection/metric tags; shendrew7 #97 and lpieleanu #99 barycentric match the analytic primary.; Official check: the Compendium solution gets AIL~AIaN from equal ratios, so L lies on AN and K on CM, uses the excircle tangent lengths with AB+BC=3AC to get congruent triangles CLN and MKA, and concludes ACKL is cyclic. Added Similarity; analytic status unchanged.",
+   "cite": "Compendium solution (AIL ~ AIaN)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium solutions to the 2005 shortlist (imomath.com/imocomp/sl05_0707.pdf), problem 14 solution read"
   },
   "isl:2005:G2": {
    "date": "2026-11-16",
-   "range": "#91–#101 of 101 (all loaded); analytic scan #1–#101",
-   "note": "Late posts (OronSH #91 and ezpotd #92 vector sums, Baimukh #93, batzorig.b #95 with Bold_Dalai #96 rhombus, MeLe3 #98 length case analysis, MerabiZariashvili #99, Assassino9931 #100) corroborate the spiral/angle tags and the hybrid vector route. Analytic scan: the vector posts (#14, #31, #40, #86, #88, #90–#92) all use the unit-vector sum A1A2+B1B2+C1C2=0 followed by angle reasoning, matching the existing hybrid status; trig attempts #8/#9 were judged wrong by darij grinberg #26. No change."
+   "range": "#91–#101 of 101 (all loaded); analytic scan #1–#101; official booklet",
+   "note": "Late posts (OronSH #91 and ezpotd #92 vector sums, Baimukh #93, batzorig.b #95 with Bold_Dalai #96 rhombus, MeLe3 #98 length case analysis, MerabiZariashvili #99, Assassino9931 #100) corroborate the spiral/angle tags and the hybrid vector route. Analytic scan: the vector posts (#14, #31, #40, #86, #88, #90–#92) all use the unit-vector sum A1A2+B1B2+C1C2=0 followed by angle reasoning, matching the existing hybrid status; trig attempts #8/#9 were judged wrong by darij grinberg #26. No change.; Official check: the Compendium solution completes the rhombus C2A1A2P, finds equilateral triangles and congruent corner triangles so A1B1C1 is equilateral, and shows A1B2, B1C2, C1A2 are its angle bisectors meeting at the centre of ABC. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium solutions to the 2005 shortlist (imomath.com/imocomp/sl05_0707.pdf), problem 15 solution read"
   },
   "isl:2005:G3": {
    "date": "2026-11-16",
-   "range": "#25–#34 of 34 (all loaded); analytic scan #1–#34; official solutions (IMO Compendium text)",
-   "note": "Late posts (bluelinfish #25, awesomeming327. #26, ike.chen #27, asdf334 #28, lelouchvigeo #29, bryanguo #30 moving points, ezpotd #31 and ihatemath123 #32 and Om245 #33 ABK ~ LDA so AB·AD=BK·DL, borovtori #34) corroborate similarity/angle tags. Analytic scan: no analytic proof in the thread; analytic route stays pending.; Official/Compendium solutions checked (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 16) is a similarity/angle argument (ABK ~ LDA); analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 16) is a similarity/angle argument (ABK ~ LDA) — no analytic route there"
+   "range": "#25–#34 of 34 (all loaded); analytic scan #1–#34; official solutions (IMO Compendium text); official booklet",
+   "note": "Late posts (bluelinfish #25, awesomeming327. #26, ike.chen #27, asdf334 #28, lelouchvigeo #29, bryanguo #30 moving points, ezpotd #31 and ihatemath123 #32 and Om245 #33 ABK ~ LDA so AB·AD=BK·DL, borovtori #34) corroborate similarity/angle tags. Analytic scan: no analytic proof in the thread; analytic route stays pending.; Official/Compendium solutions checked (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 16) is a similarity/angle argument (ABK ~ LDA); analytic route stays pending.; Official check: the Compendium solution proves ABK~LDA and then LDC~CBK, so ∠KCL=180°−∠CBK is constant. Uses only methods already tagged (already read in the 2026-11-16 analytic check). No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 16) is a similarity/angle argument (ABK ~ LDA) — no analytic route there",
+   "official": "IMO Compendium solutions to the 2005 shortlist (imomath.com/imocomp/sl05_0707.pdf), problem 16 solution read"
   },
   "isl:2005:G4": {
    "date": "2026-11-16",
-   "range": "#75–#84 of 84 (all loaded); analytic scan #1–#84",
-   "note": "Late posts (shendrew7 #75, lelouchvigeo #76, MagicalToaster53 #77, john0512 #78, SimplisticFormulas #80, ezpotd #81 gliding principle, Kempu33334 #82, ihatemath123 #83, littlefox_amc #84) identify the fixed point as the spiral centre/Miquel point; corroborates synthetic tags. Analytic scan: Agrippina #21 sketches a complex setup, Fedor Petrov #3 skew coordinates, Armo #12 and Giedrius #22 sine ratios; nothing beyond the existing hybrid analytic route."
+   "range": "#75–#84 of 84 (all loaded); analytic scan #1–#84; official booklet",
+   "note": "Late posts (shendrew7 #75, lelouchvigeo #76, MagicalToaster53 #77, john0512 #78, SimplisticFormulas #80, ezpotd #81 gliding principle, Kempu33334 #82, ihatemath123 #83, littlefox_amc #84) identify the fixed point as the spiral centre/Miquel point; corroborates synthetic tags. Analytic scan: Agrippina #21 sketches a complex setup, Fedor Petrov #3 skew coordinates, Armo #12 and Giedrius #22 sine ratios; nothing beyond the existing hybrid analytic route.; Official check: the Compendium solution rotates about O, the meeting point of the perpendicular bisectors of AC and BD, so D, F, A go to B, E, C; then OE=OF and two cyclic quadrilaterals put O on the circle PQR. Added Reflections, rotations and translations; analytic status unchanged.",
+   "cite": "Compendium solution (rotation about O taking D, F, A to B, E, C)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO Compendium solutions to the 2005 shortlist (imomath.com/imocomp/sl05_0707.pdf), problem 17 solution read"
   },
   "isl:2005:G5": {
    "date": "2026-11-16",
-   "range": "#143–#153 of 153 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Lunatic_Lunar7986 #143 queue point, RANDOM__USER #144, cubres #145, YaoAOPS #147, blueprimes #148, lpieleanu #149, Ianis #150 second intersection of (ABC),(ADE), definite_denny #152 √(AH·AD) inversion question, megahertz13 #153 forgotten coaxiality) use the Miquel/spiral-centre point on the circumcircle; corroborates existing tags."
+   "range": "#143–#153 of 153 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Lunatic_Lunar7986 #143 queue point, RANDOM__USER #144, cubres #145, YaoAOPS #147, blueprimes #148, lpieleanu #149, Ianis #150 second intersection of (ABC),(ADE), definite_denny #152 √(AH·AD) inversion question, megahertz13 #153 forgotten coaxiality) use the Miquel/spiral-centre point on the circumcircle; corroborates existing tags.; Official check: Sol1 uses COM~CHB1 and the angle-bisector ratio CE/EB1=CH/HB1=A′Q/QH to show AQ is a diameter of the circle ADE, so OO1 is a midline parallel to HM; Sol2 computes AO1 and AQ with the law of sines and AH=2R cos α (one similar-triangle step) and gets AQ=2AO1, checked numerically. Added Ceva, Menelaus and ratio chains and analytic Trigonometric computation; analytic status stays Reviewed.",
+   "cite": "Compendium Sol1 (ratio chain via bisector ratios); Sol2 (law of sines, AQ = 2AO1)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains",
+    "ana:G: Trigonometric computation"
+   ],
+   "official": "IMO Compendium solutions to the 2005 shortlist (imomath.com/imocomp/sl05_0707.pdf), problem 18, both solutions read"
   },
   "isl:2005:G6": {
    "date": "2026-11-16",
-   "range": "#137–#147 of 147 (all loaded); analytic scan #1–#147; official solutions (IMO Compendium text)",
-   "note": "Late posts (FredAlexander #137, PSS1234 #139 projective, TThB0501 #140, UberPiggy #141, hellohi321 #142, pirateNT0611 #143, otwaenng #144, zer0cun #145, Jakamousepro #146, Primeniyazidayi #147 AM, EF, DI concurrent) corroborate the harmonic/projective/polar tags. Analytic scan: infiniteturtle #24 claims a full barycentric bash, but its stated coordinates for X fail a numeric check (a=5 test triangle, both S-conventions), so it is not recorded; Kayak #34 uses barycentrics only for one collinearity inside a projective argument; trig posts (#10, #20, #22, #29, #30, #32) are ratio-lemma steps in synthetic proofs. Analytic route stays pending.; Official/Compendium solutions checked (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 19) is synthetic (incircle tangency points, no computation); analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 19) is synthetic (incircle tangency points, no computation) — no analytic route there"
+   "range": "#137–#147 of 147 (all loaded); analytic scan #1–#147; official solutions (IMO Compendium text); official booklet",
+   "note": "Late posts (FredAlexander #137, PSS1234 #139 projective, TThB0501 #140, UberPiggy #141, hellohi321 #142, pirateNT0611 #143, otwaenng #144, zer0cun #145, Jakamousepro #146, Primeniyazidayi #147 AM, EF, DI concurrent) corroborate the harmonic/projective/polar tags. Analytic scan: infiniteturtle #24 claims a full barycentric bash, but its stated coordinates for X fail a numeric check (a=5 test triangle, both S-conventions), so it is not recorded; Kayak #34 uses barycentrics only for one collinearity inside a projective argument; trig posts (#10, #20, #22, #29, #30, #32) are ratio-lemma steps in synthetic proofs. Analytic route stays pending.; Official/Compendium solutions checked (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 19) is synthetic (incircle tangency points, no computation); analytic route stays pending.; Official check: the Compendium solution uses that EF is the polar of A (harmonic (A,R;K,L)) to reduce to R lying on DI, then the median gives [ABR]=[ACR], so AB/AC=ER/FR, and the similar triangles FII′~ABC put R on DI. Added Area arguments and Similarity; the analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imomath.com/imocomp/sl05_0707.pdf): the Compendium solution (problem 19) is synthetic (incircle tangency points, no computation) — no analytic route there",
+   "cite": "Compendium solution (equal areas [ABR] = [ACR]; FII′ ~ ABC)",
+   "addTags": [
+    "syn:G: Area arguments",
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium solutions to the 2005 shortlist (imomath.com/imocomp/sl05_0707.pdf), problem 19 solution read"
   },
   "isl:2005:G7": {
    "date": "2026-11-16",
-   "range": "#9–#18 of 18 (all loaded)",
-   "note": "Late posts (sayantanchakraborty #10, AnonymousBunny #11, AMN300 #13 and sqing #16 trig lemma, anantmudgal09 #14, william122 #15 projections with cos² factors, Modesti #17 spiral similarity, ezpotd #18 Cauchy) corroborate the metric/inequality tags and the reviewed analytic route."
+   "range": "#9–#18 of 18 (all loaded); official booklet",
+   "note": "Late posts (sayantanchakraborty #10, AnonymousBunny #11, AMN300 #13 and sqing #16 trig lemma, anantmudgal09 #14, william122 #15 projections with cos² factors, Modesti #17 spiral similarity, ezpotd #18 Cauchy) corroborate the metric/inequality tags and the reviewed analytic route.; Official check: the Compendium solution reflects D in AB and AC to get p(DEF) ≤ p(ABC)/2, recognises P, Q, R as the excircle touch points of DEF, and bounds p(PQR) by projections, Chebyshev and Σcos ≤ 3/2. Added Reflections, rotations and translations and Incircle/excircle configurations; analytic status unchanged.",
+   "cite": "Compendium solution (reflections of D in AB, AC; P, Q, R excircle touch points of DEF)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations",
+    "syn:G: Incircle/excircle configurations"
+   ],
+   "official": "IMO Compendium solutions to the 2005 shortlist (imomath.com/imocomp/sl05_0707.pdf), problem 20 solution read"
   },
   "isl:2005:N1": {
    "date": "2026-11-16",

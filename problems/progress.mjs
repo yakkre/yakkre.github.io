@@ -59,7 +59,17 @@ export function createProgress({startHref, validKeys, onChange}) {
     const [{initializeApp}, authMod, fsMod] = await Promise.all([
       import(SDK + 'firebase-app.js'), import(SDK + 'firebase-auth.js'), import(SDK + 'firebase-firestore.js')]);
     const app = initializeApp(firebaseConfig);
-    fb = {auth: authMod.getAuth(app), db: fsMod.getFirestore(app), ...authMod, ...fsMod};
+    // Offline: Firestore keeps a copy of the reader's data in IndexedDB and queues writes there,
+    // sending them when the connection comes back (even after the page is closed and reopened).
+    let db;
+    try { db = fsMod.initializeFirestore(app, {localCache: fsMod.persistentLocalCache({tabManager: fsMod.persistentMultipleTabManager()})}); }
+    catch (e) { console.warn('Offline cache unavailable:', e); db = fsMod.getFirestore(app); }
+    // A queued write only resolves once the server confirms it, so offline (or on a slow link) count it
+    // as saved once it is in the local queue instead of waiting forever.
+    const queued = p => { p.catch(e => console.error('Sync failed:', e));
+      return navigator.onLine ? Promise.race([p, new Promise(r => setTimeout(r, 4000))]) : Promise.resolve(); };
+    fb = {auth: authMod.getAuth(app), db, ...authMod, ...fsMod,
+      setDoc: (...a) => queued(fsMod.setDoc(...a)), deleteDoc: (...a) => queued(fsMod.deleteDoc(...a))};
     return fb;
   }
   const docRef = () => fb.doc(fb.db, 'progress', user.uid);

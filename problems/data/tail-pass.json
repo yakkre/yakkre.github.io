@@ -9,31 +9,43 @@
   },
   "isl:2016:G6": {
    "date": "2026-11-16",
-   "range": "#61–#71 of 71 (all loaded); analytic scan #1–#71; official solutions booklet (Solutions 1–3)",
-   "note": "Late posts (Ilikeminecraft #61 pole/Pascal, HamstPan38825 #62, Scilyse #67 and Royal_mhyasd #69 Humpty-point angle chase, ReticulatedPython #71) repeat the cyclic KLBD / power-of-a-point / projective routes already tagged. Scan finds only trig steps inside synthetic proofs (#6, #11, #57, #66) and a projective map (#56); no complete pure analytic proof, analytic route stays pending.; Official solutions checked: Solution 3 proves MX·MB=MA² (power/polar claim) and E,T,B,X concyclic synthetically, then reduces PQ ⊥ AC to tan∠AFD·tan∠AEB = tan∠MBE·tan∠MDF and finishes with the trigonometric lemma tan²∠W'X'Z' = tan∠N'X'W'·tan∠Z'W'X' (proved by the sine rule); recorded as a hybrid trigonometric analytic route.",
-   "cite": "official Solution 3 (hybrid trigonometric)",
+   "range": "#61–#71 of 71 (all loaded); analytic scan #1–#71; official solutions booklet (Solutions 1–3); official booklet",
+   "note": "Late posts (Ilikeminecraft #61 pole/Pascal, HamstPan38825 #62, Scilyse #67 and Royal_mhyasd #69 Humpty-point angle chase, ReticulatedPython #71) repeat the cyclic KLBD / power-of-a-point / projective routes already tagged. Scan finds only trig steps inside synthetic proofs (#6, #11, #57, #66) and a projective map (#56); no complete pure analytic proof, analytic route stays pending.; Official solutions checked: Solution 3 proves MX·MB=MA² (power/polar claim) and E,T,B,X concyclic synthetically, then reduces PQ ⊥ AC to tan∠AFD·tan∠AEB = tan∠MBE·tan∠MDF and finishes with the trigonometric lemma tan²∠W'X'Z' = tan∠N'X'W'·tan∠Z'W'X' (proved by the sine rule); recorded as a hybrid trigonometric analytic route.; Official check: Sol1 builds Y′ with MY′·MD=MA² and uses the oppositely similar triangles MAY′~MDA, MCY′~MDC; Sol2 (symmetric circles ω1, ω2, parallelogram, angle chase) corroborates; Sol3 proves its Claim 2 (power of the midpoint of E′F′) by inversion and polars and uses the harmonic range (T,E;A,C) to get ME·MT=MA², then a trig finish (analytic already Reviewed — hybrid). Added Similarity, Harmonic division and cross ratios and Inversion.",
+   "cite": "official Solution 3 (hybrid trigonometric); official Sol1 (MAY′~MDA); Sol3 ((T,E;A,C) harmonic; Claim 2 by inversion)",
    "addTags": [
-    "ana:G: Trigonometric computation"
+    "ana:G: Trigonometric computation",
+    "syn:G: Similarity",
+    "syn:G: Harmonic division and cross ratios",
+    "syn:G: Inversion"
    ],
    "ana_explanation": "A hybrid trigonometric route (official Solution 3): after showing synthetically that MX·MB = MA² and that E, T, B, X are concyclic, PQ ⊥ AC becomes the tangent identity tan∠AFD·tan∠AEB = tan∠MBE·tan∠MDF, which follows from two applications of the lemma tan²∠WXZ = tan∠NXW·tan∠ZWX for the bisector foot W and midpoint N, itself proved by the sine rule.",
    "ana_refs": "https://www.imo-official.org/problems/IMO2016SL.pdf | official Solution 3 (hybrid trigonometric)",
-   "ana_status": "Reviewed — hybrid"
+   "ana_status": "Reviewed — hybrid",
+   "official": "IMO 2016 SL booklet (imo-official.org), Solutions 1–3 read"
   },
   "isl:2016:G8": {
    "date": "2026-11-16",
-   "range": "#1–#10 of 10 (all loaded; whole thread); analytic scan #1–#10; official solutions booklet",
-   "note": "Whole thread is 10 posts, unchanged since the earlier review: polya78 #4/#5/#7 excentral-triangle weighted-distance proof (tagged); MathStudent2002 #9 complex/calculus proves only an auxiliary inequality for sansae's unproved Fermat-point idea, which Idio-logy #10 refutes. No complete analytic proof; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution is synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution is synthetic — no analytic route there"
+   "range": "#1–#10 of 10 (all loaded; whole thread); analytic scan #1–#10; official solutions booklet; official booklet",
+   "note": "Whole thread is 10 posts, unchanged since the earlier review: polya78 #4/#5/#7 excentral-triangle weighted-distance proof (tagged); MathStudent2002 #9 complex/calculus proves only an auxiliary inequality for sansae's unproved Fermat-point idea, which Idio-logy #10 refutes. No complete analytic proof; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution is synthetic; analytic route stays pending.; Official check: the Solution shows A1B1C1 is acute and H lies in BB1C1 etc. by length/angle comparisons, then rotates B, I, H by 60° about A (or C) so the two sums become broken lines B′I′IC and B′H′HC and compares perimeters of nested convex quadrilaterals. Added Reflections, rotations and translations. Analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution is synthetic — no analytic route there",
+   "cite": "official Solution (60° rotation about A)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO 2016 SL booklet (imo-official.org), Solution read"
   },
   "isl:2016:G7": {
    "date": "2026-11-16",
-   "range": "#50–#59 of 59 (all loaded)",
-   "note": "Late posts mostly repeat √bc inversion / inverse-of-I routes (awesomeming327 #50, bin_sherlo #56, ezpotd #58, ohhh #59). Aiden-1089 #53 (read in full, computations checked) gives a complete short harmonic-bundle proof of both parts; Scilyse #55 gives the same bundle for part (a). Harmonic division was not tagged; added to the synthetic route.",
+   "range": "#50–#59 of 59 (all loaded); official booklet",
+   "note": "Late posts mostly repeat √bc inversion / inverse-of-I routes (awesomeming327 #50, bin_sherlo #56, ezpotd #58, ohhh #59). Aiden-1089 #53 (read in full, computations checked) gives a complete short harmonic-bundle proof of both parts; Scilyse #55 gives the same bundle for part (a). Harmonic division was not tagged; added to the synthetic route.; Official check: Sol1 (a) chains similar triangles ABA′~AOC, ABIA~AIC, AA′IA~AIO, and (b) uses Poncelet plus Euler's OI²=R²−2Rr to compute OD=R/2; Sol2 (√(bc) inversion, inversion in Γ, power of P) corroborates. Added Similarity and Metric relations and length chasing.",
    "addTags": [
-    "syn:G: Harmonic division and cross ratios"
+    "syn:G: Harmonic division and cross ratios",
+    "syn:G: Similarity",
+    "syn:G: Metric relations and length chasing"
    ],
    "explanationAppend": "A late forum proof notes that the extouch point is the midpoint of I_A I_A', so reflecting the harmonic pencil A(I_A, I_A'; extouch, altitude direction) in AI shows ℓ_A meets OI at the harmonic conjugate of I with respect to O and the exsimilicentre X56, which is the inverse of I in the circumcircle; then PX·PY = PO·PI and d(O,XY) = R/2 give 120°.",
-   "cite": "#53 (Aiden-1089) complete harmonic-bundle proof of both parts; #55 (Scilyse) same bundle for part (a)"
+   "cite": "#53 (Aiden-1089) complete harmonic-bundle proof of both parts; #55 (Scilyse) same bundle for part (a); official Sol1 (a) (similar triangles), (b) (OD via Euler's formula)",
+   "official": "IMO 2016 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2005:A1": {
    "date": "2026-11-16",
@@ -1694,74 +1706,142 @@
   },
   "isl:2016:G1": {
    "date": "2026-11-16",
-   "range": "#174–#184 of 184 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (InftyByond #174 radical centre and #179, lian_the_noob12 #176, LeYohan #177, Illusioner #178, cyroah1331 #180 reflection of D over AC, UberPiggy #181, lpieleanu #182, CubeAlgo15 #183, pirateNT0611 #184) use the similar isosceles triangles and cyclic ABMDE; corroborates existing tags."
+   "range": "#174–#184 of 184 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (InftyByond #174 radical centre and #179, lian_the_noob12 #176, LeYohan #177, Illusioner #178, cyroah1331 #180 reflection of D over AC, UberPiggy #181, lpieleanu #182, CubeAlgo15 #183, pirateNT0611 #184) use the similar isosceles triangles and cyclic ABMDE; corroborates existing tags.; Official check: Sol1 (congruent isosceles triangles, BD and FX symmetric in EM) corroborates; Sol2 shows F is the incentre of DAB and finishes either with BD, EM, FX as the three radical axes of Γ1, Γ2, Γ3 (Method 1) or by Desargues on the triangles DMF and BEX with parallel sides (Method 2); Sol3 identifies C as the A-excentre of DAB. Added Radical axes and coaxality, Projective incidence and Incenter/excenters.",
+   "cite": "official Sol2 Method 1 (radical axes), Method 2 (Desargues); Sol2/Sol3 (incentre and A-excentre of DAB)",
+   "addTags": [
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Projective incidence",
+    "syn:G: Incenter/excenters"
+   ],
+   "official": "IMO 2016 SL booklet (imo-official.org), Solutions 1–3 and Comment read"
   },
   "isl:2016:G2": {
    "date": "2026-11-16",
-   "range": "#97–#106 of 106 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Ilikeminecraft #97 spiral similarity, ezpotd #98 and InterLoop #99 ratio-lemma/sine computations, Math_AlexG #100 isogonal AT/AD', Eka01 #101 mixtilinear point, InftyByond #102, TheOneAndOnlyOFT #104, Royal_mhyasd #105) corroborate synthetic tags; lpieleanu #106 barycentric matches the analytic primary."
+   "range": "#97–#106 of 106 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Ilikeminecraft #97 spiral similarity, ezpotd #98 and InterLoop #99 ratio-lemma/sine computations, Math_AlexG #100 isogonal AT/AD', Eka01 #101 mixtilinear point, InftyByond #102, TheOneAndOnlyOFT #104, Royal_mhyasd #105) corroborate synthetic tags; lpieleanu #106 barycentric matches the analytic primary.; Official check: Sol1 proves an area lemma for cyclic quadrilaterals, gets XBF and XCE directly similar, and (Method 1) uses FBI~IBC and EIC~IBC with the homothetic tangent B1C1 (Method 2 is a sine-law hybrid finish); Sol2 uses the A-mixtilinear incircle, the radical centre R of ωA, Γ and (AEF), and a harmonic projection. Added Area arguments, Similarity and Radical axes and coaxality.",
+   "cite": "official Sol1 Claim (areas), Method 1 (FBI~IBC); Sol2 (radical centre R)",
+   "addTags": [
+    "syn:G: Area arguments",
+    "syn:G: Similarity",
+    "syn:G: Radical axes and coaxality"
+   ],
+   "official": "IMO 2016 SL booklet (imo-official.org), Solutions 1–2 (all methods) read"
   },
   "isl:2016:G3": {
    "date": "2026-11-16",
-   "range": "#1–#9 of 9 (whole thread); analytic scan #1–#9; official solutions booklet",
-   "note": "Late posts (suli #6 explicit regions, Wizard_32 #7 sketch, awesomeming327. #8, ezpotd #9) construct the nice sets from the circles of radius 2 about B and C and use the inversion-type bijection; corroborates existing tags. Analytic scan: coordinates appear only in the statement's set-up and region definitions; no analytic proof of the required bijection, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution defines the two regions by disk inequalities and verifies the product by similarity ratios, as in the forum; no analytic-geometry computation; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution defines the two regions by disk inequalities and verifies the product by similarity ratios, as in the forum; no analytic-geometry computation — no analytic route there"
+   "range": "#1–#9 of 9 (whole thread); analytic scan #1–#9; official solutions booklet; official booklet",
+   "note": "Late posts (suli #6 explicit regions, Wizard_32 #7 sketch, awesomeming327. #8, ezpotd #9) construct the nice sets from the circles of radius 2 about B and C and use the inversion-type bijection; corroborates existing tags. Analytic scan: coordinates appear only in the statement's set-up and region definitions; no analytic proof of the required bijection, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution defines the two regions by disk inequalities and verifies the product by similarity ratios, as in the forum; no analytic-geometry computation; analytic route stays pending.; Official check (confirms the 2026-11-16 note): the Solution describes S and S′ as regions cut out by the disks of radius 2 about B and C (the coordinates only restate the distance conditions), takes T′=(1,2), and gets BA·BA′=BC²=4 from the similarity ratios; it uses only methods already tagged. No new tag; analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2016SL.pdf): the single solution defines the two regions by disk inequalities and verifies the product by similarity ratios, as in the forum; no analytic-geometry computation — no analytic route there",
+   "official": "IMO 2016 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2016:G4": {
    "date": "2026-11-16",
-   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (lian_the_noob12 #100, Jupiterballs #101, Math1lover #102, Scilyse #103, pirateNT0611 #104, Soummo #105–#106, DensSv #107, CubeAlgo15 #108) reflect I over AC and angle chase; vsamc #99 barycentric matches the analytic primary. Corroborates existing tags."
+   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (lian_the_noob12 #100, Jupiterballs #101, Math1lover #102, Scilyse #103, pirateNT0611 #104, Soummo #105–#106, DensSv #107, CubeAlgo15 #108) reflect I over AC and angle chase; vsamc #99 barycentric matches the analytic primary. Corroborates existing tags.; Official check: Sol1 puts J on Γ by the directed power DC·DF=−DC²=−DI·DB (DC tangent to (IBC)); Sol3 (ED′D~ICB, BCI′~BD′E) and Sol6 (ADE~ATI, DAT~EAI′, ADM~AEB) are similarity proofs; Sols 2, 4, 5 (directed angles, incenter–excenter lemma, isosceles trapezoids) corroborate. Added Power of a point and Similarity.",
+   "cite": "official Sol1 (power of D); Sol3 and Sol6 (similar triangles)",
+   "addTags": [
+    "syn:G: Power of a point",
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2016 SL booklet (imo-official.org), Solutions 1–6 and Comment read"
   },
   "isl:2016:G5": {
    "date": "2026-11-16",
-   "range": "#33–#43 of 43 (all loaded)",
-   "note": "Late posts (dolphinday #33, awesomeming327. #35, ihatemath123 #37 moving points, ohiorizzler1434 #36 nine-point circle, Ilikeminecraft #38, Aiden-1089 #39 homothety, hung9A #40, ezpotd #42 spiral similarity) corroborate spiral-similarity tags; SimplisticFormulas #41 and pl246631 #43 complex routes match the analytic primary."
+   "range": "#33–#43 of 43 (all loaded); official booklet",
+   "note": "Late posts (dolphinday #33, awesomeming327. #35, ihatemath123 #37 moving points, ohiorizzler1434 #36 nine-point circle, Ilikeminecraft #38, Aiden-1089 #39 homothety, hung9A #40, ezpotd #42 spiral similarity) corroborate spiral-similarity tags; SimplisticFormulas #41 and pl246631 #43 complex routes match the analytic primary.; Official check: Sol1 is a directed-angle chase (D,S′,S,Q and D,O1,S′,N concyclic) with SD tangent, so SS′·SO1=SD²=SX², and a sine-law step for the symmetry of S, S′ in XY (hybrid step); Sol2 (spiral similarity at D, two special positions) corroborates. Added Angle chasing and cyclicity and Power of a point.",
+   "cite": "official Sol1 (directed angles; tangent power (1))",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity",
+    "syn:G: Power of a point"
+   ],
+   "official": "IMO 2016 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2015:G1": {
    "date": "2026-11-16",
-   "range": "#161–#173 of 173 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Ilikeminecraft #161, otwaenng #162, Royal_mhyasd #163, cyroah1331 #164 cyclic BGCH, NicoN9 #165 and lpieleanu #167 and pirateNT0611 #173 reflection of H over AC, alexanderchew #166, DensSv #169 parallelogram, FunctionGenerator #171 power of a point) corroborate existing tags."
+   "range": "#161–#173 of 173 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Ilikeminecraft #161, otwaenng #162, Royal_mhyasd #163, cyroah1331 #164 cyclic BGCH, NicoN9 #165 and lpieleanu #167 and pirateNT0611 #173 reflection of H over AC, alexanderchew #166, DensSv #169 parallelogram, FunctionGenerator #171 power of a point) corroborate existing tags.; Official check: Sol1 (cyclic BGCH, CGJI; congruent triangles IMJ≅HMD) and Sol2 (right triangles CMH~CGB, MIJ~MCG) finish by congruent/similar triangles; added Similarity.",
+   "cite": "official Sol1 (IMJ≅HMD); Sol2 (CMH~CGB, MIJ~MCG)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2015:G2": {
    "date": "2026-11-16",
-   "range": "#109–#118 of 118 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Eda_no11 #110 and mael_AMO #111 AO ⟂ FG, Ilikeminecraft #113, otwaenng #114, Math1lover #115, cyroah1331 #116, InftyByond #117, Assassino9931 #118) angle chase to the isosceles triangle on FG; Thelink_20 #112 complex bash matches the analytic primary. Corroborates existing tags."
+   "range": "#109–#118 of 118 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Eda_no11 #110 and mael_AMO #111 AO ⟂ FG, Ilikeminecraft #113, otwaenng #114, Math1lover #115, cyroah1331 #116, InftyByond #117, Assassino9931 #118) angle chase to the isosceles triangle on FG; Thelink_20 #112 complex bash matches the analytic primary. Corroborates existing tags.; Official check: Sol1 reduces the problem to FK and GL being symmetric about AO (AF=AG are mirror chords) and proves ∠KFA=∠AGL by a directed-angle chase; Sol2 and Comment 2 corroborate. Added Reflections, rotations and translations.",
+   "cite": "official Sol1 (reflection in AO)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–3 read"
   },
   "isl:2015:G3": {
    "date": "2026-11-16",
-   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Markas #99, PSS1234 #100 ratio AH/BH, V0305 #101, Math1lover #102, littlefox_amc #104, pirateNT0611 #105 phantom points, Ashwath2011 #106, alupigus #107) corroborate synthetic tags; Siddharthmaybe #108 Cartesian coordinates matches the analytic primary."
+   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Markas #99, PSS1234 #100 ratio AH/BH, V0305 #101, Math1lover #102, littlefox_amc #104, pirateNT0611 #105 phantom points, Ashwath2011 #106, alupigus #107) corroborate synthetic tags; Siddharthmaybe #108 Cartesian coordinates matches the analytic primary.; Official check: Sol1 (spiral similarity at B, bisector theorem) corroborates; Sol2 is an angle chase with similar right triangles CHK~BQ1D, CKB~PDQ1; Sol3 reflects C in AB, angle-chases collinearities and applies Pascal to the degenerate hexagon KQ1Q1TS. Added Projective incidence and Angle chasing and cyclicity.",
+   "cite": "official Sol3 (Pascal); Sol2/Sol3 (angle chase)",
+   "addTags": [
+    "syn:G: Projective incidence",
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–3 and Comments 1–2 read"
   },
   "isl:2015:G4": {
    "date": "2026-11-16",
-   "range": "#68–#77 of 77 (all loaded)",
-   "note": "Scilyse #70 gives a complete complex-number proof (B=0, A,P real, C,Q on rℝ; the two concyclicity conditions give (a+c'r)(a+c'/r)=2(p+q'r)(p+q'/r), i.e. 4|m|²=2|t|²); added Complex numbers to the analytic route. InterLoop #72 is a second complex route; shendrew7 #71, Royal_mhyasd #73, zhoujef000 #74, V0305 #75, Ashwath2011 #77 barycentric (matches primary); YaoAOPS #68 Miquel point, ezpotd #76 synthetic.",
+   "range": "#68–#77 of 77 (all loaded); official booklet",
+   "note": "Scilyse #70 gives a complete complex-number proof (B=0, A,P real, C,Q on rℝ; the two concyclicity conditions give (a+c'r)(a+c'/r)=2(p+q'r)(p+q'/r), i.e. 4|m|²=2|t|²); added Complex numbers to the analytic route. InterLoop #72 is a second complex route; shendrew7 #71, Royal_mhyasd #73, zhoujef000 #74, V0305 #75, Ashwath2011 #77 barycentric (matches primary); YaoAOPS #68 Miquel point, ezpotd #76 synthetic.; Official check: Sol1 (similar triangles with corresponding medians, BM²=BS·BT) and Comment 1 (spiral similarity) corroborate; Sol2 finds BMX~YMB~B1CB and uses the inversion at B swapping A↔X, M↔B1, C↔Y, so Ω↔XY and T is fixed (vector step is a hybrid); Sol3 proves BP·BA+BQ·BC=BT² (power of B, or Ptolemy in Comment 2). Added Inversion and Metric relations and length chasing.",
    "addTags": [
-    "ana:G: Complex numbers"
+    "ana:G: Complex numbers",
+    "syn:G: Inversion",
+    "syn:G: Metric relations and length chasing"
    ],
-   "cite": "#70 (Scilyse) complete complex-number proof"
+   "cite": "#70 (Scilyse) complete complex-number proof; official Sol2 (inversion at B); Sol3 lemma (BP·BA+BQ·BC=BT²)",
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–3 and Comments 1–2 read"
   },
   "isl:2015:G5": {
    "date": "2026-11-16",
-   "range": "#31–#40 of 40 (all loaded)",
-   "note": "Late posts (Saucepan_man02 #31 Menelaus, lelouchvigeo #32 Reim, Ilikeminecraft #33 DIT, CatinoBarbaraCombinatoric #34, OronSH #35, Benjaminxiao #37, b1zmark #38, bin_sherlo #39, kotmhn #40) use the power-of-point cyclicity of FGH'I' and Menelaus; YaoAOPS #36 bash. Corroborates existing tags."
+   "range": "#31–#40 of 40 (all loaded); official booklet",
+   "note": "Late posts (Saucepan_man02 #31 Menelaus, lelouchvigeo #32 Reim, Ilikeminecraft #33 DIT, CatinoBarbaraCombinatoric #34, OronSH #35, Benjaminxiao #37, b1zmark #38, bin_sherlo #39, kotmhn #40) use the power-of-point cyclicity of FGH'I' and Menelaus; YaoAOPS #36 bash. Corroborates existing tags.; Official check: Sol1 gets △CH1Q~△RCQ and △CI1Q~△SCQ, so QH1·QR=QC²=QI1·QS, and the inversion at Q of radius QC swaps Γ and ω and fixes P; Sol2 (cross ratios, Menelaus, Ceva) ends with Q the orthocentre of OCN, so OQ⊥CP. Added Inversion, Similarity and Orthocenter and orthic triangle.",
+   "cite": "official Sol1 (inversion at Q, similar triangles); Sol2 (Q orthocentre of OCN)",
+   "addTags": [
+    "syn:G: Inversion",
+    "syn:G: Similarity",
+    "syn:G: Orthocenter and orthic triangle"
+   ],
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–2 read"
   },
   "isl:2015:G6": {
    "date": "2026-11-16",
-   "range": "#164–#174 of 174 (all loaded); analytic scan #1–#174",
-   "note": "Late posts (Stead #164, InterLoop #165, pirateNT0611 #166, Cool12345678 #167, Mo.11ss #168, PK10 #173 negative inversion at H; konargyr14 #169/PK10 #174 length computation; otwaenng #170) corroborate inversion tags. Analytic scan: leminscate #5 (cited) complex route, EulerMacaroni #41 inversion+complex hybrid, pi37 #42 length bash; no new pure analytic proof, hybrid status stands."
+   "range": "#164–#174 of 174 (all loaded); analytic scan #1–#174; official booklet",
+   "note": "Late posts (Stead #164, InterLoop #165, pirateNT0611 #166, Cool12345678 #167, Mo.11ss #168, PK10 #173 negative inversion at H; konargyr14 #169/PK10 #174 length computation; otwaenng #170) corroborate inversion tags. Analytic scan: leminscate #5 (cited) complex route, EulerMacaroni #41 inversion+complex hybrid, pi37 #42 length bash; no new pure analytic proof, hybrid status stands.; Official check: Sol1 uses similar triangles KHE~AHQ1 with corresponding midpoints and the rectangle AQA1Q1; Sol2 takes the radical centre R of Γ, (KQH), (EA1H) on their common tangent at H and the power of the midpoint S of HR (SM·SF=SH²=SK²). Added Similarity, Radical axes and coaxality and Power of a point.",
+   "cite": "official Sol1 (KHE~AHQ1); Sol2 (radical centre R, power of S)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Power of a point"
+   ],
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2015:G7": {
    "date": "2026-11-16",
-   "range": "#27–#36 of 36 (all loaded)",
-   "note": "Late posts (rcorreaa #27, MarkBcc168 #28 DDIT finish, math_comb01 #29 Pitot + Monge, Shreyasharma #30, awesomehuman #31, Ywgh1 #32, mcmp #33, kotmhn #35) first show ABCD tangential by Pitot and then use Monge/homothety; corroborates existing tags."
+   "range": "#27–#36 of 36 (all loaded); official booklet",
+   "note": "Late posts (rcorreaa #27, MarkBcc168 #28 DDIT finish, math_comb01 #29 Pitot + Monge, Shreyasharma #30, awesomehuman #31, Ywgh1 #32, mcmp #33, kotmhn #35) first show ABCD tangential by Pitot and then use Monge/homothety; corroborates existing tags.; Official check: Sol1 (tangent lengths, Monge's theorem) corroborates; Sol2 reduces concurrency to a ratio identity by Menelaus in ABC and ACD and proves it with Lemma 1 and the similar right triangles IPJ~KQJ; Sol3 uses an area/sine Lemma 2, a homothety at O, and Brianchon on A1P1R1C1Q1S1 with Menelaus. Added Ceva, Menelaus and ratio chains, Similarity and Projective incidence.",
+   "cite": "official Sol2 (Menelaus reduction, IPJ~KQJ); Sol3 (Brianchon)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains",
+    "syn:G: Similarity",
+    "syn:G: Projective incidence"
+   ],
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–3 and Comment read"
   },
   "isl:2015:G8": {
    "date": "2026-11-16",
-   "range": "#5–#15 of 15 (all loaded); analytic scan #1–#15; official solutions booklet",
-   "note": "Late posts (william122 #5, SnowPanda #6, Idio-logy #7, L567 #8, Inconsistent #9, Eyed #10, YaoAOPS #11, Leo.Euler #13, awesomehuman #14, BS2012 #15) show every triangle of a Thaiangulation shares a side with Π and finish by area comparison; corroborates existing tags. Analytic scan: barycentrics/coordinates appear only as single steps inside these combinatorial arguments; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2015SL.pdf): Solutions 1–2 are synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2015SL.pdf): Solutions 1–2 are synthetic — no analytic route there"
+   "range": "#5–#15 of 15 (all loaded); analytic scan #1–#15; official solutions booklet; official booklet",
+   "note": "Late posts (william122 #5, SnowPanda #6, Idio-logy #7, L567 #8, Inconsistent #9, Eyed #10, YaoAOPS #11, Leo.Euler #13, awesomehuman #14, BS2012 #15) show every triangle of a Thaiangulation shares a side with Π and finish by area comparison; corroborates existing tags. Analytic scan: barycentrics/coordinates appear only as single steps inside these combinatorial arguments; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2015SL.pdf): Solutions 1–2 are synthetic; analytic route stays pending.; Official check: Sol1 (equal areas, Lemma 1 by exterior angles, Lemma 2 by an affine map, minimal counterexample with ears) and Sol2 (minimal counterexample, parallel-chord case analysis) use only methods already tagged. No new tag; analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2015SL.pdf): Solutions 1–2 are synthetic — no analytic route there",
+   "official": "IMO 2015 SL booklet (imo-official.org), Solutions 1–2 and Comment 1 read"
   },
   "isl:2014:G1": {
    "date": "2026-11-16",

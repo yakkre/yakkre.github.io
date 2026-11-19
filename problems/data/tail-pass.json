@@ -3188,44 +3188,71 @@
   },
   "isl:2004:G1": {
    "date": "2026-11-16",
-   "range": "#152–#161 of 161 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (pirateNT0611 #152, InftyByond #153, CubeAlgo15 #154, m735821 #156 Reim, Bridgeon #157 south pole, AZ02336 #158, mael_AMO #159 Miquel, Sxmplicity #160, TheOneAndOnlyOFT #161) show AMRN is cyclic since R is the arc midpoint of MN on the bisector; corroborates existing tags."
+   "range": "#152–#161 of 161 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (pirateNT0611 #152, InftyByond #153, CubeAlgo15 #154, m735821 #156 Reim, Bridgeon #157 south pole, AZ02336 #158, mael_AMO #159 Miquel, Sxmplicity #160, TheOneAndOnlyOFT #161) show AMRN is cyclic since R is the arc midpoint of MN on the bisector; corroborates existing tags.; Official check: the Compendium solution notes AM≠AN, puts R at the arc midpoint of the circle AMN (the bisector of ∠MAN meets the perpendicular bisector of MN), and chases angles to show RMBK and RNCK are cyclic with K=AR∩BC. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 16 solution read"
   },
   "isl:2004:G2": {
    "date": "2026-11-16",
-   "range": "#65–#74 of 74 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (john0512 #65 DG tangent, Patrik #66 projective map, SimplisticFormulas #67 and ezpotd #68 Pascal, Rayvhs #69, YaoAOPS #70, Aiden-1089 #71, Kempu33334 #72, Half_Blood_Prince #73, TheOneAndOnlyOFT #74 inversion at F) corroborate the polar/projective/inversion tags."
+   "range": "#65–#74 of 74 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (john0512 #65 DG tangent, Patrik #66 projective map, SimplisticFormulas #67 and ezpotd #68 Pascal, Rayvhs #69, YaoAOPS #70, Aiden-1089 #71, Kempu33334 #72, Half_Blood_Prince #73, TheOneAndOnlyOFT #74 inversion at F) corroborate the polar/projective/inversion tags.; Official check: the Compendium solution reflects G in AB to H, gets DE=DF from the cyclic AEMF and the tangent DE, then DF²=DC·DA (power of D) gives ∠DCF=∠DFA=∠HCA, so H lies on CF. Added Power of a point and Reflections, rotations and translations; analytic status unchanged.",
+   "cite": "Compendium solution (DF² = DE² = DC·DA; H the reflection of G in AB)",
+   "addTags": [
+    "syn:G: Power of a point",
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 17 solution read"
   },
   "isl:2004:G3": {
    "date": "2026-11-16",
-   "range": "#28–#37 of 37 (all loaded); analytic scan #1–#37",
-   "note": "Late posts (joshualiu315 #28, shendrew7 #29 EF=BC, zuat.e #30, YaoAOPS #32, Siddharthmaybe #33, Scilyse #34, oooahin #35, reyaansh_agrawal #36 Reim, V0305 #37) corroborate similarity/angle tags. Analytic scan: ezpotd #31 (read in full) is the law-of-sines computation already recorded as the hybrid trigonometric route; no pure analytic proof beyond it. No change."
+   "range": "#28–#37 of 37 (all loaded); analytic scan #1–#37; official booklet",
+   "note": "Late posts (joshualiu315 #28, shendrew7 #29 EF=BC, zuat.e #30, YaoAOPS #32, Siddharthmaybe #33, Scilyse #34, oooahin #35, reyaansh_agrawal #36 Reim, V0305 #37) corroborate similarity/angle tags. Analytic scan: ezpotd #31 (read in full) is the law-of-sines computation already recorded as the hybrid trigonometric route; no pure analytic proof beyond it. No change.; Official check: the Compendium solution shows GH ⊥ AD via the congruence AGH≅ACB, reduces the rectangle to FX=GY and EX=HY, and computes GY=AC sin γ, FX=AF sin γ, so both hold iff ∠ADC=30° iff γ−β=60°. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 18 solution read"
   },
   "isl:2004:G4": {
    "date": "2026-11-16",
-   "range": "#84–#95 of 95 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (cj13609517288 #84, LHE96 #87, InterLoop #90 isogonal conjugate in ABCD, Bridgeon #92 synthetic plus a self-described failed barycentric attempt, MerabiZariashvili #93, ezpotd #94 reflections over the bisectors, Gandalf_Greyhame #95) corroborate the reflection/isogonal tags; batzorig.b #88 is a one-line hint."
+   "range": "#84–#95 of 95 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (cj13609517288 #84, LHE96 #87, InterLoop #90 isogonal conjugate in ABCD, Bridgeon #92 synthetic plus a self-described failed barycentric attempt, MerabiZariashvili #93, ezpotd #94 reflections over the bisectors, Gandalf_Greyhame #95) corroborate the reflection/isogonal tags; batzorig.b #88 is a one-line hint.; Official check: the Compendium solution gets BF ∥ AC ∥ DE from equal arcs in the cyclic case; conversely A and C are isogonal conjugates in BDP, so reflecting D in the perpendicular bisector of AC gives congruent triangles APD, CPE and the concyclicity. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 19 solution read"
   },
   "isl:2004:G5": {
    "date": "2026-11-16",
-   "range": "#5–#14 of 14 (all loaded)",
-   "note": "Posts (TheUltimate123 #5, v_Enhance #6, mathlogician #7, Gaussian_cyber #8, CyclicISLscelesTrapezoid #9, JAnatolGT_00 #10, Rexaria112 #11, OronSH #12, BS2012 #13, cursed_tangent1434 #14) use the midpoints M_i and the cyclic A_1A_nB_iM_i to reduce to an angle sum; corroborates existing synthetic tags and the reviewed analytic route."
+   "range": "#5–#14 of 14 (all loaded); official booklet",
+   "note": "Posts (TheUltimate123 #5, v_Enhance #6, mathlogician #7, Gaussian_cyber #8, CyclicISLscelesTrapezoid #9, JAnatolGT_00 #10, Rexaria112 #11, OronSH #12, BS2012 #13, cursed_tangent1434 #14) use the midpoints M_i and the cyclic A_1A_nB_iM_i to reduce to an angle sum; corroborates existing synthetic tags and the reviewed analytic route.; Official check: the Compendium lemma computes XN=2ab/(a+b) from the bisector ratio and XM=(a+b)/2, so XM·XN=XA·XD makes A, D, M, N concyclic; then a rotation about the centre of the polygon carries A1CiAn to An+2−iC1An+1−i, and the angles add up to ∠A1C1A2=180°. Added Reflections, rotations and translations and Metric relations and length chasing; analytic status unchanged.",
+   "cite": "Compendium solution (rotation about the centre of the n-gon; lemma computing XN and XM)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations",
+    "syn:G: Metric relations and length chasing"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 20 solution read"
   },
   "isl:2004:G6": {
    "date": "2026-11-16",
-   "range": "#5–#14 of 14 (whole thread); analytic scan #1–#14; official solutions (IMO Compendium text)",
-   "note": "Posts (silouan #5, probability1.01 #6 and awesomeming327. #13 and N3bula #14 largest inscribed triangle, JuanOrtiz #7, Wolstenholme #8 affine/ellipse optimum n/(2π)·sin(2π/n), v_Enhance #10 calculus with tangents) corroborate area/extremal tags. Analytic scan: as in the earlier review, #8 and #10 use coordinates only inside extremal/calculus arguments; analytic route stays pending.; Official/Compendium solutions checked (https://www.imomath.com/imocomp/sl04.pdf): the Compendium solution (problem 21) is the maximum-area-triangle extremal argument; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imomath.com/imocomp/sl04.pdf): the Compendium solution (problem 21) is the maximum-area-triangle extremal argument — no analytic route there"
+   "range": "#5–#14 of 14 (whole thread); analytic scan #1–#14; official solutions (IMO Compendium text); official booklet",
+   "note": "Posts (silouan #5, probability1.01 #6 and awesomeming327. #13 and N3bula #14 largest inscribed triangle, JuanOrtiz #7, Wolstenholme #8 affine/ellipse optimum n/(2π)·sin(2π/n), v_Enhance #10 calculus with tangents) corroborate area/extremal tags. Analytic scan: as in the earlier review, #8 and #10 use coordinates only inside extremal/calculus arguments; analytic route stays pending.; Official/Compendium solutions checked (https://www.imomath.com/imocomp/sl04.pdf): the Compendium solution (problem 21) is the maximum-area-triangle extremal argument; analytic route stays pending.; Official check: the Compendium solution takes the maximum-area triangle ABC, encloses P in the triangle with sides through A, B, C parallel to the opposite sides and in the hexagon of parallel support lines, expresses the areas through x, y, z, and finishes with 4S1−3SP ≥ (S−x−y−z)²/S ≥ 0. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imomath.com/imocomp/sl04.pdf): the Compendium solution (problem 21) is the maximum-area-triangle extremal argument — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 21 solution read"
   },
   "isl:2004:G7": {
    "date": "2026-11-16",
-   "range": "#28–#37 of 37 (all loaded)",
-   "note": "Late posts (Ilikeminecraft #28, Markas #29, YaoAOPS #31, TwentyIQ #32 radical axis through a fixed midline point, vincentwant #33, cubres #34, ihatemath123 #35, Royal_mhyasd #36, ezpotd #37) show the incircle radical axes pass through the fixed point via equal tangent lengths; lksb #30 bash matches the reviewed analytic route. Corroborates existing tags."
+   "range": "#28–#37 of 37 (all loaded); official booklet",
+   "note": "Late posts (Ilikeminecraft #28, Markas #29, YaoAOPS #31, TwentyIQ #32 radical axis through a fixed midline point, vincentwant #33, cubres #34, ihatemath123 #35, Royal_mhyasd #36, ezpotd #37) show the incircle radical axes pass through the fixed point via equal tangent lengths; lksb #30 bash matches the reviewed analytic route. Corroborates existing tags.; Official check: the Compendium lemma shows by angle chasing (A, I, T, E concyclic, ∠ATB=90°, L the circumcentre of ATB) that KL, DE and the bisector of ∠B concur; then MD²=MP·MQ=MF² puts PQ midway between the parallel lines DE and FG, through the fixed midpoint of UV. Added Angle chasing and cyclicity; analytic status unchanged.",
+   "cite": "Compendium lemma (A, I, T, E concyclic, ∠ATB = 90°)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 22 solution read"
   },
   "isl:2004:G8": {
    "date": "2026-11-16",
-   "range": "#106–#115 of 115 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Buh_-1235 #107, Eda_no11 #108, Math1lover #109 harmonic (H,I;C,D), blueprimes #110, Royal_mhyasd #111, littlefox_amc #113, Siddharthmaybe #114 Ceva/Menelaus, otwaenng #115 projective) corroborate harmonic/polar tags; lunasgraph_d #106 complex sketch matches the reviewed analytic route; UnscalableWall #112 self-retracted."
+   "range": "#106–#115 of 115 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Buh_-1235 #107, Eda_no11 #108, Math1lover #109 harmonic (H,I;C,D), blueprimes #110, Royal_mhyasd #111, littlefox_amc #113, Siddharthmaybe #114 Ceva/Menelaus, otwaenng #115 projective) corroborate harmonic/polar tags; lunasgraph_d #106 complex sketch matches the reviewed analytic route; UnscalableWall #112 self-retracted.; Official check: the Compendium solution notes N is unique (AX/BX is monotone on each arc), takes the second intersections P, Q of EF with the circles ABE and ABF, gets APQ~ADC from the cyclic quadrilaterals and then AN′P~AMD, BN′P~BMC for the midpoint N′ of PQ, so N′ is on the circle AMB with AN′/BN′=AM/BM, hence N′=N. Added Similarity and Angle chasing and cyclicity; analytic status unchanged.",
+   "cite": "Compendium solution (APQ ~ ADC, AN′P ~ AMD from the cyclic quadrilaterals APBE, AQBF)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2004 shortlist, problem 23 solution read"
   },
   "isl:2004:N1": {
    "date": "2026-11-16",
@@ -3264,15 +3291,17 @@
   },
   "isl:2003:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text)",
-   "note": "Compendium solution checked (official imomath sl03.pdf is an image scan): semicircles on the medial triangle reduce the claim to the circle Γg tangent to Γd, Γe, Γf; after inversion at the incircle touch point D1 with unit radius, coordinates give p/P=g/R and g=R/(P²−R²), and r−(4+2√3)g = r((R√3−1/r)²+(1/4e−1/4f)²)/(P²−R²) ≥ 0 (algebra re-checked). Recorded as a hybrid Cartesian route.",
+   "range": "official solutions (IMO Compendium text); official booklet",
+   "note": "Compendium solution checked (official imomath sl03.pdf is an image scan): semicircles on the medial triangle reduce the claim to the circle Γg tangent to Γd, Γe, Γf; after inversion at the incircle touch point D1 with unit radius, coordinates give p/P=g/R and g=R/(P²−R²), and r−(4+2√3)g = r((R√3−1/r)²+(1/4e−1/4f)²)/(P²−R²) ≥ 0 (algebra re-checked). Recorded as a hybrid Cartesian route.; Official check: the Compendium solution finds the circle tangent to three semicircles centred at the midpoints, then sets coordinates at the incircle touch point D1 of the medial triangle and inverts at D1 so three of the circles become lines; a homothety at D1 and the tangent-length product give g=R/(P²−R²), and an algebraic inequality finishes. Added Inversion on the synthetic route (the analytic route already has Cartesian coordinates); analytic status unchanged.",
    "addTags": [
-    "ana:G: Cartesian coordinates"
+    "ana:G: Cartesian coordinates",
+    "syn:G: Inversion"
    ],
-   "cite": "IMO Compendium solution (inversion then coordinates)",
+   "cite": "IMO Compendium solution (inversion then coordinates); Compendium solution (inversion at D1 turning Γe, Γf and the incircle of DEF into lines)",
    "ana_explanation": "A hybrid coordinate route (IMO Compendium solution): with semicircles of radii (s−a)/2, (s−b)/2, (s−c)/2 on the medial triangle, the desired circle has radius g + s/2 where Γg touches all three; inverting at the touch point D1 with unit radius and setting coordinates turns two semicircles into vertical lines and the incircle into a horizontal line, giving g = R/(P² − R²) for the image circle's radius R and centre distance P, and r − (4 + 2√3)g reduces to a sum of two squares.",
    "ana_refs": "https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf | 2003 shortlist solution 19 (hybrid coordinates)",
-   "ana_status": "Reviewed — hybrid"
+   "ana_status": "Reviewed — hybrid",
+   "official": "IMO Compendium (1959–2004), solutions to the 2003 shortlist, problem 19 solution read"
   },
   "isl:2002:G1": {
    "date": "2026-11-16",
@@ -4592,33 +4621,44 @@
   },
   "isl:2003:G1": {
    "date": "2026-11-17",
-   "range": "#109–#121 of 121 (all loaded; #112, #113, #117 absent); middle skimmed by thanks",
-   "note": "Late posts (cj13609517288 #109 projective, alexanderchew #110, Aiden-1089 #111, Jackson0423 #114 sine ratios, Kempu33334 #115, littlefox_amc #118, Ashwath2011 #119, TheOneAndOnlyOFT #121) use the Simson line and reduce both conditions to ABCD harmonic; blueprimes #116 and otwaenng #120 complex-number routes match the recorded analytic route. Corroborates existing tags."
+   "range": "#109–#121 of 121 (all loaded; #112, #113, #117 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (cj13609517288 #109 projective, alexanderchew #110, Aiden-1089 #111, Jackson0423 #114 sine ratios, Kempu33334 #115, littlefox_amc #118, Ashwath2011 #119, TheOneAndOnlyOFT #121) use the Simson line and reduce both conditions to ABCD harmonic; blueprimes #116 and otwaenng #120 complex-number routes match the recorded analytic route. Corroborates existing tags.; Official check: the Compendium solution uses the angle-bisector theorem to reduce PQ=QR to AB/BC=AD/DC, gets ∠RDQ=∠BAC and ∠QDP=∠ACB from cyclic quadrilaterals, and finishes with the law of sines. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2003 shortlist, problem 13 solution read"
   },
   "isl:2003:G2": {
    "date": "2026-11-17",
-   "range": "#49–#58 of 58 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Siddharthmaybe #49, OronSH #50, cj13609517288 #51, ezpotd #52, eg4334 #53, YaoAOPS #54 harmonic quadrilateral, bir_mat_oimpiyatcisi #55, User1030070 #56, whatwhyandhow #57, TheOneAndOnlyOFT #58) note QB is the Q-symmedian of AQC, so (AQ/QC)²=AB/BC is fixed, and finish with the angle bisector theorem; corroborates existing tags."
+   "range": "#49–#58 of 58 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Siddharthmaybe #49, OronSH #50, cj13609517288 #51, ezpotd #52, eg4334 #53, YaoAOPS #54 harmonic quadrilateral, bir_mat_oimpiyatcisi #55, User1030070 #56, whatwhyandhow #57, TheOneAndOnlyOFT #58) note QB is the Q-symmedian of AQC, so (AQ/QC)²=AB/BC is fixed, and finish with the angle bisector theorem; corroborates existing tags.; Official check: the Compendium solution writes RA/RC=AQ/QC as a sine ratio, applies the trigonometric form of Ceva with the tangent-chord angles, and converts sin∠APB/sin∠BPC into the area ratio S(ABP)/S(BCP)=AB/BC, so R does not depend on Γ. Added Ceva, Menelaus and ratio chains and Area arguments; analytic status unchanged.",
+   "cite": "Compendium solution (trigonometric Ceva; S(ABP)/S(BCP) = AB/BC)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains",
+    "syn:G: Area arguments"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2003 shortlist, problem 14 solution read"
   },
   "isl:2003:G3": {
    "date": "2026-11-17",
-   "range": "#31–#40 of 40 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (asdf334 #31, lian_the_noob12 #32, onyqz #33, AshAuktober #34, zuat.e #35, Siddharthmaybe #36, YaoAOPS #37, ezpotd #38, m735821 #39, cj13609517288 #40) use Pythagoras to get AE=BD etc., so D, E, F are the extouch points and P is the Bevan point; corroborates existing tags."
+   "range": "#31–#40 of 40 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (asdf334 #31, lian_the_noob12 #32, onyqz #33, AshAuktober #34, zuat.e #35, Siddharthmaybe #36, YaoAOPS #37, ezpotd #38, m735821 #39, cj13609517288 #40) use Pythagoras to get AE=BD etc., so D, E, F are the extouch points and P is the Bevan point; corroborates existing tags.; Official check: the Compendium solution turns the condition into BF=CE, CD=AF, BD=AE, so D, E, F are the excircle touch points; P, D, IA are collinear and an angle chase gives PIA=PIB=PIC. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2003 shortlist, problem 15 solution read"
   },
   "isl:2003:G4": {
    "date": "2026-11-17",
-   "range": "#55–#64 of 64 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (PEKKA #55, lksb #56, lpieleanu #57, Kempu33334 #58, ezpotd #59, oooahin #60, soryn #61, math-olympiad-clown #62, Tau_6.28 #63, Sxmplicity #64) invert at P so A*B*C*D* is a parallelogram and convert with the inversion distance formula; corroborates existing tags."
+   "range": "#55–#64 of 64 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (PEKKA #55, lksb #56, lpieleanu #57, Kempu33334 #58, ezpotd #59, oooahin #60, soryn #61, math-olympiad-clown #62, Tau_6.28 #63, Sxmplicity #64) invert at P so A*B*C*D* is a parallelogram and convert with the inversion distance formula; corroborates existing tags.; Official check: the Compendium solution inverts at P, so the four circles become two pairs of parallel lines bounding a parallelogram, and the inversion distance formula reduces the identity to equal opposite sides. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2003 shortlist, problem 16 solution read"
   },
   "isl:2003:G5": {
    "date": "2026-11-17",
-   "range": "#29–#38 of 38 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (lelouchvigeo #29, Saucepan_man02 #30 incenter–excenter lemma, asdf334 #31 Monge, YaoAOPS #32, ezpotd #33, batzorig.b #34, starchan #35 similar triangles, Likeminded2017 #36, Hussienahmad #37, TheOneAndOnlyOFT #38) show AFPE and BGPD are cyclic and their second meeting point lies on (ABC), then angle-chase; corroborates existing tags."
+   "range": "#29–#38 of 38 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (lelouchvigeo #29, Saucepan_man02 #30 incenter–excenter lemma, asdf334 #31 Monge, YaoAOPS #32, ezpotd #33, batzorig.b #34, starchan #35 similar triangles, Likeminded2017 #36, Hussienahmad #37, TheOneAndOnlyOFT #38) show AFPE and BGPD are cyclic and their second meeting point lies on (ABC), then angle-chase; corroborates existing tags.; Official check: the Compendium solution uses the homothety between PDE and CFG to make FD, GE, CP concurrent, puts Q=CP∩(ABC) on the cyclic quadrilaterals AQPF and BQDPG, and uses that CA is tangent to the circle ABI to get F, D, Q collinear. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2003 shortlist, problem 17 solution read"
   },
   "isl:2003:G6": {
    "date": "2026-11-17",
-   "range": "#1–#11 of 11 (all loaded; #6 absent)",
-   "note": "Posts (Fedor Petrov #2, math154 #4, awesomeming327. #9, MathsLover04 #10 vector triangle inequality, jgnr #3 and squareman #8 and JuanOrtiz #5 the 60° median lemma, v_Enhance #7, atdaotlohbh #11) combine |a+b−d−e| ≥ √3|…| over the three pairs or use diagonals meeting at ≥ 60°; the vector proofs match the recorded analytic route. Corroborates existing tags."
+   "range": "#1–#11 of 11 (all loaded; #6 absent); official booklet",
+   "note": "Posts (Fedor Petrov #2, math154 #4, awesomeming327. #9, MathsLover04 #10 vector triangle inequality, jgnr #3 and squareman #8 and JuanOrtiz #5 the 60° median lemma, v_Enhance #7, atdaotlohbh #11) combine |a+b−d−e| ≥ √3|…| over the three pairs or use diagonals meeting at ≥ 60°; the vector proofs match the recorded analytic route. Corroborates existing tags.; Official check: the Compendium solution proves MZ ≤ (√3/2)XY when ∠XZY ≥ 60°, uses the triangle inequality on the midpoints of opposite sides to force each angle between the main diagonals to be at most 60°, and the angle sum 180° makes them all 60°. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2003 shortlist, problem 18 solution read"
   },
   "isl:2002:A1": {
    "date": "2026-11-17",

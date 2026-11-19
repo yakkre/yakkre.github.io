@@ -3457,15 +3457,17 @@
   },
   "isl:1993:MAK1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#2 of 2 (whole thread); analytic scan #1–#2",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument; analytic route stays pending.; probability1.01 #2 gives the longest-side/area case argument matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#2 of 2 (whole thread); analytic scan #1–#2; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument; analytic route stays pending.; probability1.01 #2 gives the longest-side/area case argument matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution writes m = 2S/d with d the longest side, uses that sub-triangles of ABC have no longer side and that their areas add, and treats points outside the triangle by moving to AX ∩ BC or comparing with m(BCX). Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is the diameter·height = 2·area argument — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 1993 shortlist, problem 15 solution read"
   },
   "isl:1993:UNK1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#3 of 3 (whole thread); analytic scan #1–#3",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route; analytic route stays pending.; yetti #2 and supercomputer #3 use radical axes and radius relations r² = PA² + r_A², matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#3 of 3 (whole thread); analytic scan #1–#3; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route; analytic route stays pending.; yetti #2 and supercomputer #3 use radical axes and radius relations r² = PA² + r_A², matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution uses Pythagoras to get r_A² + OA² = r², so the feet of the perpendiculars from O to the sides are fixed by differences of squares; non-collinear centres give a unique circle, collinear ones give a fixed foot and fixed intersection points. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a radical-axis/radius computation matching the existing route — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 1993 shortlist, problem 21 solution read"
   },
   "isl:1995:G5": {
    "date": "2026-11-16",
@@ -3487,9 +3489,16 @@
   },
   "isl:1994:G3": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#6 of 6 (whole thread); analytic scan #1–#6",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument; analytic route stays pending.; Posts (Tiks #2, Virgil Nicula #3, Zhero #4 homothety at Y, Ashutoshmaths #5, YaoAOPS #6) match the existing homothety/tangency route. Analytic scan: no analytic proof; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#6 of 6 (whole thread); analytic scan #1–#6; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument; analytic route stays pending.; Posts (Tiks #2, Virgil Nicula #3, Zhero #4 homothety at Y, Ashutoshmaths #5, YaoAOPS #6) match the existing homothety/tangency route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the first Compendium solution computes the tangent lengths KA² = 4rr1 and LB² = 4rr2 by Pythagoras, combines them with the distance between the centres of ω1 and ω2 to get KA·LB = 2r² (re-derived), and uses the similar triangles KLB ~ AKO to show AD is tangent to ω and ω2; then Q lies on two radical axes, hence on the third. The second inverts at D, which turns ω and ω2 into parallel lines and makes the picture symmetric. Added Metric relations and length chasing and Similarity (first solution) and Inversion (second). The analytic route stays pending; the first solution computes lengths without coordinates.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 15 is a homothety/tangency argument — no analytic route there",
+   "cite": "Compendium solutions 1 (tangent lengths, similar triangles KLB ~ AKO) and 2 (inversion at D)",
+   "addTags": [
+    "syn:G: Metric relations and length chasing",
+    "syn:G: Similarity",
+    "syn:G: Inversion"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1994 shortlist, problem 15 solutions 1 and 2 read"
   },
   "isl:1995:G4": {
    "date": "2026-11-16",
@@ -3511,9 +3520,14 @@
   },
   "isl:1993:ISA1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#11 of 11 (whole thread); analytic scan #1–#11",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted; analytic route stays pending.; Posts (yetti #3 pedal triangle of the isodynamic point with sine lengths, yetti #5 area formula, Luis González #6, SUPERMAN2 #7 Torricelli-point areas, Luis González #8 noting its configuration gap, 596066 #11 = Compendium solution with the cosine rule) match the existing Fermat-point route; the cosine-rule computations are the same hybrid already flagged from the Compendium; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#11 of 11 (whole thread); analytic scan #1–#11; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted; analytic route stays pending.; Posts (yetti #3 pedal triangle of the isodynamic point with sine lengths, yetti #5 area formula, Luis González #6, SUPERMAN2 #7 Torricelli-point areas, Luis González #8 noting its configuration gap, 596066 #11 = Compendium solution with the cosine rule) match the existing Fermat-point route; the cosine-rule computations are the same hybrid already flagged from the Compendium; analytic route stays pending.; Official check: the Compendium solution bounds 2S by (AT + BT + CT)·DE through the quadrilaterals around T, then takes T to be the Torricelli point and sums three cosine-theorem identities with the 120° angles, or, when an angle is at least 120°, takes T at that vertex and bounds 4ab sin(C − 30°). Added Trigonometric computation. The analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 bounds 2S by (AT+BT+CT)·side, then uses the Torricelli point with the cosine theorem (angles <120°) or T=C with a sin(C−30°) estimate (angle ≥120°). Flagged for the user as a possible hybrid trigonometric route; not adopted — no analytic route there",
+   "cite": "Compendium solution (cosine theorem at the Torricelli point, sin(C − 30°) bound)",
+   "addTags": [
+    "syn:G: Trigonometric computation"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1993 shortlist, problem 14 solution read"
   },
   "isl:1996:G8": {
    "date": "2026-11-16",
@@ -5842,23 +5856,31 @@
   },
   "isl:1994:G1": {
    "date": "2026-11-17",
-   "range": "#22–#38 of 38 (all loaded; #24, #27, #29–#32, #36 absent)",
-   "note": "Late posts (SidVicious #22, TRYTOSOLVE #23, AlastorMoody #25 orthic reformulation, 452832 #26, AopsUser101 #28, zuss77 #33, dchenmathcounts #34, huashiliao2020 #35, Aiden-1089 #37 Pascal, Beromatrix #38 coordinates) show AD, BC, EF concur and the concurrency point's foot makes EF a bisector; corroborates existing tags and the hybrid analytic status."
+   "range": "#22–#38 of 38 (all loaded; #24, #27, #29–#32, #36 absent); official booklet",
+   "note": "Late posts (SidVicious #22, TRYTOSOLVE #23, AlastorMoody #25 orthic reformulation, 452832 #26, AopsUser101 #28, zuss77 #33, dchenmathcounts #34, huashiliao2020 #35, Aiden-1089 #37 Pascal, Beromatrix #38 coordinates) show AD, BC, EF concur and the concurrency point's foot makes EF a bisector; corroborates existing tags and the hybrid analytic status.; Official check: the Compendium solution drops the perpendicular PQ from P = AD ∩ BC, uses the similar triangles PAQ ~ OAD and PBQ ~ OBC to get AQ/AD = BQ/BC, applies the converse of Ceva to show Q is F, and finishes with the circle through O, C, P, D, F. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1994 shortlist, problem 13 solution read"
   },
   "isl:1994:G2": {
    "date": "2026-11-17",
-   "range": "#1–#10 of 10 (all loaded; #5–#7 absent)",
-   "note": "Posts (polya78 #2 and TRYTOSOLVE #4 parallel lines, gev_gev #3 areas, Ali3085 #8 and mathmax12 #10 coordinates, Davsch #9 barycentric) show N lies inside ABCD via area comparisons or coordinates; corroborates existing tags."
+   "range": "#1–#10 of 10 (all loaded; #5–#7 absent); official booklet",
+   "note": "Posts (polya78 #2 and TRYTOSOLVE #4 parallel lines, gev_gev #3 areas, Ali3085 #8 and mathmax12 #10 coordinates, Davsch #9 barycentric) show N lies inside ABCD via area comparisons or coordinates; corroborates existing tags.; Official check: the Compendium remarks that the statement as printed (N not outside triangle ABM) is false: A(0,0), B(0,4), C(1,4), D(7,0) give N = (9/2, 1/2), outside ABM but inside ABCD (checked exactly). Its official solution, built from the parallelograms ADMX and BCMY and a ratio comparison along AB, only shows that N lies inside ABCD, which is what this row's proofs establish. No new tag; the statement issue is flagged for the user.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1994 shortlist, problem 14 note and solution read"
   },
   "isl:1994:G4": {
    "date": "2026-11-17",
-   "range": "#21–#32 of 32 (all loaded; #27, #29 absent); middle skimmed by thanks",
-   "note": "Late posts (Wolowizard #21 perpendicularity lemma, pad #22 Simson line, ubermensch #23, AopsUser101 #24, GaU1Er #25, green_leaf #26, conker23 #28 coordinates remark, hanulyeongsam #30, Rayvhs #31, SomeonecoolLovesMaths #32) prove OQ ⊥ EF iff QE=QF via the cyclic quadrilaterals BEQO and OQCF; corroborates existing tags."
+   "range": "#21–#32 of 32 (all loaded; #27, #29 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Wolowizard #21 perpendicularity lemma, pad #22 Simson line, ubermensch #23, AopsUser101 #24, GaU1Er #25, green_leaf #26, conker23 #28 coordinates remark, hanulyeongsam #30, Rayvhs #31, SomeonecoolLovesMaths #32) prove OQ ⊥ EF iff QE=QF via the cyclic quadrilaterals BEQO and OQCF; corroborates existing tags.; Official check: the Compendium solution gets two cyclic quadrilaterals from the right angle at Q and congruent triangles OEQ and OFQ; for the converse it reflects A in Q and compares the parallelograms AESF and AE′SF′. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1994 shortlist, problem 16 solution read"
   },
   "isl:1994:G5": {
    "date": "2026-11-17",
-   "range": "#4–#13 of 13 (all loaded)",
-   "note": "Posts (darij grinberg #4 orthogonal circles, orl #5 grobber's approach and #6 restatement, math154 #7/#9, riemannHypothesis2.71828 #8 question, tc1729 #10, mathocean97 #11 complex numbers, thecmd999 #12 polars, TheHazard #13 Simson line) show the fixed point through the polar of P; corroborates existing tags."
+   "range": "#4–#13 of 13 (all loaded); official booklet",
+   "note": "Posts (darij grinberg #4 orthogonal circles, orl #5 grobber's approach and #6 restatement, math154 #7/#9, riemannHypothesis2.71828 #8 question, tc1729 #10, mathocean97 #11 complex numbers, thecmd999 #12 polars, TheHazard #13 Simson line) show the fixed point through the polar of P; corroborates existing tags.; Official check: the Compendium solution gets ∠OAH = ∠OEA from the circle through O, A, E, M, so OAH ~ OEA and OH·OE = OA² fixes H; with K = AB ∩ CD, the cyclic quadrilaterals ECAK and EKBD give EK ∥ OM, and an angle chase shows F is the midpoint of EH. Added Similarity (OAH ~ OEA). Analytic route unchanged.",
+   "cite": "Compendium solution (similar triangles OAH ~ OEA)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1994 shortlist, problem 17 solution read"
   },
   "isl:1994:N1": {
    "date": "2026-11-17",
@@ -5907,13 +5929,20 @@
   },
   "isl:1993:ESP1": {
    "date": "2026-11-17",
-   "range": "#17–#28 of 28 (all loaded; #21, #22 absent)",
-   "note": "Late posts (Goutham #17, sayantanchakraborty #18 Casey's theorem, drmzjoseph #19 Sawayama's lemma, ATimo #20, book_learner #23 with nikolapavlovic #24 objection, ilikemath40 #25/#27 unchecked, ike.chen #26 handout, asdf334 #28 √(bc) inversion to the excircle) show the incenter is the midpoint of the tangency chord; corroborates existing tags."
+   "range": "#17–#28 of 28 (all loaded; #21, #22 absent); official booklet",
+   "note": "Late posts (Goutham #17, sayantanchakraborty #18 Casey's theorem, drmzjoseph #19 Sawayama's lemma, ATimo #20, book_learner #23 with nikolapavlovic #24 objection, ilikemath40 #25/#27 unchecked, ike.chen #26 handout, asdf334 #28 √(bc) inversion to the excircle) show the incenter is the midpoint of the tangency chord; corroborates existing tags.; Official check: the first Compendium solution applies Stewart's theorem in OCO1 with Euler's OI² = R² − 2Rr to get CO1·IO1 = DO1², so CO1D ~ DO1I and ∠DIO1 = 90°. The second inverts at C with power ab, the third proves a cyclic-quadrilateral generalisation by arc midpoints, cyclic quadrilaterals, an angle chase and the homothety at the tangency point, and the fourth uses tangent formulas and Casey's theorem. Added Similarity (first solution) and Angle chasing and cyclicity (third). Analytic route unchanged.",
+   "cite": "Compendium solutions 1 (similar triangles CO1D ~ DO1I) and 3 (cyclic quadrilaterals and angle chase)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1993 shortlist, problem 3 solutions 1–4 read"
   },
   "isl:1993:ESP2": {
    "date": "2026-11-17",
-   "range": "#1–#6 of 6 (all loaded)",
-   "note": "Posts (Gabriel(fr) #2 trigonometry, fagot #3 lengths with the altitude, M4RI0 #4/#5 non-trigonometric lemma via tangency points, djmathman #6 standard-notation computation) prove 1/MB+1/MD=1/NC+1/NE; corroborates existing tags."
+   "range": "#1–#6 of 6 (all loaded); official booklet",
+   "note": "Posts (Gabriel(fr) #2 trigonometry, fagot #3 lengths with the altitude, M4RI0 #4/#5 non-trigonometric lemma via tangency points, djmathman #6 standard-notation computation) prove 1/MB+1/MD=1/NC+1/NE; corroborates existing tags.; Official check: the Compendium solution writes BM and MD through the tangent lengths and uses the law of cosines and the area of ABD to get 1/MB + 1/MD = 2/(h tan ϕ), which depends only on the altitude and the angle. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1993 shortlist, problem 4 solution read"
   },
   "isl:1993:FIN3": {
    "date": "2026-11-17",
@@ -5987,8 +6016,13 @@
   },
   "isl:1993:UNK2": {
    "date": "2026-11-17",
-   "range": "#11–#20 of 20 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (HamstPan38825 #11 complex numbers, IAmTheHazard #12 and Martin2001 #14 and Royal_mhyasd #19 inversion at D, shendrew7 #13 and OronSH #15 and Ilikeminecraft #16 and Kempu33334 #17 and oooahin #18 and Tau_6.28 #20 inversion at A) turn the conditions into an isosceles right triangle, giving √2 and the orthogonality (IMO 1993/2); corroborates existing tags."
+   "range": "#11–#20 of 20 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (HamstPan38825 #11 complex numbers, IAmTheHazard #12 and Martin2001 #14 and Royal_mhyasd #19 inversion at D, shendrew7 #13 and OronSH #15 and Ilikeminecraft #16 and Kempu33334 #17 and oooahin #18 and Tau_6.28 #20 inversion at A) turn the conditions into an isosceles right triangle, giving √2 and the orthogonality (IMO 1993/2); corroborates existing tags.; Official check: the first Compendium solution builds M with DM = DB ⟂ DB and the similar pairs ADM ~ ACB, CAD ~ BAM (the spiral similarity already tagged), then an angle chase on the tangents at C. The second uses the pedal triangle of D, FG = AD sin A and the sine theorem to get the side ratios and a right angle, and the third inverts at C. Added Trigonometric computation (second solution). Analytic route unchanged.",
+   "cite": "Compendium solution 2 (pedal triangle and sine theorem)",
+   "addTags": [
+    "syn:G: Trigonometric computation"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1993 shortlist, problem 22 solutions 1–3 read"
   },
   "isl:1993:UNK3": {
    "date": "2026-11-17",

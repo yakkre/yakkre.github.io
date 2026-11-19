@@ -1248,52 +1248,88 @@
   },
   "isl:2020:G1": {
    "date": "2026-11-16",
-   "range": "#91–#100 of 100 (all loaded); analytic scan #1–#100",
-   "note": "Late posts (YaoAOPS #91, oooahin #92, AlastorMoody #93, Eda_no11 #94, mpcnotnpc #95, maromex #96, Math1lover #97, PSS1234 #98, cyroah1331 #99, ostriches88 #100) use cyclic CPMDQF and the isosceles trapezoid CPQF; corroborates synthetic tags. Analytic scan: every trigonometric route (#2, #9, #10, #21, #23, #31, #88) finishes a synthetic setup with cos²α=1/2, so the hybrid status stands."
+   "range": "#91–#100 of 100 (all loaded); analytic scan #1–#100; official booklet",
+   "note": "Late posts (YaoAOPS #91, oooahin #92, AlastorMoody #93, Eda_no11 #94, mpcnotnpc #95, maromex #96, Math1lover #97, PSS1234 #98, cyroah1331 #99, ostriches88 #100) use cyclic CPMDQF and the isosceles trapezoid CPQF; corroborates synthetic tags. Analytic scan: every trigonometric route (#2, #9, #10, #21, #23, #31, #88) finishes a synthetic setup with cos²α=1/2, so the hybrid status stands.; Official check: Sol1 (circle on diameter CD, symmetry in the perpendicular bisector of PQ, equal chords) and Sol2 (FEGM and FEGA cyclic by angle chase) use only methods already tagged; no new tag.",
+   "official": "IMO 2020 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–2 read"
   },
   "isl:2020:G2": {
    "date": "2026-11-16",
-   "range": "#167–#176 of 176 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (ray66 #167, e2.718281828 #169, Math1lover #170, Royal_mhyasd #171, InftyByond #172, cyroah1331 #173, UberPiggy #174, Sxmplicity #175) identify the circumcentre of PAB as the concurrency point by angle chasing; corroborates synthetic tags."
+   "range": "#167–#176 of 176 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (ray66 #167, e2.718281828 #169, Math1lover #170, Royal_mhyasd #171, InftyByond #172, cyroah1331 #173, UberPiggy #174, Sxmplicity #175) identify the circumcentre of PAB as the concurrency point by angle chasing; corroborates synthetic tags.; Official check: Sol1 (isosceles DPX, perpendicular bisectors through the circumcentre of APB) and Sol2 (ADPO cyclic via the central angle) use only methods already tagged; no new tag.",
+   "official": "IMO 2020 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2020:G3": {
    "date": "2026-11-16",
-   "range": "#62–#71 of 71 (all loaded)",
-   "note": "Late posts (lelouchvigeo #63, AlastorMoody #64, oooahin #65, Eda_no11 #66, PSS1234 #67, CreyJonhson #68, Math1lover #69, dno1467 #70) reflect A over BD to get the tangency point via two cyclic quadrilaterals; corroborates synthetic tags."
+   "range": "#62–#71 of 71 (all loaded); official booklet",
+   "note": "Late posts (lelouchvigeo #63, AlastorMoody #64, oooahin #65, Eda_no11 #66, PSS1234 #67, CreyJonhson #68, Math1lover #69, dno1467 #70) reflect A over BD to get the tangency point via two cyclic quadrilaterals; corroborates synthetic tags.; Official check: Sol1 (reflection A' of A in BD, A'BKE and A'DLF cyclic, tangency by an angle sum) and Sol2 (reflect both circles in BD, common tangent at A) use only methods already tagged; no new tag.",
+   "official": "IMO 2020 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–2 read"
   },
   "isl:2020:G4": {
    "date": "2026-11-16",
-   "range": "#1–#10 of 10 (whole thread); analytic scan #1–#10; official solutions booklet",
-   "note": "Late posts (TheUltimate123 #6, sn6dh #7, awesomeming327. #8 60° pigeonhole, ray66 #9, hung9A #10) reduce to six disks with an angle ≤60° and induct; corroborates existing tags. Analytic scan: only law-of-cosines steps inside the combinatorial argument (#3, #9); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a disk-packing lemma with induction; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a disk-packing lemma with induction — no analytic route there"
+   "range": "#1–#10 of 10 (whole thread); analytic scan #1–#10; official solutions booklet; official booklet",
+   "note": "Late posts (TheUltimate123 #6, sn6dh #7, awesomeming327. #8 60° pigeonhole, ray66 #9, hung9A #10) reduce to six disks with an angle ≤60° and induct; corroborates existing tags. Analytic scan: only law-of-cosines steps inside the combinatorial argument (#3, #9); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a disk-packing lemma with induction; analytic route stays pending.; Official check: the Solution (six rays, an angle ≤60°, triangle inequality, induction on n) uses only methods already tagged; Comment 3 (homothety reduction) is a remark. No new tag; analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a disk-packing lemma with induction — no analytic route there",
+   "official": "IMO 2020 SL booklet (imo-official.org), Solution and Comments 1–3 read"
   },
   "isl:2020:G5": {
    "date": "2026-11-16",
-   "range": "#17–#26 of 26 (all loaded); analytic scan #1–#26; official solutions booklet",
-   "note": "Late synthetic posts (shendrew7 #17, dolphinday #18, Ilikeminecraft #20, john0512 #22, reyaansh_agrawal #23, hung9A #24, PSS1234 #26) show K,M lie on the bisector at AD∩BC and use the kite incircle / insimilicentres; corroborates synthetic tags. Analytic scan: PROA200 #4 and lksb #21 are vector bashes; #21's final displayed formula for the insimilicentre U is not invariant under the relabelling A→B→C→D after the Ptolemy substitution (numerical check), so its closing symmetry claim is unverified as written; mathaddiction #8 is a sine-ratio hybrid. Analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): Solutions 1–2 are synthetic (area/sine ratios inside Lemma 1; Comments list mass points, Menelaus, Monge); analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): Solutions 1–2 are synthetic (area/sine ratios inside Lemma 1; Comments list mass points, Menelaus, Monge) — no analytic route there"
+   "range": "#17–#26 of 26 (all loaded); analytic scan #1–#26; official solutions booklet; official booklet",
+   "note": "Late synthetic posts (shendrew7 #17, dolphinday #18, Ilikeminecraft #20, john0512 #22, reyaansh_agrawal #23, hung9A #24, PSS1234 #26) show K,M lie on the bisector at AD∩BC and use the kite incircle / insimilicentres; corroborates synthetic tags. Analytic scan: PROA200 #4 and lksb #21 are vector bashes; #21's final displayed formula for the insimilicentre U is not invariant under the relabelling A→B→C→D after the Ptolemy substitution (numerical check), so its closing symmetry claim is unverified as written; mathaddiction #8 is a sine-ratio hybrid. Analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): Solutions 1–2 are synthetic (area/sine ratios inside Lemma 1; Comments list mass points, Menelaus, Monge); analytic route stays pending.; Official check: Sol1 reduces by homothety and a translation to Lemma 1 (BX:XD = rB:rD), proved by inversion at X with similar triangles and quadrilaterals; Comment 2 gives a complete alternative proof of Lemma 1 by area ratios; Sol2 (Monge, ECA~EBD) corroborates; added Inversion, Similarity and Area arguments. Analytic route stays pending (the sines in Comment 2 are a hybrid step).",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): Solutions 1–2 are synthetic (area/sine ratios inside Lemma 1; Comments list mass points, Menelaus, Monge) — no analytic route there",
+   "cite": "official Sol1 Lemma 1 (inversion at X, similar triangles); Comment 2 (area ratios)",
+   "addTags": [
+    "syn:G: Inversion",
+    "syn:G: Similarity",
+    "syn:G: Area arguments"
+   ],
+   "official": "IMO 2020 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–3 read"
   },
   "isl:2020:G6": {
    "date": "2026-11-16",
-   "range": "#79–#88 of 88 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Royal_mhyasd #79, zuat.e #80, thomasuh12 #81, Giant_PT #82, Robert314 #83 DIT, Mo.11ss #84, alupigus #86, benjaminchew13 #87, TheOneAndOnlyOFT #88) identify the tangency point as the Miquel point of the complete quadrilateral; corroborates existing tags."
+   "range": "#79–#88 of 88 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Royal_mhyasd #79, zuat.e #80, thomasuh12 #81, Giant_PT #82, Robert314 #83 DIT, Mo.11ss #84, alupigus #86, benjaminchew13 #87, TheOneAndOnlyOFT #88) identify the tangency point as the Miquel point of the complete quadrilateral; corroborates existing tags.; Official check: Sol1 (Miquel point, angle chase) corroborates; Sol2 finishes with similar triangles ATL~ETB after a spiral similarity; Sol3 inverts at D, gets A'I'²=A'B'·A'C'=A'E'·A'F' (tangency by power) and a harmonic quadrilateral B'I'C'T'; added Similarity, Power of a point and Harmonic division.",
+   "cite": "official Sol2 (ATL~ETB); Sol3 (power A'T'², harmonic quadrilateral)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Power of a point",
+    "syn:G: Harmonic division and cross ratios"
+   ],
+   "official": "IMO 2020 SL booklet (imo-official.org), Solutions 1–3 and Comments 1–3 read"
   },
   "isl:2020:G7": {
    "date": "2026-11-16",
-   "range": "#24–#33 of 33 (all loaded); analytic scan #1–#33; official solutions booklet",
-   "note": "Late posts (WLOGQED1729 #24, Scilyse #25 nine-point circle, OronSH #27 power of H, Ilikeminecraft #28, neon_paradox #29, YaoAOPS #30 and cursed_tangent1434 #32 Steiner line, IamYourFriend #31, Cool12345678 #33) corroborate Miquel/power/radical tags. Analytic scan: no coordinate, complex, barycentric or trigonometric computation in the thread (keyword hits are angle-chase text); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is synthetic (midlines, inversion at H in a comment); analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is synthetic (midlines, inversion at H in a comment) — no analytic route there"
+   "range": "#24–#33 of 33 (all loaded); analytic scan #1–#33; official solutions booklet; official booklet",
+   "note": "Late posts (WLOGQED1729 #24, Scilyse #25 nine-point circle, OronSH #27 power of H, Ilikeminecraft #28, neon_paradox #29, YaoAOPS #30 and cursed_tangent1434 #32 Steiner line, IamYourFriend #31, Cool12345678 #33) corroborate Miquel/power/radical tags. Analytic scan: no coordinate, complex, barycentric or trigonometric computation in the thread (keyword hits are angle-chase text); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is synthetic (midlines, inversion at H in a comment); analytic route stays pending.; Official check: Step 1 (reflection of ωA in the midline, powers of H) corroborates; Step 2 proves Q on ω by Simson's theorem in reflection form, showing the reflections of Q in pA, pB, pC are collinear with P; added Simson/Steiner lines and Reflections. Analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is synthetic (midlines, inversion at H in a comment) — no analytic route there",
+   "cite": "official Solution Step 2 (Steiner line of Q); Step 1 (reflection in the midline)",
+   "addTags": [
+    "syn:G: Simson/Steiner lines",
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO 2020 SL booklet (imo-official.org), Solution and Comments 1–2 read"
   },
   "isl:2020:G8": {
    "date": "2026-11-16",
-   "range": "#80–#89 of 89 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Math_AlexG #80, Bridgeon #81, reyaansh_agrawal #82 common tangent at I, bayern271 #83, kotmhn #84 and otwaenng #88 incircle inversion, Royal_mhyasd #85, littlefox_amc #86, TThB0501 #87, RadiantMeteor #89) show Y on Γ and the tangency via angle chase / inversion; corroborates existing tags."
+   "range": "#80–#89 of 89 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Math_AlexG #80, Bridgeon #81, reyaansh_agrawal #82 common tangent at I, bayern271 #83, kotmhn #84 and otwaenng #88 incircle inversion, Royal_mhyasd #85, littlefox_amc #86, TThB0501 #87, RadiantMeteor #89) show Y on Γ and the tangency via angle chase / inversion; corroborates existing tags.; Official check: Sol1 Step 3 uses that I is the orthocentre of DEF and A the reflection of I in EF; Comment 1 gives a complete isogonal-conjugate finish after Step 2; Sol2 inverts at I (I orthocentre of A'B'C') and uses the translation by B'C'; added Reflections, Orthocenter and Isogonal conjugacy.",
+   "cite": "official Sol1 Step 3 (I orthocentre of DEF, reflection in EF); Comment 1 (isogonal conjugates); Sol2 (translation)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations",
+    "syn:G: Orthocenter and orthic triangle",
+    "syn:G: Isogonal and isotomic conjugacy"
+   ],
+   "official": "IMO 2020 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–2 read"
   },
   "isl:2020:G9": {
    "date": "2026-11-16",
-   "range": "#71–#81 of 81 (all loaded); analytic scan #1–#81; official solutions booklet",
-   "note": "Late posts (HamstPan38825 #71 diameter case split, chirita.andrei #72, signifance #74/#76 with dgrozev #75, IAmTheHazard #77 minimal enclosing circle, awesomehuman #78, MathLuis #79, DottedCaculator #81) bound points near the boundary of the minimal circle; corroborates existing tags. Analytic scan: coordinates/projections appear only as counting estimates inside the combinatorial argument (#3, #45, #60, #65, #66, #78, #81); no analytic-geometry proof, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a combinatorial-geometric estimate; coordinates appear only in a comment variant; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a combinatorial-geometric estimate; coordinates appear only in a comment variant — no analytic route there"
+   "range": "#71–#81 of 81 (all loaded); analytic scan #1–#81; official solutions booklet; official booklet",
+   "note": "Late posts (HamstPan38825 #71 diameter case split, chirita.andrei #72, signifance #74/#76 with dgrozev #75, IAmTheHazard #77 minimal enclosing circle, awesomehuman #78, MathLuis #79, DottedCaculator #81) bound points near the boundary of the minimal circle; corroborates existing tags. Analytic scan: coordinates/projections appear only as counting estimates inside the combinatorial argument (#3, #45, #60, #65, #66, #78, #81); no analytic-geometry proof, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a combinatorial-geometric estimate; coordinates appear only in a comment variant; analytic route stays pending.; Official check: the Solution bounds the diameter by projections and counts points in a strip of width 1/2, using Pythagoras and the length of a circular segment's projection; added Metric relations. Comment 1 concerns the weaker n^(-1/2) version; Comment 2 is an outline. Analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2020SL.pdf): the single solution is a combinatorial-geometric estimate; coordinates appear only in a comment variant — no analytic route there",
+   "cite": "official Solution (projection and distance estimates (1)–(3))",
+   "addTags": [
+    "syn:G: Metric relations and length chasing"
+   ],
+   "official": "IMO 2020 SL booklet (imo-official.org), Solution and Comments 1–2 read"
   },
   "isl:2020:N1": {
    "date": "2026-11-16",
@@ -1407,45 +1443,89 @@
   },
   "isl:2019:G1": {
    "date": "2026-11-16",
-   "range": "#130–#140 of 140 (all loaded); analytic scan #1–#140; official solutions booklet",
-   "note": "Late posts (Math1lover #131, ReticulatedPython #132, cyroah1331 #134, TheMathCanadian #135, jawadkaleem #136, pl246631 #137 phantom point, mudkip42 #138, apokono #139, Assassino9931 #140) show T on the circle by angle chasing; corroborates synthetic tag. Analytic scan of all 140 posts found no coordinate, complex, barycentric or trigonometric proof; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2019SL.pdf): the single solution is an angle chase; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2019SL.pdf): the single solution is an angle chase — no analytic route there"
+   "range": "#130–#140 of 140 (all loaded); analytic scan #1–#140; official solutions booklet; official booklet",
+   "note": "Late posts (Math1lover #131, ReticulatedPython #132, cyroah1331 #134, TheMathCanadian #135, jawadkaleem #136, pl246631 #137 phantom point, mudkip42 #138, apokono #139, Assassino9931 #140) show T on the circle by angle chasing; corroborates synthetic tag. Analytic scan of all 140 posts found no coordinate, complex, barycentric or trigonometric proof; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2019SL.pdf): the single solution is an angle chase; analytic route stays pending.; Official check: the Solution gets two angle equalities from tangents and cyclic ADFG, then shows triangles FGA and GFT are congruent on the common side FG, so their altitudes are equal and AT∥BC; added Similarity (congruent triangles). Analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2019SL.pdf): the single solution is an angle chase — no analytic route there",
+   "cite": "official Solution (congruent triangles FGA and GFT)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2019 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2019:G2": {
    "date": "2026-11-16",
-   "range": "#75–#84 of 84 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (YaoAOPS #75, lunasgraph_d #76, cursed_tangent1434 #78, lpieleanu #84 trigonometric chord lengths 2r sin; oooahin #79, vsamc #81, cyroah1331 #83 similar triangles BDF~EDC; numbertheory97 #80, ItsBesi #82) corroborate the similarity synthetic and trigonometric analytic tags."
+   "range": "#75–#84 of 84 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (YaoAOPS #75, lunasgraph_d #76, cursed_tangent1434 #78, lpieleanu #84 trigonometric chord lengths 2r sin; oooahin #79, vsamc #81, cyroah1331 #83 similar triangles BDF~EDC; numbertheory97 #80, ItsBesi #82) corroborate the similarity synthetic and trigonometric analytic tags.; Official check: the Solution (similar right triangles DMO_B~DNO_C, chord lengths 2r·sin, sine rule) uses only methods already tagged; no new tag.",
+   "official": "IMO 2019 SL booklet (imo-official.org), Solution read"
   },
   "isl:2019:G3": {
    "date": "2026-11-16",
-   "range": "#182–#192 of 192 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Jackson0423 #182, Scilyse #183, PSS1234 #185, YaoAOPS #188, otwaenng #190, alupigus #192 Reim) extend AA1, BB1 to the circumcircle and angle chase; numbertheory97 #186 and SleepyGirraffe #191 moving points; Royal_mhyasd #187 barycentric bash matches the analytic primary. Corroborates existing tags."
+   "range": "#182–#192 of 192 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Jackson0423 #182, Scilyse #183, PSS1234 #185, YaoAOPS #188, otwaenng #190, alupigus #192 Reim) extend AA1, BB1 to the circumcircle and angle chase; numbertheory97 #186 and SleepyGirraffe #191 moving points; Royal_mhyasd #187 barycentric bash matches the analytic primary. Corroborates existing tags.; Official check: Sol1 (angle chase) corroborates; Sol2 uses Pappus and shows S has equal powers to circles CEPP1 and CFQQ1, so RCS is their radical axis (parallel case: radical axis ⊥ line of centres); added Radical axes.",
+   "cite": "official Sol2 (radical axis RCS)",
+   "addTags": [
+    "syn:G: Radical axes and coaxality"
+   ],
+   "official": "IMO 2019 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2019:G4": {
    "date": "2026-11-16",
-   "range": "#21–#30 of 30 (all loaded)",
-   "note": "Late posts (JAnatolGT_00 #21, Leo.Euler #24, mpcnotnpc #28, YaoAOPS #30) affinely transform ABCP to an orthocentric system; KevinYang2.71 #25 and ezpotd #29 barycentric (matches analytic primary); awesomeming327. #22 trig, atdaotlohbh #26 acute case only. Corroborates existing tags."
+   "range": "#21–#30 of 30 (all loaded); official booklet",
+   "note": "Late posts (JAnatolGT_00 #21, Leo.Euler #24, mpcnotnpc #28, YaoAOPS #30) affinely transform ABCP to an orthocentric system; KevinYang2.71 #25 and ezpotd #29 barycentric (matches analytic primary); awesomeming327. #22 trig, atdaotlohbh #26 acute case only. Corroborates existing tags.; Official check: Sol1 is a sine-rule ratio proof (PB1/B1B3 · PC1/C1C3 = sin²A/sin²BPC ≥ 1); Sol2 (similar triangles, isogonal lines, angle bisector theorem) corroborates; Sol3 is a complete vector proof from the circumcentre (a positive combination of |A2|²,|B2|²,|C2|² equals the sum of its coefficients; identity checked numerically). Added analytic Vectors and Trigonometric computation; analytic status stays Reviewed.",
+   "cite": "official Sol3 (vectors); Sol1 (sine-rule ratios)",
+   "addTags": [
+    "ana:G: Vectors and dot products",
+    "ana:G: Trigonometric computation"
+   ],
+   "official": "IMO 2019 SL booklet (imo-official.org), Solutions 1–3 and Comments read"
   },
   "isl:2019:G5": {
    "date": "2026-11-16",
-   "range": "#6–#16 of 16 (all loaded)",
-   "note": "Late posts (khina #7 and JAnatolGT_00 #9 and awesomeming327. #10 reflections, Inconsistent #8, Leo.Euler #11) corroborate the area/reflection synthetic tags; Ilovegeom1 #13 complex bash and Assassino9931 #16 computer-assisted check match the analytic tags; Kamran011 #6 one-direction sine-rule remark."
+   "range": "#6–#16 of 16 (all loaded); official booklet",
+   "note": "Late posts (khina #7 and JAnatolGT_00 #9 and awesomeming327. #10 reflections, Inconsistent #8, Leo.Euler #11) corroborate the area/reflection synthetic tags; Ilovegeom1 #13 complex bash and Assassino9931 #16 computer-assisted check match the analytic tags; Kamran011 #6 one-direction sine-rule remark.; Official check: Sol1 shows both conditions are equivalent to direct similarity of AP'M and BP'N, using a claim GD·P'M = HD·P'N = h/4 with h the power of P' with respect to the circle centred at D through C and E; Sol2 (linear signed-area function, reflections) corroborates; added Similarity and Power of a point.",
+   "cite": "official Sol1 (direct similarity, power of P')",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Power of a point"
+   ],
+   "official": "IMO 2019 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–3 read"
   },
   "isl:2019:G6": {
    "date": "2026-11-16",
-   "range": "#49–#58 of 58 (all loaded); analytic scan #1–#58",
-   "note": "Late posts (Lunatic_Lunar7986 #49, Scilyse #50 polar lemma, InterLoop #51 ratio functions, bin_sherlo #52, cursed_tangent1434 #53, iStud #54, ezpotd #55 sharky-devil spiral centre, hung9A #56 trig step, alupigus #57, Bongcloud45 #58) corroborate synthetic tags. Analytic scan: only ratio-lemma/sine steps inside synthetic proofs (#13, #17, #41, #51, #56); no new pure analytic proof, hybrid status stands."
+   "range": "#49–#58 of 58 (all loaded); analytic scan #1–#58; official booklet",
+   "note": "Late posts (Lunatic_Lunar7986 #49, Scilyse #50 polar lemma, InterLoop #51 ratio functions, bin_sherlo #52, cursed_tangent1434 #53, iStud #54, ezpotd #55 sharky-devil spiral centre, hung9A #56 trig step, alupigus #57, Bongcloud45 #58) corroborate synthetic tags. Analytic scan: only ratio-lemma/sine steps inside synthetic proofs (#13, #17, #41, #51, #56); no new pure analytic proof, hybrid status stands.; Official check: Sol1 uses Menelaus for the harmonic pair (B,C;D,Z), PQDL concyclic and a final angle chase; Sol2 takes S as the Miquel point (centre of the spiral similarity) and closes with a chain of similar triangles SPK~SMQ, SPI~SDQ; Sol3 (inversion, projective pencils) corroborates; added Menelaus, Angle chasing, Miquel and Similarity.",
+   "cite": "official Sol1 (Menelaus, angle chase); Sol2 (Miquel point S, similar triangles)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains",
+    "syn:G: Angle chasing and cyclicity",
+    "syn:G: Miquel and complete quadrilaterals",
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2019 SL booklet (imo-official.org), Solutions 1–3 read"
   },
   "isl:2019:G7": {
    "date": "2026-11-16",
-   "range": "#241–#251 of 251 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Entei #241, tstrat #246 sharky-devil point, waryckenmf #248 incircle inversion, otwaenng #249, SyHoAms #251, ReticulatedPython #245 inversion + trig) corroborate synthetic tags; megahertz13 #242 and Aaron314 #243 complex bashes match the analytic primary."
+   "range": "#241–#251 of 251 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Entei #241, tstrat #246 sharky-devil point, waryckenmf #248 incircle inversion, otwaenng #249, SyHoAms #251, ReticulatedPython #245 inversion + trig) corroborate synthetic tags; megahertz13 #242 and Aaron314 #243 complex bashes match the analytic primary.; Official check: Sol1 uses that N is the pole of the external bisector and that opposite sides of an inscribed quadrilateral meet on the polar, then the radical axis E'F' of ω and circle BIC; Sol2 identifies X as the A-mixtilinear touch point and uses that DA is the D-symmedian of DEF (with W the pole of AD); added Poles and polars, Radical axes, Mixtilinear circles and Symmedians.",
+   "cite": "official Sol1 (polar of N, radical axis E'F'); Sol2 (mixtilinear point X, symmedian DA)",
+   "addTags": [
+    "syn:G: Poles and polars",
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Mixtilinear circles",
+    "syn:G: Symmedians"
+   ],
+   "official": "IMO 2019 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2019:G8": {
    "date": "2026-11-16",
-   "range": "#7–#18 of 18 (all loaded); analytic scan #1–#18; official solutions booklet",
-   "note": "Late posts (Modesti #7, JAnatolGT_00 #9, L567 #11 circle-per-point reformulation, DottedCaculator #12, idkk #13, YaoAOPS #15 flags an earlier error, Giabach298 #17, hung9A #18 attachment) use Miquel-type circle assignments; corroborates existing tags. Analytic scan: no analytic proof in the thread (YaoAOPS #15 notes it is not complex-bashable); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2019SL.pdf): Solutions 1–4 are synthetic/functional; coordinates appear only for an integer lattice counting step; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2019SL.pdf): Solutions 1–4 are synthetic/functional; coordinates appear only for an integer lattice counting step — no analytic route there"
+   "range": "#7–#18 of 18 (all loaded); analytic scan #1–#18; official solutions booklet; official booklet",
+   "note": "Late posts (Modesti #7, JAnatolGT_00 #9, L567 #11 circle-per-point reformulation, DottedCaculator #12, idkk #13, YaoAOPS #15 flags an earlier error, Giabach298 #17, hung9A #18 attachment) use Miquel-type circle assignments; corroborates existing tags. Analytic scan: no analytic proof in the thread (YaoAOPS #15 notes it is not complex-bashable); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2019SL.pdf): Solutions 1–4 are synthetic/functional; coordinates appear only for an integer lattice counting step; analytic route stays pending.; Official check: Sol1 (Miquel, grid counting), Sol2 (Miquel lemma) and Sol3 (limits of shrinking circles) corroborate existing tags; Sol4 excludes Subcase 2.2.3 because a composition of projective maps with three fixed points would be the identity; added Projective incidence. Analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2019SL.pdf): Solutions 1–4 are synthetic/functional; coordinates appear only for an integer lattice counting step — no analytic route there",
+   "cite": "official Sol4 (projective transformations g(Q)→ℓ)",
+   "addTags": [
+    "syn:G: Projective incidence"
+   ],
+   "official": "IMO 2019 SL booklet (imo-official.org), Common remarks, Solutions 1–4 and Comment read"
   },
   "isl:2019:N1": {
    "date": "2026-11-16",

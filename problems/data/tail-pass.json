@@ -3445,9 +3445,15 @@
   },
   "isl:1996:G5": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #2–#11 of 11 (whole thread); analytic scan #1–#11",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a side-length/law-of-sines estimate matching the existing synthetic route; analytic route stays pending.; Posts (probability1.01 #2 reflections, Learner94 #3 projection/sine bounds, math154 #4, TheUltimate123 #9 parallelograms FABX, BCDY, DEFZ with sine-weighted projections, Mogmog8 #10) match the existing law-of-sines/parallel-sides route. Analytic scan: sines appear only inside the projection estimates of these synthetic proofs; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a side-length/law-of-sines estimate matching the existing synthetic route — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #2–#11 of 11 (whole thread); analytic scan #1–#11; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a side-length/law-of-sines estimate matching the existing synthetic route; analytic route stays pending.; Posts (probability1.01 #2 reflections, Learner94 #3 projection/sine bounds, math154 #4, TheUltimate123 #9 parallelograms FABX, BCDY, DEFZ with sine-weighted projections, Mogmog8 #10) match the existing law-of-sines/parallel-sides route. Analytic scan: sines appear only inside the projection estimates of these synthetic proofs; analytic route stays pending.; Official check: the first Compendium solution compares perpendicular widths between opposite parallel sides, writes each circumradius as a diagonal over twice a sine, and finishes with x/y + y/x ≥ 2. The second builds parallelograms on the sides, gets 2R_A as a diameter of a cyclic quadrilateral, and proves a generalised Erdős–Mordell inequality by reflecting in an angle bisector, bounding twice an area by a product of diagonals, and using similar triangles A″C″E″ ~ A′C′E′. Added Area arguments and Similarity (second solution). The analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a side-length/law-of-sines estimate matching the existing synthetic route — no analytic route there",
+   "cite": "Compendium solution 2 (area bound and similar triangles in the Erdős–Mordell generalisation)",
+   "addTags": [
+    "syn:G: Area arguments",
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 14 solutions 1 and 2 and remark read"
   },
   "isl:1993:MAK1": {
    "date": "2026-11-16",
@@ -3463,15 +3469,21 @@
   },
   "isl:1995:G5": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#10 of 10 (whole thread); analytic scan #1–#10",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 11 is the kite-reflection argument; analytic route stays pending.; Posts (grobber #2 and geometry6 #9 reflections in BE, lasha #3, xeroxia #5 Ptolemy generalisation, math_genie #6, TheUltimate123 #7, popop614 #10) match the existing kite-reflection route. Analytic scan: no analytic proof; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 11 is the kite-reflection argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#10 of 10 (whole thread); analytic scan #1–#10; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 11 is the kite-reflection argument; analytic route stays pending.; Posts (grobber #2 and geometry6 #9 reflections in BE, lasha #3, xeroxia #5 Ptolemy generalisation, math_genie #6, TheUltimate123 #7, popop614 #10) match the existing kite-reflection route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution reflects C and F in the axis BE, puts G and H on circles ABC′ and DEF′ by angles, applies Ptolemy and then the triangle inequality; the remark notes that Ptolemy's inequality removes the 120° condition. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 11 is the kite-reflection argument — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 11 solution and remark read"
   },
   "isl:1995:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#4 of 4 (whole thread); analytic scan #1–#4",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 13 is the similarity/homothety area argument; analytic route stays pending.; darij grinberg #2 gives a long homothety/area proof and Wizzy #3 suggests Brunn–Minkowski (bmw5 #4 disputes); matches the existing homothety route. Analytic scan: no analytic proof; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 13 is the similarity/homothety area argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#4 of 4 (whole thread); analytic scan #1–#4; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 13 is the similarity/homothety area argument; analytic route stays pending.; darij grinberg #2 gives a long homothety/area proof and Wizzy #3 suggests Brunn–Minkowski (bmw5 #4 disputes); matches the existing homothety route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the first Compendium solution chooses, by continuity, a line through O with OW/OX = OZ/OY, uses the homothetic triangles WKO, OLZ, WBZ to get T1 = 2√(S_WKO·S_OLZ), and finishes with Cauchy–Schwarz. The second applies an affine map to make ABCD cyclic, writes the three areas with Brahmagupta's formula, and proves the resulting inequality by 1 + √(uv) ≤ √((1 + u)(1 + v)). Added Metric relations and length chasing (second solution). The analytic route stays pending; the second solution uses formulas but no coordinate system.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 13 is the similarity/homothety area argument — no analytic route there",
+   "cite": "Compendium solution 2 (Brahmagupta's formula after an affine reduction)",
+   "addTags": [
+    "syn:G: Metric relations and length chasing"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 13 solutions 1 and 2 read"
   },
   "isl:1994:G3": {
    "date": "2026-11-16",
@@ -3481,9 +3493,15 @@
   },
   "isl:1995:G4": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#7 of 7 (whole thread); analytic scan #1–#7",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 10 uses sine-rule length equalities inside an angle chase (second solution: orthocentre distances 2R·sinθ); treated as synthetic, not adopted; analytic route stays pending.; Posts (Moonmathpi496 #2 read in full, livetolove212 #3, Moonmathpi496 #4–#6 citing the Compendium, Mobashereh #7) show the six points concyclic via sine-law length equalities (BP1=BR2, BR1=BP2) and parallels, the same mix as the Compendium solution; treated as synthetic with sine-rule steps, not adopted; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16: Posts (Moonmathpi496 #2 read in full, livetolove212 #3, Moonmathpi496 #4–#6 citing the Compendium, Mobashereh #7) show the six points concyclic via sine-law length equalities (BP1=BR2, BR1=BP2) and parallels, the same mix as the Compendium solution; treated as synthetic with sine-rule steps, not adopted; analytic route stays pending."
+   "range": "official solutions (IMO Compendium text); #1–#7 of 7 (whole thread); analytic scan #1–#7; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 10 uses sine-rule length equalities inside an angle chase (second solution: orthocentre distances 2R·sinθ); treated as synthetic, not adopted; analytic route stays pending.; Posts (Moonmathpi496 #2 read in full, livetolove212 #3, Moonmathpi496 #4–#6 citing the Compendium, Mobashereh #7) show the six points concyclic via sine-law length equalities (BP1=BR2, BR1=BP2) and parallels, the same mix as the Compendium solution; treated as synthetic with sine-rule steps, not adopted; analytic route stays pending.; Official check: the first Compendium solution gets ∠ABB2 = ∠ACC1 and ABB2 ~ ACC1, then uses the sine rule to show AZ1 = AY2 and AY1 = AZ2 (and analogues), so Y1Z2 ∥ BC, Z2X1 ∥ AC and Z2 lies on circle X1Y1Z1. The second shows BCX1H is cyclic, so HX1 = 2R sin θ for all six points. Added Similarity and Trigonometric computation (the first solution's sine-rule chase). The analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16: Posts (Moonmathpi496 #2 read in full, livetolove212 #3, Moonmathpi496 #4–#6 citing the Compendium, Mobashereh #7) show the six points concyclic via sine-law length equalities (BP1=BR2, BR1=BP2) and parallels, the same mix as the Compendium solution; treated as synthetic with sine-rule steps, not adopted; analytic route stays pending.",
+   "cite": "Compendium solution 1 (similar triangles and sine rule)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Trigonometric computation"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 10 solutions 1 and 2 read"
   },
   "isl:1990:9": {
    "date": "2026-11-16",
@@ -3499,8 +3517,9 @@
   },
   "isl:1996:G8": {
    "date": "2026-11-16",
-   "range": "#1–#3 of 3 (whole thread); analytic scan #1–#3",
-   "note": "Bugi #2 gives a law-of-sines argument that alkjash #3 points out is flawed (sines of possibly obtuse angles); alkjash #3 gives a case-split argument extending AC to the circle ABD, matching the existing route. Analytic scan: no complete analytic proof; analytic route stays pending."
+   "range": "#1–#3 of 3 (whole thread); analytic scan #1–#3; official booklet",
+   "note": "Bugi #2 gives a law-of-sines argument that alkjash #3 points out is flawed (sines of possibly obtuse angles); alkjash #3 gives a case-split argument extending AC to the circle ABD, matching the existing route. Analytic scan: no complete analytic proof; analytic route stays pending.; Official check: the Compendium solution assumes ∠AXB ≥ 90° at the diagonal intersection, writes each circumradius as a side over twice the sine of an angle, and compares the angles according to whether D lies inside, on or outside circle ABC. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 17 solution read"
   },
   "isl:1992:CHN-2": {
    "date": "2026-11-16",
@@ -5529,33 +5548,63 @@
   },
   "isl:1996:G1": {
    "date": "2026-11-17",
-   "range": "#8–#17 of 17 (all loaded)",
-   "note": "Posts (jayme #8/#12 Reim's theorem links, Wictro #9, Drunken_Master #10, AlastorMoody #11, math_pi_rate #13 animating P, MP8148 #14, Mathscienceclass #15, asdf334 #16 translation of the orthocenter, ThePingu #17 outline) show AHCR and AQBH cyclic and angle-chase EX ∥ AP; corroborates existing tags."
+   "range": "#8–#17 of 17 (all loaded); official booklet",
+   "note": "Posts (jayme #8/#12 Reim's theorem links, Wictro #9, Drunken_Master #10, AlastorMoody #11, math_pi_rate #13 animating P, MP8148 #14, Mathscienceclass #15, asdf334 #16 translation of the orthocenter, ThePingu #17 outline) show AHCR and AQBH cyclic and angle-chase EX ∥ AP; corroborates existing tags.; Official check: the Compendium solution notes that ABC and PBC share a circumcentre, so the Euler-line relation gives HH′ = 3GG′ = AP; AQR is the translate of PBC by AP, so H is the orthocentre of AQR too; then AXEH is cyclic and an oriented-angle chase gives EX ∥ AP. Added Nine-point circle/Euler line (the Euler-line relation). Analytic route unchanged.",
+   "cite": "Compendium solution (Euler-line relation HH′ = 3GG′)",
+   "addTags": [
+    "syn:G: Nine-point circle/Euler line"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 10 solution and remark read"
   },
   "isl:1996:G2": {
    "date": "2026-11-17",
-   "range": "#51–#61 of 61 (all loaded; #58 absent); middle skimmed by thanks",
-   "note": "Late posts (Bridgeon #51, Learning11 #52 and Kempu33334 #53 and oooahin #54 and Og_math_guy #56 and PSS1234 #57 and otwaenng #61 inversion at A, DensSv #55, Assassino9931 #59 and Sxmplicity #60 sine law) reduce to AB/BP=AC/CP via the angle bisector theorem (IMO 1996/2); corroborates existing tags."
+   "range": "#51–#61 of 61 (all loaded; #58 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Bridgeon #51, Learning11 #52 and Kempu33334 #53 and oooahin #54 and Og_math_guy #56 and PSS1234 #57 and otwaenng #61 inversion at A, DensSv #55, Assassino9931 #59 and Sxmplicity #60 sine law) reduce to AB/BP=AC/CP via the angle bisector theorem (IMO 1996/2); corroborates existing tags.; Official check: the first Compendium solution uses the pedal triangle of P, where the cyclic quadrilaterals give ∠XZY = ∠APB − ∠C and XY = PC sin C, so the isosceles pedal triangle yields AB/PB = AC/PC and the bisectors split AP in the same ratio. The second takes the second intersections with the circumcircle, uses the equal powers AP·PX = BP·PY = CP·PZ and similar triangles, and the third inverts at A. Added Power of a point (second solution) and Metric relations and length chasing (the pedal-chord lengths in the first). Analytic route unchanged.",
+   "cite": "Compendium solutions 2 (equal powers) and 1 (pedal-chord lengths)",
+   "addTags": [
+    "syn:G: Power of a point",
+    "syn:G: Metric relations and length chasing"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 11 solutions 1–3 read"
   },
   "isl:1996:G3": {
    "date": "2026-11-17",
-   "range": "#18–#27 of 27 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (jred #18 typo note, jayme #19/#21 links, Blast_S1 #20, Mercury_is_small #22, Bunrong123 #23 and Jishnu4414l #24 and LeYohan #26 butterfly theorem, Assassino9931 #25, Double07 #27 complex numbers) reflect H over AB onto the circumcircle and use the butterfly theorem or isogonal conjugates; corroborates existing tags."
+   "range": "#18–#27 of 27 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (jred #18 typo note, jayme #19/#21 links, Blast_S1 #20, Mercury_is_small #22, Bunrong123 #23 and Jishnu4414l #24 and LeYohan #26 butterfly theorem, Assassino9931 #25, Double07 #27 complex numbers) reflect H over AB onto the circumcircle and use the butterfly theorem or isogonal conjugates; corroborates existing tags.; Official check: the first Compendium solution uses the cyclic quadrilateral OFPY, the similar triangles OZF ~ HRF and EHR ~ FOY, and the product HF·HC = HE·HB, then an angle chase. The second notes that the circle through O, F, P, Y and the nine-point circle share the chord FY, so the line of centres is perpendicular to FY and parallel to HP. The third reflects H in AB onto the circumcircle and uses the butterfly theorem. The trigonometric remark is only a sketch. Added Similarity and Power of a point (first solution) and Nine-point circle/Euler line (second). Analytic route unchanged.",
+   "cite": "Compendium solutions 1 (similar triangles, equal products) and 2 (nine-point circle common chord)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Power of a point",
+    "syn:G: Nine-point circle/Euler line"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 12 solutions 1–3 and remarks read"
   },
   "isl:1996:G4": {
    "date": "2026-11-17",
-   "range": "#1–#5 of 5 (all loaded)",
-   "note": "Posts (ThAzN1 #2 and pinkpig #3 and HamstPan38825 #4 law of cosines A_1B_1² ≥ A_1C·B_1C plus Ceva, YaoAOPS #5 barycentric) prove the area inequality; corroborates existing tags."
+   "range": "#1–#5 of 5 (all loaded); official booklet",
+   "note": "Posts (ThAzN1 #2 and pinkpig #3 and HamstPan38825 #4 law of cosines A_1B_1² ≥ A_1C·B_1C plus Ceva, YaoAOPS #5 barycentric) prove the area inequality; corroborates existing tags.; Official check: the Compendium solution applies the law of cosines with the 60° angle to get A1B1² ≥ A1C·B1C and its analogues, multiplies them and finishes with Ceva. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 13 solution read"
   },
   "isl:1996:G7": {
    "date": "2026-11-17",
-   "range": "#2–#11 of 11 (all loaded)",
-   "note": "Posts (Albanian Eagle #2/#6 inversion to OA''·OB''·OC'', zhaoli #3 and vittasko #4 and Yimin Ge #7 generalisation, Virgil Nicula #5, Moonmathpi496 #8, Sardor #9 Ptolemy, A.L.E.X #10 inversion, rafaello #11) reduce OA'·OB'·OC' ≥ 8R³ to a known cevian inequality; corroborates existing tags."
+   "range": "#2–#11 of 11 (all loaded); official booklet",
+   "note": "Posts (Albanian Eagle #2/#6 inversion to OA''·OB''·OC'', zhaoli #3 and vittasko #4 and Yimin Ge #7 generalisation, Virgil Nicula #5, Moonmathpi496 #8, Sardor #9 Ptolemy, A.L.E.X #10 inversion, rafaello #11) reduce OA'·OB'·OC' ≥ 8R³ to a known cevian inequality; corroborates existing tags.; Official check: the first Compendium solution gets OA1·OA′ = R² from similar triangles OBA1 ~ OA′B, then writes S_OBC/S_ABC = λ/(1 + λ) and its analogues, whose sum is 1, giving 1 = λμ + μν + νλ + 2λμν and λμν ≤ 1/8 by AM–GM. The second reduces to cos(A − B)cos(B − C)cos(C − A) ≥ 8 cos A cos B cos C and proves it with tangents and AM–GM. Added Area arguments and Similarity (first solution). Analytic route unchanged.",
+   "cite": "Compendium solution 1 (similar triangles, area ratios)",
+   "addTags": [
+    "syn:G: Area arguments",
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 16 solutions 1 and 2 read"
   },
   "isl:1996:G9": {
    "date": "2026-11-17",
-   "range": "#1–#4 of 4 (all loaded)",
-   "note": "Posts (pianoforte #2/#4 and math154 #3 on directed segments) bound d²−h² by summing over the polygon's sides; corroborates existing tags."
+   "range": "#1–#4 of 4 (all loaded); official booklet",
+   "note": "Posts (pianoforte #2/#4 and math154 #3 on directed segments) bound d²−h² by summing over the polygon's sides; corroborates existing tags.; Official check: the Compendium solution first treats a single side: reflecting B in the line through O parallel to AB and applying the triangle inequality gives (a + b)² ≥ 4h² + c². It then sums over the sides and finishes with Minkowski. Added Reflections, rotations and translations (the reflection step). Analytic route unchanged.",
+   "cite": "Compendium solution (reflection in the parallel through O)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1996 shortlist, problem 18 solution read"
   },
   "isl:1996:N1": {
    "date": "2026-11-17",
@@ -5689,28 +5738,47 @@
   },
   "isl:1995:G1": {
    "date": "2026-11-17",
-   "range": "#78–#88 of 88 (all loaded; #80 absent); middle skimmed by thanks",
-   "note": "Late posts (cyroah1331 #78 Cartesian coordinates, Fly_into_the_sky #79, mudkip42 #81, Shan3t #82, Kempu33334 #83, quannc #84 power of a point, JKH123 #85, Astrox #86, Assassino9931 #87, Fractalpi-Matrix #88) use BCNM cyclic and the radical axis XY of the two circles (IMO 1995/1); corroborates existing tags."
+   "range": "#78–#88 of 88 (all loaded; #80 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (cyroah1331 #78 Cartesian coordinates, Fly_into_the_sky #79, mudkip42 #81, Shan3t #82, Kempu33334 #83, quannc #84 power of a point, JKH123 #85, Astrox #86, Assassino9931 #87, Fractalpi-Matrix #88) use BCNM cyclic and the radical axis XY of the two circles (IMO 1995/1); corroborates existing tags.; Official check: the first Compendium solution gets BCMN cyclic from OB·ON = OC·OM = OX·OY, angle-chases ADNM cyclic, and shows Z = AM ∩ DN has equal power to both circles. The second puts P = BC ∩ XY and uses the similar triangles OPC ~ APZ1 to get PZ1 = PX²/PO, the same for Z2. Added Similarity (second solution). Analytic route unchanged.",
+   "cite": "Compendium solution 2 (similar triangles OPC ~ APZ1)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 7 solutions 1 and 2 read"
   },
   "isl:1995:G2": {
    "date": "2026-11-17",
-   "range": "#1–#10 of 10 (all loaded; #7 absent)",
-   "note": "Posts (Mathias_DK #2, Luis González #3 de Longchamps point, kyyuanmathcount #4 three circles, jayme #5, viperstrike #6 and mathmax12 #8 and Lunatic_Lunar7986 #10 coordinates, Aiden-1089 #9 reflected altitudes) show X is the unique intersection of three lines from the conditions; corroborates existing tags."
+   "range": "#1–#10 of 10 (all loaded; #7 absent); official booklet",
+   "note": "Posts (Mathias_DK #2, Luis González #3 de Longchamps point, kyyuanmathcount #4 three circles, jayme #5, viperstrike #6 and mathmax12 #8 and Lunatic_Lunar7986 #10 coordinates, Aiden-1089 #9 reflected altitudes) show X is the unique intersection of three lines from the conditions; corroborates existing tags.; Official check: the Compendium solution reflects A, B, C in the midpoints of the opposite sides; XB² − XC² = A′B² − A′C² puts X on the perpendicular from A′ to BC, so X is the orthocentre of A′B′C′. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 8 solution read"
   },
   "isl:1995:G3": {
    "date": "2026-11-17",
-   "range": "#27–#37 of 37 (all loaded; #29 absent); middle skimmed by thanks",
-   "note": "Late posts (ike.chen #27, HamstPan38825 #28 cross ratio (T,D;B,C)=−1, Telgite #30/#31, lelouchvigeo #32, AshAuktober #33 Ceva–Menelaus, Fly_into_the_sky #34 angle chase, quannc #35, Math_AlexG #36, ThatApollo777 #37) show EF, YZ and BC concur at the harmonic conjugate T, then TE·TF=TD²=TY·TZ; corroborates existing tags."
+   "range": "#27–#37 of 37 (all loaded; #29 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (ike.chen #27, HamstPan38825 #28 cross ratio (T,D;B,C)=−1, Telgite #30/#31, lelouchvigeo #32, AshAuktober #33 Ceva–Menelaus, Fly_into_the_sky #34 angle chase, quannc #35, Math_AlexG #36, ThatApollo777 #37) show EF, YZ and BC concur at the harmonic conjugate T, then TE·TF=TD²=TY·TZ; corroborates existing tags.; Official check: the first Compendium solution uses Menelaus to show EF and ZY meet BC at the same point P, then PE·PF = PD² = PY·PZ. The second uses the equal tangents from B and C to compute the angles of EFZY from those of ABC and the angle BCY, and checks that opposite angles sum to 180°. Added Angle chasing and cyclicity (second solution; checked numerically, and the extracted formula for ∠FEY needs a minus sign: ½(A + C − ∠BCY)).",
+   "cite": "Compendium solution 2 (angle computation from equal tangents)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 9 solutions 1 and 2 read"
   },
   "isl:1995:G6": {
    "date": "2026-11-17",
-   "range": "#1–#5 of 5 (all loaded)",
-   "note": "Posts (mihai miculita #2, tc1729 #3, Marinchoo #4 Leibniz's theorem twice, asdf334 #5 power of G) express GA_i·GA'_i as the power of G and bound the sums by AM–GM; corroborates existing tags."
+   "range": "#1–#5 of 5 (all loaded); official booklet",
+   "note": "Posts (mihai miculita #2, tc1729 #3, Marinchoo #4 Leibniz's theorem twice, asdf334 #5 power of G) express GA_i·GA'_i as the power of G and bound the sums by AM–GM; corroborates existing tags.; Official check: the Compendium solution expands OA_i² with vectors around the centroid, uses the power of G with respect to the circumsphere, and finishes with QM–GM and Cauchy–Schwarz. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 12 solution read"
   },
   "isl:1995:G8": {
    "date": "2026-11-17",
-   "range": "#37–#47 of 47 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (BorisAngelov1 #37 radical axis, MagicalToaster53 #38 and dolphinday #39 and Aiden-1089 #40 and mathwiz_1207 #41 and Ilikeminecraft #42 Steiner line as radical axis of (AB) and (CD), Ilovegeom1 #43 and methovermath #47 complex numbers, Kempu33334 #44, cubres #45, DensSv #46 Desargues) show F, H₁, H₂ are collinear; corroborates existing tags."
+   "range": "#37–#47 of 47 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (BorisAngelov1 #37 radical axis, MagicalToaster53 #38 and dolphinday #39 and Aiden-1089 #40 and mathwiz_1207 #41 and Ilikeminecraft #42 Steiner line as radical axis of (AB) and (CD), Ilovegeom1 #43 and methovermath #47 complex numbers, Kempu33334 #44, cubres #45, DensSv #46 Desargues) show F, H₁, H₂ are collinear; corroborates existing tags.; Official check (the Compendium states the equivalent formulation with a circle through B and C): the first solution builds parallelograms BPCD and HPCE, uses B′H′C′ ~ BHC and B′PC′ ~ BDC to make the quadrilaterals B′PC′H′ and BDCH similar, shows HCED is cyclic, and angle-chases ∠BPH = ∠H′PB′. The second applies trigonometric Ceva in triangles BPC and B′PC′. Added Angle chasing and cyclicity and Similarity (first solution) and Ceva, Menelaus and ratio chains (second). Analytic route unchanged.",
+   "cite": "Compendium solutions 1 (similar quadrilaterals, cyclic HCED) and 2 (trigonometric Ceva)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity",
+    "syn:G: Similarity",
+    "syn:G: Ceva, Menelaus and ratio chains"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1995 shortlist, problem 14 solutions 1 and 2 read (Compendium formulation: BB′, CC′, HH′ concurrent)"
   },
   "isl:1994:A1": {
    "date": "2026-11-17",

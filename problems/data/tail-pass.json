@@ -3537,33 +3537,47 @@
   },
   "isl:1992:CHN-2": {
    "date": "2026-11-16",
-   "range": "#1–#2 of 2 (whole thread); analytic scan #1–#2",
-   "note": "polya78 #2 uses the quarter-turn rotation mapping side lines, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
+   "range": "#1–#2 of 2 (whole thread); analytic scan #1–#2; official booklet",
+   "note": "polya78 #2 uses the quarter-turn rotation mapping side lines, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution notes that the two squares on the perpendicular diagonals are homothetic, so the four lines through corresponding vertices concur; a 90° rotation about A makes BK and DF perpendicular, and a cyclic quadrilateral with an angle chase puts the concurrency point on their angle bisector, so a 90° rotation about it carries one quadrilateral onto the other. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1992 shortlist, problem 3 solution read"
   },
   "isl:1992:FRA1": {
    "date": "2026-11-16",
-   "range": "#1–#9 of 9 (whole thread); analytic scan #1–#9",
-   "note": "Posts (behzad #2, saywhattt #3, Wictro #5, MP8148 #6, AwesomeYRY #7, Jalil_Huseynov #8, Mogmog8 #9) use the homothety at P sending the incircle to the excircle (reflection of the tangency point over M), matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
+   "range": "#1–#9 of 9 (whole thread); analytic scan #1–#9; official booklet",
+   "note": "Posts (behzad #2, saywhattt #3, Wictro #5, MP8148 #6, AwesomeYRY #7, Jalil_Huseynov #8, Mogmog8 #9) use the homothety at P sending the incircle to the excircle (reflection of the tangency point over M), matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution reflects the tangency point U in S and in M, and uses the homothety at P between the incircle and the P-excircle of PQR (the similar triangles WSP ~ W′S′P and SXP ~ S′U′P) to put P on the fixed line XU′, then checks the converse. The similar triangles are the homothety already tagged. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1992 shortlist, problem 20 solution read"
   },
   "isl:1992:IND-4": {
    "date": "2026-11-16",
-   "range": "#9–#18 of 18 (all loaded); analytic scan #1–#18",
-   "note": "Late posts (sunken rock #9, vslmat #10, thecmd999 #11, algemania #12, jayme #13, math_pi_rate #14, MathLuis #15, rafaello #16, HamstPan38825 #17 shooting lemma, Eka01 #18) match the existing arc-midpoint/shooting-lemma route; orl #4 notes the official proof uses no trigonometry. Analytic scan: no analytic proof; analytic route stays pending."
+   "range": "#9–#18 of 18 (all loaded); analytic scan #1–#18; official booklet",
+   "note": "Late posts (sunken rock #9, vslmat #10, thecmd999 #11, algemania #12, jayme #13, math_pi_rate #14, MathLuis #15, rafaello #16, HamstPan38825 #17 shooting lemma, Eka01 #18) match the existing arc-midpoint/shooting-lemma route; orl #4 notes the official proof uses no trigonometry. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution uses the homothety at the tangency point to show R, P, D are collinear (D the arc midpoint), then ∠DBP = ∠DRB gives the similar triangles DBP ~ DRB and DP·DR = DB²; so D lies on the radical axis of the two small circles, and DB = DC = DW with the incentre lemma finishes. The remark mentions the incentre lemma of SL93-3 and inversion at W. Added Similarity (DBP ~ DRB). The analytic route stays pending.",
+   "cite": "Compendium solution (similar triangles DBP ~ DRB)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1992 shortlist, problem 7 solution and remark read"
   },
   "isl:1991:1": {
    "date": "2026-11-16",
-   "range": "#1–#10 of 10 (whole thread); analytic scan #1–#10",
-   "note": "Posts (grobber #2, darij grinberg #5, dchenmathcounts #7, parmenides51 #9, AshAuktober #10) apply Pascal to the cyclic hexagon on diameter AP, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
+   "range": "#1–#10 of 10 (whole thread); analytic scan #1–#10; official booklet",
+   "note": "Posts (grobber #2, darij grinberg #5, dchenmathcounts #7, parmenides51 #9, AshAuktober #10) apply Pascal to the cyclic hexagon on diameter AP, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution puts the four feet of perpendiculars on the circle with diameter PC and applies Pascal to the hexagon P1PP2Q1CQ2. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1991 shortlist, problem 1 solution read"
   },
   "isl:1991:2": {
    "date": "2026-11-16",
-   "range": "#1–#6 of 6 (whole thread); analytic scan #1–#6",
-   "note": "Posts (yptsoi #2, sayantanchakraborty #4, TestX01 #5 ratio argument XY ∥ PQ) match the existing right-angle/rectangle route; PROBLEM-SOLVER11 #6 only asserts a trig bash exists. Analytic scan: no analytic proof; analytic route stays pending."
+   "range": "#1–#6 of 6 (whole thread); analytic scan #1–#6; official booklet",
+   "note": "Posts (yptsoi #2, sayantanchakraborty #4, TestX01 #5 ratio argument XY ∥ PQ) match the existing right-angle/rectangle route; PROBLEM-SOLVER11 #6 only asserts a trig bash exists. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the first Compendium solution gets a right angle at P and a rectangle whose circle is tangent to BC, then Ceva and parallel ratios give QR ∥ Q′R′. The second uses the bisector theorem for XY ∥ BC and XYM ~ CBP, the right-triangle relation CH : HB = PC² : PB², and length ratios to get RH : QH = PC : PB. Added Metric relations and length chasing (second solution). The analytic route stays pending.",
+   "cite": "Compendium solution 2 (right-triangle altitude ratio and length ratios)",
+   "addTags": [
+    "syn:G: Metric relations and length chasing"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1991 shortlist, problem 2 solutions 1 and 2 read"
   },
   "isl:1991:7": {
    "date": "2026-11-16",
-   "range": "#1–#3 of 3 (whole thread); analytic scan #1–#3",
-   "note": "grobber #2 and nguyenhoangvietdeptrai #3 show opposite edges equal and use the common midpoint of the bimedians, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending."
+   "range": "#1–#3 of 3 (whole thread); analytic scan #1–#3; official booklet",
+   "note": "grobber #2 and nguyenhoangvietdeptrai #3 show opposite edges equal and use the common midpoint of the bimedians, matching the existing route. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution gets equal opposite edges, shows the midpoint parallelograms are rhombi, so the three bimedians share a midpoint Q and are pairwise perpendicular, and then QA = QB = QC = QD makes Q the circumcentre. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1991 shortlist, problem 7 solution read"
   },
   "rmm:2017:6": {
    "date": "2026-11-16",
@@ -6061,8 +6075,13 @@
   },
   "isl:1992:COL-3": {
    "date": "2026-11-17",
-   "range": "#1–#8 of 8 (all loaded)",
-   "note": "Posts (grobber #2 and adamz #6 and HamstPan38825 #8 and sayantanchakraborty #5 complex numbers with ω, orl #3, luiseduardo #4 asks for vectors, drmzjoseph #7 Napoleon-area remark) show the segments joining opposite centres are perpendicular iff the diagonals are equal; the complex proofs match the recorded analytic route. Corroborates existing tags."
+   "range": "#1–#8 of 8 (all loaded); official booklet",
+   "note": "Posts (grobber #2 and adamz #6 and HamstPan38825 #8 and sayantanchakraborty #5 complex numbers with ω, orl #3, luiseduardo #4 asks for vectors, drmzjoseph #7 Napoleon-area remark) show the segments joining opposite centres are perpendicular iff the diagonals are equal; the complex proofs match the recorded analytic route. Corroborates existing tags.; Official check: the Compendium solution is a vector proof. It writes O1O3 as KM plus a rotational homothety (angle −90°, ratio 1/√3) applied to BK + CM, which equals half of BA + CD, i.e. LN; since LN ⊥ KM in the rhombus of midpoints, O1O3 ∥ KM, and likewise O2O4 ∥ LN (perpendicularity checked numerically). Added analytic Vectors and dot products; analytic status stays Reviewed.",
+   "cite": "Compendium solution (vector sum with a rotational homothety)",
+   "addTags": [
+    "ana:G: Vectors and dot products"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1992 shortlist, problem 5 solution read"
   },
   "isl:1992:IND-2": {
    "date": "2026-11-17",
@@ -6131,8 +6150,14 @@
   },
   "isl:1991:4": {
    "date": "2026-11-17",
-   "range": "#2–#12 of 12 (all loaded)",
-   "note": "Posts (darij grinberg #2 link, boxedexe #3, 77ant #4 and samrocksnature #9 and OlympusHero #10 and RaymondZhu #11 Erdős–Mordell, Zhero #5 and 596066 #8 trigonometric Ceva, Konigsberg #6, Bajaj_ra #7 with Twan #12 pointing out a gap) show one of the angles is at most 30° (IMO 1991/5); corroborates existing tags."
+   "range": "#2–#12 of 12 (all loaded); official booklet",
+   "note": "Posts (darij grinberg #2 link, boxedexe #3, 77ant #4 and samrocksnature #9 and OlympusHero #10 and RaymondZhu #11 Erdős–Mordell, Zhero #5 and 596066 #8 trigonometric Ceva, Konigsberg #6, Bajaj_ra #7 with Twan #12 pointing out a gap) show one of the angles is at most 30° (IMO 1991/5); corroborates existing tags.; Official check: the first Compendium solution combines trig Ceva (the product of sines exceeds 1/8) with Jensen for the concave ln sin x (the complementary product is below 1/8). The second writes the area ratios Σ PA1/(PA + PA1) = 1 for the cevians through P, uses monotonicity of t/(p + t) and finishes with Cauchy–Schwarz. Added Inequalities—convexity arguments (first solution) and Area arguments (second). Analytic status stays Reviewed.",
+   "cite": "Compendium solutions 1 (trig Ceva + Jensen) and 2 (area ratios of cevians)",
+   "addTags": [
+    "syn:A: Inequalities—convexity arguments",
+    "syn:G: Area arguments"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1991 shortlist, problem 4 solutions 1 and 2 read"
   },
   "isl:1991:5": {
    "date": "2026-11-17",
@@ -6141,8 +6166,9 @@
   },
   "isl:1991:6": {
    "date": "2026-11-17",
-   "range": "#14–#24 of 24 (all loaded; #17 absent)",
-   "note": "Late posts (lucasxia01 #14 and carzland #15 aside, MathBoy23 #16 Euler–Gergonne remark, pinkpig #18 and Mahdi_Mashayekhi #19 and AshAuktober #23 AI/AA'=(b+c)/(a+b+c), sqing #20 variants, Kunihiko_Chikaya #21/#22 proofs of (a+b+c)³<4(a+b)(b+c)(c+a), Math_.only. #24 Ravi hint) reduce IMO 1991/1 to an algebraic inequality in the side lengths; corroborates existing tags."
+   "range": "#14–#24 of 24 (all loaded; #17 absent); official booklet",
+   "note": "Late posts (lucasxia01 #14 and carzland #15 aside, MathBoy23 #16 Euler–Gergonne remark, pinkpig #18 and Mahdi_Mashayekhi #19 and AshAuktober #23 AI/AA'=(b+c)/(a+b+c), sqing #20 variants, Kunihiko_Chikaya #21/#22 proofs of (a+b+c)³<4(a+b)(b+c)(c+a), Math_.only. #24 Ravi hint) reduce IMO 1991/1 to an algebraic inequality in the side lengths; corroborates existing tags.; Official check: the Compendium solution uses the bisector theorem to get AI/l_A = (b + c)/(a + b + c), substitutes a = n + p, b = p + m, c = m + n, and finishes with AM-GM and an expansion; the remark shows both bounds are sharp. Uses only methods already tagged. No new tag; analytic status unchanged.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1991 shortlist, problem 6 solution and remark read"
   },
   "isl:1991:8": {
    "date": "2026-11-17",

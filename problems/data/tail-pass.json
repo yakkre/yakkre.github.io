@@ -1845,76 +1845,123 @@
   },
   "isl:2014:G1": {
    "date": "2026-11-16",
-   "range": "#207–#216 of 216 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Jupiterballs #208, cubres #210 cotangent trick, Sxmplicity #211, methovermath #212, otwaenng #214 projective, pirateNT0611 #215, benjaminchew13 #216) show the tangents at B, C are parallel to AP, AQ and conclude by similar triangles; Ashwath2011 #207 and hellohi321 #213 barycentric (matches analytic primary). Corroborates existing tags."
+   "range": "#207–#216 of 216 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Jupiterballs #208, cubres #210 cotangent trick, Sxmplicity #211, methovermath #212, otwaenng #214 projective, pirateNT0611 #215, benjaminchew13 #216) show the tangents at B, C are parallel to AP, AQ and conclude by similar triangles; Ashwath2011 #207 and hellohi321 #213 barycentric (matches analytic primary). Corroborates existing tags.; Official check: Sol1 (similar triangles ABP~CAQ, BPM~NQC, angle sum) corroborates; Sol2 takes the second intersections K, L, shows the reflection X of A in BC lies on MN, and applies Pascal to the hexagon ALBSCK to put S on the circumcircle. Added Projective incidence.",
+   "cite": "official Sol2 (Pascal on ALBSCK)",
+   "addTags": [
+    "syn:G: Projective incidence"
+   ],
+   "official": "IMO 2014 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2014:G2": {
    "date": "2026-11-16",
-   "range": "#8–#18 of 18 (all loaded); analytic scan #1–#18; official solutions booklet",
-   "note": "Late posts (mastermind.hk16 #10 and JAnatolGT_00 #11 and awesomeming327. #14 and ezpotd #17 Ceva ratio pigeonhole, asdf334 #12 sketch, Inconsistent #13 and OronSH #18 parallel-tangent homothety, popop614 #15) corroborate the homothety/Ceva tags. Analytic scan: no coordinate or trigonometric proof (the ratio arguments are synthetic); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2014SL.pdf): the single solution is synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2014SL.pdf): the single solution is synthetic — no analytic route there"
+   "range": "#8–#18 of 18 (all loaded); analytic scan #1–#18; official solutions booklet; official booklet",
+   "note": "Late posts (mastermind.hk16 #10 and JAnatolGT_00 #11 and awesomeming327. #14 and ezpotd #17 Ceva ratio pigeonhole, asdf334 #12 sketch, Inconsistent #13 and OronSH #18 parallel-tangent homothety, popop614 #15) corroborate the homothety/Ceva tags. Analytic scan: no coordinate or trigonometric proof (the ratio arguments are synthetic); analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2014SL.pdf): the single solution is synthetic; analytic route stays pending.; Official check: the Solution (Ceva with abc=1, parallels through M, inradius monotonicity, homothety at A giving r1+r2=r) corroborates; the Comment replaces Ceva by Desargues on the two perspective triangles. Added Projective incidence. Analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2014SL.pdf): the single solution is synthetic — no analytic route there",
+   "cite": "official Comment (Desargues)",
+   "addTags": [
+    "syn:G: Projective incidence"
+   ],
+   "official": "IMO 2014 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2014:G3": {
    "date": "2026-11-16",
-   "range": "#48–#57 of 57 (all loaded)",
-   "note": "Late posts (SimplisticFormulas #48, Rayvhs #49, eg4334 #50 and ezpotd #52 cyclic PQNO, Giant_PT #51, YaoAOPS #53, Assassino9931 #55) corroborate radical/angle tags; Andyluo #56 complex bash matches the analytic primary; #54/#57 discuss a generalisation."
+   "range": "#48–#57 of 57 (all loaded); official booklet",
+   "note": "Late posts (SimplisticFormulas #48, Rayvhs #49, eg4334 #50 and ezpotd #52 cyclic PQNO, Giant_PT #51, YaoAOPS #53, Assassino9931 #55) corroborate radical/angle tags; Andyluo #56 complex bash matches the analytic primary; #54/#57 discuss a generalisation.; Official check: the Solution (circle on diameter BO, O,K,P,Q concyclic by an angle chase with K the arc midpoint, BN, OK, PQ as radical axes of three circles) uses only methods already tagged. No new tag.",
+   "official": "IMO 2014 SL booklet (imo-official.org), Solution read"
   },
   "isl:2014:G4": {
    "date": "2026-11-16",
-   "range": "#24–#33 of 33 (all loaded)",
-   "note": "Late posts (popop614 #24, HamstPan38825 #25, IAmTheHazard #26, GeoKing #27 homothety at C, TestX01 #28 √ab inversion, Ilikeminecraft #29, jp62 #30, YaoAOPS #31, Scilyse #32, ezpotd #33) all invert at C to a fixed-line problem; corroborates existing Miquel/inversion/spiral tags."
+   "range": "#24–#33 of 33 (all loaded); official booklet",
+   "note": "Late posts (popop614 #24, HamstPan38825 #25, IAmTheHazard #26, GeoKing #27 homothety at C, TestX01 #28 √ab inversion, Ilikeminecraft #29, jp62 #30, YaoAOPS #31, Scilyse #32, ezpotd #33) all invert at C to a fixed-line problem; corroborates existing Miquel/inversion/spiral tags.; Official check: Sols 1–2 make AP, BC, MQ the pairwise radical axes of Γ, ωA, ωB, concurrent at X; Sol1 finishes with Miquel and the equi-oriented similar triangles YAB~XPC, Sol2 with XBQ~XMC and a sine-ratio hybrid step; Sol3 uses two inversions (at C, then at B1). Added Radical axes and coaxality.",
+   "cite": "official Sols 1–2 (radical centre X)",
+   "addTags": [
+    "syn:G: Radical axes and coaxality"
+   ],
+   "official": "IMO 2014 SL booklet (imo-official.org), Solutions 1–3 and Comments read"
   },
   "isl:2014:G5": {
    "date": "2026-11-16",
-   "range": "#112–#122 of 122 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (DottedCaculator #112, L13832 #113 centres on AB, AD, Mysteriouxxx #115 isogonal conjugates, OronSH #116 force-overlay inversion, kotmhn #117, Royal_mhyasd #118, Mo.11ss #119 reflection of C, Cool12345678 #120, Bridgeon #121, otwaenng #122) corroborate reflection/angle tags."
+   "range": "#112–#122 of 122 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (DottedCaculator #112, L13832 #113 centres on AB, AD, Mysteriouxxx #115 isogonal conjugates, OronSH #116 force-overlay inversion, kotmhn #117, Royal_mhyasd #118, Mo.11ss #119 reflection of C, Cool12345678 #120, Bridgeon #121, otwaenng #122) corroborate reflection/angle tags.; Official check: the Solution (circle CHSQ with centres K on AB, L on AD; bisector theorem reduces to AK/AL=KH/LH; first proof by the reflection of H, C in KL and the sine law, second by an Apollonius circle) uses only methods already tagged. No new tag.",
+   "official": "IMO 2014 SL booklet (imo-official.org), Solution (both proofs) and Comment read"
   },
   "isl:2014:G6": {
    "date": "2026-11-16",
-   "range": "#34–#43 of 43 (all loaded); analytic scan #1–#43; official solutions booklet (Solutions 1–2, three methods)",
-   "note": "Late posts (Ilikeminecraft #34, OronSH #35, GrantStar #36 AK, AM isogonal, bin_sherlo #37 and kotmhn #39 K = tangent intersection, Orzify #38, YaoAOPS #41 homothety, alupigus #42–#43) corroborate synthetic tags. Analytic scan: apotosaurus #32 mixes Cartesian coordinates (Claim 1), harmonic bundles, linearity of power and barycentrics, so it is a hybrid rather than an analytic route; m.candales #2 (already cited) and the many law-of-sines steps (#9, #21, #29, #36, #37) do not give a new pure analytic proof. Analytic route stays pending.; Official solutions checked: Solution 1 first shows synthetically that every interesting triangle EFK has ∠KEF=∠KFE=∠A (so all are directly similar), and its third method then finishes in the complex plane: K=μE+νF with fixed μ,ν, and comparison with the auxiliary similar triangles AXC, YAB gives E/Y+F/X=1, whence (E1−E2)/(F2−F1)=Y/X and |E1E2|/|F1F2|=AB/AC. Recorded as a hybrid complex-number analytic route; Solution 2 is a cosine-law length route.",
-   "cite": "official Solution 1, third method (hybrid complex)",
+   "range": "#34–#43 of 43 (all loaded); analytic scan #1–#43; official solutions booklet (Solutions 1–2, three methods); official booklet",
+   "note": "Late posts (Ilikeminecraft #34, OronSH #35, GrantStar #36 AK, AM isogonal, bin_sherlo #37 and kotmhn #39 K = tangent intersection, Orzify #38, YaoAOPS #41 homothety, alupigus #42–#43) corroborate synthetic tags. Analytic scan: apotosaurus #32 mixes Cartesian coordinates (Claim 1), harmonic bundles, linearity of power and barycentrics, so it is a hybrid rather than an analytic route; m.candales #2 (already cited) and the many law-of-sines steps (#9, #21, #29, #36, #37) do not give a new pure analytic proof. Analytic route stays pending.; Official solutions checked: Solution 1 first shows synthetically that every interesting triangle EFK has ∠KEF=∠KFE=∠A (so all are directly similar), and its third method then finishes in the complex plane: K=μE+νF with fixed μ,ν, and comparison with the auxiliary similar triangles AXC, YAB gives E/Y+F/X=1, whence (E1−E2)/(F2−F1)=Y/X and |E1E2|/|F1F2|=AB/AC. Recorded as a hybrid complex-number analytic route; Solution 2 is a cosine-law length route.; Official check: Sol1 shows all interesting triangles are similar to PQR; its second method applies Pascal to the degenerate hexagon AFFYEE and the power chain BF·AB+CE·AC=BZ·BC+CZ·BC=BC² with the cosine law; the first method (Miquel point = spiral centre) and third (complex numbers) and Sol2 corroborate. Added Projective incidence and Power of a point.",
+   "cite": "official Solution 1, third method (hybrid complex); official Sol1, second method (Pascal on AFFYEE; power chain to BC²)",
    "addTags": [
-    "ana:G: Complex numbers"
+    "ana:G: Complex numbers",
+    "syn:G: Projective incidence",
+    "syn:G: Power of a point"
    ],
    "ana_explanation": "A hybrid complex-number route (official Solution 1, third method): after the synthetic step that every interesting triangle EFK has base angles equal to A, put A at the origin; then K = μE + νF with fixed μ, ν, and writing E = ρY, F = σX, K on BC with the auxiliary points X, Y on AB, AC (triangles AXC, YAB similar to EFK) forces E/Y + F/X = 1, so (E1 − E2)/(F2 − F1) = Y/X and the lengths are in ratio AB : AC.",
    "ana_refs": "https://www.imo-official.org/problems/IMO2014SL.pdf | official Solution 1, third method (hybrid complex)",
-   "ana_status": "Reviewed — hybrid"
+   "ana_status": "Reviewed — hybrid",
+   "official": "IMO 2014 SL booklet (imo-official.org), Solutions 1–2 (all three methods) and Comments 1–2 read"
   },
   "isl:2014:G7": {
    "date": "2026-11-16",
-   "range": "#50–#60 of 60 (all loaded)",
-   "note": "Late posts (thdnder #50 and Ilikeminecraft #55 and YaoAOPS #60 cyclic BYIV, awesomeming327. #51, ohhh #52, bin_sherlo #54, OronSH #57, iStud #58, cursed_tangent1434 #59 V is the arc midpoint) corroborate synthetic tags; davbeshka26 #56 barycentric matches the analytic primary."
+   "range": "#50–#60 of 60 (all loaded); official booklet",
+   "note": "Late posts (thdnder #50 and Ilikeminecraft #55 and YaoAOPS #60 cyclic BYIV, awesomeming327. #51, ohhh #52, bin_sherlo #54, OronSH #57, iStud #58, cursed_tangent1434 #59 V is the arc midpoint) corroborate synthetic tags; davbeshka26 #56 barycentric matches the analytic primary.; Official check: Sol1 is an angle chase with parallels; Sol2 proves the lemma ∠BAV=∠CAE by the √(AB·AC) inversion at A composed with the bisector reflection (ACJ~AIB gives AB·AC=AI·AJ), then uses the homothety at A taking the excircle to the incircle, with DF a diameter of the incircle and E the excircle touch point; Comment 2 uses XUP~AIQ. Added Inversion, Similarity, Homothety and Incircle/excircle configurations.",
+   "cite": "official Sol2 (√bc inversion lemma, ACJ~AIB, excircle→incircle homothety at A)",
+   "addTags": [
+    "syn:G: Inversion",
+    "syn:G: Similarity",
+    "syn:G: Homothety",
+    "syn:G: Incircle/excircle configurations"
+   ],
+   "official": "IMO 2014 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–3 read"
   },
   "isl:2013:G1": {
    "date": "2026-11-16",
-   "range": "#222–#231 of 231 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (quannc #222, maromex #223 and cyroah1331 #226 and SomeonecoolLovesMaths #231 Miquel point P with right angles, cubres #224, pirateNT0611 #227, pimarts #230 moving points) corroborate radical/Miquel tags. Rassym #229 sketches a composition of loosely defined projective maps; not rigorous enough to tag."
+   "range": "#222–#231 of 231 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (quannc #222, maromex #223 and cyroah1331 #226 and SomeonecoolLovesMaths #231 Miquel point P with right angles, cubres #224, pirateNT0611 #227, pimarts #230 moving points) corroborate radical/Miquel tags. Rassym #229 sketches a composition of loosely defined projective maps; not rigorous enough to tag.; Official check: the Solution takes A as the radical centre of ω1, ω2, ω3, uses the power chain AL·AH=AB·AN=AW·AZ and the similar triangles AHZ~AWL to get ∠HZA=90°. Added Similarity.",
+   "cite": "official Solution (AHZ~AWL)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2013 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2013:G2": {
    "date": "2026-11-16",
-   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (mananaban #99, Eda_no11 #100, lksb #101 and UberPiggy #107 reflection over the perpendicular bisector of AT (isosceles trapezoids), iStud #103, Assassino9931 #104, cyroah1331 #105, CubeAlgo15 #108) corroborate reflection/similarity tags."
+   "range": "#99–#108 of 108 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (mananaban #99, Eda_no11 #100, lksb #101 and UberPiggy #107 reflection over the perpendicular bisector of AT (isosceles trapezoids), iStud #103, Assassino9931 #104, cyroah1331 #105, CubeAlgo15 #108) corroborate reflection/similarity tags.; Official check: Sol1 (reflection in the perpendicular bisector of AT maps M→X, N→Y) and Sol2 (congruent triangles, isosceles trapezoids) use only methods already tagged. No new tag.",
+   "official": "IMO 2013 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2013:G3": {
    "date": "2026-11-16",
-   "range": "#4–#15 of 15 (all loaded)",
-   "note": "Late posts (Generic_Username #4 flagged wrong in #5, william122 #8, bluelinfish #9, JAnatolGT_00 #11, Inconsistent #12, awesomeming327. #13, MathLuis #14, Zhaom #15) compare rhombus side lengths with angle-dependent bounds; corroborates existing metric/trigonometric tags."
+   "range": "#4–#15 of 15 (all loaded); official booklet",
+   "note": "Late posts (Generic_Username #4 flagged wrong in #5, william122 #8, bluelinfish #9, JAnatolGT_00 #11, Inconsistent #12, awesomeming327. #13, MathLuis #14, Zhaom #15) compare rhombus side lengths with angle-dependent bounds; corroborates existing metric/trigonometric tags.; Official check: the Solution (the distance sum d(X,AC)+d(X,BC)−d(X,AB) is linear along DE; rhombus distances give sinµ+sinν=sinδ+sinε; an angle comparison gives a contradiction) uses only methods already tagged. No new tag.",
+   "official": "IMO 2013 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2013:G4": {
    "date": "2026-11-16",
-   "range": "#84–#93 of 93 (all loaded)",
-   "note": "Late posts (maths_enthusiast_0001 #84, lendsarctix280 #87, eg4334 #88, ezpotd #90 Reim, Benjaminxiao #91, V0305 #92, PC75 #93) show DRCQ cyclic and angle chase; Giant_PT #89 uses an inversion at A only to obtain AQ·AC=AD·AR (power of a point); OronSH #86 is a two-line inversion-at-B sketch. Corroborates existing tags."
+   "range": "#84–#93 of 93 (all loaded); official booklet",
+   "note": "Late posts (maths_enthusiast_0001 #84, lendsarctix280 #87, eg4334 #88, ezpotd #90 Reim, Benjaminxiao #91, V0305 #92, PC75 #93) show DRCQ cyclic and angle chase; Giant_PT #89 uses an inversion at A only to obtain AQ·AC=AD·AR (power of a point); OronSH #86 is a two-line inversion-at-B sketch. Corroborates existing tags.; Official check: Sols 1–2 (tangent PB with PA·PC=PB², chains of similar triangles) corroborate; Sol3 composes central/parallel projections with the homothety at B of ratio 1/2 into a projective map of line BE fixing B, M, X, hence the identity. Added Harmonic division and cross ratios and Homothety.",
+   "cite": "official Sol3 (projective map of a line with three fixed points; homothety at B ratio 1/2)",
+   "addTags": [
+    "syn:G: Harmonic division and cross ratios",
+    "syn:G: Homothety"
+   ],
+   "official": "IMO 2013 SL booklet (imo-official.org), Solutions 1–3 and Comment read"
   },
   "isl:2013:G5": {
    "date": "2026-11-16",
-   "range": "#23–#35 of 35 (all loaded)",
-   "note": "Late posts (jj_ca888 #23, JAnatolGT_00 #27, awesomeming327. #29 and huashiliao2020 #32 parallelograms/translations, OronSH #33, DottedCaculator #34) corroborate reflection/translation tags; Davsch #24, Inconsistent #28, Leo.Euler #31 complex routes match the analytic primary."
+   "range": "#23–#35 of 35 (all loaded); official booklet",
+   "note": "Late posts (jj_ca888 #23, JAnatolGT_00 #27, awesomeming327. #29 and huashiliao2020 #32 parallelograms/translations, OronSH #33, DottedCaculator #34) corroborate reflection/translation tags; Davsch #24, Inconsistent #28, Leo.Euler #31 complex routes match the analytic primary.; Official check: Sol1 builds parallelograms CDEP, EFAQ, ABCR, gets the isosceles triangles PEQ~QAR~RCP and then PQR~FAR, so CRFP is a rhombus and the diagonals are the perpendicular bisectors of PQR; Sol2 (rotation of side vectors, translated circumcentre triangle) and Sol3 (complex numbers) corroborate. Added Similarity.",
+   "cite": "official Sol1 (PEQ~QAR~RCP, PQR~FAR)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2013 SL booklet (imo-official.org), Solutions 1–3 read"
   },
   "isl:2013:G6": {
    "date": "2026-11-16",
-   "range": "#91–#101 of 101 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (bin_sherlo #91, torch #93, LHE96 #94, Royal_mhyasd #96, der_Englander #97, otwaenng #98/#101 Mandart circle, Math1lover #100) use excentres and the circumcentre of the extouch triangle; KnowingAnt #95 (15 thanks) is a long algebraic bash consistent with the analytic tags. Corroborates existing tags."
+   "range": "#91–#101 of 101 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (bin_sherlo #91, torch #93, LHE96 #94, Royal_mhyasd #96, der_Englander #97, otwaenng #98/#101 Mandart circle, Math1lover #100) use excentres and the circumcentre of the extouch triangle; KnowingAnt #95 (15 thanks) is a long algebraic bash consistent with the analytic tags. Corroborates existing tags.; Official check: Sol1 (arc midpoint A0 with A0BC1≅A0CB1, A,A0,B1,C1 concyclic, angle chase at B0=Q) and Sol2 (SSA congruence lemma and angle sums) use only methods already tagged. No new tag.",
+   "official": "IMO 2013 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–2 read"
   },
   "isl:2012:G1": {
    "date": "2026-11-16",

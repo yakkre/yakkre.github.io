@@ -5944,6 +5944,118 @@
    ],
    "explanationAppend": "The chain structure is pinned down by counting values in windows, and the finish takes a maximal preimage.",
    "cite": "official solution; #4 (meql)"
+  },
+  "usatst:2021:1": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2021.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, construction, prime proof and remark; AoPS https://artofproblemsolving.com/community/c6h2470467 #1–#72 (66 loaded; #5, #14, #24, #35, #42, #54 not shown) indexed, full text #11, #15, #32, #57, #59, #67, #68",
+   "note": "USA TST top-up: the official answer builds s = (w+x)(y+z) with a, b, c, d the four cross products; #11, #15 and #57 give other explicit families. #15, #57 and #67 (complete) prove the prime case by working mod p with inverses (ab ≡ cd, then p | (a+c)(b+c), or all squares congruent). #59 is a sketch. The official even-polynomial remark is not tagged (cap). Construction and the s <= 40 classification checked by brute force.",
+   "addTags": [
+    "N: NT constructions",
+    "N: Modular arithmetic"
+   ],
+   "explanationAppend": "Composite s come from an explicit factorised choice, and the prime case is a mod-p manipulation with inverses.",
+   "cite": "official construction; #15; #57; #67",
+   "official": "sols-TST-IMO-2021.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2021:2": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2021.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, Solutions 1–2; AoPS https://artofproblemsolving.com/community/c6h2470472 #1–#18 (16 loaded; #3, #12 not shown) indexed, full text #2, #7, #11, #13, #16 (start), #18",
+   "note": "USA TST top-up: official Solution 2 puts the common point on the radical axis of every pair of the circles (power of a point plus Pascal); #11 (Kei0923, complete) takes radical centres and finishes with an equality of cross ratios of two parallel families. #7 (yayups, complete) uses barycentric coordinates in which the power differences are linear, then a projective map C -> X -> D. #13 and #18 match the existing linear-power and trig routes; #16 (conic degree count in CP^2) is not tagged. Analytic status unchanged (Reviewed — hybrid).",
+   "addTags": [
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Harmonic division and cross ratios",
+    "ana:G: Barycentric coordinates"
+   ],
+   "explanationAppend": "Official and forum routes add a common radical axis, a cross-ratio finish and a barycentric computation.",
+   "cite": "official Solution 2; #11 (Kei0923); #7 (yayups)",
+   "official": "sols-TST-IMO-2021.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2021:3": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2021.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, solution and remark; AoPS https://artofproblemsolving.com/community/c6h2470478 #1–#21 (all 21 read across the 2026-11-18 run and this one) indexed with a keyword scan, full text #2, #3, #4, #6, #20, #21",
+   "note": "USA TST top-up: after concavity gives continuity and a unique supergradient, the official finish shows f satisfies the third-difference recurrence on each arithmetic progression, so it is quadratic there; #2 inducts f(nr) = n^2 f(r) from the symmetric-difference identity. #4 (complete) fits the quadratic through three points and uses density of Z + πZ, and #21 subtracts the Lagrange interpolating quadratic.",
+   "addTags": [
+    "A: Real polynomials",
+    "A: Sequences and recurrences"
+   ],
+   "explanationAppend": "The finish identifies f with an interpolating quadratic, via a third-difference recurrence on arithmetic progressions.",
+   "cite": "official solution; #4; #21; #2",
+   "official": "sols-TST-IMO-2021.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2020:1": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2020.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, bound and construction; AoPS https://artofproblemsolving.com/community/c6h1970137 #1–#47 (43 loaded; #7, #12, #28, #30 not shown) indexed, full text #4, #6, #9, #25, #32, #42",
+   "note": "USA TST top-up: the official bound proves b_n <= n(n+1)/2 by induction because b_n < n(n+1)/2 + 1 and b_n is an integer (also #6, #9); the maximal admissible sequence is the triangular numbers (official greedy bound; #32 YaoAOPS takes the largest choice at every step). #4 (jeff10) is a complete rounding argument. #25 and #42 are sketches and not counted. Greedy = triangular checked numerically.",
+   "addTags": [
+    "N: Size and integer rigidity",
+    "C: Extremal arguments"
+   ],
+   "explanationAppend": "The upper bound comes from integrality squeezing b_n onto the triangular numbers, which are the maximal sequence.",
+   "cite": "official solution; #9; #32 (YaoAOPS); #4 (jeff10)",
+   "official": "sols-TST-IMO-2020.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2020:2": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2020.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, Solutions 1–4; AoPS https://artofproblemsolving.com/community/c6h1970138 #1–#78 (#1–#46 and #64–#78 read in the 2026-11-18 run; 30 reloaded this run) indexed, full text #2, #5, #10, #64, #72, #78",
+   "note": "USA TST top-up: #5 (TheUltimate123) and #64 (complete) invert at A, use a homothety to make AB, CD, EF concurrent and finish with Brokard (the line XY is the polar of AB ∩ CD). #10 (The_Turtle, complete) sends two points to the circular points by a projective map and finishes with Desargues and Pascal. #72 (KevinYang2.71) is a complete barycentric computation and #78 (mudkipp) a complex computation showing T lies on the polar of AB ∩ CD (equation and the collinearity checked numerically in 200 configurations). Analytic status unchanged (Reviewed — hybrid).",
+   "addTags": [
+    "syn:G: Poles and polars",
+    "syn:G: Homothety",
+    "syn:G: Projective incidence",
+    "ana:G: Barycentric coordinates",
+    "ana:G: Complex numbers"
+   ],
+   "explanationAppend": "Forum proofs add Brokard polars after a homothety, a Desargues–Pascal route, and barycentric and complex computations.",
+   "cite": "#5 (TheUltimate123); #64; #10 (The_Turtle); #72 (KevinYang2.71); #78 (mudkipp)",
+   "official": "sols-TST-IMO-2020.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2020:3": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2020.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, both directions; AoPS https://artofproblemsolving.com/community/c6h1970140 #1–#25 (22 loaded; #7, #10, #19 not shown) indexed, full text of the necessity parts of #2, #3, #18, #22",
+   "note": "USA TST top-up: every sufficiency proof (official, #3, #18, #24) is an explicit staged wall-building strategy with budgets, enclosing the region faster than it can spread. #2 (MathStudent2002) gives a complete graph-diameter necessity proof by strong induction; it and the official laser injection are not tagged (cap).",
+   "addTags": [
+    "C: Algorithms and constructions"
+   ],
+   "explanationAppend": "The winning side follows an explicit staged wall-building strategy.",
+   "cite": "official solution; #3; #18",
+   "official": "sols-TST-IMO-2020.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2020:4": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2020.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read; AoPS https://artofproblemsolving.com/community/c6h1994661 #1–#42 (38 loaded; #8, #15, #24, #39 not shown) indexed, full text #2, #5, #27, #38",
+   "note": "USA TST top-up: #2 (william122) and #5 (MarkBcc168) take a maximum clique and show a neighbour would extend it, reducing to cliques or triangle-free components of degree at most 2; #38 (numbertheory97) uses the potential (largest clique size, number of largest cliques). Every solution ends by classifying the stable graphs as unions of cliques, odd cycles and isolated vertices. #27 is a question, not counted.",
+   "addTags": [
+    "C: Extremal arguments",
+    "C: Equality and structural classification"
+   ],
+   "explanationAppend": "Forum proofs look at a maximum clique, and every proof ends by classifying the stable components.",
+   "cite": "#2 (william122); #5 (MarkBcc168); #38 (numbertheory97); official solution",
+   "official": "sols-TST-IMO-2020.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2020:5": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2020.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, construction and necessity; AoPS https://artofproblemsolving.com/community/c6h1994655 #1–#36 (32 loaded; #18, #23, #31, #34 not shown) indexed, full text #2, #4, #14",
+   "note": "USA TST top-up: the official answer and every forum proof (#2 MarkBcc168, #4 IndoMathXdZ, #14 squareman, all complete) study the period of 0 under x -> P(x) modulo prime powers, combine prime powers by lcm and CRT, and show cycle lengths modulo p^e are p-smooth. Induction on the exponent is not tagged (cap).",
+   "addTags": [
+    "N: Orders and modular periodicity"
+   ],
+   "explanationAppend": "The answer is governed by the period of the iteration modulo each prime power.",
+   "cite": "official solution; #2 (MarkBcc168); #14 (squareman)",
+   "official": "sols-TST-IMO-2020.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "usatst:2020:6": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2020.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, Solutions 1–2 and the cited complex proof; AoPS https://artofproblemsolving.com/community/c6h1994645 #1–#39 (35 loaded; #3, #5, #10, #17 not shown) indexed with a keyword scan of long posts, full text #8, #9, #28, #34, #35",
+   "note": "USA TST top-up: official Solution 1, #9 (TheUltimate123) and #28 (GrantStar) invert at P (equal powers PP_i·PR_i) and use Reim to get parallels before a homothety; official Solution 2 (Beluhov) shows a fixed ratio of powers to two circles is a coaxal circle and finishes with similar triangles; #34 (popop614) and #8 (Mindstormer) use Poncelet coaxality. Q_i concyclic checked numerically along chains. Analytic route already Reviewed (complex #24); #35 not cited.",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity",
+    "syn:G: Power of a point",
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Similarity"
+   ],
+   "explanationAppend": "Official and forum routes add Reim angle chases, powers and power ratios, a coaxal-circle locus and similar triangles.",
+   "cite": "official Solutions 1–2; #9 (TheUltimate123); #34 (popop614); #28 (GrantStar)",
+   "official": "sols-TST-IMO-2020.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
   }
  }
 }

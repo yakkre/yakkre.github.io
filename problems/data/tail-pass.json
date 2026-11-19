@@ -3514,9 +3514,14 @@
   },
   "isl:1990:9": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#4 of 4 (whole thread); analytic scan #1–#4",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law; analytic route stays pending.; The QuattoMaster 6000 #2 (area ratio with Menelaus), sunken rock #3 (Cristea transversal theorem) and lym #4 (area/ratio chain) are length computations like the Compendium solution already flagged; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#4 of 4 (whole thread); analytic scan #1–#4; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law; analytic route stays pending.; The QuattoMaster 6000 #2 (area ratio with Menelaus), sunken rock #3 (Cristea transversal theorem) and lym #4 (area/ratio chain) are length computations like the Compendium solution already flagged; analytic route stays pending.; Official check: the Compendium solution splits a triangle at the incentre into two pieces and compares areas, giving (a − b + c)c1 = bc and (a + b − c)b1 = bc; the area condition gives b1c1 = bc, so a² − (b − c)² = bc and the cosine law gives the 60° angle. Added Area arguments (the area split at the incentre). The analytic route stays pending, as decided on 2026-11-16.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a full side-length computation (area ratios give (a−b+c)c1=bc, (a+b−c)b1=bc and b1c1=bc, so a²−(b−c)²=bc and the cosine law gives cos A=1/2). Flagged for the user as a possible analytic (trigonometric/metric) route; not adopted since the only trig step is the final cosine law — no analytic route there",
+   "cite": "Compendium solution (area split at the incentre)",
+   "addTags": [
+    "syn:G: Area arguments"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1990 shortlist, problem 9 solution read (confirming the 2026-11-16 read)"
   },
   "isl:1993:ISA1": {
    "date": "2026-11-16",
@@ -6327,18 +6332,26 @@
   },
   "isl:1990:10": {
    "date": "2026-11-17",
-   "range": "#1–#2 of 2 (all loaded)",
-   "note": "Only yetti #2 (complete) computes the cut ellipse's axes and the smaller volume by similar cones and areas; corroborates existing tags."
+   "range": "#1–#2 of 2 (all loaded); official booklet",
+   "note": "Only yetti #2 (complete) computes the cut ellipse's axes and the smaller volume by similar cones and areas; corroborates existing tags.; Official check: the Compendium solution applies Menelaus in two triangles of the axial section to locate the far end of the major axis and the ellipse centre, then uses the radial projection from the apex (a homothety of ratio 2/3) to get the minor axis from a chord of the base, and finishes with the cone-volume ratio 1/(3√3) (checked by Monte Carlo). Added Ceva, Menelaus and ratio chains and Homothety. Analytic status stays Reviewed.",
+   "cite": "Compendium solution (Menelaus in the axial section; homothety from the apex)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains",
+    "syn:G: Homothety"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1990 shortlist, problem 10 solution read"
   },
   "isl:1990:11": {
    "date": "2026-11-17",
-   "range": "#5–#16 of 16 (all loaded; #10, #11 absent)",
-   "note": "Posts (Altheman #5, sayantanchakraborty #6 sine rule, jayme #7/#13 and Moubinool #14 links, AlastorMoody #8 and SemsPolat #12 and AwesomeYRY #15 and iflugkiwmu #16 similar triangles ECG ~ MBD and ECF ~ MAD, AIME12345 #9 ratio lemma) get EG/EF=t/(1−t) (IMO 1990/1); corroborates existing tags."
+   "range": "#5–#16 of 16 (all loaded; #10, #11 absent); official booklet",
+   "note": "Posts (Altheman #5, sayantanchakraborty #6 sine rule, jayme #7/#13 and Moubinool #14 links, AlastorMoody #8 and SemsPolat #12 and AwesomeYRY #15 and iflugkiwmu #16 similar triangles ECG ~ MBD and ECF ~ MAD, AIME12345 #9 ratio lemma) get EG/EF=t/(1−t) (IMO 1990/1); corroborates existing tags.; Official check: the Compendium solution uses inscribed angles and the tangent at E to get two pairs of similar triangles, CEF ~ AMD and CEG ~ BMD, and divides the two proportions to get GE/EF = λ/(1 − λ). Uses only methods already tagged. No new tag; analytic status unchanged.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1990 shortlist, problem 11 solution read"
   },
   "isl:1990:12": {
    "date": "2026-11-17",
-   "range": "#2–#11 of 11 (all loaded)",
-   "note": "Posts (grobber #2, jgnr #3, dgreenb801 #4, sayantanchakraborty #5 sine rule, WolfusA #6/#8/#10 and adamov1 #7/#9 debating the WLOG, Keith50 #11) compare lengths along FG and DE to force CA=CB; corroborates existing tags."
+   "range": "#2–#11 of 11 (all loaded); official booklet",
+   "note": "Posts (grobber #2, jgnr #3, dgreenb801 #4, sayantanchakraborty #5 sine rule, WolfusA #6/#8/#10 and adamov1 #7/#9 debating the WLOG, Keith50 #11) compare lengths along FG and DE to force CA=CB; corroborates existing tags.; Official check: the Compendium solution uses the bisector theorem to get the distances of the two bisector feet from the parallel line, writes each cut segment as that distance over the sine of a half-angle, and compares using monotonicity, so a > b and a < b are both impossible. Uses only methods already tagged (metric on the synthetic route, trig on the analytic one). No new tag; analytic status unchanged.",
+   "official": "IMO Compendium (1959–2004), solutions to the 1990 shortlist, problem 12 solution read"
   },
   "isl:1990:13": {
    "date": "2026-11-17",

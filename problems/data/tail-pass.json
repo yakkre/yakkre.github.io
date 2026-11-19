@@ -3349,51 +3349,67 @@
   },
   "isl:2000:G1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #12–#24 of 24 (all loaded); analytic scan #1–#24",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 20 is synthetic; analytic route stays pending.; Late posts (Mahdi_Mashayekhi #12, awesomeming327. #13, awesomehuman #14 directed angles, asdf334 #15 self-flagged unsure, JAnatolGT_00 #17, ezpotd #18 tangent points, Tau_6.28 #24 inversion at Y; batzorig.b #20 one-line hint) corroborate existing tags. Analytic scan: no analytic proof; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 20 is synthetic — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #12–#24 of 24 (all loaded); analytic scan #1–#24; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 20 is synthetic; analytic route stays pending.; Late posts (Mahdi_Mashayekhi #12, awesomeming327. #13, awesomehuman #14 directed angles, asdf334 #15 self-flagged unsure, JAnatolGT_00 #17, ezpotd #18 tangent points, Tau_6.28 #24 inversion at Y; batzorig.b #20 one-line hint) corroborate existing tags. Analytic scan: no analytic proof; analytic route stays pending.; Official check: the Compendium solution takes the second intersections P, Q, R, S of AC, AD, BC, BD with the given circles, gets DC ∥ RP from the tangency, and uses AC·CP = XC·CY = BC·CQ (C lies on the radical axis XY) to make ABQP cyclic; an angle chase then shows PQ and RS are the common tangents. Added Power of a point (the equal products and their converse); the analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 20 is synthetic — no analytic route there",
+   "cite": "Compendium solution (equal power products make ABQP cyclic)",
+   "addTags": [
+    "syn:G: Power of a point"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 20 solution read"
   },
   "isl:2000:G2": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #121–#130 of 130 (all loaded); middle skimmed by thanks; analytic scan #1–#130",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a power-of-a-point argument; analytic route stays pending.; Late posts (Math_AlexG #121, mpcnotnpc #122 E is the reflection of M, Karaoglan #123, reyaansh_agrawal #124 MN bisects AB via the radical axis, NicoN9 #125, mathMagicOPS #126, littlefox_amc #127 homothety, TheOneAndOnlyOFT #128 inversion at M, godchunguus #129, RadiantMeteor #130) corroborate existing tags. Analytic scan: only Vrangr #36 matches (directed angles, synthetic); analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a power-of-a-point argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #121–#130 of 130 (all loaded); middle skimmed by thanks; analytic scan #1–#130; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a power-of-a-point argument; analytic route stays pending.; Late posts (Math_AlexG #121, mpcnotnpc #122 E is the reflection of M, Karaoglan #123, reyaansh_agrawal #124 MN bisects AB via the radical axis, NicoN9 #125, mathMagicOPS #126, littlefox_amc #127 homothety, TheOneAndOnlyOFT #128 inversion at M, godchunguus #129, RadiantMeteor #130) corroborate existing tags. Analytic scan: only Vrangr #36 matches (directed angles, synthetic); analytic route stays pending.; Official check: the Compendium solution gets KA² = KM·KN = KB², so MN bisects AB, and tangent–chord angles make triangles EAB and MAB congruent, so E is the reflection of M in AB. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a power-of-a-point argument — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 21 solution read"
   },
   "isl:2000:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #8–#19 of 19 (all loaded); analytic scan #1–#19",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 26 is a combinatorial-geometric reformulation; analytic route stays pending.; Late posts (v_Enhance #9, Vrangr #12, mathleticguyyy #14 with awesomeming327. #15 repost, endless_abyss #16, Likeminded2017 #17 sketch) give the answer 3 by angle-sector arguments around each shot gangster; corroborates existing tags. Analytic scan: mathleticguyyy #14 uses polar angles only to describe sectors; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 26 is a combinatorial-geometric reformulation — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #8–#19 of 19 (all loaded); analytic scan #1–#19; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 26 is a combinatorial-geometric reformulation; analytic route stays pending.; Late posts (v_Enhance #9, Vrangr #12, mathleticguyyy #14 with awesomeming327. #15 repost, endless_abyss #16, Likeminded2017 #17 sketch) give the answer 3 by angle-sector arguments around each shot gangster; corroborates existing tags. Analytic scan: mathleticguyyy #14 uses polar angles only to describe sectors; analytic route stays pending.; Official check: the Compendium solution shows each point is nearest to at most five others (a 60° angle argument), rules out exactly two marked points by an angle sum in the quadrilateral ABB1A1, and gives an example with three. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 26 is a combinatorial-geometric reformulation — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 26 solution read"
   },
   "isl:1999:G1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #13–#24 of 24 (all loaded); analytic scan #1–#24",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a quadrilateral-perimeter lemma; analytic route stays pending.; Late posts (Pathological #14, awesomeming327. #15, lethan3 #17, mathmax12 #18, popop614 #19 and ezpotd #21 medial triangle, lnzhonglp #20 trapezoid lemma, Maximilian113 #22, Tau_6.28 #24) corroborate existing tags. Analytic scan: Pathological #14 (read in full) uses barycentric coordinates only as notation for a triangle-inequality argument; Zhero #9, orl #7 and Maximilian113 #22 reduce special cases to sin A + sin B + sin C bounds inside synthetic proofs; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 7 is a quadrilateral-perimeter lemma — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #13–#24 of 24 (all loaded); analytic scan #1–#24; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a quadrilateral-perimeter lemma; analytic route stays pending.; Late posts (Pathological #14, awesomeming327. #15, lethan3 #17, mathmax12 #18, popop614 #19 and ezpotd #21 medial triangle, lnzhonglp #20 trapezoid lemma, Maximilian113 #22, Tau_6.28 #24) corroborate existing tags. Analytic scan: Pathological #14 (read in full) uses barycentric coordinates only as notation for a triangle-inequality argument; Zhero #9, orl #7 and Maximilian113 #22 reduce special cases to sin A + sin B + sin C bounds inside synthetic proofs; analytic route stays pending.; Official check: the Compendium solution proves MA + MB < AD + DC + CB for M inside a convex quadrilateral by the triangle inequality, notes M lies in two of the three quadrilaterals cut off by the midpoints, and adds. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 7 is a quadrilateral-perimeter lemma — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 1999 shortlist, problem 7 solution read"
   },
   "isl:1999:G2": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #6–#16 of 16 (whole thread); analytic scan #1–#16",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 8 inverts and counts separators case by case; analytic route stays pending.; Posts (math154 #6 stereographic projection, MathPanda1 #7, viperstrike #10, biomathematics #11, seoneo #12 Möbius map in complex coordinates, awesomehuman #13, awesomeming327. #14 inversion, ezpotd #15) corroborate existing tags. Analytic scan: orl #4 quotes official Solution 2 (determinant/coordinate sign count: separators counted by sign agreements in S=(a1,−a2,a3,−a4,a5) with a1−a2+a3−a4+a5=0), but the post stops at the four polar-coordinate determinant inequalities without finishing the contradiction, so it is incomplete as written and not adopted; analytic route stays pending (candidate to verify against the original booklet).",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 8 inverts and counts separators case by case — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #6–#16 of 16 (whole thread); analytic scan #1–#16; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 8 inverts and counts separators case by case; analytic route stays pending.; Posts (math154 #6 stereographic projection, MathPanda1 #7, viperstrike #10, biomathematics #11, seoneo #12 Möbius map in complex coordinates, awesomehuman #13, awesomeming327. #14 inversion, ezpotd #15) corroborate existing tags. Analytic scan: orl #4 quotes official Solution 2 (determinant/coordinate sign count: separators counted by sign agreements in S=(a1,−a2,a3,−a4,a5) with a1−a2+a3−a4+a5=0), but the post stops at the four polar-coordinate determinant inequalities without finishing the contradiction, so it is incomplete as written and not adopted; analytic route stays pending (candidate to verify against the original booklet).; Official check: the Compendium solution inverts at the fifth point, so separators become lines through two images or circles through three, and splits on whether the convex hull of the four images is a quadrilateral or a triangle. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 8 inverts and counts separators case by case — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 1999 shortlist, problem 8 solution read"
   },
   "isl:1999:G3": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #11–#20 of 20 (all loaded); analytic scan #1–#20",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 9 is a symmetry/centroid argument; analytic route stays pending.; Late posts (v_Enhance #12 centroid/sphere, awesomeming327. #13, asdf334 #14, ezpotd #15) classify completely symmetric sets via the centroid and planes of symmetry; corroborates existing tags. Analytic scan: vectors/coordinates appear only as the centroid average; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a symmetry/centroid argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #11–#20 of 20 (all loaded); analytic scan #1–#20; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 9 is a symmetry/centroid argument; analytic route stays pending.; Late posts (v_Enhance #12 centroid/sphere, awesomeming327. #13, asdf334 #14, ezpotd #15) classify completely symmetric sets via the centroid and planes of symmetry; corroborates existing tags. Analytic scan: vectors/coordinates appear only as the centroid average; analytic route stays pending.; Official check: the Compendium solution notes the centroid is fixed by every bisector reflection, so the set lies on a sphere; the planar case gives regular polygons and the spatial case regular polyhedra, of which the cube, dodecahedron and icosahedron fail. Uses only methods already tagged (the centroid invariance has no separate label); the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 9 is a symmetry/centroid argument — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 1999 shortlist, problem 9 solution read"
   },
   "isl:1999:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #2–#11 of 11 (whole thread); analytic scan #1–#11",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 13 builds the parallelogram PQRS from similar triangles; analytic route stays pending.; Posts (sprmnt21 #3, orl #4 official solution: similar-triangle construction of parallelogram PQRS, The QuattoMaster 6000 #5, alkjash #6, GoldenFrog1618 #7, polya78 #8 perpendicular bisector reflection, JuanOrtiz #9, Anaskudsi #10 inversion at M, awesomeming327. #11) corroborate existing tags. Analytic scan: no analytic proof (Anaskudsi #10 is an inversion length computation); analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 13 builds the parallelogram PQRS from similar triangles — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #2–#11 of 11 (whole thread); analytic scan #1–#11; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 13 builds the parallelogram PQRS from similar triangles; analytic route stays pending.; Posts (sprmnt21 #3, orl #4 official solution: similar-triangle construction of parallelogram PQRS, The QuattoMaster 6000 #5, alkjash #6, GoldenFrog1618 #7, polya78 #8 perpendicular bisector reflection, JuanOrtiz #9, Anaskudsi #10 inversion at M, awesomeming327. #11) corroborate existing tags. Analytic scan: no analytic proof (Anaskudsi #10 is an inversion length computation); analytic route stays pending.; Official check: the Compendium solution builds a convex quadrilateral PQRS with an interior point T from triangles similar to AMB, AMD and CMD, shows by angle sums that PQRS is a parallelogram, and reads off the two products. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 13 builds the parallelogram PQRS from similar triangles — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 1999 shortlist, problem 13 solution read"
   },
   "isl:1999:G8": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #16–#25 of 25 (all loaded); analytic scan #1–#25",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 uses the incenter–arc-midpoint lemma and similarity; analytic route stays pending.; Late posts (math_pi_rate #16 harmonic CM1M2T, TheDarkPrince #17, JAnatolGT_00 #18, awesomeming327. #19, MathLuis #20 incenter–excenter lemma, Om245 #22, bin_sherlo #23 √(ab) inversion, YaoAOPS #24, ezpotd #25) identify the fixed point as the C-mixtilinear touch point; orl #4 official solution is synthetic. Analytic scan: HoRI_DA_GRe8 #21 gives a short complex bash with T = a²(b+c)/(c−2a−b), but a numeric check (A,B,C at angles 1.9, 4.0, 5.6) shows |T| ≠ 1 for every square-root sign choice while the true fixed point is on the circle, so the stated incenter/sign conventions are wrong; not adopted. Analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 uses the incenter–arc-midpoint lemma and similarity — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #16–#25 of 25 (all loaded); analytic scan #1–#25; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 uses the incenter–arc-midpoint lemma and similarity; analytic route stays pending.; Late posts (math_pi_rate #16 harmonic CM1M2T, TheDarkPrince #17, JAnatolGT_00 #18, awesomeming327. #19, MathLuis #20 incenter–excenter lemma, Om245 #22, bin_sherlo #23 √(ab) inversion, YaoAOPS #24, ezpotd #25) identify the fixed point as the C-mixtilinear touch point; orl #4 official solution is synthetic. Analytic scan: HoRI_DA_GRe8 #21 gives a short complex bash with T = a²(b+c)/(c−2a−b), but a numeric check (A,B,C at angles 1.9, 4.0, 5.6) shows |T| ≠ 1 for every square-root sign choice while the true fixed point is on the circle, so the stated incenter/sign conventions are wrong; not adopted. Analytic route stays pending.; Official check: the Compendium solution uses the incenter–arc-midpoint lemma, takes T on the circle XO1O2 and Ω, proves O1NT ~ O2MT, and gets MP·MT = NP·NT, so triangles MPT and NPT have equal areas and TP bisects MN, hence passes through I. Added Area arguments (the inversion at C in the remark is only a sketch); the analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 uses the incenter–arc-midpoint lemma and similarity — no analytic route there",
+   "cite": "Compendium solution (equal areas give that TP bisects MN)",
+   "addTags": [
+    "syn:G: Area arguments"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1999 shortlist, problem 14 solution read"
   },
   "isl:1997:P7": {
    "date": "2026-11-16",
@@ -5022,28 +5038,38 @@
   },
   "isl:2000:G3": {
    "date": "2026-11-17",
-   "range": "#54–#63 of 63 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (BS2012 #54, lunasgraph_d #56 and megahertz13 #62 inconic with foci O, H plus Brianchon, ezpotd #55, quantam13 #57, zhoujef000 #58, Tau_6.28 #59 reflections of H, cosinesine #60 complex numbers, Half_Blood_Prince #61, PK10 #63) take D=OH_A∩BC etc. so OD+DH=R and prove concurrency by Ceva or Brianchon; corroborates existing tags and the hybrid analytic status."
+   "range": "#54–#63 of 63 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (BS2012 #54, lunasgraph_d #56 and megahertz13 #62 inconic with foci O, H plus Brianchon, ezpotd #55, quantam13 #57, zhoujef000 #58, Tau_6.28 #59 reflections of H, cosinesine #60 complex numbers, Half_Blood_Prince #61, PK10 #63) take D=OH_A∩BC etc. so OD+DH=R and prove concurrency by Ceva or Brianchon; corroborates existing tags and the hybrid analytic status.; Official check: the Compendium solution reflects H in BC to L on the circumcircle and takes D on OL, so OD + DH = OL is the same for all three sides; with D′ on AO, BD = CD′, and Ceva for the cevians through O gives the concurrency. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 22 solution read"
   },
   "isl:2000:G4": {
    "date": "2026-11-17",
-   "range": "#3–#14 of 14 (all loaded; #6, #10 absent)",
-   "note": "Posts (gorrina #3, v_Enhance #4 coordinates A_i=(R cos2θ_i, R sin2θ_i), ktthree #5 question, AwesomeYRY #7 Ptolemy inequality, DottedCaculator #8, awesomeming327. #9, starchan #11 inversion-like choice of X, HamstPan38825 #12, endless_abyss #13, YaoAOPS #14 determinants) prove both directions via Ptolemy and the determinant identity; corroborates existing tags."
+   "range": "#3–#14 of 14 (all loaded; #6, #10 absent); official booklet",
+   "note": "Posts (gorrina #3, v_Enhance #4 coordinates A_i=(R cos2θ_i, R sin2θ_i), ktthree #5 question, AwesomeYRY #7 Ptolemy inequality, DottedCaculator #8, awesomeming327. #9, starchan #11 inversion-like choice of X, HamstPan38825 #12, endless_abyss #13, YaoAOPS #14 determinants) prove both directions via Ptolemy and the determinant identity; corroborates existing tags.; Official check: the Compendium solution proves both directions with Ptolemy's theorem, choosing the pairs (bi, ci) explicitly from distances to A1 and A2. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 23 solution read"
   },
   "isl:2000:G5": {
    "date": "2026-11-17",
-   "range": "#5–#14 of 14 (all loaded)",
-   "note": "Posts (WL0410 #5 no trig, tastymath75025 #6 lengths, zuss77 #7, awesomeming327. #8, Rijul saini #9 and smileapple #12 barycentric, Amiralizakeri2007 #10, Lemmas #11, batzorig.b #13, ezpotd #14 trig) show BQ and AS meet on the circumcircle via symmedians and similar triangles; corroborates existing tags."
+   "range": "#5–#14 of 14 (all loaded); official booklet",
+   "note": "Posts (WL0410 #5 no trig, tastymath75025 #6 lengths, zuss77 #7, awesomeming327. #8, Rijul saini #9 and smileapple #12 barycentric, Amiralizakeri2007 #10, Lemmas #11, batzorig.b #13, ezpotd #14 trig) show BQ and AS meet on the circumcircle via symmedians and similar triangles; corroborates existing tags.; Official check: the Compendium solution gets BP/PC = S(ABT)/S(ACT) = c²/b² from an area ratio and the law of sines, computes cot∠ABQ = (a² + b² + 3c²)/(4S) = 2cot α + 2cot β + cot γ (symmetric in A, B, so the angles are equal), and maximises with AM-GM in p = cot α, q = cot β, giving cot∠ABQ ≥ √7. Added Area arguments and standard algebraic inequalities on the analytic route (formula and ratio checked numerically); analytic status unchanged.",
+   "cite": "Compendium solution (area ratio for BP/PC; AM-GM for the maximum)",
+   "addTags": [
+    "ana:G: Area arguments",
+    "ana:A: Inequalities—standard algebraic arguments"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 24 solution read"
   },
   "isl:2000:G6": {
    "date": "2026-11-17",
-   "range": "#19–#31 of 31 (all loaded; #24, #26, #27 absent); middle skimmed by thanks",
-   "note": "Late posts (JAnatolGT_00 #19, awesomeming327. #20, popop614 #21 spiral similarity, OronSH #22 and TestX01 #23/#25 and InterLoop #28 Clawson–Schmidt conjugate, Nari_Tom #29 gliding principle, Mr.Sharkman #30, shendrew7 #31 complex numbers) identify Y via the spiral centre of (AXD) and (BXC); corroborates existing tags."
+   "range": "#19–#31 of 31 (all loaded; #24, #26, #27 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (JAnatolGT_00 #19, awesomeming327. #20, popop614 #21 spiral similarity, OronSH #22 and TestX01 #23/#25 and InterLoop #28 Clawson–Schmidt conjugate, Nari_Tom #29 gliding principle, Mr.Sharkman #30, shendrew7 #31 complex numbers) identify Y via the spiral centre of (AXD) and (BXC); corroborates existing tags.; Official check: the Compendium solution places Y′, Z′ on the perpendicular bisector of AB with AY′Z′ directly similar to ADX, gets the spiral pair ADY′ ~ AXZ′, deduces CY′ = DY′ so Y′ = Y, and reads off ∠AYB = 2∠ADX. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 25 solution read"
   },
   "isl:2000:G8": {
    "date": "2026-11-17",
-   "range": "#48–#58 of 58 (all loaded; #53 absent); middle skimmed by thanks",
-   "note": "Late posts (OronSH #48, BlizzardWizard #49 and arnov67 #51 and shendrew7 #52 and der_Englander #55 and TThB0501 #57 and pl246631 #58 complex numbers with the incircle as unit circle, Natrium #50 code, bin_sherlo #54, ezpotd #56 synthetic) show the reflected lines form a triangle with vertices on the incircle; the complex proofs match the recorded analytic route. Corroborates existing tags."
+   "range": "#48–#58 of 58 (all loaded; #53 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (OronSH #48, BlizzardWizard #49 and arnov67 #51 and shendrew7 #52 and der_Englander #55 and TThB0501 #57 and pl246631 #58 complex numbers with the incircle as unit circle, Natrium #50 code, bin_sherlo #54, ezpotd #56 synthetic) show the reflected lines form a triangle with vertices on the incircle; the complex proofs match the recorded analytic route. Corroborates existing tags.; Official check: the Compendium solution reflects the touch points in the angle bisectors to get the triangle, reflects K1 and K3 in L1L3, and finishes with the cyclic quadrilaterals L1XA3I, A1K1XA3 and A1K3K1A3 and an angle chase. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2000 shortlist, problem 27 solution read"
   },
   "isl:2000:N1": {
    "date": "2026-11-17",
@@ -5087,13 +5113,24 @@
   },
   "isl:1999:G5": {
    "date": "2026-11-17",
-   "range": "#8–#17 of 17 (all loaded)",
-   "note": "Late posts (JuanOrtiz #8, JAnatolGT_00 #9, lrjr24 #10, ike.chen #11, awesomeming327. #12, asdf334 #13, cj13609517288 #14, Aiden-1089 #15, eg4334 #16, ezpotd #17) invert in the incircle, which fixes the orthogonal circles, so A', B', C' are midpoints of the intouch triangle and the radius is half the inradius; corroborates existing tags."
+   "range": "#8–#17 of 17 (all loaded); official booklet",
+   "note": "Late posts (JuanOrtiz #8, JAnatolGT_00 #9, lrjr24 #10, ike.chen #11, awesomeming327. #12, asdf334 #13, cj13609517288 #14, Aiden-1089 #15, eg4334 #16, ezpotd #17) invert in the incircle, which fixes the orthogonal circles, so A', B', C' are midpoints of the intouch triangle and the radius is half the inradius; corroborates existing tags.; Official check: the Compendium solution uses the similar right triangles IQD ~ IDB and IRD ~ IDC to get IQ·IB = IR·IC = r², so B, C, Q, R are concyclic on a circle orthogonal to the incircle, which must be Ω_a; hence A′B′C′ is the medial triangle of the contact triangle. Added Similarity; analytic status unchanged.",
+   "cite": "Compendium solution (similar right triangles give IQ·IB = r²)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1999 shortlist, problem 11 solution read"
   },
   "isl:1999:G6": {
    "date": "2026-11-17",
-   "range": "#31–#40 of 40 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (segment #31 question, IAmTheHazard #32, asdf334 #33/#34, awesomeming327. #35, ezpotd #36 radii computation, TestX01 #37, blueprimes #38, Mathandski #39 attachment, JKH123 #40) use the radical-axis concurrence of the tangents at M, N with AB, then homothety and power of a point to show CD ∥ AB and the concyclicity; corroborates existing tags."
+   "range": "#31–#40 of 40 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (segment #31 question, IAmTheHazard #32, asdf334 #33/#34, awesomeming327. #35, ezpotd #36 radii computation, TestX01 #37, blueprimes #38, Mathandski #39 attachment, JKH123 #40) use the radical-axis concurrence of the tangents at M, N with AB, then homothety and power of a point to show CD ∥ AB and the concyclicity; corroborates existing tags.; Official check: the first Compendium solution proves the incenter/excenter lemma and a common-tangent lemma (power of a point and an angle chase), then shows O2 is the incenter or G-excenter of CDG; the second uses the homothety at M (CD ∥ AB) and computes d(O2, CD) = r2 with the law of cosines in OO1O2 and XO1O2. Added Incenter/excenters on the synthetic route and Trigonometric computation on the analytic route (the distance computation checked numerically); analytic status unchanged.",
+   "cite": "Compendium solution 1 (incenter/excenter lemma); solution 2 (law-of-cosines distance computation)",
+   "addTags": [
+    "syn:G: Incenter/excenters",
+    "ana:G: Trigonometric computation"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 1999 shortlist, problem 12 solutions 1 and 2 read"
   },
   "isl:1999:N1": {
    "date": "2026-11-17",

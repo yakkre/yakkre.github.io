@@ -3305,33 +3305,47 @@
   },
   "isl:2002:G1": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #42–#52 of 52 (all loaded); analytic scan #1–#52",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a directed-angle argument; analytic route stays pending.; Late posts (ike.chen #42, lrjr24 #43, jelena_ivanchic #44, lambda5 #45, huashiliao2020 #46, starchan #47, ezpotd #50, Avron #51, YaoAOPS #52) are angle chases with the circle centres O1, O2; corroborates existing tags. Analytic scan: only AK1024 #14 mentions trig Ceva inside a synthetic argument; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 7 is a directed-angle argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #42–#52 of 52 (all loaded); analytic scan #1–#52; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 7 is a directed-angle argument; analytic route stays pending.; Late posts (ike.chen #42, lrjr24 #43, jelena_ivanchic #44, lambda5 #45, huashiliao2020 #46, starchan #47, ezpotd #50, Avron #51, YaoAOPS #52) are angle chases with the circle centres O1, O2; corroborates existing tags. Analytic scan: only AK1024 #14 mentions trig Ceva inside a synthetic argument; analytic route stays pending.; Official check: the Compendium solution uses oriented angles and the equal inclination of tangents at the ends of a chord to get ∠BAC = 2∠BDC = ∠BKC, so the circumcentre K of BCD lies on the circle ABC. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 7 is a directed-angle argument — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 7 solution read"
   },
   "isl:2002:G4": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #20–#29 of 29 (all loaded); analytic scan #1–#29",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 10 is synthetic; analytic route stays pending.; Late posts (Knty2006 #20, IAmTheHazard #21, mananaban #22, john0512 #23, shendrew7 #24, EpicBird08 #25, Avron #26, YaoAOPS #27, ezpotd #29) use the Miquel point Q on (A1A2C) and a spiral similarity, corroborating existing tags. Analytic scan: IAmTheHazard #21 uses complex numbers only for the one-line lemma b=za; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 10 is synthetic — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #20–#29 of 29 (all loaded); analytic scan #1–#29; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 10 is synthetic; analytic route stays pending.; Late posts (Knty2006 #20, IAmTheHazard #21, mananaban #22, john0512 #23, shendrew7 #24, EpicBird08 #25, Avron #26, YaoAOPS #27, ezpotd #29) use the Miquel point Q on (A1A2C) and a spiral similarity, corroborating existing tags. Analytic scan: IAmTheHazard #21 uses complex numbers only for the one-line lemma b=za; analytic route stays pending.; Official check: the Compendium solution shows by angle chasing that ∠A1QA2 = ∠O1QO2 and Q lies on the circle A1A2C, so OO1 ⊥ A1Q and OO2 ⊥ A2Q put O on the fixed circle O1O2Q. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 10 is synthetic — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 10 solution read"
   },
   "isl:2002:G6": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #5–#14 of 14 (whole thread); analytic scan #1–#14",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 12 is an arc-length lemma with a single sine step; analytic route stays pending.; Posts (Zhero #5, math154 #6, mathocean97 #7, yugrey #8, JuanOrtiz #9, ochoa #10 integral-geometry measure, v_Enhance #11, stroller #12, MarkBcc168 #13, awesomeming327. #14) bound Σ1/O_iO_j by angles using sin x ≤ x; corroborates existing tags. Analytic scan: trig appears only as the sin x ≤ x estimate in a combinatorial-geometric argument; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 12 is an arc-length lemma with a single sine step — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #5–#14 of 14 (whole thread); analytic scan #1–#14; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 12 is an arc-length lemma with a single sine step; analytic route stays pending.; Posts (Zhero #5, math154 #6, mathocean97 #7, yugrey #8, JuanOrtiz #9, ochoa #10 integral-geometry measure, v_Enhance #11, stroller #12, MarkBcc168 #13, awesomeming327. #14) bound Σ1/O_iO_j by angles using sin x ≤ x; corroborates existing tags. Analytic scan: trig appears only as the sin x ≤ x estimate in a combinatorial-geometric argument; analytic route stays pending.; Official check: the Compendium solution proves an arc lemma with inscribed angles (two chords meeting at angle 2α cut arcs of total length 4αr), applies it to the exterior common tangents of each pair with α > sin α = 2/OiOj, and shows by induction on n with a rotating ray that each point of a large circle lies on at most n−1 of the arcs. Added Induction and recursion and Angle chasing and cyclicity; the analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 12 is an arc-length lemma with a single sine step — no analytic route there",
+   "cite": "Compendium solution (induction on n for the arc covering; inscribed-angle arc lemma)",
+   "addTags": [
+    "syn:C: Induction and recursion",
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 12 solution read"
   },
   "isl:2002:G8": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #16–#26 of 26 (all loaded); analytic scan #1–#26",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 is a similarity argument; analytic route stays pending.; Late posts (ABCDE #16, mcdonalds106_7 #17, jred #18 configuration caveat, AlastorMoody #19, awesomeming327. #20, JAnatolGT_00 #21, starchan #22 spiral similarity, bin_sherlo #24) corroborate existing tags. Analytic scan: Zhero #9 (read in full) mixes sine-rule ratios with an inversion at A and cross-ratios, math154 #8 and pi37 #15 use sines inside synthetic arguments; no pure analytic proof, analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a similarity argument — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #16–#26 of 26 (all loaded); analytic scan #1–#26; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 14 is a similarity argument; analytic route stays pending.; Late posts (ABCDE #16, mcdonalds106_7 #17, jred #18 configuration caveat, AlastorMoody #19, awesomeming327. #20, JAnatolGT_00 #21, starchan #22 spiral similarity, bin_sherlo #24) corroborate existing tags. Analytic scan: Zhero #9 (read in full) mixes sine-rule ratios with an inversion at A and cross-ratios, math154 #8 and pi37 #15 use sines inside synthetic arguments; no pure analytic proof, analytic route stays pending.; Official check: the Compendium solution takes G on FK and the arc BAD, gets CEB ~ BGD and then MNE ~ FKM, and an angle chase gives ∠EMF = 90°. Uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 14 is a similarity argument — no analytic route there",
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 14 solution read"
   },
   "isl:2001:G7": {
    "date": "2026-11-16",
-   "range": "official solutions (IMO Compendium text); #1–#10 of 10 (whole thread); analytic scan #1–#10",
-   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a perimeter/angle comparison (parallelogram reflection and cyclic quadrilaterals); analytic route stays pending.; Posts (pohoatza #3 cos-ratio BO/CO argument, GoldenFrog1618 #5, Zhero #6 and pokpokben #9 long lemma-based proofs, pi37 #7 trig comparison of perimeter ratios around the orthocentre of A1B1C1, ezpotd #10 linear-motion argument) corroborate existing tags. Analytic scan: pi37 #7 is a trigonometric hybrid that depends on a configuration case split; not adopted; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a perimeter/angle comparison (parallelogram reflection and cyclic quadrilaterals) — no analytic route there"
+   "range": "official solutions (IMO Compendium text); #1–#10 of 10 (whole thread); analytic scan #1–#10; official booklet",
+   "note": "Official solutions checked via the IMO Compendium (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf; the imomath scans have no text layer): solution 21 is a perimeter/angle comparison (parallelogram reflection and cyclic quadrilaterals); analytic route stays pending.; Posts (pohoatza #3 cos-ratio BO/CO argument, GoldenFrog1618 #5, Zhero #6 and pokpokben #9 long lemma-based proofs, pi37 #7 trig comparison of perimeter ratios around the orthocentre of A1B1C1, ezpotd #10 linear-motion argument) corroborate existing tags. Analytic scan: pi37 #7 is a trigonometric hybrid that depends on a configuration case split; not adopted; analytic route stays pending.; Official check: the Compendium solution reflects A in the midpoint of B1C1 to A2, so A1 inside triangle B1C1A2 would make the inner perimeter too small; a chain of angle inequalities follows, and the cyclic quadrilaterals OA1BC1, OB1CA1 give BO:CO = cos β2 : cos γ1, forcing AO = BO = CO. Added Reflections, rotations and translations; the analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://mathematicalolympiads.wordpress.com/wp-content/uploads/2012/08/imo-compendium.pdf): solution 21 is a perimeter/angle comparison (parallelogram reflection and cyclic quadrilaterals) — no analytic route there",
+   "cite": "Compendium solution (point reflection of A to A2, comparing perimeters)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2001 shortlist, problem 21 solution read"
   },
   "isl:2000:G1": {
    "date": "2026-11-16",
@@ -4732,23 +4746,31 @@
   },
   "isl:2002:G2": {
    "date": "2026-11-17",
-   "range": "#21–#30 of 30 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (awesomeming327. #21, asdf334 #22, anantmudgal09 #23, pikapika007 #24, lian_the_noob12 #25 remark, oooahin #26, EpicBird08 #27, HamstPan38825 #28 EF=AF·BF/(AF+BF), ZZzzyy #29, ezpotd #30) erect equilateral triangles on AB and AC and bound FX ≥ 4FE by Ptolemy-type length estimates; corroborates existing tags."
+   "range": "#21–#30 of 30 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (awesomeming327. #21, asdf334 #22, anantmudgal09 #23, pikapika007 #24, lian_the_noob12 #25 remark, oooahin #26, EpicBird08 #27, HamstPan38825 #28 EF=AF·BF/(AF+BF), ZZzzyy #29, ezpotd #30) erect equilateral triangles on AB and AC and bound FX ≥ 4FE by Ptolemy-type length estimates; corroborates existing tags.; Official check: the Compendium solution builds equilateral triangles ACP and ABQ outside, puts D on FP and E on FQ from the cyclic quadrilaterals, bounds FP/FD = 1 + S(APC)/S(AFC) ≥ 4, and finishes with the law of cosines and PQ ≤ AP + AQ. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 8 solution read"
   },
   "isl:2002:G3": {
    "date": "2026-11-17",
-   "range": "#82–#91 of 91 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (oooahin #82, CubeAlgo15 #83, Kempu33334 #84, sks987 #85/#87 and math_holmes15 #86 duplicates, MathCosine #88, martianrunner #89, zhoujef000 #90) show ADOI is a parallelogram and AE=AF=AJ, so J is the incenter of CEF; KnowingAnt #91 complex bash matches the recorded analytic route. Corroborates existing tags."
+   "range": "#82–#91 of 91 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (oooahin #82, CubeAlgo15 #83, Kempu33334 #84, sks987 #85/#87 and math_holmes15 #86 duplicates, MathCosine #88, martianrunner #89, zhoujef000 #90) show ADOI is a parallelogram and AE=AF=AJ, so J is the incenter of CEF; KnowingAnt #91 complex bash matches the recorded analytic route. Corroborates existing tags.; Official check: the Compendium solution gets CA ∥ OD, so ODAI is a parallelogram and AI = AE = AF, then an angle chase shows FI and CI bisect the angles of CEF. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 9 solution read"
   },
   "isl:2002:G5": {
    "date": "2026-11-17",
-   "range": "#1–#10 of 10 (all loaded)",
-   "note": "Posts (grobber #3, math154 #4 gap note, polya78 #5 parallelogram, bobthesmartypants #6 coordinates, yayups #7, test20 #8 source in Erdős–Meir–Sós–Turán, awesomeming327. #9, Assassino9931 #10) reduce to a convex pentagon and compare areas of consecutive-vertex triangles to get the golden ratio; corroborates existing tags."
+   "range": "#1–#10 of 10 (all loaded); official booklet",
+   "note": "Posts (grobber #3, math154 #4 gap note, polya78 #5 parallelogram, bobthesmartypants #6 coordinates, yayups #7, test20 #8 source in Erdős–Meir–Sós–Turán, awesomeming327. #9, Assassino9931 #10) reduce to a convex pentagon and compare areas of consecutive-vertex triangles to get the golden ratio; corroborates existing tags.; Official check: the Compendium solution takes the maximum-area triangle, confines D and E to the triangle with sides through its vertices parallel to the opposite sides, applies an affine map onto a regular pentagon, and bounds the area of CDE by lengths and the angle at C. Uses only methods already tagged (the affine map has no separate label). No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 11 solution read"
   },
   "isl:2002:G7": {
    "date": "2026-11-17",
-   "range": "#130–#141 of 141 (all loaded; #135, #139 absent); middle skimmed by thanks",
-   "note": "Late posts (TwentyIQ #130, littlefox_amc #131, TUAN2k8 #132, irc.inses. #133 inversion at K, ezpotd #134, SirAppel #136 code only, Hussienahmad #137, Geominator #138, ZVFrozel #140, lunasgraph_d #141 partial complex step) use the A-excenter line through K and the midpoint M, or radical-axis power arguments; corroborates existing tags and the hybrid analytic status."
+   "range": "#130–#141 of 141 (all loaded; #135, #139 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (TwentyIQ #130, littlefox_amc #131, TUAN2k8 #132, irc.inses. #133 inversion at K, ezpotd #134, SirAppel #136 code only, Hussienahmad #137, Geominator #138, ZVFrozel #140, lunasgraph_d #141 partial complex step) use the A-excenter line through K and the midpoint M, or radical-axis power arguments; corroborates existing tags and the hybrid analytic status.; Official check: the Compendium solution computes tan∠BKM from DM and DK, and inverts at K with power BK·CK so the incircle becomes a line parallel to BC, which gives tan∠BKN′; both tangents equal cos(β/2)cos(γ/2)/sin((β−γ)/2). Added Inversion on the synthetic side (trigonometric computation is already on the analytic route); analytic status unchanged.",
+   "cite": "Compendium solution (inversion at K with power BK·CK)",
+   "addTags": [
+    "syn:G: Inversion"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2002 shortlist, problem 13 solution read"
   },
   "isl:2002:N1": {
    "date": "2026-11-17",
@@ -4852,18 +4874,21 @@
   },
   "isl:2001:G1": {
    "date": "2026-11-17",
-   "range": "#68–#89 of 89 (all loaded; posts #73, #76–#85, #88 absent from the thread); middle skimmed by thanks",
-   "note": "Late posts (Vedoral #68, reni_wee #69, Maximilian113 #70, Avron #71, Turtwig113 #72, mudkip42 #74, Kempu33334 #75, giguer #86, Likeminded2017 #87 sketch, Geomathmaster #89) map each inscribed square by a homothety at the vertex to an outer square and finish with (trigonometric) Ceva; corroborates existing tags."
+   "range": "#68–#89 of 89 (all loaded; posts #73, #76–#85, #88 absent from the thread); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Vedoral #68, reni_wee #69, Maximilian113 #70, Avron #71, Turtwig113 #72, mudkip42 #74, Kempu33334 #75, giguer #86, Likeminded2017 #87 sketch, Geomathmaster #89) map each inscribed square by a homothety at the vertex to an outer square and finish with (trigonometric) Ceva; corroborates existing tags.; Official check: the first Compendium solution computes BX/XC = (cot β + 1)/(cot γ + 1) from the homothety at A and applies Ceva; the second uses the homothety with the outer square on BC and trigonometric Ceva. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2001 shortlist, problem 15 solution read"
   },
   "isl:2001:G2": {
    "date": "2026-11-17",
-   "range": "#48–#58 of 58 (all loaded; #55 absent); middle skimmed by thanks",
-   "note": "Late posts (Danielzh #48, EpicBird08 #49, ezpotd #50, legogubbe #51 sine rule, Nari_Tom #52, Kempu33334 #53, endless_abyss #54, dubabuba #56 diagram, MathCosine #57, n-k-p #58) reduce ∠COP < 90°−∠A to PC < PO and compare lengths or trigonometric expressions; corroborates existing tags."
+   "range": "#48–#58 of 58 (all loaded; #55 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Danielzh #48, EpicBird08 #49, ezpotd #50, legogubbe #51 sine rule, Nari_Tom #52, Kempu33334 #53, endless_abyss #54, dubabuba #56 diagram, MathCosine #57, n-k-p #58) reduce ∠COP < 90°−∠A to PC < PO and compare lengths or trigonometric expressions; corroborates existing tags.; Official check: the Compendium solution reduces the claim to CP < R/2 and proves it with CP = 2R sin β cos γ and a product-to-sum bound. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2001 shortlist, problem 16 solution read"
   },
   "isl:2001:G3": {
    "date": "2026-11-17",
-   "range": "#18–#28 of 28 (all loaded; #26 absent); middle skimmed by thanks",
-   "note": "Late posts (OlympusHero #18/#19/#21 vector attempt, IAmTheHazard #20, awesomeming327. #22 and ezpotd #27 dot products, popop614 #23, asdf334 #24, SenorSloth #25, orangutan1434 #28 coordinates) bound AP·AG ≥ AP⃗·AG⃗ and sum to (a²+b²+c²)/3 with P=G; corroborates existing tags."
+   "range": "#18–#28 of 28 (all loaded; #26 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (OlympusHero #18/#19/#21 vector attempt, IAmTheHazard #20, awesomeming327. #22 and ezpotd #27 dot products, popop614 #23, asdf334 #24, SenorSloth #25, orangutan1434 #28 coordinates) bound AP·AG ≥ AP⃗·AG⃗ and sum to (a²+b²+c²)/3 with P=G; corroborates existing tags.; Official check: the first Compendium solution uses Ptolemy's inequality on BPCF with a point F chosen by the law of sines; the second sums AG·AP ≥ AG·AP as dot products with GA + GB + GC = 0. Uses only methods already tagged. No new tag.",
+   "official": "IMO Compendium (1959–2004), solutions to the 2001 shortlist, problem 17 solution read"
   },
   "isl:2001:G4": {
    "date": "2026-11-17",
@@ -4872,8 +4897,13 @@
   },
   "isl:2001:G5": {
    "date": "2026-11-17",
-   "range": "#3–#12 of 12 (all loaded)",
-   "note": "Posts (grobber #3 with Arne #4 and darij grinberg #5 pointing out its error, Zhero #6, yugrey #7 law of sines, pi37 #8, anser #9 and awesomeming327. #10 areas, pikapika007 #11, ezpotd #12) convert DB/DD' etc. to area ratios and show [ADE]+[BEF]+[CFD]=[DEF], giving 4; corroborates existing tags."
+   "range": "#3–#12 of 12 (all loaded); official booklet",
+   "note": "Posts (grobber #3 with Arne #4 and darij grinberg #5 pointing out its error, Zhero #6, yugrey #7 law of sines, pi37 #8, anser #9 and awesomeming327. #10 areas, pikapika007 #11, ezpotd #12) convert DB/DD' etc. to area ratios and show [ADE]+[BEF]+[CFD]=[DEF], giving 4; corroborates existing tags.; Official check: the Compendium solution uses ∠AEB + ∠BFC + ∠CDA = 360° and an angle chase to show the circles centred at D, E, F through A, B, C share a point O, the reflection of A, B, C in the sides of DEF, then sums area ratios to 4. Added Angle chasing and cyclicity; analytic status unchanged.",
+   "cite": "Compendium solution (angle chase for the common point O)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2001 shortlist, problem 19 solution read"
   },
   "isl:2001:G6": {
    "date": "2026-11-17",
@@ -4882,8 +4912,13 @@
   },
   "isl:2001:G8": {
    "date": "2026-11-17",
-   "range": "#31–#41 of 41 (all loaded; #36 absent); middle skimmed by thanks",
-   "note": "Late posts (InterLoop #31 and MerabiZariashvili #39 equal-length constructions, joshualiu315 #32 and Markas #34 and Kempu33334 #37 and ezpotd #41 law of sines, ehuseyinyigit #33, Mathandski #35 attachment, cubres #38 trigonometry, TheOneAndOnlyOFT #40 barycentric) reduce AB+BP=AQ+QB to an angle equation; corroborates existing tags."
+   "range": "#31–#41 of 41 (all loaded; #36 absent); middle skimmed by thanks; official booklet",
+   "note": "Late posts (InterLoop #31 and MerabiZariashvili #39 equal-length constructions, joshualiu315 #32 and Markas #34 and Kempu33334 #37 and ezpotd #41 law of sines, ehuseyinyigit #33, Mathandski #35 attachment, cubres #38 trigonometry, TheOneAndOnlyOFT #40 barycentric) reduce AB+BP=AQ+QB to an angle equation; corroborates existing tags.; Official check: the Compendium solution extends AB and AQ by BP and QB, gets congruent triangles APS and APT, and rules out P off BT because P would be the excentre of QAB, forcing β = 120°; so T = C and β = 80°, γ = 40°. Added Incenter/excenters; analytic status unchanged.",
+   "cite": "Compendium solution (the excentre case of QAB is ruled out)",
+   "addTags": [
+    "syn:G: Incenter/excenters"
+   ],
+   "official": "IMO Compendium (1959–2004), solutions to the 2001 shortlist, problem 22 solution read"
   },
   "isl:2001:N1": {
    "date": "2026-11-17",

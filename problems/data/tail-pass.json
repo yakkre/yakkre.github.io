@@ -5527,12 +5527,12 @@
   },
   "usatst:2024:3": {
    "date": "2026-11-17",
-   "range": "Official-solution sample: USA TST 2024/3, both complete cyclotomic-divisibility proofs (not a new tail-post pass)",
-   "note": "The subset-sum generating function and coefficient extraction drive both supplied proofs. The existing algebraic-combinatorics primary already covers this broadly; add the precise generating-functions label for method search. No primary change.",
+   "range": "Official-solution sample: USA TST 2024/3, both complete cyclotomic-divisibility proofs (not a new tail-post pass); Top-up (ISL depth): official sols-TST-IMO-2024.tex (Evan Chen), section re-read (proofs of the claim re-checked); AoPS https://artofproblemsolving.com/community/c6h3214874 #1–#19 (18 loaded, #13 deleted) indexed, full text #6, #10, #12",
+   "note": "The subset-sum generating function and coefficient extraction drive both supplied proofs. The existing algebraic-combinatorics primary already covers this broadly; add the precise generating-functions label for method search. No primary change.; USA TST top-up: #6, #10, #12 give cyclic-shift bijections after Lucas (shifting a k-subset moves its sum by k modulo p^l, so the residue blocks are equinumerous; #10 adds an induction). The row is already at the 4-tag cap (Codex generating-functions entry kept); no tag added.",
    "addTags": [
     "A: Generating functions"
    ],
-   "cite": "https://web.evanchen.cc/exams/sols-TST-IMO-2024.tex, section USA TST 2024/3"
+   "cite": "https://web.evanchen.cc/exams/sols-TST-IMO-2024.tex, section USA TST 2024/3; #10 (dgrozev); #12 (AdventuringHobbit)"
   },
   "rmm:2023:4": {
    "date": "2026-11-17",
@@ -5822,6 +5822,128 @@
    ],
    "explanationAppend": "An integer route uses square roots of -1 modulo p^2 for primes p = 1 mod 4.",
    "cite": "#7 (thevictor); official Solution 3; #3 (proposer)"
+  },
+  "usatst:2024:1": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2024.tex (Evan Chen), section re-read, both upper bounds; AoPS https://artofproblemsolving.com/community/c6h3214877 #1–#41 (31 loaded; #8, #9, #19, #21, #22, #25, #27, #31, #32, #34 not shown) indexed, full text #2, #7, #33, #38",
+   "note": "USA TST top-up: every proof rests on the sandwich 1/(floor+1) < 1/a < 1/floor, and the official alternate bound uses a/floor(a) < 3/2 once all a_i > 2; #33 (complete) takes the 0/1 rounding vector with the largest sum at most 1 and shows one more switch lands in (1, 3/2]. #2, #7, #38 repeat the official switching chain.",
+   "addTags": [
+    "N: Approximation and floor functions",
+    "C: Extremal arguments"
+   ],
+   "explanationAppend": "The bounds are floor estimates, and one forum proof picks the rounding with the largest sum not exceeding 1.",
+   "cite": "official alternate upper bound; #33 (tchebytchev); #2 (megarnie)"
+  },
+  "usatst:2024:2": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2024.tex (Evan Chen), section re-read, Solutions 1–3; AoPS https://artofproblemsolving.com/community/c6h3214878 #1–#36 (32 loaded; #19–#21, #27 not shown) indexed, full text #4, #12, #14, #17",
+   "note": "USA TST top-up: official Solution 3 (= #12, MarkBcc168) uses T, the pole of BD with respect to the incircle, so IT ⟂ BD, then shows DIWT and PBQA are inversely similar. #4 is a complete Cartesian computation (tan APQ = sqrt(d/(d+2)), double angle gives tan PAB) and #14 a complete complex-number computation with the incircle as unit circle ((p-q)/conj(p-q) = -x); both sets of formulas checked numerically. The many ratio-lemma posts match the existing trig route. Analytic status unchanged (Reviewed — hybrid).",
+   "addTags": [
+    "syn:G: Poles and polars",
+    "ana:G: Cartesian coordinates",
+    "ana:G: Complex numbers"
+   ],
+   "explanationAppend": "Forum and official routes add the pole of BD with respect to the incircle, a Cartesian computation and a complex-number computation.",
+   "cite": "official Solution 3; #12 (MarkBcc168); #4 (IAmTheHazard); #14 (BlizzardWizard)"
+  },
+  "usatst:2024:4": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2024.tex (Evan Chen), section re-read; AoPS https://artofproblemsolving.com/community/c6h3234876 #1–#18 of 18 (all loaded) indexed, full text #3, #4, #9, #15, #18",
+   "note": "USA TST top-up: #3 (complete) notes that P_iP_{i+1} and Q_jQ_{j+1} are the two longest of the six segments and runs the convex-hull cases on the longest one to force a crossing; #18 (complete) uses pigeonhole to find two consecutive P on one side of Q_1Q_2, then bounds their distance by extending the chord to the boundary of the lens. #4 and #15 match the official lemma.",
+   "addTags": [
+    "C: Extremal arguments",
+    "C: Global arguments"
+   ],
+   "explanationAppend": "Forum proofs of the key lemma look at the longest segment, or use pigeonhole to find two consecutive points on one side.",
+   "cite": "#3 (john0512); #18 (cursed_tangent1434); #4 (ihatemath123)"
+  },
+  "usatst:2024:5": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2024.tex (Evan Chen), section re-read; AoPS https://artofproblemsolving.com/community/c6h3234859 #1–#16 of 16 (all loaded) indexed, full text #3, #6, #7, #11",
+   "note": "USA TST top-up: #6 (complete) writes b_i = k p^{i-1} q^{2024-i}; the common difference divides every difference of common terms, a gap t <= (i_12-i_1)/11 gives 2023 >= (p^{11t}-q^{11t})/(p^t-q^t) >= 2047, a contradiction; #7 sets up the same divisibility with valuations. #3 (gcd normalisation unjustified) and #11 (assumes y(c_s-c_1) <= 2023) are not counted.",
+   "addTags": [
+    "N: Divisibility and gcd",
+    "N: Exponential NT"
+   ],
+   "explanationAppend": "A forum proof uses that the common difference divides all differences of common terms and bounds a powers-minus-powers quotient.",
+   "cite": "#6 (IAmTheHazard); #7 (vsamc)"
+  },
+  "usatst:2024:6": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2024.tex (Evan Chen), section re-read; AoPS https://artofproblemsolving.com/community/c6h3234860 #1–#30 (26 loaded; #10, #13, #14, #24 not shown) indexed with a keyword scan, full text #2, #4, #7",
+   "note": "USA TST top-up: #2 and #4 (complete) finish by solving the substitution system, for a zero c of f (forcing c in {0, -1}) or for the value at -1/(x+1); #7 shows f is injective on its range. Injectivity, periodicity and Cauchy-type steps all fall under the existing functional-equation tag; no other label is backed (2 tags).",
+   "addTags": [
+    "A: Equations and algebraic manipulation"
+   ],
+   "explanationAppend": "Forum finishes solve the resulting substitution system for a zero of f.",
+   "cite": "#2 (CT17); #4 (megarnie); #7 (CircleInvert)"
+  },
+  "usatst:2023:1": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2023.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, both bounds; AoPS https://artofproblemsolving.com/community/c6h2977026 #1–#31 (27 loaded; #2, #4, #10, #17 not shown) indexed, full text #6, #8, #15, #25 (start)",
+   "note": "USA TST top-up: #8 (complete) inducts from 2n to 2n-2 points, deleting a drawn diameter and its two neighbouring hops, reconnecting, and losing at most 4n-4 (its \"D-4n-4\" is a typo for D-(4n-4)); #6 (proposer) and #15 match the official diameter-crossing proof. Maximum checked by brute force for 2n <= 10.",
+   "addTags": [
+    "C: Induction and recursion"
+   ],
+   "explanationAppend": "A forum proof reduces from 2n to 2n-2 points by deleting a diametral pair.",
+   "cite": "#8 (IAmTheHazard); #15 (SHZhang)"
+  },
+  "usatst:2023:2": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2023.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, all five solutions; AoPS https://artofproblemsolving.com/community/c6h2976996 #1–#72 (63 loaded) indexed (first/last 10 + most-thanked middle), full text #9, #17, #18, #60, #25 (start), #3 (start)",
+   "note": "USA TST top-up: official solutions add the coaxiality lemma with a radical centre (Saengrungkongka; #14), a homothety angle lemma (Robitaille; #9) and external-bisector ratios with K the external centre of similitude (Gu); #18 uses power of a point through H to get N = Q, then an angle chase; #17 is a pure angle chase. #60 is a complete barycentric computation (K on (ABC) and AK ⟂ BC both reduce to 2(b^2-c^2)^2 + 2a^2bc = a^4 + a^2b^2 + a^2c^2; checked numerically).",
+   "addTags": [
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Homothety",
+    "syn:G: Metric relations and length chasing",
+    "syn:G: Power of a point",
+    "syn:G: Angle chasing and cyclicity",
+    "ana:G: Barycentric coordinates"
+   ],
+   "explanationAppend": "Further synthetic routes use the coaxiality lemma, a homothety lemma, external-bisector ratios or power of a point; a barycentric computation is also complete.",
+   "cite": "official Solutions 2–4; #18 (Boxcars2015); #17 (squareman); #60 (KevinYang2.71)"
+  },
+  "usatst:2023:3": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2023.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read; AoPS https://artofproblemsolving.com/community/c6h2976989 #1–#19 of 19 (all loaded) indexed, full text #10, #12, #19 (start)",
+   "note": "USA TST top-up: the official bound uses Hermite's identity n = sum floor((n+i)/k); #12 splits i/20 into floor and ceiling parts to get 400*300 - 190 f(0); #19 picks the n_i via floor quotients block by block; #10 (16 thanks) uses three chains and a trapezoid-area picture. Maximum checked by brute force for small (s, k).",
+   "addTags": [
+    "N: Approximation and floor functions"
+   ],
+   "explanationAppend": "The first bound spreads n into k nearly equal parts (Hermite identity, floors and ceilings).",
+   "cite": "official solution; #12 (Afternonz); #19 (KevinYang2.71)"
+  },
+  "usatst:2023:4": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2023.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read; AoPS https://artofproblemsolving.com/community/c6h2995841 #1–#15 (14 loaded, #11 deleted) indexed, full text #2, #3, #4, #6, #10",
+   "note": "USA TST top-up: #4, #6, #10 (complete) prove the even case 2-adically: x xor y = ax xor ay would give nu_2(x-y) = nu_2(a) + nu_2(x-y); the odd case is the explicit collision x = 2^n - 1, y = 2^n + 1 (official, #3, #6, #10; checked for odd a < 200).",
+   "addTags": [
+    "N: Prime valuations—vp",
+    "N: NT constructions"
+   ],
+   "explanationAppend": "Forum proofs compare 2-adic valuations of x - y and x xor y; the odd case is an explicit collision.",
+   "cite": "#10 (monval); #6 (PROA200); #4 (DottedCaculator); official odd case"
+  },
+  "usatst:2023:5": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2023.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read, all three parts; AoPS https://artofproblemsolving.com/community/c6h2995857 #1–#14 (13 loaded, #7 deleted) indexed, full text #2, #6, #14 (start)",
+   "note": "USA TST top-up: periodicity with period mn comes from the Chicken McNugget theorem (official) or Bézout am = bn + 1 (#6), and the author's explicit algorithm uses a Euclid-descent lemma (induction on m + n via n - m). #14 is a sketch (not counted). Dimension (m-1)^2 + (n-1)^2 checked for small coprime pairs.",
+   "addTags": [
+    "N: Divisibility and gcd"
+   ],
+   "explanationAppend": "Coprimality drives the periodicity (Bézout/Chicken McNugget) and the Euclid-style recovery lemma.",
+   "cite": "official solution; #6 (CANBANKAN)"
+  },
+  "usatst:2023:6": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2023.tex (Evan Chen, read in-page from web.evanchen.cc), section re-read; AoPS https://artofproblemsolving.com/community/c6h2995866 #1–#13 (11 loaded; #9, #12 not shown) indexed, full text #4, #6, #11",
+   "note": "USA TST top-up: the official proof (= proposer meql #4) counts distinct values in windows (at most 2N+1 chains, good numbers in [A-N, B+N], values missed by g), then finishes by taking the largest t among 2N+1 preimages. #11 (alternative finish) is a sketch and is not counted.",
+   "addTags": [
+    "C: Global arguments",
+    "C: Extremal arguments"
+   ],
+   "explanationAppend": "The chain structure is pinned down by counting values in windows, and the finish takes a maximal preimage.",
+   "cite": "official solution; #4 (meql)"
   }
  }
 }

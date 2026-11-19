@@ -5514,12 +5514,16 @@
   },
   "usatst:2026:5": {
    "date": "2026-11-17",
-   "range": "Official-solution sample: USA TST 2026 Solutions pp9–10, Involutions alternative (not a new tail-post pass)",
-   "note": "The complete supplied alternative proves the crucial midpoint claim using Desargues' involution theorem on the tangency-point quadrilateral, then completes the same radical-axis argument. Add the projective-method tag to the synthetic route; both existing primaries and the Cartesian route remain unchanged.",
+   "range": "Official-solution sample: USA TST 2026 Solutions pp9–10, Involutions alternative (not a new tail-post pass); Top-up (ISL depth): official IMOTST2026Solutions.pdf (usa-tst-public archive), section re-read; AoPS https://artofproblemsolving.com/community/c6h3750493 #1–#27 (21 loaded, #5, #6, #8, #21, #24, #25 deleted) indexed, full text #7, #9, #10, #11, #16 (start)",
+   "note": "The complete supplied alternative proves the crucial midpoint claim using Desargues' involution theorem on the tangency-point quadrilateral, then completes the same radical-axis argument. Add the projective-method tag to the synthetic route; both existing primaries and the Cartesian route remain unchanged.; USA TST top-up: official uses power of a point for the midpoints R_X, R_Y; #9 gets BX = CY from BX·BM = CY·CM; #7 (complete) uses a gliding spiral similarity centred at the trapezoid circumcentre and Brokard on PQSR; #10 a spiral similarity at A. Homothety route (official ISL 2005 G6 reduction) not tagged. Codex projective entry kept.",
    "addTags": [
-    "syn:G: Projective incidence"
+    "syn:G: Projective incidence",
+    "syn:G: Power of a point",
+    "syn:G: Spiral similarity",
+    "syn:G: Poles and polars"
    ],
-   "cite": "https://github.com/usa-tst-public/USA-TST-Archive/blob/main/IMOTST2026Solutions.pdf, pp9–10"
+   "cite": "https://github.com/usa-tst-public/USA-TST-Archive/blob/main/IMOTST2026Solutions.pdf, pp9–10; official (power of a point); #7 (vincentwant); #9 (john0512); #10 (Curious_Droid)",
+   "explanationAppend": "Forum routes add power of a point, spiral similarity and Brokard (poles and polars) for the M-midpoint claim and the bisector claim."
   },
   "usatst:2024:3": {
    "date": "2026-11-17",
@@ -5701,6 +5705,123 @@
    "range": "#1–#22 of 22 (whole available thread; #7–#8 and #19 absent)",
    "note": "v_Enhance #3, L567 #6, CT17 #16 and Assassino9931 #20 give the cyclic generalized-CRT obstruction; all existing modular/construction/game tags are corroborated, with no addition. Supplied Day1 p3 read in full and matched: two overlapping two-index queries recover three residues; its cyclic lower bound needs singleton queries treated separately. oVlad #2 has an invalid fixed-swap restriction to arbitrary queried subsets and writes gcd for lcm. #13/#15 discuss altered non-distinct/remainder versions; #21 strengthens the threshold and #22 discusses adaptive variants, not new proofs of the catalogue statement. The current distinctness condition is essential.",
    "cite": "https://artofproblemsolving.com/community/c6h2692530p23374854 | #16 CT17, #20 Assassino9931; https://rmms.lbi.ro/rmm2021/pr1/RMM2021-Day1-English_Solutions.pdf, physical p3"
+  },
+  "usatst:2026:1": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official IMOTST2026Solutions.pdf (usa-tst-public archive), section re-read; AoPS https://artofproblemsolving.com/community/c6h3733926 #1–#25 (24 loaded, #4 deleted) indexed, full text #5, #10, #12, #25",
+   "note": "USA TST top-up: the official multilinear-reduction proof and #25 (basis of R[x]/(x_i^2-x_i), subset-sum induction) are polynomial methods on the hypercube; #5/#12 evaluate at 0/1 points and subtract over subsets (inclusion-exclusion, already tagged).",
+   "addTags": [
+    "C: Algebraic combinatorics methods"
+   ],
+   "explanationAppend": "The vanishing of the support-coloured coefficient sums is a polynomial method: a multilinear polynomial vanishing on {0,1}^n is zero.",
+   "cite": "official Solution; #10 (proposer); #25 (quotient-ring basis)"
+  },
+  "usatst:2026:2": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official IMOTST2026Solutions.pdf (usa-tst-public archive), section re-read; AoPS https://artofproblemsolving.com/community/c6h3733954 #1–#21 (19 loaded, #2, #17 deleted) indexed, full text #3, #5, #7, #10",
+   "note": "USA TST top-up: the bad set is closed under addition below p (official; #5, #10 propagate more than b/2 bad indices up to p; #7 antisymmetry k vs p-k). Pick-theorem proofs (#3, #18, #19) match the existing geometric-combinatorics tag.",
+   "addTags": [
+    "N: Additive/combinatorial NT"
+   ],
+   "explanationAppend": "Additive structure: bad indices form a sum-closed set, so pairs k, b+1-k cannot both be bad when b+1 is good.",
+   "cite": "official Solution; #5 (xoof); #10 (Ilikeminecraft)"
+  },
+  "usatst:2026:3": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official IMOTST2026Solutions.pdf (usa-tst-public archive), section re-read, Solutions 1–2; AoPS https://artofproblemsolving.com/community/c6h3733942 #1–#17 (13 loaded, #7, #11, #14, #15 deleted) indexed, full text #3, #5, #8, #9, #10",
+   "note": "USA TST top-up: official Solution 2 and #3, #5, #8, #9 run on area estimates (convex hull of a small rectangle and a new point has area eps+O(sqrt eps), any convex polygon lies in a rectangle of twice its area); #5, #8, #9 prove that lemma with the longest chord. #10 matches official Solution 1 (area-preserving affine maps). #4: the problem is due to Gowers (Solan-Solomon-Weiss).",
+   "addTags": [
+    "G: Area arguments",
+    "C: Extremal arguments"
+   ],
+   "explanationAppend": "The induction is driven by area bounds, and the covering-rectangle lemma uses the longest chord of the polygon.",
+   "cite": "official Solution 2; #3 (DottedCaculator); #5 (KnowingAnt); #9 (ray66)"
+  },
+  "usatst:2026:4": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official IMOTST2026Solutions.pdf (usa-tst-public archive), section re-read, all four upper bounds; AoPS https://artofproblemsolving.com/community/c6h3750492 #1–#28 (26 loaded, #19, #20 deleted) indexed, full text #2, #4, #12 (start), #17, #21",
+   "note": "USA TST top-up: #4 (most thanked) models red points as edges of the row/column bipartite graph and bounds the sum of sqrt(d(u)d(v)) over edges by (2n)^{3/2}/2; #17 reduces to USA TST 2018/3. #2 = official layer counting with Loomis-Whitney.",
+   "addTags": [
+    "C: Graph theory—extremal"
+   ],
+   "explanationAppend": "Equivalently, a degree-sum bound in the bipartite row/column graph: each label is at most min of the two degrees.",
+   "cite": "#4 (KevinYang2.71); #17 (a1267ab)"
+  },
+  "usatst:2026:6": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official IMOTST2026Solutions.pdf (usa-tst-public archive), section re-read; AoPS https://artofproblemsolving.com/community/c6h3750494 #1–#13 (12 loaded, #6 deleted) indexed, full text #2, #4, #5, #7, #10 (start)",
+   "note": "USA TST top-up: every complete solution chooses primes so that a product over primes tends to 0 (official over p not dividing D; #2, #4, #5 over p = 1 mod 3 with a non-cubic residue), then compares the AP density with the count of values a^3+b^3+abc <= N in that residue class. #7 proposer; #10 discusses the a^3+b^3+c^3 variant (Sato-Tate), not this problem.",
+   "addTags": [
+    "N: Primes and prime divisors",
+    "N: Additive/combinatorial NT"
+   ],
+   "explanationAppend": "The contradiction is a density argument for the arithmetic progression, made possible by choosing many primes with a divergent product.",
+   "cite": "official Solution; #2 (DottedCaculator); #4 (john0512); #5 (Giabach298)"
+  },
+  "usatst:2025:1": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2025.pdf (Evan Chen), section re-read; AoPS https://artofproblemsolving.com/community/c6h3462249 #1–#18 of 18 (all loaded) indexed, full text #2, #3, #4 (start), #5 (start)",
+   "note": "USA TST top-up: the problem is a two-player identification game; Ana's winning choice x_i = 97i (official, #2) and the adversary's indistinguishable periodic functions give both directions. #4 and #5 (Evan Chen) recast the bound on a Z/q x Z/p table with rook-move connectivity.",
+   "addTags": [
+    "C: Games",
+    "C: Grids and tilings"
+   ],
+   "explanationAppend": "Bound and construction are a winning strategy plus an adversary argument; the table view (rows mod q, columns mod p) is a grid connectivity argument.",
+   "cite": "official Solution; #2 (ihatemath123); #3 (MarkBcc168); #4 (popop614); #5 (v_Enhance)"
+  },
+  "usatst:2025:2": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2025.pdf (Evan Chen), section re-read; AoPS https://artofproblemsolving.com/community/c6h3462250 #1–#17 of 17 (all loaded) indexed, full text #4, #5, #6, #8, #10",
+   "note": "USA TST top-up: #4 (case a1+b1 < -2, factorisation ((a1-t)^2-4/t)(a1+t)^2 <= 0) and #6 (case a1+b1 >= -2, d_n = a_n-b_n, s_n = a_n+b_n+2, growth bounds; #10 fills a step) together form a complete elementary proof; identities checked in check_topup1.py. #5 = official (proposer).",
+   "addTags": [
+    "A: Inequalities—standard algebraic arguments"
+   ],
+   "explanationAppend": "An elementary route (two cases with explicit inequality bounds) avoids the cubic substitution.",
+   "cite": "#4 (DottedCaculator); #6 (asbodke); #10"
+  },
+  "usatst:2025:3": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2025.pdf (Evan Chen), section re-read; AoPS https://artofproblemsolving.com/community/c6h3462251 #1–#8 of 8 (all loaded), every post read",
+   "note": "USA TST top-up: official Lemma 1.1 and #3, #7 are directed-angle chases on the cyclic quadrilaterals P P_i^j P_i^{j+1} P_{i+1}^j; #3 and #7 pass to the iterated pedal polygons by ratio-2 homotheties at P; #4 inverts at P and composes with a spiral similarity sending P^i to Q^{n-i}. Analytic still pending: #2 is a complex sketch, #8 is synthetic plus trig for the scale factor.",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity",
+    "syn:G: Homothety",
+    "syn:G: Inversion"
+   ],
+   "explanationAppend": "Forum routes add directed angle chasing, homotheties to pedal polygons and an inversion-plus-spiral-similarity map.",
+   "cite": "official Lemma 1.1; #3 (popop614); #4 (Siddharth03); #7 (HamstPan38825)"
+  },
+  "usatst:2025:4": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2025.pdf (Evan Chen), section re-read, Solutions 1–2; AoPS https://artofproblemsolving.com/community/c6h3477767 #1–#38 of 38 (all loaded) indexed, full text #5, #7, #13, #17, #29",
+   "note": "USA TST top-up: #5 and #29 get XX', YY', ZZ' concurrent from the radical axis theorem on the circles centred at A, B, C; official Solution 2 identifies (ABC) as the nine-point circle of the anticomplementary triangle (reflections give its orthic triangle) and uses the reflection of H and a Steiner line. #17: proposer, tetrahedron origin.",
+   "addTags": [
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Nine-point circle/Euler line",
+    "syn:G: Orthocenter and orthic triangle"
+   ],
+   "explanationAppend": "Further synthetic routes: radical axis concurrence, and the anticomplementary-triangle nine-point-circle configuration.",
+   "cite": "official Solution 2; #5 (Jack_w); #29 (cursed_tangent1434)"
+  },
+  "usatst:2025:5": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2025.pdf (Evan Chen), section re-read; AoPS https://artofproblemsolving.com/community/c6h3477768 #1–#7 of 7 (all loaded), every post read",
+   "note": "USA TST top-up: the auxiliary-frog process keeps the cyclic order of the frogs (official: each step is an even permutation; #2 ghost frogs moving left-most first; #4, #6 diverse triples are all cyclic shifts). #4/#7 induction and #7 colouring not tagged (4-tag cap).",
+   "addTags": [
+    "C: Processes and invariants"
+   ],
+   "explanationAppend": "The decisive step is an invariant: the auxiliary frogs are only ever permuted evenly.",
+   "cite": "official Solution; #2 (DottedCaculator); #6 (OronSH)"
+  },
+  "usatst:2025:6": {
+   "date": "2026-11-19",
+   "range": "Top-up (ISL depth): official sols-TST-IMO-2025.pdf (Evan Chen), section re-read, Solutions 1–4; AoPS https://artofproblemsolving.com/community/c6h3477769 #1–#14 (10 loaded, #4, #9, #11, #13 deleted) indexed, full text #2, #3, #5, #7, #8 (start)",
+   "note": "USA TST top-up: #7 (complete) takes primes p_i = 1 mod 4, Hensel-lifts square roots of -1 mod p_i^2, picks x by CRT and sets a_i = (x^2+1)/p_i + x, so x^2+1 divides every a_i^2+1 (identity and an m = 3 instance checked in check_topup1.py). Official Solution 3 also needs p_i = 1 mod 4 (Zsigmondy, LTE; not tagged). #8 Pell route not tagged.",
+   "addTags": [
+    "N: Quadratic residues"
+   ],
+   "explanationAppend": "An integer route uses square roots of -1 modulo p^2 for primes p = 1 mod 4.",
+   "cite": "#7 (thevictor); official Solution 3; #3 (proposer)"
   }
  }
 }

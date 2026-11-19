@@ -1965,89 +1965,158 @@
   },
   "isl:2012:G1": {
    "date": "2026-11-16",
-   "range": "#166–#177 of 177 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (fruitmonster97 #166, quannc #167, CubeAlgo15 #171, futureMEDALIST #174, Primeniyazidayi #176, hellohi321 #177) show AFKJLG concyclic and finish by angle chasing; shendrew7 #168, PSS1234 #169, lpieleanu #170, cyroah1331 #175 barycentric routes match the analytic primary. Corroborates existing tags."
+   "range": "#166–#177 of 177 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (fruitmonster97 #166, quannc #167, CubeAlgo15 #171, futureMEDALIST #174, Primeniyazidayi #176, hellohi321 #177) show AFKJLG concyclic and finish by angle chasing; shendrew7 #168, PSS1234 #169, lpieleanu #170, cyroah1331 #175 barycentric routes match the analytic primary. Corroborates existing tags.; Official check: the Solution puts K, L, F, G on the circle with diameter AJ by an angle chase, so AF ⊥ BF; then SM and AK are mirror images in the external bisector BF, giving SM=AK=AL=TM. The Comment finishes by cyclic quadrilaterals or by AS ∥ GM. Added Reflections, rotations and translations.",
+   "cite": "official Solution (reflection in the external bisector BF)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO 2012 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2012:G2": {
    "date": "2026-11-16",
-   "range": "#110–#119 of 119 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Assassino9931 #110, cyroah1331 #111, megahertz13 #115 moving points, windrock #116 isogonality lemma, godchunguus #117 FBEA~FCGD, alupigus #118, MR.1 #119) corroborate spiral-similarity/isogonal tags; lpieleanu #112, TThB0501 #113, Ashwath2011 #114 complex routes match the analytic primary."
+   "range": "#110–#119 of 119 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Assassino9931 #110, cyroah1331 #111, megahertz13 #115 moving points, windrock #116 isogonality lemma, godchunguus #117 FBEA~FCGD, alupigus #118, MR.1 #119) corroborate spiral-similarity/isogonal tags; lpieleanu #112, TThB0501 #113, Ashwath2011 #114 complex routes match the analytic primary.; Official check: the Solution gets FDG~FBE from the similar pairs EAB~EDC, FAB~FCD and the parallelogram, then uses the reflection H of E in FD to show ∠FHD+∠FGD=180°, closing the concyclicity by the supplementary-angle criterion. Added Angle chasing and cyclicity.",
+   "cite": "official Solution (supplementary-angle concyclicity)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO 2012 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2012:G3": {
    "date": "2026-11-16",
-   "range": "#85–#95 of 95 (all loaded)",
-   "note": "Late posts (ezpotd #85, mpcnotnpc #86, Eda_no11 #87, Lunatic_Lunar7986 #88, Cool12345678 #93 incentre on the radical axis, wangyanchuanjude #94, MR.1 #95) corroborate radical/spiral tags; Scilyse #89 and Ilovegeom1 #91/#92 complex/barycentric routes are already cited."
+   "range": "#85–#95 of 95 (all loaded); official booklet",
+   "note": "Late posts (ezpotd #85, mpcnotnpc #86, Eda_no11 #87, Lunatic_Lunar7986 #88, Cool12345678 #93 incentre on the radical axis, wangyanchuanjude #94, MR.1 #95) corroborate radical/spiral tags; Scilyse #89 and Ilovegeom1 #91/#92 complex/barycentric routes are already cited.; Official check: the Solution uses AEF~ABC with ratio cos α to get II1=2IA sin²(α/2), so II1·IA=II2·IB (law of sines in ABI); hence A, B, I1, I2 are concyclic and CI is the radical axis of (ACI1), (BCI2), perpendicular to O1O2; an angle sum gives CI ⊥ I1I2. Added Similarity and Metric relations and length chasing (the trig is a hybrid step).",
+   "cite": "official Solution (AEF~ABC; II1·IA=II2·IB length computation)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Metric relations and length chasing"
+   ],
+   "official": "IMO 2012 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2012:G4": {
    "date": "2026-11-16",
-   "range": "#95–#104 of 104 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (bir_mat_oimpiyatcisi #96, Benjaminxiao #97, lunasgraph_d #98, Illusioner #99 reflection over the perpendicular bisector, siamchung_degree #100 length chase, CubeAlgo15 #101, Math_AlexG #102, amogususususus #103) use the arc midpoint and power of a point; corroborates existing tags."
+   "range": "#95–#104 of 104 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (bir_mat_oimpiyatcisi #96, Benjaminxiao #97, lunasgraph_d #98, Illusioner #99 reflection over the perpendicular bisector, siamchung_degree #100 length chase, CubeAlgo15 #101, Math_AlexG #102, amogususususus #103) use the arc midpoint and power of a point; corroborates existing tags.; Official check: the Solution reflects Y in the perpendicular bisector OP to Y′, shows XAY′P cyclic by an angle chase, and finishes with the power of D in (XAY′P) and (ABPC). Added Reflections, rotations and translations.",
+   "cite": "official Solution (reflection of Y in OP)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations"
+   ],
+   "official": "IMO 2012 SL booklet (imo-official.org), Solution read"
   },
   "isl:2012:G5": {
    "date": "2026-11-16",
-   "range": "#139–#149 of 149 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (One_piece_fan #139, Warideeb #140, blueprimes #142, mudkip42 #143, Ashwath2011 #145, Siddharthmaybe #146, otwaenng #147, megahertz13 #149) use the circles about A and B through C and power of a point; Royal_mhyasd #141 orthocentre route; Andyluo #144 coordinate bash matches the analytic primary. Corroborates existing tags."
+   "range": "#139–#149 of 149 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (One_piece_fan #139, Warideeb #140, blueprimes #142, mudkip42 #143, Ashwath2011 #145, Siddharthmaybe #146, otwaenng #147, megahertz13 #149) use the circles about A and B through C and power of a point; Royal_mhyasd #141 orthocentre route; Andyluo #144 coordinate bash matches the analytic primary. Corroborates existing tags.; Official check: the Solution (C′ the reflection of C in AB, circles centred A, B through C and C′, power of X gives a circle ω3 through K, L, K1, L1, AL²=AK·AK1 makes AL and BK tangents to ω3, equal tangents) uses only methods already tagged. No new tag.",
+   "official": "IMO 2012 SL booklet (imo-official.org), Solution read"
   },
   "isl:2012:G6": {
    "date": "2026-11-16",
-   "range": "#80–#89 of 89 (all loaded)",
-   "note": "Late posts (YaoAOPS #80 Bevan point, ezpotd #81 Ptolemy, cj13609517288 #82, Om245 #83, cubres #85, BS2012 #86 Miquel point P, Royal_mhyasd #88, ihatemath123 #89 reflections of I) corroborate power/Miquel/similarity tags; Thelink_20 #84 barycentric matches the analytic primary."
+   "range": "#80–#89 of 89 (all loaded); official booklet",
+   "note": "Late posts (YaoAOPS #80 Bevan point, ezpotd #81 Ptolemy, cj13609517288 #82, Om245 #83, cubres #85, BS2012 #86 Miquel point P, Royal_mhyasd #88, ihatemath123 #89 reflections of I) corroborate power/Miquel/similarity tags; Thelink_20 #84 barycentric matches the analytic primary.; Official check: the Solution takes the Miquel point P, proves the lemma AX+AY=2AL cos(α/2) by Ptolemy and the law of sines, applies it to ωA, the circle on AI and the circumcircle to get AA′+AI=AM (M the arc midpoint on AI), so OA′=OB′=OC′=OI, and puts P on that circle by a directed-angle chase. Added Metric relations and length chasing, Angle chasing and cyclicity and Incenter/excenters.",
+   "cite": "official Solution (Ptolemy lemma; AA′+AI=AM along the bisector; directed-angle concyclicity)",
+   "addTags": [
+    "syn:G: Metric relations and length chasing",
+    "syn:G: Angle chasing and cyclicity",
+    "syn:G: Incenter/excenters"
+   ],
+   "official": "IMO 2012 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2012:G7": {
    "date": "2026-11-16",
-   "range": "#8–#17 of 17 (all loaded); analytic scan #1–#17; official solutions booklet",
-   "note": "Late posts (DrMath #10, MarkBcc168 #11, olympiadguru #12, mathaddiction #13, JAnatolGT_00 #14, Inconsistent #15 projective maps, awesomeming327. #16, OronSH #17 excircle/incircle of TAB, TCD) corroborate similarity/homothety tags. Analytic scan: only sine-ratio steps inside synthetic arguments (#7, #16) and a coordinate alignment remark (#15); no complete analytic proof, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2012SL.pdf): the single solution is a metric comparison lemma (OP·OR vs OO1·OO2) with a short sine-rule step; not an analytic route; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2012SL.pdf): the single solution is a metric comparison lemma (OP·OR vs OO1·OO2) with a short sine-rule step; not an analytic route — no analytic route there"
+   "range": "#8–#17 of 17 (all loaded); analytic scan #1–#17; official solutions booklet; official booklet",
+   "note": "Late posts (DrMath #10, MarkBcc168 #11, olympiadguru #12, mathaddiction #13, JAnatolGT_00 #14, Inconsistent #15 projective maps, awesomeming327. #16, OronSH #17 excircle/incircle of TAB, TCD) corroborate similarity/homothety tags. Analytic scan: only sine-ratio steps inside synthetic arguments (#7, #16) and a coordinate alignment remark (#15); no complete analytic proof, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2012SL.pdf): the single solution is a metric comparison lemma (OP·OR vs OO1·OO2) with a short sine-rule step; not an analytic route; analytic route stays pending.; Official check: the Solution (tangents from B, C to the two incircles meet AD at F1, F2; a law-of-sines lemma orders OP·OR, OO1·OO2, OQ·OS; chaining it over three quadruples gives F1=F2 iff OB·OD=OA·OC iff AB ∥ CD) uses only methods already tagged; the trig lemma is a hybrid step inside a synthetic comparison, so the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2012SL.pdf): the single solution is a metric comparison lemma (OP·OR vs OO1·OO2) with a short sine-rule step; not an analytic route — no analytic route there",
+   "official": "IMO 2012 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2012:G8": {
    "date": "2026-11-16",
-   "range": "#47–#56 of 56 (all loaded)",
-   "note": "Late posts (cubres #48 linear power, Benjaminxiao #49, bin_sherlo #50, Royal_mhyasd #51 power-ratio coaxality, V0305 #52 inversion, MarkBcc168 #53 and otwaenng #54 DDIT, Mano #55 moving points, H_Taken #56) corroborate radical/inversion/projective tags; Scilyse #47 complex matches the analytic primary."
+   "range": "#47–#56 of 56 (all loaded); official booklet",
+   "note": "Late posts (cubres #48 linear power, Benjaminxiao #49, bin_sherlo #50, Royal_mhyasd #51 power-ratio coaxality, V0305 #52 inversion, MarkBcc168 #53 and otwaenng #54 DDIT, Mano #55 moving points, H_Taken #56) corroborate radical/inversion/projective tags; Scilyse #47 complex matches the analytic primary.; Official check: Sol1 builds a point Q of equal power to ω, ωA, ωB, ωC, proving AA′, BB′, CC′ concurrent by Ceva, with Menelaus for X, Y, Z and cross ratios projected onto ℓ, where t↦−k²/t swaps X, Y, Z with X′, Y′, Z′; Comment 1 identifies the concurrency point as an orthocentre after a projective map; Sol2 inverts in space so ℓ, ω become parallel circles and the second intersections are altitudes of A′B′C′. Added Ceva, Menelaus and ratio chains, Harmonic division and cross ratios and Orthocenter and orthic triangle.",
+   "cite": "official Sol1 (Ceva via Menelaus and cross ratios on ℓ); Sol2 (altitudes of A′B′C′)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains",
+    "syn:G: Harmonic division and cross ratios",
+    "syn:G: Orthocenter and orthic triangle"
+   ],
+   "official": "IMO 2012 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–2 read"
   },
   "isl:2011:G1": {
    "date": "2026-11-16",
-   "range": "#47–#56 of 56 (all loaded)",
-   "note": "Late posts (Maximilian113 #47, HamstPan38825 #48, InterLoop #49, OronSH #50, happypi31415 #51, ihatemath123 #53, InftyByond #54, cyroah1331 #56) show ∠A<60° from the angle condition and finish with OL ≥ R cos(A/2)-type bounds; corroborates existing angle/metric and trigonometric tags."
+   "range": "#47–#56 of 56 (all loaded); official booklet",
+   "note": "Late posts (Maximilian113 #47, HamstPan38825 #48, InterLoop #49, OronSH #50, happypi31415 #51, ihatemath123 #53, InftyByond #54, cyroah1331 #56) show ∠A<60° from the angle condition and finish with OL ≥ R cos(A/2)-type bounds; corroborates existing angle/metric and trigonometric tags.; Official check: the Solution (kite AB′LC′ and inscribed angles force α<60°; the reflection of O in BC lies on ω outside the circumcircle while O is inside) and the Comment (distance comparison) use only methods already tagged. No new tag.",
+   "official": "IMO 2011 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2011:G2": {
    "date": "2026-11-16",
-   "range": "#28–#38 of 38 (all loaded)",
-   "note": "Pitchu-25 #29 gives a complete trigonometric proof: each power equals −sin(α_{i−1}+α_{i+1})·(product of adjacent sides)/sin α_{i+2} by the law of sines, and pairing opposite terms gives −T/sin(α2+α4) and −T/sin(α1+α3) with T=2S/(product of sides), which cancel since sin(α1+α3)=−sin(α2+α4); added Trigonometric computation to the analytic route. Also InterLoop #35 and m735821 #38 linearity of power, Novmath #34 and cyroah1331 #36 barycentric (matches analytic tags), AylyGayypow009 #31, ezpotd #32, lpieleanu #37.",
+   "range": "#28–#38 of 38 (all loaded); official booklet",
+   "note": "Pitchu-25 #29 gives a complete trigonometric proof: each power equals −sin(α_{i−1}+α_{i+1})·(product of adjacent sides)/sin α_{i+2} by the law of sines, and pairing opposite terms gives −T/sin(α2+α4) and −T/sin(α1+α3) with T=2S/(product of sides), which cancel since sin(α1+α3)=−sin(α2+α4); added Trigonometric computation to the analytic route. Also InterLoop #35 and m735821 #38 linearity of power, Novmath #34 and cyroah1331 #36 barycentric (matches analytic tags), AylyGayypow009 #31, ezpotd #32, lpieleanu #37.; Official check: Sol1 writes each O_iA_i²−r_i² as a power and computes it with signed distances x, y, z, w from the diagonal intersection (MB1·MA3=MA2·MA4), after which the four reciprocals cancel; Sol2 and its Comment (Cartesian circle equations, determinants) corroborate the tagged analytic route. Added Metric relations and length chasing.",
    "addTags": [
-    "ana:G: Trigonometric computation"
+    "ana:G: Trigonometric computation",
+    "syn:G: Metric relations and length chasing"
    ],
-   "cite": "#29 (Pitchu-25) complete trigonometric proof"
+   "cite": "#29 (Pitchu-25) complete trigonometric proof; official Sol1 (signed-length power computation)",
+   "official": "IMO 2011 SL booklet (imo-official.org), Solutions 1–2 and Comments read"
   },
   "isl:2011:G3": {
    "date": "2026-11-16",
-   "range": "#32–#41 of 41 (all loaded); analytic scan #1–#41; official solutions booklet",
-   "note": "Late posts (huashiliao2020 #32 sketch, Shreyasharma #33, GrantStar #34, shendrew7 #35, Ywgh1 #36 sketch, YaoAOPS #37, OronSH #38 isogonal conjugates, Sanjana42 #39, reyaansh_agrawal #40) use pedal points of E, F and radical axes; corroborates existing tags. Analytic scan: only a sine-ratio step in #38; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2011SL.pdf): the single solution is synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2011SL.pdf): the single solution is synthetic — no analytic route there"
+   "range": "#32–#41 of 41 (all loaded); analytic scan #1–#41; official solutions booklet; official booklet",
+   "note": "Late posts (huashiliao2020 #32 sketch, Shreyasharma #33, GrantStar #34, shendrew7 #35, Ywgh1 #36 sketch, YaoAOPS #37, OronSH #38 isogonal conjugates, Sanjana42 #39, reyaansh_agrawal #40) use pedal points of E, F and radical axes; corroborates existing tags. Analytic scan: only a sine-ratio step in #38; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2011SL.pdf): the single solution is synthetic; analytic route stays pending.; Official check: the Solution (pedal points of E and F concyclic by angle chasing, extra points P′, R′ on ωE, U and V on the radical axis by power, EUFV a parallelogram) uses only methods already tagged; the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2011SL.pdf): the single solution is synthetic — no analytic route there",
+   "official": "IMO 2011 SL booklet (imo-official.org), Solution read"
   },
   "isl:2011:G4": {
    "date": "2026-11-16",
-   "range": "#150–#160 of 160 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (SimplisticFormulas #150 cross ratios, Royal_mhyasd #153–#154, shendrew7 #157 and Math_AlexG #158 D, G, T collinear by homothety, Hip1zzzil #160) corroborate projective/homothety tags; Namura #151 complex matches the analytic primary. Sir_Denungerus #156 and Primeniyazidayi #159 sketch a √(bc/2) / √bc inversion, but #156's reduction uses undefined images (G') and #159 is storage-level, so no Inversion tag added."
+   "range": "#150–#160 of 160 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (SimplisticFormulas #150 cross ratios, Royal_mhyasd #153–#154, shendrew7 #157 and Math_AlexG #158 D, G, T collinear by homothety, Hip1zzzil #160) corroborate projective/homothety tags; Namura #151 complex matches the analytic primary. Sir_Denungerus #156 and Primeniyazidayi #159 sketch a √(bc/2) / √bc inversion, but #156's reduction uses undefined images (G') and #159 is storage-level, so no Inversion tag added.; Official check: Sol1 makes the tangents at A, X and B0C0 the radical axes of Ω, (AB0C0), ω, concurrent at W; A and D are symmetric in B0C0, so W centres (ADX); an angle chase gives AT ∥ BC and the homothety at G maps T to D; Sol2 uses the reflections in B0C0 and OW and the concyclic A, W, X, O, Q. Added Radical axes and coaxality, Reflections, rotations and translations and Angle chasing and cyclicity.",
+   "cite": "official Sols 1–2 (radical centre W; reflections in B0C0 and OW; angle chase)",
+   "addTags": [
+    "syn:G: Radical axes and coaxality",
+    "syn:G: Reflections, rotations and translations",
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO 2011 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2011:G5": {
    "date": "2026-11-16",
-   "range": "#80–#89 of 89 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (lian_the_noob12 #80, Lunatic_Lunar7986 #81 poles, stanpi31415 #82, ezpotd #83, SleepyGirraffe #85, reyaansh_agrawal #86, pl246631 #88, Primeniyazidayi #89) use Pascal on AADBBE plus homothety; PikaBlaze #84 length chase; siamchung_degree #87 Pascal + law of sines hybrid. Corroborates existing tags."
+   "range": "#80–#89 of 89 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (lian_the_noob12 #80, Lunatic_Lunar7986 #81 poles, stanpi31415 #82, ezpotd #83, SleepyGirraffe #85, reyaansh_agrawal #86, pl246631 #88, Primeniyazidayi #89) use Pascal on AADBBE plus homothety; PikaBlaze #84 length chase; siamchung_degree #87 Pascal + law of sines hybrid. Corroborates existing tags.; Official check: Sol1 shows AIFE and BDGI cyclic by an angle chase, takes AE, BD, IL as radical axes, and identifies IL with KP by an oriented-angle chase; Sol2 (Pascal on degenerate hexagons and a homothety taking M to I to P) corroborates. Added Angle chasing and cyclicity.",
+   "cite": "official Sol1 (cyclic AIFE, BDGI; oriented-angle chase)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO 2011 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2011:G6": {
    "date": "2026-11-16",
-   "range": "#60–#69 of 69 (all loaded)",
-   "note": "Late posts (pikapika007 #60, MathMaxGreat #61 E is the incentre of ABD, shendrew7 #62, Lunatic_Lunar7986 #64, bin_sherlo #65, stanpi31415 #66, cubres #67, Scilyse #68, yang71 #69) corroborate power/angle/radical tags; llddmmtt1 #63 barycentric matches the analytic primary."
+   "range": "#60–#69 of 69 (all loaded); official booklet",
+   "note": "Late posts (pikapika007 #60, MathMaxGreat #61 E is the incentre of ABD, shendrew7 #62, Lunatic_Lunar7986 #64, bin_sherlo #65, stanpi31415 #66, cubres #67, Scilyse #68, yang71 #69) corroborate power/angle/radical tags; llddmmtt1 #63 barycentric matches the analytic primary.; Official check: Sol1 applies Menelaus to ADF with the line CIK and the angle-bisector theorem in ABF to get BD/AD=AD/DK, hence ADK~BDA; Sol2 (K the radical centre of three circles) and Sol3 (I a radical centre, the reflection B′ of B in D, AKCB′ cyclic) corroborate. Added Ceva, Menelaus and ratio chains.",
+   "cite": "official Sol1 (Menelaus in ADF + bisector theorem)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains"
+   ],
+   "official": "IMO 2011 SL booklet (imo-official.org), Solutions 1–3 read"
   },
   "isl:2011:G7": {
    "date": "2026-11-16",
-   "range": "#14–#23 of 23 (all loaded)",
-   "note": "Late posts (DrMath #14 length bash with f(P)=DP²−FP², MarkBcc168 #15 tangent lengths, yayups #16, mira74 #17 moving points, mathaddiction #18, IndoMathXdZ #19, VicKmath7 #20, PNT #21, OronSH #22 reflections of B, ihatemath123 #23) corroborate the metric/reflection/radical tags."
+   "range": "#14–#23 of 23 (all loaded); official booklet",
+   "note": "Late posts (DrMath #14 length bash with f(P)=DP²−FP², MarkBcc168 #15 tangent lengths, yayups #16, mira74 #17 moving points, mathaddiction #18, IndoMathXdZ #19, VicKmath7 #20, PNT #21, OronSH #22 reflections of B, ihatemath123 #23) corroborate the metric/reflection/radical tags.; Official check: Sol1 (rotations about D and F, B′ and B′′ symmetric in EO, perpendicularity by differences of squares) corroborates; Sol2 proves D, F, Z collinear as poles of UT, VW lying on the polar of TU∩VW, then finishes with dot products centred at O. Added Poles and polars; the vector finish rests on that synthetic lemma, so it is a hybrid step and the analytic route is unchanged.",
+   "cite": "official Sol2 (D, F, Z on the polar of TU∩VW)",
+   "addTags": [
+    "syn:G: Poles and polars"
+   ],
+   "official": "IMO 2011 SL booklet (imo-official.org), Solutions 1–2 and Comments read"
   },
   "isl:2011:G8": {
    "date": "2026-11-16",
-   "range": "#92–#102 of 102 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Mr.Sharkman #92, davbeshka26 #94, bin_sherlo #95 anti-Steiner point, YaoAOPS #96, cursed_tangent1434 #97, SleepyGirraffe #100, Gandalf_Greyhame #101) reflect the tangency point over the sides and use Miquel/reflection arguments; KnowingAnt #98 outlines a complex bash (matches the analytic primary). Corroborates existing tags."
+   "range": "#92–#102 of 102 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Mr.Sharkman #92, davbeshka26 #94, bin_sherlo #95 anti-Steiner point, YaoAOPS #96, cursed_tangent1434 #97, SleepyGirraffe #100, Gandalf_Greyhame #101) reflect the tangency point over the sides and use Miquel/reflection arguments; KnowingAnt #98 outlines a complex bash (matches the analytic primary). Corroborates existing tags.; Official check: Sol1 shows ta ∥ B′′C′′ etc., so A′B′C′ and A′′B′′C′′ are homothetic, puts BB′∩CC′ on ω by oriented angles (B an in/excentre of B′DF), and uses Pascal on KB′′CIBC′′ to place the homothety centre K on ω; Sol2 (doubled Simson line, Miquel point, oriented angles) corroborates. Added Homothety and Projective incidence.",
+   "cite": "official Sol1 (homothety A′B′C′→A′′B′′C′′ centred on ω; Pascal on KB′′CIBC′′)",
+   "addTags": [
+    "syn:G: Homothety",
+    "syn:G: Projective incidence"
+   ],
+   "official": "IMO 2011 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2010:C1": {
    "date": "2026-11-16",

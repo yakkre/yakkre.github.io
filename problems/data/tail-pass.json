@@ -2155,59 +2155,73 @@
   },
   "isl:2010:G1": {
    "date": "2026-11-16",
-   "range": "#168–#179 of 179 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Sxmplicity #168, theodosiul #170 antiparallel EF, cyroah1331 #171 and SomeonecoolLovesMaths #173 and Tau_6.28 #175 cyclic APQF, windrock #174, themathchaos #176, Adit-Reddy #177, naht #179) are short angle chases; corroborates existing tags."
+   "range": "#168–#179 of 179 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Sxmplicity #168, theodosiul #170 antiparallel EF, cyroah1331 #171 and SomeonecoolLovesMaths #173 and Tau_6.28 #175 cyclic APQF, windrock #174, themathchaos #176, Adit-Reddy #177, naht #179) are short angle chases; corroborates existing tags.; Official check: Sol1 uses the cyclic quadrilaterals BCEF, CAFD from the altitude feet and an angle chase to show AQPF cyclic and AQP isosceles (two configurations; the Comment merges them with signed angles); Sol2 shows BP, BQ and FP, FQ are symmetric about AB, so Q is a reflection of the second intersection point. Uses only methods already tagged. No new tag.",
+   "official": "IMO 2010 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2010:G2": {
    "date": "2026-11-16",
-   "range": "#151–#160 of 160 (all loaded); analytic scan #1–#160",
-   "note": "Late posts (Math1lover #151 and TheOneAndOnlyOFT #156 and Send_SMS #158 Pascal, cyroah1331 #152 and Kempu33334 #154 tangency SP²=SA·SB, windrock #153, Half_Blood_Prince #155, Sxmplicity #157 harmonic projection, pirateNT0611 #159) corroborate synthetic tags. Analytic scan: trig hits (#15, #31, #32) are angle-chase/law-of-sines hybrids already reflected in the hybrid status; no new pure analytic proof."
+   "range": "#151–#160 of 160 (all loaded); analytic scan #1–#160; official booklet",
+   "note": "Late posts (Math1lover #151 and TheOneAndOnlyOFT #156 and Send_SMS #158 Pascal, cyroah1331 #152 and Kempu33334 #154 tangency SP²=SA·SB, windrock #153, Half_Blood_Prince #155, Sxmplicity #157 harmonic projection, pirateNT0611 #159) corroborate synthetic tags. Analytic scan: trig hits (#15, #31, #32) are angle-chase/law-of-sines hybrids already reflected in the hybrid status; no new pure analytic proof.; Official check: Sol1 turns MK=ML into PA/PB=CA/CB via PKM~PCA and PLM~PCB, so P lies on the Apollonius circle, whose centre is S by an angle chase (SC=SE); Sols 2–3 (SP²=SA·SB, PSA~BSP, arc comparisons) handle the converse. Uses only methods already tagged. No new tag.",
+   "official": "IMO 2010 SL booklet (imo-official.org), Solutions 1–3 read"
   },
   "isl:2010:G3": {
    "date": "2026-11-16",
-   "range": "#13–#23 of 23 (all loaded); analytic scan #1–#23; official solutions booklet (Solutions 1–2)",
-   "note": "Late posts (guptaamitu1 #13, awesomeming327. #15, asdf334 #16, smileapple #17, HamstPan38825 #18, YaoAOPS #20, AbhiChaitKulk #21, ezpotd #22, m735821 #23) compare X_iX_{i+1} and P_iP_{i+1} via circumdiameters and an index with a large angle at P; corroborates existing tags. Analytic scan: the trig hits (#2, #3, #7, #11, #17, #18, #22) all use the extended law of sines as one step inside this synthetic angle comparison; no separate analytic route, so it stays pending.; Official solutions checked: Solution 2 proves the stronger max XiXi+1·cos αi / PiPi+1 ≥ 1 by projections and a cosine/sine-rule product contradiction; recorded as a hybrid trigonometric route.",
+   "range": "#13–#23 of 23 (all loaded); analytic scan #1–#23; official solutions booklet (Solutions 1–2); official booklet",
+   "note": "Late posts (guptaamitu1 #13, awesomeming327. #15, asdf334 #16, smileapple #17, HamstPan38825 #18, YaoAOPS #20, AbhiChaitKulk #21, ezpotd #22, m735821 #23) compare X_iX_{i+1} and P_iP_{i+1} via circumdiameters and an index with a large angle at P; corroborates existing tags. Analytic scan: the trig hits (#2, #3, #7, #11, #17, #18, #22) all use the extended law of sines as one step inside this synthetic angle comparison; no separate analytic route, so it stays pending.; Official solutions checked: Solution 2 proves the stronger max XiXi+1·cos αi / PiPi+1 ≥ 1 by projections and a cosine/sine-rule product contradiction; recorded as a hybrid trigonometric route.; Official check: Sol1 (an angle-sum lemma puts P inside some circumcircle of XiA(i+1)X(i+1), then the extended law of sines compares the chords) and Sol2 (projections onto PiP(i+1), product of cosines against a law-of-sines product) use only methods already tagged; the trig remains a hybrid step. No new tag.",
    "cite": "official Solution 2 (hybrid trigonometric)",
    "addTags": [
     "ana:G: Trigonometric computation"
    ],
    "ana_explanation": "A hybrid trigonometric route (official Solution 2): prove the stronger bound max XiXi+1·cos αi / PiPi+1 ≥ 1; if some XiXi+1 straddles Pi, Pi+1 its projection already covers PiPi+1, and otherwise all ratios below 1 would give XiPi·cos γi > Xi+1Pi+1·cos βi+1 for every i, whose product contradicts the sine-rule identity PPi/PPi+1 = cos βi+1 / cos γi multiplied around the polygon.",
    "ana_refs": "https://www.imo-official.org/problems/IMO2010SL.pdf | official Solution 2 (hybrid trigonometric)",
-   "ana_status": "Reviewed — hybrid"
+   "ana_status": "Reviewed — hybrid",
+   "official": "IMO 2010 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2010:G4": {
    "date": "2026-11-16",
-   "range": "#100–#109 of 109 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (BS2012 #100, TUAN2k8 #101 XE∥BC, lightsynth123 #102 and cubres #103 and TigerOnion #104 moving points, Royal_mhyasd #105 isogonal lines, MerabiZariashvili #106 similar triangles, windrock #108 Menelaus, dno1467 #109 √bc inversion) corroborate synthetic tags; ezpotd #107 complex matches the analytic primary."
+   "range": "#100–#109 of 109 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (BS2012 #100, TUAN2k8 #101 XE∥BC, lightsynth123 #102 and cubres #103 and TigerOnion #104 moving points, Royal_mhyasd #105 isogonal lines, MerabiZariashvili #106 similar triangles, windrock #108 Menelaus, dno1467 #109 √bc inversion) corroborate synthetic tags; ezpotd #107 complex matches the analytic primary.; Official check: Sol1 (Menelaus in AIF, I, A, X, T concyclic so IT ∥ BC, DCL~DAC, DI=DC), its Comment (inversion at D with radius DC) and Sol2 (ATD~AIE, ABI~AJC with J the excentre, ABF~AEC) use only methods already tagged. No new tag.",
+   "official": "IMO 2010 SL booklet (imo-official.org), Solutions 1–2 and Comments read"
   },
   "isl:2010:G5": {
    "date": "2026-11-16",
-   "range": "#16–#25 of 25 (all loaded); analytic scan #1–#25; official solutions booklet (Solutions 1–2)",
-   "note": "Late posts (char2539 #16, rafaello #18, L567 #19, lazizbek42 #20 sketch, Mogmog8 #21, awesomeming327. #22, Andyluo #24, Royal_mhyasd #25) reflect B and D over M to get cyclic ABDL with AB=AL; corroborates reflection/angle tags. Analytic scan: crazyfehmy #3 and sayantanchakraborty #9 finish the same reflection construction with a sine-rule angle comparison (hybrid); no complete analytic proof, analytic route stays pending.; Official solutions checked: Solution 2 is a complete trigonometric proof (midline angle ∠DMN=α, sine rule in ABD, ADE, BCD, MND, product-to-sum reduction to cos φ·sin(2φ−α−β)·sin(φ−β−γ)=0); recorded as the analytic route.",
+   "range": "#16–#25 of 25 (all loaded); analytic scan #1–#25; official solutions booklet (Solutions 1–2); official booklet",
+   "note": "Late posts (char2539 #16, rafaello #18, L567 #19, lazizbek42 #20 sketch, Mogmog8 #21, awesomeming327. #22, Andyluo #24, Royal_mhyasd #25) reflect B and D over M to get cyclic ABDL with AB=AL; corroborates reflection/angle tags. Analytic scan: crazyfehmy #3 and sayantanchakraborty #9 finish the same reflection construction with a sine-rule angle comparison (hybrid); no complete analytic proof, analytic route stays pending.; Official solutions checked: Solution 2 is a complete trigonometric proof (midline angle ∠DMN=α, sine rule in ABD, ADE, BCD, MND, product-to-sum reduction to cos φ·sin(2φ−α−β)·sin(φ−β−γ)=0); recorded as the analytic route.; Official check: Sol1 (T on AE with AT=AB, BCTE a parallelogram, K the reflection of D in M on (BCD), A, B, D, T concyclic) and Sol2 (M, N on the circle with diameter OD, law of sines in five triangles) use only methods already tagged. No new tag.",
    "cite": "official Solution 2 (trigonometric)",
    "addTags": [
     "ana:G: Trigonometric computation"
    ],
    "ana_explanation": "A trigonometric route (official Solution 2): with α = ∠CBD, β = ∠BDC, γ = ∠ADE and 2φ = ∠ABC = ∠CDE, the midpoint N of CD lies with M on the circle with diameter OD, so ∠DMN = α; the sine rule in ABD, ADE, BCD and MND writes AB/AD, AE/AD and BC/AD in these angles, and AB = AE + BC reduces by product-to-sum formulas to cos φ · sin(2φ − α − β) · sin(φ − β − γ) = 0, forcing φ = β + γ, i.e. 2∠BDA = ∠CDE.",
    "ana_refs": "https://www.imo-official.org/problems/IMO2010SL.pdf | official Solution 2 (complete trigonometric proof)",
-   "ana_status": "Reviewed"
+   "ana_status": "Reviewed",
+   "official": "IMO 2010 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2010:G6": {
    "date": "2026-11-16",
-   "range": "#5–#14 of 14 (all loaded)",
-   "note": "Late posts (leader #6 trigonometry, mathcool2009 #7, tastymath75025 #9 Miquel point, MathStudent2002 #10, mathaddiction #11 sine bounds, Autistic_Turk #12, GoldenBoy03 #13, ezpotd #14) corroborate the inversion/Miquel synthetic and trigonometric analytic tags; Ghoshadi #8 self-retracted."
+   "range": "#5–#14 of 14 (all loaded); official booklet",
+   "note": "Late posts (leader #6 trigonometry, mathcool2009 #7, tastymath75025 #9 Miquel point, MathStudent2002 #10, mathaddiction #11 sine bounds, Autistic_Turk #12, GoldenBoy03 #13, ezpotd #14) corroborate the inversion/Miquel synthetic and trigonometric analytic tags; Ghoshadi #8 self-retracted.; Official check: Sol1 proves the stronger claim that I lies inside the incircle of XYZ by a chain of distance estimates (d(O,BC) ≥ R′, A′I ≤ R′−r, IC′ ≤ r−r′, then OI ≤ r′); Sol2 and the solution of G6′ work with the chords and tangents of the incircle ω of ABC at its touch points A1, B1 and arc measures of ω, forcing an angle of at least 120°. Added Metric relations and length chasing and Incircle/excircle configurations.",
+   "cite": "official Sol1 (distance chain OI ≤ r′); Sol2 / G6′ solution (incircle chords and tangents at the touch points)",
+   "addTags": [
+    "syn:G: Metric relations and length chasing",
+    "syn:G: Incircle/excircle configurations"
+   ],
+   "official": "IMO 2010 SL booklet (imo-official.org), Solutions 1–2, Solution for G6′ and Comments 1–2 read"
   },
   "isl:2010:G7": {
    "date": "2026-11-16",
-   "range": "#15–#26 of 26 (all loaded); analytic scan #1–#26; official solutions booklet (Solution, Comments 1–2)",
-   "note": "Late posts (Coder_P137G #15, desargues #18, iman007 #19 and TheHazard #23 Monge, duanby #20, popop614 #22, ohiorizzler1434 #25, MathLuis #26) corroborate homothety/radical tags. Analytic scan: G81928128 #24 (13 thanks) maps circles to points (a,b,±r) so tangency becomes light-like separation, then argues with light cones, planes and reflections in space (also proving a generalisation); this is a spatial synthetic model rather than a coordinate computation, so it is recorded here but not used as the analytic route. SebP #8 3D translation, Kayak #11 only cites a Cartesian handout. Analytic route stays pending.; Official solution checked: the key Lemma 2(b) is proved with vectors (the booklet's Comment 1 says it chose an analytic proof for it), the rest by homothety and bookkeeping of the constants u_ij, v_ij; recorded as a hybrid vector route. Earlier forum candidate G81928128 #24 (light-cone) remains a separate flag.",
-   "cite": "official Solution (hybrid vector)",
+   "range": "#15–#26 of 26 (all loaded); analytic scan #1–#26; official solutions booklet (Solution, Comments 1–2); official booklet",
+   "note": "Late posts (Coder_P137G #15, desargues #18, iman007 #19 and TheHazard #23 Monge, duanby #20, popop614 #22, ohiorizzler1434 #25, MathLuis #26) corroborate homothety/radical tags. Analytic scan: G81928128 #24 (13 thanks) maps circles to points (a,b,±r) so tangency becomes light-like separation, then argues with light cones, planes and reflections in space (also proving a generalisation); this is a spatial synthetic model rather than a coordinate computation, so it is recorded here but not used as the analytic route. SebP #8 3D translation, Kayak #11 only cites a Cartesian handout. Analytic route stays pending.; Official solution checked: the key Lemma 2(b) is proved with vectors (the booklet's Comment 1 says it chose an analytic proof for it), the rest by homothety and bookkeeping of the constants u_ij, v_ij; recorded as a hybrid vector route. Earlier forum candidate G81928128 #24 (light-cone) remains a separate flag.; Official check: the Solution reduces circumscribedness to u=v via Lemma 1 (homothety at B) and Lemma 2 (ellipse locus, r/d(P) constant by a vector computation); Comment 1 gives a synthetic proof of Lemma 2(b): U, V and the internal homothety centre S collinear, T a radical centre, U, V, Q on the circle with diameter PT, and SOiU~UPQ. Added Similarity and Angle chasing and cyclicity; analytic status unchanged.",
+   "cite": "official Solution (hybrid vector); official Comment 1 (synthetic Lemma 2(b): circle on diameter PT, SOiU~UPQ)",
    "addTags": [
-    "ana:G: Vectors and dot products"
+    "ana:G: Vectors and dot products",
+    "syn:G: Similarity",
+    "syn:G: Angle chasing and cyclicity"
    ],
    "ana_explanation": "A hybrid vector route (official solution): circles tangent to rays hi and hj have radius r = u_ij·d(P) by homothety at B; with vectors from A, subtracting |ρ − ρi|² = (Ri + r)² and |ρ − ρj|² = (Rj − r)² gives OiOj·d(P) = r(Ri + Rj), so circles touching γi externally and γj internally have r = v_ij·d(P); each curved quadrilateral is circumscribed exactly when the matching u and v agree, and the three given equalities force the fourth.",
    "ana_refs": "https://www.imo-official.org/problems/IMO2010SL.pdf | official solution, Lemma 2(b) by vectors (hybrid)",
-   "ana_status": "Reviewed — hybrid"
+   "ana_status": "Reviewed — hybrid",
+   "official": "IMO 2010 SL booklet (imo-official.org), Solution and Comments 1–2 read"
   },
   "isl:2010:N1": {
    "date": "2026-11-16",
@@ -2321,34 +2335,66 @@
   },
   "isl:2009:G1": {
    "date": "2026-11-16",
-   "range": "#64–#74 of 74 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (ihatemath123 #64, mudkip42 #67, lunasgraph_d #68 and zhoujef000 #74 and little-fermat #70 trigonometric equations, Jakjjdm #69, InftyByond #71, cyroah1331 #72, littlefox_amc #73) use the incentre I and the 45° angles at D, E with reflection or trig to get 60° or 90°; corroborates existing synthetic and analytic tags."
+   "range": "#64–#74 of 74 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (ihatemath123 #64, mudkip42 #67, lunasgraph_d #68 and zhoujef000 #74 and little-fermat #70 trigonometric equations, Jakjjdm #69, InftyByond #71, cyroah1331 #72, littlefox_amc #73) use the incentre I and the 45° angles at D, E with reflection or trig to get 60° or 90°; corroborates existing synthetic and analytic tags.; Official check: Sol1 works with the touch points of the incircles of ABC and ADC (the incircle of ADC also touches IF, so KRFS is a square and ∠KFC=45°), then reflection and concyclicity of K, E, F, I fix ∠BAC ∈ {60°, 90°}; Sol2 multiplies four law-of-sines ratios. Added Incircle/excircle configurations.",
+   "cite": "official Sol1 (touch points of the two incircles, square KRFS)",
+   "addTags": [
+    "syn:G: Incircle/excircle configurations"
+   ],
+   "official": "IMO 2009 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2009:G2": {
    "date": "2026-11-16",
-   "range": "#167–#177 of 177 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (quannc #167, CubeAlgo15 #168, Og_math_guy #169, cyroah1331 #171, littlefox_amc #172, Fractalpi-Matrix #173, apokono #174, m735821 #175, pirateNT0611 #176, eggon #177) use midlines and AQP ~ MLK with power of a point to get OP=OQ; corroborates existing tags."
+   "range": "#167–#177 of 177 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (quannc #167, CubeAlgo15 #168, Og_math_guy #169, cyroah1331 #171, littlefox_amc #172, Fractalpi-Matrix #173, apokono #174, m735821 #175, pirateNT0611 #176, eggon #177) use midlines and AQP ~ MLK with power of a point to get OP=OQ; corroborates existing tags.; Official check: Sol1 uses the tangent-chord angle at M and the midlines to get APQ~MKL, hence AP·PC=AQ·QB (equal powers); Sol2 is a complete vector proof: projections onto AB and CA give SM=OT/2 for the circumcentres S of KLM and T of APQ (checked numerically), so SM ⊥ PQ forces OT ⊥ PQ. Added Angle chasing and cyclicity and analytic Vectors and dot products; analytic status stays Reviewed.",
+   "cite": "official Sol1 (tangent-chord angle); Sol2 (vector projections, SM = OT/2)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity",
+    "ana:G: Vectors and dot products"
+   ],
+   "official": "IMO 2009 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2009:G3": {
    "date": "2026-11-16",
-   "range": "#55–#64 of 64 (all loaded)",
-   "note": "Late posts (hgomamogh #55, asdf334 #56, Markas #57, Ilikeminecraft #58, YaoAOPS #59, lpieleanu #60, godchunguus #62, Sxmplicity #64) add the A-excircle and show G is the radical centre with point circles R, S; corroborates radical-axis tags."
+   "range": "#55–#64 of 64 (all loaded); official booklet",
+   "note": "Late posts (hgomamogh #55, asdf334 #56, Markas #57, Ilikeminecraft #58, YaoAOPS #59, lpieleanu #60, godchunguus #62, Sxmplicity #64) add the A-excircle and show G is the radical centre with point circles R, S; corroborates radical-axis tags.; Official check: Sol1 (touch lengths of the incircle and A-excircle make ZC and BY radical axes of point circles with the excircle) corroborates; Sol2 computes GS by Menelaus in AZC, the law of cosines and Stewart, and finds an expression symmetric in y and z. Added Ceva, Menelaus and ratio chains.",
+   "cite": "official Sol2 (Menelaus in AZC + Stewart)",
+   "addTags": [
+    "syn:G: Ceva, Menelaus and ratio chains"
+   ],
+   "official": "IMO 2009 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2009:G4": {
    "date": "2026-11-16",
-   "range": "#92–#103 of 103 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (YaoAOPS #92 Miquel point, ezpotd #93 harmonic projection, kotmhn #94, SimplisticFormulas #95 inversion, PSS1234 #98, PikaBlaze #99, littlefox_amc #100 and ostriches88 #102 harmonic midpoint lemma, Ashwath2011 #101 Newton–Gauss line, otwaenng #103) corroborate harmonic/Miquel/power tags."
+   "range": "#92–#103 of 103 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (YaoAOPS #92 Miquel point, ezpotd #93 harmonic projection, kotmhn #94, SimplisticFormulas #95 inversion, PSS1234 #98, PikaBlaze #99, littlefox_amc #100 and ostriches88 #102 harmonic midpoint lemma, Ashwath2011 #101 Newton–Gauss line, otwaenng #103) corroborate harmonic/Miquel/power tags.; Official check: Sol1 maps C, D, H, E to A, B, G, X by a reflection in the bisector of ∠DFC followed by a dilation at F, then closes with the tangent-chord criterion; Sol2 proves the Gauss line lemma with oriented areas and uses a dilation by 2 at E and similar quadrilaterals; Sol3 is a vector computation from O using the powers of E, F and the polar relation e·f=R² (identity checked numerically). Added Angle chasing and cyclicity, Reflections, rotations and translations, Homothety, Area arguments and analytic Vectors and dot products; analytic status stays Reviewed.",
+   "cite": "official Sol1 (reflection + dilation at F, tangent-chord); Sol2 (Gauss lemma by oriented areas, dilation at E); Sol3 (vectors)",
+   "addTags": [
+    "syn:G: Angle chasing and cyclicity",
+    "syn:G: Reflections, rotations and translations",
+    "syn:G: Homothety",
+    "syn:G: Area arguments",
+    "ana:G: Vectors and dot products"
+   ],
+   "official": "IMO 2009 SL booklet (imo-official.org), Solutions 1–3 read"
   },
   "isl:2009:G5": {
    "date": "2026-11-16",
-   "range": "#5–#15 of 15 (all loaded); analytic scan #1–#15; official solutions booklet",
-   "note": "Late posts (litongyang #5/#7, daniel73 #8, polya78 #10, Idio-logy #11 two enclosing parallelograms, william122 #13 minimal-area parallelogram + shear, MarkBcc168 #14, yayups #15 smooth-curve generalisation) corroborate the area/extremal tags (timon92 #6/#9 discuss the sharp constant 4/3). Analytic scan: only a sine-area step in #13; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic/area arguments; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic/area arguments — no analytic route there"
+   "range": "#5–#15 of 15 (all loaded); analytic scan #1–#15; official solutions booklet; official booklet",
+   "note": "Late posts (litongyang #5/#7, daniel73 #8, polya78 #10, Idio-logy #11 two enclosing parallelograms, william122 #13 minimal-area parallelogram + shear, MarkBcc168 #14, yayups #15 smooth-curve generalisation) corroborate the area/extremal tags (timon92 #6/#9 discuss the sharp constant 4/3). Analytic scan: only a sine-area step in #13; analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic/area arguments; analytic route stays pending.; Official check: Sol1 (maximal-area triangle OAB, parallelograms R1, R2, R3, sector area bounds and AM-GM) and Sol2 (affine map to a square, distances a, b, c, AM-GM contradiction) use only methods already tagged; Sol2 is an area estimate on top of the extremal construction, not a complete computational proof, so the analytic route stays pending. No new tag.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic/area arguments — no analytic route there",
+   "official": "IMO 2009 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2009:G6": {
    "date": "2026-11-16",
-   "range": "#24–#33 of 33 (all loaded)",
-   "note": "Late posts (crazyeyemoody907 #24, Marinchoo #25, Leo.Euler #26 computational ending, awesomeming327. #27, popop614 #28, Batsuh #29, OronSH #30 Euler-line projections, Benjaminxiao #31 nine-point centres, ezpotd #33 moving points; e2.718281828 #32 outline) corroborate existing tags."
+   "range": "#24–#33 of 33 (all loaded); official booklet",
+   "note": "Late posts (crazyeyemoody907 #24, Marinchoo #25, Leo.Euler #26 computational ending, awesomeming327. #27, popop614 #28, Batsuh #29, OronSH #30 Euler-line projections, Benjaminxiao #31 nine-point centres, ezpotd #33 moving points; e2.718281828 #32 outline) corroborate existing tags.; Official check: Sol1 moves CD parallel to itself so everything moves linearly, reduces to CD through A, and proves the concurrency by writing each perpendicular as XC1²−XA1²=const and a signed-length identity with the nine-point centres; Sol2 uses an oriented-angle chase on the two nine-point circles, PH1=2R cos ψ and the intercept theorem. Added Metric relations and length chasing and Angle chasing and cyclicity.",
+   "cite": "official Sol1 (difference-of-squares perpendiculars, length identity); Sol2 (oriented angles on the nine-point circles)",
+   "addTags": [
+    "syn:G: Metric relations and length chasing",
+    "syn:G: Angle chasing and cyclicity"
+   ],
+   "official": "IMO 2009 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2009:G7": {
    "date": "2026-11-16",
@@ -2357,9 +2403,15 @@
   },
   "isl:2009:G8": {
    "date": "2026-11-16",
-   "range": "#46–#55 of 55 (all loaded); analytic scan #1–#55; official solutions booklet",
-   "note": "Late posts (arnov67 #46 Monge, kes0716 #47 isogonal conjugate, torch #48, drmzjoseph #49 Pitot, HamstPan38825 #50 and Ilikeminecraft #53 cyclic C I1 I2 I3, X.Luser #51, YaoAOPS #52 and OronSH #54 moving points, bin_sherlo #55) corroborate angle/metric tags. Analytic scan: trigonometric work appears only as ratio-lemma/law-of-sines steps in mixed proofs (#5, #6, #17, #20, #27, #30), already seen by the earlier review; no complete analytic proof, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic; analytic route stays pending.",
-   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic — no analytic route there"
+   "range": "#46–#55 of 55 (all loaded); analytic scan #1–#55; official solutions booklet; official booklet",
+   "note": "Late posts (arnov67 #46 Monge, kes0716 #47 isogonal conjugate, torch #48, drmzjoseph #49 Pitot, HamstPan38825 #50 and Ilikeminecraft #53 cyclic C I1 I2 I3, X.Luser #51, YaoAOPS #52 and OronSH #54 moving points, bin_sherlo #55) corroborate angle/metric tags. Analytic scan: trigonometric work appears only as ratio-lemma/law-of-sines steps in mixed proofs (#5, #6, #17, #20, #27, #30), already seen by the earlier review; no complete analytic proof, analytic route stays pending.; Official solutions checked (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic; analytic route stays pending.; Official check: Sol1 shows C, I1, I2, I3 concyclic (Pitot sums and an angle chase), reflects C in I2I3 and I1I2 to points L1, L3 on g, and puts the orthocentre on L1L3 (the Comment notes the Simson-line fact behind it); Sol2 reaches the same concyclicity by distance ratios and closes with a chain of similar triangles MZI1~MI2C, NI2Z~NCI3. Added Reflections, rotations and translations and Similarity; the analytic route stays pending.",
+   "ana_refs": "official solutions checked 2026-11-16 (https://www.imo-official.org/problems/IMO2009SL.pdf): Solutions 1–2 are synthetic — no analytic route there",
+   "cite": "official Sol1 (reflections of C in I2I3, I1I2); Sol2 (similar-triangle chain)",
+   "addTags": [
+    "syn:G: Reflections, rotations and translations",
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2009 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2009:N1": {
    "date": "2026-11-16",

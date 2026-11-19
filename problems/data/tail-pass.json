@@ -474,58 +474,94 @@
   },
   "isl:2024:G1": {
    "date": "2026-11-16",
-   "range": "#41–#50 of 50 (all loaded)",
-   "note": "Late posts (Math1lover #42, ostriches88 #44, Hussienahmad #45, InftyByond #46, cyroah1331 #48, OrgaaninenKe #49, arcanine672 #50) use the congruence ACF≅DBE and the arc-midpoint/isosceles-trapezoid argument; corroborates synthetic tags. ezpotd #47 retracts an in-contest trig attempt."
+   "range": "#41–#50 of 50 (all loaded); official booklet",
+   "note": "Late posts (Math1lover #42, ostriches88 #44, Hussienahmad #45, InftyByond #46, cyroah1331 #48, OrgaaninenKe #49, arcanine672 #50) use the congruence ACF≅DBE and the arc-midpoint/isosceles-trapezoid argument; corroborates synthetic tags. ezpotd #47 retracts an in-contest trig attempt.; Official check: Sol1 (EF∥AD from equal distances, parallelograms, T centre of circle BKLC) and Sol2 (congruence, arc midpoint of XY) corroborate existing tags; Sol3 proves ACF≅DEB and takes T as the Miquel point of BCFE, whose spiral similarity is a rotation; added Miquel to the synthetic route.",
+   "cite": "official Sol3 (Miquel point of BCFE)",
+   "addTags": [
+    "syn:G: Miquel and complete quadrilaterals"
+   ],
+   "official": "IMO 2024 SL booklet (imo-official.org), Solutions 1–3 and Comment read"
   },
   "isl:2024:G2": {
    "date": "2026-11-16",
-   "range": "#128–#138 of 138 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (Jackson0423 #128 and mudkip42 #133 tangential parallelogram, SleepyGirraffe #129 cross ratio, windrock #130 reflection of A, cyroah1331 #132 homothety ratio 2, alupigus #135, otwaenng #136) are covered by existing angle/homothety/reflection/cross-ratio tags; thomasuh12 #138 mixtilinear sketch only."
+   "range": "#128–#138 of 138 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (Jackson0423 #128 and mudkip42 #133 tangential parallelogram, SleepyGirraffe #129 cross ratio, windrock #130 reflection of A, cyroah1331 #132 homothety ratio 2, alupigus #135, otwaenng #136) are covered by existing angle/homothety/reflection/cross-ratio tags; thomasuh12 #138 mixtilinear sketch only.; Official check: Sol1 (reflection of A in I, cyclic BPA1X and CYA1P, homothety at A) corroborates existing tags; Sol2 reduces to a parallel via incircle/excircle homotheties and proves it by a length computation (tangent lengths s−c, BY/YC = c/(s−c) = BF/FB1 from the bisector theorem); added Metric relations.",
+   "cite": "official Sol2 (tangent-length ratio computation)",
+   "addTags": [
+    "syn:G: Metric relations and length chasing"
+   ],
+   "official": "IMO 2024 SL booklet (imo-official.org), Solutions 1–2 and Comment read"
   },
   "isl:2024:G3": {
    "date": "2026-11-16",
-   "range": "#34–#44 of 44 (all loaded)",
-   "note": "Late posts (RLiu98442 #34, dno1467 #36, der_Englander #37, PSS1234 #38, OrgaaninenKe #40, InterLoop #41 Reim, bayern271 #42, wangyanchuanjude #43, PROBLEM-SOLVER11 #44) show KL∥AB via the radical axis and KP∥MC, LQ∥ME by angle chase; ezpotd #39 uses ratio lemma + spiral similarity for one step only. Corroborates synthetic tags."
+   "range": "#34–#44 of 44 (all loaded); official booklet",
+   "note": "Late posts (RLiu98442 #34, dno1467 #36, der_Englander #37, PSS1234 #38, OrgaaninenKe #40, InterLoop #41 Reim, bayern271 #42, wangyanchuanjude #43, PROBLEM-SOLVER11 #44) show KL∥AB via the radical axis and KP∥MC, LQ∥ME by angle chase; ezpotd #39 uses ratio lemma + spiral similarity for one step only. Corroborates synthetic tags.; Official check: Sol1 (concyclicities, KP∥MC, LQ∥ME, homothety at D) and Sol3 (ratio chain BU=AV, parallelogram) corroborate existing tags; Sol2 uses equal tangents from X, the power of M (ME·MK = MC·ML) for C,E,K,L concyclic, and a radical centre; added Power of a point.",
+   "cite": "official Sol2 (power of M and X, radical centre)",
+   "addTags": [
+    "syn:G: Power of a point"
+   ],
+   "official": "IMO 2024 SL booklet (imo-official.org), Common remarks and Solutions 1–3 read"
   },
   "isl:2024:G4": {
    "date": "2026-11-16",
-   "range": "#44–#54 of 54 (all loaded)",
-   "note": "Circumcircle #45 gives a complete √(PA·PC) inversion at P composed with reflection in the angle bisector (A↔C, B↔D; Q↔T on (PCX')∩(PDY')); added Inversion to synthetic route. Thelink_20 #54 gives a complete complex-number proof with (PAB) the unit circle (q=(p²+λab)/(p(1+λ)), symmetric in a,b); added Complex numbers to analytic route. Also: Mano #47 / OrgaaninenKe #51 / expsaggaf #52 phantom-point and isogonal routes, lunasgraph_d #46 and SleepyGirraffe #49 moving points, ezpotd #50 homothety of circumcentres.",
+   "range": "#44–#54 of 54 (all loaded); official booklet",
+   "note": "Circumcircle #45 gives a complete √(PA·PC) inversion at P composed with reflection in the angle bisector (A↔C, B↔D; Q↔T on (PCX')∩(PDY')); added Inversion to synthetic route. Thelink_20 #54 gives a complete complex-number proof with (PAB) the unit circle (q=(p²+λab)/(p(1+λ)), symmetric in a,b); added Complex numbers to analytic route. Also: Mano #47 / OrgaaninenKe #51 / expsaggaf #52 phantom-point and isogonal routes, lunasgraph_d #46 and SleepyGirraffe #49 moving points, ezpotd #50 homothety of circumcentres.; Official check: Sol1 (similar triangles QAB~RNM, distance ratios) and Sol2 (harmonic (D,B;T,V), projection through P, phantom point) corroborate existing tags; Sol3 takes the second point of AX on circle PCX and shows the line of centres of circles PCX, PDY is perpendicular to AB by a centre-distance ratio computation along PO_C and PO_D; added Metric relations.",
    "addTags": [
     "syn:G: Inversion",
-    "ana:G: Complex numbers"
+    "ana:G: Complex numbers",
+    "syn:G: Metric relations and length chasing"
    ],
    "explanationAppend": "A late forum proof inverts at P with radius √(PA·PC) and reflects in the bisector, swapping A↔C and B↔D so that Q corresponds to the second intersection of (PCX') and (PDY'), from which PQ∥CD follows by angle chasing.",
-   "cite": "#45 (Circumcircle) complete inversion proof; #54 (Thelink_20) complete complex-number proof"
+   "cite": "#45 (Circumcircle) complete inversion proof; #54 (Thelink_20) complete complex-number proof; official Sol3 (centre-distance ratio computation)",
+   "official": "IMO 2024 SL booklet (imo-official.org), Solutions 1–3 read"
   },
   "isl:2024:G5": {
    "date": "2026-11-16",
-   "range": "#26–#38 of 38 (all loaded)",
-   "note": "uneamedechue #36 gives a complete complex-number proof with (BIC) as unit circle; added Complex numbers to analytic route (primary stays Barycentric). Ilovegeom1 #28 is a terser complex bash. Synthetic late posts (thdnder #27 isogonal lines in ∠KAI, KnowingAnt #29, Ilikeminecraft #30 DIT, Royal_mhyasd #32 incenter/excenter, Math1lover #38) corroborate synthetic tags.",
+   "range": "#26–#38 of 38 (all loaded); official booklet",
+   "note": "uneamedechue #36 gives a complete complex-number proof with (BIC) as unit circle; added Complex numbers to analytic route (primary stays Barycentric). Ilovegeom1 #28 is a terser complex bash. Synthetic late posts (thdnder #27 isogonal lines in ∠KAI, KnowingAnt #29, Ilikeminecraft #30 DIT, Royal_mhyasd #32 incenter/excenter, Math1lover #38) corroborate synthetic tags.; Official check: all solutions reduce to ∠ZAK=∠IAY. Sol1 uses the power of K (KA·KP = KB·KC = KY·KZ) and common chords of three circles; Sol2 an incentre J of APQ with an isosceles-trapezoid angle chase; Sol3 MA·ML = MI² and isogonal conjugates (tagged). Added Power of a point and Angle chasing to the synthetic route.",
    "addTags": [
-    "ana:G: Complex numbers"
+    "ana:G: Complex numbers",
+    "syn:G: Power of a point",
+    "syn:G: Angle chasing and cyclicity"
    ],
-   "cite": "#36 (uneamedechue) complete complex-number proof"
+   "cite": "#36 (uneamedechue) complete complex-number proof; official Sol1 (power of K), Sol2 (incentre of APQ, cyclic trapezoid)",
+   "official": "IMO 2024 SL booklet (imo-official.org), Common remarks, Solutions 1–3, two Comments and Note read"
   },
   "isl:2024:G6": {
    "date": "2026-11-16",
-   "range": "#41–#51 of 51 (all loaded)",
-   "note": "Bridgeon #49 gives a short complete proof: Desargues involution on X,Y fixes the harmonic conjugate Q of P, so AQ bisects ∠UAV and ∠BAC; the shared Apollonius circle makes (ABC),(AUV) tangent, finishing by Protassov's lemma. Added Projective incidence (involution) to synthetic route. Other late posts (LHE96 #41, Bonime #44–#45 exsimilicenter, ezpotd #46 polar+homothety, SimplisticFormulas #47, SleepyGirraffe #48, JARP091 #51) corroborate existing tags.",
+   "range": "#41–#51 of 51 (all loaded); official booklet",
+   "note": "Bridgeon #49 gives a short complete proof: Desargues involution on X,Y fixes the harmonic conjugate Q of P, so AQ bisects ∠UAV and ∠BAC; the shared Apollonius circle makes (ABC),(AUV) tangent, finishing by Protassov's lemma. Added Projective incidence (involution) to synthetic route. Other late posts (LHE96 #41, Bonime #44–#45 exsimilicenter, ezpotd #46 polar+homothety, SimplisticFormulas #47, SleepyGirraffe #48, JARP091 #51) corroborate existing tags.; Official check: Sol2 (polars and La Hire, harmonic (B,C;K,L), M incentre of DBC, Monge) corroborates existing tags; Sol1 shows WXYZ is cyclic with centre J, uses the power of L (LA·LN = LX·LY = LW·LZ) and that A is the Miquel point of WXYZ, so AN ⊥ AJ; added Miquel and Power of a point.",
    "addTags": [
-    "syn:G: Projective incidence"
+    "syn:G: Projective incidence",
+    "syn:G: Miquel and complete quadrilaterals",
+    "syn:G: Power of a point"
    ],
    "explanationAppend": "A late forum proof uses Desargues' involution through X and Y, whose fixed harmonic conjugate shows that triangles ABC and AUV share an Apollonius circle, so the two circumcircles are tangent.",
-   "cite": "#49 (Bridgeon) complete proof"
+   "cite": "#49 (Bridgeon) complete proof; official Sol1 (Miquel point of WXYZ, power of L)",
+   "official": "IMO 2024 SL booklet (imo-official.org), Solutions 1–2 and Note read"
   },
   "isl:2024:G7": {
    "date": "2026-11-16",
-   "range": "#21–#31 of 31 (all loaded)",
-   "note": "Late posts (Aiden-1089 #23, L13832 #26, wangyanliluke #31 Apollonian ratios via spiral similarity at the Miquel point S; SleepyGirraffe #27 and Giant_PT #29 inversion overlays; Feita #22 Brocard; Sanjana42 #24 and bin_sherlo #28 use involutions as one step) corroborate existing Miquel/inversion/spiral tags. KnowingAnt #21 is the cited complex route."
+   "range": "#21–#31 of 31 (all loaded); official booklet",
+   "note": "Late posts (Aiden-1089 #23, L13832 #26, wangyanliluke #31 Apollonian ratios via spiral similarity at the Miquel point S; SleepyGirraffe #27 and Giant_PT #29 inversion overlays; Feita #22 Brocard; Sanjana42 #24 and bin_sherlo #28 use involutions as one step) corroborate existing Miquel/inversion/spiral tags. KnowingAnt #21 is the cited complex route.; Official check: Sol1 proves SP/SQ = IP/IQ = DP/DQ by chains of similar triangles (Apollonius circle); Sol2 inverts in circle BIC and uses the power of Y (YS·YX = YB·YC, YP'·YQ' = YE·YF = YA²); Sol3 uses Brocard's theorem and a harmonic pencil so the tangents at S and Z (the pole of SZ) meet on PQ; Sol4 orthogonality via an inversion-reflection at S. Added Similarity, Power of a point, Poles and polars.",
+   "cite": "official Sol1 (similarity chains), Sol2 (power of Y), Sol3 (Brocard, pole of SZ)",
+   "addTags": [
+    "syn:G: Similarity",
+    "syn:G: Power of a point",
+    "syn:G: Poles and polars"
+   ],
+   "official": "IMO 2024 SL booklet (imo-official.org), Solutions 1–4 and Comment read"
   },
   "isl:2024:G8": {
    "date": "2026-11-16",
-   "range": "#15–#25 of 25 (all loaded)",
-   "note": "Late posts (Ilikeminecraft #17, iStud #19 spiral similarity at A, Scilyse #20 similar switch, ihatemath123 #22 reflections of A in the B/C bisectors, cursed_tangent1434 #23 hybrid) corroborate existing spiral-similarity/angle tags; Ilovegeom1 #15 and KnowingAnt #18 are the complex routes (analytic primary already Complex numbers). #21 notes a handwaved step in #18/#20."
+   "range": "#15–#25 of 25 (all loaded); official booklet",
+   "note": "Late posts (Ilikeminecraft #17, iStud #19 spiral similarity at A, Scilyse #20 similar switch, ihatemath123 #22 reflections of A in the B/C bisectors, cursed_tangent1434 #23 hybrid) corroborate existing spiral-similarity/angle tags; Ilovegeom1 #15 and KnowingAnt #18 are the complex routes (analytic primary already Complex numbers). #21 notes a handwaved step in #18/#20.; Official check: Sol1 (spiral similarity at A, Miquel point, tangent circles at I, radical axis theorem) corroborates existing tags; Sol2 introduces IBIC∥BC and proves Claim 2 and the final contradiction with harmonic bundles; Sol3 moves X on a line through I and fixes a point by the law of sines and trigonometric Ceva in PIQ. Added Harmonic division and Ceva/ratio chains; the Sol3 trig step sits inside a synthetic proof, so no new analytic tag.",
+   "cite": "official Sol2 (harmonic bundles), Sol3 (trig Ceva)",
+   "addTags": [
+    "syn:G: Harmonic division and cross ratios",
+    "syn:G: Ceva, Menelaus and ratio chains"
+   ],
+   "official": "IMO 2024 SL booklet (imo-official.org), Solutions 1–3 and both Comments read"
   },
   "isl:2024:N1": {
    "date": "2026-11-16",
@@ -636,51 +672,75 @@
   },
   "isl:2023:G1": {
    "date": "2026-11-16",
-   "range": "#66–#75 of 75 (all loaded)",
-   "note": "benjaminchew13 #68 gives a complete Cartesian-coordinate proof (A=(0,1), B=(a,0), E=(b,0); AO passes through ((a+b)/2,0)); added Cartesian coordinates to analytic route. Synthetic late posts (Math1lover #66, cyroah1331 #71 parallelogram ACKD, OrgaaninenKe #73 reflection + similarity, InftyByond #74, alupigus #75) corroborate synthetic tags.",
+   "range": "#66–#75 of 75 (all loaded); official booklet",
+   "note": "benjaminchew13 #68 gives a complete Cartesian-coordinate proof (A=(0,1), B=(a,0), E=(b,0); AO passes through ((a+b)/2,0)); added Cartesian coordinates to analytic route. Synthetic late posts (Math1lover #66, cyroah1331 #71 parallelogram ACKD, OrgaaninenKe #73 reflection + similarity, InftyByond #74, alupigus #75) corroborate synthetic tags.; Official check: Sol1 (area ratios), Comment 1 and Sol2 (similar triangles ABE~CAX) corroborate existing tags; Sol3 reflects F in A and uses the spiral similarity at A taking F1B to GE to get AN ⊥ FG; added Spiral similarity.",
    "addTags": [
-    "ana:G: Cartesian coordinates"
+    "ana:G: Cartesian coordinates",
+    "syn:G: Spiral similarity"
    ],
-   "cite": "#68 (benjaminchew13) complete Cartesian proof"
+   "cite": "#68 (benjaminchew13) complete Cartesian proof; official Sol3 (spiral similarity at A)",
+   "official": "IMO 2023 SL booklet (imo-official.org), Solutions 1–3 and Comment 1 read"
   },
   "isl:2023:G2": {
    "date": "2026-11-16",
-   "range": "#50–#59 of 59 (all loaded)",
-   "note": "Late posts (oooahin #50, pirateNT0611 #52, Royal_mhyasd #53, Math1lover #54, InftyByond #55, thomasuh12 #56, alupigus #57, qxdf #58) use the SAS congruence OBC≅QPC giving QC=QP=r, then reflection/angle chase; corroborates synthetic tags."
+   "range": "#50–#59 of 59 (all loaded); official booklet",
+   "note": "Late posts (oooahin #50, pirateNT0611 #52, Royal_mhyasd #53, Math1lover #54, InftyByond #55, thomasuh12 #56, alupigus #57, qxdf #58) use the SAS congruence OBC≅QPC giving QC=QP=r, then reflection/angle chase; corroborates synthetic tags.; Official check: Sol1 (DA=DP symmetry, reflection of P in CD, congruent triangles AOD and PQD, angle chase) and Sol2 (circle PCD of radius r centred at Q, angle chase), Comments 1–2: all methods already tagged; no new tag.",
+   "official": "IMO 2023 SL booklet (imo-official.org), Solutions 1–2 and Comments 1–2 read"
   },
   "isl:2023:G3": {
    "date": "2026-11-16",
-   "range": "#54–#63 of 63 (all loaded)",
-   "note": "Late posts (ihatemath123 #54, Math1lover #55 parallel chords, Lunatic_Lunar7986 #56, Eda_no11 #57 radical axis, pirateNT0611 #58, OrgaaninenKe #59 Pascal, alupigus #60) corroborate synthetic tags; megahertz13 #61 complex bash matches the analytic primary."
+   "range": "#54–#63 of 63 (all loaded); official booklet",
+   "note": "Late posts (ihatemath123 #54, Math1lover #55 parallel chords, Lunatic_Lunar7986 #56, Eda_no11 #57 radical axis, pirateNT0611 #58, OrgaaninenKe #59 Pascal, alupigus #60) corroborate synthetic tags; megahertz13 #61 complex bash matches the analytic primary.; Official check: Sol1 (parallelogram MXPY, cyclic ABRS, homothety of PCD and MRS) corroborates existing tags; Sol2 converts the collinearity into a distance ratio and proves triangles PDC and MAB similar by solving for their angles; added Similarity.",
+   "cite": "official Sol2 (triangles PDC~MAB)",
+   "addTags": [
+    "syn:G: Similarity"
+   ],
+   "official": "IMO 2023 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2023:G4": {
    "date": "2026-11-16",
-   "range": "#156–#166 of 166 (all loaded); middle skimmed by thanks",
-   "note": "Late posts (definite_denny #157 tangency at T, ZZ_zz #159 arc-midpoint collinearity, Amimaths #161, alupigus #163, Math1lover #164, Primeniyazidayi #166) show S,P,L collinear by angle chase and finish with homothety/power arguments; corroborates synthetic tags."
+   "range": "#156–#166 of 166 (all loaded); middle skimmed by thanks; official booklet",
+   "note": "Late posts (definite_denny #157 tangency at T, ZZ_zz #159 arc-midpoint collinearity, Amimaths #161, alupigus #163, Math1lover #164, Primeniyazidayi #166) show S,P,L collinear by angle chase and finish with homothety/power arguments; corroborates synthetic tags.; Official check: Sol1 (triangles APD and S1QS with parallel sides, perspective) and Sol2 (Pascal on a degenerate hexagon) corroborate existing tags; Sol3 shows ω ⊥ γ by a 90° spiral similarity taking PLT to PTU and proves X is the midpoint of AR by a chain of projections giving a harmonic cross ratio; added Spiral similarity and Harmonic division.",
+   "cite": "official Sol3 (90° spiral similarity, (A,R;X,∞)=−1)",
+   "addTags": [
+    "syn:G: Spiral similarity",
+    "syn:G: Harmonic division and cross ratios"
+   ],
+   "official": "IMO 2023 SL booklet (imo-official.org), Solutions 1–3 and Comment read"
   },
   "isl:2023:G5": {
    "date": "2026-11-16",
-   "range": "#54–#64 of 64 (all loaded)",
-   "note": "Late posts (Hussienahmad #54, HormigaCebolla #60 inversion in (ABC), pirateNT0611 #61 √bc inversion, alupigus #58, TUAN2k8 #59, definite_denny #55) identify AO∩(BOC) as the common point; otwaenng #62 and Thelink_20 #64 are complex bashes matching the analytic primary. Corroborates existing tags."
+   "range": "#54–#64 of 64 (all loaded); official booklet",
+   "note": "Late posts (Hussienahmad #54, HormigaCebolla #60 inversion in (ABC), pirateNT0611 #61 √bc inversion, alupigus #58, TUAN2k8 #59, definite_denny #55) identify AO∩(BOC) as the common point; otwaenng #62 and Thelink_20 #64 are complex bashes matching the analytic primary. Corroborates existing tags.; Official check: Sol1 (reflection in the perpendicular bisector of BD), Sol2 (similar triangles with a sine-rule ratio), Sol3 (√(bc) inversion with a tangent-ratio computation) and Sol4 (inversion in ω, congruent triangles): methods already tagged; Sol3's trigonometric step follows an inversion and is not counted as an analytic route; no new tag.",
+   "official": "IMO 2023 SL booklet (imo-official.org), Solutions 1–4 read"
   },
   "isl:2023:G6": {
    "date": "2026-11-16",
-   "range": "#49–#58 of 58 (all loaded)",
-   "note": "Late posts (Benjaminxiao #49 homothety, Sanjana42 #51 and Mo.11ss #54 shooting lemma + Menelaus, hung9A #52, Royal_mhyasd #53, alupigus #55, HeshTarg #57 Miquel) corroborate synthetic tags; InterLoop #50 uses barycentrics only for one step; Thelink_20 #58 complex bash matches analytic primary. Bridgeon #56 sketches an involution/inversion route (self-described as loosely written); not used for tagging."
+   "range": "#49–#58 of 58 (all loaded); official booklet",
+   "note": "Late posts (Benjaminxiao #49 homothety, Sanjana42 #51 and Mo.11ss #54 shooting lemma + Menelaus, hung9A #52, Royal_mhyasd #53, alupigus #55, HeshTarg #57 Miquel) corroborate synthetic tags; InterLoop #50 uses barycentrics only for one step; Thelink_20 #58 complex bash matches analytic primary. Bridgeon #56 sketches an involution/inversion route (self-described as loosely written); not used for tagging.; Official check: Sol1 (Menelaus puts K on AD, homothety gives PQ∥BC, P is the centre of the spiral similarity taking CD to XA) and Sol2 (harmonic cross ratios by projection, inversion at D with radius DP, homothety, parallelograms); added Spiral similarity, Harmonic division and Inversion.",
+   "cite": "official Sol1 (spiral similarity at P), Sol2 (cross ratios, inversion at D)",
+   "addTags": [
+    "syn:G: Spiral similarity",
+    "syn:G: Harmonic division and cross ratios",
+    "syn:G: Inversion"
+   ],
+   "official": "IMO 2023 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2023:G7": {
    "date": "2026-11-16",
-   "range": "#39–#48 of 48 (all loaded)",
-   "note": "Late posts (ezpotd #39 spiral similarity, Giabach298 #40 Euler reflection point, YaoAOPS #41, AR17296174 #42, EpicBird08 #43, Ilikeminecraft #44, HamstPan38825 #45, iStud #46, Royal_mhyasd #47, bin_sherlo #48) use reflections of vertices over altitudes, spiral similarity and the Euler reflection point; corroborates synthetic tags."
+   "range": "#39–#48 of 48 (all loaded); official booklet",
+   "note": "Late posts (ezpotd #39 spiral similarity, Giabach298 #40 Euler reflection point, YaoAOPS #41, AR17296174 #42, EpicBird08 #43, Ilikeminecraft #44, HamstPan38825 #45, iStud #46, Royal_mhyasd #47, bin_sherlo #48) use reflections of vertices over altitudes, spiral similarity and the Euler reflection point; corroborates synthetic tags.; Official check: Sol1 (opposite/direct similarities, circle centred at H, Apollonian circle of HH1) and Sol2 (reflections in AH, triangles symmetric in OH, spiral symmetry, parallelogram O1TOH): all methods already tagged; no new tag.",
+   "official": "IMO 2023 SL booklet (imo-official.org), Solutions 1–2 read"
   },
   "isl:2023:G8": {
    "date": "2026-11-16",
-   "range": "#49–#60 of 60 (all loaded)",
-   "note": "KevinYang2.71 #53 gives a complete barycentric proof (tangent parameters t1,t2,t3; radical-axis identity verified symbolically); added Barycentric coordinates to analytic route (primary stays Trigonometric computation). YaoAOPS #50, everythingpi3141592 #51, Miquel-point #52, Thelink_20 #55, IamYourFriend #59, SyHoAms #60 use the circumcentre claim A1=O(BA2C) with trig/radical-centre finishes; corroborates existing tags.",
+   "range": "#49–#60 of 60 (all loaded); official booklet",
+   "note": "KevinYang2.71 #53 gives a complete barycentric proof (tangent parameters t1,t2,t3; radical-axis identity verified symbolically); added Barycentric coordinates to analytic route (primary stays Trigonometric computation). YaoAOPS #50, everythingpi3141592 #51, Miquel-point #52, Thelink_20 #55, IamYourFriend #59, SyHoAms #60 use the circumcentre claim A1=O(BA2C) with trig/radical-centre finishes; corroborates existing tags.; Official check: the Solution (circumcentre claim, angle chase, radical axis theorem twice, coaxal circles) and Comment (trig Ceva, isogonal conjugate) use methods already tagged; no new tag.",
    "addTags": [
     "ana:G: Barycentric coordinates"
    ],
-   "cite": "#53 (KevinYang2.71) complete barycentric proof"
+   "cite": "#53 (KevinYang2.71) complete barycentric proof",
+   "official": "IMO 2023 SL booklet (imo-official.org), Solution and Comment read"
   },
   "isl:2023:N1": {
    "date": "2026-11-16",

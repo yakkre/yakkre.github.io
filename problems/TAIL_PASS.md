@@ -102,7 +102,7 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 
 ## What is left (resume here)
 
-1. **RMM 2021 and older** (64 open rows after completing 2024/2023 and two 2021 checks; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
+1. **RMM 2020 and older** (60 open rows after completing 2024/2023/2021; `tail_pass_todo.py rmm YEAR`). Not started: RMM work belongs to Codex (user's division of work, 2026-11-15), so only on request.
 2. Loose ends: 1992 (CHN-2, FRA1, IND-4), 1991 (1, 2, 7) and 1996 G8 were thread-scanned but could not be matched to their Compendium solutions; 1999 G2's official "Solution 2" (coordinate determinants)
    is only known from a truncated AoPS quote and could be verified against an original booklet.
 
@@ -126,6 +126,13 @@ Reading method that worked well: the Chrome tool cuts JS results at about 1,000 
 - Problem 1 adds analytic Vectors and dot products and Power of a point from SnowPanda #12’s complete hybrid proof. Problem 2 adds nothing. Existing routes, primaries and confidence retained.
 - Supplied organizer Day1 pp1–3 read for these two rows. Next row: **rmm:2021:3**.
 - Partial checkpoint published as `2c6a730` at the user’s explicit “push everything that is local rn” request; no completed-year claim. Python ledger tests and all 34 Node checks passed, fail 0; existing routes and other rows preserved.
+
+## RMM 2021 completed (2026-11-20)
+
+- Remaining main problems 3–6 checked; the year todo is empty and the prior published problems1–2 are preserved. 60 RMM rows remain, from2020 back to2008. Next: **rmm:2020:1** (recompute fresh todo).
+- Added Generating functions to problem3 from the complete roots-of-unity coefficient-filter proofs; Prime valuations—vp to problem4 from bin_sherlo #18’s odd-part descent; Grids and tilings to problem5 from the complete supplied tile-vertex proof. Problem6 adds nothing. No primary, old tag or confidence changed.
+- All relevant supplied proofs read: cached organizer Day1 p4 and Day2 pp1–5. Problem5’s diagram and tile-exit bound were visually checked; numerical identities/metric checks are saved in the local daily evidence pack. Problem6 forum replies remain insufficient, honestly distinguished from its supplied-proof support.
+- Chrome access was available again; normal source pages loaded without challenge interaction. External catalogue, statements, UI and all other-contest ledger updates were preserved from fresh main `50e3bf5`.
 
 ## Flagged for the user (do not decide alone)
 
@@ -188,3 +195,9 @@ RMM 2021 flags (2026-11-18):
 - Main 2: #2’s fixed-swap construction does not cover arbitrary query subsets. The official cyclic lower bound needs singleton queries treated separately; the forum #3/#14 do so explicitly. #13/#15 alter the statement by changing distinctness/remainder requirements. No new tags.
 
 Publication verification (2026-11-18): remote commits `3d1da1a` (2024), `4fd7871` (2023), and `2c6a730` (2021 partial) have exactly the same Git trees as the validated local checkpoints. Publication used the connected GitHub account with fresh expected-main-SHA guards after CLI authentication was unavailable. Original approval-review rejection was resolved by explicit approval in the current chat; no approval remains pending. A concurrent worker merged these reviews with other catalogue work as `9072d12`; the final notes were rebased onto that merge, preserving its catalogue and ledger byte-for-byte.
+
+RMM 2021 flags continued (2026-11-20):
+- Main3: #8 only proposes Chevalley–Warning; #9 writes all subsets instead of contiguous intervals; #12’s full-field vanishing claim fails at (0,1,…,1); #13 has a sum/product typo and a repeated root. Added Generating functions only from complete #14/#18. #2’s p=2017 remains a typo for17.
+- Main4: #2 omits base cases; #6 was corrected by #7–#9 and retains 2k+5 for2k+1; #10 reverses its irreducible definition, #11 can halve an odd untouched value, #13 asserts unjustified equality of reachability indicators and writes the wrong maximum, #19 leaves its constructions schematic. Added valuations from complete #18 instead.
+- Main5 (Medium retained): the supplied p3 tiling proof supplies the metric justification absent in earlier #9; a High upgrade is now a candidate for the user. #12 complex construction has an empty angle-interval intersection as printed and unsupported cross-region/boundary separation; #16–#18 compress their metric or construction steps. No complex tag, no confidence change. Proposer #4 attachment located but not read or relied upon.
+- Main6 (Medium retained): #2 unfinished; #3 omits the three-point case, has an invalid shift-uniform tail bound and leaves T1=1 unresolved; #6 explicitly labels its solution incorrect and sketches a repair. Complete supplied pp4–5 support the classification with the stronger labelled/repeated-target induction stated explicitly; no complete adequate forum proof was found. Confidence stays Medium unless the user decides otherwise.

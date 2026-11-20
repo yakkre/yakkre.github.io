@@ -1,4 +1,4 @@
-import {problemName} from './catalogue-core.mjs?v=20261118-source-wording';
+import {problemName} from './catalogue-core.mjs?v=20261119-tstst';
 
 let statementsPromise, mathPromise, currentKey;
 export function loadStatementSources() {

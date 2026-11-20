@@ -14,7 +14,7 @@ export function withStatementOnlyProblems(problems, statements, contests = ['usa
     let url;
     try { url = new URL(s.sourceUrl); } catch { continue; }
     if (url.protocol !== 'https:') continue;
-    added.push({key, contest, contestName:contest === 'usatst' ? 'USA TST' : 'RMM', year, id,
+    added.push({key, contest, contestName:{usatst:'USA TST', usatstst:'USA TSTST'}[contest] || 'RMM', year, id,
       section:id.startsWith('SL ') ? 'Shortlist' : 'Contest', subject:'',
       statementOnly:true, primaryTag:null, tags:[], explanation:'Classification pending.',
       aopsUrl:url.hostname === 'artofproblemsolving.com' || url.hostname.endsWith('.artofproblemsolving.com') ? s.sourceUrl : null,

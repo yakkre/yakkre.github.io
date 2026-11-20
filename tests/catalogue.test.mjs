@@ -99,3 +99,17 @@ test('USA TST rows are complete papers with official sources and geometry routes
   const g=problems.find(p=>p.key==='usatst:2026:5');assert.deepEqual(g.primaryTags,[61,77]);assert.match(g.geometry.analytic.status,/^Reviewed/);
   assert.ok(data.coverage.some(c=>c.contest==='usatst'));
 });
+
+test('USA TSTST rows are complete papers with sources and geometry routes',()=>{
+  const ts=problems.filter(p=>p.contest==='usatstst');
+  assert.deepEqual(ts.filter(p=>p.year===2026).map(p=>p.id),['1','2','3','4','5','6','7','8','9']);
+  for(const p of ts){
+    assert.equal(p.key,`usatstst:${p.year}:${p.id}`);assert.equal(p.contestName,'USA TSTST');assert.equal(p.section,'Contest');
+    assert.match(p.aopsUrl,/^https:\/\/artofproblemsolving\.com\/community\/c6h/);assert.equal(p.forumStatus,'live');
+    assert.ok(p.subject==='G'||p.tags.length<=4);
+  }
+  assert.equal(problemName(ts[0]),`${ts[0].year} USA TSTST ${ts[0].id}`);
+  assert.equal(selectProblems(problems,taxonomy,{contest:'usatstst'}).length,ts.length);
+  const g=problems.find(p=>p.key==='usatstst:2026:1');assert.deepEqual(g.primaryTags,[64,79]);assert.match(g.geometry.analytic.status,/^Reviewed/);
+  assert.ok(data.coverage.some(c=>c.contest==='usatstst'));
+});

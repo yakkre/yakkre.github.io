@@ -1,4 +1,4 @@
-import {matchingCollections} from './statement-catalogue.mjs?v=20261117-statement-only';
+import {matchingCollections} from './statement-catalogue.mjs?v=20261119-tstst';
 
 export function createGridPicker(host, options, onSelect) {
   const search = host.querySelector('input'), list = host.querySelector('[data-grid-options]');

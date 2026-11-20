@@ -7,6 +7,7 @@ export function problemName(problem) {
   const collection = problem.contest === 'isl' ? 'ISL'
     : problem.contest === 'rmm' ? `RMM${rmmShortlist ? ' SL' : ''}`
     : problem.contest === 'usatst' ? 'USA TST'
+    : problem.contest === 'usatstst' ? 'USA TSTST'
     : problem.contestName || problem.contest;
   const displayId = rmmShortlist ? String(problem.id).replace(/^SL\s+/i, '') : problem.id;
   return `${problem.year} ${collection} ${displayId}`;

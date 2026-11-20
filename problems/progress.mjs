@@ -8,7 +8,7 @@
 // so it follows the reader to any device. Local data is merged into the account on sign-in.
 // Firebase loads lazily; if it is unavailable the catalogue still works with local data only.
 import {firebaseConfig} from '../firebase-config.js';
-import {cleanTabs, tabsToMigrate, readLocalTabs, writeLocalTabs, clearLocalTabs, MAX_TEXT, MAX_TITLE} from './notebook-core.mjs?v=20261119-tstst';
+import {cleanTabs, tabsToMigrate, readLocalTabs, writeLocalTabs, clearLocalTabs, MAX_TEXT, MAX_TITLE} from './notebook-core.mjs?v=20261120-usamo';
 
 const SDK = 'https://www.gstatic.com/firebasejs/10.12.5/';
 const LOCAL_KEY = 'raindrops-done-v1';

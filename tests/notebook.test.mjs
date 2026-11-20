@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {cleanTabs, moveTab, nextOrder, tabsToMigrate, linkProblems, DEFAULT_TITLE, MAX_TABS} from '../problems/notebook-core.mjs';
 
 const tab = (id, order, extra = {}) => ({id, title: id.toUpperCase(), text: 'x', order, updated: 1, ...extra});
-const keys = new Set(['isl:2019:C6', 'isl:2001:G4', 'isl:1993:CAN2', 'isl:1990:5', 'isl:1997:P16', 'rmm:2017:6', 'usatst:2026:5', 'usatst:2025:5', 'usatstst:2025:5']);
+const keys = new Set(['isl:2019:C6', 'isl:2001:G4', 'isl:1993:CAN2', 'isl:1990:5', 'isl:1997:P16', 'rmm:2017:6', 'usatst:2026:5', 'usatst:2025:5', 'usatstst:2025:5', 'usamo:2026:6']);
 const has = k => keys.has(k);
 
 test('tabs are cleaned, de-duplicated and sorted by order', () => {
@@ -33,6 +33,7 @@ test('problem names become links only when the problem exists', () => {
   assert.deepEqual(linked('RMM 2017/6 · rmm 2017 #6 · 2017 RMM 6 · RMM 2017 P6'), ['rmm:2017:6', 'rmm:2017:6', 'rmm:2017:6', 'rmm:2017:6']);
   assert.deepEqual(linked('USA TST 2026/5 · TST 2026 #5 · 2026 USA TST 5 · usa tst 2026 P5'), ['usatst:2026:5', 'usatst:2026:5', 'usatst:2026:5', 'usatst:2026:5']);
   assert.deepEqual(linked('USA TSTST 2025/5 · TSTST 2025 #5 · 2025 TSTST 5 · 2025 USA TSTST P5 · TST 2025 #5'), ['usatstst:2025:5', 'usatstst:2025:5', 'usatstst:2025:5', 'usatstst:2025:5', 'usatst:2025:5']);
+  assert.deepEqual(linked('USAMO 2026/6 · USAMO 2026 #6 · 2026 USAMO 6 · USAMO 2026 P6'), ['usamo:2026:6', 'usamo:2026:6', 'usamo:2026:6', 'usamo:2026:6']);
   assert.deepEqual(linked('12019 C6 and 2019 C67 and year 2019'), []);
 });
 test('math is never split by a link', () => {

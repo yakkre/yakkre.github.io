@@ -1,7 +1,7 @@
-import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261119-tstst';
-import {renderStatement, typesetMath, loadStatementSources} from './statement-view.mjs?v=20261119-tstst';
-import {withStatementOnlyProblems, collectionOptions} from './statement-catalogue.mjs?v=20261119-tstst';
-import {createGridPicker} from './grid-picker.mjs?v=20261119-tstst';
+import {normalize, parseTagInput, selectProblems, validTagIds, problemName} from './catalogue-core.mjs?v=20261120-usamo';
+import {renderStatement, typesetMath, loadStatementSources} from './statement-view.mjs?v=20261120-usamo';
+import {withStatementOnlyProblems, collectionOptions} from './statement-catalogue.mjs?v=20261120-usamo';
+import {createGridPicker} from './grid-picker.mjs?v=20261120-usamo';
 import {parseNote, renderNote, noteExcerpt} from './notes-view.mjs?v=20261117-latex';
 
 const START_HREF = location.href; // before render() rewrites the URL: a sign-in link's code is in it
@@ -9,7 +9,7 @@ const $ = id => document.getElementById(id);
 const PAGE_SIZE = 50;
 const SUBJECTS = {A:'Algebra', C:'Combinatorics', N:'Number theory', G:'Geometry'};
 const STATUS = {live:'Live forum checked', archive:'Archived forum checked', pending:'Forum check pending'};
-const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM', usatst:'USA TST', usatstst:'USA TSTST'};
+const CONTESTS = {isl:'IMO Shortlist', rmm:'RMM', usatst:'USA TST', usatstst:'USA TSTST', usamo:'USAMO'};
 const FIELDS = [['search','query'],['contest','contest'],['subject','subject'],['evidence','evidence'],['difficulty','difficulty'],['done','done'],['from-year','from'],['to-year','to']];
 const DONE = {yes:'Marked done', no:'Not done yet'};
 let data, tags, filters, page = 1, progress = null, view = 'list', currentColl = '', sharedId = '', sharedCache = null;
@@ -771,7 +771,7 @@ function setupProblemView() {
 
 async function setupProgress() {
   try {
-    const {createProgress} = await import('./progress.mjs?v=20261119-tstst');
+    const {createProgress} = await import('./progress.mjs?v=20261120-usamo');
     progress = createProgress({startHref: START_HREF, validKeys: new Set(data.problems.map(p => p.key)), onChange: () => { renderProgress(); render(); notebook?.refresh(); }});
     $('signin-form').addEventListener('submit', async e => {
       e.preventDefault(); const b = e.submitter || e.target.querySelector('button'); b.disabled = true;
@@ -840,7 +840,7 @@ async function start() {
     });
     await setupProgress();
     try {
-      const {createNotebook} = await import('./notebook.mjs?v=20261119-tstst');
+      const {createNotebook} = await import('./notebook.mjs?v=20261120-usamo');
       const keys = new Set(data.problems.map(p => p.key)), byKey = new Map(data.problems.map(p => [p.key, p]));
       notebook = createNotebook({store: progress, has: k => keys.has(k), hrefFor: k => entryUrl(byKey.get(k)), open: k => openProblem(byKey.get(k))});
     } catch (error) { console.error('Notebook unavailable:', error); }

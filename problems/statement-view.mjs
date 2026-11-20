@@ -1,4 +1,4 @@
-import {problemName} from './catalogue-core.mjs?v=20261119-tstst';
+import {problemName} from './catalogue-core.mjs?v=20261120-usamo';
 
 let statementsPromise, mathPromise, currentKey;
 export function loadStatementSources() {

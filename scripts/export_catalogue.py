@@ -7,10 +7,11 @@ import argparse, collections, datetime, hashlib, json, re
 from pathlib import Path
 import openpyxl
 
-def export(imo, rmm, output, usatst=None, usatstst=None):
+def export(imo, rmm, output, usatst=None, usatstst=None, usamo=None):
     sources = [('isl', 'IMO Shortlist', Path(imo)), ('rmm', 'RMM', Path(rmm))]
     if usatst: sources.append(('usatst', 'USA TST', Path(usatst)))
     if usatstst: sources.append(('usatstst', 'USA TSTST', Path(usatstst)))
+    if usamo: sources.append(('usamo', 'USAMO', Path(usamo)))
     problems, taxonomy, snapshots = [], None, []
     for contest, name, path in sources:
         raw = path.read_bytes()
@@ -67,19 +68,23 @@ def export(imo, rmm, output, usatst=None, usatstst=None):
     tst_span = f'{tst_years[-1]}–{tst_years[0]}' if len(tst_years) > 1 else ''.join(map(str, tst_years))
     tstst_years = sorted({p['year'] for p in problems if p['contest']=='usatstst'}, reverse=True)
     tstst_span = f'{tstst_years[-1]}–{tstst_years[0]}' if len(tstst_years) > 1 else ''.join(map(str, tstst_years))
+    usamo_years = sorted({p['year'] for p in problems if p['contest']=='usamo'}, reverse=True)
+    usamo_span = f'{usamo_years[-1]}–{usamo_years[0]}' if len(usamo_years) > 1 else ''.join(map(str, usamo_years))
     data = dict(updated=datetime.datetime.now(datetime.timezone.utc).isoformat(), taxonomy=taxonomy,
         problems=problems, snapshots=snapshots, counts=dict(counts),
         scope='IMO Shortlist 1990–2025, RMM main papers 2008–2026 and published shortlists, and the USA TST for the IMO (from 2026 backwards), all including geometry. Geometry records separate reviewed synthetic and analytic primaries. Additional statements may be shown with classification pending; source-review limitations remain explicit.',
         coverage=[dict(contest='isl', title='IMO Shortlist · 1990–2025', text=f"{counts['isl']} classifications. The later forum audit is ongoing: {recent_pending} recent entries currently have official-only evidence. Earlier archived and live checks are preserved. Pending source checks are distinguished from completed classifications."),
                   dict(contest='rmm', title='RMM · contest papers and shortlists', text=f"{len(rmm_main)} classified main-paper entries, including {rmm_geo} geometry problems, and {len(rmm_shortlist)} classified shortlist entries. Both branches are in scope. Unclassified statements and individual official-source, forum-proof and analytic-route limitations remain explicitly pending.")]
              + ([dict(contest='usatst', title=f'USA TST · {tst_span}', text=f"{counts['usatst']} reviewed entries from the USA Team Selection Test for the IMO (TSTST and the TST for EGMO are not in scope), added from 2026 backwards. Official solutions are the USA TST archive (2025 onward) and Evan Chen's solution files; AoPS threads supply tags and alternative methods.")] if counts['usatst'] else [])
-             + ([dict(contest='usatstst', title=f'USA TSTST · {tstst_span}', text=f"{counts['usatstst']} reviewed entries from the USA TST Selection Test (TSTST), added from the newest year backwards. Official solutions are Evan Chen's solution files and the USA TST archive where published; AoPS threads supply tags and alternative methods.")] if counts['usatstst'] else []),
+             + ([dict(contest='usatstst', title=f'USA TSTST · {tstst_span}', text=f"{counts['usatstst']} reviewed entries from the USA TST Selection Test (TSTST), added from the newest year backwards. Official solutions are Evan Chen's solution files and the USA TST archive where published; AoPS threads supply tags and alternative methods.")] if counts['usatstst'] else [])
+             + ([dict(contest='usamo', title=f'USAMO · {usamo_span}', text=f"{counts['usamo']} reviewed entries from the USA Mathematical Olympiad (USAJMO is not in scope), added from the newest year backwards. Official solutions are Evan Chen's USAMO notes; AoPS threads supply tags and alternative methods.")] if counts['usamo'] else []),
         caveats=['A forum check can find an incomplete proof; it does not certify every reply. Expand research notes for the exact outcome.',
                  'Official booklets, attributed reproductions and Compendium fallbacks are distinguished in each entry. Some original older booklets remain unavailable.',
                  '2016 N8 has a literal-versus-intended-statement caveat, retained in its research notes.',
                  'Main RMM problem numbers are preserved; A/C/N/G subjects are descriptive mappings. Main and SL IDs remain distinct, with published shortlist coverage and source gaps recorded explicitly.']
                  + (['USA TST years are IMO years (TST 2026 was held in December 2025 and January 2026); problem numbers are the paper numbers, and subjects are descriptive mappings.'] if counts['usatst'] else [])
-                 + (['USA TSTST years are the calendar year of the June test; problem numbers are the paper numbers (1–9), and subjects are descriptive mappings.'] if counts['usatstst'] else []))
+                 + (['USA TSTST years are the calendar year of the June test; problem numbers are the paper numbers (1–9), and subjects are descriptive mappings.'] if counts['usatstst'] else [])
+                 + (['USAMO years are the calendar year of the olympiad (March/April); problem numbers are 1–6, and subjects are descriptive mappings.'] if counts['usamo'] else []))
     # Re-apply the AoPS tail-pass ledger so later-thread findings survive re-exports.
     # refresh_site.sh runs this with `python -I`, which leaves the script's own folder off sys.path.
     import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -93,7 +98,7 @@ def export(imo, rmm, output, usatst=None, usatstst=None):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()
-    p.add_argument('--imo',required=True);p.add_argument('--rmm',required=True);p.add_argument('--usatst');p.add_argument('--usatstst')
+    p.add_argument('--imo',required=True);p.add_argument('--rmm',required=True);p.add_argument('--usatst');p.add_argument('--usatstst');p.add_argument('--usamo')
     p.add_argument('--output',default='problems/data/catalogue.json')
-    args=p.parse_args();export(args.imo,args.rmm,args.output,args.usatst,args.usatstst)
+    args=p.parse_args();export(args.imo,args.rmm,args.output,args.usatst,args.usatstst,args.usamo)
 

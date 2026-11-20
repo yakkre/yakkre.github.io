@@ -45,7 +45,7 @@ export function tabsToMigrate(remote, local) {
 // ---- Problem names in viewing mode
 // Recognised forms (case-insensitive): "2019 C6", "2019 ISL C6", "ISL 2019 C6", "1993 ISL CAN2", "ISL 1990 5",
 // "RMM 2017/6", "RMM 2017 #6", "RMM 2017 P6", "2017 RMM 6", "USA TST 2026/5", "2026 USA TST 5", "TST 2026 #5",
-// "USA TSTST 2025/9", "TSTST 2025 #9", "2025 TSTST 9".
+// "USA TSTST 2025/9", "TSTST 2025 #9", "2025 TSTST 9", "USAMO 2025/6", "USAMO 2025 #6", "2025 USAMO 6".
 // A match becomes a link only if the problem exists.
 const NAME = new RegExp([
   String.raw`\b(?<y1>(?:19|20)\d\d)\s+(?:ISL\s+)?(?<s1>[ACGNPS]\d{1,2})\b`,
@@ -57,6 +57,8 @@ const NAME = new RegExp([
   String.raw`\b(?<y7>(?:19|20)\d\d)\s+(?:USA\s+)?TST\s*(?:\/|#|P|problem\s+)?\s*(?<s7>\d)\b`,
   String.raw`\b(?:USA\s+)?TSTST\s+(?<y8>(?:19|20)\d\d)\s*(?:\/|#|P|problem\s+)?\s*(?<s8>\d)\b`,
   String.raw`\b(?<y9>(?:19|20)\d\d)\s+(?:USA\s+)?TSTST\s*(?:\/|#|P|problem\s+)?\s*(?<s9>\d)\b`,
+  String.raw`\bUSAMO\s+(?<y10>(?:19|20)\d\d)\s*(?:\/|#|P|problem\s+)?\s*(?<s10>\d)\b`,
+  String.raw`\b(?<y11>(?:19|20)\d\d)\s+USAMO\s*(?:\/|#|P|problem\s+)?\s*(?<s11>\d)\b`,
 ].join('|'), 'gi');
 // Math spans ($$…$$, $…$, \[…\], \(…\)) are left alone so links never split a formula.
 const MATH = /\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$(?:\\.|[^$\\])+?\$/g;
@@ -67,6 +69,7 @@ function candidates(m) {
   if (g.y2 || g.y3) return [`isl:${g.y2 || g.y3}:${(g.s2 || g.s3).toUpperCase()}`];
   if (g.y6 || g.y7) return [`usatst:${g.y6 || g.y7}:${g.s6 || g.s7}`];
   if (g.y8 || g.y9) return [`usatstst:${g.y8 || g.y9}:${g.s8 || g.s9}`];
+  if (g.y10 || g.y11) return [`usamo:${g.y10 || g.y11}:${g.s10 || g.s11}`];
   return [`rmm:${g.y4 || g.y5}:${g.s4 || g.s5}`];
 }
 function linkPlain(text, has, out) {

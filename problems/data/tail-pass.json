@@ -6402,6 +6402,40 @@
    "explanationAppend": "Official and forum routes add Reim angle chases, powers and power ratios, a coaxal-circle locus and similar triangles.",
    "cite": "official Solutions 1–2; #9 (TheUltimate123); #34 (popop614); #28 (GrantStar)",
    "official": "sols-TST-IMO-2020.tex (Evan Chen), section re-read in the 2026-11-19 top-up"
+  },
+  "rmm:2021:3": {
+   "date": "2026-11-20",
+   "range": "#1–#18 of 18 (whole available thread; #15 absent)",
+   "note": "Late posts john0512 #14 and ZVFrozel #18 give complete coefficient-filter/prefix-sum proofs; add Generating functions for the substantive assignment-encoding and coefficient extraction. Supplied organizer Day1 p4 read from the cached booklet: singleton brigades shift exponents to 1 mod4, reduction x_i^17→x_i preserves that class, and the reduced vanishing polynomial is zero. Root-filter identities and the interval/Vandermonde product checked numerically. Existing primaries/tags retained. Caveats: #2 prints p=2017 for17; #8 only proposes Chevalley–Warning; #9 writes all subsets instead of intervals; #12 incorrectly asserts the singleton-free product vanishes on the entire field grid (x1=0, remaining xi=1 is a counterexample); #13 prints a sum instead of a product and repeats −1 in the root set. No addition relies on those slips.",
+   "addTags": [
+    "A: Generating functions"
+   ],
+   "cite": "https://artofproblemsolving.com/community/c6h2692529p23374853 | #14 john0512, #18 ZVFrozel; https://rmms.lbi.ro/rmm2021/pr1/RMM2021-Day1-English_Solutions.pdf physical p4 (cached supplied booklet)"
+  },
+  "rmm:2021:4": {
+   "date": "2026-11-20",
+   "range": "#1–#19 of 19 (whole available thread; #12 absent; #15–#16 contain only deleted placeholders)",
+   "note": "Late bin_sherlo #18 gives a complete odd-part descent: repeated two-move doublings equalize the three 2-adic valuations without changing their odd parts, then a sum/difference move strictly decreases their total odd part unless a collision has already reduced the board. Add Prime valuations—vp; equalization/descent checked on all2024 distinct triples in1..24. john0512 #14 gives a compatible decreasing reduced-ratio construction. Cached supplied Day2 pp1–2 read in full: the four-residue-class reduction and general minimal-sum descent corroborate existing tags. No primary changed. Flags: #2 leaves base cases unproved; #6 is corrected by #7–#9 and retains a 2k+5 typo; #10 reverses its irreducible definition, #11 can halve an odd untouched entry, #13 claims unjustified equality of reachability indicators and prints the wrong maximum in its last sum, and #19 leaves the reduction/constructions schematic. No addition relies on these candidates.",
+   "addTags": [
+    "N: Prime valuations—vp"
+   ],
+   "cite": "https://artofproblemsolving.com/community/c6h2693037p23382405 | #18 bin_sherlo; https://rmms.lbi.ro/rmm2021/pr2/RMM2021-Day2-English_Solutions.pdf physical pp1–2 (cached supplied booklet)"
+  },
+  "rmm:2021:5": {
+   "date": "2026-11-20",
+   "range": "#1–#18 of 18 (whole available thread; #14–#15 absent)",
+   "note": "Read cached supplied Day2 p3 including its layer diagram and final metric argument: a coherent tiling by unit equilateral triangles and 60°–120° lozenges gives the vertex count; nonadjacent tile exits are at least sqrt(3)/2 from the starting vertex, proving separation. Add Grids and tilings from that complete supplied proof; unit-lozenge exit/diagonal bounds and layer count checked numerically. L567 #9 and late #16–#18 corroborate the layer idea but leave metric or construction details compressed. mmathss #12 complex candidate has an empty angle-interval intersection as printed and asserts cross-region separation from an unsupported distance-to-boundary claim; no Complex numbers tag. Proposer #4 attachment was located, not read or used as proof. Existing Medium confidence retained; official completion of the prior metric gap supports a possible upgrade for the user to decide.",
+   "addTags": [
+    "C: Grids and tilings"
+   ],
+   "cite": "https://rmms.lbi.ro/rmm2021/pr2/RMM2021-Day2-English_Solutions.pdf physical p3, cached supplied proof and diagram; https://artofproblemsolving.com/community/c6h2693040p23382414 | #9 L567, #12 mmathss, #16 Leo.Euler, #17 CT17, #18 ray66",
+   "explanationAppend": "The supplied proof uses one coherent tiling: vertices in a common tile are at least one unit apart, while other pairs cross two tile exits of length at least √3/2."
+  },
+  "rmm:2021:6": {
+   "date": "2026-11-20",
+   "range": "#1–#6 of 6 (whole available thread, all loaded)",
+   "note": "No adequate complete forum proof was added: CANBANKAN #2 stops unfinished, bora_olmez #3 leaves the three-point case unproved and has a non-uniform tail claim plus an unhandled T1=1 collision, and AdventuringHobbit #6 explicitly retracts its induction and only sketches a repair. Cached supplied Day2 pp4–5 read in full, including both lemmas and the comment: the uniform large-gap invariant excludes odd positive-leading polynomials; strict convex/concave pair-collapse and two-point interpolation prove the stronger labelled interpolation induction, allowing repeated target values. This explicit stronger formulation is needed to justify the printed h(ci)=bi−g(ai) step. Existing four tags and Medium confidence retained; no addition from incomplete candidates. Medium/possible upgrade remains the user’s decision, with the official proof carrying the support and forum coverage resolved as insufficient.",
+   "cite": "https://artofproblemsolving.com/community/c6h2692981p23381634 | #1–#6; https://rmms.lbi.ro/rmm2021/pr2/RMM2021-Day2-English_Solutions.pdf physical pp4–5 (cached supplied proof)"
   }
  }
 }

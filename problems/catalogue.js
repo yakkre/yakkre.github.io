@@ -1,4 +1,4 @@
-import {normalize, parseTagInput, selectProblems, validTagIds, problemName, withDifficulty, parseProblemList, arrangeByTopic, randomSet, islNumber, TOPICS} from './catalogue-core.mjs?v=20261127-islnum2';
+import {normalize, parseTagInput, selectProblems, validTagIds, problemName, withDifficulty, parseProblemList, arrangeByTopic, randomSet, islNumber, TOPICS} from './catalogue-core.mjs?v=20261128-variety';
 import {renderStatement, typesetMath, loadStatementSources, statementElement} from './statement-view.mjs?v=20261127-practice';
 import {withStatementOnlyProblems, collectionOptions} from './statement-catalogue.mjs?v=20261120-usamo';
 import {createGridPicker} from './grid-picker.mjs?v=20261120-usamo';

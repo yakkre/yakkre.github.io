@@ -126,10 +126,13 @@ export function arrangeByTopic(keys, byKey, cmp, newId = () => Math.random().toS
 // the rest from the levels strictly between (repeats allowed). With one problem in a
 // topic it gets a random level; when nothing lies between min and max the rest are drawn from the two ends.
 // If a level has run out, the nearest level in range that still has problems is used. skip: keys to leave out.
+// Variety: a problem whose primary method is already in the set is REPEAT_WEIGHT times as likely to be picked as
+// one with a new primary method, so repeats happen only now and then.
 // Returns {keys, missing}: missing counts problems that couldn't be found at all.
 // Only ids like A3 / C7 with the topic's letter: older shortlists (1990–1993, 1995, 1997) are numbered without
 // topics (P3, 17, UNK-2), so their numbers say nothing about difficulty and they're left out.
 export const islNumber = p => { const m = String(p.id).match(/^([ACGN])(\d+)$/); return m && m[1] === p.subject ? Number(m[2]) : null; };
+const REPEAT_WEIGHT = 0.1;
 export function randomSet(problems, {count, topics, min, max, skip = new Set()}, rand = Math.random) {
   const pickIndex = n => Math.floor(rand() * n);
   const between = (a, b) => a + pickIndex(b - a + 1);
@@ -137,13 +140,13 @@ export function randomSet(problems, {count, topics, min, max, skip = new Set()},
   for (const p of problems) {
     if (p.contest !== 'isl' || !topics.includes(p.subject) || skip.has(p.key)) continue;
     const level = islNumber(p); if (!(level >= min && level <= max)) continue;
-    const k = `${p.subject}${level}`; if (!pool.has(k)) pool.set(k, []); pool.get(k).push(p.key);
+    const k = `${p.subject}${level}`; if (!pool.has(k)) pool.set(k, []); pool.get(k).push(p);
   }
   const counts = new Map(topics.map(t => [t, Math.floor(count / topics.length)]));
   const order = [...topics];
   for (let i = order.length - 1; i > 0; i--) { const j = pickIndex(i + 1); [order[i], order[j]] = [order[j], order[i]]; }
   order.slice(0, count % topics.length).forEach(t => counts.set(t, counts.get(t) + 1));
-  const keys = []; let missing = 0;
+  const keys = [], used = new Set(); let missing = 0;
   for (const [t, n] of counts) {
     let levels;
     if (n === 1 || min === max) levels = Array.from({length: n}, () => between(min, max));
@@ -152,7 +155,10 @@ export function randomSet(problems, {count, topics, min, max, skip = new Set()},
       const near = Array.from({length: max - min + 1}, (_, i) => min + i).sort((a, b) => Math.abs(a - d) - Math.abs(b - d) || rand() - .5);
       const list = near.map(l => pool.get(`${t}${l}`)).find(l => l?.length);
       if (!list) { missing++; continue; }
-      keys.push(...list.splice(pickIndex(list.length), 1));
+      const w = list.map(p => used.has(p.primaryTag) ? REPEAT_WEIGHT : 1);
+      let r = rand() * w.reduce((a, b) => a + b, 0), i = 0;
+      while (i < list.length - 1 && (r -= w[i]) >= 0) i++;
+      const [p] = list.splice(i, 1); keys.push(p.key); used.add(p.primaryTag);
     }
   }
   return {keys, missing};

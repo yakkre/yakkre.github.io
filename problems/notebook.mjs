@@ -6,7 +6,7 @@
 // resize it from the bottom-right corner. On narrow screens it opens as a single page with a Tabs button.
 // Design adapted from the user's <book-widget> reference; built in the light DOM so MathJax can render notes.
 import {parseNote, renderNote} from './notes-view.mjs?v=20261117-latex';
-import {typesetMath} from './statement-view.mjs?v=20261127-practice';
+import {typesetMath} from './statement-view.mjs?v=20261128-display';
 import {cleanTabs, moveTab, nextOrder, newTabId, linkProblems, readLocalTabs, writeLocalTabs, tabName, MAX_TABS, MAX_TITLE, MAX_TEXT, DEFAULT_TITLE} from './notebook-core.mjs?v=20261127-review';
 
 const UI_KEY = 'raindrops-notebook-ui-v2';

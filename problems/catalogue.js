@@ -1,5 +1,5 @@
 import {normalize, parseTagInput, selectProblems, validTagIds, problemName, withDifficulty, parseProblemList, arrangeByTopic, randomSet, islNumber, TOPICS} from './catalogue-core.mjs?v=20261128-variety';
-import {renderStatement, typesetMath, loadStatementSources, statementElement} from './statement-view.mjs?v=20261127-practice';
+import {renderStatement, typesetMath, loadStatementSources, statementElement} from './statement-view.mjs?v=20261128-display';
 import {withStatementOnlyProblems, collectionOptions} from './statement-catalogue.mjs?v=20261120-usamo';
 import {createGridPicker} from './grid-picker.mjs?v=20261120-usamo';
 import {parseNote, renderNote, noteExcerpt} from './notes-view.mjs?v=20261117-latex';
@@ -1280,7 +1280,7 @@ async function start() {
     });
     await setupProgress();
     try {
-      const {createNotebook} = await import('./notebook.mjs?v=20261127-tabs');
+      const {createNotebook} = await import('./notebook.mjs?v=20261128-display');
       const keys = new Set(data.problems.map(p => p.key)), byKey = new Map(data.problems.map(p => [p.key, p]));
       notebook = createNotebook({store: progress, has: k => keys.has(k), hrefFor: k => entryUrl(byKey.get(k)), open: k => openProblem(byKey.get(k))});
     } catch (error) { console.error('Notebook unavailable:', error); }

@@ -93,11 +93,21 @@ export async function statementElement(key) {
   body.querySelectorAll('img').forEach(img => { img.loading = 'eager'; });
   return body;
 }
+// Text is shown with white-space: pre-wrap, so the line break before and after a $$…$$ / \[…\] display would
+// add a blank line on top of the display's own margin. Drop one line break on each side of every display.
+export function tightenDisplayMath(el) {
+  for (const m of el.querySelectorAll('mjx-container[display="true"]')) {
+    const prev = m.previousSibling, next = m.nextSibling;
+    if (prev?.nodeType === 3) prev.data = prev.data.replace(/[ \t]*\n$/, '');
+    if (next?.nodeType === 3) next.data = next.data.replace(/^[ \t]*\n/, '');
+  }
+}
 // Typeset LaTeX inside an element (used for reader notes). Rejects if MathJax can't load.
 export async function typesetMath(el) {
   await loadMath();
   window.MathJax.typesetClear?.([el]);
   await window.MathJax.typesetPromise([el]);
+  tightenDisplayMath(el);
 }
 export async function renderStatement(panel, problem) {
   const key = problem?.key || '';
@@ -123,7 +133,7 @@ export async function renderStatement(panel, problem) {
     panel.append(body);
     try {
       await loadMath();
-      if (currentKey === key && body.isConnected) await window.MathJax.typesetPromise([body]);
+      if (currentKey === key && body.isConnected) { await window.MathJax.typesetPromise([body]); tightenDisplayMath(body); }
     } catch {
       if (currentKey === key) panel.append(element('p', 'Math typesetting is unavailable; the original LaTeX is shown.', 'statement-source'));
     }

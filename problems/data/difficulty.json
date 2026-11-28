@@ -1,0 +1,1041 @@
+{
+  "source": "Evan Chen, Math Olympiad Hardness Scale (MOHS), version of 22 July 2026",
+  "sourceUrl": "https://web.evanchen.cc/upload/MOHS-hardness.pdf",
+  "sourceSha256": "db91260daed71d3488cd92617334473b29394a542c533869252cd820fe18c931",
+  "retrieved": "2026-11-27",
+  "note": "Personal ratings in steps of 5M (0M easiest). Only USAMO 2000-2026, USA TSTST 2014-2020 and USA TST 2014-2021 are rated; ISL is deliberately not rated.",
+  "ratings": {
+    "usamo:2000:1": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2000:2": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2000:3": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2000:4": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2000:5": {
+      "subject": "G",
+      "mohs": 10
+    },
+    "usamo:2000:6": {
+      "subject": "A",
+      "mohs": 50
+    },
+    "usamo:2001:1": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2001:2": {
+      "subject": "G",
+      "mohs": 10
+    },
+    "usamo:2001:3": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usamo:2001:4": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2001:5": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usamo:2001:6": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usamo:2002:1": {
+      "subject": "C",
+      "mohs": 5
+    },
+    "usamo:2002:2": {
+      "subject": "A",
+      "mohs": 5
+    },
+    "usamo:2002:3": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usamo:2002:4": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2002:5": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2002:6": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2003:1": {
+      "subject": "N",
+      "mohs": 0
+    },
+    "usamo:2003:2": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usamo:2003:3": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usamo:2003:4": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2003:5": {
+      "subject": "A",
+      "mohs": 15
+    },
+    "usamo:2003:6": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usamo:2004:1": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2004:2": {
+      "subject": "N",
+      "mohs": 20
+    },
+    "usamo:2004:3": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usamo:2004:4": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2004:5": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usamo:2004:6": {
+      "subject": "A",
+      "mohs": 45
+    },
+    "usamo:2005:1": {
+      "subject": "C",
+      "mohs": 5
+    },
+    "usamo:2005:2": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usamo:2005:3": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usamo:2005:4": {
+      "subject": "C",
+      "mohs": 0
+    },
+    "usamo:2005:5": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2005:6": {
+      "subject": "N",
+      "mohs": 35
+    },
+    "usamo:2006:1": {
+      "subject": "N",
+      "mohs": 5
+    },
+    "usamo:2006:2": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2006:3": {
+      "subject": "N",
+      "mohs": 35
+    },
+    "usamo:2006:4": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2006:5": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usamo:2006:6": {
+      "subject": "G",
+      "mohs": 15
+    },
+    "usamo:2007:1": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2007:2": {
+      "subject": "G",
+      "mohs": 15
+    },
+    "usamo:2007:3": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usamo:2007:4": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usamo:2007:5": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usamo:2007:6": {
+      "subject": "G",
+      "mohs": 35
+    },
+    "usamo:2008:1": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usamo:2008:2": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usamo:2008:3": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usamo:2008:4": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2008:5": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usamo:2008:6": {
+      "subject": "C",
+      "mohs": 40
+    },
+    "usamo:2009:1": {
+      "subject": "G",
+      "mohs": 10
+    },
+    "usamo:2009:2": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2009:3": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usamo:2009:4": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2009:5": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usamo:2009:6": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usamo:2010:1": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2010:2": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usamo:2010:3": {
+      "subject": "A",
+      "mohs": 45
+    },
+    "usamo:2010:4": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2010:5": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usamo:2010:6": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usamo:2011:1": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2011:2": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2011:3": {
+      "subject": "G",
+      "mohs": 40
+    },
+    "usamo:2011:4": {
+      "subject": "N",
+      "mohs": 5
+    },
+    "usamo:2011:5": {
+      "subject": "G",
+      "mohs": 15
+    },
+    "usamo:2011:6": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2012:1": {
+      "subject": "A",
+      "mohs": 0
+    },
+    "usamo:2012:2": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usamo:2012:3": {
+      "subject": "N",
+      "mohs": 35
+    },
+    "usamo:2012:4": {
+      "subject": "A",
+      "mohs": 15
+    },
+    "usamo:2012:5": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usamo:2012:6": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usamo:2013:1": {
+      "subject": "G",
+      "mohs": 15
+    },
+    "usamo:2013:2": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usamo:2013:3": {
+      "subject": "C",
+      "mohs": 50
+    },
+    "usamo:2013:4": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2013:5": {
+      "subject": "N",
+      "mohs": 30
+    },
+    "usamo:2013:6": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usamo:2014:1": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2014:2": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usamo:2014:3": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usamo:2014:4": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2014:5": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usamo:2014:6": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usamo:2015:1": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usamo:2015:2": {
+      "subject": "G",
+      "mohs": 15
+    },
+    "usamo:2015:3": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usamo:2015:4": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2015:5": {
+      "subject": "N",
+      "mohs": 30
+    },
+    "usamo:2015:6": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usamo:2016:1": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2016:2": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usamo:2016:3": {
+      "subject": "G",
+      "mohs": 45
+    },
+    "usamo:2016:4": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usamo:2016:5": {
+      "subject": "G",
+      "mohs": 45
+    },
+    "usamo:2016:6": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2017:1": {
+      "subject": "N",
+      "mohs": 5
+    },
+    "usamo:2017:2": {
+      "subject": "C",
+      "mohs": 40
+    },
+    "usamo:2017:3": {
+      "subject": "G",
+      "mohs": 35
+    },
+    "usamo:2017:4": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2017:5": {
+      "subject": "C",
+      "mohs": 50
+    },
+    "usamo:2017:6": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usamo:2018:1": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usamo:2018:2": {
+      "subject": "A",
+      "mohs": 20
+    },
+    "usamo:2018:3": {
+      "subject": "N",
+      "mohs": 45
+    },
+    "usamo:2018:4": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2018:5": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usamo:2018:6": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usamo:2019:1": {
+      "subject": "A",
+      "mohs": 15
+    },
+    "usamo:2019:2": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usamo:2019:3": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usamo:2019:4": {
+      "subject": "C",
+      "mohs": 5
+    },
+    "usamo:2019:5": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usamo:2019:6": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usamo:2020:1": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2020:2": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usamo:2020:3": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usamo:2020:4": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usamo:2020:5": {
+      "subject": "C",
+      "mohs": 30
+    },
+    "usamo:2020:6": {
+      "subject": "A",
+      "mohs": 45
+    },
+    "usamo:2021:1": {
+      "subject": "G",
+      "mohs": 10
+    },
+    "usamo:2021:2": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usamo:2021:3": {
+      "subject": "C",
+      "mohs": 40
+    },
+    "usamo:2021:4": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2021:5": {
+      "subject": "A",
+      "mohs": 20
+    },
+    "usamo:2021:6": {
+      "subject": "G",
+      "mohs": 40
+    },
+    "usamo:2022:1": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usamo:2022:2": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usamo:2022:3": {
+      "subject": "A",
+      "mohs": 40
+    },
+    "usamo:2022:4": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usamo:2022:5": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usamo:2022:6": {
+      "subject": "C",
+      "mohs": 50
+    },
+    "usamo:2023:1": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2023:2": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usamo:2023:3": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usamo:2023:4": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usamo:2023:5": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usamo:2023:6": {
+      "subject": "G",
+      "mohs": 35
+    },
+    "usamo:2024:1": {
+      "subject": "N",
+      "mohs": 5
+    },
+    "usamo:2024:2": {
+      "subject": "A",
+      "mohs": 35
+    },
+    "usamo:2024:3": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usamo:2024:4": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usamo:2024:5": {
+      "subject": "G",
+      "mohs": 40
+    },
+    "usamo:2024:6": {
+      "subject": "A",
+      "mohs": 35
+    },
+    "usamo:2025:1": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usamo:2025:2": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usamo:2025:3": {
+      "subject": "C",
+      "mohs": 30
+    },
+    "usamo:2025:4": {
+      "subject": "G",
+      "mohs": 5
+    },
+    "usamo:2025:5": {
+      "subject": "N",
+      "mohs": 20
+    },
+    "usamo:2025:6": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usamo:2026:1": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usamo:2026:2": {
+      "subject": "C",
+      "mohs": 40
+    },
+    "usamo:2026:3": {
+      "subject": "G",
+      "mohs": 50
+    },
+    "usamo:2026:4": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usamo:2026:5": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usamo:2026:6": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usatstst:2014:1": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usatstst:2014:2": {
+      "subject": "G",
+      "mohs": 15
+    },
+    "usatstst:2014:3": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usatstst:2014:4": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usatstst:2014:5": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usatstst:2014:6": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usatstst:2015:1": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usatstst:2015:2": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usatstst:2015:3": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usatstst:2015:4": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usatstst:2015:5": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usatstst:2015:6": {
+      "subject": "C",
+      "mohs": 55
+    },
+    "usatstst:2016:1": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usatstst:2016:2": {
+      "subject": "G",
+      "mohs": 30
+    },
+    "usatstst:2016:3": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usatstst:2016:4": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usatstst:2016:5": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usatstst:2016:6": {
+      "subject": "G",
+      "mohs": 45
+    },
+    "usatstst:2017:1": {
+      "subject": "G",
+      "mohs": 10
+    },
+    "usatstst:2017:2": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usatstst:2017:3": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usatstst:2017:4": {
+      "subject": "N",
+      "mohs": 5
+    },
+    "usatstst:2017:5": {
+      "subject": "G",
+      "mohs": 15
+    },
+    "usatstst:2017:6": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usatstst:2018:1": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usatstst:2018:2": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usatstst:2018:3": {
+      "subject": "G",
+      "mohs": 30
+    },
+    "usatstst:2018:4": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usatstst:2018:5": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usatstst:2018:6": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usatstst:2018:7": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usatstst:2018:8": {
+      "subject": "N",
+      "mohs": 20
+    },
+    "usatstst:2018:9": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usatstst:2019:1": {
+      "subject": "A",
+      "mohs": 20
+    },
+    "usatstst:2019:2": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usatstst:2019:3": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usatstst:2019:4": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usatstst:2019:5": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usatstst:2019:6": {
+      "subject": "N",
+      "mohs": 50
+    },
+    "usatstst:2019:7": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usatstst:2019:8": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usatstst:2019:9": {
+      "subject": "G",
+      "mohs": 40
+    },
+    "usatstst:2020:1": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usatstst:2020:2": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usatstst:2020:3": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usatstst:2020:4": {
+      "subject": "N",
+      "mohs": 15
+    },
+    "usatstst:2020:5": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usatstst:2020:6": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usatstst:2020:7": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usatstst:2020:8": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usatstst:2020:9": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usatst:2014:1": {
+      "subject": "G",
+      "mohs": 0
+    },
+    "usatst:2014:2": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usatst:2014:3": {
+      "subject": "C",
+      "mohs": 35
+    },
+    "usatst:2014:4": {
+      "subject": "A",
+      "mohs": 5
+    },
+    "usatst:2014:5": {
+      "subject": "G",
+      "mohs": 10
+    },
+    "usatst:2014:6": {
+      "subject": "N",
+      "mohs": 30
+    },
+    "usatst:2015:1": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usatst:2015:2": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usatst:2015:3": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usatst:2015:4": {
+      "subject": "A",
+      "mohs": 10
+    },
+    "usatst:2015:5": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usatst:2015:6": {
+      "subject": "G",
+      "mohs": 35
+    },
+    "usatst:2016:1": {
+      "subject": "C",
+      "mohs": 10
+    },
+    "usatst:2016:2": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usatst:2016:3": {
+      "subject": "N",
+      "mohs": 30
+    },
+    "usatst:2016:4": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usatst:2016:5": {
+      "subject": "A",
+      "mohs": 25
+    },
+    "usatst:2016:6": {
+      "subject": "G",
+      "mohs": 40
+    },
+    "usatst:2017:1": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usatst:2017:2": {
+      "subject": "G",
+      "mohs": 25
+    },
+    "usatst:2017:3": {
+      "subject": "A",
+      "mohs": 40
+    },
+    "usatst:2017:4": {
+      "subject": "C",
+      "mohs": 25
+    },
+    "usatst:2017:5": {
+      "subject": "G",
+      "mohs": 30
+    },
+    "usatst:2017:6": {
+      "subject": "N",
+      "mohs": 35
+    },
+    "usatst:2018:1": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usatst:2018:2": {
+      "subject": "A",
+      "mohs": 30
+    },
+    "usatst:2018:3": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usatst:2018:4": {
+      "subject": "C",
+      "mohs": 15
+    },
+    "usatst:2018:5": {
+      "subject": "G",
+      "mohs": 30
+    },
+    "usatst:2018:6": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usatst:2019:1": {
+      "subject": "G",
+      "mohs": 20
+    },
+    "usatst:2019:2": {
+      "subject": "N",
+      "mohs": 40
+    },
+    "usatst:2019:3": {
+      "subject": "C",
+      "mohs": 50
+    },
+    "usatst:2019:4": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usatst:2019:5": {
+      "subject": "C",
+      "mohs": 30
+    },
+    "usatst:2019:6": {
+      "subject": "G",
+      "mohs": 40
+    },
+    "usatst:2020:1": {
+      "subject": "A",
+      "mohs": 15
+    },
+    "usatst:2020:2": {
+      "subject": "G",
+      "mohs": 35
+    },
+    "usatst:2020:3": {
+      "subject": "C",
+      "mohs": 45
+    },
+    "usatst:2020:4": {
+      "subject": "C",
+      "mohs": 20
+    },
+    "usatst:2020:5": {
+      "subject": "N",
+      "mohs": 25
+    },
+    "usatst:2020:6": {
+      "subject": "G",
+      "mohs": 55
+    },
+    "usatst:2021:1": {
+      "subject": "N",
+      "mohs": 10
+    },
+    "usatst:2021:2": {
+      "subject": "G",
+      "mohs": 45
+    },
+    "usatst:2021:3": {
+      "subject": "A",
+      "mohs": 40
+    }
+  }
+}

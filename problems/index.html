@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="/theme.js?v=20261117-lamp"></script>
+  <script src="/offline.js"></script>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Olympiad problems classified by solution method, including synthetic and analytic geometry routes, with source links.">
+  <title>Problems by method · raindrops</title>
+  <link rel="stylesheet" href="./catalogue.css?v=20261127-random">
+  <script type="module" src="./catalogue.js?v=20261127-islnum2"></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to results</a>
+  <header class="site-header">
+    <a class="brand" href="/">raindrops</a>
+    <!-- Blog disabled Nov 2026; to restore, add a Blog link to this nav. -->
+    <nav aria-label="Main navigation"><a href="/">About</a><a href="./" aria-current="page">Problems</a></nav>
+    <div id="account" class="account" hidden>
+      <button id="account-button" class="account-button" type="button" aria-expanded="false" aria-controls="account-menu">Sign in</button>
+      <div id="account-menu" class="account-menu" hidden>
+        <div id="signed-out">
+          <p>Want to save the problems you mark as done? Sign in with your email.</p>
+          <form id="signin-form" class="signin-form">
+            <label class="sr-only" for="signin-email">Email address</label>
+            <input id="signin-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <button type="submit">Send link</button>
+          </form>
+        </div>
+        <div id="signed-in" hidden>
+          <p>Signed in as <strong id="signed-in-email"></strong></p>
+          <button id="signout" type="button">Sign out</button>
+        </div>
+        <p id="progress-status" class="help" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="page-head">
+      <h1>Olympiad problems by method</h1>
+      <p class="summary"><span id="total-stat">— problems</span> · <span id="tag-total">—</span> tags · <span id="updated">snapshot</span> · <button type="button" id="guide-open" class="link-button">Guide</button> · <button type="button" id="coverage-open" class="link-button">Coverage &amp; caveats</button></p>
+      <section id="welcome" class="welcome" aria-labelledby="welcome-title" hidden>
+        <button type="button" class="welcome-close" data-welcome="close" aria-label="Close the welcome note">✕</button>
+        <h2 id="welcome-title">Welcome! Here’s what you can do</h2>
+        <ul>
+          <li><strong>Find problems by how they’re solved:</strong> pick methods in the filters, or search a name like “2019 C6”.</li>
+          <li><strong>Track what you’ve done:</strong> mark problems done, and see your coverage on the <em>Progress grid</em>.</li>
+          <li><strong>Make collections:</strong> your own problem sets, which you can practise one at a time, print or share.</li>
+          <li><strong>No spoilers:</strong> hide the methods on a problem and bring them back one hint at a time.</li>
+          <li><strong>Sign in (top right)</strong> with just your email to keep everything on every device. It also works offline.</li>
+        </ul>
+        <div class="welcome-actions"><button type="button" class="primary" data-welcome="guide">Read the guide</button><button type="button" data-welcome="random">Try a random problem</button><button type="button" data-welcome="close">Got it</button></div>
+      </section>
+    </div>
+    <div class="view-tabs" role="tablist" aria-label="View">
+      <button type="button" role="tab" data-view="list" aria-selected="true" aria-controls="results">Problem lookup</button>
+      <button type="button" role="tab" data-view="grid" aria-selected="false" aria-controls="results">Progress grid</button>
+      <button type="button" role="tab" data-view="collections" aria-selected="false" aria-controls="collections-view">Collections</button>
+    </div>
+    <div class="layout">
+      <details class="filters" id="filters" open>
+        <summary>Filters <span id="filter-count"></span></summary>
+        <button id="filters-collapse" class="filters-collapse" type="button" aria-expanded="true" aria-controls="filters" title="Hide the filters"><span aria-hidden="true">«</span><span class="sr-only">Hide filters</span></button>
+        <button id="filters-rail" class="filters-rail-label" type="button" tabindex="-1" aria-hidden="true">Filters</button>
+        <div class="filters-body">
+          <div class="row2">
+            <label>Collection<select id="contest"><option value="">All</option><option value="isl">IMO Shortlist</option><option value="rmm">RMM</option><option value="usatst">USA TST</option><option value="usatstst">USA TSTST</option><option value="usamo">USAMO</option></select></label>
+            <label>Subject<select id="subject"><option value="">All</option><option value="A">Algebra</option><option value="C">Combinatorics</option><option value="N">Number theory</option><option value="G">Geometry</option></select></label>
+          </div>
+          <div class="row2">
+            <label>From<select id="from-year"><option value="">Any</option></select></label>
+            <label>To<select id="to-year"><option value="">Any</option></select></label>
+          </div>
+          <label>Difficulty<select id="difficulty"><option value="">Any</option><option value="1">1 – easiest</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 – hardest</option><option value="none">Not estimated</option></select></label>
+          <label>Your progress<select id="done"><option value="">All</option><option value="no">Not done yet</option><option value="yes">Marked done</option><option value="due">Due to revisit</option></select></label>
+          <fieldset class="methods">
+            <legend>Methods <span id="selection-count"></span></legend>
+            <div class="mode" role="group" aria-label="Method matching">
+              <button type="button" data-mode="AND" aria-pressed="true">All selected (AND)</button>
+              <button type="button" data-mode="OR" aria-pressed="false">Any selected (OR)</button>
+            </div>
+            <label class="sr-only" for="tag-search">Find methods by name or ID</label>
+            <input type="search" id="tag-search" placeholder="Name or ID; Enter adds (e.g. 44, 46)" autocomplete="off" aria-describedby="tag-help">
+            <div id="tag-options" class="tag-options" aria-label="Method tags"></div>
+            <p id="tag-help" class="help">Tags match primary or additional assignments. Either verified geometry primary ranks first. Configuration tags are secondary.</p>
+          </fieldset>
+          <details id="more-filters" class="more-filters">
+            <summary>More filters</summary>
+            <label>Forum check<select id="evidence"><option value="">All</option><option value="live">Live forum checked</option><option value="archive">Archived forum checked</option><option value="pending">Forum check pending</option></select></label>
+          </details>
+        </div>
+      </details>
+      <section class="results" id="results" tabindex="-1" aria-label="Results">
+        <div class="search-bar">
+          <label class="sr-only" for="search">Search problems</label>
+          <input type="search" id="search" placeholder="Search: 2019 C6, invariant, Vieta…" autocomplete="off">
+        </div>
+        <div class="results-bar">
+          <p id="result-count" aria-live="polite">Loading…</p>
+          <div class="bar-actions"><button id="random" type="button" title="Open a random problem that matches your filters (one you haven’t marked done, if there are any)">Random problem</button><button id="select-toggle" type="button" aria-pressed="false" hidden>Select</button><button id="copy-link" type="button">Copy search link</button><button id="reset" type="button">Reset</button></div>
+        </div>
+        <div id="select-bar" class="select-bar" role="region" aria-label="Selected problems" hidden></div>
+        <p id="due-note" class="due-note" role="status" hidden></p>
+        <div id="active" class="active" aria-label="Active filters"></div>
+        <p id="filter-warning" class="warning" role="status" hidden></p>
+        <section id="collections-view" class="collections-view" aria-label="Collections" hidden></section>
+        <div id="grid-view" class="grid-view" hidden>
+          <div class="grid-top">
+            <div id="grid-chooser" class="grid-chooser">
+              <label class="sr-only" for="grid-search">Find a grid collection</label>
+              <input id="grid-search" type="search" placeholder="Find a collection…" autocomplete="off" aria-controls="grid-options">
+              <button type="button" class="grid-scroll" data-grid-scroll="previous" aria-label="Scroll collections left" hidden>‹</button>
+              <div id="grid-options" class="mode grid-switch" data-grid-options role="group" aria-label="Grid collection"></div>
+              <button type="button" class="grid-scroll" data-grid-scroll="next" aria-label="Scroll collections right" hidden>›</button>
+              <span class="help" role="status" aria-live="polite"></span>
+            </div>
+            <p class="grid-legend"><span class="grid-cell done" aria-hidden="true"></span> done <span class="grid-cell todo" aria-hidden="true"></span> not done <span id="grid-legend-match" hidden><span class="grid-cell todo match" aria-hidden="true"></span> matches your filters</span> <span class="grid-cell todo has-note" aria-hidden="true"></span> has notes · click a square for options, or use Select for several (drag to select a block)</p>
+            <p id="grid-count" class="grid-count"></p>
+          </div>
+          <div id="grid-body" class="grid-body"></div>
+        </div>
+        <div id="problem-list" aria-busy="true"><p class="loading">Loading problems…</p></div>
+        <nav id="pagination" class="pagination" aria-label="Result pages"></nav>
+        <div id="problem-focus" class="problem-focus">
+          <div class="focus-card" role="region" aria-label="Problem and notes">
+            <div id="practice-bar" class="practice-bar" role="region" aria-label="Practice" hidden></div>
+            <button id="focus-toggle" class="focus-toggle" type="button" aria-pressed="false" hidden title="Show only the statement and your notes">Focus</button>
+            <section id="problem-statement" class="problem-statement" aria-label="Problem statement" hidden></section>
+        <section id="problem-notes" class="problem-notes" aria-labelledby="notes-heading" hidden>
+          <div class="notes-head"><h2 id="notes-heading">Your notes</h2><span id="notes-status" class="help" aria-live="polite"></span></div>
+          <div id="revisit-row" class="revisit-row"></div>
+          <textarea id="notes-text" rows="7" maxlength="10000" placeholder="Ideas, where you got stuck, the key step, a sketch of your solution… LaTeX works: $x^2+y^2$ or $$\sum a_i$$. Hide a spoiler behind a click: [\hide=&quot;Solution&quot;] … [\hide]" aria-labelledby="notes-heading"></textarea>
+          <p id="notes-where" class="help"></p>
+          <div id="notes-preview" class="notes-preview" hidden>
+            <p class="collect-sub">Preview</p>
+            <div id="notes-preview-body" class="statement-text"></div>
+            <p id="notes-preview-note" class="help"></p>
+          </div>
+        </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div id="collect-menu" class="collect-menu" role="dialog" aria-label="Add to collection" hidden></div>
+  <dialog id="guide-dialog" class="guide" aria-labelledby="guide-title">
+    <div class="dialog-top"><h2 id="guide-title">Guide</h2><button type="button" id="guide-close" aria-label="Close">Close</button></div>
+    <nav class="guide-toc" aria-label="Guide sections"><a href="#g-find">Finding problems</a><a href="#g-problem">A problem’s page</a><a href="#g-progress">Your progress</a><a href="#g-collections">Collections &amp; practice</a><a href="#g-notes">Notes &amp; notebook</a><a href="#g-account">Signing in &amp; offline</a></nav>
+
+    <h3 id="g-find">Finding problems</h3>
+    <ul>
+      <li><strong>Methods:</strong> every problem is tagged by the methods its solutions use. Pick tags in the <span class="ui">Methods</span> list in the filters (type a name or a number to find one). <span class="ui">All selected (AND)</span> needs every tag; <span class="ui">Any selected (OR)</span> needs one. Clicking a tag on any problem also filters by it.</li>
+      <li><strong>Search:</strong> problem names (“2019 C6”, “USAMO 2021”), method names or words from the classification.</li>
+      <li><strong>Filters:</strong> contest, subject, years, difficulty (a rough 1–5 estimate; see Coverage &amp; caveats) and your progress (not done, done, or due to revisit).</li>
+      <li><span class="ui">Random problem</span> opens a problem that matches your filters, preferring ones you haven’t done. <span class="ui">Copy search link</span> saves the current search as a link.</li>
+    </ul>
+    <p class="guide-try"><button type="button" data-guide="random">Try a random problem</button></p>
+
+    <h3 id="g-problem">A problem’s page</h3>
+    <ul>
+      <li>Click a problem’s name to see its statement, its methods, and the sources (<span class="ui">AoPS</span>, <span class="ui">Official</span>).</li>
+      <li><strong>No spoilers:</strong> <span class="ui">Hide</span> hides the method tags (for every problem, until you turn it off). Then <span class="ui">Hint: primary method</span> and <span class="ui">Hint: other methods</span> reveal them step by step.</li>
+      <li><span class="ui">Classification</span> explains how the methods are used; <span class="ui">Research notes &amp; caveats</span> lists the posts that were read.</li>
+      <li><span class="ui">Focus</span> shows only the statement and your notes, in larger text (Esc to leave).</li>
+      <li><strong>Revisit:</strong> under “Your notes”, pick <span class="ui">in a week</span> (or another date) to come back to a problem. When it’s due, a note at the top of the page tells you.</li>
+    </ul>
+
+    <h3 id="g-progress">Your progress</h3>
+    <ul>
+      <li><span class="ui">Select</span> lets you tick problems (or <span class="ui">Select all</span>) and then mark them done or add them to a collection.</li>
+      <li>The <span class="ui">Progress grid</span> shows one contest at a time: a square per problem, green when done. Filters highlight the matching squares. Click a square for its menu; in Select mode, drag across squares to select a block.</li>
+    </ul>
+    <p class="guide-try"><button type="button" data-guide="grid">Open the Progress grid</button></p>
+
+    <h3 id="g-collections">Collections &amp; practice</h3>
+    <ul>
+      <li>A collection is your own list of problems, such as “Geometry to review” or a weekly set. Make one in the <span class="ui">Collections</span> tab, then add problems with Select, from a grid square’s menu, or with <span class="ui">Add problems by name</span> (“2019 ISL C6, USAMO 2021/3”).</li>
+      <li>Drag <span class="ui">⠿</span> to reorder, <span class="ui">Sort…</span> to sort once, and <span class="ui">Add section</span> for headings like “Week 1”. <span class="ui">Note</span> adds a short reminder to a problem.</li>
+      <li><span class="ui">Done here</span> marks a problem done in that collection only, so you can redo a set without touching your overall progress.</li>
+      <li><span class="ui">Practice</span> goes through the collection one problem at a time, with the methods hidden and a timer. <span class="ui">Print</span> makes a problem set (or a PDF).</li>
+      <li><span class="ui">Public</span> gives a link anyone can open (signed-in users can make one); others can <span class="ui">Save a copy</span>.</li>
+    </ul>
+    <p class="guide-try"><button type="button" data-guide="collections">Go to Collections</button></p>
+
+    <h3 id="g-notes">Notes &amp; notebook</h3>
+    <ul>
+      <li><strong>Your notes</strong> on a problem are private and save as you type. LaTeX works (<code>$x^2$</code>), and <code>[\hide="Solution"] … [\hide]</code> hides a spoiler behind a click.</li>
+      <li>The <strong>notebook</strong> (the book in the corner) holds notes that aren’t about one problem, in tabs. Drag it anywhere; problem names you write in it, like “2019 ISL C6”, become links.</li>
+    </ul>
+
+    <h3 id="g-account">Signing in &amp; offline</h3>
+    <ul>
+      <li>Without signing in, everything is saved in this browser. <span class="ui">Sign in</span> (top right) emails you a link; no password. Then your marks, collections and notes follow you to any device.</li>
+      <li>Once you’ve opened the site, it keeps working offline; changes you make are sent when you’re back online.</li>
+    </ul>
+    <p class="help">Where the data comes from, and its limits: <button type="button" class="link-button" data-guide="coverage">Coverage &amp; caveats</button>.</p>
+  </dialog>
+  <dialog id="coverage-dialog" aria-labelledby="coverage-title"><div class="dialog-top"><h2 id="coverage-title">Coverage &amp; caveats</h2><button type="button" id="coverage-close" aria-label="Close">Close</button></div><div id="coverage-content"></div></dialog>
+</body>
+</html>
+
